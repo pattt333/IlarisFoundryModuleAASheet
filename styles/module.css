@@ -1,0 +1,351 @@
+/**
+ * Ilaris Alternative Actor Sheet Styles
+ * 
+ * This CSS provides styling for the alternative actor sheet module.
+ * It extends and enhances the base Ilaris system styles.
+ */
+
+/* Alternative Sheet Specific Styles */
+.ilaris.sheet.actor.alternative {
+  /* Enhanced layout with better spacing */
+  padding: 10px;
+}
+
+.ilaris.sheet.actor.alternative .window-content {
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.ilaris.sheet.actor.alternative .sheet-header {
+  background: linear-gradient(135deg, #4a5568, #2d3748);
+  color: white;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ilaris.sheet.actor.alternative .sheet-header .profile-img {
+  border-radius: 50%;
+  border: 3px solid white;
+  flex-shrink: 0;
+}
+
+.ilaris.sheet.actor.alternative .sheet-header .header-fields {
+  flex: 1;
+}
+
+.ilaris.sheet.actor.alternative .sheet-header .charname input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ilaris.sheet.actor.alternative .sheet-header .charname input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ilaris.sheet.actor.alternative .sheet-header .resources {
+  margin-top: 10px;
+}
+
+.ilaris.sheet.actor.alternative .sheet-header .resource {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+}
+
+.ilaris.sheet.actor.alternative .sheet-header .resource-label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.ilaris.sheet.actor.alternative .sheet-header .resource input {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  width: 50px;
+  padding: 2px 4px;
+}
+
+/* Enhanced Tab Navigation */
+.ilaris.sheet.actor.alternative .sheet-tabs {
+  background: #e2e8f0;
+  border-bottom: 2px solid #cbd5e0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.ilaris.sheet.actor.alternative .sheet-tabs .item {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  background: #e2e8f0;
+  border: none;
+  border-right: 1px solid #cbd5e0;
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.ilaris.sheet.actor.alternative .sheet-tabs .item:last-child {
+  border-right: none;
+}
+
+.ilaris.sheet.actor.alternative .sheet-tabs .item:hover {
+  background: #cbd5e0;
+  color: #2d3748;
+}
+
+.ilaris.sheet.actor.alternative .sheet-tabs .item.active {
+  background: white;
+  color: #2d3748;
+  border-bottom: 2px solid #4299e1;
+}
+
+/* Enhanced Sheet Body */
+.ilaris.sheet.actor.alternative .sheet-body {
+  padding: 20px;
+  background: white;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Grid System */
+.ilaris.sheet.actor.alternative .grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.ilaris.sheet.actor.alternative .grid-2col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.ilaris.sheet.actor.alternative .grid-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Abilities Section */
+.ilaris.sheet.actor.alternative .abilities h3 {
+  color: #2d3748;
+  border-bottom: 2px solid #4299e1;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.ilaris.sheet.actor.alternative .ability {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.ilaris.sheet.actor.alternative .ability .resource-label {
+  font-weight: bold;
+  color: #4a5568;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.ilaris.sheet.actor.alternative .ability .resource-label:hover {
+  color: #4299e1;
+}
+
+.ilaris.sheet.actor.alternative .ability input {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 0 10px;
+}
+
+.ilaris.sheet.actor.alternative .ability .ability-mod {
+  background: #4299e1;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ilaris.sheet.actor.alternative .ability .ability-mod:hover {
+  background: #3182ce;
+}
+
+/* Items Lists */
+.ilaris.sheet.actor.alternative .items-section {
+  margin-bottom: 30px;
+}
+
+.ilaris.sheet.actor.alternative .items-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7fafc;
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px 6px 0 0;
+  font-weight: bold;
+}
+
+.ilaris.sheet.actor.alternative .items-header h3 {
+  margin: 0;
+  color: #2d3748;
+}
+
+.ilaris.sheet.actor.alternative .items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+}
+
+.ilaris.sheet.actor.alternative .items-list .item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  background: white;
+  transition: background-color 0.2s ease;
+}
+
+.ilaris.sheet.actor.alternative .items-list .item:last-child {
+  border-bottom: none;
+}
+
+.ilaris.sheet.actor.alternative .items-list .item:hover {
+  background: #f7fafc;
+}
+
+.ilaris.sheet.actor.alternative .items-list .item-name {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+.ilaris.sheet.actor.alternative .items-list .item-image img {
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.ilaris.sheet.actor.alternative .items-list .item h4 {
+  margin: 0;
+  color: #2d3748;
+}
+
+.ilaris.sheet.actor.alternative .item-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.ilaris.sheet.actor.alternative .item-control {
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ilaris.sheet.actor.alternative .item-control:hover {
+  background: #3182ce;
+}
+
+.ilaris.sheet.actor.alternative .item-control.item-create {
+  background: #48bb78;
+}
+
+.ilaris.sheet.actor.alternative .item-control.item-create:hover {
+  background: #38a169;
+}
+
+.ilaris.sheet.actor.alternative .item-control.item-delete {
+  background: #f56565;
+}
+
+.ilaris.sheet.actor.alternative .item-control.item-delete:hover {
+  background: #e53e3e;
+}
+
+/* Derived Values */
+.ilaris.sheet.actor.alternative .derived-values h3 {
+  color: #2d3748;
+  border-bottom: 2px solid #48bb78;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.ilaris.sheet.actor.alternative .derived-values .resource {
+  background: #f0fff4;
+  border: 1px solid #c6f6d5;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.ilaris.sheet.actor.alternative .derived-values .resource-label {
+  font-weight: bold;
+  color: #22543d;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.ilaris.sheet.actor.alternative .derived-values input {
+  width: 100%;
+  border: 1px solid #9ae6b4;
+  border-radius: 4px;
+  padding: 6px;
+  text-align: center;
+}
+
+/* Biography Editor */
+.ilaris.sheet.actor.alternative .editor {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  min-height: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ilaris.sheet.actor.alternative .grid-2col {
+    grid-template-columns: 1fr;
+  }
+  
+  .ilaris.sheet.actor.alternative .sheet-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .ilaris.sheet.actor.alternative .sheet-tabs {
+    flex-direction: column;
+  }
+  
+  .ilaris.sheet.actor.alternative .sheet-tabs .item {
+    border-right: none;
+    border-bottom: 1px solid #cbd5e0;
+  }
+}

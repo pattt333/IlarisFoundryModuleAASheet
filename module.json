@@ -1,0 +1,39 @@
+{
+  "id": "ilaris-alternative-actor-sheet",
+  "title": "Ilaris Alternative Actor Sheet",
+  "description": "An alternative actor sheet module for the Ilaris Foundry VTT system, providing enhanced character sheet layouts and functionality.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 12,
+    "maximum": 12
+  },
+  "authors": [
+    {
+      "name": "pattt333",
+      "url": "https://github.com/pattt333"
+    }
+  ],
+  "esmodules": [
+    "module.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "Ilaris",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "url": "https://github.com/pattt333/IlarisFoundryModuleAASheet",
+  "manifest": "https://raw.githubusercontent.com/pattt333/IlarisFoundryModuleAASheet/main/module.json",
+  "download": "https://github.com/pattt333/IlarisFoundryModuleAASheet/archive/refs/heads/main.zip",
+  "license": "MIT",
+  "readme": "README.md",
+  "bugs": "https://github.com/pattt333/IlarisFoundryModuleAASheet/issues",
+  "changelog": "https://github.com/pattt333/IlarisFoundryModuleAASheet/releases"
+}
