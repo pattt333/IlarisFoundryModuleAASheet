@@ -1,0 +1,37 @@
+{
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "jquery": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "globals": {
+    "game": "readonly",
+    "foundry": "readonly",
+    "CONFIG": "readonly",
+    "Actor": "readonly",
+    "ActorSheet": "readonly",
+    "Item": "readonly",
+    "Roll": "readonly",
+    "ChatMessage": "readonly",
+    "Hooks": "readonly",
+    "Dialog": "readonly",
+    "TextEditor": "readonly",
+    "getProperty": "readonly",
+    "duplicate": "readonly",
+    "mergeObject": "readonly",
+    "renderTemplate": "readonly",
+    "onManageActiveEffect": "readonly",
+    "DEFAULT_TOKEN": "readonly"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-console": "warn"
+  }
+}
