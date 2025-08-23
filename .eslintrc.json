@@ -15,6 +15,7 @@
     "foundry": "readonly",
     "CONFIG": "readonly",
     "Actor": "readonly",
+    "Actors": "readonly",
     "ActorSheet": "readonly",
     "Item": "readonly",
     "Roll": "readonly",

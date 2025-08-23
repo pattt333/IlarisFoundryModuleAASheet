@@ -35,9 +35,7 @@
     "eslint-plugin-prettier": "^5.1.3",
     "prettier": "^3.2.5"
   },
-  "peerDependencies": {
-    "foundryvtt": "^12.0.0"
-  },
+
   "foundry": {
     "version": "12.0.0",
     "minimumCoreVersion": "12.0.0",
