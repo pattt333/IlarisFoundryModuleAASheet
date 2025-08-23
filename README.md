@@ -63,6 +63,7 @@ npm run prettier
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Game Icons from https://game-icons.net/
 
 ## Support
 
