@@ -156,6 +156,9 @@ export class IlarisAlternativeActorSheet extends ActorSheet {
             li.slideUp(200, () => this.render(false));
         });
 
+        // Item Component functionality
+        this._initializeItemComponents(html);
+
         // Active Effect management
         html.find('.effect-control').click(ev => onManageActiveEffect(ev, this.actor));
 
@@ -165,11 +168,98 @@ export class IlarisAlternativeActorSheet extends ActorSheet {
         // Drag events for macros.
         if (this.actor.isOwner) {
             let handler = ev => this._onDragStart(ev);
-            html.find('li.item').each((i, li) => {
+            html.find('li.item, li.item-component').each((i, li) => {
                 if (li.classList.contains('inventory-header')) return;
                 li.setAttribute('draggable', true);
                 li.addEventListener('dragstart', handler, false);
             });
+        }
+    }
+
+    /**
+     * Initialize item component functionality
+     * @param {jQuery} html   The jQuery object for the rendered template
+     * @private
+     */
+    _initializeItemComponents(html) {
+        // Handle expand/collapse toggle
+        html.find('[data-action="toggle-expand"]').click(ev => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            const itemComponent = $(ev.currentTarget).closest('.item-component');
+            const itemDetails = itemComponent.find('.item-details');
+            const isExpanded = itemComponent.hasClass('expanded');
+
+            if (isExpanded) {
+                itemDetails.slideUp(200);
+                itemComponent.removeClass('expanded');
+            } else {
+                itemDetails.slideDown(200);
+                itemComponent.addClass('expanded');
+            }
+        });
+
+        // Handle header click to toggle expand/collapse
+        html.find('.item-header').click(ev => {
+            if ($(ev.target).closest('.item-actions, .item-controls').length) return;
+
+            const itemComponent = $(ev.currentTarget).closest('.item-component');
+            const expandButton = itemComponent.find('[data-action="toggle-expand"]');
+            expandButton.click();
+        });
+
+        // Handle combat dialog button
+        html.find('[data-action="combat-dialog"]').click(ev => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            const itemId = $(ev.currentTarget).closest('.item-component').data('item-id');
+            const item = this.actor.items.get(itemId);
+            if (item) {
+                this._openCombatDialog(item);
+            }
+        });
+
+        // Handle profane dialog button
+        html.find('[data-action="profane-dialog"]').click(ev => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            const itemId = $(ev.currentTarget).closest('.item-component').data('item-id');
+            const item = this.actor.items.get(itemId);
+            if (item) {
+                this._openProfaneDialog(item);
+            }
+        });
+    }
+
+    /**
+     * Open combat dialog for weapons
+     * @param {Item} item   The weapon item
+     * @private
+     */
+    _openCombatDialog(item) {
+        // This would integrate with the Ilaris system's combat dialog
+        // For now, we'll show a basic dialog or call item roll
+        console.log(`Opening combat dialog for weapon: ${item.name}`);
+        if (item.roll) {
+            item.roll();
+        } else {
+            ui.notifications.info(`Combat dialog for ${item.name} would open here`);
+        }
+    }
+
+    /**
+     * Open profane dialog for skills
+     * @param {Item} item   The skill item
+     * @private
+     */
+    _openProfaneDialog(item) {
+        // This would integrate with the Ilaris system's profane dialog
+        // For now, we'll show a basic dialog or call item roll
+        console.log(`Opening profane dialog for skill: ${item.name}`);
+        if (item.roll) {
+            item.roll();
+        } else {
+            ui.notifications.info(`Profane dialog for ${item.name} would open here`);
         }
     }
 

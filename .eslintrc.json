@@ -24,9 +24,11 @@
     "Dialog": "readonly",
     "TextEditor": "readonly",
     "getProperty": "readonly",
+    "Handlebars": "readonly",
     "duplicate": "readonly",
     "mergeObject": "readonly",
     "renderTemplate": "readonly",
+    "ui": "readonly",
     "onManageActiveEffect": "readonly",
     "DEFAULT_TOKEN": "readonly"
   },
