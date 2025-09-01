@@ -3,24 +3,22 @@
     {{!-- Top-level character information. --}}
     <div class="grid grid-2col">        <div class="abilities">
             <h3>Attribute</h3>
-            {{#each system.attribute as |ability key|}}
-            <div class="ability flexrow flex-group-center">
-                <label for="system.attribute.{{key}}.value" class="resource-label rollable" data-roll="d20+@attribute.{{key}}.mod" data-label="{{key}}">{{ability.label}}</label>
-                <input type="text" name="system.attribute.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                <span class="ability-mod rollable" data-roll="d20+@attribute.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+            {{#each actor.system.attribute as |attribute key|}}            <div class="ability flexrow flex-group-center">
+                <label for="system.attribute.{{key}}.wert" class="resource-label">{{key}}</label>
+                <input type="number" name="system.attribute.{{key}}.wert" value="{{attribute.wert}}" data-dtype="Number"/>
+                <span>{{attribute.pw}}</span>
             </div>
             {{/each}}
         </div>
-        
-        <div class="derived-values">
+          <div class="derived-values">
             <h3>Abgeleitete Werte</h3>
             <div class="resource flex-group-center">
-                <label for="system.abgeleitete.ini.value" class="resource-label">Initiative</label>
-                <input type="text" name="system.abgeleitete.ini.value" value="{{system.abgeleitete.ini.value}}" data-dtype="Number"/>
+                <label class="resource-label">Initiative</label>
+                <span class="ability-mod">{{system.abgeleitete.ini.value}}</span>
             </div>
             <div class="resource flex-group-center">
-                <label for="system.abgeleitete.geschwindigkeit.value" class="resource-label">Geschwindigkeit</label>
-                <input type="text" name="system.abgeleitete.geschwindigkeit.value" value="{{system.abgeleitete.geschwindigkeit.value}}" data-dtype="Number"/>
+                <label class="resource-label">Geschwindigkeit</label>
+                <span class="ability-mod">{{system.abgeleitete.geschwindigkeit.value}}</span>
             </div>
         </div>
     </div>

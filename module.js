@@ -11,6 +11,15 @@ import { IlarisAlternativeActorSheet } from './scripts/sheets/alternative-actor-
 Hooks.once('init', async function() {
   console.log('Ilaris Alternative Actor Sheet | Initializing module');
   
+  // Preload Handlebars templates
+  await loadTemplates([
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/main-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/skills-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs"
+  ]);
+  
   // Register the alternative actor sheet
   Actors.registerSheet("Ilaris", IlarisAlternativeActorSheet, {
     types: ["held", "kreatur"],
