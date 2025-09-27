@@ -1,7 +1,7 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
     
-    {{!-- Sheet Header --}}
-    <header class="sheet-header">
+    {{!-- Sheet Header - Will be sticky --}}
+    <header class="sheet-header sticky-header">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
@@ -18,35 +18,24 @@
                         <input type="text" name="system.gesundheit.hp.max" value="{{system.gesundheit.hp.max}}" data-dtype="Number"/>
                     </div>
                 </div>
-                <div class="resource flex-group-center">
-                    <label for="system.abgeleitete.ausdauer.value" class="resource-label">Ausdauer</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="system.abgeleitete.ausdauer.value" value="{{system.abgeleitete.ausdauer.value}}" data-dtype="Number"/>
-                        <span> / </span>
-                        <input type="text" name="system.abgeleitete.ausdauer.max" value="{{system.abgeleitete.ausdauer.max}}" data-dtype="Number"/>
-                    </div>
-                </div>
-                <div class="resource flex-group-center">
-                    <label for="system.abgeleitete.fokus.value" class="resource-label">Fokus</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="system.abgeleitete.fokus.value" value="{{system.abgeleitete.fokus.value}}" data-dtype="Number"/>
-                        <span> / </span>
-                        <input type="text" name="system.abgeleitete.fokus.max" value="{{system.abgeleitete.fokus.max}}" data-dtype="Number"/>
-                    </div>
-                </div>
+                
+                {{!-- Energy Resources (AsP/KaP/gAsP/gKaP) --}}
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs}}
             </div>
         </div>
     </header>
 
-    {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Sheet Tab Navigation - Also sticky --}}
+    <nav class="sheet-tabs tabs sticky-tabs" data-group="primary">
         <a class="item" data-tab="main">Haupt</a>
         <a class="item" data-tab="skills">Fertigkeiten</a>
         <a class="item" data-tab="items">Gegenstände</a>
         <a class="item" data-tab="spells">Zauber</a>
         <a class="item" data-tab="biography">Biographie</a>
-    </nav>    {{!-- Sheet Body --}}
-    <section class="sheet-body">
+    </nav>
+
+    {{!-- Sheet Body - Scrollable content --}}
+    <section class="sheet-body scrollable-content">
 
         {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/main-tab.hbs}}
 

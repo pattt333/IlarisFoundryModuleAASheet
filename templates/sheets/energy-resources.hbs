@@ -1,0 +1,80 @@
+{{!-- Energy Resource - Dynamic display based on available energy types --}}
+{{#if (and system.abgeleitete.zauberer system.abgeleitete.geweihter)}}
+    {{!-- Both AsP and KaP available - show AsP --}}
+    <div class="resource flex-group-center">
+        <label for="system.abgeleitete.asp" class="resource-label">AsP</label>
+        <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.abgeleitete.asp" value="{{system.abgeleitete.asp}}" data-dtype="Number"/>
+            <span> / </span>
+            <input type="text" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
+        </div>
+    </div>
+    {{!-- Show KaP --}}
+    <div class="resource flex-group-center">
+        <label for="system.abgeleitete.kap" class="resource-label">KaP</label>
+        <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.abgeleitete.kap" value="{{system.abgeleitete.kap}}" data-dtype="Number"/>
+            <span> / </span>
+            <input type="text" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
+        </div>
+    </div>
+{{else if system.abgeleitete.zauberer}}
+    {{!-- Only AsP available --}}
+    <div class="resource flex-group-center">
+        <label for="system.abgeleitete.asp" class="resource-label">Eng</label>
+        <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.abgeleitete.asp" value="{{system.abgeleitete.asp}}" data-dtype="Number"/>
+            <span> / </span>
+            <input type="text" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
+        </div>
+    </div>
+    {{!-- Show gAsP if available --}}
+    {{#if system.abgeleitete.gasp}}
+    <div class="resource flex-group-center">
+        <label for="system.abgeleitete.gasp" class="resource-label">gEng</label>
+        <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.abgeleitete.gasp" value="{{system.abgeleitete.gasp}}" data-dtype="Number"/>
+            <span> / </span>
+            <span>{{system.abgeleitete.gasp}}</span>
+        </div>
+    </div>
+    {{else}}
+    {{!-- Empty slot to maintain 3-column layout --}}
+    <div class="resource flex-group-center" style="visibility: hidden;">
+        <label class="resource-label">-</label>
+        <div class="resource-content flexrow flex-center flex-between">
+            <span>-</span>
+        </div>
+    </div>
+    {{/if}}
+{{else if system.abgeleitete.geweihter}}
+    {{!-- Only KaP available --}}
+    <div class="resource flex-group-center">
+        <label for="system.abgeleitete.kap" class="resource-label">Eng</label>
+        <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.abgeleitete.kap" value="{{system.abgeleitete.kap}}" data-dtype="Number"/>
+            <span> / </span>
+            <input type="text" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
+        </div>
+    </div>
+    {{!-- Show gKaP if available --}}
+    {{#if system.abgeleitete.gasp}}
+    <div class="resource flex-group-center">
+        <label for="system.abgeleitete.gasp" class="resource-label">gEng</label>
+        <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.abgeleitete.gasp" value="{{system.abgeleitete.gasp}}" data-dtype="Number"/>
+            <span> / </span>
+            <span>{{system.abgeleitete.gasp}}</span>
+        </div>
+    </div>
+    {{else}}
+    {{!-- Empty slot to maintain 3-column layout --}}
+    <div class="resource flex-group-center" style="visibility: hidden;">
+        <label class="resource-label">-</label>
+        <div class="resource-content flexrow flex-center flex-between">
+            <span>-</span>
+        </div>
+    </div>
+    {{/if}}
+{{!-- If no energy available, show nothing --}}
+{{/if}}

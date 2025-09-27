@@ -17,7 +17,8 @@ Hooks.once('init', async function() {
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/skills-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs"
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs"
   ]);
   
   // Register the alternative actor sheet
