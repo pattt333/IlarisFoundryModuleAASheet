@@ -22,6 +22,34 @@
                 {{!-- Energy Resources (AsP/KaP/gAsP/gKaP) --}}
                 {{> modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs}}
             </div>
+            
+            {{!-- Derived Values Row --}}
+            <div class="derived-stats grid grid-4col">
+                <div class="stat flex-group-center">
+                    <label class="stat-label">WS (WS*)</label>
+                    <span class="stat-value">{{system.abgeleitete.ws}} ({{system.abgeleitete.ws_stern}})</span>
+                </div>
+                <div class="stat flex-group-center">
+                    <label class="stat-label">MR</label>
+                    <span class="stat-value">{{system.abgeleitete.mr}}</span>
+                </div>
+                <div class="stat flex-group-center">
+                    <label class="stat-label">GS</label>
+                    <span class="stat-value">{{system.abgeleitete.gs}}</span>
+                </div>
+                <div class="stat flex-group-center">
+                    <label class="stat-label">INI</label>
+                    <span class="stat-value">{{system.abgeleitete.ini}}</span>
+                </div>
+            </div>
+            
+            {{!-- BE (Behinderung) Row --}}
+            <div class="be-stats grid grid-1col">
+                <div class="stat flex-group-center">
+                    <label class="stat-label">BE</label>
+                    <span class="stat-value">{{system.abgeleitete.be}}</span>
+                </div>
+            </div>
         </div>
     </header>
 
