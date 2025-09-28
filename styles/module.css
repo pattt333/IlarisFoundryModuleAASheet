@@ -87,6 +87,14 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
+  cursor: pointer;
+  transition: all 0 ease;
+}
+
+.ilaris.sheet.actor.alternative .hex-main:hover {
+  background: #3182ce;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
 }
 
 .ilaris.sheet.actor.alternative .hex-label {
