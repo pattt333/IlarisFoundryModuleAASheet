@@ -1,62 +1,62 @@
 {{!-- Energy Resources - Slider-style bars --}}
-{{#if (and system.abgeleitete.zauberer system.abgeleitete.geweihter)}}
+{{#if (and actor.system.abgeleitete.zauberer actor.system.abgeleitete.geweihter)}}
     {{!-- Both AsP and KaP available --}}
     <div class="energy-bar">
         <label class="energy-label">AsP</label>
         <div class="energy-progress">
-            <div class="energy-fill asp-fill" style="width: {{percentage system.abgeleitete.asp_stern system.abgeleitete.asp}}%"></div>
-            <div class="energy-text">{{system.abgeleitete.asp_stern}} / {{system.abgeleitete.asp}}</div>
+            <div class="energy-fill asp-fill" style="width: {{percentage actor.system.abgeleitete.asp_stern actor.system.abgeleitete.asp}}%"></div>
+            <div class="energy-text">{{actor.system.abgeleitete.asp_stern}} / {{actor.system.abgeleitete.asp}}</div>
         </div>
-        <input type="hidden" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
+        <input type="hidden" name="system.abgeleitete.asp_stern" value="{{actor.system.abgeleitete.asp_stern}}" data-dtype="Number"/>
     </div>
     <div class="energy-bar">
         <label class="energy-label">KaP</label>
         <div class="energy-progress">
-            <div class="energy-fill kap-fill" style="width: {{percentage system.abgeleitete.kap_stern system.abgeleitete.kap}}%"></div>
-            <div class="energy-text">{{system.abgeleitete.kap_stern}} / {{system.abgeleitete.kap}}</div>
+            <div class="energy-fill kap-fill" style="width: {{percentage actor.system.abgeleitete.kap_stern actor.system.abgeleitete.kap}}%"></div>
+            <div class="energy-text">{{actor.system.abgeleitete.kap_stern}} / {{actor.system.abgeleitete.kap}}</div>
         </div>
-        <input type="hidden" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
+        <input type="hidden" name="system.abgeleitete.kap_stern" value="{{actor.system.abgeleitete.kap_stern}}" data-dtype="Number"/>
     </div>
-{{else if system.abgeleitete.zauberer}}
+{{else if actor.system.abgeleitete.zauberer}}
     {{!-- Only AsP available --}}
     <div class="energy-bar">
         <label class="energy-label">Eng</label>
         <div class="energy-progress">
-            <div class="energy-fill asp-fill" style="width: {{percentage system.abgeleitete.asp_stern system.abgeleitete.asp}}%"></div>
-            <div class="energy-text">{{system.abgeleitete.asp_stern}} / {{system.abgeleitete.asp}}</div>
+            <div class="energy-fill asp-fill" style="width: {{percentage actor.system.abgeleitete.asp_stern actor.system.abgeleitete.asp}}%"></div>
+            <div class="energy-text">{{actor.system.abgeleitete.asp_stern}} / {{actor.system.abgeleitete.asp}}</div>
         </div>
-        <input type="hidden" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
+        <input type="hidden" name="system.abgeleitete.asp_stern" value="{{actor.system.abgeleitete.asp_stern}}" data-dtype="Number"/>
     </div>
     {{!-- Show gAsP if available --}}
-    {{#if system.abgeleitete.gasp}}
+    {{#if actor.system.abgeleitete.gasp}}
     <div class="energy-bar">
         <label class="energy-label">gEng</label>
         <div class="energy-progress">
             <div class="energy-fill gasp-fill" style="width: 100%"></div>
-            <div class="energy-text">{{system.abgeleitete.gasp}}</div>
+            <div class="energy-text">{{actor.system.abgeleitete.gasp}}</div>
         </div>
-        <input type="hidden" name="system.abgeleitete.gasp" value="{{system.abgeleitete.gasp}}" data-dtype="Number"/>
+        <input type="hidden" name="system.abgeleitete.gasp" value="{{actor.system.abgeleitete.gasp}}" data-dtype="Number"/>
     </div>
     {{/if}}
-{{else if system.abgeleitete.geweihter}}
+{{else if actor.system.abgeleitete.geweihter}}
     {{!-- Only KaP available --}}
     <div class="energy-bar">
         <label class="energy-label">Eng</label>
         <div class="energy-progress">
-            <div class="energy-fill kap-fill" style="width: {{percentage system.abgeleitete.kap_stern system.abgeleitete.kap}}%"></div>
-            <div class="energy-text">{{system.abgeleitete.kap_stern}} / {{system.abgeleitete.kap}}</div>
+            <div class="energy-fill kap-fill" style="width: {{percentage actor.system.abgeleitete.kap_stern actor.system.abgeleitete.kap}}%"></div>
+            <div class="energy-text">{{actor.system.abgeleitete.kap_stern}} / {{actor.system.abgeleitete.kap}}</div>
         </div>
-        <input type="hidden" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
+        <input type="hidden" name="system.abgeleitete.kap_stern" value="{{actor.system.abgeleitete.kap_stern}}" data-dtype="Number"/>
     </div>
     {{!-- Show gKaP if available --}}
-    {{#if system.abgeleitete.gkap}}
+    {{#if actor.system.abgeleitete.gkap}}
     <div class="energy-bar">
         <label class="energy-label">gEng</label>
         <div class="energy-progress">
             <div class="energy-fill gkap-fill" style="width: 100%"></div>
-            <div class="energy-text">{{system.abgeleitete.gkap}}</div>
+            <div class="energy-text">{{actor.system.abgeleitete.gkap}}</div>
         </div>
-        <input type="hidden" name="system.abgeleitete.gkap" value="{{system.abgeleitete.gkap}}" data-dtype="Number"/>
+        <input type="hidden" name="system.abgeleitete.gkap" value="{{actor.system.abgeleitete.gkap}}" data-dtype="Number"/>
     </div>
     {{/if}}
 {{!-- If no energy available, show nothing --}}

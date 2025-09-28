@@ -42,7 +42,7 @@ export class IlarisAlternativeActorSheet extends IlarisActorSheet {
     async getData() {
         // Get all the data from the original system's actor sheet
         const context = await super.getData();
-        
+        console.log('IlarisAlternativeActorSheet | getData context:', context);
         // Add any additional context we need for our alternative template
         // The original system already provides everything we need
         
