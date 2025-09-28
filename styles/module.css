@@ -66,6 +66,64 @@
   outline: 1px solid var(--color-border-highlight, #0066cc);
 }
 
+/* Hexagon Attributes */
+.ilaris.sheet.actor.alternative .attribute-hexagon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+  position: relative;
+}
+
+.ilaris.sheet.actor.alternative .hex-main {
+  width: 52px;
+  height: 60px;
+  background: #4299e1;
+  position: relative;
+  margin: 5px 0;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.ilaris.sheet.actor.alternative .hex-label {
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.ilaris.sheet.actor.alternative .hex-pw {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.ilaris.sheet.actor.alternative .hex-small {
+  width: 26px;
+  height: 30px;
+  background: #2d3748;
+  position: absolute;
+  bottom: -8px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.ilaris.sheet.actor.alternative .hex-wert {
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
 /* Primary and Secondary Stats */
 .ilaris.sheet.actor.alternative .primary-stats,
 .ilaris.sheet.actor.alternative .secondary-stats {

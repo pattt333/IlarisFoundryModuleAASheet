@@ -26,11 +26,13 @@
                 {{!-- Primary Attributes in One Row --}}
                 <div class="primary-attributes flex-row">
                     {{#each actor.system.attribute as |attribute key|}}
-                    <div class="stat flex-group-center">
-                        <label class="stat-label">{{key}}</label>
-                        <div class="stat-values">
-                            <span class="stat-value">{{attribute.wert}}</span>
-                            <span class="stat-derived">({{attribute.pw}})</span>
+                    <div class="attribute-hexagon">
+                        <div class="hex-main">
+                            <label class="hex-label">{{key}}</label>
+                            <span class="hex-pw">{{attribute.pw}}</span>
+                        </div>
+                        <div class="hex-small">
+                            <span class="hex-wert">{{attribute.wert}}</span>
                         </div>
                     </div>
                     {{/each}}
