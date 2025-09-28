@@ -4,14 +4,14 @@
     <input type="hidden" name="system.gesundheit.wunden" value="{{system.gesundheit.wunden}}" data-dtype="Number"/>
     <input type="hidden" name="system.gesundheit.erschoepfung" value="{{system.gesundheit.erschoepfung}}" data-dtype="Number"/>
     
-    {{!-- Compact grid of 8 boxes (2 rows of 4) --}}
+    {{!-- Compact grid of 8 boxes (1 row of 8) --}}
     <div class="einschraenkungen-grid-compact" data-wunden="{{system.gesundheit.wunden}}" data-erschoepfung="{{system.gesundheit.erschoepfung}}">
         {{#each (range 8) as |index|}}
-        <div class="einschraenkung-box-compact" data-index="{{index}}" data-state="empty">
+        <div class="einschraenkung-box einschraenkung-box-compact" data-index="{{index}}" data-state="empty">
             <div class="box-content"></div>
         </div>
-            {{/each}}
-        </div>
+        {{/each}}
+    </div>
         
         {{!-- Death warning if total >= 9 --}}
         {{#if (gte (add system.gesundheit.erschoepfung system.gesundheit.wunden) 9)}}

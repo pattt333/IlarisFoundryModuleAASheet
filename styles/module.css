@@ -19,7 +19,6 @@
   align-items: center;
   width: 200px;
   flex-shrink: 0;
-  gap: 8px;
 }
 
 .ilaris.sheet.actor.alternative .portrait-container {
@@ -198,43 +197,35 @@
   display: flex;
 }
 
-.ilaris.sheet.actor.alternative .einschraenkung-box-compact {
-  width: calc(200px / 8);
-  height: calc(200px / 8);
-  border: 2px solid var(--color-border-dark, #666);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
-  background: var(--color-bg-light, #fafafa);
-}
-
 .ilaris.sheet.actor.alternative .einschraenkung-box-compact:hover {
   transform: scale(1.1);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 .ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="wound"] {
-  background: linear-gradient(135deg, #dc3545, #c82333);
-  border-color: #a71e2a;
+  border-color: #d32f2f;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="wound"] .box-content {
+  background-image: url('../assets/open-wound.svg');
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
 .ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="exhaustion"] {
-  background: linear-gradient(135deg, #ffc107, #e0a800);
-  border-color: #b8860b;
+  border-color: #4caf50;
 }
 
-.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="wound"]:after,
-.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="exhaustion"]:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="exhaustion"] .box-content {
+  background-image: url('../assets/sleepy.svg');
+  filter: brightness(0) saturate(100%) invert(49%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box-compact .box-content {
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Sticky header and tabs with scrollable content */
@@ -299,8 +290,8 @@
 }
 
 .ilaris.sheet.actor.alternative .einschraenkung-box {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   border: 2px solid #666;
   border-radius: 4px;
   cursor: pointer;
@@ -317,13 +308,11 @@
 }
 
 .ilaris.sheet.actor.alternative .einschraenkung-box[data-state="wound"] {
-  background: #ffcdd2;
   border-color: #d32f2f;
 }
 
 .ilaris.sheet.actor.alternative .einschraenkung-box[data-state="exhaustion"] {
-  background: #c8e6c9;
-  border-color: #388e3c;
+  border-color: #4caf50;
 }
 
 .ilaris.sheet.actor.alternative .einschraenkung-box .box-content {
