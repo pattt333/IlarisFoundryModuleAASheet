@@ -23,6 +23,19 @@
                     <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
                 </div>
                 
+                {{!-- Primary Attributes in One Row --}}
+                <div class="primary-attributes flex-row">
+                    {{#each actor.system.attribute as |attribute key|}}
+                    <div class="stat flex-group-center">
+                        <label class="stat-label">{{key}}</label>
+                        <div class="stat-values">
+                            <span class="stat-value">{{attribute.wert}}</span>
+                            <span class="stat-derived">({{attribute.pw}})</span>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                
                 {{!-- All Secondary Stats in One Row --}}
                 <div class="secondary-stats flex-row">
                     <div class="stat flex-group-center">
