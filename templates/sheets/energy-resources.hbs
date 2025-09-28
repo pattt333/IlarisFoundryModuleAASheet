@@ -2,30 +2,30 @@
 {{#if (and system.abgeleitete.zauberer system.abgeleitete.geweihter)}}
     {{!-- Both AsP and KaP available - show AsP --}}
     <div class="resource flex-group-center">
-        <label for="system.abgeleitete.asp" class="resource-label">AsP</label>
+        <label for="system.abgeleitete.asp_stern" class="resource-label">AsP</label>
         <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.asp" value="{{system.abgeleitete.asp}}" data-dtype="Number"/>
-            <span> / </span>
             <input type="text" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
+            <span> / </span>
+            <span class="max-value">{{system.abgeleitete.asp}}</span>
         </div>
     </div>
     {{!-- Show KaP --}}
     <div class="resource flex-group-center">
-        <label for="system.abgeleitete.kap" class="resource-label">KaP</label>
+        <label for="system.abgeleitete.kap_stern" class="resource-label">KaP</label>
         <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.kap" value="{{system.abgeleitete.kap}}" data-dtype="Number"/>
-            <span> / </span>
             <input type="text" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
+            <span> / </span>
+            <span class="max-value">{{system.abgeleitete.kap}}</span>
         </div>
     </div>
 {{else if system.abgeleitete.zauberer}}
     {{!-- Only AsP available --}}
     <div class="resource flex-group-center">
-        <label for="system.abgeleitete.asp" class="resource-label">Eng</label>
+        <label for="system.abgeleitete.asp_stern" class="resource-label">Eng</label>
         <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.asp" value="{{system.abgeleitete.asp}}" data-dtype="Number"/>
-            <span> / </span>
             <input type="text" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
+            <span> / </span>
+            <span class="max-value">{{system.abgeleitete.asp}}</span>
         </div>
     </div>
     {{!-- Show gAsP if available --}}
@@ -50,11 +50,11 @@
 {{else if system.abgeleitete.geweihter}}
     {{!-- Only KaP available --}}
     <div class="resource flex-group-center">
-        <label for="system.abgeleitete.kap" class="resource-label">Eng</label>
+        <label for="system.abgeleitete.kap_stern" class="resource-label">Eng</label>
         <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.kap" value="{{system.abgeleitete.kap}}" data-dtype="Number"/>
-            <span> / </span>
             <input type="text" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
+            <span> / </span>
+            <span class="max-value">{{system.abgeleitete.kap}}</span>
         </div>
     </div>
     {{!-- Show gKaP if available --}}

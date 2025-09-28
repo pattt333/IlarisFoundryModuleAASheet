@@ -1,0 +1,31 @@
+{{!-- Einschränkungen (Wounds and Exhaustion) - Interactive Grid --}}
+<div class="resource flex-group-center einschraenkungen-block">
+    <div class="einschraenkungen-container">
+        <label class="resource-label">Einschränkungen</label>
+        
+        {{!-- Hidden inputs for form submission --}}
+        <input type="hidden" name="system.gesundheit.wunden" value="{{system.gesundheit.wunden}}" data-dtype="Number"/>
+        <input type="hidden" name="system.gesundheit.erschoepfung" value="{{system.gesundheit.erschoepfung}}" data-dtype="Number"/>
+        
+        {{!-- Interactive grid of 8 boxes --}}
+        <div class="einschraenkungen-grid" data-wunden="{{system.gesundheit.wunden}}" data-erschoepfung="{{system.gesundheit.erschoepfung}}">
+            {{#each (range 8) as |index|}}
+            <div class="einschraenkung-box" data-index="{{index}}" data-state="empty">
+                <div class="box-content"></div>
+            </div>
+            {{/each}}
+        </div>
+        
+        {{!-- Death warning if total >= 9 --}}
+        {{#if (gte (add system.gesundheit.erschoepfung system.gesundheit.wunden) 9)}}
+        <div class="death-warning">⚠️ TOD</div>
+        {{/if}}
+    </div>
+</div>
+
+{{!-- Display current condition --}}
+{{#if system.gesundheit.display}}
+<div class="condition-display">
+    <small>{{system.gesundheit.display}}</small>
+</div>
+{{/if}}

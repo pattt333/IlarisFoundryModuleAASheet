@@ -11,6 +11,23 @@ import { IlarisAlternativeActorSheet } from './scripts/sheets/alternative-actor-
 Hooks.once('init', async function() {
   console.log('Ilaris Alternative Actor Sheet | Initializing module');
   
+  // Register Handlebars helpers
+  Handlebars.registerHelper('range', function(n) {
+    const result = [];
+    for (let i = 0; i < n; i++) {
+      result.push(i);
+    }
+    return result;
+  });
+  
+  Handlebars.registerHelper('add', function(a, b) {
+    return (a || 0) + (b || 0);
+  });
+  
+  Handlebars.registerHelper('gte', function(a, b) {
+    return (a || 0) >= (b || 0);
+  });
+  
   // Preload Handlebars templates
   await loadTemplates([
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/main-tab.hbs",
@@ -18,7 +35,8 @@ Hooks.once('init', async function() {
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs"
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/health-resources.hbs"
   ]);
   
   // Register the alternative actor sheet

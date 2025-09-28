@@ -43,6 +43,93 @@
   padding: 10px;
 }
 
+/* Einschränkungen Interactive Grid System */
+.ilaris.sheet.actor.alternative .einschraenkungen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkungen-container .resource-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkungen-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box:hover {
+  border-color: #333;
+  transform: scale(1.05);
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box[data-state="wound"] {
+  background: #ffcdd2;
+  border-color: #d32f2f;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box[data-state="exhaustion"] {
+  background: #c8e6c9;
+  border-color: #388e3c;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box .box-content {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box[data-state="wound"] .box-content {
+  background-image: url('../assets/open-wound.svg');
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box[data-state="exhaustion"] .box-content {
+  background-image: url('../assets/sleepy.svg');
+}
+
+.ilaris.sheet.actor.alternative .death-warning {
+  color: #cc0000;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.ilaris.sheet.actor.alternative .condition-display {
+  grid-column: span 3;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 5px;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
 /* Alternative Sheet Specific Styles */
 
 .ilaris.sheet.actor.alternative .window-content {

@@ -166,6 +166,12 @@ export class IlarisAlternativeActorSheet extends ActorSheet {
                 li.addEventListener("dragstart", handler, false);
             });
         }
+
+        // Einschränkungen interactive boxes
+        html.find('.einschraenkung-box').click(this._onEinschraenkungClick.bind(this));
+        
+        // Initialize einschränkungen display
+        this._updateEinschraenkungsDisplay(html);
     }
 
     /**
@@ -225,5 +231,88 @@ export class IlarisAlternativeActorSheet extends ActorSheet {
             });
             return roll;
         }
+    }
+
+    /**
+     * Handle clicking on einschränkung boxes
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onEinschraenkungClick(event) {
+        event.preventDefault();
+        const box = event.currentTarget;
+        const index = parseInt(box.dataset.index);
+        const currentState = box.dataset.state;
+        
+        let wunden = this.actor.system.gesundheit.wunden || 0;
+        let erschoepfung = this.actor.system.gesundheit.erschoepfung || 0;
+        
+        // Cycle through states: empty -> wound -> exhaustion -> empty
+        if (currentState === 'empty') {
+            // Add a wound
+            wunden = Math.min(wunden + 1, 8);
+        } else if (currentState === 'wound') {
+            // Convert wound to exhaustion
+            wunden = Math.max(wunden - 1, 0);
+            erschoepfung = Math.min(erschoepfung + 1, 8);
+        } else if (currentState === 'exhaustion') {
+            // Remove exhaustion
+            erschoepfung = Math.max(erschoepfung - 1, 0);
+        }
+        
+        // Update the actor
+        await this.actor.update({
+            'system.gesundheit.wunden': wunden,
+            'system.gesundheit.erschoepfung': erschoepfung
+        });
+    }
+
+    /**
+     * Update the visual display of einschränkungen boxes
+     * @param {jQuery} html   The rendered HTML
+     * @private
+     */
+    _updateEinschraenkungsDisplay(html) {
+        const wunden = this.actor.system.gesundheit.wunden || 0;
+        const erschoepfung = this.actor.system.gesundheit.erschoepfung || 0;
+        
+        const boxes = html.find('.einschraenkung-box');
+        
+        // Reset all boxes
+        boxes.each((i, box) => {
+            box.dataset.state = 'empty';
+        });
+        
+        // Fill wounds first (priority logic)
+        for (let i = 0; i < wunden && i < 8; i++) {
+            boxes[i].dataset.state = 'wound';
+        }
+        
+        // Fill exhaustion after wounds
+        for (let i = wunden; i < wunden + erschoepfung && i < 8; i++) {
+            boxes[i].dataset.state = 'exhaustion';
+        }
+        
+        // Update death warning visibility
+        const total = wunden + erschoepfung;
+        const deathWarning = html.find('.death-warning');
+        if (total >= 9) {
+            deathWarning.show();
+        } else {
+            deathWarning.hide();
+        }
+    }
+
+    /** @override */
+    async _updateObject(event, formData) {
+        const result = await super._updateObject(event, formData);
+        
+        // Update display after form submission
+        setTimeout(() => {
+            const html = $(this.form);
+            this._updateEinschraenkungsDisplay(html);
+        }, 100);
+        
+        return result;
     }
 }
