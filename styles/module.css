@@ -5,13 +5,6 @@
  * It extends and enhances the base Ilaris system styles.
  */
 
-/* Tidy 5e Inspired Header Layout */
-.ilaris.sheet.actor.alternative .header-layout {
-  display: flex;
-  gap: 20px;
-  padding: 15px;
-  flex-direction: column;
-}
 
 .ilaris.sheet.actor.alternative .actor-profile {
   display: flex;
@@ -19,6 +12,9 @@
   align-items: center;
   width: 200px;
   flex-shrink: 0;
+  align-items: flex-start;
+  padding-right: 8px;
+  flex: 0;
 }
 
 .ilaris.sheet.actor.alternative .portrait-container {
@@ -75,6 +71,11 @@
 .ilaris.sheet.actor.alternative .secondary-stats {
   gap: 10px;
   margin: 5px 0;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .ilaris.sheet.actor.alternative .stat {
@@ -372,10 +373,6 @@
   border-radius: 8px;
   border: 3px solid var(--color-border-dark, #666);
   flex-shrink: 0;
-}
-
-.ilaris.sheet.actor.alternative .sheet-header .header-fields {
-  flex: 1;
 }
 
 .ilaris.sheet.actor.alternative .sheet-header .charname input {

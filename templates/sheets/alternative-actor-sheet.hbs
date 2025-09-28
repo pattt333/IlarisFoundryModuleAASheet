@@ -2,8 +2,7 @@
     
     {{!-- Sheet Header - Tidy 5e inspired layout --}}
     <header class="sheet-header sticky-header">
-        <div class="header-layout">
-            {{!-- Left side: Actor portrait with einschränkungen and energy below --}}
+        {{!-- Left side: Actor portrait with einschränkungen and energy below --}}
             <div class="actor-profile">
                 <div class="portrait-container">
                     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="120" width="120"/>
@@ -23,7 +22,9 @@
                 <div class="name-section">
                     <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
                 </div>
-                <div class="secondary-stats grid grid-2col">
+                
+                {{!-- All Secondary Stats in One Row --}}
+                <div class="secondary-stats flex-row">
                     <div class="stat flex-group-center">
                         <label class="stat-label">WS</label>
                         <div class="stat-values">
@@ -35,8 +36,6 @@
                         <label class="stat-label">MR</label>
                         <span class="stat-value">{{system.abgeleitete.mr}}</span>
                     </div>
-                </div>
-                <div class="secondary-stats grid grid-2col">
                     <div class="stat flex-group-center">
                         <label class="stat-label">GS</label>
                         <span class="stat-value">{{system.abgeleitete.gs}}</span>
@@ -45,10 +44,6 @@
                         <label class="stat-label">INI</label>
                         <span class="stat-value">{{system.abgeleitete.ini}}</span>
                     </div>
-                </div>
-                
-                {{!-- Secondary Stats Row --}}
-                <div class="secondary-stats grid grid-2col">
                     <div class="stat flex-group-center">
                         <label class="stat-label">BE</label>
                         <span class="stat-value">{{system.abgeleitete.be}}</span>
@@ -59,7 +54,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </header>
 
     {{!-- Sheet Tab Navigation - Also sticky --}}
