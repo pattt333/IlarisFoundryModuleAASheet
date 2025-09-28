@@ -5,6 +5,238 @@
  * It extends and enhances the base Ilaris system styles.
  */
 
+/* Tidy 5e Inspired Header Layout */
+.ilaris.sheet.actor.alternative .header-layout {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  flex-direction: column;
+}
+
+.ilaris.sheet.actor.alternative .actor-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.ilaris.sheet.actor.alternative .portrait-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.ilaris.sheet.actor.alternative .profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid var(--color-border-dark, #666);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.ilaris.sheet.actor.alternative .profile-img:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.ilaris.sheet.actor.alternative .header-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ilaris.sheet.actor.alternative .name-section h1 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.ilaris.sheet.actor.alternative .name-section input {
+  background: transparent;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  width: 100%;
+}
+
+.ilaris.sheet.actor.alternative .name-section input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  outline: 1px solid var(--color-border-highlight, #0066cc);
+}
+
+/* Primary and Secondary Stats */
+.ilaris.sheet.actor.alternative .primary-stats,
+.ilaris.sheet.actor.alternative .secondary-stats {
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.ilaris.sheet.actor.alternative .stat {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border-light, #ccc);
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+  min-height: 50px;
+}
+
+.ilaris.sheet.actor.alternative .stat-label {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.ilaris.sheet.actor.alternative .stat-value {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--color-text-highlight, #333);
+}
+
+.ilaris.sheet.actor.alternative .stat-derived {
+  font-size: 0.85em;
+  color: var(--color-text-light, #666);
+  margin-left: 4px;
+}
+
+/* Profile Einschränkungen Section */
+.ilaris.sheet.actor.alternative .profile-einschraenkungen {
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Energy Bars */
+.ilaris.sheet.actor.alternative .profile-energy {
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ilaris.sheet.actor.alternative .energy-bar {
+  margin-bottom: 6px;
+}
+
+.ilaris.sheet.actor.alternative .energy-label {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+.ilaris.sheet.actor.alternative .energy-progress {
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  height: 18px;
+  overflow: hidden;
+  border: 2px solid var(--color-border-light, #ccc);
+}
+
+.ilaris.sheet.actor.alternative .energy-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.ilaris.sheet.actor.alternative .asp-fill {
+  background: linear-gradient(90deg, #4a90e2, #7bb3f0);
+}
+
+.ilaris.sheet.actor.alternative .kap-fill {
+  background: linear-gradient(90deg, #f5a623, #f7c52d);
+}
+
+.ilaris.sheet.actor.alternative .gasp-fill {
+  background: linear-gradient(90deg, #6a4c93, #8b7ab8);
+}
+
+.ilaris.sheet.actor.alternative .gkap-fill {
+  background: linear-gradient(90deg, #d0743c, #e6944a);
+}
+
+.ilaris.sheet.actor.alternative .energy-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+/* Compact Einschränkungen Grid for Profile */
+.ilaris.sheet.actor.alternative .einschraenkungen-profile {
+  width: 100%;
+  max-width: 200px;
+}
+
+.ilaris.sheet.actor.alternative .profile-label {
+  display: block;
+  font-size: 0.75em;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-align: center;
+  color: var(--color-text-dark, #333);
+}
+
+.ilaris.sheet.actor.alternative .einschraenkungen-grid-compact {
+  display: flex;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box-compact {
+  width: calc(200px / 8);
+  height: calc(200px / 8);
+  border: 2px solid var(--color-border-dark, #666);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  background: var(--color-bg-light, #fafafa);
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box-compact:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="wound"] {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  border-color: #a71e2a;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="exhaustion"] {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  border-color: #b8860b;
+}
+
+.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="wound"]:after,
+.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="exhaustion"]:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
 /* Sticky header and tabs with scrollable content */
 .ilaris.sheet.actor.alternative {
   display: flex;
@@ -148,8 +380,8 @@
 }
 
 .ilaris.sheet.actor.alternative .sheet-header .profile-img {
-  border-radius: 50%;
-  border: 3px solid white;
+  border-radius: 8px;
+  border: 3px solid var(--color-border-dark, #666);
   flex-shrink: 0;
 }
 

@@ -1,79 +1,62 @@
-{{!-- Energy Resource - Dynamic display based on available energy types --}}
+{{!-- Energy Resources - Slider-style bars --}}
 {{#if (and system.abgeleitete.zauberer system.abgeleitete.geweihter)}}
-    {{!-- Both AsP and KaP available - show AsP --}}
-    <div class="resource flex-group-center">
-        <label for="system.abgeleitete.asp_stern" class="resource-label">AsP</label>
-        <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
-            <span> / </span>
-            <span class="max-value">{{system.abgeleitete.asp}}</span>
+    {{!-- Both AsP and KaP available --}}
+    <div class="energy-bar">
+        <label class="energy-label">AsP</label>
+        <div class="energy-progress">
+            <div class="energy-fill asp-fill" style="width: {{percentage system.abgeleitete.asp_stern system.abgeleitete.asp}}%"></div>
+            <div class="energy-text">{{system.abgeleitete.asp_stern}} / {{system.abgeleitete.asp}}</div>
         </div>
+        <input type="hidden" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
     </div>
-    {{!-- Show KaP --}}
-    <div class="resource flex-group-center">
-        <label for="system.abgeleitete.kap_stern" class="resource-label">KaP</label>
-        <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
-            <span> / </span>
-            <span class="max-value">{{system.abgeleitete.kap}}</span>
+    <div class="energy-bar">
+        <label class="energy-label">KaP</label>
+        <div class="energy-progress">
+            <div class="energy-fill kap-fill" style="width: {{percentage system.abgeleitete.kap_stern system.abgeleitete.kap}}%"></div>
+            <div class="energy-text">{{system.abgeleitete.kap_stern}} / {{system.abgeleitete.kap}}</div>
         </div>
+        <input type="hidden" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
     </div>
 {{else if system.abgeleitete.zauberer}}
     {{!-- Only AsP available --}}
-    <div class="resource flex-group-center">
-        <label for="system.abgeleitete.asp_stern" class="resource-label">Eng</label>
-        <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
-            <span> / </span>
-            <span class="max-value">{{system.abgeleitete.asp}}</span>
+    <div class="energy-bar">
+        <label class="energy-label">Eng</label>
+        <div class="energy-progress">
+            <div class="energy-fill asp-fill" style="width: {{percentage system.abgeleitete.asp_stern system.abgeleitete.asp}}%"></div>
+            <div class="energy-text">{{system.abgeleitete.asp_stern}} / {{system.abgeleitete.asp}}</div>
         </div>
+        <input type="hidden" name="system.abgeleitete.asp_stern" value="{{system.abgeleitete.asp_stern}}" data-dtype="Number"/>
     </div>
     {{!-- Show gAsP if available --}}
     {{#if system.abgeleitete.gasp}}
-    <div class="resource flex-group-center">
-        <label for="system.abgeleitete.gasp" class="resource-label">gEng</label>
-        <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.gasp" value="{{system.abgeleitete.gasp}}" data-dtype="Number"/>
-            <span> / </span>
-            <span>{{system.abgeleitete.gasp}}</span>
+    <div class="energy-bar">
+        <label class="energy-label">gEng</label>
+        <div class="energy-progress">
+            <div class="energy-fill gasp-fill" style="width: 100%"></div>
+            <div class="energy-text">{{system.abgeleitete.gasp}}</div>
         </div>
-    </div>
-    {{else}}
-    {{!-- Empty slot to maintain 3-column layout --}}
-    <div class="resource flex-group-center" style="visibility: hidden;">
-        <label class="resource-label">-</label>
-        <div class="resource-content flexrow flex-center flex-between">
-            <span>-</span>
-        </div>
+        <input type="hidden" name="system.abgeleitete.gasp" value="{{system.abgeleitete.gasp}}" data-dtype="Number"/>
     </div>
     {{/if}}
 {{else if system.abgeleitete.geweihter}}
     {{!-- Only KaP available --}}
-    <div class="resource flex-group-center">
-        <label for="system.abgeleitete.kap_stern" class="resource-label">Eng</label>
-        <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
-            <span> / </span>
-            <span class="max-value">{{system.abgeleitete.kap}}</span>
+    <div class="energy-bar">
+        <label class="energy-label">Eng</label>
+        <div class="energy-progress">
+            <div class="energy-fill kap-fill" style="width: {{percentage system.abgeleitete.kap_stern system.abgeleitete.kap}}%"></div>
+            <div class="energy-text">{{system.abgeleitete.kap_stern}} / {{system.abgeleitete.kap}}</div>
         </div>
+        <input type="hidden" name="system.abgeleitete.kap_stern" value="{{system.abgeleitete.kap_stern}}" data-dtype="Number"/>
     </div>
     {{!-- Show gKaP if available --}}
-    {{#if system.abgeleitete.gasp}}
-    <div class="resource flex-group-center">
-        <label for="system.abgeleitete.gasp" class="resource-label">gEng</label>
-        <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.abgeleitete.gasp" value="{{system.abgeleitete.gasp}}" data-dtype="Number"/>
-            <span> / </span>
-            <span>{{system.abgeleitete.gasp}}</span>
+    {{#if system.abgeleitete.gkap}}
+    <div class="energy-bar">
+        <label class="energy-label">gEng</label>
+        <div class="energy-progress">
+            <div class="energy-fill gkap-fill" style="width: 100%"></div>
+            <div class="energy-text">{{system.abgeleitete.gkap}}</div>
         </div>
-    </div>
-    {{else}}
-    {{!-- Empty slot to maintain 3-column layout --}}
-    <div class="resource flex-group-center" style="visibility: hidden;">
-        <label class="resource-label">-</label>
-        <div class="resource-content flexrow flex-center flex-between">
-            <span>-</span>
-        </div>
+        <input type="hidden" name="system.abgeleitete.gkap" value="{{system.abgeleitete.gkap}}" data-dtype="Number"/>
     </div>
     {{/if}}
 {{!-- If no energy available, show nothing --}}

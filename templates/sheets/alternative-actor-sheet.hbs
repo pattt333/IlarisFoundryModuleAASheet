@@ -1,47 +1,62 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
     
-    {{!-- Sheet Header - Will be sticky --}}
+    {{!-- Sheet Header - Tidy 5e inspired layout --}}
     <header class="sheet-header sticky-header">
-        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-        <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-            {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-            use both the "grid" and "grid-Ncol" class where "N" can be any number from 1 to 12 --}}
-            <div class="resources grid grid-3col">
-                {{!-- "flex-group-center" is also defined in the _grid.scss file
-                and it will add a small amount of padding, a border, and will
-                center all of its child elements content and text. --}}                {{!-- Health Resources (HP, Erschöpfung, Wunden) --}}
-                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/health-resources.hbs}}
+        <div class="header-layout">
+            {{!-- Left side: Actor portrait with einschränkungen and energy below --}}
+            <div class="actor-profile">
+                <div class="portrait-container">
+                    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="120" width="120"/>
+                </div>
+                {{!-- Energy bars below einschränkungen --}}
+                <div class="profile-energy">
+                    {{> modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs}}
+                </div>                
+                {{!-- Einschränkungen grid directly below portrait --}}
+                <div class="profile-einschraenkungen">
+                    {{> modules/ilaris-alternative-actor-sheet/templates/sheets/health-resources.hbs}}
+                </div>
+            </div>
+            
+            {{!-- Right side: Name and stats --}}
+            <div class="header-details">
+                <div class="name-section">
+                    <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+                </div>
+                <div class="secondary-stats grid grid-2col">
+                    <div class="stat flex-group-center">
+                        <label class="stat-label">WS</label>
+                        <div class="stat-values">
+                            <span class="stat-value">{{system.abgeleitete.ws}}</span>
+                            <span class="stat-derived">({{system.abgeleitete.ws_stern}}*)</span>
+                        </div>
+                    </div>
+                    <div class="stat flex-group-center">
+                        <label class="stat-label">MR</label>
+                        <span class="stat-value">{{system.abgeleitete.mr}}</span>
+                    </div>
+                </div>
+                <div class="secondary-stats grid grid-2col">
+                    <div class="stat flex-group-center">
+                        <label class="stat-label">GS</label>
+                        <span class="stat-value">{{system.abgeleitete.gs}}</span>
+                    </div>
+                    <div class="stat flex-group-center">
+                        <label class="stat-label">INI</label>
+                        <span class="stat-value">{{system.abgeleitete.ini}}</span>
+                    </div>
+                </div>
                 
-                {{!-- Energy Resources (AsP/KaP/gAsP/gKaP) --}}
-                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs}}
-            </div>
-            
-            {{!-- Derived Values Row --}}
-            <div class="derived-stats grid grid-4col">
-                <div class="stat flex-group-center">
-                    <label class="stat-label">WS (WS*)</label>
-                    <span class="stat-value">{{system.abgeleitete.ws}} ({{system.abgeleitete.ws_stern}})</span>
-                </div>
-                <div class="stat flex-group-center">
-                    <label class="stat-label">MR</label>
-                    <span class="stat-value">{{system.abgeleitete.mr}}</span>
-                </div>
-                <div class="stat flex-group-center">
-                    <label class="stat-label">GS</label>
-                    <span class="stat-value">{{system.abgeleitete.gs}}</span>
-                </div>
-                <div class="stat flex-group-center">
-                    <label class="stat-label">INI</label>
-                    <span class="stat-value">{{system.abgeleitete.ini}}</span>
-                </div>
-            </div>
-            
-            {{!-- BE (Behinderung) Row --}}
-            <div class="be-stats grid grid-1col">
-                <div class="stat flex-group-center">
-                    <label class="stat-label">BE</label>
-                    <span class="stat-value">{{system.abgeleitete.be}}</span>
+                {{!-- Secondary Stats Row --}}
+                <div class="secondary-stats grid grid-2col">
+                    <div class="stat flex-group-center">
+                        <label class="stat-label">BE</label>
+                        <span class="stat-value">{{system.abgeleitete.be}}</span>
+                    </div>
+                    <div class="stat flex-group-center">
+                        <label class="stat-label">Glob. Mod</label>
+                        <span class="stat-value">{{system.abgeleitete.globalermod}}</span>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,18 +1,15 @@
-{{!-- Einschränkungen (Wounds and Exhaustion) - Interactive Grid --}}
-<div class="resource flex-group-center einschraenkungen-block">
-    <div class="einschraenkungen-container">
-        <label class="resource-label">Einschränkungen</label>
-        
-        {{!-- Hidden inputs for form submission --}}
-        <input type="hidden" name="system.gesundheit.wunden" value="{{system.gesundheit.wunden}}" data-dtype="Number"/>
-        <input type="hidden" name="system.gesundheit.erschoepfung" value="{{system.gesundheit.erschoepfung}}" data-dtype="Number"/>
-        
-        {{!-- Interactive grid of 8 boxes --}}
-        <div class="einschraenkungen-grid" data-wunden="{{system.gesundheit.wunden}}" data-erschoepfung="{{system.gesundheit.erschoepfung}}">
-            {{#each (range 8) as |index|}}
-            <div class="einschraenkung-box" data-index="{{index}}" data-state="empty">
-                <div class="box-content"></div>
-            </div>
+{{!-- Einschränkungen (Wounds and Exhaustion) - Compact Interactive Grid --}}
+<div class="einschraenkungen-profile">
+    {{!-- Hidden inputs for form submission --}}
+    <input type="hidden" name="system.gesundheit.wunden" value="{{system.gesundheit.wunden}}" data-dtype="Number"/>
+    <input type="hidden" name="system.gesundheit.erschoepfung" value="{{system.gesundheit.erschoepfung}}" data-dtype="Number"/>
+    
+    {{!-- Compact grid of 8 boxes (2 rows of 4) --}}
+    <div class="einschraenkungen-grid-compact" data-wunden="{{system.gesundheit.wunden}}" data-erschoepfung="{{system.gesundheit.erschoepfung}}">
+        {{#each (range 8) as |index|}}
+        <div class="einschraenkung-box-compact" data-index="{{index}}" data-state="empty">
+            <div class="box-content"></div>
+        </div>
             {{/each}}
         </div>
         

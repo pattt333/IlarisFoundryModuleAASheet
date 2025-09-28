@@ -28,6 +28,21 @@ Hooks.once('init', async function() {
     return (a || 0) >= (b || 0);
   });
   
+  // Mathematical helpers for energy bars
+  Handlebars.registerHelper('divide', function(a, b) {
+    if (!b || b === 0) return 0;
+    return (a || 0) / b;
+  });
+  
+  Handlebars.registerHelper('multiply', function(a, b) {
+    return (a || 0) * (b || 0);
+  });
+  
+  Handlebars.registerHelper('percentage', function(current, max) {
+    if (!max || max === 0) return 0;
+    return Math.round(((current || 0) / max) * 100);
+  });
+  
   // Preload Handlebars templates
   await loadTemplates([
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/main-tab.hbs",
