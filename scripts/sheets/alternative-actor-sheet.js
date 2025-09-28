@@ -4,6 +4,47 @@
  * This class extends the base ActorSheet and provides an alternative layout
  * and enhanced functionality for Ilaris character sheets.
  */
+
+/**
+ * Get the wuerfelwurf function from the Ilaris system
+ * @returns {Function|null} The wuerfelwurf function if available
+ */
+async function getWuerfelwurf() {
+    // Try multiple ways to access the wuerfelwurf function
+    
+    // Method 1: Try direct import from system
+    try {
+        const module = await import('/systems/Ilaris/common/wuerfel.js');
+        if (module.wuerfelwurf) {
+            return module.wuerfelwurf;
+        }
+    } catch (error) {
+        console.log('Import from /systems/Ilaris/common/wuerfel.js failed:', error.message);
+    }
+    
+    // Method 2: Check global scope
+    if (typeof window.wuerfelwurf !== 'undefined') {
+        return window.wuerfelwurf;
+    }
+    
+    // Method 3: Check game system object
+    if (game.system && typeof game.system.wuerfelwurf === 'function') {
+        return game.system.wuerfelwurf;
+    }
+    
+    // Method 4: Try alternative system paths
+    try {
+        const module = await import('/systems/Ilaris/scripts/wuerfel.js');
+        if (module.wuerfelwurf) {
+            return module.wuerfelwurf;
+        }
+    } catch (error) {
+        // Silent fail for alternative path
+    }
+    
+    console.warn('wuerfelwurf function not found in any expected location');
+    return null;
+}
 export class IlarisAlternativeActorSheet extends ActorSheet {
     
     /** @override */
@@ -64,7 +105,10 @@ export class IlarisAlternativeActorSheet extends ActorSheet {
             html.find('.item-delete').click(this._onItemDelete.bind(this));
             
             // Rollable elements
-            html.find('.rollable').click(this._onRoll.bind(this));
+            html.find('.rollable').click(this._onRollable.bind(this));
+            
+            // Hexagon attribute rolls
+            html.find('.hex-main').click(this._onRollable.bind(this));
         }
 
         // Einschränkungen interactive boxes - our custom feature
@@ -160,6 +204,122 @@ export class IlarisAlternativeActorSheet extends ActorSheet {
     }
 
     /**
+     * Handle rollable elements (reused from original Ilaris system)
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onRollable(event) {
+        let systemData = this.actor.system;
+        let rolltype = $(event.currentTarget).data('rolltype');
+        
+        if (rolltype == 'basic') {
+            // NOTE: als Einfaches Beispiel ohne weitere Dialoge und logische Verknüpfungen.
+            let label = $(event.currentTarget).data('label');
+            let formula = $(event.currentTarget).data('formula');
+            let roll = new Roll(formula);
+            console.log(formula);
+            let speaker = ChatMessage.getSpeaker({ actor: this.actor });
+            await roll.evaluate();
+            const html_roll = await renderTemplate(
+                'systems/Ilaris/templates/chat/probenchat_profan.hbs',
+                { title: `${label}` },
+            );
+            roll.toMessage({
+                speaker: speaker,
+                flavor: html_roll,
+            });
+            return 0;
+        }
+        
+        let globalermod = systemData.abgeleitete.globalermod;
+        let pw = 0;
+        let label = 'Probe';
+        let dice = '3d20dl1dh1';
+        
+        // Dialog types that should open the system's dialog
+        let dialoge = [
+            'angriff_diag',
+            'profan_fertigkeit_diag',
+            'nahkampf_diag',
+            'attribut_diag',
+            'simpleprobe_diag',
+            'simpleformula_diag',
+            'fernkampf_diag',
+            'freie_fertigkeit_diag',
+            'magie_diag',
+            'karma_diag',
+            'uefert_diag',
+        ];
+        
+        console.log('rolltype:', rolltype);
+        if (dialoge.includes(rolltype)) {
+            console.log('Opening dialog');
+            // Try to call the system's dialog function if available
+            const wuerfelwurfFn = await getWuerfelwurf();
+            if (wuerfelwurfFn) {
+                wuerfelwurfFn(event, this.actor);
+                return 0;
+            } else {
+                console.warn('wuerfelwurf function not available - falling back to basic roll');
+            }
+        }
+        
+        // Handle different roll types
+        if (rolltype == 'attribut') {
+            const attribut_name = $(event.currentTarget).data('attribut');
+            label = CONFIG.ILARIS.label[attribut_name] || attribut_name.toUpperCase();
+            pw = systemData.attribute[attribut_name].pw;
+        } else if (rolltype == 'profan_fertigkeit_pw') {
+            label = $(event.currentTarget).data('fertigkeit');
+            pw = $(event.currentTarget).data('pw');
+        } else if (rolltype == 'profan_fertigkeit_pwt') {
+            label = $(event.currentTarget).data('fertigkeit');
+            label = label.concat(' (Talent)');
+            pw = $(event.currentTarget).data('pwt');
+        } else if (rolltype == 'profan_talent') {
+            label = $(event.currentTarget).data('fertigkeit');
+            label = label.concat(' (', $(event.currentTarget).data('talent'), ')');
+            pw = $(event.currentTarget).data('pw');
+        } else if (rolltype == 'freie_fertigkeit') {
+            label = $(event.currentTarget).data('fertigkeit');
+            pw = Number($(event.currentTarget).data('pw')) * 8 - 2;
+        }
+        
+        let formula = `${dice} + ${pw} + ${globalermod}`;
+        if (rolltype == 'at' || rolltype == 'vt') {
+            formula += ` + ${systemData.modifikatoren.nahkampfmod}`;
+        }
+        if (rolltype == 'schaden') {
+            formula = pw;
+        }
+        
+        let roll = new Roll(formula);
+        await roll.evaluate();
+        let critfumble = roll.dice[0].results.find((a) => a.active == true).result;
+        let fumble = false;
+        let crit = false;
+        if (critfumble == 20) {
+            crit = true;
+        } else if (critfumble == 1) {
+            fumble = true;
+        }
+        
+        let speaker = ChatMessage.getSpeaker({ actor: this.actor });
+        const html_roll = await renderTemplate(
+            'systems/Ilaris/templates/chat/probenchat_profan.hbs',
+            {
+                title: `${label}`,
+                crit: crit,
+                fumble: fumble,
+            },
+        );
+        roll.toMessage({
+            speaker: speaker,
+            flavor: html_roll,
+        });
+    }
+
+    /**
      * Handle creating a new Owned Item for the actor
      * @param {Event} event   The originating click event
      * @private
@@ -227,4 +387,6 @@ export class IlarisAlternativeActorSheet extends ActorSheet {
             return roll;
         }
     }
+
+    
 }

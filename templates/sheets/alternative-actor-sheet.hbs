@@ -27,7 +27,7 @@
                 <div class="primary-attributes flex-row">
                     {{#each actor.system.attribute as |attribute key|}}
                     <div class="attribute-hexagon">
-                        <div class="hex-main">
+                        <div class="hex-main" data-rolltype="attribut" data-attribut="{{key}}">
                             <label class="hex-label">{{key}}</label>
                             <span class="hex-pw">{{attribute.pw}}</span>
                         </div>
