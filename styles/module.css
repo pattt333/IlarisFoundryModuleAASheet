@@ -117,7 +117,7 @@
   height: 30px;
   background: #2d3748;
   position: absolute;
-  bottom: -8px;
+  bottom: -14px;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   display: flex;
   align-items: center;
