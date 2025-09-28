@@ -109,6 +109,9 @@ export class IlarisAlternativeActorSheet extends ActorSheet {
             
             // Hexagon attribute rolls
             html.find('.hex-main').click(this._onRollable.bind(this));
+            
+            // Hexagon attribute value editing
+            html.find('.hex-small').click(this._onHexagonEdit.bind(this));
         }
 
         // Einschränkungen interactive boxes - our custom feature
@@ -188,6 +191,67 @@ export class IlarisAlternativeActorSheet extends ActorSheet {
         } else {
             deathWarning.hide();
         }
+    }
+
+    /**
+     * Handle clicking on small hexagon to edit attribute values
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onHexagonEdit(event) {
+        event.preventDefault();
+        event.stopPropagation(); // Prevent triggering parent hex-main click
+        
+        // Get the attribute key from the data attribute
+        const attributeKey = $(event.currentTarget).data('attribute');
+        
+        // Debug logging
+        console.log('Hexagon edit clicked for attribute:', attributeKey);
+        console.log('Actor system data:', this.actor.system);
+        console.log('Attributes:', this.actor.system.attribute);
+        
+        // Get current value from the actor
+        const attributeData = this.actor.system.attribute[attributeKey];
+        const currentValue = attributeData?.wert || 0;
+        
+        console.log('Current attribute data:', attributeData);
+        console.log('Current value:', currentValue);
+        
+        // Create a simple dialog for editing the attribute value
+        const content = `
+            <form>
+                <div class="form-group">
+                    <label for="attribute-value">Attribute Value for ${attributeKey.toUpperCase()}:</label>
+                    <input type="number" id="attribute-value" name="value" value="${currentValue}" min="0" max="20" step="1" />
+                </div>
+            </form>
+        `;
+        
+        new Dialog({
+            title: `Edit ${attributeKey.toUpperCase()} Value`,
+            content: content,
+            buttons: {
+                save: {
+                    label: "Save",
+                    callback: async (html) => {
+                        const newValue = parseInt(html.find('#attribute-value').val()) || 0;
+                        const updatePath = `system.attribute.${attributeKey}.wert`;
+                        
+                        console.log('Updating attribute:', attributeKey, 'to value:', newValue);
+                        console.log('Update path:', updatePath);
+                        
+                        await this.actor.update({
+                            [updatePath]: newValue
+                        });
+                    }
+                },
+                cancel: {
+                    label: "Cancel"
+                }
+            },
+            default: "save",
+            close: () => {}
+        }).render(true);
     }
 
     /** @override */

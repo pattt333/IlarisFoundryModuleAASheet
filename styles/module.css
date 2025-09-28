@@ -123,6 +123,14 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ilaris.sheet.actor.alternative .hex-small:hover {
+  background: #4a5568;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(45, 55, 72, 0.6);
 }
 
 .ilaris.sheet.actor.alternative .hex-wert {
