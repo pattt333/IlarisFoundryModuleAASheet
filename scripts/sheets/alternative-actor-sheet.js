@@ -27,6 +27,23 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
     }
 
     /** @override */
+    _getHeaderButtons() {
+        let buttons = super._getHeaderButtons();
+        
+        console.log(buttons)
+        buttons.forEach(btn => btn.label = '');
+        // Add Copy UUID button
+        buttons.unshift({
+            label: "",
+            class: "copy-uuid",
+            icon: "fa-solid fa-passport",
+            onclick: () => this._onCopyUUID()
+        });
+        
+        return buttons;
+    }
+
+    /** @override */
     async getData() {
         try {
             // Get all the data from the original system's actor sheet
@@ -254,5 +271,19 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         }, 100);
         
         return result;
+    }
+
+    /**
+     * Handle copying the actor's UUID to clipboard
+     * @private
+     */
+    _onCopyUUID() {
+        const uuid = this.actor.uuid;
+        navigator.clipboard.writeText(uuid).then(() => {
+            ui.notifications.info(`Copied UUID: ${uuid}`);
+        }).catch(err => {
+            console.error('Failed to copy UUID:', err);
+            ui.notifications.error('Failed to copy UUID to clipboard');
+        });
     }
 }

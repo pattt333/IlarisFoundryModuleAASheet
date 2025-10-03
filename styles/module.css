@@ -432,14 +432,25 @@
 
 .ilaris.sheet.actor.alternative .window-content {
   background: #f8f8f8;
-  border-radius: 8px;
+  padding: 0;
+}
+
+.ilaris.sheet.actor.alternative .window-header {
+    background: linear-gradient(90deg, #4a5568, #2d3748);
+    margin: 0;
+    padding: 4px;
+    border: 0;
+    justify-content: flex-end;
+}
+
+.ilaris.sheet.actor.alternative .window-title {
+  display: none;
 }
 
 .ilaris.sheet.actor.alternative .sheet-header {
-  background: linear-gradient(135deg, #4a5568, #2d3748);
+  background: linear-gradient(90deg, #4a5568, #2d3748);
   color: white;
   padding: 15px;
-  border-radius: 8px 8px 0 0;
   display: flex;
   align-items: flex-start;
   gap: 20px;
