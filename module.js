@@ -43,6 +43,22 @@ Hooks.once('init', async function() {
     if (!max || max === 0) return 0;
     return Math.round(((current || 0) / max) * 100);
   });
+
+  // Helper for creating arrays in templates
+  Handlebars.registerHelper('array', function() {
+    return Array.from(arguments).slice(0, -1); // Remove the Handlebars options object
+  });
+
+  // Helper for concatenating strings
+  Handlebars.registerHelper('concat', function() {
+    return Array.from(arguments).slice(0, -1).join(''); // Remove the Handlebars options object
+  });
+
+  // Helper for creating hash objects
+  Handlebars.registerHelper('hash', function() {
+    const options = arguments[arguments.length - 1];
+    return options.hash;
+  });
   
   // Preload Handlebars templates
   await loadTemplates([
@@ -52,8 +68,15 @@ Hooks.once('init', async function() {
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/health-resources.hbs"
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/health-resources.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/item-accordion.hbs"
   ]);
+
+  // Load accordion CSS
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'modules/ilaris-alternative-actor-sheet/styles/item-accordion.css';
+  document.head.appendChild(link);
   
   // Register the alternative actor sheet using the standard pattern
   Actors.registerSheet("Ilaris", IlarisAlternativeActorSheet, {

@@ -80,6 +80,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         // Einschränkungen interactive boxes (our custom feature)
         html.find('.einschraenkung-box').click(this._onEinschraenkungClick.bind(this));
         
+        // Accordion functionality for items
+        html.find('.accordion-header').click(this._onAccordionToggle.bind(this));
+        
         // Initialize einschränkungen display
         this._updateEinschraenkungsDisplay(html);
     }
@@ -118,6 +121,29 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             'system.gesundheit.wunden': wunden,
             'system.gesundheit.erschoepfung': erschoepfung
         });
+    }
+
+    /**
+     * Handle accordion toggle for item details
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    _onAccordionToggle(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const accordionItem = $(event.currentTarget).closest('.accordion-item');
+        const isExpanded = accordionItem.hasClass('expanded');
+        
+        // Close all other accordions in the same list
+        accordionItem.siblings('.accordion-item').removeClass('expanded');
+        
+        // Toggle current accordion
+        if (isExpanded) {
+            accordionItem.removeClass('expanded');
+        } else {
+            accordionItem.addClass('expanded');
+        }
     }
 
     /**

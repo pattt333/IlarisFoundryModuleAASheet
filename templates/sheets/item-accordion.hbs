@@ -1,0 +1,38 @@
+{{!-- Item Accordion Template --}}
+<div class="item accordion-item" data-item-id="{{item._id}}">
+    <div class="item-header-row">
+        <div class="item-image {{#if rollable}}rollable{{/if}}" 
+             {{#if rollable}}data-rolltype="{{rolltype}}" data-itemid="{{item._id}}"{{/if}}>
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+        </div>
+        <div class="item-name accordion-header">
+            {{#if nameLabel}}<div>{{nameLabel}}</div>{{/if}}
+            <h3>{{item.name}}</h3>
+        </div>
+        {{#if stats}}
+        <div class="item-stats accordion-header">
+            {{#each stats}}
+            <h4>{{this}}</h4>
+            {{/each}}
+        </div>
+        {{/if}}
+        <div class="item-controls">
+            <a class="item-control item-edit" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{editTitle}}">
+                <i class="fas fa-edit"></i>
+            </a>
+            <a class="item-control item-delete" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{deleteTitle}}">
+                <i class="fas fa-trash"></i>
+            </a>
+        </div>
+    </div>
+    <div class="accordion-content">
+        <div class="item-details">
+            {{#each details}}
+            <div class="detail-row {{#if this.isDescription}}description{{/if}}">
+                <span class="detail-label">{{this.label}}:</span>
+                <span class="detail-value">{{this.value}}</span>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
