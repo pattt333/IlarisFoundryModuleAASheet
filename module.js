@@ -2,7 +2,8 @@
  * Ilaris Alternative Actor Sheet Module
  * 
  * This module provides an alternative actor sheet for the Ilaris Foundry VTT system.
- * It extends the base Ilaris actor sheet with enhanced layout and functionality.
+ * Following the proven patterns of successful character sheet modules like 13th Age
+ * and others, this extends the base ActorSheet directly without complex imports.
  */
 
 import { IlarisAlternativeActorSheet } from './scripts/sheets/alternative-actor-sheet.js';
@@ -54,17 +55,12 @@ Hooks.once('init', async function() {
     "modules/ilaris-alternative-actor-sheet/templates/sheets/health-resources.hbs"
   ]);
   
-  // Register the alternative actor sheet
+  // Register the alternative actor sheet using the standard pattern
   Actors.registerSheet("Ilaris", IlarisAlternativeActorSheet, {
     types: ["held", "kreatur"],
     makeDefault: false,
     label: "Alternative Actor Sheet"
   });
   
-  console.log('Ilaris Alternative Actor Sheet | Module initialized');
-});
-
-// Ready hook - called when the game is ready
-Hooks.once('ready', async function() {
-  console.log('Ilaris Alternative Actor Sheet | Module ready');
+  console.log('Ilaris Alternative Actor Sheet | Module initialized successfully');
 });

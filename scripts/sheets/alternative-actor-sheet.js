@@ -1,25 +1,13 @@
 /**
  * Alternative Actor Sheet for Ilaris
  * 
- * This class extends the original IlarisActorSheet and provides an alternative layout
- * and enhanced functionality while inheriting all the original system methods.
+ * This class extends the base ActorSheet and provides an alternative layout
+ * with enhanced functionality. It follows the same pattern as many successful
+ * character sheet modules by extending the base Foundry ActorSheet directly.
  */
+import { HeldenSheet } from "../../../../systems/Ilaris/scripts/sheets/helden.js";
 
-// Import the original Ilaris actor sheet class
-let IlarisActorSheet;
-
-// Try to import the original actor sheet class
-try {
-    // Import the original system's actor sheet
-    const systemModule = await import('/systems/Ilaris/scripts/sheets/actor.js');
-    IlarisActorSheet = systemModule.IlarisActorSheet;
-    console.log('Successfully imported IlarisActorSheet from system');
-} catch (error) {
-    console.warn('Could not import IlarisActorSheet from system, falling back to ActorSheet:', error);
-    IlarisActorSheet = ActorSheet;
-}
-
-export class IlarisAlternativeActorSheet extends IlarisActorSheet {
+export class IlarisAlternativeActorSheet extends HeldenSheet {
     
     /** @override */
     static get defaultOptions() {
@@ -40,13 +28,41 @@ export class IlarisAlternativeActorSheet extends IlarisActorSheet {
 
     /** @override */
     async getData() {
-        // Get all the data from the original system's actor sheet
-        const context = await super.getData();
-        console.log('IlarisAlternativeActorSheet | getData context:', context);
-        // Add any additional context we need for our alternative template
-        // The original system already provides everything we need
-        
-        return context;
+        try {
+            // Get all the data from the original system's actor sheet
+            const context = await super.getData();
+            
+            // Validate that we have the required data
+            if (!context || !context.actor) {
+                console.error('IlarisAlternativeActorSheet | Invalid context from parent getData');
+                throw new Error('Failed to get valid context from parent sheet');
+            }
+            
+            // Ensure CONFIG.ILARIS is available
+            if (!CONFIG.ILARIS) {
+                console.warn('IlarisAlternativeActorSheet | CONFIG.ILARIS not available, initializing empty config');
+                CONFIG.ILARIS = {};
+            }
+            
+            console.log('IlarisAlternativeActorSheet | Successfully retrieved context');
+            return context;
+            
+        } catch (error) {
+            console.error('IlarisAlternativeActorSheet | Error in getData:', error);
+            
+            // Fallback to basic context if parent fails
+            const context = {
+                actor: this.actor,
+                data: this.actor.system,
+                system: this.actor.system,
+                config: CONFIG.ILARIS || {},
+                isCharacter: this.actor.type === "held",
+                isOwner: this.actor.isOwner,
+                editable: this.isEditable
+            };
+            
+            return context;
+        }
     }
 
     /** @override */

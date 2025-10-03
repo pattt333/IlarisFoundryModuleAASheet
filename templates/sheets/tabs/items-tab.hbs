@@ -6,7 +6,7 @@
             <div class="items-header">
                 <h3>Waffen</h3>
                 <div class="item-controls">
-                    <a class="item-control item-create" title="Waffe erstellen" data-type="nahkampfwaffe"><i class="fas fa-plus"></i> Waffe hinzufügen</a>
+                    <a class="item-control item-create" title="Waffe erstellen" data-itemclass="nahkampfwaffe"><i class="fas fa-plus"></i> Waffe hinzufügen</a>
                 </div>
             </div>
             <ol class="items-list">
@@ -17,8 +17,8 @@
                         <h4>{{item.name}}</h4>
                     </div>
                     <div class="item-controls">
-                        <a class="item-control item-edit" title="Waffe bearbeiten"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Waffe löschen"><i class="fas fa-trash"></i></a>
+                        <a class="item-control item-edit" data-itemclass="nahkampfwaffe" data-itemid="{{item._id}}" title="Waffe bearbeiten"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" data-itemclass="nahkampfwaffe" data-itemid="{{item._id}}" title="Waffe löschen"><i class="fas fa-trash"></i></a>
                     </div>
                 </li>
                 {{/each}}
