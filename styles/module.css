@@ -644,26 +644,51 @@
   border-bottom: 1px solid #e2e8f0;
   background: white;
   transition: background-color 0.2s ease;
-}
 
-.ilaris.sheet.actor.alternative .items-list .item:last-child {
-  border-bottom: none;
-}
+  &:last-child {
+    border-bottom: none;
+  }
 
-.ilaris.sheet.actor.alternative .items-list .item:hover {
-  background: #f7fafc;
-}
+  &:hover {
+    background: #f7fafc;
+  }
 
-.ilaris.sheet.actor.alternative .items-list .item-name {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  gap: 10px;
-}
+  .item-props {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 16px;
+  }
 
-.ilaris.sheet.actor.alternative .items-list .item h4 {
-  margin: 0;
-  color: #2d3748;
+  .item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .item-name {
+    display: flex;
+    align-items: flex-start;
+    color: #4299e1;
+    flex-direction: column;
+  }
+
+  .item-stats h4 {
+    font-weight: bold;
+  }
+
+  h3 {
+    margin: 0;
+    color: #2d3748;
+    font-weight: bold;
+    border-bottom: 0px;
+  }
+
+  h4 {
+    margin: 0;
+    color: #2d3748;
+    font-weight: bold;
+  }
 }
 
 .ilaris.sheet.actor.alternative .item-controls {

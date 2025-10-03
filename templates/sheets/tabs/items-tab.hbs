@@ -12,9 +12,18 @@
             <ol class="items-list">
                 {{#each actor.nahkampfwaffen as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
-                    <div class="item-name">
-                        <div class="item-image rollable" data-rolltype="angriff_diag" data-itemid="{{item._id}}"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                        <h4>{{item.name}}</h4>
+                    <div class="item-props">
+                        <div class="item-header">
+                            <div class="item-image rollable" data-rolltype="angriff_diag" data-itemid="{{item._id}}"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                            <div class="item-name">
+                                <div>Waffenname</div>
+                                <h3>{{item.name}}</h3>
+                            </div>
+                        </div>
+                        <div class="item-stats">
+                            <h4>AT {{item.system.at}}</h4>
+                            <h4>VT {{item.system.vt}}</h4>
+                        </div>
                     </div>
                     <div class="item-controls">
                         <a class="item-control item-edit" data-itemclass="nahkampfwaffe" data-itemid="{{item._id}}" title="Waffe bearbeiten"><i class="fas fa-edit"></i></a>
