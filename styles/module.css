@@ -661,11 +661,6 @@
   gap: 10px;
 }
 
-.ilaris.sheet.actor.alternative .items-list .item-image img {
-  border-radius: 4px;
-  border: 1px solid #e2e8f0;
-}
-
 .ilaris.sheet.actor.alternative .items-list .item h4 {
   margin: 0;
   color: #2d3748;
@@ -744,6 +739,20 @@
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   min-height: 300px;
+}
+
+/* Item Images Styling */
+.ilaris.sheet.actor.alternative .item-image img {
+  width: 48px !important;
+  height: 48px !important;
+  border: 0px;
+  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(187deg) brightness(119%) contrast(119%);
+}
+
+.ilaris.sheet.actor.alternative .item-image img:hover {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1552%) hue-rotate(187deg) brightness(130%) contrast(119%);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 /* Responsive Design */
