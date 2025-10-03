@@ -5,6 +5,10 @@
  * It extends and enhances the base Ilaris system styles.
  */
 
+/* CSS Variable Overrides */
+:root {
+  --color-shadow-primary: white;
+}
 
 .ilaris.sheet.actor.alternative .actor-profile {
   display: flex;
@@ -333,7 +337,7 @@
   top: 120px; /* Adjust based on header height */
   z-index: 9;
   background: var(--color-bg, #f8f8f8);
-  border-bottom: 1px solid var(--color-border-light, #ccc);
+  border: 0;
   flex-shrink: 0;
 }
 
@@ -450,7 +454,7 @@
 .ilaris.sheet.actor.alternative .sheet-header {
   background: linear-gradient(90deg, #4a5568, #2d3748);
   color: white;
-  padding: 15px;
+  padding: 15px 15px 0 15px;
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -508,8 +512,7 @@
 
 /* Enhanced Tab Navigation */
 .ilaris.sheet.actor.alternative .sheet-tabs {
-  background: #e2e8f0;
-  border-bottom: 2px solid #cbd5e0;
+  background: transparent;
   display: flex;
   justify-content: space-around;
   margin: 0;
@@ -520,13 +523,10 @@
   flex: 1;
   text-align: center;
   padding: 12px;
-  background: #e2e8f0;
+  background: transparent;
   border: none;
-  border-right: 1px solid #cbd5e0;
-  color: #4a5568;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s ease;
 }
 
 .ilaris.sheet.actor.alternative .sheet-tabs .item:last-child {
@@ -534,14 +534,12 @@
 }
 
 .ilaris.sheet.actor.alternative .sheet-tabs .item:hover {
-  background: #cbd5e0;
-  color: #2d3748;
+  border-bottom: 4px solid #4299e1;
 }
 
 .ilaris.sheet.actor.alternative .sheet-tabs .item.active {
-  background: white;
-  color: #2d3748;
-  border-bottom: 2px solid #4299e1;
+  background: transparent;
+  border-bottom: 4px solid #4299e1;
 }
 
 /* Enhanced Sheet Body */
