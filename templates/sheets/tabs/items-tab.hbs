@@ -21,10 +21,9 @@
                     editTitle="Waffe bearbeiten"
                     deleteTitle="Waffe löschen"
                     details=(array 
-                        (hash label="Schaden" value=item.system.tp)
-                        (hash label="Reichweite" value=item.system.rw)
-                        (hash label="Gewicht" value=(concat item.system.gewicht " kg"))
-                        (hash label="Beschreibung" value=item.system.beschreibung isDescription=true)
+                        (hash label="TP" value=item.system.tp)
+                        (hash label="RW" value=item.system.rw)
+                        (hash label="Eigenschaften" value=(eigenschaften item.system.eigenschaften) isDescription=true)
                     )
                 }}
                 {{/each}}

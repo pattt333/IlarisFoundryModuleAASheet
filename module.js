@@ -59,6 +59,14 @@ Hooks.once('init', async function() {
     const options = arguments[arguments.length - 1];
     return options.hash;
   });
+
+  // Helper for extracting true properties from eigenschaften object
+  Handlebars.registerHelper('eigenschaften', function(eigenschaften) {
+    if (!eigenschaften || typeof eigenschaften !== 'object') return '';
+    
+    const trueProperties = Object.keys(eigenschaften).filter(key => eigenschaften[key] === true);
+    return trueProperties.join(', ');
+  });
   
   // Preload Handlebars templates
   await loadTemplates([
