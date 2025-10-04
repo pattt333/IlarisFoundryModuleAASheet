@@ -4,7 +4,7 @@
           {{!-- Weapons Section --}}
         <div class="items-section">
             <div class="items-header">
-                <h3>Waffen</h3>
+                <h3>Nahkampfwaffen</h3>
                 <div class="item-controls">
                     <a class="item-control item-create" title="Waffe erstellen" data-itemclass="nahkampfwaffe"><i class="fas fa-plus"></i> Waffe hinzufügen</a>
                 </div>
@@ -18,6 +18,34 @@
                     nameLabel="Waffenname"
                     stats=(array (concat "AT " item.system.at) (concat "VT " item.system.vt))
                     itemclass="nahkampfwaffe"
+                    editTitle="Waffe bearbeiten"
+                    deleteTitle="Waffe löschen"
+                    details=(array 
+                        (hash label="TP" value=item.system.tp)
+                        (hash label="RW" value=item.system.rw)
+                        (hash label="Eigenschaften" value=(eigenschaften item.system.eigenschaften) isDescription=true)
+                    )
+                }}
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Fernkampfwaffen</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Waffe erstellen" data-itemclass="nahkampfwaffe"><i class="fas fa-plus"></i> Waffe hinzufügen</a>
+                </div>
+            </div>
+            <div class="items-list">
+                {{#each actor.fernkampfwaffen as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/sheets/item-accordion.hbs" 
+                    item=item 
+                    rollable=true 
+                    rolltype="fernkampf_diag"
+                    nameLabel="Waffenname"
+                    stats=(array (concat "FK " item.system.fk) )
+                    itemclass="fernkampfwaffe"
                     editTitle="Waffe bearbeiten"
                     deleteTitle="Waffe löschen"
                     details=(array 
