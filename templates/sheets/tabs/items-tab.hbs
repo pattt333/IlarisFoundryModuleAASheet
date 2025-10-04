@@ -1,6 +1,28 @@
 {{!-- Items Tab --}}
 <div class="tab items" data-group="primary" data-tab="items">
     <div class="flexcol">
+        {{!-- Kampfstil Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Kampfstil und Beritten</h3>
+            </div>
+            <div class="kampfstil-controls">
+                <select class="selected-kampfstil" name="system.misc.selected_kampfstil">
+                    {{selectOptions actor.misc.kampfstile_list selected=actor.system.misc.selected_kampfstil}}
+                </select>
+                <label class="beritten-checkbox">
+                    <input type="checkbox" name="system.misc.ist_beritten" {{checked actor.system.misc.ist_beritten}} />
+                    Beritten
+                </label>
+            </div>
+
+            {{#if actor.misc.selected_kampfstil_conditions_not_met}}
+                <div class="kampfstil-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Kampfstil inaktiv:</strong> {{actor.misc.selected_kampfstil_conditions_not_met}}
+                </div>
+            {{/if}}
+        </div>
           {{!-- Weapons Section --}}
         <div class="items-section">
             <div class="items-header">
@@ -20,9 +42,13 @@
                     itemclass="nahkampfwaffe"
                     editTitle="Waffe bearbeiten"
                     deleteTitle="Waffe löschen"
+                    isWeapon=true
                     details=(array 
                         (hash label="TP" value=item.system.tp)
                         (hash label="RW" value=item.system.rw)
+                        (hash label="Fertigkeit" value=item.system.fertigkeit)
+                        (hash label="Talent" value=item.system.talent)
+                        (hash label="Härte" value=item.system.härte)
                         (hash label="Eigenschaften" value=(eigenschaften item.system.eigenschaften) isDescription=true)
                     )
                 }}
@@ -48,9 +74,13 @@
                     itemclass="fernkampfwaffe"
                     editTitle="Waffe bearbeiten"
                     deleteTitle="Waffe löschen"
+                    isWeapon=true
                     details=(array 
                         (hash label="TP" value=item.system.tp)
                         (hash label="RW" value=item.system.rw)
+                        (hash label="Fertigkeit" value=item.system.fertigkeit)
+                        (hash label="Talent" value=item.system.talent)
+                        (hash label="Härte" value=item.system.härte)
                         (hash label="Eigenschaften" value=(eigenschaften item.system.eigenschaften) isDescription=true)
                     )
                 }}

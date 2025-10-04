@@ -28,10 +28,12 @@
     <div class="accordion-content">
         <div class="item-details">
             {{#each details}}
+            {{#if this.value}}
             <div class="detail-row {{#if this.isDescription}}description{{/if}}">
                 <span class="detail-label">{{this.label}}</span>
                 <span class="detail-value">{{this.value}}</span>
             </div>
+            {{/if}}
             {{/each}}
         </div>
     </div>

@@ -6,9 +6,12 @@
  */
 
 /* CSS Variable Overrides */
-:root {
+body {
   --color-shadow-primary: white;
   --primary-color: #4299e1;
+  --color-select-option-bg: white;
+  --color-scrollbar: #4299e1; 
+  --color-light-1: white;
 }
 
 .ilaris.sheet.actor.alternative .actor-profile {
@@ -650,6 +653,58 @@
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   min-height: 300px;
+}
+
+/* Kampfstil Section */
+.ilaris.sheet.actor.alternative .kampfstil-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+}
+
+.ilaris.sheet.actor.alternative .kampfstil-controls select {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+}
+
+.ilaris.sheet.actor.alternative .beritten-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  color: #4a5568;
+  cursor: pointer;
+}
+
+.ilaris.sheet.actor.alternative .beritten-checkbox input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.ilaris.sheet.actor.alternative .kampfstil-warning {
+  margin: 0;
+  padding: 8px 15px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  color: #721c24;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ilaris.sheet.actor.alternative .kampfstil-warning i {
+  color: #dc3545;
 }
 
 
