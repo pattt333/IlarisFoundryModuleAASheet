@@ -6,7 +6,7 @@
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
         </div>
         <div class="item-name accordion-header">
-            {{#if nameLabel}}<div>{{nameLabel}}</div>{{/if}}
+            <div class="name-label">{{nameLabel}}<i class="fas fa-chevron-down"></i></div>
             <h3>{{item.name}}</h3>
         </div>
         {{#if stats}}

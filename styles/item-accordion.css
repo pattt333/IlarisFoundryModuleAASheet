@@ -153,6 +153,16 @@
   cursor: pointer;
   flex: 1;
   margin-left: 16px;
+  position: relative;
+}
+
+.ilaris.sheet.actor.alternative .name-label i {
+  color: #4299e1;
+  margin-left: 8px;
+}
+
+.ilaris.sheet.actor.alternative .accordion-item.expanded .name-label i {
+  transform: rotate(180deg);
 }
 
 .ilaris.sheet.actor.alternative .accordion-content {
