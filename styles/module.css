@@ -8,6 +8,7 @@
 /* CSS Variable Overrides */
 :root {
   --color-shadow-primary: white;
+  --primary-color: #4299e1;
 }
 
 .ilaris.sheet.actor.alternative .actor-profile {
@@ -84,7 +85,7 @@
 .ilaris.sheet.actor.alternative .hex-main {
   width: 52px;
   height: 60px;
-  background: #4299e1;
+  background: var(--primary-color);
   position: relative;
   margin: 5px 0;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -454,7 +455,7 @@
 .ilaris.sheet.actor.alternative .sheet-header {
   background: linear-gradient(90deg, #4a5568, #2d3748);
   color: white;
-  padding: 15px 15px 0 15px;
+  padding: 0 15px 0 15px;
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -520,13 +521,10 @@
 }
 
 .ilaris.sheet.actor.alternative .sheet-tabs .item {
-  flex: 1;
-  text-align: center;
-  padding: 12px;
-  background: transparent;
+  /* flex: 1;
   border: none;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: bold; */
 }
 
 .ilaris.sheet.actor.alternative .sheet-tabs .item:last-child {
@@ -534,12 +532,12 @@
 }
 
 .ilaris.sheet.actor.alternative .sheet-tabs .item:hover {
-  border-bottom: 4px solid #4299e1;
+  border-bottom: 4px solid var(--primary-color);
 }
 
 .ilaris.sheet.actor.alternative .sheet-tabs .item.active {
   background: transparent;
-  border-bottom: 4px solid #4299e1;
+  border-bottom: 4px solid var(--primary-color);
 }
 
 /* Enhanced Sheet Body */
@@ -567,7 +565,7 @@
 /* Abilities Section */
 .ilaris.sheet.actor.alternative .abilities h3 {
   color: #2d3748;
-  border-bottom: 2px solid #4299e1;
+  border-bottom: 2px solid var(--primary-color);
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
@@ -589,7 +587,7 @@
 }
 
 .ilaris.sheet.actor.alternative .ability .resource-label:hover {
-  color: #4299e1;
+  color: var(--primary-color);
 }
 
 .ilaris.sheet.actor.alternative .ability input {
@@ -602,7 +600,7 @@
 }
 
 .ilaris.sheet.actor.alternative .ability .ability-mod {
-  background: #4299e1;
+  background: var(--primary-color);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -669,10 +667,5 @@
   
   .ilaris.sheet.actor.alternative .sheet-tabs {
     flex-direction: column;
-  }
-  
-  .ilaris.sheet.actor.alternative .sheet-tabs .item {
-    border-right: none;
-    border-bottom: 1px solid #cbd5e0;
   }
 }
