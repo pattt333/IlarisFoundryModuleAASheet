@@ -33,10 +33,7 @@ export class AccordionManager {
         const accordionItem = $(event.currentTarget).closest('.accordion-item');
         const itemId = accordionItem.data('item-id');
         const isExpanded = accordionItem.hasClass('expanded');
-        
-        // Close all other accordions in the same list
-        accordionItem.siblings('.accordion-item').removeClass('expanded');
-        
+                
         // Toggle current accordion
         if (isExpanded) {
             accordionItem.removeClass('expanded');
