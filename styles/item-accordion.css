@@ -92,6 +92,8 @@
 .ilaris.sheet.actor.alternative .item-controls {
   display: flex;
   gap: 5px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .ilaris.sheet.actor.alternative .item-control {
