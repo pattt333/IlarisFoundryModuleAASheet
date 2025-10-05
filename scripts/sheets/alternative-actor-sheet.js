@@ -6,8 +6,14 @@
  * character sheet modules by extending the base Foundry ActorSheet directly.
  */
 import { HeldenSheet } from "../../../../systems/Ilaris/scripts/sheets/helden.js";
+import { AccordionManager } from "../accordion-manager.js";
 
 export class IlarisAlternativeActorSheet extends HeldenSheet {
+    
+    constructor(...args) {
+        super(...args);
+        this.accordionManager = new AccordionManager(this.actor.id);
+    }
     
     /** @override */
     static get defaultOptions() {
@@ -97,8 +103,8 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         // Einschränkungen interactive boxes (our custom feature)
         html.find('.einschraenkung-box').click(this._onEinschraenkungClick.bind(this));
         
-        // Accordion functionality for items
-        html.find('.accordion-header').click(this._onAccordionToggle.bind(this));
+        // Initialize accordion functionality
+        this.accordionManager.initialize(html);
         
         // Initialize einschränkungen display
         this._updateEinschraenkungsDisplay(html);
@@ -150,6 +156,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         event.stopPropagation();
         
         const accordionItem = $(event.currentTarget).closest('.accordion-item');
+        const itemId = accordionItem.data('item-id');
         const isExpanded = accordionItem.hasClass('expanded');
         
         // Close all other accordions in the same list
@@ -158,9 +165,63 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         // Toggle current accordion
         if (isExpanded) {
             accordionItem.removeClass('expanded');
+            this._removeAccordionState(itemId);
         } else {
             accordionItem.addClass('expanded');
+            this._saveAccordionState(itemId);
         }
+    }
+
+    /**
+     * Get the storage key for accordion states
+     * @private
+     */
+    _getAccordionStorageKey() {
+        return `ilaris-accordion-states-${this.actor.id}`;
+    }
+
+    /**
+     * Save accordion state for an item
+     * @param {string} itemId - The item ID
+     * @private
+     */
+    _saveAccordionState(itemId) {
+        const storageKey = this._getAccordionStorageKey();
+        let states = JSON.parse(sessionStorage.getItem(storageKey) || '{}');
+        states[itemId] = true;
+        sessionStorage.setItem(storageKey, JSON.stringify(states));
+    }
+
+    /**
+     * Remove accordion state for an item
+     * @param {string} itemId - The item ID
+     * @private
+     */
+    _removeAccordionState(itemId) {
+        const storageKey = this._getAccordionStorageKey();
+        let states = JSON.parse(sessionStorage.getItem(storageKey) || '{}');
+        delete states[itemId];
+        sessionStorage.setItem(storageKey, JSON.stringify(states));
+    }
+
+    /**
+     * Restore accordion states from session storage
+     * @param {jQuery} html - The rendered HTML
+     * @private
+     */
+    _restoreAccordionStates(html) {
+        const storageKey = this._getAccordionStorageKey();
+        const states = JSON.parse(sessionStorage.getItem(storageKey) || '{}');
+        
+        // Apply saved states
+        Object.keys(states).forEach(itemId => {
+            if (states[itemId]) {
+                const accordionItem = html.find(`.accordion-item[data-item-id="${itemId}"]`);
+                if (accordionItem.length) {
+                    accordionItem.addClass('expanded');
+                }
+            }
+        });
     }
 
     /**
@@ -271,6 +332,22 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         }, 100);
         
         return result;
+    }
+
+    /** @override */
+    async close(options = {}) {
+        // Clear accordion states when sheet is closed for good
+        this.accordionManager.clearAccordionStates();
+        return super.close(options);
+    }
+
+    /**
+     * Clear all accordion states from session storage
+     * @private
+     */
+    _clearAccordionStates() {
+        const storageKey = this._getAccordionStorageKey();
+        sessionStorage.removeItem(storageKey);
     }
 
     /**
