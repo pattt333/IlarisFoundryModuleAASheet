@@ -33,7 +33,7 @@
             </div>
             <div class="items-list">
                 {{#each actor.nahkampfwaffen as |item id|}}
-                {{> "modules/ilaris-alternative-actor-sheet/templates/sheets/item-accordion.hbs" 
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
                     item=item 
                     rollable=true 
                     rolltype="angriff_diag"
@@ -65,7 +65,7 @@
             </div>
             <div class="items-list">
                 {{#each actor.fernkampfwaffen as |item id|}}
-                {{> "modules/ilaris-alternative-actor-sheet/templates/sheets/item-accordion.hbs" 
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
                     item=item 
                     rollable=true 
                     rolltype="fernkampf_diag"
@@ -98,7 +98,7 @@
             </div>
             <div class="items-list">
                 {{#each gegenstaende as |item id|}}
-                {{> "modules/ilaris-alternative-actor-sheet/templates/sheets/item-accordion.hbs" 
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
                     item=item 
                     rollable=false
                     itemclass="gegenstand"

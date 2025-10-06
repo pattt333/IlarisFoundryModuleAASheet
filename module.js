@@ -90,10 +90,10 @@ Hooks.once('init', async function() {
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/health-resources.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/item-accordion.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/favorites-component.hbs"
+    "modules/ilaris-alternative-actor-sheet/templates/components/energy-resources.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/components/favorites-component.hbs"
   ]);
 
   // Load component CSS files
