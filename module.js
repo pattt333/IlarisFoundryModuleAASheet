@@ -67,6 +67,21 @@ Hooks.once('init', async function() {
     const trueProperties = Object.keys(eigenschaften).filter(key => eigenschaften[key] === true);
     return trueProperties.join(', ');
   });
+
+  // Helper for checking if any item in an array has a truthy property
+  Handlebars.registerHelper('some', function(array, property) {
+    if (!Array.isArray(array)) return false;
+    return array.some(item => {
+      // Handle nested properties like "system.hauptwaffe"
+      const props = property.split('.');
+      let value = item;
+      for (const prop of props) {
+        value = value?.[prop];
+        if (value === undefined) return false;
+      }
+      return !!value;
+    });
+  });
   
   // Preload Handlebars templates
   await loadTemplates([

@@ -1,7 +1,14 @@
-{{!-- Favorites Component --}}
+{{!-- Favorites Component with Tabs --}}
 <div class="favorites-component">
     <div class="favorites-header">
-        <h3><i class="fas fa-star"></i> Favoriten</h3>
+        <div class="favorites-tabs">
+            <a class="favorites-tab active" data-tab="favorites" title="Favoriten">
+                <i class="fas fa-star"></i>
+            </a>
+            <a class="favorites-tab" data-tab="combat" title="Kampfausrüstung">
+                <i class="fas fa-sword"></i>
+            </a>
+        </div>
         <div class="favorites-controls">
             <a class="favorites-control favorites-clear" title="Alle Favoriten löschen">
                 <i class="fas fa-trash"></i>
@@ -13,34 +20,171 @@
     </div>
     
     <div class="favorites-content">
-        <div class="favorites-list">
-            {{!-- Placeholder content for now --}}
-            <div class="favorites-empty">
-                <i class="fas fa-star-o"></i>
-                <p>Keine Favoriten</p>
-                <small>Ziehe Gegenstände, Fertigkeiten oder Zauber hierher, um sie als Favoriten zu markieren.</small>
+        {{!-- Favorites Tab Content --}}
+        <div class="favorites-tab-content active" data-tab-content="favorites">
+            <div class="favorites-list">
+                {{!-- Placeholder content for now --}}
+                <div class="favorites-empty">
+                    <i class="fas fa-star-o"></i>
+                    <p>Keine Favoriten</p>
+                    <small>Ziehe Gegenstände, Fertigkeiten oder Zauber hierher, um sie als Favoriten zu markieren.</small>
+                </div>
+            </div>
+            
+            {{!-- Future: Favorite items will be rendered here --}}
+            {{!-- {{#each favorites as |favorite|}}
+            <div class="favorite-item" data-favorite-id="{{favorite.id}}" data-item-type="{{favorite.type}}">
+                <div class="favorite-image">
+                    <img src="{{favorite.img}}" alt="{{favorite.name}}" />
+                </div>
+                <div class="favorite-details">
+                    <h4>{{favorite.name}}</h4>
+                    <span class="favorite-type">{{favorite.type}}</span>
+                </div>
+                <div class="favorite-controls">
+                    <a class="favorite-use" title="Verwenden/Würfeln">
+                        <i class="fas fa-dice-d20"></i>
+                    </a>
+                    <a class="favorite-remove" title="Aus Favoriten entfernen">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            {{/each}} --}}
+        </div>
+
+        {{!-- Combat Gear Tab Content --}}
+        <div class="favorites-tab-content" data-tab-content="combat">
+            <div class="combat-gear-list">
+                {{!-- Kampfstil Section --}}
+                {{#if actor.system.misc.selected_kampfstil}}
+                <div class="combat-item kampfstil-item">
+                    <div class="combat-item-header">
+                        <i class="fas fa-fist-raised"></i>
+                        <h4>Kampfstil</h4>
+                    </div>
+                    <div class="combat-item-content">
+                        <span class="kampfstil-name">{{actor.system.misc.selected_kampfstil}}</span>
+                        {{#if actor.system.misc.ist_beritten}}
+                        <span class="beritten-indicator">
+                            <i class="fas fa-horse"></i> Beritten
+                        </span>
+                        {{/if}}
+                        {{#if actor.misc.selected_kampfstil_conditions_not_met}}
+                        <div class="kampfstil-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Inaktiv: {{actor.misc.selected_kampfstil_conditions_not_met}}
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/if}}
+
+                {{!-- Hauptwaffe Section --}}
+                {{#each actor.nahkampfwaffen as |weapon|}}
+                {{#if weapon.system.hauptwaffe}}
+                <div class="combat-item weapon-item hauptwaffe">
+                    <div class="combat-item-header">
+                        <div class="weapon-image">
+                            <img src="{{weapon.img}}" alt="{{weapon.name}}" />
+                        </div>
+                        <div class="weapon-info">
+                            <h4>{{weapon.name}}</h4>
+                            <span class="weapon-type">Hauptwaffe</span>
+                        </div>
+                    </div>
+                    <div class="combat-item-content">
+                        <div class="weapon-stats">
+                            <span class="stat">AT {{weapon.system.at}}</span>
+                            <span class="stat">VT {{weapon.system.vt}}</span>
+                            <span class="stat">TP {{weapon.system.tp}}</span>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+
+                {{#each actor.fernkampfwaffen as |weapon|}}
+                {{#if weapon.system.hauptwaffe}}
+                <div class="combat-item weapon-item hauptwaffe">
+                    <div class="combat-item-header">
+                        <div class="weapon-image">
+                            <img src="{{weapon.img}}" alt="{{weapon.name}}" />
+                        </div>
+                        <div class="weapon-info">
+                            <h4>{{weapon.name}}</h4>
+                            <span class="weapon-type">Hauptwaffe (FK)</span>
+                        </div>
+                    </div>
+                    <div class="combat-item-content">
+                        <div class="weapon-stats">
+                            <span class="stat">FK {{weapon.system.fk}}</span>
+                            <span class="stat">TP {{weapon.system.tp}}</span>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+
+                {{!-- Nebenwaffe Section --}}
+                {{#each actor.nahkampfwaffen as |weapon|}}
+                {{#if weapon.system.nebenwaffe}}
+                <div class="combat-item weapon-item nebenwaffe">
+                    <div class="combat-item-header">
+                        <div class="weapon-image">
+                            <img src="{{weapon.img}}" alt="{{weapon.name}}" />
+                        </div>
+                        <div class="weapon-info">
+                            <h4>{{weapon.name}}</h4>
+                            <span class="weapon-type">Nebenwaffe</span>
+                        </div>
+                    </div>
+                    <div class="combat-item-content">
+                        <div class="weapon-stats">
+                            <span class="stat">AT {{weapon.system.at}}</span>
+                            <span class="stat">VT {{weapon.system.vt}}</span>
+                            <span class="stat">TP {{weapon.system.tp}}</span>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+
+                {{#each actor.fernkampfwaffen as |weapon|}}
+                {{#if weapon.system.nebenwaffe}}
+                <div class="combat-item weapon-item nebenwaffe">
+                    <div class="combat-item-header">
+                        <div class="weapon-image">
+                            <img src="{{weapon.img}}" alt="{{weapon.name}}" />
+                        </div>
+                        <div class="weapon-info">
+                            <h4>{{weapon.name}}</h4>
+                            <span class="weapon-type">Nebenwaffe (FK)</span>
+                        </div>
+                    </div>
+                    <div class="combat-item-content">
+                        <div class="weapon-stats">
+                            <span class="stat">FK {{weapon.system.fk}}</span>
+                            <span class="stat">TP {{weapon.system.tp}}</span>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+
+                {{!-- Empty state for combat gear --}}
+                {{#unless (or actor.system.misc.selected_kampfstil 
+                              (some actor.nahkampfwaffen "system.hauptwaffe")
+                              (some actor.nahkampfwaffen "system.nebenwaffe")
+                              (some actor.fernkampfwaffen "system.hauptwaffe")
+                              (some actor.fernkampfwaffen "system.nebenwaffe"))}}
+                <div class="combat-empty">
+                    <i class="fas fa-sword"></i>
+                    <p>Keine Kampfausrüstung</p>
+                    <small>Wähle Waffen als Haupt-/Nebenwaffe und einen Kampfstil aus.</small>
+                </div>
+                {{/unless}}
             </div>
         </div>
-        
-        {{!-- Future: Favorite items will be rendered here --}}
-        {{!-- {{#each favorites as |favorite|}}
-        <div class="favorite-item" data-favorite-id="{{favorite.id}}" data-item-type="{{favorite.type}}">
-            <div class="favorite-image">
-                <img src="{{favorite.img}}" alt="{{favorite.name}}" />
-            </div>
-            <div class="favorite-details">
-                <h4>{{favorite.name}}</h4>
-                <span class="favorite-type">{{favorite.type}}</span>
-            </div>
-            <div class="favorite-controls">
-                <a class="favorite-use" title="Verwenden/Würfeln">
-                    <i class="fas fa-dice-d20"></i>
-                </a>
-                <a class="favorite-remove" title="Aus Favoriten entfernen">
-                    <i class="fas fa-times"></i>
-                </a>
-            </div>
-        </div>
-        {{/each}} --}}
     </div>
 </div>

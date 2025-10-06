@@ -373,11 +373,17 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
      * @private
      */
     _initializeFavorites(html) {
+        // Favorites tab switching
+        html.find('.favorites-tab').click(this._onFavoritesTabSwitch.bind(this));
+        
         // Favorites collapse/expand toggle
         html.find('.favorites-collapse').click(this._onFavoritesToggle.bind(this));
         
         // Favorites clear button
         html.find('.favorites-clear').click(this._onFavoritesClear.bind(this));
+        
+        // Restore last active tab
+        this._restoreFavoritesTab(html);
         
         // TODO: Future drag and drop support will be added here
         console.log('Favorites component initialized');
@@ -422,5 +428,66 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             no: () => {},
             defaultYes: false
         });
+    }
+
+    /**
+     * Handle favorites tab switching
+     * @param {Event} event - The originating click event
+     * @private
+     */
+    _onFavoritesTabSwitch(event) {
+        event.preventDefault();
+        const clickedTab = $(event.currentTarget);
+        const targetTab = clickedTab.data('tab');
+        
+        // Update tab active states
+        clickedTab.siblings('.favorites-tab').removeClass('active');
+        clickedTab.addClass('active');
+        
+        // Update content active states
+        const favoritesComponent = clickedTab.closest('.favorites-component');
+        favoritesComponent.find('.favorites-tab-content').removeClass('active');
+        favoritesComponent.find(`[data-tab-content="${targetTab}"]`).addClass('active');
+        
+        // Save active tab to session storage
+        sessionStorage.setItem(`ilaris-favorites-active-tab-${this.actor.id}`, targetTab);
+        
+        // Update clear button visibility (only show on favorites tab)
+        const clearButton = favoritesComponent.find('.favorites-clear');
+        if (targetTab === 'favorites') {
+            clearButton.show();
+        } else {
+            clearButton.hide();
+        }
+        
+        console.log(`Switched to favorites tab: ${targetTab}`);
+    }
+
+    /**
+     * Restore the last active favorites tab
+     * @param {jQuery} html - The rendered HTML
+     * @private
+     */
+    _restoreFavoritesTab(html) {
+        const savedTab = sessionStorage.getItem(`ilaris-favorites-active-tab-${this.actor.id}`) || 'favorites';
+        
+        // Activate the saved tab
+        const targetTab = html.find(`[data-tab="${savedTab}"]`);
+        if (targetTab.length) {
+            targetTab.siblings('.favorites-tab').removeClass('active');
+            targetTab.addClass('active');
+            
+            // Activate corresponding content
+            html.find('.favorites-tab-content').removeClass('active');
+            html.find(`[data-tab-content="${savedTab}"]`).addClass('active');
+            
+            // Update clear button visibility
+            const clearButton = html.find('.favorites-clear');
+            if (savedTab === 'favorites') {
+                clearButton.show();
+            } else {
+                clearButton.hide();
+            }
+        }
     }
 }
