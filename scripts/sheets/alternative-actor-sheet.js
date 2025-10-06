@@ -7,12 +7,14 @@
  */
 import { HeldenSheet } from "../../../../systems/Ilaris/scripts/sheets/helden.js";
 import { AccordionManager } from "../accordion-manager.js";
+import { FavoritesManager } from "../favorites-manager.js";
 
 export class IlarisAlternativeActorSheet extends HeldenSheet {
     
     constructor(...args) {
         super(...args);
         this.accordionManager = new AccordionManager(this.actor.id);
+        this.favoritesManager = new FavoritesManager(this.actor.id);
     }
     
     /** @override */
@@ -107,7 +109,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         this.accordionManager.initialize(html);
         
         // Initialize favorites component
-        this._initializeFavorites(html);
+        this.favoritesManager.initialize(html);
         
         // Initialize einschränkungen display
         this._updateEinschraenkungsDisplay(html);
@@ -205,26 +207,6 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         let states = JSON.parse(sessionStorage.getItem(storageKey) || '{}');
         delete states[itemId];
         sessionStorage.setItem(storageKey, JSON.stringify(states));
-    }
-
-    /**
-     * Restore accordion states from session storage
-     * @param {jQuery} html - The rendered HTML
-     * @private
-     */
-    _restoreAccordionStates(html) {
-        const storageKey = this._getAccordionStorageKey();
-        const states = JSON.parse(sessionStorage.getItem(storageKey) || '{}');
-        
-        // Apply saved states
-        Object.keys(states).forEach(itemId => {
-            if (states[itemId]) {
-                const accordionItem = html.find(`.accordion-item[data-item-id="${itemId}"]`);
-                if (accordionItem.length) {
-                    accordionItem.addClass('expanded');
-                }
-            }
-        });
     }
 
     /**
@@ -367,127 +349,5 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         });
     }
 
-    /**
-     * Initialize favorites component functionality
-     * @param {jQuery} html - The rendered HTML
-     * @private
-     */
-    _initializeFavorites(html) {
-        // Favorites tab switching
-        html.find('.favorites-tab').click(this._onFavoritesTabSwitch.bind(this));
-        
-        // Favorites collapse/expand toggle
-        html.find('.favorites-collapse').click(this._onFavoritesToggle.bind(this));
-        
-        // Favorites clear button
-        html.find('.favorites-clear').click(this._onFavoritesClear.bind(this));
-        
-        // Restore last active tab
-        this._restoreFavoritesTab(html);
-        
-        // TODO: Future drag and drop support will be added here
-        console.log('Favorites component initialized');
-    }
 
-    /**
-     * Handle favorites component collapse/expand toggle
-     * @param {Event} event - The originating click event
-     * @private
-     */
-    _onFavoritesToggle(event) {
-        event.preventDefault();
-        const favoritesComponent = $(event.currentTarget).closest('.favorites-component');
-        favoritesComponent.toggleClass('collapsed');
-        
-        // Update the chevron icon
-        const icon = $(event.currentTarget).find('i');
-        icon.toggleClass('fa-chevron-up fa-chevron-down');
-        
-        // Save collapse state to session storage
-        const isCollapsed = favoritesComponent.hasClass('collapsed');
-        sessionStorage.setItem(`ilaris-favorites-collapsed-${this.actor.id}`, isCollapsed);
-    }
-
-    /**
-     * Handle clearing all favorites
-     * @param {Event} event - The originating click event  
-     * @private
-     */
-    _onFavoritesClear(event) {
-        event.preventDefault();
-        
-        // Show confirmation dialog
-        Dialog.confirm({
-            title: "Favoriten löschen",
-            content: "<p>Möchten Sie wirklich alle Favoriten löschen?</p>",
-            yes: () => {
-                // TODO: Clear favorites from actor flags
-                ui.notifications.info("Favoriten gelöscht");
-                console.log('All favorites cleared');
-            },
-            no: () => {},
-            defaultYes: false
-        });
-    }
-
-    /**
-     * Handle favorites tab switching
-     * @param {Event} event - The originating click event
-     * @private
-     */
-    _onFavoritesTabSwitch(event) {
-        event.preventDefault();
-        const clickedTab = $(event.currentTarget);
-        const targetTab = clickedTab.data('tab');
-        
-        // Update tab active states
-        clickedTab.siblings('.favorites-tab').removeClass('active');
-        clickedTab.addClass('active');
-        
-        // Update content active states
-        const favoritesComponent = clickedTab.closest('.favorites-component');
-        favoritesComponent.find('.favorites-tab-content').removeClass('active');
-        favoritesComponent.find(`[data-tab-content="${targetTab}"]`).addClass('active');
-        
-        // Save active tab to session storage
-        sessionStorage.setItem(`ilaris-favorites-active-tab-${this.actor.id}`, targetTab);
-        
-        // Update clear button visibility (only show on favorites tab)
-        const clearButton = favoritesComponent.find('.favorites-clear');
-        if (targetTab === 'favorites') {
-            clearButton.show();
-        } else {
-            clearButton.hide();
-        }
-        
-        console.log(`Switched to favorites tab: ${targetTab}`);
-    }
-
-    /**
-     * Restore the last active favorites tab
-     * @param {jQuery} html - The rendered HTML
-     * @private
-     */
-    _restoreFavoritesTab(html) {
-        const savedTab = sessionStorage.getItem(`ilaris-favorites-active-tab-${this.actor.id}`) || 'favorites';
-        
-        // Activate the saved tab
-        const targetTab = html.find(`[data-tab="${savedTab}"]`);
-        if (targetTab.length) {
-            targetTab.siblings('.favorites-tab').removeClass('active');
-            targetTab.addClass('active');
-            
-            // Activate corresponding content
-            html.find('.favorites-tab-content').removeClass('active');
-            html.find(`[data-tab-content="${savedTab}"]`).addClass('active');
-            
-            // Update clear button visibility
-            const clearButton = html.find('.favorites-clear');
-            if (savedTab === 'favorites') {
-                clearButton.show();
-            } else {
-                clearButton.hide();
-            }
-        }
-    }
 }

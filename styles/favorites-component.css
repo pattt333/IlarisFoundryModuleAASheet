@@ -411,19 +411,6 @@
     font-size: 8px;
 }
 
-/* Collapsed state */
-.favorites-component.collapsed .favorites-content {
-    display: none;
-}
-
-.favorites-component.collapsed {
-    min-height: auto;
-}
-
-.favorites-component.collapsed .favorites-collapse i {
-    transform: rotate(180deg);
-}
-
 /* Drag and drop zones */
 .favorites-component.drag-over {
     border-color: var(--primary-color, #4299e1);
