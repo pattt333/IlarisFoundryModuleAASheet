@@ -1,8 +1,8 @@
 /* ===== FAVORITES COMPONENT ===== */
 
 .favorites-component {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--color-border-light-tertiary);
+    background: transparent;
+    border: none;
     border-radius: 5px;
     padding: 8px;
     min-height: 200px;
@@ -35,17 +35,17 @@
     width: 28px;
     height: 24px;
     border-radius: 4px 4px 0 0;
-    background: rgba(0, 0, 0, 0.1);
-    color: var(--color-text-dark-secondary);
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-dark, #2d3748);
     text-decoration: none;
     transition: all 0.2s ease;
     cursor: pointer;
-    border: 1px solid var(--color-border-light-tertiary);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: none;
 }
 
 .favorites-tab:hover {
-    background: rgba(66, 153, 225, 0.1);
+    background: rgba(66, 153, 225, 0.2);
     color: var(--primary-color, #4299e1);
 }
 
@@ -71,8 +71,8 @@
     width: 20px;
     height: 20px;
     border-radius: 3px;
-    background: rgba(0, 0, 0, 0.1);
-    color: var(--color-text-dark-secondary);
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-dark, #2d3748);
     text-decoration: none;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -115,8 +115,8 @@
 }
 
 .combat-item {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--color-border-light-tertiary);
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     padding: 6px;
     transition: all 0.2s ease;
@@ -145,7 +145,7 @@
     margin: 0;
     font-size: 11px;
     font-weight: bold;
-    color: var(--color-text-dark-primary);
+    color: var(--text-dark, #2d3748);
     flex: 1;
 }
 
@@ -157,14 +157,14 @@
 .kampfstil-item .kampfstil-name {
     font-size: 10px;
     font-weight: bold;
-    color: var(--color-text-dark-primary);
+    color: var(--text-dark, #2d3748);
     display: block;
     margin-bottom: 2px;
 }
 
 .beritten-indicator {
     font-size: 9px;
-    color: var(--color-text-dark-secondary);
+    color: rgba(45, 55, 72, 0.7);
     display: flex;
     align-items: center;
     gap: 2px;
@@ -200,10 +200,14 @@
     flex-shrink: 0;
 }
 
-.weapon-image img {
+/* Unified image styling for all favorites component images */
+.weapon-image img,
+.favorite-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: var(--filter-primary);
+    border: 0;
 }
 
 .weapon-info {
@@ -219,7 +223,7 @@
 
 .weapon-type {
     font-size: 8px;
-    color: var(--color-text-dark-secondary);
+    color: rgba(45, 55, 72, 0.6);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -232,10 +236,10 @@
 
 .weapon-stats .stat {
     font-size: 9px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.08);
     padding: 1px 4px;
     border-radius: 2px;
-    color: var(--color-text-dark-primary);
+    color: var(--text-dark, #2d3748);
     font-weight: bold;
 }
 
@@ -256,7 +260,7 @@
     justify-content: center;
     text-align: center;
     padding: 20px 10px;
-    color: var(--color-text-dark-secondary);
+    color: rgba(45, 55, 72, 0.7);
     min-height: 120px;
 }
 
@@ -286,7 +290,7 @@
     justify-content: center;
     text-align: center;
     padding: 20px 10px;
-    color: var(--color-text-dark-secondary);
+    color: rgba(45, 55, 72, 0.7);
     min-height: 120px;
 }
 
@@ -334,12 +338,6 @@
     overflow: hidden;
 }
 
-.favorite-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .favorite-details {
     flex: 1;
     min-width: 0;
@@ -349,7 +347,7 @@
     margin: 0;
     font-size: 12px;
     font-weight: bold;
-    color: var(--color-text-dark-primary);
+    color: var(--text-dark, #2d3748);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

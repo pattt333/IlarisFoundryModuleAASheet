@@ -12,6 +12,10 @@ body {
   --color-select-option-bg: white;
   --color-scrollbar: #4299e1; 
   --color-light-1: white;
+  --header-bg-color: #3c4658;
+  --text-dark: #2d3748;
+  --filter-primary: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(187deg) brightness(119%) contrast(119%);
+  --filter-primary-hover: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1552%) hue-rotate(187deg) brightness(130%) contrast(119%);
 }
 
 .ilaris.sheet.actor.alternative .actor-profile {
@@ -444,7 +448,7 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .window-header {
-    background: linear-gradient(90deg, #4a5568, #2d3748);
+    background: var(--header-bg-color);
     margin: 0;
     padding: 4px;
     border: 0;
@@ -456,7 +460,7 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .sheet-header {
-  background: linear-gradient(90deg, #4a5568, #2d3748);
+  background: var(--header-bg-color);
   color: white;
   padding: 0 15px 0 15px;
   display: flex;
