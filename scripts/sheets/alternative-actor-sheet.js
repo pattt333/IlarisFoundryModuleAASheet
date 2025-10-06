@@ -6,8 +6,8 @@
  * character sheet modules by extending the base Foundry ActorSheet directly.
  */
 import { HeldenSheet } from "../../../../systems/Ilaris/scripts/sheets/helden.js";
-import { AccordionManager } from "../accordion-manager.js";
-import { FavoritesManager } from "../favorites-manager.js";
+import { AccordionManager } from "../components/accordion-manager.js";
+import { FavoritesManager } from "../components/favorites-manager.js";
 
 export class IlarisAlternativeActorSheet extends HeldenSheet {
     
