@@ -1,0 +1,46 @@
+{{!-- Favorites Component --}}
+<div class="favorites-component">
+    <div class="favorites-header">
+        <h3><i class="fas fa-star"></i> Favoriten</h3>
+        <div class="favorites-controls">
+            <a class="favorites-control favorites-clear" title="Alle Favoriten löschen">
+                <i class="fas fa-trash"></i>
+            </a>
+            <a class="favorites-control favorites-collapse" title="Favoriten ein-/ausklappen">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    
+    <div class="favorites-content">
+        <div class="favorites-list">
+            {{!-- Placeholder content for now --}}
+            <div class="favorites-empty">
+                <i class="fas fa-star-o"></i>
+                <p>Keine Favoriten</p>
+                <small>Ziehe Gegenstände, Fertigkeiten oder Zauber hierher, um sie als Favoriten zu markieren.</small>
+            </div>
+        </div>
+        
+        {{!-- Future: Favorite items will be rendered here --}}
+        {{!-- {{#each favorites as |favorite|}}
+        <div class="favorite-item" data-favorite-id="{{favorite.id}}" data-item-type="{{favorite.type}}">
+            <div class="favorite-image">
+                <img src="{{favorite.img}}" alt="{{favorite.name}}" />
+            </div>
+            <div class="favorite-details">
+                <h4>{{favorite.name}}</h4>
+                <span class="favorite-type">{{favorite.type}}</span>
+            </div>
+            <div class="favorite-controls">
+                <a class="favorite-use" title="Verwenden/Würfeln">
+                    <i class="fas fa-dice-d20"></i>
+                </a>
+                <a class="favorite-remove" title="Aus Favoriten entfernen">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+        </div>
+        {{/each}} --}}
+    </div>
+</div>

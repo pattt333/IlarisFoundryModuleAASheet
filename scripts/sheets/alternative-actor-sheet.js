@@ -106,6 +106,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         // Initialize accordion functionality
         this.accordionManager.initialize(html);
         
+        // Initialize favorites component
+        this._initializeFavorites(html);
+        
         // Initialize einschränkungen display
         this._updateEinschraenkungsDisplay(html);
     }
@@ -361,6 +364,63 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         }).catch(err => {
             console.error('Failed to copy UUID:', err);
             ui.notifications.error('Failed to copy UUID to clipboard');
+        });
+    }
+
+    /**
+     * Initialize favorites component functionality
+     * @param {jQuery} html - The rendered HTML
+     * @private
+     */
+    _initializeFavorites(html) {
+        // Favorites collapse/expand toggle
+        html.find('.favorites-collapse').click(this._onFavoritesToggle.bind(this));
+        
+        // Favorites clear button
+        html.find('.favorites-clear').click(this._onFavoritesClear.bind(this));
+        
+        // TODO: Future drag and drop support will be added here
+        console.log('Favorites component initialized');
+    }
+
+    /**
+     * Handle favorites component collapse/expand toggle
+     * @param {Event} event - The originating click event
+     * @private
+     */
+    _onFavoritesToggle(event) {
+        event.preventDefault();
+        const favoritesComponent = $(event.currentTarget).closest('.favorites-component');
+        favoritesComponent.toggleClass('collapsed');
+        
+        // Update the chevron icon
+        const icon = $(event.currentTarget).find('i');
+        icon.toggleClass('fa-chevron-up fa-chevron-down');
+        
+        // Save collapse state to session storage
+        const isCollapsed = favoritesComponent.hasClass('collapsed');
+        sessionStorage.setItem(`ilaris-favorites-collapsed-${this.actor.id}`, isCollapsed);
+    }
+
+    /**
+     * Handle clearing all favorites
+     * @param {Event} event - The originating click event  
+     * @private
+     */
+    _onFavoritesClear(event) {
+        event.preventDefault();
+        
+        // Show confirmation dialog
+        Dialog.confirm({
+            title: "Favoriten löschen",
+            content: "<p>Möchten Sie wirklich alle Favoriten löschen?</p>",
+            yes: () => {
+                // TODO: Clear favorites from actor flags
+                ui.notifications.info("Favoriten gelöscht");
+                console.log('All favorites cleared');
+            },
+            no: () => {},
+            defaultYes: false
         });
     }
 }

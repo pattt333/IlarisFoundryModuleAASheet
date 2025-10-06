@@ -81,18 +81,26 @@
 
     
 
-    {{!-- Sheet Body - Scrollable content --}}
+    {{!-- Sheet Body - Scrollable content with favorites sidebar --}}
     <section class="sheet-body scrollable-content">
+        <div class="sheet-content-layout">
+            {{!-- Favorites sidebar on the left --}}
+            <aside class="favorites-sidebar">
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/favorites-component.hbs}}
+            </aside>
+            
+            {{!-- Main tab content on the right --}}
+            <div class="tab-content-area">
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/main-tab.hbs}}
 
-        {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/main-tab.hbs}}
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/skills-tab.hbs}}
 
-        {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/skills-tab.hbs}}
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs}}
 
-        {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs}}
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs}}
 
-        {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs}}
-
-        {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs}}
-
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs}}
+            </div>
+        </div>
     </section>
 </form>

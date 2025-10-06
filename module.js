@@ -77,14 +77,20 @@ Hooks.once('init', async function() {
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/energy-resources.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/health-resources.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/item-accordion.hbs"
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/item-accordion.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/favorites-component.hbs"
   ]);
 
-  // Load accordion CSS
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = 'modules/ilaris-alternative-actor-sheet/styles/item-accordion.css';
-  document.head.appendChild(link);
+  // Load component CSS files
+  const accordionLink = document.createElement('link');
+  accordionLink.rel = 'stylesheet';
+  accordionLink.href = 'modules/ilaris-alternative-actor-sheet/styles/item-accordion.css';
+  document.head.appendChild(accordionLink);
+  
+  const favoritesLink = document.createElement('link');
+  favoritesLink.rel = 'stylesheet';
+  favoritesLink.href = 'modules/ilaris-alternative-actor-sheet/styles/favorites-component.css';
+  document.head.appendChild(favoritesLink);
   
   // Register the alternative actor sheet using the standard pattern
   Actors.registerSheet("Ilaris", IlarisAlternativeActorSheet, {

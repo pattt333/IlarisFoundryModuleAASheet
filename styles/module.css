@@ -550,6 +550,22 @@ body {
   border-radius: 0 0 8px 8px;
 }
 
+/* Sheet Content Layout with Favorites */
+.ilaris.sheet.actor.alternative .sheet-content-layout {
+  display: flex;
+  gap: 12px;
+  height: 100%;
+}
+
+.ilaris.sheet.actor.alternative .favorites-sidebar {
+  flex-shrink: 0;
+}
+
+.ilaris.sheet.actor.alternative .tab-content-area {
+  flex: 1;
+  min-width: 0; /* Prevent flex item from overflowing */
+}
+
 /* Grid System */
 .ilaris.sheet.actor.alternative .grid {
   display: grid;
