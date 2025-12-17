@@ -2,7 +2,7 @@
 <div class="item accordion-item" data-item-id="{{item._id}}">
     <div class="item-header-row">
         <div class="item-image {{#if rollable}}rollable{{/if}}" 
-             {{#if rollable}}data-rolltype="{{rolltype}}" data-itemid="{{item._id}}"{{/if}}>
+             {{#if rollable}}data-rolltype="{{rolltype}}" data-itemid="{{item.id}}"{{/if}}>
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
         </div>
         <div class="item-name accordion-header">
@@ -12,7 +12,14 @@
         {{#if stats}}
         <div class="item-stats accordion-header">
             {{#each stats}}
-            <h4>{{this}}</h4>
+            <h4{{#if ../statsTooltips}}{{#if (lookup ../statsTooltips @index)}} data-tooltip="{{lookup ../statsTooltips @index}}"{{/if}}{{/if}}>{{this}}</h4>
+            {{/each}}
+        </div>
+        {{/if}}
+        {{#if stats2}}
+        <div class="item-stats accordion-header">
+            {{#each stats2}}
+            <h4{{#if ../stats2Tooltips}}{{#if (lookup ../stats2Tooltips @index)}} data-tooltip="{{lookup ../stats2Tooltips @index}}"{{/if}}{{/if}}>{{this}}</h4>
             {{/each}}
         </div>
         {{/if}}
