@@ -1,27 +1,34 @@
 {{!-- Skills Tab --}}
 <div class="tab skills" data-group="primary" data-tab="skills">
-    <div class="flexcol">        {{!-- Skills header --}}
-        <div class="items-header">
-            <div class="item-name">Fertigkeitsname</div>
-            <div class="item-controls">
-                <a class="item-control item-create" title="Fertigkeit erstellen" data-type="fertigkeit"><i class="fas fa-plus"></i> Fertigkeit hinzufügen</a>
+    <div class="flexcol">
+        {{!-- Skills Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Fertigkeiten</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Fertigkeit erstellen" data-type="fertigkeit"><i class="fas fa-plus"></i> Fertigkeit hinzufügen</a>
+                </div>
+            </div>
+            <div class="items-list">
+                {{#each actor.profan.fertigkeiten as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=item 
+                    rollable=true 
+                    rolltype="fertigkeit_diag"
+                    fertigkeit=id
+                    nameLabel="Fertigkeit"
+                    stats=(array (concat "PW " item.system.pw) (concat "PWT " item.system.pwt))
+                    stats2=(array (concat item.system.attribut_0 " / " item.system.attribut_1 " / " item.system.attribut_2))
+                    itemclass="fertigkeit"
+                    editTitle="Fertigkeit bearbeiten"
+                    deleteTitle="Fertigkeit löschen"
+                    details=(array 
+                        (hash label="Talente" value=(itemNames item.system.talente) isDescription=true)
+                        (hash label="Beschreibung" value=item.system.text isDescription=true)
+                    )
+                }}
+                {{/each}}
             </div>
         </div>
-        
-        {{!-- Skills list --}}
-        <ol class="items-list">
-            {{#each actor.profan.fertigkeiten as |item id|}}
-            <li class="item flexrow" data-item-id="{{item._id}}">
-                <div class="item-name rollable" data-rolltype="fertigkeit_diag" data-probetype="fertigkeit" data-fertigkeit="{{id}}">
-                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                    <h4>{{item.name}}</h4>
-                </div>
-                <div class="item-controls">
-                    <a class="item-control item-edit" title="Fertigkeit bearbeiten"><i class="fas fa-edit"></i></a>
-                    <a class="item-control item-delete" title="Fertigkeit löschen"><i class="fas fa-trash"></i></a>
-                </div>
-            </li>
-            {{/each}}
-        </ol>
     </div>
 </div>

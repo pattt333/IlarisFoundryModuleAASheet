@@ -82,11 +82,18 @@ Hooks.once('init', async function() {
       return !!value;
     });
   });
+
+  // Helper for extracting names from an array of items
+  Handlebars.registerHelper('itemNames', function(items) {
+    if (!Array.isArray(items)) return '';
+    return items.map(item => item?.name || '').filter(name => name).join(', ');
+  });
   
   // Preload Handlebars templates
   await loadTemplates([
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/main-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/skills-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/weapons-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs",

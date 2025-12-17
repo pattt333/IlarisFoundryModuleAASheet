@@ -1,37 +1,66 @@
 {{!-- Spells Tab --}}
 <div class="tab spells" data-group="primary" data-tab="spells">
-    <div class="flexcol">        <div class="items-header">
-            <div class="item-name">Zaubername</div>
-            <div class="item-controls">
-                <a class="item-control item-create" title="Zauber erstellen" data-type="zauber"><i class="fas fa-plus"></i> Zauber hinzufügen</a>
+    <div class="flexcol">
+        {{!-- Zauber Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Zauber</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Zauber erstellen" data-type="zauber"><i class="fas fa-plus"></i> Zauber hinzufügen</a>
+                </div>
+            </div>
+            <div class="items-list">
+                {{#each actor.uebernatuerlich.zauber as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=item 
+                    rollable=true 
+                    rolltype="magie_diag"
+                    nameLabel="Zauber"
+                    stats=(array (concat "PW " item.system.pw))
+                    itemclass="zauber"
+                    editTitle="Zauber bearbeiten"
+                    deleteTitle="Zauber löschen"
+                    details=(array 
+                        (hash label="Mächtige Magie" value=item.system.maechtig isDescription=true)
+                        (hash label="Schwierigkeit" value=item.system.schwierigkeit)
+                        (hash label="Modifikationen" value=item.system.modifikationen isDescription=true)
+                        (hash label="Ziel" value=item.system.ziel)
+                        (hash label="Beschreibung" value=item.system.text isDescription=true)
+                    )
+                }}
+                {{/each}}
             </div>
         </div>
-        
-        <ol class="items-list">
-            {{#each actor.uebernatuerlich.zauber as |item id|}}
-            <li class="item flexrow" data-item-id="{{item._id}}">
-                <div class="item-name rollable" data-rolltype="magie_diag" data-itemid="{{item.id}}">
-                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                    <h4>{{item.name}}</h4>
-                </div>
+
+        {{!-- Liturgien Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Liturgien</h3>
                 <div class="item-controls">
-                    <a class="item-control item-edit" title="Zauber bearbeiten"><i class="fas fa-edit"></i></a>
-                    <a class="item-control item-delete" title="Zauber löschen"><i class="fas fa-trash"></i></a>
+                    <a class="item-control item-create" title="Liturgie erstellen" data-type="liturgie"><i class="fas fa-plus"></i> Liturgie hinzufügen</a>
                 </div>
-            </li>
-            {{/each}}
-            {{#each actor.uebernatuerlich.liturgien as |item id|}}
-            <li class="item flexrow" data-item-id="{{item._id}}">
-                <div class="item-name rollable" data-rolltype="karma_diag" data-itemid="{{item.id}}">
-                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                    <h4>{{item.name}}</h4>
-                </div>
-                <div class="item-controls">
-                    <a class="item-control item-edit" title="Zauber bearbeiten"><i class="fas fa-edit"></i></a>
-                    <a class="item-control item-delete" title="Zauber löschen"><i class="fas fa-trash"></i></a>
-                </div>
-            </li>
-            {{/each}}
-        </ol>
+            </div>
+            <div class="items-list">
+                {{#each actor.uebernatuerlich.liturgien as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=item 
+                    rollable=true 
+                    rolltype="karma_diag"
+                    nameLabel="Liturgie"
+                    stats=(array (concat "PW " item.system.pw))
+                    itemclass="liturgie"
+                    editTitle="Liturgie bearbeiten"
+                    deleteTitle="Liturgie löschen"
+                    details=(array 
+                        (hash label="Mächtige Magie" value=item.system.maechtig isDescription=true)
+                        (hash label="Schwierigkeit" value=item.system.schwierigkeit)
+                        (hash label="Modifikationen" value=item.system.modifikationen isDescription=true)
+                        (hash label="Ziel" value=item.system.ziel)
+                        (hash label="Beschreibung" value=item.system.text isDescription=true)
+                    )
+                }}
+                {{/each}}
+            </div>
+        </div>
     </div>
 </div>

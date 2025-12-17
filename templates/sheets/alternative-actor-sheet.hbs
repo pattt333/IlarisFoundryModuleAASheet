@@ -71,11 +71,12 @@
             </div>
             {{!-- Sheet Tab Navigation - Also sticky --}}
             <nav class="sheet-tabs tabs sticky-tabs" data-group="primary">
-                <a class="item" data-tab="main">Haupt</a>
-                <a class="item" data-tab="skills">Fertigkeiten</a>
-                <a class="item" data-tab="items">Inventar</a>
-                <a class="item" data-tab="spells">Übernatürlich</a>
+                {{!-- <a class="item" data-tab="main">Haupt</a> --}}
                 <a class="item" data-tab="biography">Biographie</a>
+                <a class="item" data-tab="skills">Profan</a>
+                <a class="item" data-tab="weapons">Kampf</a>
+                <a class="item" data-tab="spells">Übernatürlich</a>
+                <a class="item" data-tab="items">Inventar</a>
             </nav>
     </header>
 
@@ -94,6 +95,8 @@
                 {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/main-tab.hbs}}
 
                 {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/skills-tab.hbs}}
+
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/weapons-tab.hbs}}
 
                 {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs}}
 

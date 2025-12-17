@@ -1,0 +1,98 @@
+{{!-- Weapons Tab --}}
+<div class="tab weapons" data-group="primary" data-tab="weapons">
+    <div class="flexcol">
+        {{!-- Kampfstil Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Kampfstil und Beritten</h3>
+            </div>
+            <div class="kampfstil-controls">
+                <select class="selected-kampfstil" name="system.misc.selected_kampfstil">
+                    {{selectOptions actor.misc.kampfstile_list selected=actor.system.misc.selected_kampfstil}}
+                </select>
+                <label class="beritten-checkbox">
+                    <input type="checkbox" name="system.misc.ist_beritten" {{checked actor.system.misc.ist_beritten}} />
+                    Beritten
+                </label>
+            </div>
+
+            {{#if actor.misc.selected_kampfstil_conditions_not_met}}
+                <div class="kampfstil-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Kampfstil inaktiv:</strong> {{actor.misc.selected_kampfstil_conditions_not_met}}
+                </div>
+            {{/if}}
+        </div>
+        
+        {{!-- Nahkampfwaffen Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Nahkampfwaffen</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Waffe erstellen" data-itemclass="nahkampfwaffe"><i class="fas fa-plus"></i> Waffe hinzufügen</a>
+                </div>
+            </div>
+            <div class="items-list">
+                {{#each actor.nahkampfwaffen as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=item 
+                    rollable=true 
+                    rolltype="angriff_diag"
+                    nameLabel="Waffenname"
+                    stats=(array (concat "AT " item.system.at) (concat "VT " item.system.vt))
+                    statsTooltips=(array item.system.computed.modifiers.at item.system.computed.modifiers.vt)
+                    stats2=(array (concat "TP " item.system.schaden) )
+                    stats2Tooltips=(array item.system.computed.modifiers.dmg)
+                    itemclass="nahkampfwaffe"
+                    editTitle="Waffe bearbeiten"
+                    deleteTitle="Waffe löschen"
+                    isWeapon=true
+                    details=(array 
+                        (hash label="RW" value=item.system.rw)
+                        (hash label="Fertigkeit" value=item.system.fertigkeit)
+                        (hash label="Talent" value=item.system.talent)
+                        (hash label="Härte" value=item.system.härte)
+                        (hash label="Eigenschaften" value=(eigenschaften item.system.eigenschaften) isDescription=true)
+                    )
+                }}
+                {{/each}}
+            </div>
+        </div>
+
+        {{!-- Fernkampfwaffen Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Fernkampfwaffen</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Waffe erstellen" data-itemclass="fernkampfwaffe"><i class="fas fa-plus"></i> Waffe hinzufügen</a>
+                </div>
+            </div>
+            <div class="items-list">
+                {{#each actor.fernkampfwaffen as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=item 
+                    rollable=true 
+                    rolltype="fernkampf_diag"
+                    nameLabel="Waffenname"
+                    stats=(array (concat "FK " item.system.fk) )
+                    statsTooltips=(array item.system.computed.modifiers.fk)
+                    stats2=(array (concat "TP " item.system.schaden) )
+                    stats2Tooltips=(array item.system.computed.modifiers.dmg)
+                    itemclass="fernkampfwaffe"
+                    editTitle="Waffe bearbeiten"
+                    deleteTitle="Waffe löschen"
+                    isWeapon=true
+                    details=(array 
+                        (hash label="TP" value=item.system.tp)
+                        (hash label="RW" value=item.system.rw)
+                        (hash label="Fertigkeit" value=item.system.fertigkeit)
+                        (hash label="Talent" value=item.system.talent)
+                        (hash label="Härte" value=item.system.härte)
+                        (hash label="Eigenschaften" value=(eigenschaften item.system.eigenschaften) isDescription=true)
+                    )
+                }}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
