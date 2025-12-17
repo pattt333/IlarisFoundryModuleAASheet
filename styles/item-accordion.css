@@ -6,7 +6,11 @@
 
 /* Items Lists Structure */
 .ilaris.sheet.actor.alternative .items-section {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+}
+
+.ilaris.sheet.actor.alternative .items-section .items-header {
+  border-radius: 6px;
 }
 
 .ilaris.sheet.actor.alternative .items-header {
@@ -23,6 +27,18 @@
 .ilaris.sheet.actor.alternative .items-header h3 {
   margin: 0;
   color: #2d3748;
+}
+
+.ilaris.sheet.actor.alternative .supporting-section,
+.ilaris.sheet.actor.alternative .carrying-section,
+.ilaris.sheet.actor.alternative .handcart-section {
+  margin-bottom: 16px;
+}
+
+.ilaris.sheet.actor.alternative .supporting-section .items-header,
+.ilaris.sheet.actor.alternative .carrying-section .items-header,
+.ilaris.sheet.actor.alternative .handcart-section .items-header {
+  border-radius: 6px 6px 0 0;
 }
 
 .ilaris.sheet.actor.alternative .items-list {

@@ -61,7 +61,7 @@
                 <div class="primary-attributes flex-row">
                     {{#each actor.system.attribute as |attribute key|}}
                     <div class="attribute-hexagon">
-                        <div class="hex-main" data-rolltype="attribut" data-attribut="{{key}}">
+                        <div class="hex-main" data-rolltype="fertigkeit_diag" data-probetype="attribut" data-attribut="{{key}}">
                             <label class="hex-label">{{key}}</label>
                             <span class="hex-pw">{{attribute.pw}}</span>
                         </div>
@@ -79,8 +79,15 @@
                 <a class="item" data-tab="skills">Profan</a>
                 <a class="item" data-tab="weapons">Kampf</a>
                 <a class="item" data-tab="spells">Übernatürlich</a>
+                <a class="item" data-tab="effects">Effekte</a>
                 <a class="item" data-tab="items">Inventar</a>
             </nav>
+            {{!-- Rest Action Button --}}
+            <div class="header-actions">
+                <button class="rest-button" type="button" title="Rasten">
+                    <i class="fas fa-campground"></i>
+                </button>
+            </div>
     </header>
 
     
@@ -104,6 +111,8 @@
                 {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs}}
 
                 {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs}}
+
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/effects-tab.hbs}}
 
                 {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs}}
             </div>

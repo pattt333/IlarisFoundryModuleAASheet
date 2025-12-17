@@ -1,0 +1,30 @@
+<div class="supporting-section">
+    {{!-- Supporting/Carrying Component (Weight not counted) --}}
+    <div class="items-header">
+        <h3>Tragend</h3>
+    </div>
+    <div class="items-list">
+    {{#each actor.inventar.tragend as |item id|}}
+    {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+        item=item 
+        rollable=false
+        nameLabel="Gegenstand"
+        stats=(array (concat "Anzahl: " item.system.quantity))
+        itemclass="gegenstand"
+        editTitle="Gegenstand bearbeiten"
+        deleteTitle="Gegenstand löschen"
+        details=(array 
+            (hash label="Gewicht" value=(concat item.system.gewicht " kg"))
+            (hash label="Menge" value=item.system.quantity)
+            (hash label="Wert" value=item.system.wert)
+            (hash label="Beschreibung" value=item.system.beschreibung isDescription=true)
+        )
+    }}
+    {{else}}
+    <div class="items-empty">
+        <p>Keine Gegenstände</p>
+        <small>Gegenstände hier werden getragen, aber deren Gewicht wird nicht berücksichtigt.</small>
+    </div>
+    {{/each}}
+    </div>
+</div>

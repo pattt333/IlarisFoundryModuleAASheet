@@ -1,0 +1,37 @@
+{{!-- Effects Tab --}}
+<div class="tab effects" data-group="primary" data-tab="effects">
+    <div class="flexcol">
+        {{!-- Active Effects Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Aktive Effekte</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Effekt erstellen" data-type="effect"><i class="fas fa-plus"></i> Effekt hinzufügen</a>
+                </div>
+            </div>
+            <div class="items-list">
+                {{#each actor.effects as |effect|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=effect 
+                    rollable=false
+                    nameLabel="Effekt"
+                    stats=(array (if effect.disabled "Deaktiviert" "Aktiv"))
+                    itemclass="effect"
+                    editTitle="Effekt bearbeiten"
+                    deleteTitle="Effekt löschen"
+                    details=(array 
+                        (hash label="Dauer" value=effect.duration.label)
+                        (hash label="Quelle" value=effect.sourceName)
+                        (hash label="Beschreibung" value=effect.description isDescription=true)
+                    )
+                }}
+                {{else}}
+                <div class="effects-empty">
+                    <p>Keine aktiven Effekte</p>
+                    <small>Füge Effekte hinzu, um sie hier zu sehen.</small>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

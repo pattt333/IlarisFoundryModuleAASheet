@@ -46,25 +46,13 @@
             <div class="items-header">
                 <h3>Ausrüstung</h3>
                 <div class="item-controls">
-                    <a class="item-control item-create" title="Gegenstand erstellen" data-type="gegenstand"><i class="fas fa-plus"></i> Gegenstand hinzufügen</a>
+                    <a class="item-control item-create" title="Gegenstand erstellen" data-itemclass="gegenstand"><i class="fas fa-plus"></i> Gegenstand hinzufügen</a>
                 </div>
             </div>
-            <div class="items-list">
-                {{#each gegenstaende as |item id|}}
-                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
-                    item=item 
-                    rollable=false
-                    itemclass="gegenstand"
-                    editTitle="Gegenstand bearbeiten"
-                    deleteTitle="Gegenstand löschen"
-                    details=(array 
-                        (hash label="Gewicht" value=(concat item.system.gewicht " kg"))
-                        (hash label="Wert" value=item.system.wert)
-                        (hash label="Beschreibung" value=item.system.beschreibung isDescription=true)
-                    )
-                }}
-                {{/each}}
-            </div>
         </div>
+        
+        {{> "modules/ilaris-alternative-actor-sheet/templates/components/supporting.hbs"}}
+        {{> "modules/ilaris-alternative-actor-sheet/templates/components/carrying.hbs"}}
+        {{> "modules/ilaris-alternative-actor-sheet/templates/components/handcart.hbs"}}
     </div>
 </div>

@@ -1,0 +1,56 @@
+{{#each actor.inventar.item_list as |itemContainer key|}}
+<div class="handcart-section">
+    {{!-- Container Header --}}
+    <div class="items-header">
+        <h3>{{itemContainer.name}}</h3>
+        <div class="item-controls">
+            <a class="item-edit" data-itemid="{{itemContainer.id}}" title="Container bearbeiten"><i class="fas fa-edit"></i></a>
+            <a class="item-delete" data-itemid="{{itemContainer.id}}" title="Container löschen"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+    
+    {{!-- Container Items --}}
+    <div class="items-list">
+        {{#each itemContainer.system.bewahrt_auf as |item key|}}
+        {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+            item=item 
+            rollable=false
+            nameLabel="Gegenstand"
+            stats=(array (concat "Anzahl: " item.system.quantity))
+            itemclass="gegenstand"
+            editTitle="Gegenstand bearbeiten"
+            deleteTitle="Gegenstand löschen"
+            details=(array 
+                (hash label="Gewicht" value=(concat item.system.gewicht " kg"))
+                (hash label="Menge" value=item.system.quantity)
+                (hash label="Wert" value=item.system.wert)
+                (hash label="Beschreibung" value=item.system.beschreibung isDescription=true)
+            )
+        }}
+        {{else}}
+        <div class="items-empty">
+            <p>Keine Gegenstände</p>
+            <small>Füge Gegenstände zu diesem Container hinzu.</small>
+        </div>
+        {{/each}}
+    </div>
+    
+    {{!-- Capacity Display --}}
+    {{#if ../isWeaponSpaceRequirementActive}}
+    <div class="carrying-capacity">
+        <div class="capacity-bar">
+            <div class="capacity-label">
+                <i class="fas fa-box"></i>
+                <span>Kapazität</span>
+            </div>
+            <div class="capacity-progress {{#if (gte itemContainer.system.gewicht_summe (multMinusOne itemContainer.system.gewicht))}}overloaded{{/if}}">
+                <div class="capacity-fill" style="width: {{percentage itemContainer.system.gewicht_summe (multMinusOne itemContainer.system.gewicht)}}%"></div>
+                <div class="capacity-text">
+                    {{itemContainer.system.gewicht_summe}} / {{multMinusOne itemContainer.system.gewicht}} kg
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</div>
+{{/each}}

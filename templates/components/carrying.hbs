@@ -1,0 +1,48 @@
+<div class="carrying-section">
+    {{!-- Carrying/Equipment Component --}}
+    <div class="items-header">
+        <h3>Mitführend</h3>
+    </div>
+    <div class="items-list">
+        {{#each actor.inventar.mitfuehrend as |item id|}}
+        {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+            item=item 
+            rollable=false
+            nameLabel="Gegenstand"
+            stats=(array (concat "Anzahl: " item.system.quantity))
+            itemclass="gegenstand"
+            editTitle="Gegenstand bearbeiten"
+            deleteTitle="Gegenstand löschen"
+            details=(array 
+                (hash label="Gewicht" value=(concat item.system.gewicht " kg"))
+                (hash label="Menge" value=item.system.quantity)
+                (hash label="Wert" value=item.system.wert)
+                (hash label="Beschreibung" value=item.system.beschreibung isDescription=true)
+            )
+        }}
+        {{else}}
+        <div class="items-empty">
+            <p>Keine Gegenstände</p>
+            <small>Füge Gegenstände zum Inventar hinzu.</small>
+        </div>
+        {{/each}}
+    </div>
+
+    {{!-- Carrying Capacity Display --}}
+    {{#if isWeaponSpaceRequirementActive}}
+    <div class="carrying-capacity">
+        <div class="capacity-bar">
+            <div class="capacity-label">
+                <i class="fas fa-weight-hanging"></i>
+                <span>Traglast</span>
+            </div>
+            <div class="capacity-progress {{#if (gte actor.system.getragen actor.system.abgeleitete.traglast)}}overloaded{{/if}}">
+                <div class="capacity-fill" style="width: {{percentage actor.system.getragen actor.system.abgeleitete.traglast}}%"></div>
+                <div class="capacity-text">
+                    {{actor.system.getragen}} / {{actor.system.abgeleitete.traglast}} kg
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</div>

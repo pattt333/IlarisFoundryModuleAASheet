@@ -38,8 +38,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  border: 3px solid var(--color-border-dark, #666);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
@@ -258,11 +256,19 @@ body {
   max-width: 200px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 0;
 }
 
 .ilaris.sheet.actor.alternative .energy-bar {
-  margin-bottom: 6px;
+  margin-bottom: 0;
+}
+
+.ilaris.sheet.actor.alternative .energy-bar:not(:first-child) .energy-progress {
+  border-top: none;
+}
+
+.ilaris.sheet.actor.alternative .health-bar-container .energy-progress {
+  border-top: none;
 }
 
 .ilaris.sheet.actor.alternative .energy-label {
@@ -298,6 +304,10 @@ body {
 
 .ilaris.sheet.actor.alternative .gkap-fill {
   background: linear-gradient(90deg, var(--primary-color, #4299e1), #63b3ed);
+}
+
+.ilaris.sheet.actor.alternative .health-fill {
+  background: linear-gradient(90deg, #e53e3e, #fc8181);
 }
 
 .ilaris.sheet.actor.alternative .energy-text {
@@ -421,6 +431,40 @@ body {
   flex-shrink: 0;
 }
 
+/* Header Actions */
+.ilaris.sheet.actor.alternative .header-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.ilaris.sheet.actor.alternative .rest-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color, #4299e1);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ilaris.sheet.actor.alternative .rest-button:hover {
+  background: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ilaris.sheet.actor.alternative .rest-button i {
+  font-size: 18px;
+}
+
 .ilaris.sheet.actor.alternative .scrollable-content {
   flex: 1;
   overflow-y: auto;
@@ -499,11 +543,16 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .condition-display {
-  grid-column: span 3;
   text-align: center;
   font-style: italic;
-  color: #666;
-  margin-top: 5px;
+  color: white;
+  margin-top: 4px;
+  font-size: 0.85em;
+}
+
+.ilaris.sheet.actor.alternative .health-bar-container {
+  width: 100%;
+  max-width: 200px;
 }
 
 @keyframes pulse {
@@ -549,8 +598,6 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .sheet-header .profile-img {
-  border-radius: 8px;
-  border: 3px solid var(--color-border-dark, #666);
   flex-shrink: 0;
 }
 
@@ -774,6 +821,7 @@ body {
   border-radius: 4px;
   background: white;
   font-size: 14px;
+  height: 30px;
 }
 
 .ilaris.sheet.actor.alternative .beritten-checkbox {
@@ -801,13 +849,97 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+  font-size: medium;
 }
 
-.ilaris.sheet.actor.alternative .kampfstil-warning i {
-  color: #dc3545;
+/* Carrying Component */
+.ilaris.sheet.actor.alternative .items-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px;
+  color: rgba(45, 55, 72, 0.7);
 }
 
+.ilaris.sheet.actor.alternative .items-empty p {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--text-dark, #2d3748);
+}
 
+.ilaris.sheet.actor.alternative .items-empty small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.ilaris.sheet.actor.alternative .carrying-capacity {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}
+
+.ilaris.sheet.actor.alternative .capacity-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ilaris.sheet.actor.alternative .capacity-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  color: var(--text-dark, #2d3748);
+  font-size: 13px;
+}
+
+.ilaris.sheet.actor.alternative .capacity-label i {
+  color: var(--primary-color, #4299e1);
+}
+
+.ilaris.sheet.actor.alternative .capacity-progress {
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  height: 28px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.ilaris.sheet.actor.alternative .capacity-progress.overloaded {
+  border-color: #e53e3e;
+}
+
+.ilaris.sheet.actor.alternative .capacity-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color, #4299e1), #63b3ed);
+  transition: width 0.3s ease;
+}
+
+.ilaris.sheet.actor.alternative .capacity-progress.overloaded .capacity-fill {
+  background: linear-gradient(90deg, #e53e3e, #fc8181);
+}
+
+.ilaris.sheet.actor.alternative .capacity-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--text-dark, #2d3748);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+.ilaris.sheet.actor.alternative .capacity-note {
+  font-size: 10px;
+  color: rgba(45, 55, 72, 0.6);
+  font-style: italic;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
