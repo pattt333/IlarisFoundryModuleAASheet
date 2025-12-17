@@ -15,6 +15,40 @@
                 <div class="profile-einschraenkungen">
                     {{> modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs}}
                 </div>
+                {{!-- Secondary Stats with Icons --}}
+                <div class="profile-secondary-stats">
+                    <div class="profile-stat">
+                        <i class="fas fa-heart" title="Wundschwelle"></i>
+                        <span class="stat-label">WS</span>
+                        <span class="stat-value">{{actor.system.abgeleitete.ws}}</span>
+                        <span class="stat-derived">({{actor.system.abgeleitete.ws_stern}}*)</span>
+                    </div>
+                    <div class="profile-stat">
+                        <i class="fas fa-shield-alt" title="Magieresistenz"></i>
+                        <span class="stat-label">MR</span>
+                        <span class="stat-value">{{actor.system.abgeleitete.mr}}</span>
+                    </div>
+                    <div class="profile-stat">
+                        <i class="fas fa-running" title="Geschwindigkeit"></i>
+                        <span class="stat-label">GS</span>
+                        <span class="stat-value">{{actor.system.abgeleitete.gs}}</span>
+                    </div>
+                    <div class="profile-stat">
+                        <i class="fas fa-bolt" title="Initiative"></i>
+                        <span class="stat-label">INI</span>
+                        <span class="stat-value">{{actor.system.abgeleitete.ini}}</span>
+                    </div>
+                    <div class="profile-stat">
+                        <i class="fas fa-weight-hanging" title="Behinderung"></i>
+                        <span class="stat-label">BE</span>
+                        <span class="stat-value">{{actor.system.abgeleitete.be}}</span>
+                    </div>
+                    <div class="profile-stat">
+                        <i class="fas fa-dice-d20" title="Globaler Modifikator"></i>
+                        <span class="stat-label">Glob. Mod</span>
+                        <span class="stat-value">{{actor.system.abgeleitete.globalermod}}</span>
+                    </div>
+                </div>
             </div>
             
             {{!-- Right side: Name and stats --}}
@@ -36,37 +70,6 @@
                         </div>
                     </div>
                     {{/each}}
-                </div>
-                
-                {{!-- All Secondary Stats in One Row --}}
-                <div class="secondary-stats flex-row">
-                    <div class="stat flex-group-center">
-                        <label class="stat-label">WS</label>
-                        <div class="stat-values">
-                            <span class="stat-value">{{actor.system.abgeleitete.ws}}</span>
-                            <span class="stat-derived">({{actor.system.abgeleitete.ws_stern}}*)</span>
-                        </div>
-                    </div>
-                    <div class="stat flex-group-center">
-                        <label class="stat-label">MR</label>
-                        <span class="stat-value">{{actor.system.abgeleitete.mr}}</span>
-                    </div>
-                    <div class="stat flex-group-center">
-                        <label class="stat-label">GS</label>
-                        <span class="stat-value">{{actor.system.abgeleitete.gs}}</span>
-                    </div>
-                    <div class="stat flex-group-center">
-                        <label class="stat-label">INI</label>
-                        <span class="stat-value">{{actor.system.abgeleitete.ini}}</span>
-                    </div>
-                    <div class="stat flex-group-center">
-                        <label class="stat-label">BE</label>
-                        <span class="stat-value">{{actor.system.abgeleitete.be}}</span>
-                    </div>
-                    <div class="stat flex-group-center">
-                        <label class="stat-label">Glob. Mod</label>
-                        <span class="stat-value">{{actor.system.abgeleitete.globalermod}}</span>
-                    </div>
                 </div>
             </div>
             {{!-- Sheet Tab Navigation - Also sticky --}}
