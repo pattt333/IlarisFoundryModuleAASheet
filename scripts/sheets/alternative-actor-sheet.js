@@ -100,55 +100,99 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             // Hexagon attribute value editing (our custom feature)
             html.find('.hex-main').click(this._onRollable.bind(this));
             html.find('.hex-small').click(this._onHexagonEdit.bind(this));
+            
+            // Energy settings icon (our custom feature)
+            html.find('.energy-settings').click(this._onEnergySettings.bind(this));
         }
-
-        // Einschränkungen interactive boxes (our custom feature)
-        html.find('.einschraenkung-box').click(this._onEinschraenkungClick.bind(this));
         
         // Initialize accordion functionality
         this.accordionManager.initialize(html);
         
         // Initialize favorites component
         this.favoritesManager.initialize(html);
-        
-        // Initialize einschränkungen display
-        this._updateEinschraenkungsDisplay(html);
     }
 
-
-
     /**
-     * Handle clicking on einschränkung boxes
+     * Handle energy settings icon click - opens dialog to edit energy values
      * @param {Event} event   The originating click event
      * @private
      */
-    async _onEinschraenkungClick(event) {
+    async _onEnergySettings(event) {
         event.preventDefault();
-        const box = event.currentTarget;
-        const index = parseInt(box.dataset.index);
-        const currentState = box.dataset.state;
+        const energyType = event.currentTarget.dataset.energyType;
         
-        let wunden = this.actor.system.gesundheit.wunden || 0;
-        let erschoepfung = this.actor.system.gesundheit.erschoepfung || 0;
+        // Determine which energy fields to edit based on type
+        let currentValue, blockedValue, maxValue, labels;
         
-        // Cycle through states: empty -> wound -> exhaustion -> empty
-        if (currentState === 'empty') {
-            // Add a wound
-            wunden = Math.min(wunden + 1, 8);
-        } else if (currentState === 'wound') {
-            // Convert wound to exhaustion
-            wunden = Math.max(wunden - 1, 0);
-            erschoepfung = Math.min(erschoepfung + 1, 8);
-        } else if (currentState === 'exhaustion') {
-            // Remove exhaustion
-            erschoepfung = Math.max(erschoepfung - 1, 0);
+        if (energyType === 'asp') {
+            currentValue = this.actor.system.abgeleitete.asp_stern || 0;
+            blockedValue = this.actor.system.abgeleitete.gasp || 0;
+            maxValue = this.actor.system.abgeleitete.asp || 0;
+            labels = {
+                current: 'AsP/Eng aktuell',
+                blocked: 'gAsP/gEng (geblockt)',
+                title: 'AsP/Energie bearbeiten'
+            };
+        } else if (energyType === 'kap') {
+            currentValue = this.actor.system.abgeleitete.kap_stern || 0;
+            blockedValue = this.actor.system.abgeleitete.gkap || 0;
+            maxValue = this.actor.system.abgeleitete.kap || 0;
+            labels = {
+                current: 'KaP/Eng aktuell',
+                blocked: 'gKaP/gEng (geblockt)',
+                title: 'KaP/Energie bearbeiten'
+            };
         }
         
-        // Update the actor
-        await this.actor.update({
-            'system.gesundheit.wunden': wunden,
-            'system.gesundheit.erschoepfung': erschoepfung
-        });
+        const availableMax = maxValue - blockedValue;
+        
+        // Create dialog HTML
+        const content = `
+            <form>
+                <div class="form-group">
+                    <label>${labels.current}:</label>
+                    <input type="number" name="current" value="${currentValue}" min="0" max="${availableMax}" />
+                    <p class="hint">Maximum: ${availableMax}</p>
+                </div>
+                <div class="form-group">
+                    <label>${labels.blocked}:</label>
+                    <input type="number" name="blocked" value="${blockedValue}" min="0" max="${maxValue}" />
+                    <p class="hint">Maximum: ${maxValue}</p>
+                </div>
+            </form>
+        `;
+        
+        // Show dialog
+        new Dialog({
+            title: labels.title,
+            content: content,
+            buttons: {
+                save: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Speichern",
+                    callback: async (html) => {
+                        const newCurrent = parseInt(html.find('[name="current"]').val());
+                        const newBlocked = parseInt(html.find('[name="blocked"]').val());
+                        
+                        const updateData = {};
+                        if (energyType === 'asp') {
+                            updateData['system.abgeleitete.asp_stern'] = Math.min(newCurrent, maxValue - newBlocked);
+                            updateData['system.abgeleitete.gasp'] = Math.min(newBlocked, maxValue);
+                        } else if (energyType === 'kap') {
+                            updateData['system.abgeleitete.kap_stern'] = Math.min(newCurrent, maxValue - newBlocked);
+                            updateData['system.abgeleitete.gkap'] = Math.min(newBlocked, maxValue);
+                        }
+                        
+                        await this.actor.update(updateData);
+                    }
+                },
+                cancel: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "Abbrechen"
+                }
+            },
+            default: "save"
+        }).render(true);
     }
 
     /**
@@ -207,42 +251,6 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         let states = JSON.parse(sessionStorage.getItem(storageKey) || '{}');
         delete states[itemId];
         sessionStorage.setItem(storageKey, JSON.stringify(states));
-    }
-
-    /**
-     * Update the visual display of einschränkungen boxes
-     * @param {jQuery} html   The rendered HTML
-     * @private
-     */
-    _updateEinschraenkungsDisplay(html) {
-        const wunden = this.actor.system.gesundheit.wunden || 0;
-        const erschoepfung = this.actor.system.gesundheit.erschoepfung || 0;
-        
-        const boxes = html.find('.einschraenkung-box');
-        
-        // Reset all boxes
-        boxes.each((i, box) => {
-            box.dataset.state = 'empty';
-        });
-        
-        // Fill wounds first (priority logic)
-        for (let i = 0; i < wunden && i < 8; i++) {
-            boxes[i].dataset.state = 'wound';
-        }
-        
-        // Fill exhaustion after wounds
-        for (let i = wunden; i < wunden + erschoepfung && i < 8; i++) {
-            boxes[i].dataset.state = 'exhaustion';
-        }
-        
-        // Update death warning visibility
-        const total = wunden + erschoepfung;
-        const deathWarning = html.find('.death-warning');
-        if (total >= 9) {
-            deathWarning.show();
-        } else {
-            deathWarning.hide();
-        }
     }
 
     /**
@@ -309,12 +317,6 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
     /** @override */
     async _updateObject(event, formData) {
         const result = await super._updateObject(event, formData);
-        
-        // Update display after form submission
-        setTimeout(() => {
-            const html = $(this.form);
-            this._updateEinschraenkungsDisplay(html);
-        }, 100);
         
         return result;
     }

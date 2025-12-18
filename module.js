@@ -25,6 +25,10 @@ Hooks.once('init', async function() {
     return (a || 0) + (b || 0);
   });
   
+  Handlebars.registerHelper('subtract', function(a, b) {
+    return (a || 0) - (b || 0);
+  });
+  
   Handlebars.registerHelper('gte', function(a, b) {
     return (a || 0) >= (b || 0);
   });
