@@ -45,12 +45,16 @@
         </div>
         <div class="item-details">
             {{#each details}}
-            {{#if this.value}}
+            {{#unless (eq this.value null)}}
+            {{#unless (eq this.value undefined)}}
+            {{#unless (eq this.value "")}}
             <div class="detail-row {{#if this.isDescription}}description{{/if}}">
                 <span class="detail-label">{{this.label}}</span>
                 <span class="detail-value">{{{this.value}}}</span>
             </div>
-            {{/if}}
+            {{/unless}}
+            {{/unless}}
+            {{/unless}}
             {{/each}}
         </div>
     </div>

@@ -22,7 +22,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["ilaris", "sheet", "actor", "alternative"],
             template: "modules/ilaris-alternative-actor-sheet/templates/sheets/alternative-actor-sheet.hbs",
-            width: 800,
+            width: 820,
             height: 900,
             tabs: [{
                 navSelector: ".sheet-tabs",
@@ -106,6 +106,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             
             // Health settings icon (our custom feature)
             html.find('.energy-settings[data-health-settings]').click(this._onHealthSettings.bind(this));
+            
+            // Editable stats (our custom feature)
+            html.find('.editable-stat').click(this._onEditStat.bind(this));
         }
         
         // Initialize accordion functionality
@@ -212,9 +215,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         const content = `
             <form>
                 <div class="form-group">
-                    <label>Wunden (Trefferpunkte erlitten):</label>
+                    <label>Trefferpunkte erlitten:</label>
                     <input type="number" name="wunden" value="${currentWounds}" min="0" />
-                    <p class="hint">Das sind die Trefferpunkte, die du erlitten hast.</p>
+                    <p class="hint">Das sind die Trefferpunkte, die du erlitten hast bis jetzt.</p>
                 </div>
             </form>
         `;
@@ -232,6 +235,56 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                         
                         await this.actor.update({
                             'system.gesundheit.wunden': Math.max(newWounds, 0)
+                        });
+                    }
+                },
+                cancel: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "Abbrechen"
+                }
+            },
+            default: "save"
+        }).render(true);
+    }
+
+    /**
+     * Handle editing stat values like global modifier
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onEditStat(event) {
+        event.preventDefault();
+        
+        const statField = event.currentTarget.dataset.statField;
+        const currentValue = foundry.utils.getProperty(this.actor, statField) || 0;
+        
+        // Get a friendly label from the title or stat-label
+        const label = $(event.currentTarget).find('.stat-label').text() || 'Wert';
+        const title = $(event.currentTarget).find('i').attr('title') || label;
+        
+        // Create dialog HTML
+        const content = `
+            <form>
+                <div class="form-group">
+                    <label>${title}:</label>
+                    <input type="number" name="value" value="${currentValue}" step="1" />
+                </div>
+            </form>
+        `;
+        
+        // Show dialog
+        new Dialog({
+            title: `${title} bearbeiten`,
+            content: content,
+            buttons: {
+                save: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Speichern",
+                    callback: async (html) => {
+                        const newValue = parseInt(html.find('[name="value"]').val()) || 0;
+                        
+                        await this.actor.update({
+                            [statField]: newValue
                         });
                     }
                 },

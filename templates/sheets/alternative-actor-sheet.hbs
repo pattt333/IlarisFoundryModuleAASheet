@@ -15,16 +15,45 @@
                 <div class="profile-einschraenkungen">
                     {{> modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs}}
                 </div>
+            </div>
+            
+            {{!-- Right side: Name and stats --}}
+            <div class="header-details">
+                <div class="name-section">
+                    <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+                </div>
+                <div class="stats-section">
+                    {{!-- Shield Icon for WS/BE --}}
+                    <div class="ws-shield-container">
+                        <div class="ws-shield" title="Kopf: {{actor.system.abgeleitete.ws_kopf}}&#10;Torso: {{actor.system.abgeleitete.ws_torso}}&#10;Arme: {{actor.system.abgeleitete.ws_arme}}&#10;Beine: {{actor.system.abgeleitete.ws_beine}}">
+                            <i class="fas fa-shield-alt"></i>
+                            <span class="ws-value">{{actor.system.abgeleitete.ws_stern}}</span>
+                            <div class="be-badge">
+                                <i class="fas fa-weight-hanging"></i>
+                                <span class="be-value">{{actor.system.abgeleitete.be}} BE</span>
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- Primary Attributes in One Row --}}
+                    <div class="primary-attributes flex-row">
+                        {{!-- Attribute Hexagons --}}
+                        {{#each actor.system.attribute as |attribute key|}}
+                        <div class="attribute-hexagon">
+                            <div class="hex-main" data-rolltype="fertigkeit_diag" data-probetype="attribut" data-attribut="{{key}}">
+                                <label class="hex-label">{{key}}</label>
+                                <span class="hex-pw">{{attribute.pw}}</span>
+                            </div>
+                            <div class="hex-small" data-attribute="{{key}}">
+                                <span class="hex-wert">{{attribute.wert}}</span>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
                 {{!-- Secondary Stats with Icons --}}
                 <div class="profile-secondary-stats">
                     <div class="profile-stat">
-                        <i class="fas fa-heart" title="Wundschwelle"></i>
-                        <span class="stat-label">WS</span>
-                        <span class="stat-value">{{actor.system.abgeleitete.ws}}</span>
-                        <span class="stat-derived">({{actor.system.abgeleitete.ws_stern}}*)</span>
-                    </div>
-                    <div class="profile-stat">
-                        <i class="fas fa-shield-alt" title="Magieresistenz"></i>
+                        <i class="fas fa-hat-wizard" title="Magieresistenz"></i>
                         <span class="stat-label">MR</span>
                         <span class="stat-value">{{actor.system.abgeleitete.mr}}</span>
                     </div>
@@ -38,38 +67,11 @@
                         <span class="stat-label">INI</span>
                         <span class="stat-value">{{actor.system.abgeleitete.ini}}</span>
                     </div>
-                    <div class="profile-stat">
-                        <i class="fas fa-weight-hanging" title="Behinderung"></i>
-                        <span class="stat-label">BE</span>
-                        <span class="stat-value">{{actor.system.abgeleitete.be}}</span>
+                    <div class="profile-stat editable-stat" data-stat-field="system.modifikatoren.manuellermod">
+                        <i class="fas fa-dice-d20" title="Manueller Modifikator"></i>
+                        <span class="stat-label">Manueller. Mod</span>
+                        <span class="stat-value">{{actor.system.modifikatoren.manuellermod}}</span>
                     </div>
-                    <div class="profile-stat">
-                        <i class="fas fa-dice-d20" title="Globaler Modifikator"></i>
-                        <span class="stat-label">Glob. Mod</span>
-                        <span class="stat-value">{{actor.system.abgeleitete.globalermod}}</span>
-                    </div>
-                </div>
-            </div>
-            
-            {{!-- Right side: Name and stats --}}
-            <div class="header-details">
-                <div class="name-section">
-                    <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-                </div>
-                
-                {{!-- Primary Attributes in One Row --}}
-                <div class="primary-attributes flex-row">
-                    {{#each actor.system.attribute as |attribute key|}}
-                    <div class="attribute-hexagon">
-                        <div class="hex-main" data-rolltype="fertigkeit_diag" data-probetype="attribut" data-attribut="{{key}}">
-                            <label class="hex-label">{{key}}</label>
-                            <span class="hex-pw">{{attribute.pw}}</span>
-                        </div>
-                        <div class="hex-small" data-attribute="{{key}}">
-                            <span class="hex-wert">{{attribute.wert}}</span>
-                        </div>
-                    </div>
-                    {{/each}}
                 </div>
             </div>
             {{!-- Sheet Tab Navigation - Also sticky --}}

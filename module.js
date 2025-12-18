@@ -47,6 +47,12 @@ Hooks.once('init', async function() {
     if (!max || max === 0) return 0;
     return Math.round(((current || 0) / max) * 100);
   });
+  
+  // Array join helper
+  Handlebars.registerHelper('join', function(array, separator) {
+    if (!array || !Array.isArray(array)) return '';
+    return array.join(separator || ', ');
+  });
 
   // Helper for creating arrays in templates
   Handlebars.registerHelper('array', function() {

@@ -1,11 +1,11 @@
 {{!-- Health Resource - Bar style --}}
 <div class="health-bar-container">
     <div class="energy-bar">
-        <label class="energy-label">LP</label>
+        <label class="energy-label">LeP</label>
         <div class="energy-progress clickable" data-field="system.gesundheit.hp" data-current="{{actor.system.gesundheit.hp}}" data-max="{{actor.system.gesundheit.hp_max}}">
             <div class="energy-fill health-fill" style="width: {{percentage actor.system.gesundheit.hp.value actor.system.gesundheit.hp.max}}%"></div>
             <div class="energy-text">
-                {{actor.system.gesundheit.hp.value}} / {{actor.system.gesundheit.hp.max}} LP
+                {{actor.system.gesundheit.hp.value}} / {{actor.system.gesundheit.hp.max}} LeP
                 <a class="energy-settings" data-health-settings="true" title="Wunden bearbeiten"><i class="fas fa-cog"></i></a>
             </div>
         </div>
