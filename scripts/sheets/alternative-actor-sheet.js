@@ -102,7 +102,10 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             html.find('.hex-small').click(this._onHexagonEdit.bind(this));
             
             // Energy settings icon (our custom feature)
-            html.find('.energy-settings').click(this._onEnergySettings.bind(this));
+            html.find('.energy-settings[data-energy-type]').click(this._onEnergySettings.bind(this));
+            
+            // Health settings icon (our custom feature)
+            html.find('.energy-settings[data-health-settings]').click(this._onHealthSettings.bind(this));
         }
         
         // Initialize accordion functionality
@@ -184,6 +187,52 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                         }
                         
                         await this.actor.update(updateData);
+                    }
+                },
+                cancel: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "Abbrechen"
+                }
+            },
+            default: "save"
+        }).render(true);
+    }
+
+    /**
+     * Handle health settings icon click - opens dialog to edit wounds
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onHealthSettings(event) {
+        event.preventDefault();
+        
+        const currentWounds = this.actor.system.gesundheit.wunden || 0;
+        
+        // Create dialog HTML
+        const content = `
+            <form>
+                <div class="form-group">
+                    <label>Wunden (Trefferpunkte erlitten):</label>
+                    <input type="number" name="wunden" value="${currentWounds}" min="0" />
+                    <p class="hint">Das sind die Trefferpunkte, die du erlitten hast.</p>
+                </div>
+            </form>
+        `;
+        
+        // Show dialog
+        new Dialog({
+            title: 'Wunden bearbeiten',
+            content: content,
+            buttons: {
+                save: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Speichern",
+                    callback: async (html) => {
+                        const newWounds = parseInt(html.find('[name="wunden"]').val());
+                        
+                        await this.actor.update({
+                            'system.gesundheit.wunden': Math.max(newWounds, 0)
+                        });
                     }
                 },
                 cancel: {

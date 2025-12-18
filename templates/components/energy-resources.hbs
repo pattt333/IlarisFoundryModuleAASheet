@@ -7,9 +7,9 @@
             <div class="energy-fill asp-fill" style="width: 100%"></div>
             <div class="energy-text">
                 {{actor.system.abgeleitete.asp_stern}} / {{subtract actor.system.abgeleitete.asp (or actor.system.abgeleitete.gasp 0)}}{{#if actor.system.abgeleitete.gasp}} ({{actor.system.abgeleitete.gasp}}){{/if}} AsP
+                <a class="energy-settings" data-energy-type="asp" title="AsP/gAsP bearbeiten"><i class="fas fa-cog"></i></a>
             </div>
         </div>
-        <a class="energy-settings" data-energy-type="asp" title="AsP/gAsP bearbeiten"><i class="fas fa-cog"></i></a>
     </div>
     <div class="energy-bar">
         <label class="energy-label">KaP</label>
@@ -17,9 +17,9 @@
             <div class="energy-fill kap-fill" style="width: 100%"></div>
             <div class="energy-text">
                 {{actor.system.abgeleitete.kap_stern}} / {{subtract actor.system.abgeleitete.kap (or actor.system.abgeleitete.gkap 0)}}{{#if actor.system.abgeleitete.gkap}} ({{actor.system.abgeleitete.gkap}}){{/if}} KaP
+                <a class="energy-settings" data-energy-type="kap" title="KaP/gKaP bearbeiten"><i class="fas fa-cog"></i></a>
             </div>
         </div>
-        <a class="energy-settings" data-energy-type="kap" title="KaP/gKaP bearbeiten"><i class="fas fa-cog"></i></a>
     </div>
 {{else if actor.system.abgeleitete.zauberer}}
     {{!-- Only AsP available --}}
@@ -29,9 +29,9 @@
             <div class="energy-fill asp-fill" style="width: 100%"></div>
             <div class="energy-text">
                 {{actor.system.abgeleitete.asp_stern}} / {{subtract actor.system.abgeleitete.asp (or actor.system.abgeleitete.gasp 0)}}{{#if actor.system.abgeleitete.gasp}} ({{actor.system.abgeleitete.gasp}}){{/if}} Eng
+                <a class="energy-settings" data-energy-type="asp" title="Eng/gEng bearbeiten"><i class="fas fa-cog"></i></a>
             </div>
         </div>
-        <a class="energy-settings" data-energy-type="asp" title="Eng/gEng bearbeiten"><i class="fas fa-cog"></i></a>
     </div>
 {{else if actor.system.abgeleitete.geweihter}}
     {{!-- Only KaP available --}}
@@ -41,9 +41,9 @@
             <div class="energy-fill kap-fill" style="width: 100%"></div>
             <div class="energy-text">
                 {{actor.system.abgeleitete.kap_stern}} / {{subtract actor.system.abgeleitete.kap (or actor.system.abgeleitete.gkap 0)}}{{#if actor.system.abgeleitete.gkap}} ({{actor.system.abgeleitete.gkap}}){{/if}} Eng
+                <a class="energy-settings" data-energy-type="kap" title="Eng/gEng bearbeiten"><i class="fas fa-cog"></i></a>
             </div>
         </div>
-        <a class="energy-settings" data-energy-type="kap" title="Eng/gEng bearbeiten"><i class="fas fa-cog"></i></a>
     </div>
 {{!-- If no energy available, show nothing --}}
 {{/if}}

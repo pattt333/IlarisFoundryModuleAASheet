@@ -271,22 +271,25 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .energy-bar .energy-settings {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #2d3748;
-  border-radius: 0;
-  color: white;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   transition: all 0.2s ease;
+  padding: 4px;
+  z-index: 10;
 }
 
 .ilaris.sheet.actor.alternative .energy-bar .energy-settings:hover {
-  background: #4a5568;
-  color: white;
+  background: transparent;
+  color: rgba(255, 255, 255, 1);
 }
 
 .ilaris.sheet.actor.alternative .energy-bar:not(:first-child) .energy-progress {
@@ -339,7 +342,8 @@ body {
 .ilaris.sheet.actor.alternative .energy-text {
   position: absolute;
   top: 50%;
-  left: 8px;
+  padding: 0 8px;
+  width: 100%;
   transform: translateY(-50%);
   font-size: 1em;
   font-weight: bold;

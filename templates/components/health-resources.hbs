@@ -5,7 +5,8 @@
         <div class="energy-progress clickable" data-field="system.gesundheit.hp" data-current="{{actor.system.gesundheit.hp}}" data-max="{{actor.system.gesundheit.hp_max}}">
             <div class="energy-fill health-fill" style="width: {{percentage actor.system.gesundheit.hp.value actor.system.gesundheit.hp.max}}%"></div>
             <div class="energy-text">
-                <input type="number" name="system.gesundheit.hp.value" value="{{actor.system.gesundheit.hp.value}}" data-dtype="Number" class="energy-input" min="0" max="{{actor.system.gesundheit.hp.max}}"/> / {{actor.system.gesundheit.hp.max}} LP
+                {{actor.system.gesundheit.hp.value}} / {{actor.system.gesundheit.hp.max}} LP
+                <a class="energy-settings" data-health-settings="true" title="Wunden bearbeiten"><i class="fas fa-cog"></i></a>
             </div>
         </div>
     </div>
