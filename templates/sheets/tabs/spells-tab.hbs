@@ -17,6 +17,7 @@
                     rolltype="magie_diag"
                     nameLabel="Zauber"
                     stats=(array (concat "PW " item.system.pw))
+                    stats2=(array (concat "Kosten " item.system.kosten))
                     itemclass="zauber"
                     editTitle="Zauber bearbeiten"
                     deleteTitle="Zauber löschen"
@@ -25,6 +26,9 @@
                         (hash label="Schwierigkeit" value=item.system.schwierigkeit)
                         (hash label="Modifikationen" value=item.system.modifikationen isDescription=true)
                         (hash label="Ziel" value=item.system.ziel)
+                        (hash label="Reichweite" value=item.system.reichweite)
+                        (hash label="Vorbereitung" value=item.system.vorbereitung)
+                        (hash label="Wirkungsdauer" value=item.system.wirkungsdauer)
                         (hash label="Beschreibung" value=item.system.text isDescription=true)
                     )
                 }}
@@ -48,6 +52,7 @@
                     rolltype="karma_diag"
                     nameLabel="Liturgie"
                     stats=(array (concat "PW " item.system.pw))
+                    stats2=(array (concat "Kosten " item.system.kosten))
                     itemclass="liturgie"
                     editTitle="Liturgie bearbeiten"
                     deleteTitle="Liturgie löschen"
@@ -56,6 +61,9 @@
                         (hash label="Schwierigkeit" value=item.system.schwierigkeit)
                         (hash label="Modifikationen" value=item.system.modifikationen isDescription=true)
                         (hash label="Ziel" value=item.system.ziel)
+                        (hash label="Reichweite" value=item.system.reichweite)
+                        (hash label="Vorbereitung" value=item.system.vorbereitung)
+                        (hash label="Wirkungsdauer" value=item.system.wirkungsdauer)
                         (hash label="Beschreibung" value=item.system.text isDescription=true)
                     )
                 }}

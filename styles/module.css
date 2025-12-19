@@ -1051,3 +1051,7 @@ body {
     flex-direction: column;
   }
 }
+
+.ilaris-button-icon {
+  padding-right: 0 !important;
+}
