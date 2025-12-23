@@ -15,12 +15,11 @@
                     item=effect 
                     rollable=false
                     nameLabel="Effekt"
-                    stats=(array (if effect.disabled "Deaktiviert" "Aktiv"))
                     itemclass="effect"
+                    stats=(array (concat "Dauer " effect.duration.label))
                     editTitle="Effekt bearbeiten"
                     deleteTitle="Effekt löschen"
                     details=(array 
-                        (hash label="Dauer" value=effect.duration.label)
                         (hash label="Quelle" value=effect.sourceName)
                         (hash label="Beschreibung" value=effect.description isDescription=true)
                     )

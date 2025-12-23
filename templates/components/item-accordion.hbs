@@ -12,14 +12,14 @@
         {{#if stats}}
         <div class="item-stats accordion-header">
             {{#each stats}}
-            <h4{{#if ../statsTooltips}}{{#if (lookup ../statsTooltips @index)}} data-tooltip="{{lookup ../statsTooltips @index}}"{{/if}}{{/if}}>{{this}}</h4>
+            <h4{{#if (lookup ../statsTooltips @index)}} data-tooltip="{{lookup ../statsTooltips @index}}"{{/if}}>{{this}}</h4>
             {{/each}}
         </div>
         {{/if}}
         {{#if stats2}}
         <div class="item-stats accordion-header">
             {{#each stats2}}
-            <h4{{#if ../stats2Tooltips}}{{#if (lookup ../stats2Tooltips @index)}} data-tooltip="{{lookup ../stats2Tooltips @index}}"{{/if}}{{/if}}>{{this}}</h4>
+            <h4{{#if (lookup ../stats2Tooltips @index)}} data-tooltip="{{lookup ../stats2Tooltips @index}}"{{/if}}>{{this}}</h4>
             {{/each}}
         </div>
         {{/if}}
