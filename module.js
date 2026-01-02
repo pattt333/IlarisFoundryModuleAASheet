@@ -114,7 +114,8 @@ Hooks.once('init', async function() {
     "modules/ilaris-alternative-actor-sheet/templates/components/favorites-component.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/components/carrying.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/components/supporting.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/components/handcart.hbs"
+    "modules/ilaris-alternative-actor-sheet/templates/components/handcart.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/components/effect-card.hbs"
   ]);
 
   // Load component CSS files

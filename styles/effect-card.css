@@ -1,0 +1,144 @@
+/* Effect Card Component Styles */
+
+.ilaris.sheet.actor.alternative .effect-card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    height: 100px;
+    margin: 4px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f5f5f5;
+    transition: all 0.2s ease;
+    cursor: help;
+}
+
+.ilaris.sheet.actor.alternative .effect-card:hover {
+    border-color: #4299e1;
+    box-shadow: 0 0 8px rgba(66, 153, 225, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Control Buttons */
+.ilaris.sheet.actor.alternative .effect-control {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.ilaris.sheet.actor.alternative .effect-card:hover .effect-control {
+    opacity: 1;
+}
+
+.ilaris.sheet.actor.alternative .effect-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.ilaris.sheet.actor.alternative .effect-edit {
+    top: 2px;
+    left: 2px;
+}
+
+.ilaris.sheet.actor.alternative .effect-delete {
+    top: 2px;
+    right: 2px;
+    color: #ff4444;
+}
+
+.ilaris.sheet.actor.alternative .effect-delete:hover {
+    color: #ff6666;
+}
+
+/* Effect Icon */
+.ilaris.sheet.actor.alternative .effect-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-top: 8px;
+    flex-shrink: 0;
+    padding: 2px;
+}
+
+.ilaris.sheet.actor.alternative .effect-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Effect Name */
+.ilaris.sheet.actor.alternative .effect-name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+}
+
+.ilaris.sheet.actor.alternative .effect-name span {
+    font-size: 10px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+    color: #2d3748;
+}
+
+/* Effect Duration */
+.ilaris.sheet.actor.alternative .effect-duration {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    font-size: 9px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 4px;
+    border-radius: 2px;
+    line-height: 1;
+}
+
+.ilaris.sheet.actor.alternative .effect-duration i {
+    font-size: 10px;
+}
+
+/* Effects Grid Layout */
+.ilaris.sheet.actor.alternative .effects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px;
+}
+
+/* Empty state */
+.ilaris.sheet.actor.alternative .effects-empty {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+    width: 100%;
+}
+
+.ilaris.sheet.actor.alternative .effects-empty small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+}

@@ -18,7 +18,10 @@
     "module.js"
   ],
   "styles": [
-    "styles/module.css"
+    "styles/module.css",
+    "styles/item-accordion.css",
+    "styles/favorites-component.css",
+    "styles/effect-card.css"
   ],
   "relationships": {
     "systems": [

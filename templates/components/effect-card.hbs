@@ -1,0 +1,35 @@
+{{!-- Effect Card Component --}}
+<div class="effect-card" data-item-id="{{effect._id}}" {{#if effect.description}}data-tooltip="{{effect.description}}"{{/if}}>
+    {{!-- Edit button (left upper corner) --}}
+    {{#unless (eq effect.flags.ilaris.sourceType "vorteil")}}
+    <a class="effect-control item-edit effect-edit" data-itemclass="effect" data-itemid="{{effect._id}}" title="Effekt bearbeiten">
+        <i class="fas fa-edit"></i>
+    </a>
+    {{/unless}}
+    
+    {{!-- Delete button (right upper corner) --}}
+    {{#unless (eq effect.flags.ilaris.sourceType "vorteil")}}
+    <a class="effect-control item-delete effect-delete" data-itemclass="effect" data-itemid="{{effect._id}}" title="Effekt löschen">
+        <i class="fas fa-trash"></i>
+    </a>
+    {{/unless}}
+    
+    {{!-- Effect Icon --}}
+    <div class="effect-icon">
+        <img src="{{effect.img}}" alt="{{effect.name}}" title="{{effect.name}}"/>
+    </div>
+    
+    {{!-- Effect Name --}}
+    <div class="effect-name">
+        <span>{{effect.name}}</span>
+    </div>
+    
+    {{!-- Duration (bottom right corner) --}}
+    <div class="effect-duration">
+        {{#if (or (eq effect.duration.label null) (eq effect.duration.label undefined) (eq effect.duration.label "None"))}}
+        <i class="fas fa-infinity" title="Unbegrenzte Dauer"></i>
+        {{else}}
+        <span>{{effect.duration.label}}</span>
+        {{/if}}
+    </div>
+</div>

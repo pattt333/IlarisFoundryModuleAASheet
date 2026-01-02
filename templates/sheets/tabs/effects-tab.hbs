@@ -9,20 +9,10 @@
                     <a class="item-control item-create" title="Effekt erstellen" data-type="effect"><i class="fas fa-plus"></i> Effekt hinzufügen</a>
                 </div>
             </div>
-            <div class="items-list">
+            <div class="effects-grid">
                 {{#each actor.effects as |effect|}}
-                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
-                    item=effect 
-                    rollable=false
-                    nameLabel="Effekt"
-                    itemclass="effect"
-                    stats=(array (concat "Dauer " effect.duration.label))
-                    editTitle="Effekt bearbeiten"
-                    deleteTitle="Effekt löschen"
-                    details=(array 
-                        (hash label="Quelle" value=effect.sourceName)
-                        (hash label="Beschreibung" value=effect.description isDescription=true)
-                    )
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/effect-card.hbs" 
+                    effect=effect
                 }}
                 {{else}}
                 <div class="effects-empty">
