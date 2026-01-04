@@ -21,7 +21,21 @@
     "styles/module.css",
     "styles/item-accordion.css",
     "styles/favorites-component.css",
-    "styles/effect-card.css"
+    "styles/effect-card.css",
+    "styles/active-effect-config.css"
+  ],
+  "packs": [
+    {
+      "name": "effect-library",
+      "label": "Effekt Bibliothek",
+      "path": "packs/effect-library",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
   ],
   "relationships": {
     "systems": [

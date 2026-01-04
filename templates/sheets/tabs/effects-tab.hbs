@@ -6,11 +6,11 @@
             <div class="items-header">
                 <h3>Aktive Effekte</h3>
                 <div class="item-controls">
-                    <a class="item-control item-create" title="Effekt erstellen" data-type="effect"><i class="fas fa-plus"></i> Effekt hinzufügen</a>
+                    <a class="item-control effect-library-open" title="Öffne Effekt Bibliothek" data-pack="ilaris-alternative-actor-sheet.effect-library"><i class="fas fa-book"></i> Effekt Bibliothek</a>
                 </div>
             </div>
             <div class="effects-grid">
-                {{#each actor.effects as |effect|}}
+                {{#each actor.appliedEffects as |effect|}}
                 {{> "modules/ilaris-alternative-actor-sheet/templates/components/effect-card.hbs" 
                     effect=effect
                 }}

@@ -79,6 +79,8 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    border: 0px;
+    filter: var(--filter-primary);
 }
 
 /* Effect Name */

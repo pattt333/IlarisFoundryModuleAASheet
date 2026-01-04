@@ -26,10 +26,11 @@
     
     {{!-- Duration (bottom right corner) --}}
     <div class="effect-duration">
-        {{#if (or (eq effect.duration.label null) (eq effect.duration.label undefined) (eq effect.duration.label "None"))}}
-        <i class="fas fa-infinity" title="Unbegrenzte Dauer"></i>
+        {{#if effect.duration.turns}}
+         <span>{{effect.duration.turns}} Runden</span> 
+        
         {{else}}
-        <span>{{effect.duration.label}}</span>
+       <i class="fas fa-infinity" title="Unbegrenzte Dauer"></i>
         {{/if}}
     </div>
 </div>

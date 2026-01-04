@@ -109,6 +109,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             
             // Editable stats (our custom feature)
             html.find('.editable-stat').click(this._onEditStat.bind(this));
+            
+            // Effect library open button (our custom feature)
+            html.find('.effect-library-open').click(this._onOpenEffectLibrary.bind(this));
         }
         
         // Initialize accordion functionality
@@ -245,6 +248,29 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             },
             default: "save"
         }).render(true);
+    }
+
+    /**
+     * Handle opening the effect library compendium
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onOpenEffectLibrary(event) {
+        event.preventDefault();
+        
+        const packId = event.currentTarget.dataset.pack;
+        const pack = game.packs.get(packId);
+        
+        if (!pack) {
+            ui.notifications.error(`Kompendium ${packId} konnte nicht gefunden werden.`);
+            return;
+        }
+        
+        // Open the compendium
+        pack.render(true);
+        
+        // Show info notification to the user
+        ui.notifications.info("Ziehe einen Effekt aus der Bibliothek auf das Charakterblatt, um nur den Effekt hinzuzufügen.");
     }
 
     /**
@@ -414,6 +440,55 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             default: "save",
             close: () => {}
         }).render(true);
+    }
+
+    /** @override */
+    async _onDrop(event) {
+        const data = TextEditor.getDragEventData(event);
+        
+        // If dropping an Item from the effect library compendium, transfer only its effects
+        if (data.type === "Item" && data.uuid?.includes("ilaris-alternative-actor-sheet.effect-library")) {
+            event.preventDefault();
+            
+            try {
+                // Get the item from the UUID
+                const item = await fromUuid(data.uuid);
+                
+                if (!item) {
+                    ui.notifications.warn("Item konnte nicht gefunden werden.");
+                    return;
+                }
+                
+                // Check if the item has effects
+                const effects = item.effects?.contents || [];
+                
+                if (effects.length === 0) {
+                    ui.notifications.warn(`${item.name} hat keine Effekte zum übertragen.`);
+                    return;
+                }
+                
+                // Transfer only the effects to the actor
+                const effectData = effects.map(e => {
+                    const data = e.toObject();
+                    // Update the origin to point to this actor
+                    data.origin = this.actor.uuid;
+                    return data;
+                });
+                
+                await this.actor.createEmbeddedDocuments("ActiveEffect", effectData);
+                
+                ui.notifications.info(`${effects.length} Effekt(e) von ${item.name} wurden zum Charakter hinzugefügt.`);
+                
+            } catch (error) {
+                console.error("Error transferring effects:", error);
+                ui.notifications.error("Fehler beim Übertragen der Effekte.");
+            }
+            
+            return;
+        }
+        
+        // For all other drops, use the default behavior
+        return super._onDrop(event);
     }
 
     /** @override */

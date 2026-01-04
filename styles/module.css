@@ -218,11 +218,6 @@ body {
 }
 
 /* Primary and Secondary Stats */
-.ilaris.sheet.actor.alternative .primary-stats,
-.ilaris.sheet.actor.alternative .secondary-stats {
-  gap: 10px;
-  margin: 5px 0;
-}
 
 .flex-row {
   display: flex;
@@ -392,13 +387,7 @@ body {
   background: linear-gradient(90deg, var(--primary-color, #4299e1), #63b3ed);
 }
 
-.ilaris.sheet.actor.alternative .gasp-fill {
-  background: linear-gradient(90deg, var(--primary-color, #4299e1), #63b3ed);
-}
 
-.ilaris.sheet.actor.alternative .gkap-fill {
-  background: linear-gradient(90deg, var(--primary-color, #4299e1), #63b3ed);
-}
 
 .ilaris.sheet.actor.alternative .health-fill {
   background: linear-gradient(90deg, #e53e3e, #fc8181);
@@ -420,79 +409,9 @@ body {
   gap: 6px;
 }
 
-.ilaris.sheet.actor.alternative .energy-input {
-  background: transparent;
-  border: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  width: 30px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-  padding: 0;
-  margin: 0;
-}
 
-.ilaris.sheet.actor.alternative .energy-input:focus {
-  background: rgba(255, 255, 255, 0.2);
-  outline: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 2px;
-}
 
-.ilaris.sheet.actor.alternative .energy-input::-webkit-inner-spin-button,
-.ilaris.sheet.actor.alternative .energy-input::-webkit-outer-spin-button {
-  opacity: 0.5;
-}
 
-/* Compact Einschränkungen Grid for Profile */
-.ilaris.sheet.actor.alternative .einschraenkungen-profile {
-  width: 100%;
-  max-width: 200px;
-}
-
-.ilaris.sheet.actor.alternative .profile-label {
-  display: block;
-  font-size: 0.75em;
-  font-weight: bold;
-  margin-bottom: 4px;
-  text-align: center;
-  color: var(--color-text-dark, #333);
-}
-
-.ilaris.sheet.actor.alternative .einschraenkungen-grid-compact {
-  display: flex;
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box-compact:hover {
-  transform: scale(1.1);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="wound"] {
-  border-color: #d32f2f;
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="wound"] .box-content {
-  background-image: url('../assets/open-wound.svg');
-  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="exhaustion"] {
-  border-color: #4caf50;
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box-compact[data-state="exhaustion"] .box-content {
-  background-image: url('../assets/sleepy.svg');
-  filter: brightness(0) saturate(100%) invert(49%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box-compact .box-content {
-  width: 16px;
-  height: 16px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 /* Sticky header and tabs with scrollable content */
 .ilaris.sheet.actor.alternative {
@@ -566,76 +485,7 @@ body {
   padding: 10px;
 }
 
-/* Einschränkungen Interactive Grid System */
-.ilaris.sheet.actor.alternative .einschraenkungen-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
 
-.ilaris.sheet.actor.alternative .einschraenkungen-container .resource-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.ilaris.sheet.actor.alternative .einschraenkungen-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #f9f9f9;
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box {
-  width: 25px;
-  height: 25px;
-  border: 2px solid #666;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  transition: all 0.2s ease;
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box:hover {
-  border-color: #333;
-  transform: scale(1.05);
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box[data-state="wound"] {
-  border-color: #d32f2f;
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box[data-state="exhaustion"] {
-  border-color: #4caf50;
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box .box-content {
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box[data-state="wound"] .box-content {
-  background-image: url('../assets/open-wound.svg');
-}
-
-.ilaris.sheet.actor.alternative .einschraenkung-box[data-state="exhaustion"] .box-content {
-  background-image: url('../assets/sleepy.svg');
-}
-
-.ilaris.sheet.actor.alternative .death-warning {
-  color: #cc0000;
-  font-weight: bold;
-  font-size: 0.9em;
-}
 
 .ilaris.sheet.actor.alternative .condition-display {
   text-align: center;
@@ -711,34 +561,7 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.ilaris.sheet.actor.alternative .sheet-header .resources {
-  margin-top: 10px;
-}
 
-.ilaris.sheet.actor.alternative .sheet-header .resource {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  padding: 8px;
-  text-align: center;
-}
-
-.ilaris.sheet.actor.alternative .sheet-header .resource-label {
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.ilaris.sheet.actor.alternative .sheet-header .resource input {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  color: white;
-  text-align: center;
-  width: 50px;
-  padding: 2px 4px;
-}
 
 /* Enhanced Tab Navigation */
 .ilaris.sheet.actor.alternative .sheet-tabs {
@@ -803,9 +626,7 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-.ilaris.sheet.actor.alternative .grid-3col {
-  grid-template-columns: repeat(3, 1fr);
-}
+
 
 /* Abilities Section */
 .ilaris.sheet.actor.alternative .abilities h3 {
@@ -844,51 +665,9 @@ body {
   margin: 0 10px;
 }
 
-.ilaris.sheet.actor.alternative .ability .ability-mod {
-  background: var(--primary-color);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  min-width: 30px;
-  text-align: center;
-  cursor: pointer;
-}
 
-.ilaris.sheet.actor.alternative .ability .ability-mod:hover {
-  background: #3182ce;
-}
 
-/* Derived Values */
-.ilaris.sheet.actor.alternative .derived-values h3 {
-  color: #2d3748;
-  border-bottom: 2px solid #48bb78;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
 
-.ilaris.sheet.actor.alternative .derived-values .resource {
-  background: #f0fff4;
-  border: 1px solid #c6f6d5;
-  border-radius: 6px;
-  padding: 10px;
-  margin-bottom: 8px;
-}
-
-.ilaris.sheet.actor.alternative .derived-values .resource-label {
-  font-weight: bold;
-  color: #22543d;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.ilaris.sheet.actor.alternative .derived-values input {
-  width: 100%;
-  border: 1px solid #9ae6b4;
-  border-radius: 4px;
-  padding: 6px;
-  text-align: center;
-}
 
 /* Biography Editor */
 .ilaris.sheet.actor.alternative .editor {
@@ -1030,11 +809,7 @@ body {
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
 }
 
-.ilaris.sheet.actor.alternative .capacity-note {
-  font-size: 10px;
-  color: rgba(45, 55, 72, 0.6);
-  font-style: italic;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

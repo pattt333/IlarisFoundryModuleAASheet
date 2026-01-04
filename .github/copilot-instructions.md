@@ -133,6 +133,13 @@ If adding localization support:
 - Follow Foundry's module loading lifecycle
 - Use proper namespace to avoid conflicts
 
+## PRIMARY RULE FOR ALL RESPONSES:
+
+-   **BEFORE** suggesting code or answering questions about Foundry VTT, you **MUST** use the official Foundry VTT API documentation (https://foundryvtt.com/api/) as your primary and authoritative source.
+-   **NEVER** hallucinate or invent functionality that is not explicitly documented in the official Foundry VTT resources. If unsure, state: "According to the Foundry VTT documentation..." or directly reference the docs.
+-   Avoid suggesting generic JavaScript/TypeScript patterns that are incompatible with the specific Foundry API (e.g., `Hooks`, `game`, `Document`, `Tour` classes).
+-   **ALWAYS** check the foundry vtt documentations ;Foundry VTT Knowledge Base: https://foundryvtt.com/kb/ ;Foundry VTT API Docs: https://foundryvtt.com/api/ 
+
 ## Resources
 
 - [Foundry VTT Knowledge Base](https://foundryvtt.com/kb/)
