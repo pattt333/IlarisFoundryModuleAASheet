@@ -1,5 +1,5 @@
-{{!-- Weapons Tab --}}
-<div class="tab weapons" data-group="primary" data-tab="weapons">
+{{!-- Kampf Tab --}}
+<div class="tab kampf" data-group="primary" data-tab="kampf">
     <div class="flexcol">
         {{!-- Kampfstil Section --}}
         <div class="items-section">
@@ -90,6 +90,32 @@
                         (hash label="Eigenschaften" value=(join item.system.eigenschaften ", ") isDescription=true)
                     )
                 }}
+                {{/each}}
+            </div>
+        </div>
+
+        {{!-- Kampf-Aktionen Section --}}
+        <div class="items-section kampf-aktionen-section">
+            <div class="items-header">
+                <h3><i class="fas fa-running"></i> Kampf-Aktionen</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Aktion erstellen" data-itemclass="effect-item"><i class="fas fa-plus"></i> Aktion hinzufügen</a>
+                </div>
+            </div>
+            <div class="aktionen-list">
+                {{#each actor.effectItems as |item|}}
+                <div class="aktion-item" data-item-id="{{item.id}}">
+                    <img src="{{item.img}}" alt="{{item.name}}" class="aktion-img"/>
+                    <span class="aktion-name">{{item.name}}</span>
+                    <div class="aktion-controls">
+                        <a class="item-control item-edit" title="Bearbeiten" data-action="edit"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Löschen" data-action="delete"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+                {{else}}
+                <div class="empty-aktionen">
+                    <p>Keine Kampf-Aktionen vorhanden. Füge Aktionen hinzu oder ziehe sie aus dem Kompendium.</p>
+                </div>
                 {{/each}}
             </div>
         </div>

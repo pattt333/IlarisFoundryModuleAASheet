@@ -1,0 +1,118 @@
+{{!-- Initiative Dialog Template for PC Characters --}}
+<form class="initiative-dialog-form">
+    <div class="dialog-header">
+        <div class="actor-info">
+            <img src="{{actor.img}}" alt="{{actor.name}}" class="actor-portrait"/>
+            <div class="actor-details">
+                <h2>{{actor.name}}</h2>
+                <div class="base-stats">
+                    <span class="base-ini">Basis-INI: <strong>{{baseIni}}</strong></span>
+                    <span class="current-ini">Berechnet: <strong class="{{#if isNegativeIni}}negative{{/if}}">{{calculatedIni}}</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog-content">
+        {{!-- Modifier Section --}}
+        <section class="modifier-section">
+            <h3><i class="fas fa-sliders-h"></i> Modifikatoren</h3>
+            
+            <div class="form-group">
+                <label for="iniMod">INI-Modifikator</label>
+                <input type="number" name="iniMod" id="iniMod" value="{{iniMod}}" {{#if isNegativeIni}}disabled{{/if}}/>
+            </div>
+            
+            <div class="form-group">
+                <label for="atMod">AT-Modifikator</label>
+                <input type="number" name="atMod" id="atMod" value="{{atMod}}" {{#if isNegativeIni}}disabled{{/if}}/>
+                <span class="hint">system.modifikatoren.nahkampfmod</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="vtMod">VT-Modifikator</label>
+                <input type="number" name="vtMod" id="vtMod" value="{{vtMod}}" {{#if isNegativeIni}}disabled{{/if}}/>
+                <span class="hint">system.modifikatoren.verteidigungmod</span>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label" title="Bei kombinierten Aktionen sind AT und VT um 4 erschwert">
+                    <input type="checkbox" name="kombinierteAktion" {{#if kombinierteAktion}}checked{{/if}} {{#if isNegativeIni}}disabled{{/if}}/>
+                    <span>Kombinierte Aktion (-4 AT/VT)</span>
+                </label>
+            </div>
+        </section>
+
+        {{!-- Actions Section --}}
+        <section class="actions-section">
+            <h3><i class="fas fa-running"></i> Aktionen auswählen (max. 2)</h3>
+            
+            <div class="form-group">
+                <multi-select name="actions" id="actions" title="Wählen Sie bis zu 2 Aktionen aus Ihrem Charakterbogen oder Kompendium" {{#if isNegativeIni}}disabled{{/if}}>
+                    {{{selectOptions availableActions selected=selectedActionIds valueAttr="id" labelAttr="name"}}}
+                </multi-select>
+            </div>
+            
+            {{#if selectedActions.length}}
+            <div class="selected-actions-info">
+                {{#each selectedActions as |action|}}
+                <div class="action-description">
+                    <strong>{{action.name}}:</strong>
+                    <p>{{{action.description}}}</p>
+                </div>
+                {{/each}}
+            </div>
+            {{/if}}
+        </section>
+
+        {{!-- Dice Section --}}
+        <section class="dice-section">
+            <h3><i class="fas fa-dice"></i> Würfeln</h3>
+            
+            {{#unless manualRolling}}
+            <div class="form-group">
+                <label for="diceCount">Würfelanzahl</label>
+                <select name="diceCount" id="diceCount" title="Man kann irgendein Ergebnis von den beiden wählen">
+                    <option value="1" {{#if (eq diceCount 1)}}selected{{/if}}>1 Würfel</option>
+                    <option value="2" {{#if (eq diceCount 2)}}selected{{/if}}>2 Würfel (Auswahl nach Wurf)</option>
+                </select>
+            </div>
+            {{/unless}}
+            
+            <div class="dice-controls">
+                <button type="button" class="roll-dice-btn">
+                    <i class="fas fa-dice-d6"></i> Würfeln
+                </button>
+            </div>
+            
+            {{#if hasRolled}}
+            <div class="dice-results">
+                {{#each diceResults as |result index|}}
+                <div class="dice-result {{#if (eq ../selectedDiceIndex index)}}selected{{/if}}" 
+                     data-index="{{index}}"
+                     title="{{#if (eq ../diceCount 2)}}Klicken zum Auswählen{{/if}}">
+                    <div class="dice-face d6">
+                        <span class="dice-value">{{result}}</span>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{/if}}
+        </section>
+    </div>
+
+    <footer class="dialog-footer">
+        {{#unless hasRolled}}
+        <span class="warning-text"><i class="fas fa-exclamation-triangle"></i> Bitte erst würfeln!</span>
+        {{/unless}}
+        
+        <div class="dialog-buttons">
+            <button type="button" class="cancel-btn">
+                <i class="fas fa-times"></i> Abbrechen
+            </button>
+            <button type="button" class="ini-ansagen-btn {{#unless hasRolled}}disabled{{/unless}}">
+                <i class="fas fa-bullhorn"></i> INI ansagen
+            </button>
+        </div>
+    </footer>
+</form>

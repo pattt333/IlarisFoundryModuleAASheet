@@ -1,0 +1,619 @@
+/**
+ * Initiative Dialog Styles
+ * Styles for PC and NPC Initiative Dialogs
+ * Matched to alternative-actor-sheet color scheme
+ */
+
+/* ==================== CSS Variables from alternative-actor-sheet ==================== */
+:root {
+    --ini-primary-color: #4299e1;
+    --ini-bg-dark: #2d3748;
+    --ini-bg-medium: #3c4658;
+    --ini-bg-light: rgba(255, 255, 255, 0.05);
+    --ini-border-color: #444;
+    --ini-text-light: #ddd;
+    --ini-text-medium: #aaa;
+    --ini-text-dark: #666;
+    --ini-success-color: #4aaf4a;
+    --ini-warning-color: #ff6b6b;
+}
+
+/* ==================== Common Dialog Styles ==================== */
+.initiative-dialog,
+.mass-initiative-dialog {
+    background: var(--ini-bg-dark);
+}
+
+.initiative-dialog .window-content,
+.mass-initiative-dialog .window-content {
+    background: var(--ini-bg-dark);
+    color: var(--ini-text-light);
+}
+
+.initiative-dialog-form,
+.mass-initiative-dialog-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.5rem;
+    background: var(--ini-bg-dark);
+}
+
+/* Dialog Header */
+.initiative-dialog-form .dialog-header,
+.mass-initiative-dialog-form .dialog-header {
+    padding: 0.75rem;
+    background: var(--ini-bg-medium);
+    border-bottom: 2px solid var(--ini-border-color);
+    border-radius: 4px 4px 0 0;
+}
+
+.initiative-dialog-form .actor-info,
+.mass-initiative-dialog-form .npc-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.initiative-dialog-form .actor-portrait,
+.mass-initiative-dialog-form .npc-portrait {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    object-fit: cover;
+}
+
+.initiative-dialog-form .actor-details h2,
+.mass-initiative-dialog-form .npc-details h3 {
+    margin: 0 0 0.25rem 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.initiative-dialog-form .base-stats,
+.mass-initiative-dialog-form .npc-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.initiative-dialog-form .base-stats strong,
+.mass-initiative-dialog-form .npc-stats strong {
+    color: var(--ini-primary-color);
+}
+
+.initiative-dialog-form .base-stats strong.negative,
+.mass-initiative-dialog-form .npc-stats strong.negative {
+    color: var(--ini-warning-color);
+}
+
+/* Dialog Content */
+.initiative-dialog-form .dialog-content,
+.mass-initiative-dialog-form .dialog-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.75rem;
+    background: var(--ini-bg-dark);
+}
+
+/* Sections */
+.initiative-dialog-form section,
+.mass-initiative-dialog-form section {
+    background: var(--ini-bg-light);
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--ini-border-color);
+}
+
+.initiative-dialog-form section h3,
+.mass-initiative-dialog-form section h4 {
+    margin: 0 0 0.5rem 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--ini-border-color);
+    color: var(--ini-text-light);
+    font-size: 0.95rem;
+}
+
+.initiative-dialog-form section h3 i,
+.mass-initiative-dialog-form section h4 i {
+    margin-right: 0.5rem;
+    color: var(--ini-primary-color);
+}
+
+/* Form Groups */
+.initiative-dialog-form .form-group,
+.mass-initiative-dialog-form .form-group {
+    margin-bottom: 0.5rem;
+}
+
+.initiative-dialog-form .form-group label,
+.mass-initiative-dialog-form .form-group label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--ini-text-medium);
+    font-size: 0.85rem;
+}
+
+.initiative-dialog-form .form-group input[type="number"],
+.initiative-dialog-form .form-group select,
+.mass-initiative-dialog-form .form-group input[type="number"],
+.mass-initiative-dialog-form .form-group select {
+    width: 100%;
+    padding: 0.4rem;
+    background: var(--ini-bg-medium);
+    border: 1px solid var(--ini-border-color);
+    border-radius: 3px;
+    color: var(--ini-text-light);
+    font-size: 0.9rem;
+}
+
+.initiative-dialog-form .form-group input[type="number"]:focus,
+.initiative-dialog-form .form-group select:focus,
+.mass-initiative-dialog-form .form-group input[type="number"]:focus,
+.mass-initiative-dialog-form .form-group select:focus {
+    outline: 1px solid var(--ini-primary-color);
+    border-color: var(--ini-primary-color);
+}
+
+.initiative-dialog-form .form-group input[type="number"]:disabled,
+.initiative-dialog-form .form-group select:disabled,
+.mass-initiative-dialog-form .form-group input[type="number"]:disabled,
+.mass-initiative-dialog-form .form-group select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.initiative-dialog-form .form-group .hint {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--ini-text-dark);
+    margin-top: 0.15rem;
+}
+
+/* Checkbox Groups */
+.initiative-dialog-form .checkbox-group,
+.mass-initiative-dialog-form .checkbox-group {
+    margin-top: 0.5rem;
+}
+
+.initiative-dialog-form .checkbox-label,
+.mass-initiative-dialog-form .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--ini-text-light);
+}
+
+.initiative-dialog-form .checkbox-label input[type="checkbox"],
+.mass-initiative-dialog-form .checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+/* Actions Section */
+.initiative-dialog-form .actions-section select[multiple],
+.mass-initiative-dialog-form .actions-section select[multiple] {
+    min-height: 80px;
+}
+
+.initiative-dialog-form .selected-actions-info {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(66, 153, 225, 0.1);
+    border-left: 3px solid var(--ini-primary-color);
+    border-radius: 0 4px 4px 0;
+}
+
+.initiative-dialog-form .action-description {
+    margin-bottom: 0.5rem;
+}
+
+.initiative-dialog-form .action-description:last-child {
+    margin-bottom: 0;
+}
+
+.initiative-dialog-form .action-description strong {
+    color: var(--ini-primary-color);
+}
+
+.initiative-dialog-form .action-description p {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.85rem;
+    color: var(--ini-text-medium);
+}
+
+/* ==================== Dice Section ==================== */
+.dice-section .dice-controls {
+    margin-bottom: 0.5rem;
+}
+
+.dice-section .roll-dice-btn,
+.mass-initiative-dialog-form .roll-all-dice-btn {
+    padding: 0.5rem 1rem;
+    background: var(--ini-primary-color);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.dice-section .roll-dice-btn:hover,
+.mass-initiative-dialog-form .roll-all-dice-btn:hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+}
+
+.dice-section .roll-dice-btn i,
+.mass-initiative-dialog-form .roll-all-dice-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Dice Results */
+.dice-section .dice-results {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+
+.dice-section .dice-result {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dice-section .dice-result.selected .dice-face {
+    border-color: var(--ini-success-color);
+    box-shadow: 0 0 15px rgba(74, 175, 74, 0.5);
+}
+
+.dice-section .dice-face {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #fff 0%, #ddd 100%);
+    border: 3px solid #666;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.dice-section .dice-face:hover {
+    transform: scale(1.05);
+    border-color: #888;
+}
+
+.dice-section .dice-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* ==================== Dialog Footer ==================== */
+.initiative-dialog-form .dialog-footer,
+.mass-initiative-dialog-form .dialog-footer {
+    padding: 0.75rem;
+    background: var(--ini-bg-medium);
+    border-top: 2px solid var(--ini-border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.initiative-dialog-form .warning-text {
+    color: var(--ini-warning-color);
+    font-size: 0.85rem;
+}
+
+.initiative-dialog-form .warning-text i {
+    margin-right: 0.3rem;
+}
+
+.initiative-dialog-form .dialog-buttons,
+.mass-initiative-dialog-form .dialog-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.initiative-dialog-form .cancel-btn,
+.mass-initiative-dialog-form .cancel-btn {
+    padding: 0.5rem 1rem;
+    background: var(--ini-bg-medium);
+    border: 1px solid var(--ini-border-color);
+    border-radius: 4px;
+    color: var(--ini-text-light);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.initiative-dialog-form .cancel-btn:hover,
+.mass-initiative-dialog-form .cancel-btn:hover {
+    background: var(--ini-bg-dark);
+    border-color: var(--ini-primary-color);
+}
+
+.initiative-dialog-form .ini-ansagen-btn,
+.mass-initiative-dialog-form .ini-ansagen-btn {
+    padding: 0.5rem 1.5rem;
+    background: var(--ini-success-color);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.initiative-dialog-form .ini-ansagen-btn:hover,
+.mass-initiative-dialog-form .ini-ansagen-btn:hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+}
+
+.initiative-dialog-form .ini-ansagen-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.initiative-dialog-form .ini-ansagen-btn.disabled:hover {
+    transform: none;
+    filter: none;
+}
+
+/* ==================== Mass Initiative Dialog Specific ==================== */
+.mass-initiative-dialog-form .dialog-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mass-initiative-dialog-form .dialog-header h2 {
+    margin: 0;
+    color: var(--ini-text-light);
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.mass-initiative-dialog-form .dialog-header h2 i {
+    margin-right: 0.5rem;
+    color: var(--ini-primary-color);
+}
+
+.mass-initiative-dialog-form .progress-info {
+    color: var(--ini-text-medium);
+    font-size: 0.85rem;
+}
+
+.mass-initiative-dialog-form .mass-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* NPC Accordions */
+.mass-initiative-dialog-form .npc-accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mass-initiative-dialog-form .npc-accordion {
+    border: 1px solid var(--ini-border-color);
+    border-radius: 4px;
+    background: var(--ini-bg-medium);
+    overflow: hidden;
+}
+
+.mass-initiative-dialog-form .npc-accordion.needs-selection {
+    border-color: var(--ini-warning-color);
+    animation: pulse-border 1s infinite;
+}
+
+@keyframes pulse-border {
+    0%, 100% { border-color: var(--ini-warning-color); }
+    50% { border-color: #ff9b9b; }
+}
+
+.mass-initiative-dialog-form .accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--ini-bg-medium);
+    color: var(--ini-text-light);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.mass-initiative-dialog-form .accordion-header:hover {
+    background: var(--ini-bg-light);
+    color: #fff;
+}
+
+.mass-initiative-dialog-form .accordion-header.active {
+    background: var(--ini-primary-color);
+    color: white;
+    border-bottom-color: var(--ini-border-color);
+}
+
+.mass-initiative-dialog-form .npc-accordion-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--ini-border-color);
+}
+
+.mass-initiative-dialog-form .npc-accordion-name {
+    flex: 1;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.mass-initiative-dialog-form .rolled-indicator {
+    color: var(--ini-success-color);
+    font-size: 0.9rem;
+}
+
+.mass-initiative-dialog-form .accordion-icon {
+    color: var(--ini-text-medium);
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.mass-initiative-dialog-form .accordion-header.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Accordion Content */
+.mass-initiative-dialog-form .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: var(--ini-bg-dark);
+}
+
+.mass-initiative-dialog-form .accordion-content.active {
+    max-height: 2000px;
+    padding: 1rem;
+    transition: max-height 0.5s ease-in;
+}
+
+.mass-initiative-dialog-form .accordion-content .npc-header {
+    margin-bottom: 1rem;
+}
+
+/* Form Row (for inline inputs) */
+.mass-initiative-dialog-form .form-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mass-initiative-dialog-form .form-row .form-group {
+    flex: 1;
+}
+
+.mass-initiative-dialog-form .form-row .form-group input {
+    text-align: center;
+}
+
+/* Dice Row */
+.mass-initiative-dialog-form .dice-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.mass-initiative-dialog-form .dice-count-group {
+    flex: 1;
+    margin-bottom: 0 !important;
+}
+
+/* Smaller dice for mass dialog */
+.mass-initiative-dialog-form .dice-face {
+    width: 50px;
+    height: 50px;
+}
+
+.mass-initiative-dialog-form .dice-value {
+    font-size: 1.5rem;
+}
+
+/* ==================== Kampf Tab Aktionen Section ==================== */
+.kampf-aktionen-section {
+    margin-top: 1rem;
+}
+
+.kampf-aktionen-section .items-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background: var(--ini-bg-light);
+    border-radius: 4px 4px 0 0;
+    border: 1px solid var(--ini-border-color);
+    border-bottom: none;
+}
+
+.kampf-aktionen-section .items-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--ini-text-light);
+}
+
+.kampf-aktionen-section .aktionen-list {
+    border: 1px solid var(--ini-border-color);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background: var(--ini-bg-light);
+}
+
+.kampf-aktionen-section .aktion-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--ini-border-color);
+    transition: background 0.2s ease;
+}
+
+.kampf-aktionen-section .aktion-item:last-child {
+    border-bottom: none;
+}
+
+.kampf-aktionen-section .aktion-item:hover {
+    background: rgba(66, 153, 225, 0.1);
+}
+
+.kampf-aktionen-section .aktion-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid var(--ini-border-color);
+}
+
+.kampf-aktionen-section .aktion-name {
+    flex: 1;
+    color: var(--ini-text-light);
+    font-size: 0.9rem;
+}
+
+.kampf-aktionen-section .aktion-controls {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.kampf-aktionen-section .aktion-controls a {
+    padding: 0.25rem 0.5rem;
+    color: var(--ini-text-dark);
+    transition: color 0.2s ease;
+}
+
+.kampf-aktionen-section .aktion-controls a:hover {
+    color: var(--ini-primary-color);
+}
+
+.kampf-aktionen-section .aktion-controls .item-delete:hover {
+    color: var(--ini-warning-color);
+}
+
+.kampf-aktionen-section .empty-aktionen {
+    padding: 1rem;
+    text-align: center;
+    color: var(--ini-text-dark);
+    font-style: italic;
+}

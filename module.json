@@ -21,13 +21,25 @@
     "styles/module.css",
     "styles/item-accordion.css",
     "styles/favorites-component.css",
-    "styles/effect-card.css"
+    "styles/effect-card.css",
+    "styles/initiative-dialog.css"
   ],
   "packs": [
     {
       "name": "effect-library",
       "label": "Effekt Bibliothek",
       "path": "packs/effect-library",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke-aktionen",
+      "label": "Nenneke Aktionen",
+      "path": "packs/nenneke-aktionen",
       "type": "Item",
       "system": "Ilaris",
       "ownership": {

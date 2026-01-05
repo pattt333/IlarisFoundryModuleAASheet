@@ -69,6 +69,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 CONFIG.ILARIS = {};
             }
             
+            // Add effect-items for the Kampf-Tab
+            context.actor.effectItems = this.actor.items.filter(i => i.type === "effect-item");
+            
             console.log('IlarisAlternativeActorSheet | Successfully retrieved context');
             return context;
             
@@ -83,7 +86,8 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 config: CONFIG.ILARIS || {},
                 isCharacter: this.actor.type === "held",
                 isOwner: this.actor.isOwner,
-                editable: this.isEditable
+                editable: this.isEditable,
+                effectItems: this.actor.items.filter(i => i.type === "effect-item")
             };
             
             return context;

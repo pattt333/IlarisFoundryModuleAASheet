@@ -15,7 +15,7 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
   - Beim ersten Kampfstart (Runde 1)
   - Bei Combatants, die mitten im Kampf beitreten (über normalen INI-Button)
 - **Dialog-Persistenz**: 
-  - Eingaben werden im `actor.flags.nenneke` gespeichert bis "INI ansagen" gedrückt wird
+  - Eingaben werden im `actor.flags.ilaris-alternative-actor-sheet` gespeichert bis "INI ansagen" gedrückt wird
   - Bei Abbruch/Schließen (ohne "INI ansagen") bleibt Dialog-Zustand erhalten
   - Zurücksetzung nur beim Klick auf "INI ansagen"
 - **Nachträgliches Öffnen**: 
@@ -56,6 +56,12 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
 - **INI-Berechnung**: Bei Mehrfachauswahl gilt nur der niedrigste INI-Mod aus den Active Effects der Items
 - **AT/VT-Berechnung**: Summe aller AT/VT-Mods aus den Active Effects der ausgewählten Items
 - **Tooltip**: "Wählen Sie bis zu 2 Aktionen aus Ihrem Charakterbogen oder Kompendium"
+- **Hint**: Foundry benutzt folgende Struktur für multi-selects:
+    ```
+    <multi-select name="system.eigenschaften">
+        {{{selectOptions availableEigenschaften selected=item.system.eigenschaften nameAttr="name" labelAttr="name"}}}
+    </multi-select>
+    ```
 
 #### 2.5 Würfel-Sektion
 - **Position**: Als eigene Sektion unter den Eingabefeldern
@@ -79,7 +85,9 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
 - **Für Spieler-Dialog**: Warntext beim "INI ansagen"-Button falls nicht gewürfelt
 
 ### 3. Ilaris-spezifische System-Pfade
-- **Initiative**: `system.abgeleitete.ini`
+- **Initiative/Base-INI für PC**: `system.abgeleitete.ini`
+- **Initiative/Base-INI für NPC**: `system.kampfwerte.ini`
+- **Actor Type**: PC haben type = held; NPCs haben type = kreatur
 - **Angriffswert-Modifikator**: `system.modifikatoren.nahkampfmod`
 - **Verteidigungswert-Modifikator**: `system.modifikatoren.verteidigungmod`
 - **Effect-Item Description**: `item.system.description`
@@ -110,6 +118,7 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
 
 ### 6. Rundenstart-Verhalten
 - **Trigger**: `Hooks.on("combatRound", ...)` oder `Hooks.on("updateCombat", ...)` mit Prüfung auf `updateData.round`
+- **Für ALLE**: Initiative jedes combatant wird beim hook.combatRound auf null gesetzt, außer bei negativer INI, bei ALLEN soll jedoch das Dialog geöffnet werden!
 - **Für PCs**: 
   - Einzeldialoge pro Spieler
   - Jeder Spieler sieht nur seinen eigenen Dialog auf seinem Client
@@ -119,41 +128,42 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
   - Fortschrittsanzeige: "X von Y NPCs bearbeitet"
 
 ### 7. GM-Massen-Dialog für NPCs
-- **UI-Struktur**: Tab-basiertes Interface
-  - Ein Tab pro NPC
-  - Tab-Name: Actor-Name
-  - Jeder NPC hat eigene Eingabefelder in seinem Tab
+- **UI-Struktur**: Accordion-basiertes Interface
+  - Ein Accordion pro NPC
+  - Accordion-Name: Actor-Name
+  - Jeder NPC hat eigene Eingabefelder in seinem Accordion
 - **"Würfel alle"-Button**:
-  - Würfelt automatisch für alle NPCs in deren Tabs
+  - Würfelt automatisch für alle NPCs in deren Accordions (inkl. NPCs mit negativer INI)
   - Berücksichtigt die Würfelanzahl-Einstellung (1 oder 2 Würfel)
-  - Bei 2-Würfel-Option: Tabs mit 2 Würfeln werden visuell markiert
-  - GM muss dann jeden markierten Tab besuchen und einen Würfel auswählen
+  - Bei 2-Würfel-Option: Accordions mit 2 Würfeln werden visuell markiert
+  - GM muss dann jeden markierten Accordion besuchen und einen Würfel auswählen
 - **Teilbearbeitung**:
   - GM kann einzelne NPCs bearbeiten
-  - NPCs die nicht bearbeitet wurden: Bekommen nur ihren Standard-INI-Wert (via `actor.system.abgeleitete.ini`), **kein Active Effect**
+  - NPCs die nicht bearbeitet wurden: Bekommen nur ihren Standard-INI-Wert (PC: `actor.system.abgeleitete.ini`, NPC: `actor.system.kampfwerte.ini`), **kein Active Effect**
   - Kein Zwang zur Vollständigkeit
 - **Batch-Operation**: "INI ansagen" wendet alle Änderungen auf einmal an
 
 ### 8. Besondere Ilaris-Regeln
 
 #### 8.1 Negative Initiative (< 0)
-- **Aktuelle Runde**: Charakter wird übersprungen
+- **Aktuelle Runde**: Charakter kommt dran wird aber nur mit Dialog gefragt, ob er seine Aktion fortsetzen will, danach wird dieser übersprungen
 - **Dialog-Verhalten**:
   - Alle Eingabefelder (INI-Mod, AT-Mod, VT-Mod, Aktionen-Dropdown, Kombinierte Aktion) werden disabled
   - Nur Würfel-Sektion bleibt aktiv
   - Würfelergebnis wird auf Active Effect gerechnet
 - **Effect-Duration**: `duration.turns = 2` statt 1
-- **Rundenende-Dialog**:
-  - **Trigger**: Am Ende der Runde, in der der Actor regulär dran wäre
+- **Turn-Dialog** (wenn Combatant mit negativer INI dran ist):
+  - **Trigger**: `Hooks.on("combatTurn", ...)` - wird aufgerufen wenn der Combatant mit negativer INI regulär an der Reihe wäre
   - **Empfänger**: Nur der Owner des Actors sieht den Dialog
   - **Frage**: "Aktion fortsetzen?" (Ja/Nein)
   - **Bei "Ja"**: 
-    - Actor wird übersprungen (nächster Combatant/nächste Runde)
+    - Actor wird übersprungen (nächster Combatant)
     - Effect bleibt bestehen
     - Nächste Runde: Dialog verhält sich wieder normal
   - **Bei "Nein"**:
     - Active Effect wird sofort entfernt
     - Nächste Runde: Dialog öffnet sich ganz normal ohne Einschränkungen
+  - **Nach Dialog**: Automatischer Sprung zum nächsten Combatant via `combat.nextTurn()`
 
 ### 9. Kompendium
 - **Name**: `nenneke.nenneke-aktionen`
@@ -163,7 +173,7 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
 - **Keine automatische Erstellung**: Keine Standardaktionen werden automatisch erstellt
 
 ### 10. Persistenz
-- **Speicherort**: `actor.flags.nenneke.dialogState`
+- **Speicherort**: `actor.flags.ilaris-alternative-actor-sheet.dialogState`
 - **Gespeicherte Daten**:
   - INI-Mod, AT-Mod, VT-Mod
   - Gewählte Aktionen (Item-IDs)
@@ -175,7 +185,7 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
 
 ### 11. Chat-Integration
 - **Message-Typ**: Einfache Text-Chat-Message (kein Roll-Message-Template)
-- **Inhalt**: `[Charaktername] Initiative: 15 (Basis: 12, Mod: +1, Würfel: 2)
+- **Inhalt**: `[ActorIcon][Charaktername] Initiative: 15 (Basis: 12, Mod: +1, Würfel: 2)
 Aktionen: Sturmangriff, Verteidigungshaltung
 Modifikatoren: AT -2, VT +3`
 - **Format**:
@@ -200,23 +210,60 @@ Modifikatoren: AT -2, VT +3`
   - Delete-Button (löscht Item)
 - **Position**: Unterhalb der Waffen-Sektion oder als separate Accordion
 
+### 13. UI-Styling
+- das Styling soll sich am alternative-actor-sheet orientieren was die Farbgebung für Hintergründe, Buttons und Icons angeht, sowie das Aussehen von Accordions
+
 ## Technische Hinweise
 
 ### Foundry VTT API-Referenzen
 - **Dialog-System**: `Dialog` Klasse, `Application` Klasse
 - **Active Effects**: `ActiveEffect` Klasse, `CONST.ACTIVE_EFFECT_MODES.ADD`
 - **Combat System**: 
-- `Combat` Klasse
-- `Combatant` Klasse
-- `combat.rollInitiative(ids, options)` - Würfelt und setzt Initiative
-- `combat.setInitiative(id, value)` - Setzt Initiative manuell
-- `combatant.initiative` - Prüfung auf `null` für Bestätigungsstatus
+    - `Combat` Klasse
+    - `Combatant` Klasse
+    - `combat.rollInitiative(ids, options)` - Würfelt und setzt Initiative
+    - `combat.setInitiative(id, value)` - Setzt Initiative manuell
+    - `combatant.initiative` - Prüfung auf `null` für Bestätigungsstatus
+    - **KRITISCHER HINWEIS**: Turn-Index nach Initiative-Update
+        - **Problem**: Wenn die Initiative für einen oder mehrere Combatants neu gesetzt wird (rollInitiative oder setInitiative), sortiert Foundry das interne turns-Array neu. Der combat.turn-Property (Index des aktuell aktiven Combatants) wird nicht automatisch angepasst. Dies führt dazu, dass nach einer Neubestimmung der Initiative-Runde ein falscher Combatant im Tracker ausgewählt ist.
+        - **Lösung**: Vor einer Änderung der Initiative-Werte muss die ID des gerade aktiven Combatants gesichert werden. Nach dem Update der Initiative ist der neue Index dieses Combatants im neu sortierten turns-Array zu ermitteln und der combat.turn-Wert explizit zu setzen.
+        - **Implementierungs-Details**:
+            - **Wo**: In beiden Dialog-Klassen (`InitiativeDialog` und `MassInitiativeDialog`) direkt nach jedem `setInitiative`-Aufruf
+            - **Wann**: Bei jedem einzelnen `setInitiative` (Option B - Reihenfolge aktualisiert sich sofort beim Einchecken)
+            - **Wer**: Nur für GM-Client (`game.user.isGM`), damit alle Clients die Änderung sehen
+            - **Bedingungen**: Nur wenn `combat.started === true`
+            - **Logik**: Nach dem Update wird der **Combatant mit der höchsten Initiative** als aktiver Turn gesetzt
+        - **Implementierungs-Beispiel** (in beiden Dialogen nach setInitiative):
+        ```javascript
+        // 1. Initiative setzen
+        await this.combat.setInitiative(combatantId, value);
+        
+        // 2. Turn auf Combatant mit höchster INI setzen (nur GM, nur wenn Combat gestartet)
+        if (game.user.isGM && this.combat.started) {
+            let highestIniIndex = 0;
+            let highestIniValue = -Infinity;
+            
+            for (let i = 0; i < this.combat.turns.length; i++) {
+                const turn = this.combat.turns[i];
+                if (turn.initiative !== null && turn.initiative > highestIniValue) {
+                    highestIniValue = turn.initiative;
+                    highestIniIndex = i;
+                }
+            }
+            
+            if (highestIniValue > -Infinity) {
+                await this.combat.update({ turn: highestIniIndex });
+            }
+        }
+        ```
+        - **Betrifft**: Diese Logik ist implementiert im "INI ansagen"-Button (Abschnitt 2.1) in beiden Dialog-Klassen, insbesondere beim Batch-Update im GM-Massen-Dialog (Abschnitt 7).
+        - **Nicht benötigt**: Im `combatRound`-Hook (Abschnitt 6), da dort alle neu würfeln und die Korrektur durch die Dialog-Updates erfolgt.
 - **Hooks**: 
-- `combatRound` - Rundenstart-Erkennung
-- `updateCombat` - Kampf-Updates (inkl. Rundenende)
-- `combatTurn` - Turn-Wechsel
+    - `combatRound` - Rundenstart-Erkennung
+    - `updateCombat` - Kampf-Updates (inkl. Rundenende)
+    - `combatTurn` - Turn-Wechsel
 - **Items & Actors**: `Actor` Klasse, `Item` Klasse, `actor.items.filter(i => i.type === "effect-item")`
-- **Flags**: `actor.flags.nenneke.dialogState` für Persistenz
+- **Flags**: `actor.flags.ilaris-alternative-actor-sheet.dialogState` für Persistenz
 - **Chat**: `ChatMessage.create()` für Message-Posting
 - **Localization**: Keine Übersetzungs-Keys (direkt deutsche Strings verwenden)
 
@@ -226,7 +273,7 @@ Modifikatoren: AT -2, VT +3`
  - `MassInitiativeDialog` (Massen-Dialog für NPCs)
  - Beide erben von `Application` oder `FormApplication`
 2. **State Management**: 
- - `actor.flags.nenneke.dialogState` für temporäre Persistenz
+ - `actor.flags.ilaris-alternative-actor-sheet.dialogState` für temporäre Persistenz
  - Cleanup nach "INI ansagen"
 3. **Effect-Merging**: 
  - Alle Changes (INI, AT, VT) in einen Active Effect
@@ -243,9 +290,13 @@ Modifikatoren: AT -2, VT +3`
  ```
  6. **Negative INI Rundenende-Check:**
 ```javascript
-Hooks.on("updateCombat", (combat, updateData) => {
-  // Prüfe ob Runde endet und Actor negative INI hat
-  // Zeige Ja/Nein-Dialog
+// Hook für combatTurn - prüft ob aktueller Combatant negative INI hat
+Hooks.on("combatTurn", async (combat, updateData, options) => {
+  const currentCombatant = combat.combatant;
+  if (currentCombatant?.initiative < 0) {
+    // Zeige Dialog nur für Owner
+    // Bei Ja/Nein: combat.nextTurn()
+  }
 });
 ```
 
@@ -253,7 +304,7 @@ Hooks.on("updateCombat", (combat, updateData) => {
 -   Massen-Operationen: Batch-Create für Active Effects (Promise.all)
 -   Effect-Cleanup: Alte "Kampf-Modifikatoren"-Effects automatisch löschen vor neuem Erstellen
 -   Lazy Loading: Kompendium-Aktionen nur bei Dialog-Öffnung laden
--   Tab-Rendering: Nur aktiven NPC-Tab rendern im Massen-Dialog
+-   Accordion-Rendering: Nur geöffneten NPC-Accordion rendern im Massen-Dialog
 
 ## Akzeptanzkriterien
 ### Kernfunktionalität
@@ -264,11 +315,11 @@ Hooks.on("updateCombat", (combat, updateData) => {
 -   INI-Berechnung mit niedrigstem Aktions-Mod korrekt
 -   AT/VT-Mods summieren sich korrekt
 -   Negative Initiative wird korrekt behandelt (duration.turns = 2)
--   Dialog-Persistenz in actor.flags.nenneke.dialogState bis "INI ansagen"
+-   Dialog-Persistenz in actor.flags.ilaris-alternative-actor-sheet.dialogState bis "INI ansagen"
 
 ### Dialog-Verhalten
 -   Einzeldialog für PCs mit Aktionen aus Inventory UND Kompendium
--   Massen-Dialog für NPCs mit Tab-Interface (nie Einzeldialoge)
+-   Massen-Dialog für NPCs mit Accordion-Interface (nie Einzeldialoge)
 -   "Würfel alle"-Button im NPC-Dialog funktioniert
 -   Automatisches Öffnen bei jeder neuen Runde
 -   Nachträgliches Öffnen über normalen INI-Button möglich (wenn combatant.initiative === null)
@@ -305,10 +356,10 @@ Hooks.on("updateCombat", (combat, updateData) => {
 -   Liste mit Icon, Name, Edit- und Delete-Button
 -   Nur im Kampf-Tab sichtbar
 ### GM-Massen-Dialog
--   Tab pro NPC mit Actor-Name
--   Jeder Tab hat eigene Eingabefelder
+-   Accordion pro NPC mit Actor-Name
+-   Jeder Accordion hat eigene Eingabefelder
 -   "Würfel alle" würfelt für alle NPCs
--   Bei 2 Würfeln werden Tabs markiert
+-   Bei 2 Würfeln werden Accordions markiert
 -   NPCs ohne Bearbeitung bekommen nur Standard-INI (kein Effect)
 -   Fortschrittsanzeige "X von Y NPCs bearbeitet"
 
@@ -331,14 +382,14 @@ Hooks.on("updateCombat", (combat, updateData) => {
 **System**: Exklusiv für Ilaris
 **Foundry Version**: v12
 **Sprache**: Deutsch
-**Modul-Namespace**: nenneke
+**Modul-Namespace**: ilaris-alternative-actor-sheet
 
 ## Besondere Anforderungen:
 
--   Dialog-Persistenz in actor.flags.nenneke.dialogState bis Bestätigung
+-   Dialog-Persistenz in actor.flags.ilaris-alternative-actor-sheet.dialogState bis Bestätigung
 -   Nachträgliches Öffnen via normaler INI-Button (Check: combatant.initiative === null)
 -   PC-Dialog: Aktionen aus Inventory UND Kompendium nenneke.nenneke-aktionen
--   NPC-Dialog: Nur aus Kompendium, Tab-Interface, "Würfel alle"-Button
+-   NPC-Dialog: Nur aus Kompendium, Accordion-Interface, "Würfel alle"-Button
 -   Negative INI: Duration 2 Runden, Rundenende-Dialog, Eingabefelder disabled
 -   Chat-Message: Einfache Text-Message mit Initiative-Aufschlüsselung, Aktionen, Modifikatoren
 -   Kampf-Tab: Umbenennung, Aktionen-Liste mit effect-items

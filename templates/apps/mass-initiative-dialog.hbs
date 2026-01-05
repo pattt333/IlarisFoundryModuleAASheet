@@ -1,0 +1,131 @@
+{{!-- Mass Initiative Dialog Template for NPCs --}}
+<form class="mass-initiative-dialog-form">
+    <div class="dialog-header">
+        <h2><i class="fas fa-users"></i> NPC Initiative - Runde {{round}}</h2>
+        <div class="progress-info">
+            <span class="progress-text">{{processedCount}} von {{totalCount}} NPCs bearbeitet</span>
+        </div>
+        <div class="mass-controls">
+            <button type="button" class="roll-all-dice-btn">
+                <i class="fas fa-dice"></i> Würfel alle
+            </button>
+        </div>
+    </div>
+
+    <div class="dialog-content">
+        {{!-- NPC Accordion List --}}
+        <div class="npc-accordions">
+            {{#each npcs as |npc index|}}
+            <div class="npc-accordion {{#if npc.needsDiceSelection}}needs-selection{{/if}}" data-combatant-id="{{npc.combatantId}}">
+                {{!-- Accordion Header --}}
+                <div class="accordion-header {{#if @first}}active{{/if}}" data-accordion-target="npc-{{npc.combatantId}}">
+                    <img src="{{npc.img}}" alt="" class="npc-accordion-img"/>
+                    <span class="npc-accordion-name">{{npc.name}}</span>
+                    {{#if npc.state.hasRolled}}
+                    <i class="fas fa-check rolled-indicator"></i>
+                    {{/if}}
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+
+                {{!-- Accordion Content --}}
+                <div class="accordion-content {{#if @first}}active{{/if}}" data-accordion-id="npc-{{npc.combatantId}}">
+                    <div class="npc-header">
+                        <img src="{{npc.img}}" alt="{{npc.name}}" class="npc-portrait"/>
+                        <div class="npc-details">
+                            <h3>{{npc.name}}</h3>
+                            <div class="npc-stats">
+                                <span class="base-ini">Basis-INI: <strong>{{npc.baseIni}}</strong></span>
+                                <span class="current-ini">Berechnet: <strong class="{{#if npc.isNegativeIni}}negative{{/if}}">{{npc.totalIni}}</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                {{!-- Modifier Section --}}
+                <section class="modifier-section">
+                    <h4><i class="fas fa-sliders-h"></i> Modifikatoren</h4>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>INI-Mod</label>
+                            <input type="number" name="iniMod-{{npc.combatantId}}" value="{{npc.state.iniMod}}" {{#if npc.isNegativeIni}}disabled{{/if}}/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>AT-Mod</label>
+                            <input type="number" name="atMod-{{npc.combatantId}}" value="{{npc.state.atMod}}" {{#if npc.isNegativeIni}}disabled{{/if}}/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>VT-Mod</label>
+                            <input type="number" name="vtMod-{{npc.combatantId}}" value="{{npc.state.vtMod}}" {{#if npc.isNegativeIni}}disabled{{/if}}/>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label" title="Bei kombinierten Aktionen sind AT und VT um 4 erschwert">
+                            <input type="checkbox" name="kombinierteAktion-{{npc.combatantId}}" {{#if npc.state.kombinierteAktion}}checked{{/if}} {{#if npc.isNegativeIni}}disabled{{/if}}/>
+                            <span>Kombinierte Aktion (-4 AT/VT)</span>
+                        </label>
+                    </div>
+                </section>
+
+                {{!-- Actions Section --}}
+                <section class="actions-section">
+                    <h4><i class="fas fa-running"></i> Aktionen (max. 2)</h4>
+                    
+                    <div class="form-group">
+                        <multi-select name="actions-{{npc.combatantId}}" {{#if npc.isNegativeIni}}disabled{{/if}}>
+                            {{{selectOptions ../availableActions selected=npc.state.selectedActionIds valueAttr="id" labelAttr="name"}}}
+                        </multi-select>
+                    </div>
+                </section>
+
+                {{!-- Dice Section --}}
+                <section class="dice-section">
+                    <h4><i class="fas fa-dice"></i> Würfeln</h4>
+                    
+                    <div class="dice-row">
+                        <div class="form-group dice-count-group">
+                            <select name="diceCount-{{npc.combatantId}}" title="Man kann irgendein Ergebnis von den beiden wählen">
+                                <option value="1" {{#if (eq npc.state.diceCount 1)}}selected{{/if}}>1 Würfel</option>
+                                <option value="2" {{#if (eq npc.state.diceCount 2)}}selected{{/if}}>2 Würfel</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" class="roll-dice-btn" data-combatant-id="{{npc.combatantId}}">
+                            <i class="fas fa-dice-d6"></i> Würfeln
+                        </button>
+                    </div>
+                    
+                    {{#if npc.state.hasRolled}}
+                    <div class="dice-results">
+                        {{#each npc.state.diceResults as |result index|}}
+                        <div class="dice-result {{#if (eq npc.state.selectedDiceIndex index)}}selected{{/if}}" 
+                             data-combatant-id="{{../npc.combatantId}}"
+                             data-index="{{index}}"
+                             title="{{#if (eq npc.state.diceCount 2)}}Klicken zum Auswählen{{/if}}">
+                            <div class="dice-face d6">
+                                <span class="dice-value">{{result}}</span>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                </section>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <footer class="dialog-footer">
+        <div class="dialog-buttons">
+            <button type="button" class="cancel-btn">
+                <i class="fas fa-times"></i> Abbrechen
+            </button>
+            <button type="button" class="ini-ansagen-btn">
+                <i class="fas fa-bullhorn"></i> INI ansagen (alle)
+            </button>
+        </div>
+    </footer>
+</form>
