@@ -144,3 +144,73 @@
     margin-top: 0.5rem;
     font-size: 0.9em;
 }
+
+/* Stack Badge (bottom-left corner) */
+.ilaris.sheet.actor.alternative .effect-stack-badge {
+    position: absolute;
+    bottom: 2px;
+    left: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    background: rgba(66, 153, 225, 0.9);
+    padding: 2px 6px;
+    border-radius: 3px;
+    line-height: 1;
+    z-index: 2;
+}
+
+/* Stack Controls (hover overlay) */
+.ilaris.sheet.actor.alternative .effect-stack-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 3;
+}
+
+.ilaris.sheet.actor.alternative .effect-card:hover .effect-stack-controls {
+    opacity: 1;
+}
+
+.ilaris.sheet.actor.alternative .effect-stack-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: rgba(66, 153, 225, 0.95);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.ilaris.sheet.actor.alternative .effect-stack-button:hover {
+    background: rgba(49, 130, 206, 1);
+    transform: scale(1.1);
+}
+
+.ilaris.sheet.actor.alternative .effect-stack-button.disabled {
+    background: rgba(160, 174, 192, 0.8);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.ilaris.sheet.actor.alternative .effect-stack-button i {
+    font-size: 14px;
+}
+
+/* Decrease button (minus) - red color */
+.ilaris.sheet.actor.alternative .effect-stack-decrease {
+    background: rgba(245, 101, 101, 0.95);
+}
+
+.ilaris.sheet.actor.alternative .effect-stack-decrease:hover {
+    background: rgba(229, 62, 62, 1);
+}

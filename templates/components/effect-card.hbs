@@ -14,6 +14,22 @@
     </a>
     {{/unless}}
     
+    {{!-- Stack Controls (only for Stack-Effects) --}}
+    {{#if (stringIncludes effect.name "Stack")}}
+    <div class="effect-stack-controls">
+        <a class="effect-stack-button effect-stack-decrease" 
+           data-effect-id="{{effect._id}}" 
+           title="Stack reduzieren">
+            <i class="fas fa-minus"></i>
+        </a>
+        <a class="effect-stack-button effect-stack-increase {{#if (gte effect.changes.length 5)}}disabled{{/if}}" 
+           data-effect-id="{{effect._id}}" 
+           title="Stack erhöhen">
+            <i class="fas fa-plus"></i>
+        </a>
+    </div>
+    {{/if}}
+    
     {{!-- Effect Icon --}}
     <div class="effect-icon">
         <img src="{{effect.img}}" alt="{{effect.name}}" title="{{effect.name}}"/>
@@ -23,6 +39,11 @@
     <div class="effect-name">
         <span>{{effect.name}}</span>
     </div>
+    
+    {{!-- Stack Badge (bottom-left corner, only for Stack-Effects) --}}
+    {{#if (stringIncludes effect.name "Stack")}}
+    <div class="effect-stack-badge">×{{effect.changes.length}}</div>
+    {{/if}}
     
     {{!-- Duration (bottom right corner) --}}
     <div class="effect-duration">

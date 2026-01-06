@@ -144,10 +144,16 @@ Hooks.once('init', async function() {
   console.log('Ilaris Alternative Actor Sheet | Module initialized successfully');
 });
 
-// Handlebars helper for includes check
+// Handlebars helper for includes check (arrays)
 Handlebars.registerHelper('includes', function(array, value) {
   if (!array || !Array.isArray(array)) return false;
   return array.includes(value);
+});
+
+// Handlebars helper for string includes check (for Stack detection)
+Handlebars.registerHelper('stringIncludes', function(str, search) {
+  if (!str || typeof str !== 'string') return false;
+  return str.includes(search);
 });
 
 // Handlebars helper for equality check
@@ -200,34 +206,85 @@ const InitiativeDialogManager = {
   }
 };
 
-// Hook: Combat Round Start - Open dialogs for all combatants
-Hooks.on("combatRound", async (combat, updateData, options) => {
-  console.log('Ilaris Alternative Actor Sheet | Combat round hook triggered', combat.round);
+// Hook: Combat updates - Handle round changes and negative initiative checks
+// Note: Using updateCombat instead of combatRound because:
+// - combatRound only fires on the client that triggered the action
+// - updateCombat fires on ALL connected clients (needed for dialog display)
+Hooks.on("updateCombat", async (combat, updateData, options, userId) => {
+  // Early exit if neither turn nor round changed
+  if (!("turn" in updateData) && !("round" in updateData)) return;
   
-  // Reset initiative to null for all combatants, except those with negative initiative
-  const updates = [];
-  for (const combatant of combat.combatants) {
-    // Skip if initiative is negative (actor continues action)
-    if (combatant.initiative !== null && combatant.initiative < 0) {
-      continue;
+  // Handle new round start
+  if ("round" in updateData) {
+    console.log(`Ilaris Alternative Actor Sheet | Combat update hook triggered on ${game.user.name} (isGM: ${game.user.isGM}) - Round: ${combat.round}`);
+    
+    // Only GM should update combatants to avoid permission errors
+    if (game.user.isGM) {
+      console.log('Ilaris Alternative Actor Sheet | GM is resetting initiative for all combatants');
+      // Reset initiative to null for all combatants, except those with negative initiative
+      const updates = [];
+      for (const combatant of combat.combatants) {
+        // Skip if initiative is negative (actor continues action)
+        if (combatant.initiative !== null && combatant.initiative < 0) {
+          console.log('Ilaris Alternative Actor Sheet | Skipping negative initiative combatant:', combatant.name);
+          continue;
+        }
+        
+        // Reset initiative to null
+        updates.push({
+          _id: combatant.id,
+          initiative: null
+        });
+      }
+      
+      // Apply initiative resets
+      if (updates.length > 0) {
+        console.log('Ilaris Alternative Actor Sheet | Applying initiative resets for', updates.length, 'combatants');
+        await combat.updateEmbeddedDocuments("Combatant", updates);
+        console.log('Ilaris Alternative Actor Sheet | Initiative resets completed');
+      }
+    } else {
+      console.log('Ilaris Alternative Actor Sheet | Non-GM client, skipping initiative reset');
     }
     
-    // Reset initiative to null
-    updates.push({
-      _id: combatant.id,
-      initiative: null
-    });
+    // Open dialogs for ALL combatants (including those with negative INI)
+    const allCombatants = combat.combatants.contents;
+    if (allCombatants.length > 0) {
+      InitiativeDialogManager.openDialog(combat, allCombatants);
+    }
   }
   
-  // Apply initiative resets
-  if (updates.length > 0) {
-    await combat.updateEmbeddedDocuments("Combatant", updates);
-  }
-  
-  // Open dialogs for ALL combatants (including those with negative INI)
-  const allCombatants = combat.combatants.contents;
-  if (allCombatants.length > 0) {
-    InitiativeDialogManager.openDialog(combat, allCombatants);
+  // Handle negative initiative at round end
+  // Only the GM should handle this
+  if (game.user.isGM && "round" in updateData && updateData.round > combat.previous?.round) {
+    // Check for combatants with negative initiative that haven't acted
+    for (const combatant of combat.combatants) {
+      if (combatant.initiative === null) continue;
+      if (combatant.initiative >= 0) continue;
+      
+      const actor = combatant.actor;
+      if (!actor) continue;
+      
+      // Check if this actor has the combat modifier effect
+      const hasEffect = actor.effects.some(e => 
+        e.name.startsWith("Kampf-Modifikatoren Runde")
+      );
+      
+      if (!hasEffect) continue;
+      
+      // Show the negative initiative dialog to the owner
+      const owners = game.users.filter(u => actor.testUserPermission(u, "OWNER"));
+      
+      for (const owner of owners) {
+        if (owner.active) {
+          // Only show to active owners
+          if (game.user.id === owner.id) {
+            const dialog = new NegativeInitiativeDialog(actor, combat);
+            dialog.render(true);
+          }
+        }
+      }
+    }
   }
 });
 
@@ -332,45 +389,4 @@ Hooks.on("combatTurn", async (combat, updateData, options) => {
     }
   });
   dialog.render(true);
-});
-
-// Hook: Check for negative initiative at turn end
-Hooks.on("updateCombat", async (combat, updateData, options, userId) => {
-  // Only proceed if the turn or round changed
-  if (!("turn" in updateData) && !("round" in updateData)) return;
-  
-  // Only the GM should handle this
-  if (!game.user.isGM) return;
-  
-  // Check for combatants with negative initiative that haven't acted
-  for (const combatant of combat.combatants) {
-    if (combatant.initiative === null) continue;
-    if (combatant.initiative >= 0) continue;
-    
-    const actor = combatant.actor;
-    if (!actor) continue;
-    
-    // Check if this actor has the combat modifier effect
-    const hasEffect = actor.effects.some(e => 
-      e.name.startsWith("Kampf-Modifikatoren Runde")
-    );
-    
-    if (!hasEffect) continue;
-    
-    // Check if we're at the end of the round (moving to next round)
-    if ("round" in updateData && updateData.round > combat.previous?.round) {
-      // Show the negative initiative dialog to the owner
-      const owners = game.users.filter(u => actor.testUserPermission(u, "OWNER"));
-      
-      for (const owner of owners) {
-        if (owner.active) {
-          // Only show to active owners
-          if (game.user.id === owner.id) {
-            const dialog = new NegativeInitiativeDialog(actor, combat);
-            dialog.render(true);
-          }
-        }
-      }
-    }
-  }
 });

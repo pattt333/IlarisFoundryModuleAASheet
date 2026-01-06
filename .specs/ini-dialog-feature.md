@@ -92,6 +92,40 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
 - **Verteidigungswert-Modifikator**: `system.modifikatoren.verteidigungmod`
 - **Effect-Item Description**: `item.system.description`
 
+### 3.1 Technische Problematik: Hook-Behavior in Foundry VTT v12
+
+#### Problem: combatRound Hook feuert nicht auf allen Clients
+**Symptom**: Beim Rundenwechsel (Player beendet Turn → neue Runde startet) wurde der `combatRound` Hook nur auf dem Client gefeuert, der die Aktion ausführte. Der GM-Client erhielt kein Hook-Event, selbst wenn der GM die einzige Person mit Berechtigung zum Zurücksetzen der Initiative war.
+
+**Analyse**:
+- Laut Foundry VTT v12 API-Dokumentation:
+  - `_preUpdate()`: "Pre-operation events only occur for the client which requested the operation"
+  - `_onUpdate()`: "Post-operation events occur for **all connected clients**"
+- Der `combatRound` Hook verhält sich wie ein Pre-Operation Event, obwohl er konzeptionell ein Post-Operation Event sein sollte
+- Resultat: Initiative-Resets und Dialog-Öffnungen funktionierten nicht zuverlässig auf allen Clients
+
+**Lösung**: Verwendung des `updateCombat` Hooks statt `combatRound`
+- `updateCombat` ist ein garantiertes Post-Operation Event
+- Feuert auf **allen verbundenen Clients** wenn sich das Combat-Dokument ändert
+- Prüfung via `if ("round" in updateData)` um nur auf Rundenwechsel zu reagieren
+- Ermöglicht es, Initiative-Resets auf dem GM-Client durchzuführen und Dialoge auf allen Clients zu öffnen
+
+**Code-Pattern**:
+```javascript
+// FALSCH: Feuert nur auf requestierendem Client
+Hooks.on("combatRound", async (combat, updateData, options) => {
+  // Wird nur auf Player-Client ausgeführt, wenn Player die Runde beendet
+});
+
+// RICHTIG: Feuert auf allen Clients
+Hooks.on("updateCombat", async (combat, updateData, options, userId) => {
+  if (!("round" in updateData)) return; // Nur bei Rundenwechsel
+  // Wird auf allen Clients ausgeführt
+});
+```
+
+**Best Practice**: Bei Multi-Client-Szenarien in Foundry VTT v12 immer `updateCombat` statt `combatRound` verwenden und den Zustand via `updateData` Parameter prüfen.
+
 ### 4. Berechnungslogik
 - **INI-Gesamtmodifikator**: Manueller INI-Mod + niedrigster INI-Mod ausgewählter Aktionen + Würfelergebnis
 - **AT-Gesamtmodifikator**: Manueller AT-Mod + Summe AT-Mods aus Aktionen + (kombinierte Aktion ? -4 : 0)

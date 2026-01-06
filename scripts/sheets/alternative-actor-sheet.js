@@ -116,6 +116,10 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             
             // Effect library open button (our custom feature)
             html.find('.effect-library-open').click(this._onOpenEffectLibrary.bind(this));
+            
+            // Stack effect controls (our custom feature)
+            html.on("click", ".effect-stack-increase", this._onEffectStackIncrease.bind(this));
+            html.on("click", ".effect-stack-decrease", this._onEffectStackDecrease.bind(this));
         }
         
         // Initialize accordion functionality
@@ -479,9 +483,23 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                     return data;
                 });
                 
-                await this.actor.createEmbeddedDocuments("ActiveEffect", effectData);
+                // Check for Stack-Effects and handle auto-stacking
+                for (const newEffectData of effectData) {
+                    if (newEffectData.name && newEffectData.name.includes("Stack")) {
+                        // Check if a stack effect with the same name already exists
+                        const existingStack = this.actor.effects.find(e => e.name === newEffectData.name);
+                        
+                        if (existingStack) {
+                            // Effect exists - increase stack instead of creating new
+                            await this._increaseEffectStack(existingStack);
+                            continue;
+                        }
+                    }
+                    // Create new effect (non-stack or first stack)
+                    await this.actor.createEmbeddedDocuments("ActiveEffect", [newEffectData]);
+                }
                 
-                ui.notifications.info(`${effects.length} Effekt(e) von ${item.name} wurden zum Charakter hinzugefügt.`);
+                ui.notifications.info(`Effekt(e) von ${item.name} wurden verarbeitet.`);
                 
             } catch (error) {
                 console.error("Error transferring effects:", error);
@@ -493,6 +511,103 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         
         // For all other drops, use the default behavior
         return super._onDrop(event);
+    }
+
+    /**
+     * Handle click on stack increase button
+     * @param {Event} event - The originating click event
+     * @private
+     */
+    async _onEffectStackIncrease(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const effectId = event.currentTarget.dataset.effectId;
+        const effect = this.actor.effects.get(effectId);
+        
+        if (!effect) {
+            ui.notifications.error("Effect nicht gefunden");
+            return;
+        }
+        
+        await this._increaseEffectStack(effect);
+    }
+    
+    /**
+     * Handle click on stack decrease button
+     * @param {Event} event - The originating click event
+     * @private
+     */
+    async _onEffectStackDecrease(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const effectId = event.currentTarget.dataset.effectId;
+        const effect = this.actor.effects.get(effectId);
+        
+        if (!effect) {
+            ui.notifications.error("Effect nicht gefunden");
+            return;
+        }
+        
+        await this._decreaseEffectStack(effect);
+    }
+    
+    /**
+     * Increase the stack count of a stack effect
+     * Stack count is determined by changes.length
+     * @param {ActiveEffect} effect - The effect to increase
+     * @private
+     */
+    async _increaseEffectStack(effect) {
+        const currentStacks = effect.changes.length;
+        
+        // Maximum check (5 stacks max)
+        if (currentStacks >= 5) {
+            ui.notifications.warn(`${effect.name} hat bereits maximale Stacks (5). Nur Duration aufgefrischt.`);
+            await effect.update({"duration.turns": 3});
+            return;
+        }
+        
+        // Copy the first change as template
+        const changeTemplate = foundry.utils.deepClone(effect.changes[0]);
+        
+        // Add new change to the array
+        const updatedChanges = [...effect.changes, changeTemplate];
+        
+        // Update effect with new changes and refreshed duration
+        await effect.update({
+            changes: updatedChanges,
+            "duration.turns": 3
+        });
+        
+        ui.notifications.info(`${effect.name} Stack erhöht auf ${updatedChanges.length}`);
+    }
+    
+    /**
+     * Decrease the stack count of a stack effect
+     * If stack reaches 0, the effect is deleted
+     * @param {ActiveEffect} effect - The effect to decrease
+     * @private
+     */
+    async _decreaseEffectStack(effect) {
+        const currentStacks = effect.changes.length;
+        
+        // At 1 stack: delete the effect completely
+        if (currentStacks <= 1) {
+            await effect.delete();
+            ui.notifications.info(`${effect.name} entfernt (0 Stacks)`);
+            return;
+        }
+        
+        // Remove the last change from the array
+        const updatedChanges = effect.changes.slice(0, -1);
+        
+        await effect.update({
+            changes: updatedChanges
+        });
+        
+        ui.notifications.info(`${effect.name} Stack reduziert auf ${updatedChanges.length}`);
     }
 
     /** @override */
