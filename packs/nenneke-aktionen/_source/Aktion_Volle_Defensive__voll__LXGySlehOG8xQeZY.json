@@ -1,0 +1,78 @@
+{
+  "name": "Aktion Volle Defensive (voll)",
+  "type": "effect-item",
+  "_id": "LXGySlehOG8xQeZY",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "AT-8;VT+4",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.nenneke-aktionen.Item.LXGySlehOG8xQeZY",
+      "disabled": false,
+      "img": "icons/svg/aura.svg",
+      "_id": "90HKOMon94BYIXWQ",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.modifikatoren.nahkampfmod",
+          "mode": 2,
+          "value": "-8",
+          "priority": null
+        },
+        {
+          "key": "system.modifikatoren.verteidigungmod",
+          "mode": 2,
+          "value": "4",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767701274670,
+        "modifiedTime": 1767701335019,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!LXGySlehOG8xQeZY.90HKOMon94BYIXWQ"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767700529478,
+    "modifiedTime": 1767700529478,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LXGySlehOG8xQeZY"
+}

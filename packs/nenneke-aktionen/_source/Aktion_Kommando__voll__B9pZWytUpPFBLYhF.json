@@ -1,0 +1,72 @@
+{
+  "name": "Aktion Kommando (voll)",
+  "type": "effect-item",
+  "_id": "B9pZWytUpPFBLYhF",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "INI+2",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.nenneke-aktionen.Item.B9pZWytUpPFBLYhF",
+      "disabled": false,
+      "img": "icons/svg/aura.svg",
+      "_id": "T9F1HjMgR0Pk0tDt",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.abgeleitete.ini",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767701185005,
+        "modifiedTime": 1767701207254,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!B9pZWytUpPFBLYhF.T9F1HjMgR0Pk0tDt"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767700478850,
+    "modifiedTime": 1767700493197,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!B9pZWytUpPFBLYhF"
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Gift",
+  "type": "effect-item",
+  "_id": "jRUpIGmpJtMKF6el",
+  "img": "icons/svg/poison.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "Gift Stack",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.effect-library.Item.jRUpIGmpJtMKF6el",
+      "disabled": false,
+      "img": "icons/svg/poison.svg",
+      "_id": "XKOdzUyRiyzfqe5c",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.gesundheit.wunden",
+          "mode": 0,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 3,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767479306942,
+        "modifiedTime": 1767627764067,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!jRUpIGmpJtMKF6el.XKOdzUyRiyzfqe5c"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767479294600,
+    "modifiedTime": 1767479303990,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!jRUpIGmpJtMKF6el"
+}

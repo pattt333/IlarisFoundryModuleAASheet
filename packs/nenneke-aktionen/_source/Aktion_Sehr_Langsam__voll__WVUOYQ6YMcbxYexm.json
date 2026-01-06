@@ -1,0 +1,72 @@
+{
+  "name": "Aktion Sehr Langsam (voll)",
+  "type": "effect-item",
+  "_id": "WVUOYQ6YMcbxYexm",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "INI-4",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.nenneke-aktionen.Item.WVUOYQ6YMcbxYexm",
+      "disabled": false,
+      "img": "icons/svg/aura.svg",
+      "_id": "9RH0iU3RUZDDvDut",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.abgeleitete.ini",
+          "mode": 2,
+          "value": "-4",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767701236330,
+        "modifiedTime": 1767701255758,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!WVUOYQ6YMcbxYexm.9RH0iU3RUZDDvDut"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767700438913,
+    "modifiedTime": 1767700442635,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WVUOYQ6YMcbxYexm"
+}

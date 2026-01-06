@@ -1,0 +1,72 @@
+{
+  "name": "Erfrieren",
+  "type": "effect-item",
+  "_id": "cjuWQwqtSidGXlPc",
+  "img": "icons/svg/ice-shield.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "Erfrieren Stack",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.effect-library.Item.cjuWQwqtSidGXlPc",
+      "disabled": false,
+      "img": "icons/svg/ice-shield.svg",
+      "_id": "oe4oU4AdhVu71GV2",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.gesundheit.wunden",
+          "mode": 0,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 3,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767479567874,
+        "modifiedTime": 1767627757419,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!cjuWQwqtSidGXlPc.oe4oU4AdhVu71GV2"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767479501432,
+    "modifiedTime": 1767479562344,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!cjuWQwqtSidGXlPc"
+}

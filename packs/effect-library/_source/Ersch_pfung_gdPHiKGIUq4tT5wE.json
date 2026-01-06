@@ -1,0 +1,72 @@
+{
+  "name": "Erschöpfung",
+  "type": "effect-item",
+  "_id": "gdPHiKGIUq4tT5wE",
+  "img": "icons/svg/unconscious.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "Erschöpfung Stack",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.effect-library.Item.gdPHiKGIUq4tT5wE",
+      "disabled": false,
+      "img": "icons/svg/unconscious.svg",
+      "_id": "wFRJXffuVPW4MFPp",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.abgeleitete.globalermod",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 3,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767697563813,
+        "modifiedTime": 1767697681936,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!gdPHiKGIUq4tT5wE.wFRJXffuVPW4MFPp"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767697533568,
+    "modifiedTime": 1767697559264,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!gdPHiKGIUq4tT5wE"
+}

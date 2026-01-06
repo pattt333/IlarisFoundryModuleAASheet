@@ -1,0 +1,76 @@
+{
+  "name": "Brennen",
+  "type": "effect-item",
+  "_id": "qbRWlaGTWGAQbk95",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "Du brennst 2SP pro KR"
+  },
+  "effects": [
+    {
+      "name": "Brennen Stack",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.effect-library.Item.qbRWlaGTWGAQbk95",
+      "disabled": false,
+      "img": "icons/svg/fire.svg",
+      "_id": "cRlu5mALsJa7TBur",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.gesundheit.wunden",
+          "mode": 0,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 3,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "nenneke": {
+          "stack": true
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767458827824,
+        "modifiedTime": 1767627744472,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!qbRWlaGTWGAQbk95.cRlu5mALsJa7TBur"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767458724287,
+    "modifiedTime": 1767479280938,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!qbRWlaGTWGAQbk95"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Aktion Fernkampf (voll;konz.)",
+  "type": "effect-item",
+  "_id": "SOB7ca2UGhiPWiE3",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767700711489,
+    "modifiedTime": 1767700711489,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!SOB7ca2UGhiPWiE3"
+}

@@ -1,0 +1,77 @@
+{
+  "name": "Blutung",
+  "type": "effect-item",
+  "_id": "Gu0p2qIzCYKajtRH",
+  "img": "icons/svg/blood.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "Blutung Stack",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.effect-library.Item.Gu0p2qIzCYKajtRH",
+      "disabled": false,
+      "img": "icons/svg/blood.svg",
+      "_id": "GpB57xq1jqrBIhpA",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.gesundheit.wunden",
+          "mode": 0,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 3,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {
+        "nenneke": {
+          "dot": 1,
+          "stack": true
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767479461444,
+        "modifiedTime": 1767627730070,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!Gu0p2qIzCYKajtRH.GpB57xq1jqrBIhpA"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767479446829,
+    "modifiedTime": 1767560678702,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Gu0p2qIzCYKajtRH"
+}

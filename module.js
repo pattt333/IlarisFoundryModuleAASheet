@@ -7,6 +7,7 @@
  */
 
 import { IlarisAlternativeActorSheet } from './scripts/sheets/alternative-actor-sheet.js';
+import { IlarisAlternativeCreatureSheet } from './scripts/sheets/alternative-creature-sheet.js';
 import { InitiativeDialog } from './scripts/apps/initiative-dialog.js';
 import { MassInitiativeDialog } from './scripts/apps/mass-initiative-dialog.js';
 import { NegativeInitiativeDialog } from './scripts/apps/negative-initiative-dialog.js';
@@ -101,6 +102,25 @@ Hooks.once('init', async function() {
     if (!Array.isArray(items)) return '';
     return items.map(item => item?.name || '').filter(name => name).join(', ');
   });
+
+  // Capitalize helper for creature type display
+  Handlebars.registerHelper('capitalize', function(str) {
+    if (!str || typeof str !== 'string') return '';
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  });
+
+  // Uppercase helper for stat labels
+  Handlebars.registerHelper('uppercase', function(str) {
+    if (!str || typeof str !== 'string') return '';
+    return str.toUpperCase();
+  });
+
+  // Color modifier helper for health status
+  Handlebars.registerHelper('modColor', function(value) {
+    if (value > 0) return 'positive';
+    if (value < 0) return 'negative';
+    return 'neutral';
+  });
   
   // Preload Handlebars templates
   await loadTemplates([
@@ -111,6 +131,8 @@ Hooks.once('init', async function() {
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/effects-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/creature-kampf-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/creature-allgemein-tab.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/components/energy-resources.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs",
@@ -133,12 +155,25 @@ Hooks.once('init', async function() {
   favoritesLink.rel = 'stylesheet';
   favoritesLink.href = 'modules/ilaris-alternative-actor-sheet/styles/favorites-component.css';
   document.head.appendChild(favoritesLink);
+
+  // Load creature sheet CSS
+  const creatureLink = document.createElement('link');
+  creatureLink.rel = 'stylesheet';
+  creatureLink.href = 'modules/ilaris-alternative-actor-sheet/styles/creature-sheet.css';
+  document.head.appendChild(creatureLink);
   
-  // Register the alternative actor sheet using the standard pattern
+  // Register the alternative actor sheet for "held" type only
   Actors.registerSheet("Ilaris", IlarisAlternativeActorSheet, {
-    types: ["held", "kreatur"],
+    types: ["held"],
     makeDefault: false,
     label: "Alternative Actor Sheet"
+  });
+
+  // Register the alternative creature sheet for "kreatur" type only
+  Actors.registerSheet("Ilaris", IlarisAlternativeCreatureSheet, {
+    types: ["kreatur"],
+    makeDefault: false,
+    label: "Alternative Creature Sheet"
   });
   
   console.log('Ilaris Alternative Actor Sheet | Module initialized successfully');

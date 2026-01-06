@@ -1,0 +1,141 @@
+{{!-- Creature Kampf Tab - Combat-focused view --}}
+<div class="tab kampf-tab" data-group="primary" data-tab="kampf">
+    
+    {{!-- Section A: Effekte Grid --}}
+    <section class="creature-section effects-section">
+        <div class="section-header">
+            <h3><i class="fas fa-magic"></i> Aktive Effekte</h3>
+            <a class="effect-library-open" data-pack="ilaris-alternative-actor-sheet.effect-library" title="Effekt-Bibliothek öffnen">
+                <i class="fas fa-book-open"></i>
+            </a>
+        </div>
+        <div class="effects-grid">
+            {{#if actor.appliedEffects.length}}
+                {{#each actor.appliedEffects as |effect|}}
+                    {{> modules/ilaris-alternative-actor-sheet/templates/components/effect-card.hbs effect=effect}}
+                {{/each}}
+            {{else}}
+                <div class="empty-state">Keine aktiven Effekte</div>
+            {{/if}}
+        </div>
+    </section>
+
+    {{!-- Section B: Angriffe/Waffen --}}
+    <section class="creature-section attacks-section">
+        <div class="angriffe statblockreihe">
+            <b><i class="fas fa-fist-raised"></i> Angriffe: </b>
+            {{#if actor.angriffe.length}}
+                {{#each actor.angriffe as |angriff|}}
+                    <div class="flexrow weapon-row">
+                        {{!-- Dice button - larger for creatures --}}
+                        {{#if (waffe_ist_fernkampf angriff)}}
+                            <a class="rollable icon-large" data-rolltype="fernkampf_diag" data-itemid="{{angriff._id}}" title="Fernkampf-Angriff würfeln">
+                                <i class="fas fa-dice-d20"></i>
+                            </a>
+                        {{else}}
+                            <a class="rollable icon-large" data-rolltype="angriff_diag" data-itemid="{{angriff._id}}" title="Nahkampf-Angriff würfeln">
+                                <i class="fas fa-dice-d20"></i>
+                            </a>
+                        {{/if}}
+                        {{!-- Weapon name with edit link --}}
+                        <label class="weapon-name">
+                            <b><a class="item-edit" data-itemid="{{angriff._id}}">{{angriff.name}}</a></b>
+                        </label>
+                        {{!-- Weapon stats --}}
+                        {{#if (waffe_ist_fernkampf angriff)}}
+                            <label class="weapon-stat">LZ: {{angriff.system.lz}}</label>
+                        {{/if}}
+                        <label class="weapon-stat">RW: {{angriff.system.rw}}</label>
+                        <label class="weapon-stat">AT: {{angriff.system.at}}</label>
+                        <label class="weapon-stat">VT: {{angriff.system.vt}}</label>
+                        <label class="weapon-stat">TP: 
+                            <a class="rollable icon-small" data-rolltype="basic" data-formula="{{translate_formula angriff.system.tp}}" data-label="Schaden ({{angriff.name}})" title="Schaden würfeln">
+                                {{angriff.system.tp}}
+                            </a>
+                        </label>
+                        {{!-- Delete button --}}
+                        <a class="item-delete icon-small" data-itemid="{{angriff._id}}" title="Angriff löschen">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    {{!-- Weapon properties --}}
+                    {{#if angriff.system.eigenschaften}}
+                    <div class="weapon-eigenschaften">
+                        {{#each angriff.system.eigenschaften as |eig|}}
+                            <span class="eigenschaft-tag">{{eig.name}}</span>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                {{/each}}
+            {{else}}
+                <span class="empty-inline">Keine Angriffe vorhanden</span>
+            {{/if}}
+        </div>
+    </section>
+
+    {{!-- Section C: Zauber/Liturgien/Anrufungen (only if caster) --}}
+    {{#if isCaster}}
+    <section class="creature-section spells-section">
+        {{!-- Übernatürliche Fertigkeiten --}}
+        {{#if actor.uebernatuerlich.fertigkeiten.length}}
+        <div class="uebernatuerlich statblockreihe">
+            <b><i class="fas fa-hand-sparkles"></i> Übernatürliche Fertigkeiten: </b>
+            {{#each actor.uebernatuerlich.fertigkeiten as |fertigkeit|}}
+                <span class="spell-entry">
+                    <a class="item-edit" data-itemid="{{fertigkeit._id}}">{{fertigkeit.name}}</a> ({{fertigkeit.system.pw}}
+                    <a class="rollable icon-small" data-rolltype="uefert_diag" data-itemid="{{fertigkeit._id}}" title="Fertigkeit würfeln">
+                        <i class="fas fa-dice-d20"></i>
+                    </a>){{#unless @last}}, {{/unless}}
+                </span>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{!-- Zauber --}}
+        {{#if actor.uebernatuerlich.zauber.length}}
+        <div class="zauber statblockreihe">
+            <b><i class="fas fa-hat-wizard"></i> Zauber: </b>
+            {{#each actor.uebernatuerlich.zauber as |zauber|}}
+                <span class="spell-entry">
+                    <a class="item-edit" data-itemid="{{zauber._id}}">{{zauber.name}}</a> ({{zauber.system.pw}}
+                    <a class="rollable icon-small" data-rolltype="magie_diag" data-itemid="{{zauber._id}}" title="Zauber wirken">
+                        <i class="fas fa-dice-d20"></i>
+                    </a>){{#unless @last}}, {{/unless}}
+                </span>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{!-- Liturgien --}}
+        {{#if actor.uebernatuerlich.liturgien.length}}
+        <div class="liturgien statblockreihe">
+            <b><i class="fas fa-pray"></i> Liturgien: </b>
+            {{#each actor.uebernatuerlich.liturgien as |liturgie|}}
+                <span class="spell-entry">
+                    <a class="item-edit" data-itemid="{{liturgie._id}}">{{liturgie.name}}</a> ({{liturgie.system.pw}}
+                    <a class="rollable icon-small" data-rolltype="karma_diag" data-itemid="{{liturgie._id}}" title="Liturgie wirken">
+                        <i class="fas fa-dice-d20"></i>
+                    </a>){{#unless @last}}, {{/unless}}
+                </span>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{!-- Anrufungen --}}
+        {{#if actor.uebernatuerlich.anrufungen.length}}
+        <div class="anrufungen statblockreihe">
+            <b><i class="fas fa-fire-alt"></i> Anrufungen: </b>
+            {{#each actor.uebernatuerlich.anrufungen as |anrufung|}}
+                <span class="spell-entry">
+                    <a class="item-edit" data-itemid="{{anrufung._id}}">{{anrufung.name}}</a> ({{anrufung.system.pw}}
+                    <a class="rollable icon-small" data-rolltype="magie_diag" data-itemid="{{anrufung._id}}" title="Anrufung wirken">
+                        <i class="fas fa-dice-d20"></i>
+                    </a>){{#unless @last}}, {{/unless}}
+                </span>
+            {{/each}}
+        </div>
+        {{/if}}
+    </section>
+    {{/if}}
+
+</div>

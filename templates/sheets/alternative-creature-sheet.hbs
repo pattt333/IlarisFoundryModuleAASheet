@@ -1,0 +1,127 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    
+    {{!-- Sheet Header - Sticky header with creature info --}}
+    <header class="sheet-header sticky-header">
+        {{!-- Left side: Actor portrait with health and energy --}}
+        <div class="actor-profile">
+            <div class="portrait-container">
+                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="120" width="120"/>
+            </div>
+            {{!-- Health bar below portrait --}}
+            <div class="health-bar-container">
+                {{> modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs}}
+                {{!-- Wundenignorieren Toggle --}}
+                <div class="wunden-toggle">
+                    <a class="icon-small toggle-bool" data-togglevariable="system.gesundheit.wundenignorieren" title="Wunden {{#if actor.system.gesundheit.wundenignorieren}}aktivieren{{else}}ignorieren{{/if}}">
+                        <i class="fas {{#if actor.system.gesundheit.wundenignorieren}}fa-eye-slash{{else}}fa-eye{{/if}}"></i>
+                        <span>{{#if actor.system.gesundheit.wundenignorieren}}ignoriert{{else}}aktiv{{/if}}</span>
+                    </a>
+                </div>
+            </div>
+            {{!-- Energy bar (only if caster) --}}
+            {{#if isCaster}}
+            <div class="profile-energy">
+                {{> modules/ilaris-alternative-actor-sheet/templates/components/energy-resources.hbs}}
+            </div>
+            {{/if}}
+        </div>
+            
+        {{!-- Center section: Name and stats --}}
+        <div class="header-details">
+            <div class="name-section">
+                <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Kreaturname"/></h1>
+            </div>
+            <div class="stats-section">
+                {{!-- Shield Icon for WS/BE --}}
+                <div class="ws-shield-container">
+                    <div class="ws-shield" title="Kopf: {{actor.system.abgeleitete.ws_kopf}}&#10;Torso: {{actor.system.abgeleitete.ws_torso}}&#10;Arme: {{actor.system.abgeleitete.ws_arme}}&#10;Beine: {{actor.system.abgeleitete.ws_beine}}">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="ws-value">{{actor.system.abgeleitete.ws_stern}}</span>
+                        <div class="be-badge">
+                            <i class="fas fa-weight-hanging"></i>
+                            <span class="be-value">{{actor.system.abgeleitete.be}} BE</span>
+                        </div>
+                    </div>
+                </div>
+                {{!-- Primary Attributes in One Row - Hexagons --}}
+                <div class="primary-attributes flex-row">
+                    {{#each actor.system.attribute as |attribute key|}}
+                    <div class="attribute-hexagon">
+                        <div class="hex-main" data-rolltype="fertigkeit_diag" data-probetype="attribut" data-attribut="{{key}}">
+                            <label class="hex-label">{{key}}</label>
+                            <span class="hex-pw">{{attribute.pw}}</span>
+                        </div>
+                        <div class="hex-small" data-attribute="{{key}}">
+                            <span class="hex-wert">{{attribute.wert}}</span>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{!-- Secondary Stats Row 1 --}}
+            <div class="profile-secondary-stats">
+                <div class="profile-stat">
+                    <i class="fas fa-hat-wizard" title="Magieresistenz"></i>
+                    <span class="stat-label">MR</span>
+                    <span class="stat-value">{{actor.system.abgeleitete.mr}}</span>
+                </div>
+                <div class="profile-stat">
+                    <i class="fas fa-running" title="Geschwindigkeit"></i>
+                    <span class="stat-label">GS</span>
+                    <span class="stat-value">{{actor.system.abgeleitete.gs}}</span>
+                </div>
+                <div class="profile-stat">
+                    <i class="fas fa-bolt" title="Initiative"></i>
+                    <span class="stat-label">INI</span>
+                    <span class="stat-value">{{actor.system.abgeleitete.ini}}</span>
+                </div>
+                <div class="profile-stat editable-stat" data-stat-field="system.modifikatoren.manuellermod">
+                    <i class="fas fa-dice-d20" title="Manueller Modifikator"></i>
+                    <span class="stat-label">Mod</span>
+                    <span class="stat-value">{{actor.system.modifikatoren.manuellermod}}</span>
+                </div>
+            </div>
+            {{!-- Secondary Stats Row 2 --}}
+            <div class="profile-secondary-stats">
+                <div class="profile-stat editable-stat" data-stat-field="system.gesundheit.hp.max">
+                    <i class="fas fa-heart" title="Maximale Lebenspunkte"></i>
+                    <span class="stat-label">HP-Max</span>
+                    <span class="stat-value">{{actor.system.gesundheit.hp.max}}</span>
+                </div>
+                <div class="profile-stat editable-stat" data-stat-field="system.kreaturentyp">
+                    <i class="fas fa-paw" title="Kreaturentyp"></i>
+                    <span class="stat-label">Typ</span>
+                    <span class="stat-value">{{capitalize actor.system.kreaturentyp}}</span>
+                </div>
+                {{!-- Health Modifier Display --}}
+                {{#if actor.system.abgeleitete.globalermoddisplay}}
+                <div class="profile-stat health-mod {{modColor actor.system.abgeleitete.globalermod}}">
+                    <i class="fas fa-heartbeat" title="Gesundheits-Modifikator"></i>
+                    <span class="stat-label">Zustand</span>
+                    <span class="stat-value">{{actor.system.abgeleitete.globalermoddisplay}}</span>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        
+        {{!-- Sheet Tab Navigation - Sticky tabs --}}
+        <nav class="sheet-tabs tabs sticky-tabs" data-group="primary">
+            <a class="item" data-tab="kampf">Kampf</a>
+            <a class="item" data-tab="allgemein">Allgemein</a>
+        </nav>
+    </header>
+
+    {{!-- Sheet Body - Scrollable content --}}
+    <section class="sheet-body scrollable-content">
+        <div class="sheet-content-layout creature-layout">
+            {{!-- Main tab content --}}
+            <div class="tab-content-area">
+                {{!-- Kampf Tab --}}
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/creature-kampf-tab.hbs}}
+
+                {{!-- Allgemein Tab --}}
+                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/creature-allgemein-tab.hbs}}
+            </div>
+        </div>
+    </section>
+</form>

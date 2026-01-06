@@ -1,0 +1,72 @@
+{
+  "name": "Aktion Falle entschärfen o. Ähnliches (voll;konz.)",
+  "type": "effect-item",
+  "_id": "Y8CAv8TRcMAChd6x",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "INI-4",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.nenneke-aktionen.Item.Y8CAv8TRcMAChd6x",
+      "disabled": false,
+      "img": "icons/svg/aura.svg",
+      "_id": "flPOY8CsdQhIWjnU",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.abgeleitete.ini",
+          "mode": 2,
+          "value": "-4",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767701142277,
+        "modifiedTime": 1767701158647,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!Y8CAv8TRcMAChd6x.flPOY8CsdQhIWjnU"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767700674778,
+    "modifiedTime": 1767700674778,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Y8CAv8TRcMAChd6x"
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Furcht",
+  "type": "effect-item",
+  "_id": "5Uk6Cap4t0E4cMbK",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "Furcht Stack",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.effect-library.Item.5Uk6Cap4t0E4cMbK",
+      "disabled": false,
+      "img": "icons/svg/skull.svg",
+      "_id": "fNrLcOmSCvzNmq0v",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.abgeleitete.globalermod",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 3,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767697357356,
+        "modifiedTime": 1767697694618,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!5Uk6Cap4t0E4cMbK.fNrLcOmSCvzNmq0v"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767697354660,
+    "modifiedTime": 1767697518459,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5Uk6Cap4t0E4cMbK"
+}

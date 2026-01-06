@@ -1,0 +1,72 @@
+{
+  "name": "Krankheit",
+  "type": "effect-item",
+  "_id": "owJ3vI7jSCq7EX6y",
+  "img": "icons/svg/biohazard.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "Krankheit Stack",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.effect-library.Item.owJ3vI7jSCq7EX6y",
+      "disabled": false,
+      "img": "icons/svg/biohazard.svg",
+      "_id": "9y8ag0ozrNrglr6c",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.gesundheit.wunden",
+          "mode": 0,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 3,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767479388344,
+        "modifiedTime": 1767627769868,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!owJ3vI7jSCq7EX6y.9y8ag0ozrNrglr6c"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767479372241,
+    "modifiedTime": 1767479385239,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!owJ3vI7jSCq7EX6y"
+}

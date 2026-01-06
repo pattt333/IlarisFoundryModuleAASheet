@@ -1,0 +1,72 @@
+{
+  "name": "Aktion Einschüchtern",
+  "type": "effect-item",
+  "_id": "hDeVtEkWyt7ck3JZ",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "INI+2",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.nenneke-aktionen.Item.hDeVtEkWyt7ck3JZ",
+      "disabled": false,
+      "img": "icons/svg/aura.svg",
+      "_id": "ggLMMBD98XyV76bz",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.abgeleitete.ini",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767701103635,
+        "modifiedTime": 1767701132318,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!hDeVtEkWyt7ck3JZ.ggLMMBD98XyV76bz"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767700348239,
+    "modifiedTime": 1767700348239,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!hDeVtEkWyt7ck3JZ"
+}

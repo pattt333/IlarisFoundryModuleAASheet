@@ -1,0 +1,72 @@
+{
+  "name": "Aktion Bereit machen (voll)",
+  "type": "effect-item",
+  "_id": "TUPJyndjYOYHagWW",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": ""
+  },
+  "effects": [
+    {
+      "name": "INI-2",
+      "origin": "Compendium.ilaris-alternative-actor-sheet.nenneke-aktionen.Item.TUPJyndjYOYHagWW",
+      "disabled": false,
+      "img": "icons/svg/aura.svg",
+      "_id": "JDmPy0LoLsqIDrUE",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.abgeleitete.ini",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1767701055020,
+        "modifiedTime": 1767701074942,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+      },
+      "_key": "!items.effects!TUPJyndjYOYHagWW.JDmPy0LoLsqIDrUE"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767700545633,
+    "modifiedTime": 1767700545633,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!TUPJyndjYOYHagWW"
+}
