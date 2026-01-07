@@ -248,7 +248,6 @@ actor.kreaturItemOptions = {}     // Dropdown options from CONFIG.ILARIS
 #### Right Section (Secondary Stats)
 - **Row 1**: MR | GS | INI | Manueller Mod (editable via `.editable-stat`)
 - **Row 2**: 
-  - HP-Max: `<div class="profile-stat editable-stat" data-stat-field="system.gesundheit.hp.max">`
   - Kreaturentyp: `<div class="profile-stat editable-stat" data-stat-field="system.kreaturentyp">` displays `{{capitalize actor.system.kreaturentyp}}`
 - **Gesundheitsmod Display**: `{{actor.system.abgeleitete.globalermoddisplay}}` with color coding
 

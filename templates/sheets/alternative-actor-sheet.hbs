@@ -14,6 +14,13 @@
                 {{!-- Einschränkungen grid directly below portrait --}}
                 <div class="profile-einschraenkungen">
                     {{> modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs}}
+                    {{!-- Wundenignorieren Toggle --}}
+                    <div class="wunden-toggle">
+                        <a class="icon-small toggle-bool" data-togglevariable="system.gesundheit.wundenignorieren" title="Wunden {{#if actor.system.gesundheit.wundenignorieren}}nicht {{/if}} ignorieren">
+                            <i class="fas {{#if actor.system.gesundheit.wundenignorieren}}fa-eye-slash{{else}}fa-eye{{/if}}"></i>
+                            <span>{{#if actor.system.gesundheit.wundenignorieren}}ignoriert Wunden{{else}}Wunden nicht ignoriert{{/if}}</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             

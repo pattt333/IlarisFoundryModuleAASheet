@@ -2,7 +2,8 @@
     
     {{!-- Sheet Header - Sticky header with creature info --}}
     <header class="sheet-header sticky-header">
-        {{!-- Left side: Actor portrait with health and energy --}}
+        <div class="sheet-header-info">
+            {{!-- Left side: Actor portrait with health and energy --}}
         <div class="actor-profile">
             <div class="portrait-container">
                 <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="120" width="120"/>
@@ -12,9 +13,9 @@
                 {{> modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs}}
                 {{!-- Wundenignorieren Toggle --}}
                 <div class="wunden-toggle">
-                    <a class="icon-small toggle-bool" data-togglevariable="system.gesundheit.wundenignorieren" title="Wunden {{#if actor.system.gesundheit.wundenignorieren}}aktivieren{{else}}ignorieren{{/if}}">
+                    <a class="icon-small toggle-bool" data-togglevariable="system.gesundheit.wundenignorieren" title="Wunden {{#if actor.system.gesundheit.wundenignorieren}}nicht {{/if}} ignorieren">
                         <i class="fas {{#if actor.system.gesundheit.wundenignorieren}}fa-eye-slash{{else}}fa-eye{{/if}}"></i>
-                        <span>{{#if actor.system.gesundheit.wundenignorieren}}ignoriert{{else}}aktiv{{/if}}</span>
+                        <span>{{#if actor.system.gesundheit.wundenignorieren}}ignoriert Wunden{{else}}Wunden nicht ignoriert{{/if}}</span>
                     </a>
                 </div>
             </div>
@@ -34,13 +35,9 @@
             <div class="stats-section">
                 {{!-- Shield Icon for WS/BE --}}
                 <div class="ws-shield-container">
-                    <div class="ws-shield" title="Kopf: {{actor.system.abgeleitete.ws_kopf}}&#10;Torso: {{actor.system.abgeleitete.ws_torso}}&#10;Arme: {{actor.system.abgeleitete.ws_arme}}&#10;Beine: {{actor.system.abgeleitete.ws_beine}}">
+                    <div class="ws-shield">
                         <i class="fas fa-shield-alt"></i>
-                        <span class="ws-value">{{actor.system.abgeleitete.ws_stern}}</span>
-                        <div class="be-badge">
-                            <i class="fas fa-weight-hanging"></i>
-                            <span class="be-value">{{actor.system.abgeleitete.be}} BE</span>
-                        </div>
+                        <span class="ws-value">{{actor.system.kampfwerte.ws_stern}}</span>
                     </div>
                 </div>
                 {{!-- Primary Attributes in One Row - Hexagons --}}
@@ -63,17 +60,17 @@
                 <div class="profile-stat">
                     <i class="fas fa-hat-wizard" title="Magieresistenz"></i>
                     <span class="stat-label">MR</span>
-                    <span class="stat-value">{{actor.system.abgeleitete.mr}}</span>
+                    <span class="stat-value">{{actor.system.kampfwerte.mr}}</span>
                 </div>
                 <div class="profile-stat">
                     <i class="fas fa-running" title="Geschwindigkeit"></i>
                     <span class="stat-label">GS</span>
-                    <span class="stat-value">{{actor.system.abgeleitete.gs}}</span>
+                    <span class="stat-value">{{actor.system.kampfwerte.gs}}</span>
                 </div>
                 <div class="profile-stat">
                     <i class="fas fa-bolt" title="Initiative"></i>
                     <span class="stat-label">INI</span>
-                    <span class="stat-value">{{actor.system.abgeleitete.ini}}</span>
+                    <span class="stat-value">{{actor.system.kampfwerte.ini}}</span>
                 </div>
                 <div class="profile-stat editable-stat" data-stat-field="system.modifikatoren.manuellermod">
                     <i class="fas fa-dice-d20" title="Manueller Modifikator"></i>
@@ -83,10 +80,10 @@
             </div>
             {{!-- Secondary Stats Row 2 --}}
             <div class="profile-secondary-stats">
-                <div class="profile-stat editable-stat" data-stat-field="system.gesundheit.hp.max">
+                <div class="profile-stat editable-stat" data-stat-field="system.kampfwerte.ws">
                     <i class="fas fa-heart" title="Maximale Lebenspunkte"></i>
-                    <span class="stat-label">HP-Max</span>
-                    <span class="stat-value">{{actor.system.gesundheit.hp.max}}</span>
+                    <span class="stat-label">LeP-Max</span>
+                    <span class="stat-value">{{actor.system.kampfwerte.ws}}</span>
                 </div>
                 <div class="profile-stat editable-stat" data-stat-field="system.kreaturentyp">
                     <i class="fas fa-paw" title="Kreaturentyp"></i>
@@ -102,6 +99,7 @@
                 </div>
                 {{/if}}
             </div>
+        </div>
         </div>
         
         {{!-- Sheet Tab Navigation - Sticky tabs --}}
