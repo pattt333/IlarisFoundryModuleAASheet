@@ -51,7 +51,7 @@
                         (hash label="RW" value=item.system.rw)
                         (hash label="Fertigkeit" value=item.system.fertigkeit)
                         (hash label="Talent" value=item.system.talent)
-                        (hash label="Eigenschaften" value=(join item.system.eigenschaften ", ") isDescription=true)
+                        (hash label="Eigenschaften" value=(eigenschaften item.system.eigenschaften ", ") isDescription=true)
                     )
                 }}
                 {{/each}}
@@ -87,7 +87,7 @@
                         (hash label="Fertigkeit" value=item.system.fertigkeit)
                         (hash label="Talent" value=item.system.talent)
                         (hash label="Härte" value=item.system.härte)
-                        (hash label="Eigenschaften" value=(join item.system.eigenschaften ", ") isDescription=true)
+                        (hash label="Eigenschaften" value=(eigenschaften item.system.eigenschaften ", ") isDescription=true)
                     )
                 }}
                 {{/each}}

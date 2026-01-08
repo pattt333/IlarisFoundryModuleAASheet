@@ -140,6 +140,33 @@ Hooks.once('init', async function() {
     return array.join(separator || ', ');
   });
 
+  // Eigenschaften helper - handles both array and object formats
+  Handlebars.registerHelper('eigenschaften', function(eigenschaften, separator) {
+    if (!eigenschaften) return '';
+    
+    // Handle array format: [{key: "name", parameters: ["param1", "param2"]}, ...]
+    if (Array.isArray(eigenschaften)) {
+      return eigenschaften.map(e => {
+        if (!e || !e.key) return '';
+        
+        // If parameters exist and array is not empty, add them in parentheses separated by semicolons
+        if (e.parameters && Array.isArray(e.parameters) && e.parameters.length > 0) {
+          return `${e.key}(${e.parameters.join(';')})`;
+        }
+        
+        return e.key;
+      }).filter(s => s).join(separator || ', ');
+    }
+    
+    // Handle object format: {property1: true, property2: false, ...}
+    if (typeof eigenschaften === 'object') {
+      const trueProperties = Object.keys(eigenschaften).filter(key => eigenschaften[key] === true);
+      return trueProperties.join(separator || ', ');
+    }
+    
+    return '';
+  });
+
   // Helper for creating arrays in templates
   Handlebars.registerHelper('array', function() {
     return Array.from(arguments).slice(0, -1); // Remove the Handlebars options object
@@ -154,14 +181,6 @@ Hooks.once('init', async function() {
   Handlebars.registerHelper('hash', function() {
     const options = arguments[arguments.length - 1];
     return options.hash;
-  });
-
-  // Helper for extracting true properties from eigenschaften object
-  Handlebars.registerHelper('eigenschaften', function(eigenschaften) {
-    if (!eigenschaften || typeof eigenschaften !== 'object') return '';
-    
-    const trueProperties = Object.keys(eigenschaften).filter(key => eigenschaften[key] === true);
-    return trueProperties.join(', ');
   });
 
   // Helper for checking if any item in an array has a truthy property
