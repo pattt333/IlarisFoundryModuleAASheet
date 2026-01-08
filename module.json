@@ -24,6 +24,27 @@
     "styles/effect-card.css",
     "styles/initiative-dialog.css"
   ],
+  "packFolders": [
+    {
+      "name": "nenneke_regeln",
+      "sorting": "a",
+      "color": "#009900",
+      "packs": [
+        "effect-library",
+        "nenneke-aktionen",
+        "nenneke_regeln-abgeleitetewerte",
+        "nenneke_regeln-fertigkeiten",
+        "nenneke_regeln-manoever",
+        "nenneke_regeln-ruestungen",
+        "nenneke_regeln-talente",
+        "nenneke_regeln-uebernatuerlichefertigkeiten",
+        "nenneke_regeln-vorteile",
+        "nenneke_regeln-waffen",
+        "nenneke_regeln-waffeneigenschaften"
+      ],
+      "folders": []
+    }
+  ],
   "packs": [
     {
       "name": "effect-library",
@@ -40,6 +61,105 @@
       "name": "nenneke-aktionen",
       "label": "Nenneke Aktionen",
       "path": "packs/nenneke-aktionen",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-abgeleitetewerte",
+      "label": "Nenneke Abgeleitete Werte",
+      "path": "packs/nenneke_regeln-abgeleitetewerte",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-fertigkeiten",
+      "label": "Nenneke Fertigkeiten",
+      "path": "packs/nenneke_regeln-fertigkeiten",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-manoever",
+      "label": "Nenneke Manöver",
+      "path": "packs/nenneke_regeln-manoever",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-ruestungen",
+      "label": "Nenneke Rüstungen",
+      "path": "packs/nenneke_regeln-ruestungen",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-talente",
+      "label": "Nenneke Talente",
+      "path": "packs/nenneke_regeln-talente",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-uebernatuerlichefertigkeiten",
+      "label": "Nenneke Übernatürliche Fertigkeiten",
+      "path": "packs/nenneke_regeln-uebernatuerlichefertigkeiten",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-vorteile",
+      "label": "Nenneke Vorteile",
+      "path": "packs/nenneke_regeln-vorteile",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-waffen",
+      "label": "Nenneke Waffen",
+      "path": "packs/nenneke_regeln-waffen",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-waffeneigenschaften",
+      "label": "Nenneke Waffeneigenschaften",
+      "path": "packs/nenneke_regeln-waffeneigenschaften",
       "type": "Item",
       "system": "Ilaris",
       "ownership": {

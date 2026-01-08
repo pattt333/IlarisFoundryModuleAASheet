@@ -8,7 +8,8 @@
     "build": "echo \"No build process needed\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "pack-all": "node utils/pack-all.js"
   },
   "repository": {
     "type": "git",
@@ -33,10 +34,8 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "prettier": "^3.2.5"
-  },
-  "peerDependencies": {
-    "foundryvtt": "^12.0.0"
+    "prettier": "^3.2.5",
+    "@foundryvtt/foundryvtt-cli": "^3.0.0"
   },
   "foundry": {
     "version": "12.0.0",
