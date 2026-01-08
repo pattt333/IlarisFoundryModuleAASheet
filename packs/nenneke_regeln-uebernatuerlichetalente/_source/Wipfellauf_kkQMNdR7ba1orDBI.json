@@ -1,0 +1,42 @@
+{
+  "name": "Wipfellauf",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst dich durch Baumkronen und Unterholz bewegen, als wären sie eine normale Straße. Unter diesen Bedingungen erleidest du keinerlei Erschwernisse oder Geschwindigkeitsabzüge.\nFertigkeiten: Eigenschaften, Humus",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Kopfüber (-8; du kannst selbst kopfüber an Bäumen laufen.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Elf 16; Ach, Dru, Geo, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "kkQMNdR7ba1orDBI",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424458,
+    "modifiedTime": 1767873424458,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!kkQMNdR7ba1orDBI"
+}

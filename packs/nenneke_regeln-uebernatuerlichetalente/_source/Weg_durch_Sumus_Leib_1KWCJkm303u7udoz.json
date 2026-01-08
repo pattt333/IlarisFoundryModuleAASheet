@@ -1,0 +1,42 @@
+{
+  "name": "Weg durch Sumus Leib",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Humus, Ringrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bewegst dich innerhalb 1 Minute durch Erde und Stein an einen Ort, der maximal 4 Meilen entfernt sein darf. Alle Metallgegenstände, die nicht kaltgeschmiedet sind (wie der Schlangenreif), verbleiben in der Erde.\nFertigkeiten: Erz, Humus, Ringrituale",
+    "maechtig": "Vervierfacht die Distanz",
+    "schwierigkeit": "12",
+    "modifikationen": "Anhalter (-8; du kannst eine Person mitnehmen. Mehrfach wählbar.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 AsP",
+    "erlernen": "Geo 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "1KWCJkm303u7udoz",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428349,
+    "modifiedTime": 1767873428349,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!1KWCJkm303u7udoz"
+}

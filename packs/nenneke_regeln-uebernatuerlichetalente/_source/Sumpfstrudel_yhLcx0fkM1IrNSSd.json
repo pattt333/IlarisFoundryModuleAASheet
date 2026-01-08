@@ -1,0 +1,42 @@
+{
+  "name": "Sumpfstrudel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Im Humusboden bildet sich ein morastiger Strudel. Wesen in der Umgebung müssen jede Initiativephase eine <i>Konterprobe</i> (KK, 16) ablegen, die um die Distanz zum Zentrum in Schritt erleichtert ist. Beim Misslingen wird es 2 Schritt in Richtung des Zentrums gezerrt. Im Zentrum erleidet jedes Ziel 8W6 SP und wird für die verbleibende Wirkungsdauer handlungsunfähig.\nFertigkeiten: Humus, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Dornenranken (-8; jede misslungene <i>Konterprobe</i> verursacht 2W6 TP.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "64 Schritt",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "32 AsP",
+    "erlernen": "Geo 18; Dru 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yhLcx0fkM1IrNSSd",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425321,
+    "modifiedTime": 1767873425321,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yhLcx0fkM1IrNSSd"
+}

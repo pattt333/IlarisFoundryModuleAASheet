@@ -1,0 +1,42 @@
+{
+  "name": "Tiere besprechen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel erhält 4W6+8 Heilpunkte, für jede Überschreitung der WS wird eine Wunde geheilt.\nFertigkeiten: Humus, Verwandlung",
+    "maechtig": "Erhöht die Heilpunkte um 8.",
+    "schwierigkeit": "12+Wund-Mod des Ziels",
+    "modifikationen": "Blutung stoppen (Probenschwierigkeit 16, 8 Aktionen; du stoppst eine Blutung.)\nBann des Siechtums (Du beendest ein Gift oder eine Krankheit bis maximal Stufe 16. Mächtige Magie erhöht die maximal aufgehobene Gift-/Krankheitsstufe um 4.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Tier",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 12; Dru, Geo 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "jZKIg8Amr2g7Ejx8",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425342,
+    "modifiedTime": 1767873425342,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!jZKIg8Amr2g7Ejx8"
+}

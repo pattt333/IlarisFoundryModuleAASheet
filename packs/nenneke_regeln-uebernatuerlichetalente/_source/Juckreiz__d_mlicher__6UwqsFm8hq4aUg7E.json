@@ -1,0 +1,42 @@
+{
+  "name": "Juckreiz, dämlicher!",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Person mit der niedrigsten KL im Radius von 8 Schritt wird von einem heftigen Juckreiz befallen, insbesondere dort, wo es sich nicht kratzen kann. Erschwernisse sind Spielleiterentscheid.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "4 AsP",
+    "erlernen": "Sch 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6UwqsFm8hq4aUg7E",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424612,
+    "modifiedTime": 1767873424612,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6UwqsFm8hq4aUg7E"
+}

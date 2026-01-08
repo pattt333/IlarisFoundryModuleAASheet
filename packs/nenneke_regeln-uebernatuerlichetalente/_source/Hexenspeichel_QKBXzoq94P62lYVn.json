@@ -1,0 +1,42 @@
+{
+  "name": "Hexenspeichel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel erhält 2W6+4 Heilpunkte, für jede Überschreitung der WS heilst du eine Wunde.\nFertigkeiten: Humus, Verwandlung",
+    "maechtig": "Erhöht die Heilpunkte um 4.",
+    "schwierigkeit": "12+Wund-Mod. des Ziels",
+    "modifikationen": "Blutung stoppen (Probenschwierigkeit 16, 8 Aktionen; stoppt eine Blutung), Geheime Zutat (-4, Einzelobjekt, Wirkungsdauer 1 Stunde; der Zauber heilt den Esser des verzauberten Gerichts.)",
+    "vorbereitung": "16 Minuten",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 8; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "QKBXzoq94P62lYVn",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425237,
+    "modifiedTime": 1767873425237,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!QKBXzoq94P62lYVn"
+}

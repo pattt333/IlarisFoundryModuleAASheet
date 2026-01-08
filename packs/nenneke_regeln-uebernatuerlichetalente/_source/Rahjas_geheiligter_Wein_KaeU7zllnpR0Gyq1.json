@@ -1,0 +1,42 @@
+{
+  "name": "Rahjas geheiligter Wein",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Rausch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst den Kelch der Rahja. In den Kelch gegossene Flüssigkeiten verwandeln sich in Wein, Wein erhält hingegen ein einzigartiges Aroma. Am Ende der Wirkungsdauer verschwindet der Kelch, die Verwandlung ist permanent.\nFertigkeiten: Rausch\nAnmerkung: Erfahrene Rahjageweihte (oft Tempelvorsteher) können mit einer Variante dieser Liturgie den geweihten Tharf erschaffen, den Rahjageweihte der Göttin opfern (S. 84).",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "2 KaP",
+    "erlernen": "Rah 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "KaeU7zllnpR0Gyq1",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431384,
+    "modifiedTime": 1767873431384,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!KaeU7zllnpR0Gyq1"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Verhandeln",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Ob es um Verträge oder dem Rabatt beim Händler geht, wennn es darum geht Geld zu sparen oder mehr Geld zu bekommen oder für bessere Konditionen zu arbeiten, kommt dieses Talent zum Einsatz",
+    "fertigkeit": "Diplomatie",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "sp0f5Mz2nMpIWbXZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090562,
+    "modifiedTime": 1767788090562,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!sp0f5Mz2nMpIWbXZ"
+}

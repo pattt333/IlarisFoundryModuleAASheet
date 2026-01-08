@@ -1,0 +1,42 @@
+{
+  "name": "Weihrauchwolke Wohlgeruch",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verleihst deinem Ziel einen angenehmen Geruch deiner Wahl. <i>Illusion</i> (Geruch).\nFertigkeiten: Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Geruchsspender (-4, Ziel Einzelobjekt)\nGestank (-4, kombinierbar mit Geruchsspender; auch üble Gerüche sind möglich.)\nAusgedehnte Wirkung (-4, Wirkungsdauer 1 Woche, 8 AsP)\nKünstlicher Geruch (-8; du kannst beliebige Gerüche erzeugen – auch solche, die eventuell noch nicht existieren.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "4 AsP",
+    "erlernen": "Mag, Srl 14; Sch 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "eJecB751phvAbBPP",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425573,
+    "modifiedTime": 1767873425573,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!eJecB751phvAbBPP"
+}

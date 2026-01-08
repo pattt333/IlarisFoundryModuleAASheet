@@ -1,0 +1,42 @@
+{
+  "name": "Last des Alters",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Temporal, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer altert schlagartig um 8 Jahre, Auswirkungen davon sind Spielleiterentscheid.\nFertigkeiten: Temporal, Verwandlung",
+    "maechtig": "Das Opfer altert um weitere 4 Jahre.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Verschrumpelte Glieder (-4, 8 AsP, davon 1 gAsP; der Zauber betrifft nur ein einziges Körperteil des Opfers.)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "16 AsP, davon 2 gAsP",
+    "erlernen": "Bor 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "jrw42GirWhjohnTL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425971,
+    "modifiedTime": 1767873425971,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!jrw42GirWhjohnTL"
+}

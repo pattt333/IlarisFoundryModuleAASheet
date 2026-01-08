@@ -1,0 +1,42 @@
+{
+  "name": "Melodie der Beruhigung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Melodie nimmt Zuhörern im Radius von 4 Schritt die Angst. Auf ihnen lastende Furcht-Effekte sinken um eine Stufe. Erfordert <i>Konzentration</i>, erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Einfluss, Zaubermelodien",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Bard 14; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ErVl567VZDXTHiCc",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428923,
+    "modifiedTime": 1767873428923,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ErVl567VZDXTHiCc"
+}

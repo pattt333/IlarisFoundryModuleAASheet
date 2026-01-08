@@ -1,0 +1,31 @@
+{
+  "name": "Einhandhiebwaffen",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Verbessert den Einsatz einhändig geführter Hiebwaffen wie Keulen, Äxten, Beilen und kleineren Hämmern.",
+    "fertigkeit": "Hiebwaffen",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "3lJzDIAJ7SUoTRzZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090306,
+    "modifiedTime": 1767788090306,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!3lJzDIAJ7SUoTRzZ"
+}

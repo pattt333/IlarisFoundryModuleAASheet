@@ -12,6 +12,88 @@ import { InitiativeDialog } from './scripts/apps/initiative-dialog.js';
 import { MassInitiativeDialog } from './scripts/apps/mass-initiative-dialog.js';
 import { NegativeInitiativeDialog } from './scripts/apps/negative-initiative-dialog.js';
 
+/**
+ * Automatically adds the corresponding Fernkampfwaffe when a Nahkampfwaffe 
+ * with the "Fernkampfoption" property is added to an actor
+ */
+async function addFernkampfoption(nahkampfwaffe, actor) {
+  try {
+    // Find Fernkampfoption property
+    const fernkampfOption = nahkampfwaffe.system.eigenschaften?.find(
+      e => e.key === "Fernkampfoption"
+    );
+    
+    if (!fernkampfOption || !fernkampfOption.parameters?.[0]) {
+      return; // No Fernkampfoption or no parameter specified
+    }
+    
+    const fernkampfName = fernkampfOption.parameters[0];
+    
+    // Check if actor already has this fernkampfwaffe (prevent duplicates)
+    const existingWeapon = actor.items.find(
+      i => i.name === fernkampfName && i.type === "fernkampfwaffe"
+    );
+    
+    if (existingWeapon) {
+      console.log(`Ilaris Alternative Actor Sheet | Fernkampfoption: ${fernkampfName} already exists on actor`);
+      return;
+    }
+    
+    // Get the weapon compendium
+    const pack = game.packs.get("ilaris-alternative-actor-sheet.nenneke_regeln-waffen");
+    if (!pack) {
+      console.error(`Ilaris Alternative Actor Sheet | Weapon compendium not found`);
+      ui.notifications.warn(`Waffe nicht gefunden: ${fernkampfName}`);
+      return;
+    }
+    
+    // Search for the fernkampfwaffe in the compendium
+    const index = await pack.getIndex({ fields: ["name", "type"] });
+    const fernkampfEntry = index.find(
+      e => e.name === fernkampfName && e.type === "fernkampfwaffe"
+    );
+    
+    if (!fernkampfEntry) {
+      ui.notifications.warn(`Waffe nicht gefunden: ${fernkampfName}`);
+      return;
+    }
+    
+    // Get the full document and add it to the actor
+    const fernkampfWeapon = await pack.getDocument(fernkampfEntry._id);
+    await actor.createEmbeddedDocuments("Item", [fernkampfWeapon.toObject()], {
+      fernkampfOptionAutoAdded: true
+    });
+    
+    ui.notifications.info(`${fernkampfName} automatisch hinzugefügt`);
+    
+  } catch (error) {
+    console.error(`Ilaris Alternative Actor Sheet | Error adding Fernkampfoption:`, error);
+  }
+}
+
+/**
+ * Hook: Automatically add Fernkampfwaffe when Nahkampfwaffe with Fernkampfoption is added
+ */
+Hooks.on("createItem", (item, options, userId) => {
+  // Skip if this item was automatically added (prevent circular dependencies)
+  if (options.fernkampfOptionAutoAdded) {
+    return;
+  }
+  
+  // Only process items added to actors
+  if (!item.parent || item.parent.documentName !== "Actor") {
+    return;
+  }
+  
+  // Only process nahkampfwaffe (allow all other item types to proceed normally)
+  if (item.type !== "nahkampfwaffe") {
+    return;
+  }
+  
+  // Fire and forget - don't await
+  addFernkampfoption(item, item.parent);
+});
+
 // Module initialization hook
 Hooks.once('init', async function() {
   console.log('Ilaris Alternative Actor Sheet | Initializing module');

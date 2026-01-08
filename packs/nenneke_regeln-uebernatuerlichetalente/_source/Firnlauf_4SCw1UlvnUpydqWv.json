@@ -1,0 +1,42 @@
+{
+  "name": "Firnlauf",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Eis",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Jede noch so dünne Eis- oder Schneeschicht trägt dich wie trockener Boden. Unter diesen Bedingungen erleidest du keinerlei Erschwernisse oder Geschwindigkeitsabzüge.\nFertigkeiten: Eigenschaften, Eis",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Verankerung (-4, 2 AsP; du verankerst dich so auf einer Eisfläche, dass du selbst dann nicht stürzt, wenn sie in bedrohliche Schieflage oder schnelle Bewegung gerät.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Dru, Elf 16; Alch, Mag 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4SCw1UlvnUpydqWv",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424329,
+    "modifiedTime": 1767873424329,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4SCw1UlvnUpydqWv"
+}

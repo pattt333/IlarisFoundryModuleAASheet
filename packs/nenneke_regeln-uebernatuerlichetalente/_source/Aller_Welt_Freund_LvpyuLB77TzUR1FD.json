@@ -1,0 +1,42 @@
+{
+  "name": "Aller Welt Freund",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Fröhlicher Wanderer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst die Lapislazuliflöte. Solange du sie spielst, können dich Humanoide nur mit einer gelungenen <i>Konterprobe</i> (Willenskraft, 20) angreifen und Tiere gar nicht. Das Gebiet in 16 Schritt Radius gilt als geweihter Boden. Benötigt <i>Konzentration</i>, ermöglicht <i>Aufrechterhalten</i>.\nFertigkeiten: Fröhlicher Wanderer",
+    "maechtig": "Mit zwei Stufen gilt der Boden als heilig.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 KaP",
+    "erlernen": "Aves 14; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LvpyuLB77TzUR1FD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431979,
+    "modifiedTime": 1767873431979,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LvpyuLB77TzUR1FD"
+}

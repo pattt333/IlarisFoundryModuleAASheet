@@ -1,0 +1,42 @@
+{
+  "name": "Lachkrampf",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer bekommt einen schweren Lachkrampf, der es von jeglicher Beteiligung in Rededuellen abhält. Nach 1 Minute darf es mit einer <i>Konterprobe</i> (Willenskraft, 16) versuchen, den Zauber zu beenden.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Schluckauf (2 AsP; dein Opfer erhält einen kräftigen Schluckauf. Auswirkungen sind Spielleiterentscheid.)\nBlähungen (-4; alle Proben zur gesellschaftlichen Interaktion sind um -4 erschwert.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 8; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rO2wlfiJQVTHbHmr",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424652,
+    "modifiedTime": 1767873424652,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rO2wlfiJQVTHbHmr"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Optikstein",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kristallmagie, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Kristall kann seine Brennweite nach Belieben verändern und so als Vergrößerungsglas oder Prisma verwendet werden.\nFertigkeiten: Kristallmagie, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "gebundener Kristall",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "1 AsP",
+    "erlernen": "Ach 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "IZp265mW6LmoA3eO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428069,
+    "modifiedTime": 1767873428069,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!IZp265mW6LmoA3eO"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Für die Göttin, für Rondra!",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Ehre",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Macht der Göttin erfüllt dich, während du einen Sturmangriff durchführst (S. 41). Der erste Sturmangriff während der Wirkungsdauer trifft alle Gegner in deiner Bahn, bis du durch mindestens 2 erfolgreiche Verteidigungen gestoppt wirst. Alle AT gelten als Angriffe zum Niederwerfen.\nFertigkeiten: Ehre",
+    "maechtig": "Die AT ist um +1 erleichtert.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 KaP",
+    "erlernen": "Ron 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yEGrLU7JevVAqJzG",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431476,
+    "modifiedTime": 1767873431476,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yEGrLU7JevVAqJzG"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Reines Wasser",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Geister der Stärkung, Geister vertreiben, Verwandlung, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verwandelst 100 Liter Salzwasser in Trinkwasser.\nFertigkeiten: Geister der Stärkung, Geister vertreiben, Verwandlung, Wasser",
+    "maechtig": "Du verwandelst 200/300/400/500 Liter.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "2SQbFXGys1ukDQxk",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427213,
+    "modifiedTime": 1767873427213,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!2SQbFXGys1ukDQxk"
+}

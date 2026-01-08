@@ -1,0 +1,42 @@
+{
+  "name": "Wohlverdiente Rast",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Sichere Heimkehr, Wachstum",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du segnest bis zu 4 Personen. Die Gesegneten regenerieren 2 Punkte Erschöpfung.\nFertigkeiten: Sichere Heimkehr, Wachstum",
+    "maechtig": "Regeneriert einen weiteren Punkt Erschöpfung.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Per 12; Tra 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "E0QGlsiXidq6Iuix",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430938,
+    "modifiedTime": 1767873430938,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!E0QGlsiXidq6Iuix"
+}

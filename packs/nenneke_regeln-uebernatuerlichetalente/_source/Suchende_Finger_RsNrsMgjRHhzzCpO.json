@@ -1,0 +1,42 @@
+{
+  "name": "Suchende Finger",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kristallmagie, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du hältst einen im Schuppenbeutel aufbewahrten Gegenstand sofort in der Hand.\nFertigkeiten: Hellsicht, Kristallmagie, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Ach 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "RsNrsMgjRHhzzCpO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427969,
+    "modifiedTime": 1767873427969,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!RsNrsMgjRHhzzCpO"
+}

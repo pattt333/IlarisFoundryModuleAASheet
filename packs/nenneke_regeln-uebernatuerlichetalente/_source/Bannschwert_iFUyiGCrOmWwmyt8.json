@@ -1,0 +1,42 @@
+{
+  "name": "Bannschwert",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Dämonisch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du legst bannende Zauber auf eine Waffe mit Reichweite 0. Die Waffe gilt als magisch und erleichtert die Bannung von beschworenen Wesenheiten um +2. Gilt als <i>Objektritual</i>.\nFertigkeiten: Antimagie, Dämonisch",
+    "maechtig": "Für 2/4 Stufen kannst du eine Waffe mit Reichweite 1/2 verzaubern.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "16 AsP, davon 4 gAsP",
+    "erlernen": "Bor, Mag 18; Ach, Alch, Dru, Geo, Elf 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "iFUyiGCrOmWwmyt8",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423454,
+    "modifiedTime": 1767873423454,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!iFUyiGCrOmWwmyt8"
+}

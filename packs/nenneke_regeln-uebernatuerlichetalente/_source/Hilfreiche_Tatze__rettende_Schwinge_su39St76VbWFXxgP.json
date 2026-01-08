@@ -1,0 +1,42 @@
+{
+  "name": "Hilfreiche Tatze, rettende Schwinge",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du wählst eine Tierart. Befindet sich ein Tier dieser Art in einem Radius von 1 Meile, eilt es herbei. Du kannst das Tier um einen Gefallen bitten, den dieses wenn möglich erfüllen wird. Dann trollt sich das Tier.\nFertigkeiten: Einfluss, Verständigung",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 14; Elf 16; Ach, Dru 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "su39St76VbWFXxgP",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424574,
+    "modifiedTime": 1767873424574,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!su39St76VbWFXxgP"
+}

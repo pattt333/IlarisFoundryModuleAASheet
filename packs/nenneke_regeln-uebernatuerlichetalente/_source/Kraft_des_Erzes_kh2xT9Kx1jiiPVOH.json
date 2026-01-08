@@ -1,0 +1,42 @@
+{
+  "name": "Kraft des Erzes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der schwerste Metallgegenstand in Reichweite wird stark magnetisch. Im Radius von 8 Schritt um den Magneten müssen alle Träger von Metallgegenständen eine <i>Konterprobe</i> (KK, 16) ablegen. Misslingt sie, werden ihnen Metallgegenstände aus den Händen gerissen und schlittern in Richtung des Magneten – bei einer Rüstung mit ihrem Träger. Selbst wenn die <i>Konterprobe</i> gelingt, sind alle Proben im Umgang mit Metallgegenständen um -4 erschwert.\nFertigkeiten: Erz, Verwandlung",
+    "maechtig": "Der Malus steigt um -2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 12; Dru 16; Ach 18; Alch, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "kh2xT9Kx1jiiPVOH",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424890,
+    "modifiedTime": 1767873424890,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!kh2xT9Kx1jiiPVOH"
+}

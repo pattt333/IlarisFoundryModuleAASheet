@@ -1,0 +1,42 @@
+{
+  "name": "Exposami Lebenskraft",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du nimmst Lebewesen als grün leuchtende Flecken wahr. Der Zauber kann alle Elemente bis auf Erz und Eis durchdringen.\nFertigkeiten: Hellsicht",
+    "maechtig": "Du kannst Angehörige verschiedener Spezies/verschiedene Individuen unterscheiden und wiedererkennen.",
+    "schwierigkeit": "12",
+    "modifikationen": "Reinheit der Aura (-8; der Zauber zeigt den Gesundheitszustand des Ziels, dämonische Verseuchungen usw.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Elf 12; Ach, Alch, Dru, Geo 16; Hex, Mag 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "13atWm51hyhBAMtE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425083,
+    "modifiedTime": 1767873425083,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!13atWm51hyhBAMtE"
+}

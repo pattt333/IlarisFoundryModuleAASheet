@@ -1,0 +1,42 @@
+{
+  "name": "Respondami Wahrheitszwang",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Ziel muss eine Ja/Nein-Frage wahrheitsgemäß beantworten. Ist die Frage nicht mit Ja oder Nein zu beantworten, erleidet es 1W6 SP.\nFertigkeiten: Einfluss",
+    "maechtig": "Erlaubt eine weitere Frage.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "4 AsP",
+    "erlernen": "Dru, Geo, Mag 14; Elf, Hex 16; Alch 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "gJKh4KXlcnTZ0ZtL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424679,
+    "modifiedTime": 1767873424679,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!gJKh4KXlcnTZ0ZtL"
+}

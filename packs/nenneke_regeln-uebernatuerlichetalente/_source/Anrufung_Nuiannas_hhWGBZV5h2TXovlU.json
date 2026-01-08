@@ -1,0 +1,42 @@
+{
+  "name": "Anrufung Nuiannas",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Wind und Wogen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "In einem Bereich von 100 Schritt Radius entsteht eine dichte Nebelfront und breitet sich in die von dir bestimmte Richtung aus.\nFertigkeiten: Wind und Wogen",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Begleiter (-4; die Nebelfront bewegt sich mit dir.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "8 KaP",
+    "erlernen": "Eff 14; Swa 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "hhWGBZV5h2TXovlU",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429834,
+    "modifiedTime": 1767873429834,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!hhWGBZV5h2TXovlU"
+}

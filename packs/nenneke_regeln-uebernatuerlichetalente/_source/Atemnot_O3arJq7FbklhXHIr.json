@@ -1,0 +1,42 @@
+{
+  "name": "Atemnot",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du entziehst dem Opfer einen Teil seiner Kraft. Es erleidet 2 Punkte Erschöpfung. Du regenerierst die Hälfte der angerichteten Erschöpfung.\nFertigkeiten: Eigenschaften",
+    "maechtig": "Verursacht 1 weiteren Punkt Erschöpfung.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Dru 14; Ach 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "O3arJq7FbklhXHIr",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424261,
+    "modifiedTime": 1767873424261,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!O3arJq7FbklhXHIr"
+}

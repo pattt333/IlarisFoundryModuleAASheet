@@ -1,0 +1,42 @@
+{
+  "name": "Rahjalinas Kuss",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Rausch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erhältst einen kurzen Einblick in den Traum deines Ziels. Über den Inhalt musst du anderen gegenüber schweigen.\nFertigkeiten: Rausch",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Traumreise (-4, 8 KaP; du kannst in den Traum des Schlafenden reisen.)\nGroße Traumreise (-8, 16 KaP; du kannst mit einigen Gefährten in den Traum reisen.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "4 KaP",
+    "erlernen": "Rah 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "J2lJ34Eiom8c7QnC",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431396,
+    "modifiedTime": 1767873431396,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!J2lJ34Eiom8c7QnC"
+}

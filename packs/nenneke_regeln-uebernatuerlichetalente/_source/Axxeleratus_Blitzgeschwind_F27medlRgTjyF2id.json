@@ -1,0 +1,42 @@
+{
+  "name": "Axxeleratus Blitzgeschwind",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die GS deines Zieles erhöht sich um +4 und alle AT und VT sind um +2 erleichtert, Ausweichen um weitere +2.\nFertigkeiten: Eigenschaften",
+    "maechtig": "Die GS steigt um weitere +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 12; Ach, Sch 14; Mag 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "F27medlRgTjyF2id",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424280,
+    "modifiedTime": 1767873424280,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!F27medlRgTjyF2id"
+}

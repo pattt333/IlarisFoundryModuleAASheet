@@ -1,0 +1,42 @@
+{
+  "name": "Brazoraghs Hieb",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Geister des Zorns",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die so verzauberte Nahkampfwaffe gilt als magisch und verursacht Niederwerfen.\nFertigkeiten: Eigenschaften, Geister des Zorns",
+    "maechtig": "Waffenschaden +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "16 AsP, davon 4 gAsP",
+    "erlernen": "Smn 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "CaE8t5nTF3WyAjaW",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427335,
+    "modifiedTime": 1767873427335,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!CaE8t5nTF3WyAjaW"
+}

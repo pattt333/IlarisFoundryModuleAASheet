@@ -1,0 +1,42 @@
+{
+  "name": "Thalionmels Schlachtgesang",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schutz der Gläubigen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst Thalionmels Segen auf dich herab und erleidest keine Wundabzüge. Kannst du Wundabzüge ohnehin ignorieren, sind Proben gegen Wundschmerz um deine Wundabzüge erleichtert. Außerdem kannst du eine (weitere) VT zwischen zwei Initiativephasen als freie Reaktion ausführen. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Schutz der Gläubigen",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Thalionmels Opfer (Wirkungsdauer 1 Stunde; du bis zusätzlich immun gegen Entwaffnen-, Niederwerfen- oder Betäubungseffekte und bleibst kampffähig, bis du 16 Wunden erlitten hast. Am Ende der Wirkungsdauer ruft dich Rondra zu sich.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 KaP",
+    "erlernen": "Ron 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rSeYK9osru1cEgSB",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431645,
+    "modifiedTime": 1767873431645,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rSeYK9osru1cEgSB"
+}

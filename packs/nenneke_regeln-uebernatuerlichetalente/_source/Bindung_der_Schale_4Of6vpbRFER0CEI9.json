@@ -1,0 +1,42 @@
+{
+  "name": "Bindung der Schale",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Schalenzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stellst eine enge magische Bindung zu deiner Schale der Alchemie her, welche die Voraussetzung für alle weiteren Talente dieser Fertigkeit ist. Außerdem wird die Schale der Alchemie unzerbrechlich.\nFertigkeiten: Kraft, Schalenzauber",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Schale der Alchemie",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "permanent",
+    "kosten": "16 AsP",
+    "erlernen": "Alch 8; Hex 14; Mag 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4Of6vpbRFER0CEI9",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428372,
+    "modifiedTime": 1767873428372,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4Of6vpbRFER0CEI9"
+}

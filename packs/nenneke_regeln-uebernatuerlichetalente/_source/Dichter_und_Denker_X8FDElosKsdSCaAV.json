@@ -1,0 +1,42 @@
+{
+  "name": "Dichter und Denker",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer kann sich nur noch in Reimen ausdrücken. Zauber können nur noch gewirkt werden, wenn ihm ein passender Reim auf den Zaubernamen einfällt.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "X8FDElosKsdSCaAV",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424526,
+    "modifiedTime": 1767873424526,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!X8FDElosKsdSCaAV"
+}

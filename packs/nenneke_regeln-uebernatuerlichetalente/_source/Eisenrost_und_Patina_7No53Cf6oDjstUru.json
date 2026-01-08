@@ -1,0 +1,42 @@
+{
+  "name": "Eisenrost und Patina",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Temporal, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du lässt einen sehr kleinen (S. 46), metallischen Gegenstand altern. Innerhalb der nächsten 16 Initiativephasen verschiebt sich sein Zustand auf der Skala neu/benutzt/verschlissen/alt/unbrauchbar/zerstört um zwei Stufen. Magische und geweihte Gegenstände sind gegen den Zauber immun.\nFertigkeiten: Temporal, Verwandlung",
+    "maechtig": "Du kannst den Zustand des Gegenstandes um eine weitere Stufe verschieben.",
+    "schwierigkeit": "12",
+    "modifikationen": "Größeres Ziel (-4; das Ziel kann eine Kategorie größer sein. Mehrfach wählbar.)\nRostträger (-4; du kannst das Objekt auch mit einem beliebigen Gegenstand wie deiner Waffe berühren.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Mag 12; Ach, Alch, Dru 14; Sch 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7No53Cf6oDjstUru",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425961,
+    "modifiedTime": 1767873425961,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7No53Cf6oDjstUru"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Neun Streiche in einem",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Guter Kampf",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du wirfst die Kraft des Gnadenlosen in deinen nächsten Angriff. Trifft dieser Angriff, richtest du für jeden bisherigen Treffer gegen das Ziel in diesem Kampf 1W6 TP zusätzlich an. Das Maximum liegt bei 8W6 TP.\nFertigkeiten: Guter Kampf",
+    "maechtig": "Der Angriff ist um +2 erleichtert.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Kor 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6G4K4xDS2zyr4s1U",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873432097,
+    "modifiedTime": 1767873432097,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6G4K4xDS2zyr4s1U"
+}

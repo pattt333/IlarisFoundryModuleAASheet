@@ -1,0 +1,42 @@
+{
+  "name": "Adlerauge Luchsenohr",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Hellsicht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du schärfst deine Sinne auf magische Weise. Alle Proben auf Sinnenschärfe und Wachsamkeit sind um +4 erleichtert.\nFertigkeiten: Eigenschaften, Hellsicht",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Einzelsinn (-4, Wirkungsdauer 1 Stunde; nur ein Sinn ist betroffen.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 8; Ach, Alch, Dru, Hex, Geo, Mag, Sch 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "abr1HyHfNyFjAkSs",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424245,
+    "modifiedTime": 1767873424245,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!abr1HyHfNyFjAkSs"
+}

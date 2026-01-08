@@ -1,0 +1,42 @@
+{
+  "name": "Sichere Aufbewahrung (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schalenzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "In der Schale aufbewahrte Substanzen verderben oder zersetzen sich nicht. Du kannst so auch explosive Materialien sicher transportieren.",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Alch 14; Hex 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Z3HKkRpeUQAaXwpY",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428454,
+    "modifiedTime": 1767873428454,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Z3HKkRpeUQAaXwpY"
+}

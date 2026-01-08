@@ -1,0 +1,42 @@
+{
+  "name": "Geteiltes Leid",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heim und Herd, Wildnis",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst den Mantel der Heiligen Matscha und schneidest für den Gesegneten ein Stück ab. Der Mantel verleiht ihm Immunität gegen Kälteschaden, bis er an angemessene Kleidung gelangen kann.\nFertigkeiten: Heim und Herd, Wildnis",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Monat",
+    "kosten": "8 KaP",
+    "erlernen": "Ifi 12; Tra 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "BURyr8NxlJCevAjC",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430061,
+    "modifiedTime": 1767873430061,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!BURyr8NxlJCevAjC"
+}

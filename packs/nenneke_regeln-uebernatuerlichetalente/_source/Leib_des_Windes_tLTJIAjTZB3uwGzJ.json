@@ -1,0 +1,42 @@
+{
+  "name": "Leib des Windes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du harmonierst mit dem Element Luft. Du bist immun gegen Luftschaden, wiegst nur noch die Hälfte und Winde beeinflussen dich nicht.\nFertigkeiten: Luft, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Reise im Wind (-4; du kannst dich mit GS Schritt pro Initiativephase durch die Luft bewegen, als würdest du darin tauchen.)\nBegleiter (-4; der Zauber betrifft auch eine weitere Person, mit der du permanent Hautkontakt halten musst.)\nLeib aus Luft (-8; Deine Kreaturenklasse wird zu \"Elementar\" mit allen entsprechenden Eigenschaften (S. 99). Du kannst während der Wirkungsdauer keine Zauber wirken.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Elf 16; Hex 18; Ach, Dru, Geo, Mag 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "tLTJIAjTZB3uwGzJ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425782,
+    "modifiedTime": 1767873425782,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!tLTJIAjTZB3uwGzJ"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Rhetorik",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Rhetorik beinhaltet zahlreiche Fähigkeiten und Kniffe, um die eigenen Argumente wirkungsvoll einzusetzen und die des Gegenüber zu entkräften. Du kannst Rhetorik nur einsetzen, wenn dein Charakter von seinem Standpunkt überzeugt ist - dreiste Lügen fallen unter Überreden.",
+    "fertigkeit": "Diplomatie",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ugl0yX33JaZfhTgQ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090412,
+    "modifiedTime": 1767788090412,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ugl0yX33JaZfhTgQ"
+}

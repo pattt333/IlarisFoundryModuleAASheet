@@ -1,0 +1,42 @@
+{
+  "name": "Arcanovi Artefakt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Arcanovi ist der bindende Spruch eines Artefaktes, in das du weitere Zauber sprechen kannst (mehr zu Artefakten siehe S. 78).\nFertigkeiten: Kraft",
+    "maechtig": "",
+    "schwierigkeit": "nach Artefakt",
+    "modifikationen": "",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "nach Artefakt",
+    "kosten": "8 AsP",
+    "erlernen": "Alch 12; Ach, Mag, Srl 16; Geo, Hex 18; Dru, Elf 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "X87SFhHhXD8pwxer",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425594,
+    "modifiedTime": 1767873425594,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!X87SFhHhXD8pwxer"
+}

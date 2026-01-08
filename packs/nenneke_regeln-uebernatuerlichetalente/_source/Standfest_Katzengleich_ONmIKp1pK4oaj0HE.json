@@ -1,0 +1,42 @@
+{
+  "name": "Standfest Katzengleich",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Geschicklichkeit erhöht sich. Alle Proben, um auf den Beinen zu bleiben, sind um +4 erleichtert und deine Patzerchance im Kampf sinkt um 1 auf dem W20.\nFertigkeiten: Eigenschaften",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Elf 14; Ach 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ONmIKp1pK4oaj0HE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424438,
+    "modifiedTime": 1767873424438,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ONmIKp1pK4oaj0HE"
+}

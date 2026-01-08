@@ -1,0 +1,42 @@
+{
+  "name": "Phexens Meisterschlüssel",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Nächtlicher Schatten",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst Phexens Meisterschlüssel herbei, der fast jedes Schloss öffnet. Bei magisch gesicherten Schlössern wirkt die Liturgie als <i>Konterprobe</i> (8), bei deren Gelingen der Zauber aufgehoben wird.\nFertigkeiten: Nächtlicher Schatten",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelobjekt",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 KaP",
+    "erlernen": "Phe 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "mnA9U6fivITFAID0",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431031,
+    "modifiedTime": 1767873431031,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!mnA9U6fivITFAID0"
+}

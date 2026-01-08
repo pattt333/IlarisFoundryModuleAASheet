@@ -1,0 +1,42 @@
+{
+  "name": "Große Verwirrung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer kann sich nicht mehr konzentrieren. Alle Proben auf KL und IN sind um -4 erschwert, Proben auf Fertigkeiten mit KL oder IN um -2.\nFertigkeiten: Eigenschaften",
+    "maechtig": "Der Malus steigt um -2/-1.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "4 AsP",
+    "erlernen": "Dru, Geo 8; Sch 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LLThX2NkZp437EZ3",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424336,
+    "modifiedTime": 1767873424336,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LLThX2NkZp437EZ3"
+}

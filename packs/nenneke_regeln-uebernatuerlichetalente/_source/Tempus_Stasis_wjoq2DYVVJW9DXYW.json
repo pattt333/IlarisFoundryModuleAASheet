@@ -1,0 +1,42 @@
+{
+  "name": "Tempus Stasis",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Temporal",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du hältst in einem Radius von 8 Schritt die Zeit an – für alles außer dich. Alle betroffenen Wesen und Gegenstände sind unbeweglich und völlig unzerstörbar. Blutungen, Gifte und Krankheiten werden angehalten und Geschosse und ballistische Zauber bleiben im Flug stehen und bewegen sich erst nach dem Ende der Wirkungsdauer weiter.\nFertigkeiten: Temporal",
+    "maechtig": "Du kannst eine weitere Person von der Wirkung ausnehmen.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Ach, Mag 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wjoq2DYVVJW9DXYW",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425995,
+    "modifiedTime": 1767873425995,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wjoq2DYVVJW9DXYW"
+}

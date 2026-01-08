@@ -1,0 +1,42 @@
+{
+  "name": "Blick in die Gedanken",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du siehst die Gedanken deines Ziels als verschwommene Bilder vor dir. Weiß das Ziel, dass seine Gedanken gelesen werden, kann es dich mit einer <i>Konterprobe</i> (Willenskraft, 20) in die Irre führen.\nFertigkeiten: Hellsicht",
+    "maechtig": "Du erhältst einen deutlichen/klaren Einblick in die Gedanken deines Ziels.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Kampfsinn (nur Elf, -4; du kannst die AT des Gegners vorhersehen, VT gegen diesen Gegner sind um +4 erleichtert.)\nTraumreise (-4, Wirkungsdauer 1 Stunde; du kannst an den Träumen des Ziels teilhaben.)\nVerhandlungssinn (nicht Elf, -4, Wirkungsdauer 1 Stunde; du kannst die Argumente und Absichten deines Ziels vorhersehen, gesellschaftliche Proben sind um +2 erleichtert.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Elf, Mag 14; Dru, Hex 16; Geo 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "UU5Umr6mmZCHZeoN",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425066,
+    "modifiedTime": 1767873425066,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!UU5Umr6mmZCHZeoN"
+}

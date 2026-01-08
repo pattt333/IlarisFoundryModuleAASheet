@@ -1,0 +1,42 @@
+{
+  "name": "Kugel des Hellsehers (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kugelzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du lässt 2 gAsP in die Kugel fließen. Fortan sind Hellsichtszauber um +1 erleichtert.\nFertigkeiten: Hellsicht, Kugelzauber",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "Mächtige Kugel (Hellsichtszauber sind um +2 erleichtert, du musst 4 gAsP in die Kugel fließen lassen.)",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Mag, Srl 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "pV2JKCfHtOu29jnh",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428201,
+    "modifiedTime": 1767873428201,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!pV2JKCfHtOu29jnh"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Chimaeroform Hybridgestalt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erschaffst eine Chimäre aus zwei oder mehr Lebewesen. Eines dieser Lebewesen kann durch einen Dämon ersetzt werden. Die Chimäre hat sich nach 1 Stunde an ihre Existenz gewöhnt und ist einsatzfähig. Schwierigkeit und Kosten richten sich nach deren Mächtigkeit auf der Skala schwach (z. B. Hundeblume)/nützlich (z. B. Widderhyäne)/stark (z. B. Mantikor)/mächtig (z. B. Drachenchimäre). Die Beherrschungsprobe wird auf MU abgelegt. Wenn diese misslingt, kannst du es nach 1 Stunde erneut versuchen. Mehr zu Beschwörungen siehe S. 81.\nFertigkeiten: Dämonisch, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12/16/20/24",
+    "modifikationen": "",
+    "vorbereitung": "frei wählbar",
+    "ziel": "Material für eine einzelne Chimäre",
+    "reichweite": "",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "8/16/24/32 AsP, ein Viertel der Basiskosten als gAsP",
+    "erlernen": "Mag 18; Hex 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "f8cbMlmKPDVg1WsN",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423826,
+    "modifiedTime": 1767873423826,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!f8cbMlmKPDVg1WsN"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Reflectimago Spiegelschein",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Durch eine <i>Illusion</i> (Sicht) kannst du während der Wirkungsdauer bis zu 4 Objekten in deinem Sichtbereich eine verspiegelte Oberfläche geben, die eine Stunde hält. Das Objekt kann maximal so groß wie eine Tür sein.\nFertigkeiten: Illusion, Verwandlung",
+    "maechtig": "Die Zahl der Objekte steigt um 2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Handspiegel (-4, 1 AsP; ein Teil deines Körpers wird verspiegelt.)\nSpiegelsaal (-4; du kannst die Spiegel in der Luft entstehen lassen.)\nOptik-Trick (-4; du kannst die Formen und Brennweiten der Spiegel verändern.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Mag 14; Srl 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "hJYUWK3rFCqPRjrD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425517,
+    "modifiedTime": 1767873425517,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!hJYUWK3rFCqPRjrD"
+}

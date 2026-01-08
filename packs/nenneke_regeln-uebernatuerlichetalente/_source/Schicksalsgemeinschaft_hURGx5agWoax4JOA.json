@@ -1,0 +1,42 @@
+{
+  "name": "Schicksalsgemeinschaft",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Harmonie, Heim und Herd, Stiller Wanderer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stärkst das gegenseitige Vertrauen zwischen bis zu 8 treuen Gefährten. Häufig wird dieser Segen auf eine Familie (Tra), ein Liebespaar (Rah) oder eine Reisegruppe (Aves) gewirkt. Einmal pro Woche kann einer der Gesegneten einen Schicksalspunkt an einen anderen weitergeben.\nFertigkeiten: Harmonie, Heim und Herd, Stiller Wanderer",
+    "maechtig": "Der Schicksalspunkt kann einmal pro Tag/4 Stunden/1 Stunde/jederzeit weitergegeben werden.",
+    "schwierigkeit": "12",
+    "modifikationen": "Permanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, Kosten 8 KaP, davon 2 gKaP)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "8 KaP",
+    "erlernen": "Rah 14; Aves, Tra 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "hURGx5agWoax4JOA",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431306,
+    "modifiedTime": 1767873431306,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!hURGx5agWoax4JOA"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Alpgestalt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erscheinst deinem Opfer als grauenvolle Gestalt aus den Niederhöllen. Es kann nicht wegsehen und ist vor Angst handlungsunfähig. Wird der Sichtkontakt unterbrochen, endet der Zauber.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Fremdgestalt (-4; du kannst eine andere Person wählen, die als Alpgestalt erscheint.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelwesen",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "16 AsP",
+    "erlernen": "Dru 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "OyjstJm2l8jrv3XI",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424477,
+    "modifiedTime": 1767873424477,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!OyjstJm2l8jrv3XI"
+}

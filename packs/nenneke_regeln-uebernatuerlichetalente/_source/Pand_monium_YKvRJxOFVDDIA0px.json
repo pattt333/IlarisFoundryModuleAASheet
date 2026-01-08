@@ -1,0 +1,42 @@
+{
+  "name": "Pandämonium",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "In einem Radius von 2 Schritt um das Ziel brechen Klauen, Mäuler und Tentakel hervor. Jedes Wesen ohne den Vorteil Unheilig erleidet 2W6 TP pro Initiativephase und kann sich nur mit einer <i>Konterprobe</i> (GE, 16) fortbewegen.\nFertigkeiten: Dämonisch",
+    "maechtig": "Der Schaden steigt um 1W6 TP und der Radius erhöht sich um 4 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Bor 16; Hex 18; Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "YKvRJxOFVDDIA0px",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423941,
+    "modifiedTime": 1767873423941,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!YKvRJxOFVDDIA0px"
+}

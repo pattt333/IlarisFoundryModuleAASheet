@@ -1,0 +1,42 @@
+{
+  "name": "Handwerkssegen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Handwerk",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Segen erleichtert alle Proben zur Herstellung eines Handwerksstückes um +2.\nFertigkeiten: Heiliges Handwerk",
+    "maechtig": "Der Bonus steigt um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis zur Fertigstellung",
+    "kosten": "8 KaP",
+    "erlernen": "Ang, Ing 12; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wjIul0lqbSPObw4i",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430747,
+    "modifiedTime": 1767873430747,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wjIul0lqbSPObw4i"
+}

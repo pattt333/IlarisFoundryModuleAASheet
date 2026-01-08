@@ -1,0 +1,42 @@
+{
+  "name": "Warzen sprießen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hexenflüche, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eklige Warzen entstellen das Gesicht deines Ziels. Die Vorteile Eindrucksvoll I und II werden aufgehoben und alle Proben auf Autorität, Beeinflussung und Gebräuche sind um -2 erschwert.\nFertigkeiten: Hexenflüche, Verwandlung",
+    "maechtig": "Der Malus steigt um -1.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 8; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rwK29vVpYi2BmT2Z",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427798,
+    "modifiedTime": 1767873427798,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rwK29vVpYi2BmT2Z"
+}

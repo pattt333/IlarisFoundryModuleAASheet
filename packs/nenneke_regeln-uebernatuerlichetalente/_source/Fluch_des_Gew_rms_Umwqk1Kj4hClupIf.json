@@ -1,0 +1,42 @@
+{
+  "name": "Fluch des Gewürms",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Verständigung, Geister des Zorns",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer wird von einer Myriade Insekten und Kleintieren bedeckt. Misslingt eine <i>Konterprobe</i> (Willenskraft, 16), ist es handlungsunfähig. Gelingt die <i>Konterprobe</i>, sind alle Proben um -4 erschwert.\nFertigkeiten: Dämonisch, Verständigung, Geister des Zorns",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Umwqk1Kj4hClupIf",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427380,
+    "modifiedTime": 1767873427380,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Umwqk1Kj4hClupIf"
+}

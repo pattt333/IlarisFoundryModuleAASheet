@@ -1,0 +1,42 @@
+{
+  "name": "Rondragabunds Führung",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schutz der Gläubigen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Heilige Rondragabund führt die Hand des Gesegneten. Bei Verteidigungen kann er statt seines eigentlichen PW einen PW von 8 verwenden.\nFertigkeiten: Schutz der Gläubigen",
+    "maechtig": "Der Gesegnete kann einen PW von 10/12/14/16 verwenden.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 KaP",
+    "erlernen": "Ron 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yhr4G42koPnBXxYm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431606,
+    "modifiedTime": 1767873431606,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yhr4G42koPnBXxYm"
+}

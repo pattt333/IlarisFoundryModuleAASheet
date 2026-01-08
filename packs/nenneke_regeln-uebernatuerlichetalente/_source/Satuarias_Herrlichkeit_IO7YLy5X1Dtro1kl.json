@@ -1,0 +1,42 @@
+{
+  "name": "Satuarias Herrlichkeit",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Aussehen weckt Begehren in allen an deinem Geschlecht und deiner Spezies interessierten Individuen. Ihnen gegenüber sind Betören-Proben um +4 erleichtert.\nFertigkeiten: Eigenschaften, Illusion",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "IO7YLy5X1Dtro1kl",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424403,
+    "modifiedTime": 1767873424403,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!IO7YLy5X1Dtro1kl"
+}

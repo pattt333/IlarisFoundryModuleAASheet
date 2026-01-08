@@ -1,0 +1,42 @@
+{
+  "name": "Koboldvision",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bist in der Lage, während der Wirkungsdauer in die Feenwelt zu blicken, sofern sich ein Übergang in der Nähe befindet. Achaz blicken mit diesem Zauber in entrückte Globulen.\nFertigkeiten: Hellsicht, Kraft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "4 AsP",
+    "erlernen": "Sch 14; Ach 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "0IO1Z2BaRsRyuW6X",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425102,
+    "modifiedTime": 1767873425102,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!0IO1Z2BaRsRyuW6X"
+}

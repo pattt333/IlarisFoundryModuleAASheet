@@ -1,0 +1,42 @@
+{
+  "name": "Speisesegen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heim und Herd, Zwölfgöttlicher Ritus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du reinigst eine Mahlzeit für bis zu 16 Personen von Schmutz, Fäulnis und Krankheiten.\nFertigkeiten: Heim und Herd, Zwölfgöttlicher Ritus",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "2 KaP",
+    "erlernen": "Tra 4; Ang, Aves, Eff, Brn, Fir, Hes, Ifi, Ing, Kor, Nan, Per, Phe, Pra, Rah, Ron, Tsa, Swa 8; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "TfjEbdiQCGLVqs6A",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429348,
+    "modifiedTime": 1767873429348,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!TfjEbdiQCGLVqs6A"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Brenne toter Stoff! (Dämonisch)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Feuer, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "$talent:Brenne toter Stoff!$\nFertigkeiten: Dämonisch (nicht in Geo, Mag, Srl), Feuer, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Bor 12; Alch, Geo 14; Ach, Mag 18; Srl 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wC6C3vUXoJfxObJj",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423817,
+    "modifiedTime": 1767873423817,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wC6C3vUXoJfxObJj"
+}

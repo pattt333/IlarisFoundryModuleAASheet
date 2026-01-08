@@ -1,0 +1,42 @@
+{
+  "name": "Borons süße Gnade",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Vergessen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stellst verlorene Erinnerungen wieder her oder nimmst deinem Ziel die Erinnerung an bestimmte Ereignisse, wenn ihm eine <i>Konterprobe</i> (KL, 20) misslingt. Du kannst Erinnerungen an maximal einen Zeitraum von einer Woche beeinflussen.\nFertigkeiten: Vergessen",
+    "maechtig": "Der Zeitraum beträgt maximal 1 Monat/Jahr/Jahrzehnt/unbegrenzt.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "permanent",
+    "kosten": "8 KaP",
+    "erlernen": "Brn 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wVjXSZM1xVQuu2z6",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429566,
+    "modifiedTime": 1767873429566,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wVjXSZM1xVQuu2z6"
+}

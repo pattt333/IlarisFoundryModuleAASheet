@@ -1,0 +1,42 @@
+{
+  "name": "Siegel Borons",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Vergessen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel kann über ein bestimmtes Wissen oder Ereignis nicht sprechen oder es auf irgendeine andere Art mitteilen, außer es gelingt ihm eine <i>Konterprobe</i> (Willenskraft, 20).\nFertigkeiten: Vergessen",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Umfassendes Siegel (-8, 16 KaP; das Ziel darf über einen großen Bereich seines Lebens nicht sprechen.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "permanent",
+    "kosten": "8 KaP",
+    "erlernen": "Brn 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "DNc7ihJOjkX38APN",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429621,
+    "modifiedTime": 1767873429621,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!DNc7ihJOjkX38APN"
+}

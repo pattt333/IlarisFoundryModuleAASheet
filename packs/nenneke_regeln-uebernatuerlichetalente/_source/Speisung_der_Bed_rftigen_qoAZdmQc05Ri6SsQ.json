@@ -1,0 +1,42 @@
+{
+  "name": "Speisung der Bedürftigen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heilung, Heim und Herd",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst einfaches und sättigendes Essen für 4 Menschen herbei.\nFertigkeiten: Heilung, Heim und Herd",
+    "maechtig": "Das Essen sättigt 2 weitere Menschen.",
+    "schwierigkeit": "12",
+    "modifikationen": "Heiliger Kessel (-8, Reichweite dereweit, 16 KaP; du rufst den Heiligen Kessel herbei. Die Nahrung in ihm reicht aus, eine große Menge von Bedürftigen zu speisen. Dann verschwindet der Kessel.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 KaP",
+    "erlernen": "Per, Tra 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "qoAZdmQc05Ri6SsQ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430835,
+    "modifiedTime": 1767873430835,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!qoAZdmQc05Ri6SsQ"
+}

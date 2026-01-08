@@ -1,0 +1,42 @@
+{
+  "name": "Rat der Ahnen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Geister rufen, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst einen Totengeist in den Körper eines seiner Nachfahren herab. Dort verhält er sich seinem Charakter gemäß; er kann Rat geben oder die Stammeskrieger anführen. Es ist nicht möglich, die Bindung zu lösen. Der Totengeist entscheidet selbst, wann er den Körper verlässt – notfalls ist ein Großer Geisterbann (S. 166) nötig. Der Tote muss im letzten Jahr verstorben sein.\nFertigkeiten: Geister rufen, Verständigung",
+    "maechtig": "Der Tote kann seit 10 Jahren/100 Jahren/1000 Jahren/seit Menschengedenken verstorben sein.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP, davon 2 gAsP",
+    "erlernen": "Smn 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "y1n0Ktyv1o85MOVr",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427618,
+    "modifiedTime": 1767873427618,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!y1n0Ktyv1o85MOVr"
+}

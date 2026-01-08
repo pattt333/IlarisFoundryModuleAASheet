@@ -1,0 +1,42 @@
+{
+  "name": "Dreifacher Saatsegen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Wachstum",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das gesegnete Feld ist vor Ernteschäden durch schlechte Witterung geschützt. Jeder Versuch, die Ernte magisch zu zerstören, ist um -4 erschwert.\nFertigkeiten: Wachstum",
+    "maechtig": "Der Malus steigt um -2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Monat",
+    "kosten": "4 KaP",
+    "erlernen": "Per 8; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "nmWEEjK15QULWGof",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430859,
+    "modifiedTime": 1767873430859,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!nmWEEjK15QULWGof"
+}

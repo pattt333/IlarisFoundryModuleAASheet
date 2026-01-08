@@ -1,0 +1,42 @@
+{
+  "name": "Radau",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verzauberst deinen Besen, sodass er ein zufälliges Ziel in einem Radius von 8 Schritt angreift (INI 8, RW 1, AT 8, TP 2W6). Fällt bei einer AT eine 1-4 (wird für den Besen passiv gewürfelt: bei einer VT eine 17-20), sucht sich der Besen ein neues Ziel. Während der Wirkungsdauer ist der Besen unzerbrechlich und magisch.\nFertigkeiten: Luft, Umwelt",
+    "maechtig": "AT und TP steigen um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Gezielte Wut (-4, Einzelwesen; der Besen greift nur ein von dir vorbestimmtes Ziel an.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelobjekt (Hexenbesen)",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Oga22X7D2eJ0G8h4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425862,
+    "modifiedTime": 1767873425862,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Oga22X7D2eJ0G8h4"
+}

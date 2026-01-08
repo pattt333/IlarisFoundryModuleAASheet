@@ -1,0 +1,42 @@
+{
+  "name": "Traumgestalt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst in die Träume eines schlafenden Zieles eindringen und ihm dort Botschaften überbringen. Woran sich das Ziel erinnern kann, ist Spielleiterentscheid. Du benötigst ein Körperteil des Opfers, um den Zauber zu wirken.\nFertigkeiten: Verständigung",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Marionettenspiel (-4; du kannst im Traum als jemand anders erscheinen.)\nTraumgestalten (-8, Wirkungsdauer 1 Stunde, 16 AsP; du kannst einige Gefährten in den Traum mitnehmen.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelperson",
+    "reichweite": "100 Meilen",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 14; Dru, Elf, Sch 18; Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "NCzKSxG1i0hMurkE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426296,
+    "modifiedTime": 1767873426296,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!NCzKSxG1i0hMurkE"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Melodie der Kunstfertigkeit",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Elfenlieder",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Melodie erleichtert alle Proben zur Herstellung eines bestimmten Handwerksstückes um +2.\nFertigkeiten: Eigenschaften, Elfenlieder",
+    "maechtig": "Der Bonus steigt um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis zur Fertigstellung",
+    "kosten": "16 AsP",
+    "erlernen": "Elf 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "WS8VZ9MKkUFhszPo",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426963,
+    "modifiedTime": 1767873426963,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WS8VZ9MKkUFhszPo"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Friedenslied",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Elfenlieder",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Alle Humanoide und Tiere in Hörreichweite verfallen in eine friedfertige Stimmung, auch wenn sie deine Musik nicht verstehen können. Aggressive Handlungen erfordern eine <i>Konterprobe</i> (Willenskraft, 16). Erfordert <i>Konzentration</i>, erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Einfluss, Elfenlieder",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "zkfBjM3dowMLBDiT",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426917,
+    "modifiedTime": 1767873426917,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!zkfBjM3dowMLBDiT"
+}

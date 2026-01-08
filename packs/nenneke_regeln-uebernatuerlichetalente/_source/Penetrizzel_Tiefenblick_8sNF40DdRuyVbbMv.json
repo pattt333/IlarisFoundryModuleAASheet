@@ -1,0 +1,42 @@
+{
+  "name": "Penetrizzel Tiefenblick",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst durch eine Wand von bis zu 1/2 Schritt Dicke sehen, solange die Wand nicht aus einem magischen oder magieabweisenden Material besteht.\nFertigkeiten: Hellsicht",
+    "maechtig": "Die mögliche Dicke steigt um 1/2 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Mag 14; Elf, Sch, Srl 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "8sNF40DdRuyVbbMv",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425129,
+    "modifiedTime": 1767873425129,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!8sNF40DdRuyVbbMv"
+}

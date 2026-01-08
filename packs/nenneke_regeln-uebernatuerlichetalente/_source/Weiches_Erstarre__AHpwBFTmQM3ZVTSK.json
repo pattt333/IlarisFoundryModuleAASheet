@@ -1,0 +1,42 @@
+{
+  "name": "Weiches Erstarre!",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du lässt bis zu 8 Raumschritt Luft, Wasser oder ein anderes „weiches“ Material zu einer festen, harten Masse mit einer Härte von 8 erstarren. Lebende Materie, oder Material, das ein Wesen berührt, kann nicht beeinflusst werden.\nFertigkeiten: Erz, Verwandlung",
+    "maechtig": "Die Härte steigt um +4.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Bor 14; Dru, Geo 16; Ach, Alch, Mag 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "AHpwBFTmQM3ZVTSK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424024,
+    "modifiedTime": 1767873424024,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!AHpwBFTmQM3ZVTSK"
+}

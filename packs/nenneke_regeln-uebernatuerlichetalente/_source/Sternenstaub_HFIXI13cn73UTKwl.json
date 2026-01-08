@@ -1,0 +1,42 @@
+{
+  "name": "Sternenstaub",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Abu al'Mada",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du wirfst Mondstaub in die Luft, der deine Gegner verwirrt. Alle Nah- und Fernkampfangriffe auf dich sind um -2 erschwert und Abzüge durch Dunkelheit sinken für dich um eine Stufe.\nFertigkeiten: Abu al'Mada",
+    "maechtig": "Der Malus steigt um -1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 KaP",
+    "erlernen": "Phe 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "HFIXI13cn73UTKwl",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430969,
+    "modifiedTime": 1767873430969,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!HFIXI13cn73UTKwl"
+}

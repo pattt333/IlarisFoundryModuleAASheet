@@ -1,0 +1,42 @@
+{
+  "name": "Regentanz",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Umwelt, Geister der Stärkung, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Innerhalb des nächsten Tages regnet es auf die Felder im Radius von 1 Meile und das Saatgut kann wachsen.\nFertigkeiten: Luft, Umwelt, Geister der Stärkung, Wasser",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "3OH9Zpef2y6vz4Id",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427199,
+    "modifiedTime": 1767873427199,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!3OH9Zpef2y6vz4Id"
+}

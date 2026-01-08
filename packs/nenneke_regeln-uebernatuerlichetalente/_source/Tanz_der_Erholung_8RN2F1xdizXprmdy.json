@@ -1,0 +1,42 @@
+{
+  "name": "Tanz der Erholung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Zaubertänze",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Tanz verschafft allen Humanoiden im Radius von 4 Schritt einen erholsamen Schlaf. In ihrer nächsten Ruhepause regenerieren sie eine zusätzliche Wunde.\nFertigkeiten: Humus, Zaubertänze",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 AsP",
+    "erlernen": "Ztz 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "8RN2F1xdizXprmdy",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429043,
+    "modifiedTime": 1767873429043,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!8RN2F1xdizXprmdy"
+}

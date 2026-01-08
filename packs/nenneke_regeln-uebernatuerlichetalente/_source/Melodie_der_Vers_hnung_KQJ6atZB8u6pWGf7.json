@@ -1,0 +1,42 @@
+{
+  "name": "Melodie der Versöhnung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Melodie schafft in 4 Schritt Radius eine versöhnliche Atmosphäre, wenn den Zuhörern keine <i>Konterprobe</i> (Magieresistenz, 16) gelingt. Proben auf Betören und Rhetorik sind um +4 erleichtert, Proben auf Überreden und Einschüchtern um -4 erschwert. Erfordert <i>Konzentration</i>, erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Einfluss, Zaubermelodien",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Bard 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "KQJ6atZB8u6pWGf7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428959,
+    "modifiedTime": 1767873428959,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!KQJ6atZB8u6pWGf7"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Hexenknoten",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Wenn den Umstehenden keine <i>Konterprobe</i> (MR, 16) gelingt, erscheint ihnen der Zauber als eine bis zu 4 Schritt lange, furchteinflößende Barriere, die sie keinesfalls durchschreiten wollen. Das Aussehen der Barriere bestimmt die Hexe.\nFertigkeiten: Einfluss, Illusion",
+    "maechtig": "Erhöht die Länge der Barriere um 4 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 8; Dru, Mag, Srl 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "T9aBGUTVKNzlHDcU",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424566,
+    "modifiedTime": 1767873424566,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!T9aBGUTVKNzlHDcU"
+}

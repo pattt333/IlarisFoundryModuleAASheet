@@ -1,0 +1,42 @@
+{
+  "name": "Weihe der Keule",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Keulenrituale, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stellst eine enge magische Bindung zu deiner Knochenkeule her, welche die Voraussetzung für alle weiteren Talente dieser Fertigkeit ist. Außerdem wird die Knochenkeule unzerbrechlich und zählt als magische Waffe.\nFertigkeiten: Keulenrituale, Kraft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Geerbte Keule (Du bindest die Keule deines Lehrmeisters. Von ihm auf die Keule gewirkte Rituale verfliegen, aber die Keule gilt als Lehrmeister für diese Rituale.)",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Knochenkeule",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "permanent",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 8; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "zT26nTN98it3ZhVj",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427820,
+    "modifiedTime": 1767873427820,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!zT26nTN98it3ZhVj"
+}

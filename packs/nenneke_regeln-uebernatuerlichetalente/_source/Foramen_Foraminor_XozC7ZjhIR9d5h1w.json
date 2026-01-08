@@ -1,0 +1,42 @@
+{
+  "name": "Foramen Foraminor",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du öffnest ein Schloss beliebiger Bauart.\nFertigkeiten: Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "Herstellungsschwierigkeit des Schlosses",
+    "modifikationen": "Riegel (-4, 8 AsP; auch ein schwerer Riegel wie an einem Stadttor kann hiermit geöffnet werden.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Alch, Mag 14; Srl 16; Sch 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "XozC7ZjhIR9d5h1w",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426049,
+    "modifiedTime": 1767873426049,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!XozC7ZjhIR9d5h1w"
+}

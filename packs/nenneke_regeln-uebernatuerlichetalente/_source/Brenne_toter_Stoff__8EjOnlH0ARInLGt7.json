@@ -1,0 +1,42 @@
+{
+  "name": "Brenne toter Stoff!",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Feuer, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du entzündest ein magisches Feuer, das 2W6 SP pro Initiativephase auf einem unbelebten Ziel anrichtet. Das Feuer brennt auf brennbaren Materialien auch nach dem Ende der Wirkungsdauer weiter.\nFertigkeiten: Feuer, Verwandlung",
+    "maechtig": "Je zwei Stufen erhöhen die SP um 1W6.",
+    "schwierigkeit": "12",
+    "modifikationen": "Flammeninferno (-8, 32 AsP; das Feuer breitet sich mit etwa 1 Schritt pro Initiativephase aus.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Bor 12; Alch, Geo 14; Ach, Mag 18; Srl 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "8EjOnlH0ARInLGt7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423809,
+    "modifiedTime": 1767873423809,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!8EjOnlH0ARInLGt7"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Travinians Segen des Lagerfeuers",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Sichere Heimkehr",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du segnest ein Lagerfeuer. Unheilige Wesenheiten in seinem Schein erleiden einen Furcht-Effekt der Stufe 2, wenn ihre Beschwörungsschwierigkeit maximal 20 beträgt.\nFertigkeiten: Sichere Heimkehr",
+    "maechtig": "Erhöht die maximale Beschwörungsschwierigkeit um 4.",
+    "schwierigkeit": "12",
+    "modifikationen": "Wärmendes Feuer (Wirkungsdauer 8 Stunden, 4 KaP; statt der gewöhnlichen Wirkung steigt die Temperatur um das Feuer zusätzlich um eine Stufe, bis maximal auf normal (siehe S. 35))",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 KaP",
+    "erlernen": "Tra 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "qXr9A1tut6brWgWt",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431802,
+    "modifiedTime": 1767873431802,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!qXr9A1tut6brWgWt"
+}

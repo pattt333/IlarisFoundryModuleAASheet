@@ -1,0 +1,42 @@
+{
+  "name": "Meisterstück",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Handwerk, Wissen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Während du dich in deine Handwerkskunst versenkst, wirst du mit Inspiration erfüllt. Du kannst ein Kunstwerk wie mit dem Vorteil Meisterwerk (S. 58) erschaffen. Besitzt du den Vorteil bereits, steigt die Qualität um eine weitere Stufe.\nFertigkeiten: Heiliges Handwerk, Wissen",
+    "maechtig": "",
+    "schwierigkeit": "Herstellungsschwierigkeit des Handwerksstücks",
+    "modifikationen": "",
+    "vorbereitung": "1 Tag",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis zur Fertigstellung",
+    "kosten": "32 KaP",
+    "erlernen": "Ang, Hes, Ing 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "mo69htQGo6zxzjJr",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430445,
+    "modifiedTime": 1767873430445,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!mo69htQGo6zxzjJr"
+}

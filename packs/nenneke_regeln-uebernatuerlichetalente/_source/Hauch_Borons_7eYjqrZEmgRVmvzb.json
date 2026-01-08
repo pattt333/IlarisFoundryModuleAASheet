@@ -1,0 +1,42 @@
+{
+  "name": "Hauch Borons",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schlaf",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Umgebung wird im Radius von 8 Schritt von absoluter Dunkelheit erfüllt, die dich selbst nicht einschränkt. Das Gebiet gilt als geweihter Boden. Die Liturgie gilt zusätzlich als <i>Konterprobe</i> (12) gegen Lichtzauber, die bei Gelingen aufgehoben werden.\nFertigkeiten: Schlaf",
+    "maechtig": "Mit zwei Stufen gilt der Boden als heilig.",
+    "schwierigkeit": "12",
+    "modifikationen": "Begleiter (-4, Wirkungsdauer 4 Minuten; die Dunkelheit bewegt sich mit dir.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 KaP",
+    "erlernen": "Brn 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7eYjqrZEmgRVmvzb",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429418,
+    "modifiedTime": 1767873429418,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7eYjqrZEmgRVmvzb"
+}

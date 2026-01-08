@@ -1,0 +1,42 @@
+{
+  "name": "Große Geistheilung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Geister vertreiben, Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erfüllst ein großes humusaffines Objekt wie einen Baum mit elementarer Lebenskraft. Wer im Radius von 8 Schritt eine Ruhepause verbringt, regeneriert eine zusätzliche Wunde.\nFertigkeiten: Geister vertreiben, Humus",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Heiliger Hain (-16, Wirkungsdauer bis die Bindung gelöst wird, 64 AsP, davon 16 gAsP)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "SLXza8BHEdQx3r4p",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427714,
+    "modifiedTime": 1767873427714,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!SLXza8BHEdQx3r4p"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Rhythmen des gottgefälligen Zornes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Trommelrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Waffen der Zuhörer im Radius von 4 Schritt gelten während der Wirkungsdauer als magisch.\nFertigkeiten: Kraft, Trommelrituale",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "16 AsP",
+    "erlernen": "Der 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rUdCcegBtOVsbTL1",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428654,
+    "modifiedTime": 1767873428654,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rUdCcegBtOVsbTL1"
+}

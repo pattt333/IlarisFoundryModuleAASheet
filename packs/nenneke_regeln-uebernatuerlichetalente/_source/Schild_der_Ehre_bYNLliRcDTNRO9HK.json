@@ -1,0 +1,42 @@
+{
+  "name": "Schild der Ehre",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Ehre",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ungezielte Geschosse (wie in einem Pfeilhagel) treffen dich nicht, Fernkampfangriffe und Zauber auf dich sind um -4 erschwert.\nFertigkeiten: Ehre",
+    "maechtig": "Erhöht den Malus um -2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 KaP",
+    "erlernen": "Ron 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "bYNLliRcDTNRO9HK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431488,
+    "modifiedTime": 1767873431488,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!bYNLliRcDTNRO9HK"
+}

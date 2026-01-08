@@ -1,0 +1,42 @@
+{
+  "name": "Anrufung Kaucas",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Wind und Wogen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Tosende Winde umgeben dich und wehren Fernkampfangriffe bis zur Größe eines Wurfspeeres ab. Ungezielte Geschosse (wie in einem Pfeilhagel) treffen dich nicht, Fernkampfangriffe auf dich sind um -4 erschwert.\nFertigkeiten: Wind und Wogen",
+    "maechtig": "Der Malus steigt um -2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Im Auge des Sturms (-8, Zone, 16 KaP; die Winde umgeben ein ganzes Schiff und wehren Geschosse bis zur Größe einer Rotzenkugel ab.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 KaP",
+    "erlernen": "Swa 14; Eff 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "uen8KYkrKJ46DGE7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429823,
+    "modifiedTime": 1767873429823,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!uen8KYkrKJ46DGE7"
+}

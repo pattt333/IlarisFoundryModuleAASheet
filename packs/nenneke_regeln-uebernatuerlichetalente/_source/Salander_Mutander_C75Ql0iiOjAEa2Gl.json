@@ -1,0 +1,42 @@
+{
+  "name": "Salander Mutander",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verwandelst dein Ziel in ein beliebiges anderes, kleineres und leichteres Tier oder eine solche Pflanze. Du musst das Zielwesen schon einmal gesehen haben, es kann nicht übernatürlich sein. Dein Ziel hat in seiner neuen Form nur noch nebulöse Erinnerungen an sein vorheriges Selbst, behält aber seine alte WS und MR.\nFertigkeiten: Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Lange Verwandlung (-4, Wirkungsdauer 1 Woche)\nPermanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, 16 AsP, davon 2 gAsP)\nBärenfell und Froschschenkel (-8; du kannst einzelne Gliedmaßen verwandeln.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "16 AsP",
+    "erlernen": "Ach, Mag 14; Alch, Hex 18; Dru 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "C75Ql0iiOjAEa2Gl",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426429,
+    "modifiedTime": 1767873426429,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!C75Ql0iiOjAEa2Gl"
+}

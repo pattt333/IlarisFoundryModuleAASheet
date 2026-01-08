@@ -1,0 +1,42 @@
+{
+  "name": "Hartes schmelze! (Dämonisch)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Verwandlung, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "$talent:Hartes schmelze!$\nFertigkeiten: Dämonisch (nicht Geo, Mag), Verwandlung, Wasser",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Bor 14; Ach, Dru, Geo 16; Alch, Mag 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "dw9NlXCwBHgjn0zE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423886,
+    "modifiedTime": 1767873423886,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!dw9NlXCwBHgjn0zE"
+}

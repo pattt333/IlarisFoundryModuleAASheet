@@ -1,0 +1,42 @@
+{
+  "name": "Custodosigil Diebesbann",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Feuer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du sicherst ein Gefäß von maximal 4 Stein mit einem magischen Siegel. Öffnet jemand außer dir das Gefäß, muss ihm eine <i>Konterprobe</i> (Schlösser knacken, 16) gelingen, sonst geht der Inhalt in Flammen auf.\nFertigkeiten: Feuer",
+    "maechtig": "Verdoppelt das Gewicht.",
+    "schwierigkeit": "12",
+    "modifikationen": "Personalisierung (-2; eine weitere Person kann das Gefäß öffnen. Mehrfach wählbar.)\nPermanenz (-4, 4 AsP, davon 1 gAsP, Wirkungsdauer bis die Bindung gelöst wird)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Jahr",
+    "kosten": "4 AsP",
+    "erlernen": "Ach, Mag 12; Alch, Srl 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oB5AhrezJuT3c9N6",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424965,
+    "modifiedTime": 1767873424965,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oB5AhrezJuT3c9N6"
+}

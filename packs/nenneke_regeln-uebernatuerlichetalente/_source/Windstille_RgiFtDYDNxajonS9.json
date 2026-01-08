@@ -1,0 +1,42 @@
+{
+  "name": "Windstille",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "In einem Radius von 32 Schritt senkst du die Windstärke auf einer Skala von windstill/leichte Brise/steife Brise/Sturm/Orkan um zwei Stufen.\nFertigkeiten: Luft, Umwelt",
+    "maechtig": "Du senkst die Windstärke um eine weitere Stufe.",
+    "schwierigkeit": "12",
+    "modifikationen": "Anderes Zentrum (-4, Zone, 16 Schritt)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 12; Mag 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "RgiFtDYDNxajonS9",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425922,
+    "modifiedTime": 1767873425922,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!RgiFtDYDNxajonS9"
+}

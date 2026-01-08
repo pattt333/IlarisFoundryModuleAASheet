@@ -1,0 +1,42 @@
+{
+  "name": "Warnender Klang",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du entlockst deinem Instrument einen alarmierenden Klang. Alle Zuhörer in 8 Meter Radius schrecken sofort auf und sind hellwach. Gegen folgende Angriffe gelten sie nicht als überrascht.\nFertigkeiten: Eigenschaften, Zaubermelodien",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Bard 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "781eEcobgye6HvbJ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429017,
+    "modifiedTime": 1767873429017,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!781eEcobgye6HvbJ"
+}

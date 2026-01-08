@@ -1,0 +1,42 @@
+{
+  "name": "Fluch des (Tieres)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Geister des Zorns",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ein zorniger Tiergeist straft das Ziel. Es erleidet einen Malus von -2 auf alle Werte, die dem Tier zugeordnet sind (S. 160).\nFertigkeiten: Einfluss, Geister des Zorns\nAnmerkung: Der Zauber muss für jedes Tier extra erlernt werden.",
+    "maechtig": "Der Malus steigt um -1.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Permanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, 16 AsP, davon 2 gAsP)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Smn 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "AwMtMPMjliX38USo",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427369,
+    "modifiedTime": 1767873427369,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!AwMtMPMjliX38USo"
+}

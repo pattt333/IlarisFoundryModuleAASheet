@@ -1,0 +1,42 @@
+{
+  "name": "Xenographus Schriftenkunde",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst den Sinn eines geschriebenen Satzes verstehen, auch wenn du Schrift und Sprache nicht kennst.\nFertigkeiten: Hellsicht",
+    "maechtig": "Verdoppelt die Anzahl der Sätze.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Alch 18; Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "R7BhP3BUY4kjqNnI",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425181,
+    "modifiedTime": 1767873425181,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!R7BhP3BUY4kjqNnI"
+}

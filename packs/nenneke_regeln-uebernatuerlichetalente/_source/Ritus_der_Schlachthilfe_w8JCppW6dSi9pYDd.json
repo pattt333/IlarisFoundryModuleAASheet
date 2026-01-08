@@ -1,0 +1,42 @@
+{
+  "name": "Ritus der Schlachthilfe",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heerführung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Während du meditierst, kann deine Schwertseele einem Gefährten im Kampf beistehen. Sie erscheint als geisterhafte Walküre und kann 8 Angriffe oder Paraden führen. Die Schwertseele verwendet deine Kampfwerte und -fähigkeiten, ohne Abzüge durch Einschränkungen oder andere negative Effekte. Erfordert <i>Konzentration</i>.\nFertigkeiten: Heerführung\nAnmerkung: Wenn ihr den Bund der Schwerter geschlossen habt, steigt die Reichweite auf aventurienweit.",
+    "maechtig": "4 weitere Angriffe oder Paraden sind möglich.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "1 Meile",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 KaP",
+    "erlernen": "Ron 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "w8JCppW6dSi9pYDd",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431526,
+    "modifiedTime": 1767873431526,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!w8JCppW6dSi9pYDd"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Lockruf und Feenfüße",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Einem kleinen, maximal 1 Stein schweren Objekt wachsen Feenfüße und es läuft zu dir. Die Feenfüße sind eine <i>Illusion</i> (Sicht).\nFertigkeiten: Illusion, Umwelt",
+    "maechtig": "Verdoppelt das Gewicht.",
+    "schwierigkeit": "12",
+    "modifikationen": "Da lang! (-4; du kannst ein anderes Ziel als dich selbst angeben.)\nErbsenparade (-4; der Zauber betrifft eine Gruppe von Gegenständen, die zusammen nicht mehr wiegen als das Maximalgewicht.)\nFeenflügel (-8; das Objekt fliegt zu dir.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Sch 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4pKUGGT5ysiYnZvt",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425484,
+    "modifiedTime": 1767873425484,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4pKUGGT5ysiYnZvt"
+}

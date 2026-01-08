@@ -1,0 +1,42 @@
+{
+  "name": "Matrixstabilisierung (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Stabzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Zauberstab stabilisiert die Zauberei bestimmter Fertigkeiten. In einem einstündigen Ritual, das 16 AsP kostet, kannst du eine Fertigkeit pro 4 volle Punkte PW Stabzauber wählen. Bei Proben auf diese Fertigkeiten patzt du nur, wenn der gewertete Würfel eine 1 zeigt und der nächsthöhere Würfel eine 1-8.",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Mag 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "QVv7YpZfFYMVhC6i",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428574,
+    "modifiedTime": 1767873428574,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!QVv7YpZfFYMVhC6i"
+}

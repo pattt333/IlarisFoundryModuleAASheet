@@ -1,0 +1,42 @@
+{
+  "name": "Göttliche Freiheit",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Fröhlicher Wanderer, Neubeginn, Rausch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Gesegnete wird von einer Fessel befreit, zum Beispiel von einer Eisenkette, von einer Sucht oder einem Einflusszauber. Körperliche Fesseln verschwinden dabei, geistige Fesseln werden während der Wirkungsdauer unterdrückt. Handelt sich es bei der Fessel um einen Zauber, wirkt die Liturgie als <i>Konterprobe</i> (8) gegen diesen Zauber. Bei einer gelungenen Probe wird der Zauber aufgehoben.\nFertigkeiten: Fröhlicher Wanderer, Neubeginn, Rausch",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 KaP",
+    "erlernen": "Aves, Rah, Tsa 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6crccFGxK907ASyQ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431371,
+    "modifiedTime": 1767873431371,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6crccFGxK907ASyQ"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Schützende Rotte",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Geister der Stärkung, Geister vertreiben, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bemalst einen Schild mit Tieren. Proben zur Abwehr von <i>ballistischen</i> Zaubern (siehe S. 124) sind mit diesem Schild um +4 erleichtert. Der Schild erleidet dabei keinen Schaden.\nFertigkeiten: Antimagie, Geister der Stärkung, Geister vertreiben, Kraft",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "4 AsP, davon 1 gAsP",
+    "erlernen": "Smn 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "kJLo1hRc6astgMqj",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427247,
+    "modifiedTime": 1767873427247,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!kJLo1hRc6astgMqj"
+}

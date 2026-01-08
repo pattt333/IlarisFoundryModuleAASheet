@@ -1,0 +1,42 @@
+{
+  "name": "Blendwerk",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eine <i>Illusion</i> (Sicht) deiner Wahl erscheint, die Bewegungen nach deinen Vorstellungen ausführt. Ihre maximale Größe beträgt PW Illusion x4 Raumschritt. Erfordert <i>Konzentration</i>.\nFertigkeiten: Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 8; Mag, Srl 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "W3SXP9Vi6elI6uZp",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425385,
+    "modifiedTime": 1767873425385,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!W3SXP9Vi6elI6uZp"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Krabbelnder Schrecken",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer wird von einer Myriade Insekten und Kleintieren bedeckt. Misslingt eine <i>Konterprobe</i> (Willenskraft, 16), ist es handlungsunfähig. Gelingt die <i>Konterprobe</i>, sind alle Proben um -4 erschwert.\nFertigkeiten: Dämonisch, Verständigung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Objekt verfluchen (-4, Einzelobjekt, 8 AsP; um das Objekt zu berühren, muss eine <i>Konterprobe</i> (MU, 16) bestanden werden.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Hex 18; Bor, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "IPQW10pOTYiUt6dU",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423926,
+    "modifiedTime": 1767873423926,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!IPQW10pOTYiUt6dU"
+}

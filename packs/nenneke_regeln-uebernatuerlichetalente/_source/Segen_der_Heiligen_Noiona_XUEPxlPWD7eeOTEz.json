@@ -1,0 +1,42 @@
+{
+  "name": "Segen der Heiligen Noiona",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heilung, Heim und Herd, Vergessen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erhältst während der Wirkungsdauer die Möglichkeit, mit deinem Probenwert in Heilkunde Gifte/Krankheiten auch Sucht- und Geisteskrankheiten zu heilen.\nFertigkeiten: Heilung, Heim und Herd, Vergessen",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "8 KaP",
+    "erlernen": "Brn 14; Per, Tra 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "XUEPxlPWD7eeOTEz",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429599,
+    "modifiedTime": 1767873429599,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!XUEPxlPWD7eeOTEz"
+}

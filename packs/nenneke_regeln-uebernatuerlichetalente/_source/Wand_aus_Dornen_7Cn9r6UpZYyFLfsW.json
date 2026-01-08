@@ -1,0 +1,42 @@
+{
+  "name": "Wand aus Dornen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eine 3 Schritt hohe und bis zu 4 Schritt lange Wand aus spitzen Dornen wächst entlang einer von dir bestimmten Linie aus dem Boden. Sie hat eine Härte von 16 und verfügt über Regeneration I (S. 97). Um sie zu durchqueren, musst du sie mit einer <i>Konterprobe</i> (GE, 16) betreten. Nach je 4 Initiativephasen kannst du eine <i>Konterprobe</i> (GE, 16) ablegen, um die Wand zu verlassen. Durch den Versuch erleidest du 2W6 TP.\nFertigkeiten: Humus",
+    "maechtig": "Die Höhe der Wand steigt um 1 Schritt, die Länge um bis zu 2 Schritt, und die Härte um 8.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Geo, Mag 18; Dru 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7Cn9r6UpZYyFLfsW",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425352,
+    "modifiedTime": 1767873425352,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7Cn9r6UpZYyFLfsW"
+}

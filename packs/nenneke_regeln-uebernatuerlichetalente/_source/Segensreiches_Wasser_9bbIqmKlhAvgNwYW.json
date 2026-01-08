@@ -1,0 +1,42 @@
+{
+  "name": "Segensreiches Wasser",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Flüsse und Quellen, Wachstum",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Efferdgeweihte rufen Efferds Wasserkrug, Perainegeweihte den Krug der Heiligen Lindegard. Der Krug ist mit 8 Schlucken heiligen Wassers gefüllt. Jeder Schluck heilt 1 Wunde oder stillt den Durst für einen Tag (Efferd) oder stärkt das Wachstum einer Nutzpflanze, die dann innerhalb eines Tages eine Anwendung Früchte/Blüten/Blätter hervorbringt (Peraine).\nFertigkeiten: Flüsse und Quellen, Wachstum",
+    "maechtig": "Der Krug enthält 4 zusätzliche Schlucke.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelobjekt",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "32 KaP",
+    "erlernen": "Eff, Per 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "9bbIqmKlhAvgNwYW",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429716,
+    "modifiedTime": 1767873429716,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!9bbIqmKlhAvgNwYW"
+}

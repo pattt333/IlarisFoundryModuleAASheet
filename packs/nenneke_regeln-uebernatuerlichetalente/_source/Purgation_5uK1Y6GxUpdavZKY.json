@@ -1,0 +1,42 @@
+{
+  "name": "Purgation",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Handwerk, Magie, Magiebann, Schutz der Gläubigen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bannst einen Zauber, in den gAsP geflossen sind (wie ein Artefakt oder ein permanenter Fluch), oder ein Wesen, in das gAsP geflossen sind (wie eine Chimäre oder einen gebundenen Dämon).\nFertigkeiten: Heiliges Handwerk, Magie, Magiebann, Schutz der Gläubigen",
+    "maechtig": "",
+    "schwierigkeit": "Probenschwierigkeit -4 bzw. Beschwörungsschwierigkeit -4",
+    "modifikationen": "Praios Gnade (Probenschwierigkeit 12, 32 KaP; du brennst einem Magiebegabten die astrale Kraft aus, wenn ihm eine <i>Konterprobe</i> (KO, 16) misslingt. Er verliert den Vorteil Zauberer und seine komplette Astralenergie.)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zauber oder Einzelwesen",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "halbe Basiskosten des Zaubers oder der Beschwörung in KaP",
+    "erlernen": "Pra, Hes 14; Ing 16; Ang, Ron 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "5uK1Y6GxUpdavZKY",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430295,
+    "modifiedTime": 1767873430295,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5uK1Y6GxUpdavZKY"
+}

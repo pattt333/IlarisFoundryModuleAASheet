@@ -1,0 +1,42 @@
+{
+  "name": "Blick aufs Wesen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Zauber offenbart dir die Fertigkeiten deines Ziels. Du erhältst einen groben Eindruck von seinen körperlichen, geistigen, handwerklichen, kämpferischen und zauberischen Fähigkeiten.\nFertigkeiten: Hellsicht",
+    "maechtig": "Du erfährst auch besonders hohe Fertigkeiten/markante Vorteile/Eigenheiten/Vorlieben und Vorgehen.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Leuchtende Persönlichkeit (-4; du erkennst in einer Gruppe von bis zu 8 Personen diejenige, die in einem von dir gewählten Bereich am meisten heraussticht. Durch eine <i>Konterprobe</i> (MR, 16) können sich die Personen vor der Entdeckung schützen.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelwesen",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 12; Geo, Mag 14; Ach, Alch, Dru, Hex, Sch 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "vceOv6BrIp9gGoqD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425050,
+    "modifiedTime": 1767873425050,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!vceOv6BrIp9gGoqD"
+}

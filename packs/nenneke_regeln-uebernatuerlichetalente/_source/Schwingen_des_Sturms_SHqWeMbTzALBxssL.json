@@ -1,0 +1,42 @@
+{
+  "name": "Schwingen des Sturms",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schutz der Gläubigen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du reitest auf den aufkommenden Sturmböen. Während der Wirkungsdauer kannst du zwei mal die Freie Aktion Sturmritt ausführen, in der du dich bis zu 8 Schritt bewegst und eine Attacke (als Teil der freien Aktion) ausführst. Falls diese Attacke ein Ausfall ist, ist das Manöver nicht erschwert. Die Bewegung mit dem Sturmritt löst keine Passierschläge aus und kann beim Spiel mit Bodenplänen auch durch Felder mit anderen Kämpfern führen.\nFertigkeiten: Schutz der Gläubigen",
+    "maechtig": "Du kannst die Freie Aktion ein zusätzliches Mal ausführen.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 KaP",
+    "erlernen": "Ron 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "SHqWeMbTzALBxssL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431619,
+    "modifiedTime": 1767873431619,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!SHqWeMbTzALBxssL"
+}

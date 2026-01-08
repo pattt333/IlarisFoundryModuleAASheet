@@ -1,0 +1,42 @@
+{
+  "name": "Tanz der Freude",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Zaubertänze",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Tanz stärkt die Lebenskräfte und beendet ein Gift oder eine Krankheit bis maximal Stufe 16.\nFertigkeiten: Humus, Zaubertänze",
+    "maechtig": "Die maximal aufgehobene Gift-/Krankheitsstufe steigt um 4.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Ztz 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Q6mpWxt4YUkEa8r5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429078,
+    "modifiedTime": 1767873429078,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Q6mpWxt4YUkEa8r5"
+}

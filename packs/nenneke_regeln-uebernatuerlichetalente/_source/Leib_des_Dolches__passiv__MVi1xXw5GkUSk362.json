@@ -1,0 +1,42 @@
+{
+  "name": "Leib des Dolches (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dolchzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Wenn du bei einer Verwandlung deines Körpers (egal ob freiwillig oder unfreiwillig) deinen Ritualgegenstand bei dir trägst, hast du ihn auch nach der Rückverwandlung wieder bei dir.",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Dru 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "MVi1xXw5GkUSk362",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426772,
+    "modifiedTime": 1767873426772,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!MVi1xXw5GkUSk362"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Neckeratem",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Wind und Wogen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Ziel kann im Wasser atmen und sieht durch Wasser wie durch Luft. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Wind und Wogen",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Gruß des Versunkenen (-8, Zone, 16 KaP; der Zauber betrifft alle im Radius von 4 Schritt.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "2 Stunden",
+    "kosten": "8 KaP",
+    "erlernen": "Eff 12; Swa 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "mLyaZO1oYsymkEKs",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429895,
+    "modifiedTime": 1767873429895,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!mLyaZO1oYsymkEKs"
+}

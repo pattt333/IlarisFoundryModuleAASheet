@@ -1,0 +1,42 @@
+{
+  "name": "Weg des Fuchses",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Nächtlicher Schatten, Stiller Wanderer, Wildnis",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst dich auch auf schlechten Pfaden, durch natürliche Hindernisse oder Menschenmassen wie auf einer normalen Straße bewegen. Proben in Verfolgungsjagden und unter schwierigen Bedingungen sind um +4 erleichtert.\nFertigkeiten: Nächtlicher Schatten, Stiller Wanderer, Wildnis",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 KaP",
+    "erlernen": "Fir, Phe 14; Aves, Ifi 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "QOrqyvzSRtpZS1wN",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430130,
+    "modifiedTime": 1767873430130,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!QOrqyvzSRtpZS1wN"
+}

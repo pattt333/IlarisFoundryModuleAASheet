@@ -1,0 +1,42 @@
+{
+  "name": "Versöhnliches Schicksal",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Stiller Wanderer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Wenn eine mit glücklicher Fügung verbesserte Probe misslingt, erhältst du bei 1-2 auf dem W6 den Schicksalspunkt zurück.\nFertigkeiten: Stiller Wanderer",
+    "maechtig": "Erhöht die Chance um 1 auf dem W6.",
+    "schwierigkeit": "12",
+    "modifikationen": "Zweite Chance (-8; die Liturgie wirkt auch, wenn eine mit einem Schicksalspunkt wiederholte Probe misslingt. Das gilt nur für die erste solche Wiederholung.)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "8 KaP, davon 2 gKaP",
+    "erlernen": "Aves 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LYyj4dUuppZtSxei",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873432031,
+    "modifiedTime": 1767873432031,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LYyj4dUuppZtSxei"
+}

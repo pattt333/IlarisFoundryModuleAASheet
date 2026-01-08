@@ -1,0 +1,42 @@
+{
+  "name": "Hauch des Elements",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eis, Erz, Feuer, Humus, Luft, Wasser, Geister der Stärkung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bindest einen elementaren Effekt in ein maximal truhengroßes Objekt. Der Effekt bemisst sich nach dem gewählten Element.\nEis: Senkt die Temperatur des Objekts und in seinem Inneren um 1 Stufe.\nErz: Verdoppelt das Gewicht des Objekts und seines Inhaltes.\nFeuer: Erhöht die Temperatur des Objekts und in seinem Inneren um 1 Stufe.\nHumus: Vervierfacht die Wachstumsgeschwindigkeit von Pflanzen.\nLuft: Verringert das Gewicht des Objekts und seines Inhalts um ein Viertel.\nWasser: Macht einen faustgroßen Teil biegsam wie Wachs.\nFertigkeiten: Eis, Erz, Feuer, Humus, Luft, Wasser, Geister der Stärkung\nAnmerkung: Manche elementaren Wirkungen sind für manche Schamanen äußerst ungewöhnlich (zum Beispiel Eis für Achaz oder Erz für Gjalsker)",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "1 AsP, davon 1 gAsP",
+    "erlernen": "Smn 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "uyPTQ8R9RLBMJSyi",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427168,
+    "modifiedTime": 1767873427168,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!uyPTQ8R9RLBMJSyi"
+}

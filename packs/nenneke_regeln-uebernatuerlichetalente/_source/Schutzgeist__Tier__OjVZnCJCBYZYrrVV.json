@@ -1,0 +1,42 @@
+{
+  "name": "Schutzgeist (Tier)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Geister der Stärkung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bittest den Geist eines Tieres, über eine Gruppe von bis zu 8 Gefährten zu wachen. Sie erhalten einen Bonus von +1 auf alle beim entsprechenden Tier angegebenen Werte, solange sie sich nicht weiter als 1 Meile von dir entfernen. Es kann nur ein Schutzgeist gleichzeitig aktiv sein.\nFertigkeiten: Eigenschaften, Geister der Stärkung\nAnmerkung: Der Zauber muss für jedes Tier extra erlernt werden.",
+    "maechtig": "Verdoppelt die Zahl der Ziele, je zwei Stufen erhöhen den Bonus um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "16 AsP, davon 4 gAsP",
+    "erlernen": "Smn 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "OjVZnCJCBYZYrrVV",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427257,
+    "modifiedTime": 1767873427257,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!OjVZnCJCBYZYrrVV"
+}

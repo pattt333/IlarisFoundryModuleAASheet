@@ -1,0 +1,42 @@
+{
+  "name": "Erster unter gleichen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Vertrautenmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Vertrautentier schüchtert Tiere aus seiner Gattung ein. Sie erleiden einen Furcht-Effekt Stufe 2.\nFertigkeiten: Einfluss, Vertrautenmagie",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "1 AsP",
+    "erlernen": "Geo, Hex 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "x4dp8gK4Q9lvdd2Z",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428738,
+    "modifiedTime": 1767873428738,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!x4dp8gK4Q9lvdd2Z"
+}

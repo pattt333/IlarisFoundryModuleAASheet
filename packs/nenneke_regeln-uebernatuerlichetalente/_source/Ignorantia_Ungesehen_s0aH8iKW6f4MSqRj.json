@@ -1,0 +1,42 @@
+{
+  "name": "Ignorantia Ungesehen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Zufällige Beobachter bemerken dich nicht und Umstehende verlieren das Interesse. Wenn jemand allein mit dir ist oder sich konzentriert, muss ihm eine <i>Konterprobe</i> (Wachsamkeit, 16) gelingen, um dich bewusst wahrzunehmen. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Einfluss, Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Srl 16; Mag 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "s0aH8iKW6f4MSqRj",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424594,
+    "modifiedTime": 1767873424594,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!s0aH8iKW6f4MSqRj"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Schiffe & Boote",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Manövrieren von kleinen Booten und größeren Segelschiffe, die eine entsprechende Mannschaft benötigen um bedient zu werden.",
+    "fertigkeit": "Fortbewegungsmittel",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "PJp4Jbvy6ZhwUHtX",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090578,
+    "modifiedTime": 1767788090578,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!PJp4Jbvy6ZhwUHtX"
+}

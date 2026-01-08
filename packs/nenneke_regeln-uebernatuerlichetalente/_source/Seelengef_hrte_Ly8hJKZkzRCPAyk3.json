@@ -1,0 +1,42 @@
+{
+  "name": "Seelengefährte",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Jagd",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bittest Firuns Wilde Jagd um einen Gefallen. Das Tier der Wilden Jagd, das diesen Gefallen am ehesten erfüllen kann und sich in einem Radius von 4 Meilen befindet, macht sich sofort auf den Weg zu dir und erfüllt den Gefallen. Ist diese Tierart in der Region nicht heimisch, erreicht der Ruf ein verwandtes Tier. Ist kein Tier in Reichweite, passiert nichts.\nFertigkeiten: Jagd",
+    "maechtig": "Du rufst 2/4/8/16 Tiere.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 KaP",
+    "erlernen": "Fir 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Ly8hJKZkzRCPAyk3",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429986,
+    "modifiedTime": 1767873429986,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Ly8hJKZkzRCPAyk3"
+}

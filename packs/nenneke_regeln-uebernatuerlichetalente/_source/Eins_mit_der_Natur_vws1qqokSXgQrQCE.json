@@ -1,0 +1,42 @@
+{
+  "name": "Eins mit der Natur",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Ziel kann in der Wildnis kann es natürliche Gefahren wie mit der Gabe Gefahreninstinkt erahnen. Beherrscht es die Gabe bereits, sind damit verbundene Proben um +4 erleichtert. Wirkt nicht unter der Erde, auf dem Meer oder in dämonisch pervertiertem Gebiet.\nFertigkeiten: Eigenschaften, Humus",
+    "maechtig": "Überleben-Proben sind um +2 erleichtert.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 8; Dru 14; Elf, Hex, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "vws1qqokSXgQrQCE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424306,
+    "modifiedTime": 1767873424306,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!vws1qqokSXgQrQCE"
+}

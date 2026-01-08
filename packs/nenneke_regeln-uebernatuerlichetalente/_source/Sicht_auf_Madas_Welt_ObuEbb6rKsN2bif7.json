@@ -1,0 +1,42 @@
+{
+  "name": "Sicht auf Madas Welt",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Abu al'Mada, Magie, Magiebann",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du nimmst magische Kraft in deiner Umgebung als silbernen Schimmer wahr. Das entspricht einem Analysegrad von 1 für die Intensitätsanalyse.\nFertigkeiten: Abu al'Mada, Magie, Magiebann",
+    "maechtig": "Der Anyalsegrad steigt um 1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "selbst",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "4 Initiativephasen",
+    "kosten": "4 KaP",
+    "erlernen": "Hes 8; Pra 12; Phe 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ObuEbb6rKsN2bif7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430307,
+    "modifiedTime": 1767873430307,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ObuEbb6rKsN2bif7"
+}

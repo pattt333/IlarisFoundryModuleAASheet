@@ -1,0 +1,42 @@
+{
+  "name": "Immerwährender Kampf",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Guter Kampf",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Lebenskraft deiner Feinde stärkt dich. Wenn du seit dem Beginn deiner letzten Initiativephase einen mindestens normal großen Gegner besiegt hast, regenerierst du eine Wunde, bei großen oder sehr großen Gegnern sogar zwei Wunden.\nFertigkeiten: Guter Kampf",
+    "maechtig": "Du kannst den Gegner seit der vor-/dritt-/viert-/fünftletzten Initiativephase besiegt haben. Allerdings kannst du die Liturgie pro besiegtem Gegner nur einmal nutzen.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 KaP",
+    "erlernen": "Kor 16; 80 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ieUvxi8mjeXgAeKm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873432083,
+    "modifiedTime": 1767873432083,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ieUvxi8mjeXgAeKm"
+}

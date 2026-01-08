@@ -1,0 +1,42 @@
+{
+  "name": "Geister austreiben",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du zeichnest ein Pentagramm, durch das ein Geist deiner Wahl verschwindet. Er kann 1 Woche lang nicht mehr umherspuken.\nFertigkeiten: Antimagie, Verständigung",
+    "maechtig": "Der Geist kann 1 Monat/1 Jahr/10 Jahre/100 Jahre nicht mehr umherspuken.",
+    "schwierigkeit": "16 bis 28 (nach Mächtigkeit des Geistes)",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "einzelner Geist",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 AsP",
+    "erlernen": "Dru 8; Mag 14; Geo, Hex 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "2nrkydEBu3zv1UD7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423677,
+    "modifiedTime": 1767873423677,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!2nrkydEBu3zv1UD7"
+}

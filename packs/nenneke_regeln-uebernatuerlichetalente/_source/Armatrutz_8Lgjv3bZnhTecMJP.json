@@ -1,0 +1,42 @@
+{
+  "name": "Armatrutz",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Erz",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der RS deines Zieles steigt um 1.\nFertigkeiten: Eigenschaften, Erz",
+    "maechtig": "Je zwei Stufen verleihen +1 RS.",
+    "schwierigkeit": "12",
+    "modifikationen": "Körperschild (-4, 1 AsP; der Armatrutz schützt nur eine Trefferzone.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "4 AsP",
+    "erlernen": "Elf, Mag 12; Alch 16; Dru, Hex 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "8Lgjv3bZnhTecMJP",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424253,
+    "modifiedTime": 1767873424253,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!8Lgjv3bZnhTecMJP"
+}

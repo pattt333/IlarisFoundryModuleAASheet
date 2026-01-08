@@ -1,0 +1,42 @@
+{
+  "name": "Komm Kobold komm",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst einen Kobold zur Hilfe. Befinden sich Kobolde in einem Radius von 1 Meile, eilt einer von ihnen herbei. Du kannst den Kobold um einen Gefallen bitten, aber er entscheidet selbst, ob er den Gefallen erfüllt.\nFertigkeiten: Verständigung",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Namensruf (-4; du rufst einen dir bereits bekannten Kobold in einem Radius von 8 Meilen herbei.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 8; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "UpBllOZ89kwMVYr4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426249,
+    "modifiedTime": 1767873426249,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!UpBllOZ89kwMVYr4"
+}

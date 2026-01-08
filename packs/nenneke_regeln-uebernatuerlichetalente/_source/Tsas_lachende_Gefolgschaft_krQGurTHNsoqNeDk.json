@@ -1,0 +1,42 @@
+{
+  "name": "Tsas lachende Gefolgschaft",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Neubeginn",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst einen Kobold zur Hilfe. Befinden sich Kobolde in einem Radius von 1 Meile, eilt einer von ihnen herbei. Du kannst den Kobold um einen Gefallen bitten, aber er entscheidet selbst, ob er den Gefallen erfüllt.\nFertigkeiten: Neubeginn",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Namensruf (-4; du rufst einen dir bereits bekannten Kobold in einem Radius von 8 Meilen herbei.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 KaP",
+    "erlernen": "Tsa 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "krQGurTHNsoqNeDk",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431924,
+    "modifiedTime": 1767873431924,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!krQGurTHNsoqNeDk"
+}

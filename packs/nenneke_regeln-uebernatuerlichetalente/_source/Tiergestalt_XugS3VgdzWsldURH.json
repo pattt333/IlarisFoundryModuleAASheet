@@ -1,0 +1,42 @@
+{
+  "name": "Tiergestalt",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Ehre, Guter Kampf, Jagd, List, Magie, Tod, Wind und Wogen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verwandelst dich in das heilige Tier deiner Gottheit, wobei du deine geistigen Fähigkeiten behältst. Deine körperlichen Fähigkeiten entsprechen denen des Tiers und du kannst in Tiergestalt keine Liturgien wirken. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Ehre, Guter Kampf, Jagd, List, Magie, Tod, Wind und Wogen\nAnmerkungen: Nur herausragende Geweihte können sich in Tiere verwandeln, die nicht zu den Größenklassen klein oder mittel gehören. Solche Verwandlungen sind prinzipiell um -8 erschwert. Die Lernkosten des Zaubers orientieren sich an der Tierart, wobei fliegende, giftige, sehr starke usw. Tiere teurer sind.",
+    "maechtig": "Das Tier ist ein überdurchschnittlicher/außergewöhnlicher/herausragender/einzigartiger Vertreter seiner Art. Die Werte des Tieres sind nach Spielleiterentscheid erhöht.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Stunden",
+    "kosten": "8 KaP",
+    "erlernen": "Fir, Ifi 14; Eff, Ron 16; Brn, Hes, Kor, Phe 18; normalerweise 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "XugS3VgdzWsldURH",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429527,
+    "modifiedTime": 1767873429527,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!XugS3VgdzWsldURH"
+}

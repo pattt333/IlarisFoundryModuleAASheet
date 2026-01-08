@@ -1,0 +1,42 @@
+{
+  "name": "Fesselranken",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Aus dem Boden unter deinem Opfer wachsen Ranken hervor, die es mit einem Umklammern-Manöver (-4) festhalten, aus der es sich mit einer Aktion Konflikt und einer <i>Konterprobe</i> (GE oder KK, 16) befreien kann. Beachte, dass diese Probe ebenfalls durch das Umklammern erschwert ist.\nFertigkeiten: Humus",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Dornenfessel (-8; misslungene <i>Konterproben</i> fügen dem Opfer 2W6 TP zu.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "4 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Dru, Geo 12; Hex 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "eA8or9v4hnaGySwM",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425220,
+    "modifiedTime": 1767873425220,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!eA8or9v4hnaGySwM"
+}

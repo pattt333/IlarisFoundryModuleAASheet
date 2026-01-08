@@ -1,0 +1,42 @@
+{
+  "name": "Zagibu Ubigaz",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du lässt einen Schatz von maximal 1 Stein Gewicht unwiederbringlich zu Staub zerfallen. Magische oder karmale Gegenstände sind hiervon nicht betroffen.\nFertigkeiten: Erz, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Sch 8; Mag 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "JWhxi2FJWwbMKI9H",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424956,
+    "modifiedTime": 1767873424956,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!JWhxi2FJWwbMKI9H"
+}

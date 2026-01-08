@@ -1,0 +1,42 @@
+{
+  "name": "Veränderung aufheben",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du hebst einen bereits gewirkten Umwelt-Zauber auf, in den keine gAsP geflossen sind. Dein Zauber gilt als <i>Konterprobe</i> (12), bei deren Gelingen der Zielzauber sofort aufgehoben wird.\nFertigkeiten: Antimagie, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Gegenzauber (Vorbereitungszeit 0 Aktionen, 16 Schritt, 4 AsP; stört einen anderen Zauberer während er einen Umwelt-Zauber vorbereitet. Wirkt als <i>Konterprobe</i> (12), bei deren Gelingen der Zielzauber sofort scheitert.)\nMagie unterdrücken (Vorbereitungszeit 16 Aktionen, Ziel Zone, Wirkungsdauer 1 Stunde, 8 AsP; in einer Zone von 16 Schritt Radius sind alle zukünftigen Umwelt-Zauber um -8 erschwert. Mächtige Magie erhöht den Malus um -4.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zauber",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "halbe Basiskosten des Zaubers",
+    "erlernen": "Ach, Geo, Mag 14; Dru, Elf, Sch 16; Alch 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "IW7MEIBgtpNJQqvL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423794,
+    "modifiedTime": 1767873423794,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!IW7MEIBgtpNJQqvL"
+}

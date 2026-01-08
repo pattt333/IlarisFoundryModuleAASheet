@@ -1,0 +1,42 @@
+{
+  "name": "Arngrimms Höhle",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Feuer, Geister der Stärkung, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "In einem abgeschlossenen Raum wie einer Jurte oder einer kleinen Höhle steigt die Temperaturstufe (S. 35) um +1, bis maximal auf normal.\nFertigkeiten: Feuer, Geister der Stärkung, Umwelt",
+    "maechtig": "Für je zwei Stufen steigt die Temperaturstufe um weitere +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Smn 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "qg3hPn2jmxb6GlBD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427123,
+    "modifiedTime": 1767873427123,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!qg3hPn2jmxb6GlBD"
+}

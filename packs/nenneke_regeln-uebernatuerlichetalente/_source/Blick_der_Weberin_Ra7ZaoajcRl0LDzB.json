@@ -1,0 +1,42 @@
+{
+  "name": "Blick der Weberin",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Magie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du analysierst die Kraftfäden eines arkanen Artefakts oder eines magischen Wesens. Das entspricht einem AG von 2 für die Strukturanalyse (mehr dazu siehe S. 80).\nFertigkeiten: Magie",
+    "maechtig": "Der AG steigt um 1.",
+    "schwierigkeit": "16",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelobjekt, Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Hes 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Ra7ZaoajcRl0LDzB",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430269,
+    "modifiedTime": 1767873430269,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Ra7ZaoajcRl0LDzB"
+}

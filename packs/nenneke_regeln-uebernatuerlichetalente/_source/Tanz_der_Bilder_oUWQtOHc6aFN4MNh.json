@@ -1,0 +1,42 @@
+{
+  "name": "Tanz der Bilder",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion, Zaubertänze",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Alle humanoiden Zuseher im Radius von 4 Schritt werden von einer raschen Abfolge von Bildern mit einer beruhigenden, heiteren oder alptraumhaften Grundstimmung (nach deiner Wahl) gefesselt. Die Wirkung endet, wenn du aufhörst zu tanzen. Erlaubt <i>Aufrechterhalten</i>, erfordert <i>Konzentration</i>.\nFertigkeiten: Illusion, Zaubertänze",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "4 AsP",
+    "erlernen": "Ztz 8; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oUWQtOHc6aFN4MNh",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429032,
+    "modifiedTime": 1767873429032,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oUWQtOHc6aFN4MNh"
+}

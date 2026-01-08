@@ -1,0 +1,42 @@
+{
+  "name": "Mirakel: MU",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Tod, Wind und Wogen, Wildnis, Abu al'Mada, Magiebann, Rausch, Ehre, Sichere Heimkehr, Gutes Gold",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein nächster Wurf auf MU ist um +4 Punkte erleichtert.",
+    "maechtig": "Erhöht die Erleichterung um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "4 KaP",
+    "erlernen": "20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rkRQdaPOBq5tTX2O",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873432173,
+    "modifiedTime": 1767873432173,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rkRQdaPOBq5tTX2O"
+}

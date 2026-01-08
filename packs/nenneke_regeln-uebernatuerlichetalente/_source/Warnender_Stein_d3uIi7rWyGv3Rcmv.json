@@ -1,0 +1,42 @@
+{
+  "name": "Warnender Stein",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kristallmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Kristall leuchtet auf, falls sich eine feindlich gesinnte Person in weniger als 16 Schritt Entfernung befindet und ihr eine <i>Konterprobe</i> (MR, 12) misslingt.\nFertigkeiten: Hellsicht, Kristallmagie",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "gebundener Kristall",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "4 AsP",
+    "erlernen": "Ach 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "d3uIi7rWyGv3Rcmv",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428102,
+    "modifiedTime": 1767873428102,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!d3uIi7rWyGv3Rcmv"
+}

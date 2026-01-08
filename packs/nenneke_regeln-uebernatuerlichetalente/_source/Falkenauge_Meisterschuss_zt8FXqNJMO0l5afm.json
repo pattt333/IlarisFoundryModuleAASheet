@@ -1,0 +1,42 @@
+{
+  "name": "Falkenauge Meisterschuss",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein nächster Fernkampfangriff ist um +4 erleichtert.\nFertigkeiten: Eigenschaften",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Dauerndes Band (-8, 8 AsP; der Zauber wirkt auf alle Fernkampfangriffe während der Wirkungsdauer.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Elf 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "zt8FXqNJMO0l5afm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424323,
+    "modifiedTime": 1767873424323,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!zt8FXqNJMO0l5afm"
+}

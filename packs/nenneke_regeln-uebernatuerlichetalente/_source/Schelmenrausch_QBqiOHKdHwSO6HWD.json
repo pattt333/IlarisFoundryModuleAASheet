@@ -1,0 +1,42 @@
+{
+  "name": "Schelmenrausch",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du versetzt dein Ziel in einen friedvoll-glücklichen Rauschzustand. Alle seine Proben sind um -4 erschwert. Das Ziel erwacht aus der Trance, wenn es in direkter Lebensgefahr schwebt.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "QBqiOHKdHwSO6HWD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424707,
+    "modifiedTime": 1767873424707,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!QBqiOHKdHwSO6HWD"
+}

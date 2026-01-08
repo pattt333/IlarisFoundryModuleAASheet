@@ -1,0 +1,42 @@
+{
+  "name": "Orkanwand",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eine 8 Schritt hohe und bis zu 4 Schritt lange Wand aus rasenden Windhosen wächst entlang einer von dir bestimmten Linie aus dem Boden. Um sich ihr zu nähern, muss dir eine <i>Konterprobe</i> (KK, 16) gelingen, sonst wirst du <i>zurückgestoßen</i> (S. 98). Das Durchqueren verursacht 2 Punkte Erschöpfung.\nFertigkeiten: Luft",
+    "maechtig": "Die Höhe steigt um 4 Schritt, die Länge steigt um bis zu 2 Schritt und das Durchqueren verursacht 1 weiteren Punkt Erschöpfung.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Geo, Mag 18; Dru 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ecyuWqPCqCqgNZN6",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425838,
+    "modifiedTime": 1767873425838,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ecyuWqPCqCqgNZN6"
+}

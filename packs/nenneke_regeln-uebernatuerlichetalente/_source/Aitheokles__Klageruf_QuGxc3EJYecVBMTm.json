@@ -1,0 +1,42 @@
+{
+  "name": "Aitheokles‘ Klageruf",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Seefahrt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du löschst ein Feuer bis zur Größe eines großen Lagerfeuers.\nFertigkeiten: Seefahrt\nAnmerkung: Alternativ wirkt die Liturgie wie Antimagie gegen Feuerzauber (S. 126). Die Randbedingungen entsprechen den dort angegebenen, außer dass die Kosten mit KaP bezahlt werden und die Liturgie um +4 erleichtert ist.",
+    "maechtig": "Du kannst ein Feuer bis zur Größe eines Scheiterhaufens/brennenden Schiffes/einer brennenden Häusergruppe/eines brennenden Stadtviertels löschen.",
+    "schwierigkeit": "12",
+    "modifikationen": "Kleiner Feuerbann (0 Aktionen, 1 KaP; ein Feuer bis zur Größe einer Fackel erlischt.)\nSelbstlöschung (0 Aktionen, 2 KaP; du löschst dich selbst.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Eff 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "QuGxc3EJYecVBMTm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429727,
+    "modifiedTime": 1767873429727,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!QuGxc3EJYecVBMTm"
+}

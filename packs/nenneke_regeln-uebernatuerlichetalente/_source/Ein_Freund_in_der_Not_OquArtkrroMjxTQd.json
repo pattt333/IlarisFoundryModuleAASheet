@@ -1,0 +1,42 @@
+{
+  "name": "Ein Freund in der Not",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Fröhlicher Wanderer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Durch Aves‘ Hilfe findest du den Weg zu einer hilfsbereiten Person im Radius von 1 Meile, die dich aus einer Notlage zu befreien versucht. Kommen mehrere Personen in Frage, führt der Weg zu der Person, die du schnell genug erreichen kannst und die dir am besten helfen kann.\nFertigkeiten: Fröhlicher Wanderer\nAnmerkung: Mit dieser Liturgie fanden schon viele Avesgeweihte Hilfe an den seltsamsten Orten – als hätte der Weber des Schicksals selbst seine Hände im Spiel. Wenn also eine geringe Chance auf Hilfe besteht, sollte der Spielleiter sie gewähren. An völlig menschenleeren Orten wie dem ewigen Eis des Nordens ist die Liturgie hingegen nutzlos.",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Aktiver Helfer (-4; der Helfer bewegt sich zusätzlich unbewusst in deine Richtung, sofern ihm daraus kein bedeutender Nachteil erwächst.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 KaP",
+    "erlernen": "Aves 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "OquArtkrroMjxTQd",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431992,
+    "modifiedTime": 1767873431992,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!OquArtkrroMjxTQd"
+}

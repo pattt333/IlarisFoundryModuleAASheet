@@ -1,0 +1,42 @@
+{
+  "name": "Lied des Wanderers",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Lied stärkt das Durchhaltevermögen eines müden Wanderers. Der Zuhörer mit dem geringsten DH (siehe S. 34) in 4 Schritt Radius erhält ein verdoppeltes DH* und das Intervall, in dem er durch körperliche Anstrengung Erschöpfung verursacht, verdoppelt sich.\nFertigkeiten: Eigenschaften, Zaubermelodien",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "4 AsP",
+    "erlernen": "Bard 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "V85vKiI7UAeY3MQF",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428912,
+    "modifiedTime": 1767873428912,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!V85vKiI7UAeY3MQF"
+}

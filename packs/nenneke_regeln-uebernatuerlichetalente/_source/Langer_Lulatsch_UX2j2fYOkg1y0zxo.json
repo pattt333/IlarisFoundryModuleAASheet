@@ -1,0 +1,42 @@
+{
+  "name": "Langer Lulatsch",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer dehnt sich entweder auf seine dreifache Größe aus oder schrumpft auf ein Drittel. Das Gewicht des Opfers bleibt gleich. Alle seine körperlichen Tätigkeiten sind um -4 erschwert.\nFertigkeiten: Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Langfinger/Wurstfinger (-4 pro Gliedmaß; der Zauber betrifft nur einzelne Gliedmaßen.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "UX2j2fYOkg1y0zxo",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426383,
+    "modifiedTime": 1767873426383,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!UX2j2fYOkg1y0zxo"
+}

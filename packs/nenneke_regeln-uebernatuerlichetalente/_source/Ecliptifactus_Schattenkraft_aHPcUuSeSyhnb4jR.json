@@ -1,0 +1,42 @@
+{
+  "name": "Ecliptifactus Schattenkraft",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Schatten kämpft an deiner Seite (WS 5, INI 6, GS 6, RW 1, VT 6, AT 6, TP 2W6). Zusätzlich verfügt der Schatten über die Vorteile Schreckgestalt II, Körperlosigkeit, Paraphysikalität und Schmerzimmun II (S. 98). Stirbt der Schatten, verlierst du deine komplette Astralenergie und regenerierst keine AsP, bis der Schatten nach 7 Wochen nachgewachsen ist.\nFertigkeiten: Dämonisch, Verwandlung",
+    "maechtig": "AT, VT, TP steigen um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Mag 18; Bor 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "aHPcUuSeSyhnb4jR",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423835,
+    "modifiedTime": 1767873423835,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!aHPcUuSeSyhnb4jR"
+}

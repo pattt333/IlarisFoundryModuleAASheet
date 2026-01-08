@@ -1,0 +1,42 @@
+{
+  "name": "Zorn des Heiligen Firungald",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Winter",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du segnest eine Nahkampfwaffe. Diese gilt als geweiht und verursacht <i>Erfrieren</i> (S. 98).\nFertigkeiten: Winter",
+    "maechtig": "Erhöht den Waffenschaden um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 KaP",
+    "erlernen": "Fir 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "gMSIIQDqFHQimMgB",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430218,
+    "modifiedTime": 1767873430218,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!gMSIIQDqFHQimMgB"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Sternenspur",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Nächtlicher Schatten, Wissen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst mit einer einfachen Berührung einen leuchtenden Stern als Markierung auf einer Oberfläche hinterlassen, den nur du sehen kannst. Das funktioniert nur, wenn gerade weniger als 8 Sterne aktiv sind.\nFertigkeiten: Nächtlicher Schatten, Wissen",
+    "maechtig": "Es können 4 weitere Sterne aktiv sein.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "4 KaP",
+    "erlernen": "Phe 14, Nan 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "5kLDakVALL4EdcUM",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430492,
+    "modifiedTime": 1767873430492,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5kLDakVALL4EdcUM"
+}

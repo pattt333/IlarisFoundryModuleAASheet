@@ -1,0 +1,42 @@
+{
+  "name": "Erwachen des Stromes",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Flüsse und Quellen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Innerhalb weniger Minuten schwillt der Fluss an und führt so viel Wasser wie zur stärksten Regenzeit. Furten und manche Brücken werden unpassierbar und das Wasser reißt lose Gegenstände am Ufer mit.\nFertigkeiten: Flüsse und Quellen",
+    "maechtig": "Der Fluss führt um ein/zwei/drei/vier Viertel mehr Wasser als zur stärksten Regenzeit.",
+    "schwierigkeit": "12",
+    "modifikationen": "Flutwelle (-8, 8 Aktionen, Wirkungsdauer augenblicklich; das Wasser erscheint in einer plötzlichen, zerstörerischen Flutwelle.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Zone",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 KaP",
+    "erlernen": "Eff 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "3BZBHH23nXrHNjQm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429645,
+    "modifiedTime": 1767873429645,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!3BZBHH23nXrHNjQm"
+}

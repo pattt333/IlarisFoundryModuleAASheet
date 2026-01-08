@@ -1,0 +1,42 @@
+{
+  "name": "Gift der Erkenntnis",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Wissen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du lässt dich von einer Schlange beißen. Solange das Gift wirkt, erhältst einen ungefähren Eindruck von den Gedanken deines Gegenübers. Weiß das Ziel, dass seine Gedanken gelesen werden, kann es dich mit einer <i>Konterprobe</i> (Willenskraft, 20) in die Irre führen.\nFertigkeiten: Wissen",
+    "maechtig": "Du erhältst einen deutlichen/klaren/vollständigen Eindruck in die Gedanken deines Ziels.",
+    "schwierigkeit": "12",
+    "modifikationen": "Tiefentelepathie (-16, 8 KaP; du erhältst einen Einblick in innerste Vorgänge.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "solange das Gift wirkt",
+    "kosten": "4 KaP",
+    "erlernen": "Hes 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oW2c7bITnEIzensm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430421,
+    "modifiedTime": 1767873430421,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oW2c7bITnEIzensm"
+}

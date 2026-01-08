@@ -1,0 +1,42 @@
+{
+  "name": "Letzter Ausweg",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Vertrautenmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Vertrautentier mobilisiert alle Kräfte, um dich oder sich zu retten. Alle Feinde in 4 Schritt Radius erleiden 2W6 SP. Das Vertrautentier erleidet sofort 4 Wunden.\nFertigkeiten: Kraft, Vertrautenmagie",
+    "maechtig": "Die SP steigen um +4.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Geo 14, Hex 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "SKMGDIy4mZIutmTx",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428761,
+    "modifiedTime": 1767873428761,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!SKMGDIy4mZIutmTx"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Schmerzen der Miniatur",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dolchzauber, Einfluss, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Mit Dolchstichen in eine Miniatur der Herrschaft (s.o.) kannst du dem Opfer Schmerzen zufügen. Dadurch sind geistige oder körperliche Tätigkeiten um -2 erschwert.\nFertigkeiten: Dolchzauber, Einfluss, Verständigung",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Miniatur der Herrschaft",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "1 AsP",
+    "erlernen": "Dru 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "iSDvVGyMLsNXQsUa",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426814,
+    "modifiedTime": 1767873426814,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!iSDvVGyMLsNXQsUa"
+}

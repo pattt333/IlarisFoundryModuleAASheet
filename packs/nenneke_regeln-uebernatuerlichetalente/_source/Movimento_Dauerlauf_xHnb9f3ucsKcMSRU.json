@@ -1,0 +1,42 @@
+{
+  "name": "Movimento Dauerlauf",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Verdoppelt das DH* (S. 34) des Ziels und das Intervall, in dem körperliche Anstrengung Erschöpfung verursacht.\nFertigkeiten: Eigenschaften",
+    "maechtig": "Je zwei Stufen verdreifachen/vervierfachen das DH* und das Intervall.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 8; Alch, Dru, Hex, Mag, Sch 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "xHnb9f3ucsKcMSRU",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424379,
+    "modifiedTime": 1767873424379,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!xHnb9f3ucsKcMSRU"
+}

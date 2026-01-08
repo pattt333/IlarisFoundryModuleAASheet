@@ -1,0 +1,42 @@
+{
+  "name": "Mahlstrom",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erzeugst einen Strudel im Wasser. Wesen in der Umgebung müssen jede Initiativephase eine <i>Konterprobe</i> (Schwimmen, 16) ablegen, die um die Distanz zum Zentrum in Schritt erleichtert ist. Beim Misslingen wird es 4 Schritt näher ins Zentrum des Mahlstroms gezogen. Im Zentrum erleidet jedes Ziel 4W6 SP und wird in die Tiefe gezogen.\nFertigkeiten: Umwelt, Wasser",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Schiffverschlinger (-4, 4 Minuten, Wirkungsdauer 1 Stunde, 64 AsP; der Strudel ist so groß, dass er sogar Schiffe verschlingen kann. Die <i>Konterprobe</i> ist nur um 1 pro 8 Schritt Distanz erleichtert.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "64 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Dru 18; Geo, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ENRh9ge62hJhVAWq",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426106,
+    "modifiedTime": 1767873426106,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ENRh9ge62hJhVAWq"
+}

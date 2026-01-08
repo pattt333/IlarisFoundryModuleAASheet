@@ -1,0 +1,31 @@
+{
+  "name": "Reiten",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Reiten ist die Fähigkeit, ein Pferd, Kamel oder einen Hippogriff zu kontrollieren und als schnelles Reisemittel oder im Kampf einzusetzen.",
+    "fertigkeit": "Fortbewegungsmittel",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "AMoYM647dt1SB6hK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090384,
+    "modifiedTime": 1767788090384,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!AMoYM647dt1SB6hK"
+}

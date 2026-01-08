@@ -1,0 +1,42 @@
+{
+  "name": "Objectofixo",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Temporal, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du fixierst einen Gegenstand von maximal 2 Stein auf einer waagrechten Fläche. Er kann nicht bewegt werden.\nFertigkeiten: Temporal, Verwandlung",
+    "maechtig": "Das maximale Gewicht verdoppelt sich.",
+    "schwierigkeit": "12",
+    "modifikationen": "Bilderhaken (-4; du fixierst einen Gegenstand an einer senkrechten Fläche)\nSpinnenfest (-8; du fixierst einen Gegenstand unter einer waagrechten Fläche.)\nLufthaken (-12; du fixierst einen Gegenstand in der Luft.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Stunden",
+    "kosten": "4 AsP",
+    "erlernen": "Ach 14; Mag 16; Alch 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4ySxTZ4zn2nvh9ry",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425981,
+    "modifiedTime": 1767873425981,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4ySxTZ4zn2nvh9ry"
+}

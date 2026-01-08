@@ -1,0 +1,42 @@
+{
+  "name": "Stärke des Waldläufers",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Stiller Wanderer, Wildnis",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Verdoppelt dein DH* (S. 34) und das Intervall, in dem körperliche Anstrengung Erschöpfung verursacht.\nFertigkeiten: Stiller Wanderer, Wildnis",
+    "maechtig": "Verdreifacht/vervierfacht/verünffacht/versechsfacht dein DH* und das Intervall.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "2 Tage",
+    "kosten": "8 KaP",
+    "erlernen": "Fir 12; Aves 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "t00MMeZ3Ss1L1QfQ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430113,
+    "modifiedTime": 1767873430113,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!t00MMeZ3Ss1L1QfQ"
+}

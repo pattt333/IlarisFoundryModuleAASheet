@@ -1,0 +1,42 @@
+{
+  "name": "Bilderspiel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion, Kugelzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst in der Kugel eine beliebige <i>Illusion</i> (Sicht) erscheinen lassen. Die Illusion kann sich auch bewegen, was <i>Konzentration</i> erfordert.\nFertigkeiten: Illusion, Kugelzauber",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Kristallkugel",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Srl 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "VdQ3J4kIVSyzG2sL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428147,
+    "modifiedTime": 1767873428147,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!VdQ3J4kIVSyzG2sL"
+}

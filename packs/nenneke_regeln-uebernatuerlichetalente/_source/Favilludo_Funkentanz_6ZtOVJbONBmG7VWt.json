@@ -1,0 +1,42 @@
+{
+  "name": "Favilludo Funkentanz",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erzeugst einen kunterbunten Funkenschwarm in einfachen geometrischen Formen deiner Wahl, der eine Person umgibt. Er ist offensichtlich als <i>Illusion</i> (Sicht) erkennbar.\nFertigkeiten: Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Subtiles Leuchten (-4, 4 AsP; alle Proben des Ziels auf Beeinflussung sind um +2 erleichtert.)\nLeuchtender Panzer (-4, 4 AsP; AT auf das Ziel sind um -2 erschwert, gezielte Schläge unmöglich.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "1 AsP",
+    "erlernen": "Srl 12; Mag 14; Sch 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6ZtOVJbONBmG7VWt",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425422,
+    "modifiedTime": 1767873425422,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6ZtOVJbONBmG7VWt"
+}

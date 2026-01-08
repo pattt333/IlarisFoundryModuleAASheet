@@ -1,0 +1,42 @@
+{
+  "name": "Tanz der Erlösung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Zaubertänze",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Tanz gilt als <i>Konterprobe</i> (12) gegen sämtliche Zauber auf dem Ziel. Bei gelungener Probe werden die Zauber aufgehoben.\nFertigkeiten: Antimagie, Zaubertänze",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Stunden",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Ztz 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yXqdkADySAewJvVe",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429054,
+    "modifiedTime": 1767873429054,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yXqdkADySAewJvVe"
+}

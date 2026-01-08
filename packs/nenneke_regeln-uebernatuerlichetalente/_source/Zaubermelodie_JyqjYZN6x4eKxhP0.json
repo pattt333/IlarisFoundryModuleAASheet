@@ -1,0 +1,42 @@
+{
+  "name": "Zaubermelodie",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Elfenlieder, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Melodie erleichtert alle allgemeinen Zauber um +2.\nFertigkeiten: Eigenschaften, Elfenlieder, Kraft",
+    "maechtig": "Der Bonus steigt um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "JyqjYZN6x4eKxhP0",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427006,
+    "modifiedTime": 1767873427006,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!JyqjYZN6x4eKxhP0"
+}

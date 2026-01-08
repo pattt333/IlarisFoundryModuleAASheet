@@ -1,0 +1,42 @@
+{
+  "name": "Ewige Flamme",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Feuer, Stabzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Spitze des Stabes bricht in Flammen aus, die in Leuchtkraft und Eigenschaften einer gewöhnlichen Fackel entsprechen. Der Zauber endet vorzeitig, wenn du den Stab nicht mehr berührst.\nFertigkeiten: Feuer, Stabzauber",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zauberstab",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "1 AsP",
+    "erlernen": "Mag 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "pBGY0rK9sUxlFoKD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428526,
+    "modifiedTime": 1767873428526,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!pBGY0rK9sUxlFoKD"
+}

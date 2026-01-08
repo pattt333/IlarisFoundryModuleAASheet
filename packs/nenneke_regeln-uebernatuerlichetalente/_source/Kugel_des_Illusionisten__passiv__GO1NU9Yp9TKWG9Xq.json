@@ -1,0 +1,42 @@
+{
+  "name": "Kugel des Illusionisten (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion, Kugelzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du lässt 2 gAsP in die Kugel fließen. Fortan sind Illusionszauber um +1 erleichtert\nFertigkeiten: Illusion, Kugelzauber",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "Mächtige Kugel (Illusionszauber sind um +2 erleichtert, du musst 4 gAsP in die Kugel fließen lassen.)",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Srl 12; Mag 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "GO1NU9Yp9TKWG9Xq",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428214,
+    "modifiedTime": 1767873428214,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!GO1NU9Yp9TKWG9Xq"
+}

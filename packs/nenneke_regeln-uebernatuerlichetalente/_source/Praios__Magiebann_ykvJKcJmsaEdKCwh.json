@@ -1,0 +1,42 @@
+{
+  "name": "Praios‘ Magiebann",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Magiebann",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "In deiner Hand erscheint das Auge des Praios. Die Liturgie wirkt als <i>Konterprobe</i> (12) gegen alle Zauber im Radius von 16 Schritt, die bei gelungener Probe aufgehoben werden (permanente Zauber werden unterdrückt). Außerdem können keine neuen Zauber gewirkt oder Artefakte ausgelöst werden.\nFertigkeiten: Magiebann",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 KaP",
+    "erlernen": "Pra 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ykvJKcJmsaEdKCwh",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431192,
+    "modifiedTime": 1767873431192,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ykvJKcJmsaEdKCwh"
+}

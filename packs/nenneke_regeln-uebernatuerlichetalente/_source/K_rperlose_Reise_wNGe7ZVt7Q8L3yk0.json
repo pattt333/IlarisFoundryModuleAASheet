@@ -1,0 +1,42 @@
+{
+  "name": "Körperlose Reise",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du trennst deinen Geist vom Körper. Dein Körper bleibt totengleich zurück, während sich dein Geist mit der Geschwindigkeit eines Pferdes bewegen kann. Er kann jederzeit den Limbus betreten oder verlassen. Im Limbus bewegt er sich mit einer Geschwindigkeit von 100 Meilen pro Stunde. Um massive Hindernisse zu durchqueren, sind nach Spielleiterentscheid Willenskraft-Proben notwendig, antimagische Materialien oder Orte bleiben dir verwehrt. Der Zauber endet erst, wenn Geist und Körper wieder vereint sind – nach dem Ende der Wirkungsdauer erleidest du allerdings alle 4 Minuten 1 Punkt Erschöpfung, bis Körper und Geist vereint sind.\nFertigkeiten: Kraft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Manifestation (-4; du kannst Umstehenden während der Wirkungsdauer als geisterhafte Gestalt erscheinen.)\nFernzauber (-8; du kannst weiterhin Zauber wirken. Dabei musst du auf Geste und gesprochene Formel verzichten.)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Dru 18; Ach, Bor, Geo, Hex, Mag 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wNGe7ZVt7Q8L3yk0",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425638,
+    "modifiedTime": 1767873425638,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wNGe7ZVt7Q8L3yk0"
+}

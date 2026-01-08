@@ -1,0 +1,42 @@
+{
+  "name": "Zaubernahrung Hungerbann",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Für einen Tag spürst du keinerlei Hunger und die Kraft des Zaubers ernährt dich. Du musst spätestens vor vier Tagen echtes Essen zu dir genommen haben.\nFertigkeiten: Eigenschaften, Einfluss",
+    "maechtig": "Die letzte echte Mahlzeit kann bis zu zwei Tage länger her sein.",
+    "schwierigkeit": "12",
+    "modifikationen": "Durstbann (-4, 8 AsP; auch jeglicher Durst wird vom Zauber gestillt.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "4 AsP",
+    "erlernen": "Elf 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "9h8cURu9fq6hqQri",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424466,
+    "modifiedTime": 1767873424466,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!9h8cURu9fq6hqQri"
+}

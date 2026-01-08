@@ -1,0 +1,42 @@
+{
+  "name": "Geist der Keule",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Keulenrituale, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bindest einen Totengeist in die Keule. Solange der Geist an die Keule gebunden ist, erfüllt er dir eine Bitte, wenn dir eine CH-Probe (16) gelingt. Die erste Bitte seit dem letzten Neumond ist nicht erschwert, aber bei jeder zusätzlichen Bitte erleidest du einen kumulativen Malus von -4. Es kann immer nur ein Wesen in der Keule gebunden sein.\nFertigkeiten: Keulenrituale, Verständigung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Knochenkeule",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "4 AsP, davon 2 gAsP",
+    "erlernen": "Smn 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "2g4ZRAKkzqfuxVJn",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427855,
+    "modifiedTime": 1767873427855,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!2g4ZRAKkzqfuxVJn"
+}

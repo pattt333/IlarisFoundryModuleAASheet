@@ -1,0 +1,42 @@
+{
+  "name": "Melodie des Einlullens",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Alle Humanoide in Hörreichweite sind von deiner immer berauschenderen Musik völlig gefesselt. Nur mit einer <i>Konterprobe</i> (Willenskraft, 16) kann sich ein Zuhörer für 16 Initiativephasen dem Zauber des Liedes entziehen. Ansonsten erwacht er, wenn du aufhörst zu spielen oder er eine Wunde erleidet. Erfordert <i>Konzentration</i>, erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Einfluss, Zaubermelodien",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Bard 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "SYKxbBlnQh7L4Ev2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428982,
+    "modifiedTime": 1767873428982,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!SYKxbBlnQh7L4Ev2"
+}

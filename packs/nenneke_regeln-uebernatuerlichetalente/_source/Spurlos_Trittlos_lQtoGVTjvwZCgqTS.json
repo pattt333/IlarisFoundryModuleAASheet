@@ -1,0 +1,42 @@
+{
+  "name": "Spurlos Trittlos",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du tarnst deine Fährte mit Magie. Alle Proben zur Verfolgung deiner Fährte sind um -4 erschwert.\nFertigkeiten: Umwelt",
+    "maechtig": "Der Malus steigt um -2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Andere Person (-4, Ziel Einzelperson)\nZone (-4, Zone, 16 AsP; der Zauber betrifft alle in einem Radius von 4 Schritt.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "4 AsP",
+    "erlernen": "Elf 12; Dru, Geo 18; Hex 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "lQtoGVTjvwZCgqTS",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426175,
+    "modifiedTime": 1767873426175,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!lQtoGVTjvwZCgqTS"
+}

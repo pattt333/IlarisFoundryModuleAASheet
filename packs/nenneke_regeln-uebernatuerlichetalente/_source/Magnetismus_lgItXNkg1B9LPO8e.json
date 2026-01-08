@@ -1,0 +1,42 @@
+{
+  "name": "Magnetismus",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Ringrituale, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Erdboden im Radius von 8 Schritt wirkt wie ein starker Magnet. Wenn eine <i>Konterprobe</i> (KK, 16) misslingt, werden Metallwaffen aus der Hand gerissen und kleben am Boden fest, während Kämpfer in Metallrüstungen zu Boden gehen und nicht mehr aufstehen können. Selbst bei einer gelungenen <i>Konterprobe</i> sind Kampfaktionen mit Metallwaffen um -4 erschwert.\nFertigkeiten: Erz, Ringrituale, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Geo 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "lgItXNkg1B9LPO8e",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428310,
+    "modifiedTime": 1767873428310,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!lgItXNkg1B9LPO8e"
+}

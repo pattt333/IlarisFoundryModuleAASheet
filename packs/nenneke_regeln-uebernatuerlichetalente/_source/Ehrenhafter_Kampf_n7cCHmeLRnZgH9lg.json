@@ -1,0 +1,42 @@
+{
+  "name": "Ehrenhafter Kampf",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Ehre, Heerführung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Gegner muss sich an die Gebote des ehrenhaften Zweikampfs halten und niemand kann in den Kampf eingreifen. Mit einer <i>Konterprobe</i> (Willenskraft, 20) kann die Wirkung ignoriert werden.\nFertigkeiten: Ehre, Heerführung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Ehre der Schlacht (Zone, Wirkungsdauer 1 Stunde, Kosten 16 KaP; alle Kämpfer im Radius von 8 Schritt, denen die <i>Konterprobe</i> misslingt, verhalten sich rondragefällig. Mächtige Liturgie verdoppelt den Radius.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 KaP",
+    "erlernen": "Ron 8; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "n7cCHmeLRnZgH9lg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431464,
+    "modifiedTime": 1767873431464,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!n7cCHmeLRnZgH9lg"
+}

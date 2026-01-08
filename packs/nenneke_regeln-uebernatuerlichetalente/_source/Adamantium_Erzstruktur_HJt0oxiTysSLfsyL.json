@@ -1,0 +1,42 @@
+{
+  "name": "Adamantium Erzstruktur",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stärkst die Struktur eines Gegenstandes von maximal 16 Stein Gewicht. Seine Härte wird verdoppelt. Bei Waffen steigen der Waffenschaden um 2 Punkte, bei Rüstungen der RS um 1.\nFertigkeiten: Erz, Verwandlung",
+    "maechtig": "Waffenschaden einer Waffe +1, für je 2 Stufen RS einer Rüstung +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "Adamantenquader (-4; das maximale Gewicht wird verdoppelt. Mehrfach wählbar.)\nKristallglanz (-4; während der Wirkungsdauer erscheint die Oberfläche des Materials wie die eines beliebigen anderen erzenen Materials.)\nZauberklinge (-4; während der Wirkungsdauer gilt die Waffe als magisch.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Ach 12; Geo, Mag 14; Dru 16; Alch 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "HJt0oxiTysSLfsyL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424846,
+    "modifiedTime": 1767873424846,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!HJt0oxiTysSLfsyL"
+}

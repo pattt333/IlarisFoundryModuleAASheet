@@ -1,0 +1,42 @@
+{
+  "name": "Tiergedanken",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du siehst die Gedanken des Tiers als verschwommene Bilder.\nFertigkeiten: Hellsicht, Verständigung",
+    "maechtig": "Zusätzlich kannst du das Tier um einen kleineren/größeren/gefährlichen Gefallen bitten. Ob das Tier den Gefallen ausführen kann und will, ist Spielleiterentscheid.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Tier",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Elf, Geo 14; Ach, Dru, Hex 16; Sch 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "k6hefvcv9I61xHpP",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425171,
+    "modifiedTime": 1767873425171,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!k6hefvcv9I61xHpP"
+}

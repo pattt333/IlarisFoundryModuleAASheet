@@ -1,0 +1,42 @@
+{
+  "name": "Smaragdschliff",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Kristallmagie, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du versiehst einen gebundenen Kristall mit einem Smaragdschliff. Wann immer du mit Hilfe dieses Kristalls einen Zauber wirkst, kannst du die spontane Modifikation Kosten sparen einmal ohne Erschwernis ausführen. Du musst die Modifikation auch ohne den Schliff beherrschen. Nicht mit anderen Schliffen kombinierbar.\nFertigkeiten: Erz, Kristallmagie, Kraft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Stunden",
+    "ziel": "gebundener Kristall",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "8 AsP, davon 4 gAsP",
+    "erlernen": "Ach 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4g2NXt1Wx97kz9Pr",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428026,
+    "modifiedTime": 1767873428026,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4g2NXt1Wx97kz9Pr"
+}

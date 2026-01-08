@@ -1,0 +1,42 @@
+{
+  "name": "Rikais Fluch",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Geister des Zorns, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Zauber schwächt Pflanzen und Gegenstände aus dem Element Humus in einem Radius von 2 Schritt. Pflanzen und verderbliches Material verrotten, die Härte hölzerner oder lederner Objekte sinkt um ein Viertel der Basishärte. Die Auswirkungen auf Lebewesen sind zu gering, um sie zu bemerken.\nFertigkeiten: Dämonisch, Geister des Zorns, Umwelt",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Smn 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "RqgguNtAgFPQfVQD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427435,
+    "modifiedTime": 1767873427435,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!RqgguNtAgFPQfVQD"
+}

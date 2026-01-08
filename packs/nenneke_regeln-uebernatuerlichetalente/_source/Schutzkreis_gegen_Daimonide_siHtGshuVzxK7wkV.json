@@ -1,0 +1,42 @@
+{
+  "name": "Schutzkreis gegen Daimonide",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Dämonisch, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du ziehst einen Kreis von maximal 4 Schritt Radius. Liegt die Beschwörungsschwierigkeit eines Daimoniden bei maximal 20, kann er die Zone nicht betreten.\nFertigkeiten: Antimagie, Dämonisch, Verwandlung",
+    "maechtig": "Erhöht die Beschwörungsschwierigkeit um 4.",
+    "schwierigkeit": "12",
+    "modifikationen": "Bannkreis (8 AsP; statt der Basiswirkung wird ein Daimonid mit einer Beschwörungsschwierigkeit von maximal 20 aus einer Entfernung von bis zu 8 Schritt in den Bannkreis gezogen. Alle zwei Stunden darf er versuchen, sich mit einer <i>Konterprobe</i> (MR, 16) zu befreien. Danach ist er immun gegen den Bannkreis. Es kann stets nur ein Wesen im Bannkreis gefangen sein.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "4 AsP",
+    "erlernen": "Ach, Mag 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "siHtGshuVzxK7wkV",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423753,
+    "modifiedTime": 1767873423753,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!siHtGshuVzxK7wkV"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Conagas Ruf",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Seefahrt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Alle Meeresungeheuer im Radius von 100 Schritt erleiden einen Furcht-Effekt Stufe 2.\nFertigkeiten: Seefahrt",
+    "maechtig": "Verdoppelt den Radius und je zwei Stufen erhöhen den Furcht-Effekt um eine Stufe.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 KaP",
+    "erlernen": "Swa 12; Eff 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "11I2qKY6hOkaqcmX",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429767,
+    "modifiedTime": 1767873429767,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!11I2qKY6hOkaqcmX"
+}

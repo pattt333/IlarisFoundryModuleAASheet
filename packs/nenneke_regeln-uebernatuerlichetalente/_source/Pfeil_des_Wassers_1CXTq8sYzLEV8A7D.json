@@ -1,0 +1,42 @@
+{
+  "name": "Pfeil des Wassers",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verzauberst einen Pfeil (oder Bolzen oder Wurfwaffe), sodass er im Flug die Macht des Elements freisetzt. Der Pfeil verursacht Wasserschaden und <i>Ertränken</i> (S. 98). Der Pfeil wird durch Regen nicht beeinflusst und kann auch unter Wasser ohne Einschränkungen verwendet werden.\nFertigkeiten: Wasser",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Geschütz (-4; du verzauberst ein größeres Geschoss wie das einer Balliste.)\nPermanenz (-4, 4 AsP, davon 1 gAsP, Wirkungsdauer bis die Bindung gelöst wird oder der Pfeil verschossen wurde)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Ach 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "1CXTq8sYzLEV8A7D",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426542,
+    "modifiedTime": 1767873426542,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!1CXTq8sYzLEV8A7D"
+}

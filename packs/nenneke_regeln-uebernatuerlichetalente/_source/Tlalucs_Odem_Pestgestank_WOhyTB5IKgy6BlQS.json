@@ -1,0 +1,42 @@
+{
+  "name": "Tlalucs Odem Pestgestank",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eine giftige Wolke breitet sich aus deinem Mund 8 Schritt weit kegelförmig aus (45°). Jedes Wesen in der Wolke nimmt 2W6 SP und muss eine <i>Konterprobe</i> (Zähigkeit, 16) bestehen, um nicht einen Malus von -4 auf alle Proben zu erleiden.\nFertigkeiten: Dämonisch",
+    "maechtig": "Die SP steigen um 1W6.",
+    "schwierigkeit": "12",
+    "modifikationen": "Miasmasphaero (-4; die Wolke breitet sich rund um dich aus.)\nMiasmafaxius (-4, Einzelperson, 8 AsP)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Mag 18; Bor, Dru, Hex 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "WOhyTB5IKgy6BlQS",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423994,
+    "modifiedTime": 1767873423994,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WOhyTB5IKgy6BlQS"
+}

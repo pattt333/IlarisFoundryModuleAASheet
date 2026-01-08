@@ -1,0 +1,42 @@
+{
+  "name": "Dämonenbann",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Dämonisch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du hebst einen bereits gewirkten dämonischen Zauber auf, in den keine gAsP geflossen sind. Dein Zauber gilt als <i>Konterprobe</i> (12), bei deren Gelingen der Zielzauber sofort aufgehoben wird.\nFertigkeiten: Antimagie, Dämonisch",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Gegenzauber (Vorbereitungszeit 0 Aktionen, 16 Schritt, 4 AsP; stört einen anderen Zauberer während er einen dämonischen Zauber vorbereitet. Wirkt als <i>Konterprobe</i> (12), bei deren Gelingen der Zielzauber sofort scheitert.)\nMagie unterdrücken (Vorbereitungszeit 16 Aktionen, Ziel Zone, Wirkungsdauer 1 Stunde, 8 AsP; in einer Zone von 16 Schritt Radius sind alle zukünftigen dämonischen Zauber um -8 erschwert. Mächtige Magie erhöht den Malus um -4.)\nWesenheit bannen (Beschwörungsschwierigkeit des Ziels, Ziel Dämon oder Untoter, halbe Basiskosten der Beschwörung; du bannst einen Dämonen oder Untoten, in den keine gAsP geflossen sind.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zauber",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "halbe Basiskosten des Zaubers",
+    "erlernen": "Dru, Elf, Mag 14; Hex 16; Geo 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "u3czknINx3l9T3zE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423542,
+    "modifiedTime": 1767873423542,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!u3czknINx3l9T3zE"
+}

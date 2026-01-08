@@ -1,0 +1,42 @@
+{
+  "name": "Unsichtbarer Jäger",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du wirst samt deiner am Körper getragenen Ausrüstung unsichtbar. Der Zauber endet, sobald du eine Aktion Konflikt oder Volle Offensive ausführst.\nFertigkeiten: Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Unhörbar Geruchlos (-8; der Zauber betrifft auch Gehör und Geruch.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Elf 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "WQ5fyb512tdyhTLK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426474,
+    "modifiedTime": 1767873426474,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WQ5fyb512tdyhTLK"
+}

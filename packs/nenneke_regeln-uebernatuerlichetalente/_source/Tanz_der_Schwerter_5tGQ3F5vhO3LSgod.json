@@ -1,0 +1,42 @@
+{
+  "name": "Tanz der Schwerter",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Rausch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Kampfstil gleicht einem hypnotischen Tanz. Deine GS erhöht sich um +4 und alle AT und VT sind um +2 erleichtert.\nFertigkeiten: Rausch",
+    "maechtig": "Die GS steigt um weitere +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Fliegender Tanz (-8; du wirst nicht mehr zum Ziel von Passierschlägen.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "4 KaP",
+    "erlernen": "Rah 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "5tGQ3F5vhO3LSgod",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431451,
+    "modifiedTime": 1767873431451,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5tGQ3F5vhO3LSgod"
+}

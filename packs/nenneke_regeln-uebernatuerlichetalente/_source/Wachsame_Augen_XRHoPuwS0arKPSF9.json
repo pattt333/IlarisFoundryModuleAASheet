@@ -1,0 +1,42 @@
+{
+  "name": "Wachsame Augen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung, Vertrautenmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Vertrautentier ruft Tiere seiner Gattung aus bis zu 1 Meile herbei, die über deinen Schlaf wachen und dich vor Gefahren warnen.\nFertigkeiten: Verständigung, Vertrautenmagie",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "1 AsP",
+    "erlernen": "Geo 14; Hex 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "XRHoPuwS0arKPSF9",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428838,
+    "modifiedTime": 1767873428838,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!XRHoPuwS0arKPSF9"
+}

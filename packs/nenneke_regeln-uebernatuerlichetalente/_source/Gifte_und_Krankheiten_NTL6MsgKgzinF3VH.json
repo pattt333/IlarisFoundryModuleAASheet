@@ -1,0 +1,31 @@
+{
+  "name": "Gifte und Krankheiten",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Mit dem Talent Gifte und Krankheiten stoppst du eine Tulmadron-Vergiftung, erkennst die ersten Anzeichen für Zorganpocken und kannst einen Ghulbiss behandeln.",
+    "fertigkeit": "Heilkunde",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "NTL6MsgKgzinF3VH",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090490,
+    "modifiedTime": 1767788090490,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!NTL6MsgKgzinF3VH"
+}

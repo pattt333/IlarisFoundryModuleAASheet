@@ -1,0 +1,42 @@
+{
+  "name": "Gesang der Wölfe",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Geister rufen, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stößt ein lautes Wolfsgeheul aus, das im Radius von 16 Meilen zu hören ist und von allen Kennern der Wolfssprache (z.B. Wölfe, Wolfskinder oder Schamanen) verstanden werden kann.\nFertigkeiten: Geister rufen, Verständigung\nAnmerkung: Vereinzelt soll dieser Zauber auch in anderen Tiervarianten verbreitet sein.",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Gespräch der Wölfe (-4, 8 AsP, Wirkungsdauer 1 Stunde; Du kannst während der Wirkungsdauer beliebig viele Nachrichten aussenden.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "2 AsP",
+    "erlernen": "Smn 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "8ny4SMzoWY6hNzXD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427597,
+    "modifiedTime": 1767873427597,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!8ny4SMzoWY6hNzXD"
+}

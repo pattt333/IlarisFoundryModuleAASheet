@@ -1,0 +1,42 @@
+{
+  "name": "Chronoklassis Urfossil",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Temporal",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst ein Objekt oder Lebewesen aus der Vergangenheit in die Gegenwart. Dabei kannst du maximal einen Zeitabstand von 1 Jahr überwinden und musst den Ort und die Zeit des Zieles kennen. Nach dem Ende des Zaubers fällt das Ziel zurück in die Vergangenheit und hat keine Erinnerung an den Vorfall.\nFertigkeiten: Temporal",
+    "maechtig": "Verzehnfacht den Zeitabstand.",
+    "schwierigkeit": "12",
+    "modifikationen": "Unbekannter Ort (-8; der Ort muss nicht bekannt sein.)\nUnbekannte Zeit (-8; die Zeit muss nicht bekannt sein.)\nAusgangszustand (-4; am Ziel bleiben keine Spuren seiner Zeit in der Gegenwart zurück)",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Einzelobjekt oder Einzelwesen",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Ach 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "X7F94GuuXUShqSps",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425932,
+    "modifiedTime": 1767873425932,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!X7F94GuuXUShqSps"
+}

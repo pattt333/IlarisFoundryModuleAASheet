@@ -1,0 +1,42 @@
+{
+  "name": "Windhose",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erzeugst einen Wirbelsturm, den du mit einer Geschwindigkeit von 4 Schritt pro Initiativephase bewegen kannst. Der Wirbelsturm hat einen Radius von 2 Schritt. Wer immer ihn berührt, erleidet pro Initiativephase 1W6 TP durch umherfliegende Kleinteile und muss eine <i>Konterprobe</i> (KK, 16) ablegen, um nicht in eine zufällige Richtung <i>zurückgestoßen</i> (S. 98) zu werden. Erfordert <i>Konzentration</i>.\nFertigkeiten: Luft, Umwelt",
+    "maechtig": "Gegenstände und Tiere bis zur Größe eines Kopfes/Rucksacks/Menschen/ Pferdes wirbeln durch die Luft und verursachen zusätzliche 1W6 TP pro Initiativephase. Der Radius des Wirbelsturms steigt um je 1 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "Beweglich (-4; erhöht die Geschwindigkeit des Wirbelsturms um 4 Schritt pro Initiativephase. Mehrfach wählbar.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "64 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Dru 14; Geo 16; Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "YevauXAbhP9BoeYz",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425912,
+    "modifiedTime": 1767873425912,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!YevauXAbhP9BoeYz"
+}

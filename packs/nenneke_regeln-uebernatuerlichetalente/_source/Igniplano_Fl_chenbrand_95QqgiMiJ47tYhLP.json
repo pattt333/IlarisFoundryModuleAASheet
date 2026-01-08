@@ -1,0 +1,42 @@
+{
+  "name": "Igniplano Flächenbrand",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Feuer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du beschwörst flammende Urgewalten aus der Erde hervor. In einem Kreis mit 4 Schritt Radius fügen Flammensäulen jedem Wesen 4W6 TP zu, die <i>Nachbrennen</i> (S. 98) verursachen. Alles Brennbare in der Zone geht augenblicklich in Flammen auf.\nFertigkeiten: Feuer",
+    "maechtig": "Die TP steigen um +2W6.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "32 AsP",
+    "erlernen": "-; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "95QqgiMiJ47tYhLP",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425006,
+    "modifiedTime": 1767873425006,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!95QqgiMiJ47tYhLP"
+}

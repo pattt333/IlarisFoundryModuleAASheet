@@ -1,0 +1,42 @@
+{
+  "name": "Unverstellter Blick",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Abu al'Mada, Magie, Magiebann",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du nimmst alle Illusionen als golden (Pra), silbern (Phe) oder grün (Hes) schillernd wahr.\nFertigkeiten: Abu al'Mada, Magie, Magiebann",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 KaP",
+    "erlernen": "Hes 12; Phe, Pra 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "mPt6BNTyLqkx4CcO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430320,
+    "modifiedTime": 1767873430320,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!mPt6BNTyLqkx4CcO"
+}

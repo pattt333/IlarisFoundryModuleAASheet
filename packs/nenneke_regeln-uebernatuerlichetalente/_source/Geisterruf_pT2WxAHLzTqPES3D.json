@@ -1,0 +1,42 @@
+{
+  "name": "Geisterruf",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst einen Geist herbei. Befinden sich Geister in einem Radius von 1 Meile, erscheint einer von ihnen in deiner Nähe. Du kannst den Geist um einen Gefallen bitten, doch er entscheidet, ob er den Gefallen erfüllt und welche Gegenleistung er verlangt. Ist kein Geist in der Nähe, passiert nichts.\nFertigkeiten: Verständigung",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Namensruf (-4; du rufst einen dir bereits bekannten Geist herbei.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Dru 12; Geo, Hex, Mag 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "pT2WxAHLzTqPES3D",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426229,
+    "modifiedTime": 1767873426229,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!pT2WxAHLzTqPES3D"
+}

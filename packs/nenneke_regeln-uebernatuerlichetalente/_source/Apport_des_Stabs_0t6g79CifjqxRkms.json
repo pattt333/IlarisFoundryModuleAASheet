@@ -1,0 +1,42 @@
+{
+  "name": "Apport des Stabs",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Stabzauber, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Zauberstab kehrt fliegend mit einer Geschwindigkeit von 10 Meilen pro Stunde zu dir zurück. Er weicht Hindernissen aus oder durchbricht sie notfalls, wenn die KK von PW Stabzauber/2 oder Umwelt/2 dafür ausreicht.\nFertigkeiten: Stabzauber, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "1 Meile",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Mag 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "0t6g79CifjqxRkms",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428491,
+    "modifiedTime": 1767873428491,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!0t6g79CifjqxRkms"
+}

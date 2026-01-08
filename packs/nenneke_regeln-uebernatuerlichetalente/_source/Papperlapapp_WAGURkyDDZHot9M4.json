@@ -1,0 +1,42 @@
+{
+  "name": "Papperlapapp",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Jeder, der sich dir auf 4 Schritt nähert, muss eine <i>Konterprobe</i> (Magieresistenz, 12) ablegen. Misslingt sie, spricht er für den Rest der Wirkungsdauer nur noch in einer Phantasiesprache. Er würfelt 1W20 und kann sich nur noch mit jenen unterhalten, die ebenfalls dem Zauber unterliegen und das gleiche Ergebnis gewürfelt haben.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Sch 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "WAGURkyDDZHot9M4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424673,
+    "modifiedTime": 1767873424673,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WAGURkyDDZHot9M4"
+}

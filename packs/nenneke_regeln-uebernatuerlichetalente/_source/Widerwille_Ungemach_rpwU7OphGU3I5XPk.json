@@ -1,0 +1,42 @@
+{
+  "name": "Widerwille Ungemach",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das verzauberte Objekt wird von Umstehenden gemieden. Der Spielleiter erwähnt es nur, wenn die Spieler danach suchen und ihnen eine <i>Konterprobe</i> (Magieresistenz oder Wachsamkeit, 16) gelingt.\nFertigkeiten: Einfluss, Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Räumlicher Widerwille (-8, Zone; der Zauber betrifft einen ganzen Raum)\nPermanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, 16 AsP, davon 2 gAsP)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Monat",
+    "kosten": "8 AsP",
+    "erlernen": "Alch, Mag, Srl 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rpwU7OphGU3I5XPk",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424737,
+    "modifiedTime": 1767873424737,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rpwU7OphGU3I5XPk"
+}

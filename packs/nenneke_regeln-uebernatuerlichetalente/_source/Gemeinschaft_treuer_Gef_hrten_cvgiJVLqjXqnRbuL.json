@@ -1,0 +1,42 @@
+{
+  "name": "Gemeinschaft treuer Gefährten",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Fröhlicher Wanderer, Jagd, Sichere Heimkehr",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stärkst die Bindung zwischen einem Tier und seinem Besitzer. Proben im Umgang mit dem Tier sind um +4 erleichtert, Freie Fertigkeiten (wie Abrichter) zählen als eine Stufe höher.\nFertigkeiten: Fröhlicher Wanderer, Jagd, Sichere Heimkehr\nAnmerkung: Besonders große und starke Tiere erhöhen die gKaP-Kosten auf 4 oder sogar 8.",
+    "maechtig": "Der Bonus steigt um +2, je zwei Stufen erhöhen Freie Fertigkeiten um eine weitere Stufe.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Woche",
+    "ziel": "Tier und Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "8 KaP, davon 2 gKaP",
+    "erlernen": "Ifi 14, Aves, Tra 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "cvgiJVLqjXqnRbuL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429954,
+    "modifiedTime": 1767873429954,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!cvgiJVLqjXqnRbuL"
+}

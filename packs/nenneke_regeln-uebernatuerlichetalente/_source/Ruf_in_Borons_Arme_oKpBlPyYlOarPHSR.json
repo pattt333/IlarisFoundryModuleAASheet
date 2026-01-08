@@ -1,0 +1,42 @@
+{
+  "name": "Ruf in Borons Arme",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schlaf",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Ziel fällt in einen tiefen Schlaf, während dem Gifte und Krankheiten nicht wirken und es nicht von Albträumen geplagt wird. Alle Versuche, in den Traum des Ziels einzudringen oder sie zu manipulieren, sind um -4 erschwert.\nFertigkeiten: Schlaf",
+    "maechtig": "Der Malus steigt um -2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "2 KaP",
+    "erlernen": "Brn 4; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oKpBlPyYlOarPHSR",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429444,
+    "modifiedTime": 1767873429444,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oKpBlPyYlOarPHSR"
+}

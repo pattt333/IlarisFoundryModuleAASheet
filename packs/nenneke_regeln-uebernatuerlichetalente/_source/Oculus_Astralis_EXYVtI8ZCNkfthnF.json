@@ -1,0 +1,42 @@
+{
+  "name": "Oculus Astralis",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du wirfst einen Blick in die Welt der Magie. Während nichtmagische Gegenstände nur schwer zu erkennen sind, erscheint Magie als Ansammlung pulsierender Kraftfäden (Analysegrad 1 der Intensitätsanalyse, S. 80). Während der Wirkungsdauer kannst du deine Sinnenschärfe zur Strukturanalyse (S. 80) verwenden, wodurch du 1 Punkt Erschöpfung erleidest. Außerdem kannst du dich im Limbus orientieren.\nFertigkeiten: Hellsicht, Kraft",
+    "maechtig": "Der Analysegrad der Intensitätsanalyse steigt um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Mag 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "EXYVtI8ZCNkfthnF",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425116,
+    "modifiedTime": 1767873425116,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!EXYVtI8ZCNkfthnF"
+}

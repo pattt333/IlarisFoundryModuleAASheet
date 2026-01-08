@@ -1,0 +1,42 @@
+{
+  "name": "Destructibo Arcanitas",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bannst einen Zauber, in den gAsP geflossen sind (wie ein Artefakt oder ein permanenter Fluch), oder ein Wesen, in das gAsP geflossen sind (wie eine Chimäre oder einen gebundenen Dämon).\nFertigkeiten: Antimagie, Kraft",
+    "maechtig": "",
+    "schwierigkeit": "Probenschwierigkeit bzw. Beschwörungsschwierigkeit",
+    "modifikationen": "Astralkörper abbauen (Probenschwierigkeit MR, Einzelperson, 8 AsP; das Ziel verliert 16 AsP.)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zauber oder Einzelwesen",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "halbe Basiskosten des Zaubers oder der Beschwörung",
+    "erlernen": "Mag 18; Ach, Elf, Dru 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ttl0NFCaPh8bdDZg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423612,
+    "modifiedTime": 1767873423612,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ttl0NFCaPh8bdDZg"
+}

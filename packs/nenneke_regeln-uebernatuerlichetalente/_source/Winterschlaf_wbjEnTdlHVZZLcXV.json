@@ -1,0 +1,42 @@
+{
+  "name": "Winterschlaf",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Winter",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das gesegnete Ziel fällt in einen tiefen Winterschlaf, in dem es weder Nahrung noch Atemluft benötigt und jeglichen Schaden durch natürliche Hitze oder Kälte ignoriert. Die Effekte von Giften und Krankheiten werden gestoppt, allerdings regeneriert es auch nur einmal pro Woche. Das Ziel erwacht, wenn es eine Wunde erleidet.\nFertigkeiten: Winter",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Monat",
+    "kosten": "16 KaP",
+    "erlernen": "Fir 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wbjEnTdlHVZZLcXV",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430201,
+    "modifiedTime": 1767873430201,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wbjEnTdlHVZZLcXV"
+}

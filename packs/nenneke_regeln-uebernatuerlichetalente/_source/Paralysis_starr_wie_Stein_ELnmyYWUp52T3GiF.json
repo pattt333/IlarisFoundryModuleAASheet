@@ -1,0 +1,42 @@
+{
+  "name": "Paralysis starr wie Stein",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel erstarrt zu einer unzerstörbaren Statue, der auch Gifte oder Krankheiten nichts anhaben können. Die Statue fühlt und hört nichts, kann aber sehen und riechen.\nFertigkeiten: Erz, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelwesen",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Mag 12; Geo 16; Alch, Dru 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ELnmyYWUp52T3GiF",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424915,
+    "modifiedTime": 1767873424915,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ELnmyYWUp52T3GiF"
+}

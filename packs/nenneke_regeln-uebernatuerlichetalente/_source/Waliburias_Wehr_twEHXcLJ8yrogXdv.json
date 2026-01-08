@@ -1,0 +1,42 @@
+{
+  "name": "Waliburias Wehr",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Guter Kampf, Heiliges Feuer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Bei jeder deiner Bewegungen stieben Funken und Rauch steigt auf. Für feindlich gesinnte Humanoide, Tiere, Feenwesen oder Mythenwesen giltst du als Schreckgestalt Stufe 2 (S. 98).\nFertigkeiten: Guter Kampf, Heiliges Feuer",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 KaP",
+    "erlernen": "Ang 14; Ing 16; Kor 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "twEHXcLJ8yrogXdv",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430710,
+    "modifiedTime": 1767873430710,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!twEHXcLJ8yrogXdv"
+}

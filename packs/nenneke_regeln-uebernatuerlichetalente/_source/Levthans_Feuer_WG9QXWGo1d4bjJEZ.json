@@ -1,0 +1,42 @@
+{
+  "name": "Levthans Feuer",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Ziel entbrennt in heißer Leidenschaft für dich. Auf einer Skala von abstoßend/uninteressant/neutral/begehrenswert/unwiderstehlich steigt seine Einstellung dir gegenüber um eine Stufe. In einem folgenden Liebesspiel kannst du deine gesamte Wund- und AsP-Regeneration auf das Ziel übertragen oder die gesamte Regeneration des Ziels stehlen.\nFertigkeiten: Einfluss, Verständigung",
+    "maechtig": "Steigert die Einstellung um eine weitere Stufe.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Stunden",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "WG9QXWGo1d4bjJEZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424659,
+    "modifiedTime": 1767873424659,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WG9QXWGo1d4bjJEZ"
+}

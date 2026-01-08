@@ -1,0 +1,42 @@
+{
+  "name": "Meister minderer Geister",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst Mindergeister herbei. Befinden sich Mindergeister in einem Radius von 1 Meile, eilt bis zu einem Dutzend von ihnen herbei. Sie verhalten sich ihrem Naturell gemäß.\nFertigkeiten: Verständigung",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelwesen",
+    "reichweite": "1 Meile",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 8; Geo 14; Dru 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "33pptMqE3WIVNCxY",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426262,
+    "modifiedTime": 1767873426262,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!33pptMqE3WIVNCxY"
+}

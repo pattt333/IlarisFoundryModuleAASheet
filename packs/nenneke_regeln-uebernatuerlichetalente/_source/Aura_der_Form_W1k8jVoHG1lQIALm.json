@@ -1,0 +1,42 @@
+{
+  "name": "Aura der Form",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "List, Wissen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erhältst einen groben Eindruck in die Vorgeschichte eines Gegenstandes.\nFertigkeiten: List, Wissen",
+    "maechtig": "Du erhältst einen ungefähren/guten/präzisen/vollständigen Eindruck.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Phe, Hes 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "W1k8jVoHG1lQIALm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430363,
+    "modifiedTime": 1767873430363,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!W1k8jVoHG1lQIALm"
+}

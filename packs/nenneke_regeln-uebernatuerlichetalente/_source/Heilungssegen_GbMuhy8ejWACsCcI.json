@@ -1,0 +1,42 @@
+{
+  "name": "Heilungssegen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heilung, Zwölfgöttlicher Ritus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Gesegnete regeneriert eine Wunde.\nFertigkeiten: Heilung, Zwölfgöttlicher Ritus",
+    "maechtig": "Für je zwei Stufen regeneriert der Gesegnete eine weitere Wunde.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Minuten",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "2 KaP",
+    "erlernen": "Ifi, Per 4; Ang, Aves, Brn, Eff, Fir, Hes, Ing, Nan, Phe, Pra, Rah, Ron, Tra, Tsa, Swa 8; Kor 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "GbMuhy8ejWACsCcI",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429277,
+    "modifiedTime": 1767873429277,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!GbMuhy8ejWACsCcI"
+}

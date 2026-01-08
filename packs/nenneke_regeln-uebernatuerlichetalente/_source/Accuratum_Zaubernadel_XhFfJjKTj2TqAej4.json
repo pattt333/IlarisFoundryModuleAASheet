@@ -1,0 +1,42 @@
+{
+  "name": "Accuratum Zaubernadel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du veränderst die Farbe und den Schnitt eines Kleidungsstückes nach deinen Wünschen.\nFertigkeiten: Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Haltbarkeit (-4, Wirkungsdauer 1 Jahr, 8 AsP)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "4 AsP",
+    "erlernen": "Alch, Mag, Srl 16; Hex 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "XhFfJjKTj2TqAej4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426329,
+    "modifiedTime": 1767873426329,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!XhFfJjKTj2TqAej4"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Solidirid Weg aus Licht",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Vor dir entsteht eine Brücke aus Licht, die in allen Regenbogenfarben schillert. Die Brücke ist maximal 8 Schritt lang, 1 Schritt breit und kann einen Höhenunterschied von bis zu 1 Schritt pro 4 Schritt Länge überwinden. Von oben ist die Brücke undurchdringlich, aber von unten kann sie problemlos durchdrungen werden.\nFertigkeiten: Luft, Umwelt",
+    "maechtig": "Die Länge der Brücke steigt um bis zu 4 Schritt, die Breite um bis zu 1 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "Bogentreppe (-4; der maximale Höhenunterschied ist verdoppelt. Mehrfach wählbar.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 16; Mag 20, 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "jhT306IDVIGrokfh",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425881,
+    "modifiedTime": 1767873425881,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!jhT306IDVIGrokfh"
+}

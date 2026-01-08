@@ -1,0 +1,42 @@
+{
+  "name": "Weiches Erstarre! (Dämonisch)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Erz, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "$talent:Weiches Erstarre!$\nFertigkeiten: Dämonisch (nicht in Geo oder Mag), Erz, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Bor 14; Dru, Geo 16; Ach, Alch, Mag 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "uHw0pknuHb16S3p0",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424042,
+    "modifiedTime": 1767873424042,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!uHw0pknuHb16S3p0"
+}

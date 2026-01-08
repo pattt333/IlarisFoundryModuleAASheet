@@ -1,0 +1,42 @@
+{
+  "name": "Bildergalerie",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion, Kraft, Kugelzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du speicherst einen soeben gewirkten Illusionszauber in die Kugel. Maximal kannst du PW Kugelzauber Illusionen speichern. Wenn du die Illusion abspielen möchtest, musst du eine Probe auf Kugelzauber (12) ablegen, 1 Aktion Konflikt und 1 AsP aufwenden. Beim Abspielen befindet sich die Kugel im Zentrum der Illusion.\nFertigkeiten: Illusion, Kraft, Kugelzauber",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Kristallkugel",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "4 AsP, davon 1 gAsP",
+    "erlernen": "Srl 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "aGnNYsxhfD0swVCH",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428136,
+    "modifiedTime": 1767873428136,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!aGnNYsxhfD0swVCH"
+}

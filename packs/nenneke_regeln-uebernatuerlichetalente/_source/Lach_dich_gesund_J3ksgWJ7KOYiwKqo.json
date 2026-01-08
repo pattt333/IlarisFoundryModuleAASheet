@@ -1,0 +1,42 @@
+{
+  "name": "Lach dich gesund",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erzählst deinem Ziel einen hervorragenden Witz, der es in einen kichernden Rauschzustand versetzt. Währenddessen erhält es 2W6+4 Heilpunkte. Für jede Überschreitung der WS wird eine Wunde geheilt. Das Ziel muss dir vertrauen und du kannst dich nicht selbst mit dem Zauber belegen.\nFertigkeiten: Einfluss, Humus",
+    "maechtig": "Erhöht die Heilpunkte um 4.",
+    "schwierigkeit": "12+Wund-Mod des Ziels",
+    "modifikationen": "Tanz dich wach (-4; du tanzt gemeinsam mit deinem Ziel, das statt Wunden Erschöpfung regeneriert.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "J3ksgWJ7KOYiwKqo",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424645,
+    "modifiedTime": 1767873424645,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!J3ksgWJ7KOYiwKqo"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Kraft des Humus",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erfüllst ein großes humusaffines Objekt wie einen Baum mit elementarer Lebenskraft. Wer im Radius von 8 Schritt eine Ruhepause verbringt, regeneriert eine zusätzliche Wunde.\nFertigkeiten: Humus",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Heiliger Hain (-16, Wirkungsdauer bis die Bindung gelöst wird, 64 AsP, davon 16 gAsP)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "16 AsP",
+    "erlernen": "Dru, Geo 16; Hex 18; Ach, Elf 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "fcmzVwbCU0rJnLOW",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425272,
+    "modifiedTime": 1767873425272,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!fcmzVwbCU0rJnLOW"
+}

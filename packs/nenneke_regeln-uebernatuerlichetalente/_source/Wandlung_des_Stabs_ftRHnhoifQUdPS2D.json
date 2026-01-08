@@ -1,0 +1,42 @@
+{
+  "name": "Wandlung des Stabs",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Stabzauber, Umwelt, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst den Stab auf die doppelte Länge ausdehnen oder auf die halbe Länge stauchen. Der Zauber endet vorzeitig, wenn du den Stab (oder seine verwandelte Form) nicht mehr berührst.\nFertigkeiten: Stabzauber, Umwelt, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Seil des Adepten (-8, Wirkungsdauer 4 Minuten; du verwandelst den Stab in ein Seil, das sich selbstständig verknoten und lösen kann.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zauberstab",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "1 AsP",
+    "erlernen": "Mag 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ftRHnhoifQUdPS2D",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428598,
+    "modifiedTime": 1767873428598,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ftRHnhoifQUdPS2D"
+}

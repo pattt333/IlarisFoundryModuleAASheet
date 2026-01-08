@@ -1,0 +1,42 @@
+{
+  "name": "Mondsilberzunge",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Friede, Gutes Gold, List, Stiller Wanderer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Zunge ist flink und die Worte fließen dir nur so von den Lippen. Überreden-Proben sind um +4 erleichtert.\nFertigkeiten: Friede, Gutes Gold, List, Stiller Wanderer",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 KaP",
+    "erlernen": "Phe 12; Aves, Kor 16; Tsa 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wdDPXjzHsMzfJW9k",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430982,
+    "modifiedTime": 1767873430982,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wdDPXjzHsMzfJW9k"
+}

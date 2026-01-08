@@ -1,0 +1,42 @@
+{
+  "name": "Imperavi Handlungszwang",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel muss einen einzigen Befehl von dir ausführen und darf währenddessen nicht gegen dich vorgehen. Widerspricht der Befehl den tiefsten Überzeugungen oder dem Selbsterhaltungstrieb des Zieles, kann es mit einer <i>Konterprobe</i> (Willenskraft, 16) widerstehen. Eine Verschachtelung von Befehlen („Folge allen weiteren Befehlen!“) ist nicht möglich.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Sofort (-4, 0 Aktionen, 8 AsP; das Ziel muss einen kurzen Befehl sofort ausführen.)\nSpäter (-4; der Zauber wirkt erst, sobald ein einfacher Auslöser eintritt.)\nDauerhafter Diener (-4, 4 Minuten, Berührung, Wirkungsdauer 16 Tage, 32 AsP; du kannst bis zu 16 Befehle äußern.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "8 Stunden oder bis der Befehl erfüllt ist",
+    "kosten": "16 AsP",
+    "erlernen": "Mag, Dru 16; Bor 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "GW16WCoJlbwadNSt",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424599,
+    "modifiedTime": 1767873424599,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!GW16WCoJlbwadNSt"
+}

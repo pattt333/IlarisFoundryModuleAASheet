@@ -1,0 +1,42 @@
+{
+  "name": "Ungesehener Beobachter",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung, Vertrautenmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du blickst in Trance durch die Augen deines Vertrautentiers, das ein Ziel ausspioniert. Der Zauber endet mit der Rückkehr des Vertrautentiers und benötigt <i>Konzentration</i>.\nFertigkeiten: Verständigung, Vertrautenmagie",
+    "maechtig": "Du teilst einen zusätzlichen Sinn mit dem Vertrauten.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Bindungspartner",
+    "reichweite": "8 Meilen",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "EvKUpUbnonaLqEJA",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428827,
+    "modifiedTime": 1767873428827,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!EvKUpUbnonaLqEJA"
+}

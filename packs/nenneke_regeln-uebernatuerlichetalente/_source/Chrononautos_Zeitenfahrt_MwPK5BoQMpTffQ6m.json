@@ -1,0 +1,42 @@
+{
+  "name": "Chrononautos Zeitenfahrt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Temporal",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erschaffst ein Tor durch die Zeiten. Wer es durchschreitet, gelangt an einen von dir bestimmten Zeitpunkt, der maximal 1 Jahr zurück liegen darf. Das Tor existiert nur in eine Richtung – Zeitreisende werden am Ende der Wirkungsdauer automatisch in ihre Zeit zurück gerissen.\nFertigkeiten: Temporal",
+    "maechtig": "Verzehnfacht den Zeitabstand.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Zone",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "64 AsP",
+    "erlernen": "Ach 20; 80 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "MwPK5BoQMpTffQ6m",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425946,
+    "modifiedTime": 1767873425946,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!MwPK5BoQMpTffQ6m"
+}

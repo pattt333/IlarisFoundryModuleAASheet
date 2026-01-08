@@ -1,0 +1,42 @@
+{
+  "name": "Wirbelnder Luftschild",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Ringrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Unberechenbare Winde lenken alle auf dich gerichteten Geschosse bis zur Größe eines Wurfspeers ab. Ungezielte Geschosse (wie in einem Pfeilhagel) treffen dich nicht, Fernkampfangriffe auf dich sind um -4 erschwert.\nFertigkeiten: Luft, Ringrituale",
+    "maechtig": "Der Malus steigt um -2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6aCW0hq55zzrD66Z",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428361,
+    "modifiedTime": 1767873428361,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6aCW0hq55zzrD66Z"
+}

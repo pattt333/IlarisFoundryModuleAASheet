@@ -1,0 +1,42 @@
+{
+  "name": "Hammer des Magus",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Stabzauber, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das mit dem Stab berührte Objekt erleidet 4W6 SP. An Lebewesen richtet der Hammer keinen Schaden an.\nFertigkeiten: Stabzauber, Umwelt",
+    "maechtig": "Erhöht die SP um +4.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Mag 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "f5JuidWQXxRMiYOA",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428549,
+    "modifiedTime": 1767873428549,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!f5JuidWQXxRMiYOA"
+}

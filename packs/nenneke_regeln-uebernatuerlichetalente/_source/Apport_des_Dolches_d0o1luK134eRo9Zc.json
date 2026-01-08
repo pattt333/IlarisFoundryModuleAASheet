@@ -1,0 +1,42 @@
+{
+  "name": "Apport des Dolches",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dolchzauber, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Dolch kehrt fliegend mit einer Geschwindigkeit von 10 Meilen pro Stunde zu dir zurück. Er weicht Hindernissen aus oder durchbricht sie notfalls, wenn die KK von PW Dolchzauber/2 oder Umwelt/2 dafür ausreicht.\nFertigkeiten: Dolchzauber, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "1 Meile",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Dru 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "d0o1luK134eRo9Zc",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426579,
+    "modifiedTime": 1767873426579,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!d0o1luK134eRo9Zc"
+}

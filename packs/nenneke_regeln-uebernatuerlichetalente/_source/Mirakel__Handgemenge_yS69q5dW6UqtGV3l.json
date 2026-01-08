@@ -1,0 +1,42 @@
+{
+  "name": "Mirakel: Handgemenge",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schutz der Gläubigen, Guter Kampf",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein nächster Wurf auf Handgemenge ist um +4 Punkte erleichtert.",
+    "maechtig": "Erhöht die Erleichterung um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "4 KaP",
+    "erlernen": "20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yS69q5dW6UqtGV3l",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873432474,
+    "modifiedTime": 1767873432474,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yS69q5dW6UqtGV3l"
+}

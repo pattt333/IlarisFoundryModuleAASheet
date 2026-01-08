@@ -1,0 +1,42 @@
+{
+  "name": "Lohn der Unverzagten",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heilung, Heim und Herd",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stärkst die Widerstandskraft des Gesegneten. Proben zur Abwehr von Krankheiten sind um +4 erleichtert.\nFertigkeiten: Heilung, Heim und Herd",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "4 KaP",
+    "erlernen": "Per 12; Tra 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "WqvjnspcEcf93iK5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430822,
+    "modifiedTime": 1767873430822,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WqvjnspcEcf93iK5"
+}

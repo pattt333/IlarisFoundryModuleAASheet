@@ -1,0 +1,42 @@
+{
+  "name": "Zorn der Elemente",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eis, Erz, Feuer, Humus, Luft, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du schleuderst eine Handvoll des Elements, mit dem du den Zauber wirkst, auf deinen Gegner. Die Menge vervielfacht sich im Flug und richtet 2W6 TP an. <i>Ballistischer</i> Zauber.\nFertigkeit Eis: <i>Erfrieren</i> (S. 98)\nFertigkeit Erz: <i>Niederschmettern</i> (S. 98)\nFertigkeit Feuer: <i>Nachbrennen</i> (S. 98)\nFertigkeit Humus: <i>Fesseln</i> (S. 98)\nFertigkeit Luft: <i>Zurückstoßen</i> (S. 98)\nFertigkeit Wasser: <i>Ertränken</i> (S. 98)\nFertigkeiten: Eis, Erz, Feuer, Humus, Luft, Wasser",
+    "maechtig": "Erhöht die TP um +4.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelwesen",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Geo, Dru, Ach 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "9OEyHssOGdLQNC7a",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424839,
+    "modifiedTime": 1767873424839,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!9OEyHssOGdLQNC7a"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Krötensprung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der nächste Sprung deines Zieles ist gewaltig. Er kann bis zu 8 Schritt Weite und 4 Schritt Höhe überwinden und die effektive Sturzhöhe (S. 34) sinkt um 4 Schritt.\nFertigkeiten: Eigenschaften",
+    "maechtig": "Die Weite steigt um +4 Schritt, die (Sturz-)Höhe um +2 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "Krötengang (-4, Wirkungsdauer 16 Initiativephasen, 8 AsP; dein Ziel kann beliebig oft springen.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Hex 16; Ach, Elf 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "MCR8fTWp7gvpuevL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424360,
+    "modifiedTime": 1767873424360,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!MCR8fTWp7gvpuevL"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Bindung des Iama",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Elfenlieder, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stellst eine enge magische Bindung zu deinem Iama her, welche die Voraussetzung für alle weiteren Talente dieser Fertigkeit ist. Außerdem wird das Iama unzerbrechlich.\nFertigkeiten: Elfenlieder, Kraft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Iama",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "permanent",
+    "kosten": "16 AsP",
+    "erlernen": "Elf 4; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "WFpb2PK5Q6yeZ61R",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426885,
+    "modifiedTime": 1767873426885,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WFpb2PK5Q6yeZ61R"
+}

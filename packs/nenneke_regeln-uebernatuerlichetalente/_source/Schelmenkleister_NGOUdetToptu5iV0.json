@@ -1,0 +1,42 @@
+{
+  "name": "Schelmenkleister",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Untergrund in einem Kreis von 4 Schritt Radius wird zäh und klebrig. Die GS aller Wesen darauf sinkt um 2 Punkte. Fällt sie auf 0, bleibt das betroffene Wesen am Boden kleben.\nFertigkeiten: Umwelt",
+    "maechtig": "Die GS sinkt um 1 weiteren Punkt und der Radius steigt um 2 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "Schelmenschleim (-4; der Untergrund wird stattdessen glitschig und schleimig. Alle Proben, um auf den Beinen zu bleiben, sind um +4 erschwert.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "NGOUdetToptu5iV0",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426150,
+    "modifiedTime": 1767873426150,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!NGOUdetToptu5iV0"
+}

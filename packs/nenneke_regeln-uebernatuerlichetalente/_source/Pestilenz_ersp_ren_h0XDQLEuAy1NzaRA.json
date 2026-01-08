@@ -1,0 +1,42 @@
+{
+  "name": "Pestilenz erspüren",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erspürst die Krankheit in deinem Ziel. Du erfährst die Art der Krankheit, ihren Verlauf und die Ansteckungsgefahr.\nFertigkeiten: Hellsicht",
+    "maechtig": "Anschließende Proben zur Heilung der Krankheit sind um +2 erleichtert.",
+    "schwierigkeit": "12",
+    "modifikationen": "Gift entdecken (-4, 2 Aktionen; statt Krankheiten erkennst du Gifte.)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Dru 12; Hex 14; Elf 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "h0XDQLEuAy1NzaRA",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425137,
+    "modifiedTime": 1767873425137,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!h0XDQLEuAy1NzaRA"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Animatio stummer Diener",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verzauberst ein Objekt von maximal 4 Stein, sodass es eine einfache Bewegung wiederholt. Du musst die Bewegung während der Vorbereitungszeit sieben Mal eigenhändig ausführen und ein Signal bestimmen (z.B. ein Fingerschnippen oder ein Wort). Gibst du das Signal, führt der Gegenstand die Bewegung aus. Seine KK entspricht deiner KK während der Vorbereitungszeit.\nFertigkeiten: Umwelt",
+    "maechtig": "Das maximale Gewicht verdoppelt sich.",
+    "schwierigkeit": "12",
+    "modifikationen": "Mehrere Objekte (-4; du kannst bis zu FF Objekte gleichzeitig verzaubern, solange ihre Bewegungen zusammengehören.)\nMehrere Auslösende (-2; eine zusätzliche Person kann das Signal geben. Mehrfach wählbar.)\nGeworfen (-4; du musst das Objekt während der Vorbereitungszeit nicht permanent in der Hand halten.)\nTagelöhner (4 AsP, Wirkungsdauer 8 Stunden)\nAd Infinitum Ad Nauseam (-8; das Objekt wiederholt die Bewegung immer wieder, bis du das Signal wiederholst.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Jahr",
+    "kosten": "16 AsP",
+    "erlernen": "Mag 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "By8CXYo4tTvq5XE6",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426016,
+    "modifiedTime": 1767873426016,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!By8CXYo4tTvq5XE6"
+}

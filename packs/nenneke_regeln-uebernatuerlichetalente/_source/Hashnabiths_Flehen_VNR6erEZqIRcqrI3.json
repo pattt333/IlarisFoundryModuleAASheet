@@ -1,0 +1,42 @@
+{
+  "name": "Hashnabiths Flehen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Stiller Wanderer, Flüsse und Quellen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du findest den kürzesten begehbaren Weg zur nächsten Wasserquelle.\nFertigkeiten: Stiller Wanderer, Flüsse und Quellen",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Quellsegen (-4, Zone; verdoppelt die Wassermenge einer Quelle.)\nAzilas Quellgesang (-8, 16 KaP, Zone; aus dem Boden strömt ausreichend reines Trinkwasser, um eine kleine Karawane zu versorgen.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "4 KaP",
+    "erlernen": "Eff 16; Aves 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "VNR6erEZqIRcqrI3",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429682,
+    "modifiedTime": 1767873429682,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!VNR6erEZqIRcqrI3"
+}

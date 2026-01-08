@@ -1,0 +1,42 @@
+{
+  "name": "Elementar der Keule (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Keulenrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du lässt 2 gAsP in die Keule fließen. Fortan können in deiner Keule gebundene Elementare (siehe S. 99) unbegrenzt lange gebunden bleiben. Das Binden in die Keule gilt immer als gewöhnlicher Dienst. Es kann immer nur ein Wesen in der Keule gebunden sein.\nAnmerkung: Zusammen mit dem Vorteil Meister der Wünsche eine permanente Besessenheit möglich, wenn du das Elementar nach jedem Dienst sofort wieder bindest.",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Smn 16, 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oVhOy8PBmtfHem4j",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427866,
+    "modifiedTime": 1767873427866,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oVhOy8PBmtfHem4j"
+}

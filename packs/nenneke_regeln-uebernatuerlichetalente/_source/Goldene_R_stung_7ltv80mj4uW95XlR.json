@@ -1,0 +1,42 @@
+{
+  "name": "Goldene Rüstung",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Licht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du hüllst dich in eine Aureole gleißenden Lichts, das deine Gegner blendet. Sämtliche Nah- und Fernkampfangriffe und alle Zauber auf dich sind um -2 erschwert.\nFertigkeiten: Licht",
+    "maechtig": "Erhöht den Malus um -1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 KaP",
+    "erlernen": "Pra 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7ltv80mj4uW95XlR",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431133,
+    "modifiedTime": 1767873431133,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7ltv80mj4uW95XlR"
+}

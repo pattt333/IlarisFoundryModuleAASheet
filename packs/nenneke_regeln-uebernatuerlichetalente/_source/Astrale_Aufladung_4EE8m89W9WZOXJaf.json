@@ -1,0 +1,42 @@
+{
+  "name": "Astrale Aufladung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schalenzauber, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Bei der Herstellung eines Elixiers lässt du durch die Schale zusätzliche Astralenergie einfließen. Alle Proben zur Herstellung dieses Elixiers sind um +4 erleichtert.\nFertigkeiten: Schalenzauber, Verwandlung",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Elixier",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis zur Fertigstellung",
+    "kosten": "8 AsP",
+    "erlernen": "Alch 12; Hex 16; Mag 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4EE8m89W9WZOXJaf",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428407,
+    "modifiedTime": 1767873428407,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4EE8m89W9WZOXJaf"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Harmlose Gestalt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Mit dieser <i>Illusion</i> (Sicht, Gehör, Geruch) erscheinst du den Umstehenden als kleines Kind, alter Krüppel, Orkfrau oder als eine andere harmlose Gestalt. Deine Kleidung ist von der Illusion betroffen, zusätzliche Gegenstände wie ein Wanderstab oder ein Rucksack nicht. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Einfluss, Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "4 AsP",
+    "erlernen": "Hex 8; Srl 14; Ach, Bor, Dru, Mag, Sch 16; Elf 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "JPgDLFUfKwNwaKaB",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424552,
+    "modifiedTime": 1767873424552,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!JPgDLFUfKwNwaKaB"
+}

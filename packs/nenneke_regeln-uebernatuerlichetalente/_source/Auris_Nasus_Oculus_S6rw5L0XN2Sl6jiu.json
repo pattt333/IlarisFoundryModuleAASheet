@@ -1,0 +1,42 @@
+{
+  "name": "Auris Nasus Oculus",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eine statische <i>Illusion</i> (Sicht, Gehör oder Geruch) deiner Wahl erscheint. Ihre maximale Größe beträgt PW Illusionx4 Raumschritt.\nFertigkeiten: Illusion",
+    "maechtig": "Die Illusion betrifft einen weiteren, oben genannten Sinn.",
+    "schwierigkeit": "12",
+    "modifikationen": "Bewegte Illusion (-4; die Illusion führt eine beim Zaubern bestimmte Bewegung aus.)\nKontrollierte Illusion (-4; du kannst die Illusion aktiv steuern, was <i>Konzentration</i> erfordert.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Srl 12; Mag 14; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "S6rw5L0XN2Sl6jiu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425379,
+    "modifiedTime": 1767873425379,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!S6rw5L0XN2Sl6jiu"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Ruhe Körper, Ruhe Geist",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel sinkt in einen tiefen Schlaf, aus dem es nur mit Gewalt geweckt werden kann. Wird es nicht vorzeitig geweckt, regeneriert es zwei zusätzliche Wunden.\nFertigkeiten: Humus",
+    "maechtig": "Regeneriert eine weitere Wunde.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 14; Ach, Alch, Dru, Hex, Mag 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7d7shTVLOmZovADg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425311,
+    "modifiedTime": 1767873425311,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7d7shTVLOmZovADg"
+}

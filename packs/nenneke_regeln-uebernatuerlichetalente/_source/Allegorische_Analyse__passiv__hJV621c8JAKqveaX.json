@@ -1,0 +1,42 @@
+{
+  "name": "Allegorische Analyse (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schalenzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du lässt einen 1 gAsP in die Schale fließen. Fortan leuchten bei der Analyse einer Astralstruktur in deiner Schale arkane Symbole auf der Schale auf. Dadurch steigt dein Analysegrad bei Intensitätsanalysen um 1 (S. 80).",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Alch 12; Hex, Mag 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "hJV621c8JAKqveaX",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428383,
+    "modifiedTime": 1767873428383,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!hJV621c8JAKqveaX"
+}

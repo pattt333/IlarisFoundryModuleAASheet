@@ -1,0 +1,42 @@
+{
+  "name": "Anrufung der Winde",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Seefahrt, Wind und Wogen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Im Radius von 1 Meile kannst du den Wind auf einer Skala von windstill/leichte Brise/steife Brise/Sturm/Orkan um zwei Stufen verändern und seine Richtung lenken.\nFertigkeiten: Seefahrt, Wind und Wogen",
+    "maechtig": "Verändert den Wind um eine weitere Stufe und verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Windhauch (0 Aktionen, Wirkungsdauer augenblicklich, 1 KaP; ein kurzer Windstoß weht giftige Dämpfe fort oder löscht ein kleines Feuer.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "16 KaP",
+    "erlernen": "Eff, Swa 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "lyKt8SXc6s42PByl",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429739,
+    "modifiedTime": 1767873429739,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!lyKt8SXc6s42PByl"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Flüstern der Fluten",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Flüsse und Quellen, Wind und Wogen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du nimmst vage Eindrücke von Fischen und Meereslebewesen, schwimmenden und versunkenen Gegenständen oder Verschmutzungen im Radius von 4 Meilen (bei Flüssen halb so weit mit- und doppelt so weit gegen die Strömung) wahr. Erfordert <i>Konzentration</i>.\nFertigkeiten: Flüsse und Quellen, Wind und Wogen",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "1 KaP",
+    "erlernen": "Eff 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "njc9kAfVPmolO1FA",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429658,
+    "modifiedTime": 1767873429658,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!njc9kAfVPmolO1FA"
+}

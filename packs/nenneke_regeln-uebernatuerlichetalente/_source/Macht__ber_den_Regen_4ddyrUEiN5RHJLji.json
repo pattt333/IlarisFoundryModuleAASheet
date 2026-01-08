@@ -1,0 +1,42 @@
+{
+  "name": "Macht über den Regen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Ringrituale, Umwelt, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Wetter in einer Zone von bis zu 1 Meile Radius verändert sich nach deinem Willen. Du kannst folgende Skalen um insgesamt zwei Stufen verändern:\nNiederschlag: trocken/Nieselregen/Regen/starker Regen/Wolkenbruch\nWind: windstill/leichte Brise/steife Brise/Sturm/Orkan\nTemperatur: heiß/warm/mittel/kühl/kalt.\nFertigkeiten: Luft, Ringrituale, Umwelt, Wasser",
+    "maechtig": "Du kannst die Skalen um eine weitere Stufe verändern.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Zone",
+    "reichweite": "1 Meile",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "32 AsP",
+    "erlernen": "Geo 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4ddyrUEiN5RHJLji",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428298,
+    "modifiedTime": 1767873428298,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4ddyrUEiN5RHJLji"
+}

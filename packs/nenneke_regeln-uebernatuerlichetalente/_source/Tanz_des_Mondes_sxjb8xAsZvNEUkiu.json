@@ -1,0 +1,42 @@
+{
+  "name": "Tanz des Mondes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung, Zaubertänze",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Mit diesem Tanz kannst du in die Träume eines schlafenden Zieles eindringen und ihm dort Botschaften überbringen. Woran sich das Ziel erinnern kann, ist Spielleiterentscheid. Du musst eine emotionale Beziehung zum Ziel haben.\nFertigkeiten: Verständigung, Zaubertänze",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "100 Meilen",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Ztz 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "sxjb8xAsZvNEUkiu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429154,
+    "modifiedTime": 1767873429154,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!sxjb8xAsZvNEUkiu"
+}

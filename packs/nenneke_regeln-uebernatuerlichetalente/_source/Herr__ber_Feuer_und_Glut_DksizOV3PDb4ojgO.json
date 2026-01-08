@@ -1,0 +1,42 @@
+{
+  "name": "Herr über Feuer und Glut",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Feuer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst ein bestehendes Feuer bis zur Größe eines großen Lagerfeuers formen. Die Verformung geschieht mit einer Geschwindigkeit von 4 Schritt pro Initiativephase und benötigt <i>Konzentration</i>.\nFertigkeiten: Heiliges Feuer\nAnmerkung: Alternativ kann die Liturgie wie Antimagie gegen Feuerzauber wirken (S. 126). Die Randbedingungen entsprechen den dort angegebenen, außer dass die Kosten mit KaP bezahlt werden und die Liturgie um +4 erleichtert ist.",
+    "maechtig": "Du kannst Feuer bis zu einer Größe eines Scheiterhaufens/brennenden Hauses/einer brennenden Häusergruppe/eines brennenden Stadtviertels formen.",
+    "schwierigkeit": "12",
+    "modifikationen": "Gebieter der Lava (-4; du kannst die Richtung von Lavaströmen bestimmen, solange die Lava dadurch nicht bergauf fließt.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 KaP",
+    "erlernen": "Ang, Ing 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "DksizOV3PDb4ojgO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430672,
+    "modifiedTime": 1767873430672,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!DksizOV3PDb4ojgO"
+}

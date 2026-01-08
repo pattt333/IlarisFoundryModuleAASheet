@@ -1,0 +1,42 @@
+{
+  "name": "Krötenkuss",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Hexenflüche, Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel wird von seiner Umgebung furchtsam gemieden. Proben auf Überreden und Rhetorik sind um -4 erschwert, Proben auf Betören sogar um -8.\nFertigkeiten: Einfluss, Hexenflüche, Illusion",
+    "maechtig": "Der Malus steigt um -2/-4.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "stZvNqCIVlzn5V8K",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427764,
+    "modifiedTime": 1767873427764,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!stZvNqCIVlzn5V8K"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Segensreicher Neuanfang",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Neubeginn",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du segnest ein neues Unternehmen. Der Gesegnete erhält während der Wirkungsdauer die Eigenheit „Euphorisch für [Unternehmen]: Du widmest dich mit Elan der bevorstehenden Aufgabe und vergisst dabei alles um dich herum.“ Für den ersten Einsatz der Eigenheit bezahlt er keinen Schicksalspunkt. Für gesegnete NSC gelten die Vorschläge von S. 16.\nFertigkeiten: Neubeginn",
+    "maechtig": "Für je zwei Stufen kostet ein weiterer Einsatz der Eigenheit keinen Schicksalspunkt.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "8 KaP",
+    "erlernen": "Tsa 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "vPhnHjgcbnDrWv3E",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431912,
+    "modifiedTime": 1767873431912,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!vPhnHjgcbnDrWv3E"
+}

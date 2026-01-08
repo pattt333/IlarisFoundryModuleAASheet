@@ -1,0 +1,42 @@
+{
+  "name": "Visibili Vanitar",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel wird unsichtbar. Kleidung und andere Gegenstände sind nicht betroffen. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 12; Alch, Mag, Sch, Srl 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "O3JlcTL2ryrk2vE2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426485,
+    "modifiedTime": 1767873426485,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!O3JlcTL2ryrk2vE2"
+}

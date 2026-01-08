@@ -1,0 +1,42 @@
+{
+  "name": "Blitz dich find",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel ist geblendet und erleidet eine Erschwernis von -2 auf Proben.\nFertigkeiten: Einfluss",
+    "maechtig": "Erhöht den Malus um -1.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelwesen",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "4 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Elf 8; Mag 12; Dru, Hex 14; Ach, Geo, Sch, Srl 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Jvgw4FijcJseFEYt",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424506,
+    "modifiedTime": 1767873424506,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Jvgw4FijcJseFEYt"
+}

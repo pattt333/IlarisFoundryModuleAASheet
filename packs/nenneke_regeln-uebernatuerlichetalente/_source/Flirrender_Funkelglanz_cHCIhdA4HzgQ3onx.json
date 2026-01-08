@@ -1,0 +1,42 @@
+{
+  "name": "Flirrender Funkelglanz",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erzeugst eine illusionäre Explosion aus Farben und Formen vor den Augen deines Ziels. Gelingt ihm keine <i>Konterprobe</i> (IN, 16), so ist es in seiner nächsten Initiativephase zu keiner Aktion fähig.\nFertigkeiten: Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Srl 16; Sch 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "cHCIhdA4HzgQ3onx",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425468,
+    "modifiedTime": 1767873425468,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!cHCIhdA4HzgQ3onx"
+}

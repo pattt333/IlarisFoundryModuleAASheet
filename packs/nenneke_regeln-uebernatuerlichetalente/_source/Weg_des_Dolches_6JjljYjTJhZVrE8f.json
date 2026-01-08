@@ -1,0 +1,42 @@
+{
+  "name": "Weg des Dolches",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dolchzauber, Hellsicht, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Dolch zeigt in die Richtung des Ortes, an dem er geweiht wurde. Eine Überleben-Proben zur Orientierung ist um +4 Punkte erleichtert.\nFertigkeiten: Dolchzauber, Hellsicht, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Dru 12; Geo 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6JjljYjTJhZVrE8f",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426856,
+    "modifiedTime": 1767873426856,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6JjljYjTJhZVrE8f"
+}

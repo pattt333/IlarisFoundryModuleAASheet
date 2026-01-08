@@ -1,0 +1,42 @@
+{
+  "name": "Reptilea Natternnest",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Alle Geschuppten in einem Radius von 64 Schritt streben auf dein Ziel zu und fallen dort über alles her, was in ihr Fressschema passt.\nFertigkeiten: Dämonisch, Verständigung",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Selemer Verhältnisse (-8, Wirkungsdauer 1 Woche, 32 AsP)\nKrötenkunde (-4; du kannst den Zauber auf eine bestimmte Art von Echsenwesen beschränken oder eine Art ausnehmen)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "16 AsP",
+    "erlernen": "Ach 16; Bor 18; Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "3erX0WQW523kqjeD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423957,
+    "modifiedTime": 1767873423957,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!3erX0WQW523kqjeD"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Leidensbund",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du übernimmst 2 Wunden von deinem Ziel.\nFertigkeiten: Humus, Verständigung",
+    "maechtig": "Du übernimmst 1 weitere Wunde.",
+    "schwierigkeit": "12",
+    "modifikationen": "Krankheitsbund (Probenschwierigkeit Krankheitsstufe; du übernimmst die Krankheit deines Ziels.)\nGiftbund (Probenschwierigkeit Giftstufe; du übernimmst das Gift von deinem Ziel.)\nHeilender Dritter (-4; zwei Einzelpersonen; du überträgst die Wunden von einem Ziel auf ein freiwilliges anderes.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Ach 18; Hex 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "t6Ywa8A0yuCLt6Bn",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425292,
+    "modifiedTime": 1767873425292,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!t6Ywa8A0yuCLt6Bn"
+}

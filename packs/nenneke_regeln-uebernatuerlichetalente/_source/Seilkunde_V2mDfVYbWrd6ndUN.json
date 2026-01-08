@@ -1,0 +1,31 @@
+{
+  "name": "Seilkunde",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Dieses Talent kommt beim <i>Fesseln</i>, Entfesseln zum Einsatz",
+    "fertigkeit": "Überlebensfertigkeiten",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "V2mDfVYbWrd6ndUN",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090678,
+    "modifiedTime": 1767788090678,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!V2mDfVYbWrd6ndUN"
+}

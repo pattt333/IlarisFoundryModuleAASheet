@@ -1,0 +1,42 @@
+{
+  "name": "Aeolitus Windgebraus",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ein kräftiger Windstoß breitet sich von deinem Mund kegelförmig (45°) 16 Schritt weit aus und verursacht <i>Niederschmettern</i>, wenn eine <i>Konterprobe</i> (KK, 16) misslingt. <i>Ballistischer</i> Zauber.\nFertigkeiten: Luft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Langer Atem (-8, 8 AsP; der Windstoß hält KO Initiativephasen lang an. Erfordert <i>Konzentration</i>.)\nSturm (-4; bei misslungener <i>Konterprobe</i> verursacht der Zauber auch <i>Zurückstoßen</i> (S. 98).)\nWinde der anderen Art (-4; der Wind bringt lieblichen Duft oder widerlichen Gestank.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Elf 8; Geo 12; Ach, Alch, Dru, Mag 14; Sch, Srl 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "jZAxc8QnBSt8uPu5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425717,
+    "modifiedTime": 1767873425717,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!jZAxc8QnBSt8uPu5"
+}

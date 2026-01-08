@@ -1,0 +1,42 @@
+{
+  "name": "Archofaxius",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ein Strahl aus elementarem Erz fügt dem Ziel 4W6 TP zu und verursacht <i>Niederschmettern</i> (S. 98). <i>Ballistischer</i> Zauber.\nFertigkeiten: Erz",
+    "maechtig": "Die TP steigen um 2W6.",
+    "schwierigkeit": "12",
+    "modifikationen": "Gezielter Strahl (-4; du kannst die Trefferzone bestimmen.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelwesen, Einzelobjekt",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 AsP",
+    "erlernen": "Ach, Dru, Geo, Mag 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "sO5VmkW1Pg7e7aZ4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424854,
+    "modifiedTime": 1767873424854,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!sO5VmkW1Pg7e7aZ4"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Gespür der Keule",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Geister rufen, Keulenrituale, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Keule zeigt dir die Gegenwart von Magie in einem Radius von 1 Schritt an. Das entspricht einem Analysegrad von 1 für die Intensitätsanalyse (mehr dazu S. 80).\nFertigkeiten: Geister rufen, Keulenrituale, Kraft",
+    "maechtig": "Der Analysegrad steigt um 1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Smn 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "D6ZNNduYXeTZrgvB",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427889,
+    "modifiedTime": 1767873427889,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!D6ZNNduYXeTZrgvB"
+}

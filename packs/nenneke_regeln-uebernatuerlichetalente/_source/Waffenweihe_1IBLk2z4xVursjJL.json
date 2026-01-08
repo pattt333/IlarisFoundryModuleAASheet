@@ -1,0 +1,42 @@
+{
+  "name": "Waffenweihe",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Magiebann, Heiliges Feuer, Heerführung, Tod, Gutes Gold",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du segnest eine Waffe. Diese gilt als geweiht.\nFertigkeiten: Gutes Gold, Magiebann, Heiliges Feuer, Heerführung, Tod\nAnmerkung: Geweihte Waffen werden nur in seltenen Ausnahmefällen und nach sorgfältiger Überprüfung an Nicht-Geweihte ausgegeben.",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "8 KaP, davon 2 gKaP",
+    "erlernen": "Ron 12; Ang, Ing, Kor 14; Brn, Pra 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "1IBLk2z4xVursjJL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429539,
+    "modifiedTime": 1767873429539,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!1IBLk2z4xVursjJL"
+}

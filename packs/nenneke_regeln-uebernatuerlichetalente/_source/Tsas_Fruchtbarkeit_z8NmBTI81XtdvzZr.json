@@ -1,0 +1,42 @@
+{
+  "name": "Tsas Fruchtbarkeit",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Neubeginn",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das gesegnete Lebewesen ist für die Wirkungsdauer deutlich fruchtbarer.\nFertigkeiten: Neubeginn",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "1 KaP",
+    "erlernen": "Tsa 12; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "z8NmBTI81XtdvzZr",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431952,
+    "modifiedTime": 1767873431952,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!z8NmBTI81XtdvzZr"
+}

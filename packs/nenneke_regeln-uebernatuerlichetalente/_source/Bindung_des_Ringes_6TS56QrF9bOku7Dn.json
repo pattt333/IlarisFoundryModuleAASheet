@@ -1,0 +1,42 @@
+{
+  "name": "Bindung des Ringes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Ringrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stellst eine enge magische Bindung zu deinem Schlangenreif her, welche die Voraussetzung für alle weiteren Talente dieser Fertigkeit ist. Außerdem wird der Schlangenreif unzerbrechlich.\nFertigkeiten: Kraft, Ringrituale",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Schlangenreif",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "permanent",
+    "kosten": "16 AsP",
+    "erlernen": "Geo 4; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6TS56QrF9bOku7Dn",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428239,
+    "modifiedTime": 1767873428239,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6TS56QrF9bOku7Dn"
+}

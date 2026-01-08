@@ -1,0 +1,42 @@
+{
+  "name": "Fluch der Pestilenz",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du infizierst dein Opfer mit einer dir bekannten Krankheit deiner Wahl, die dann ihren natürlichen Krankheitsverlauf nimmt. Die maximale Krankheitsstufe ist 16.\nFertigkeiten: Dämonisch",
+    "maechtig": "Erhöht die maximale Krankheitsstufe um +4.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Einzelfall (-4; die Krankheit ist nicht ansteckend.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 AsP",
+    "erlernen": "Dru 14; Bor, Hex, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "O5wCMZmnqOxIJzC5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423854,
+    "modifiedTime": 1767873423854,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!O5wCMZmnqOxIJzC5"
+}

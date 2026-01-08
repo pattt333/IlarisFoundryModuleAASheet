@@ -1,0 +1,42 @@
+{
+  "name": "Herr über das Tierreich",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du zwingst ein Tier unter deinen Bann. Es verhält sich, als wäre es gut dressiert und dir bedingungslos loyal und erfüllt deine Befehle. Nur Befehle, die seinen Instinkten klar widersprechen, kann es mit einer <i>Konterprobe</i> (MU, 16) widerstehen.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Herr der Fliegen (-4; du beherrschst einen Schwarm Kleintiere.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Tier",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Dru 8; Geo 12; Elf, Hex 18; Ach, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "cBRw3xnoUQZSPw0b",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424558,
+    "modifiedTime": 1767873424558,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!cBRw3xnoUQZSPw0b"
+}

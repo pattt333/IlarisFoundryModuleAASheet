@@ -1,0 +1,42 @@
+{
+  "name": "Transmutare Körperform",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst das Aussehen deines Zieles nach Belieben ändern, musst dabei aber dabei Größe und Gewicht deines Zieles beibehalten.\nFertigkeiten: Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Neues Leben (-8, Wirkungsdauer bis die Bindung gelöst wird, 32 AsP, davon 8 gAsP)",
+    "vorbereitung": "1 Tag",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Monat",
+    "kosten": "16 AsP",
+    "erlernen": "Alch, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "63NvnKNpwDKjYiQ9",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426463,
+    "modifiedTime": 1767873426463,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!63NvnKNpwDKjYiQ9"
+}

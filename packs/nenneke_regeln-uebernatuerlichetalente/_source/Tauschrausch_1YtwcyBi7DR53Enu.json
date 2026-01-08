@@ -1,0 +1,42 @@
+{
+  "name": "Tauschrausch",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Zwei Gegenstände deiner Wahl, die jeweils maximal 2 Stein schwer sind und maximal 4 Schritt voneinander entfernt stehen, tauschen auf der Stelle ihren Platz. Die Gegenstände dürfen nicht magisch, geweiht, befestigt oder mit einem Lebewesen in Kontakt sein.\nFertigkeiten: Kraft, Umwelt",
+    "maechtig": "Das maximale Gewicht und die maximale Distanz verdoppeln sich.",
+    "schwierigkeit": "12",
+    "modifikationen": "Einmischen (-8; auch magische und geweihte Gegenstände können gewählt werden.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "zwei Objekte",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Sch, Srl 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "1YtwcyBi7DR53Enu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425673,
+    "modifiedTime": 1767873425673,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!1YtwcyBi7DR53Enu"
+}

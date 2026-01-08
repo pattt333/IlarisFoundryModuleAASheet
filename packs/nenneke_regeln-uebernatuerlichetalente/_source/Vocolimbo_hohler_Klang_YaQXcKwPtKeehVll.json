@@ -1,0 +1,42 @@
+{
+  "name": "Vocolimbo hohler Klang",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Von einem Ort deiner Wahl aus erklingt eine <i>Illusion</i> (Gehör) als hohle Stimme, die eine von dir gewählte, bis zu 16 Worte lange Botschaft spricht.\nFertigkeiten: Illusion",
+    "maechtig": "Verdoppelt die Länge der Botschaft.",
+    "schwierigkeit": "12",
+    "modifikationen": "Zeitversetzt (-2; die Botschaft ertönt erst nach einem Zeitraum von bis zu 4 Initiativephasen. Mehrfach wählbar.)\nVox Memoriae (-4, Wirkungsdauer bis zur Sommersonnenwende, 8 AsP; die Botschaft ertönt erst, wenn ein beim Zaubern bestimmtes Ereignis eintritt.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "2 AsP",
+    "erlernen": "Srl 12; Mag 14; Sch 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "YaQXcKwPtKeehVll",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425548,
+    "modifiedTime": 1767873425548,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!YaQXcKwPtKeehVll"
+}

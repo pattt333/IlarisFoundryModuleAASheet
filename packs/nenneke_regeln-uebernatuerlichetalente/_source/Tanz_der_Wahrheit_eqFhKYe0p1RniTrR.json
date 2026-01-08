@@ -1,0 +1,42 @@
+{
+  "name": "Tanz der Wahrheit",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Zaubertänze",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du siehst die Gedanken deines Ziels als verschwommene Bilder vor dir. Weiß das Ziel, dass seine Gedanken gelesen werden, kann es dich mit einer <i>Konterprobe</i> (Willenskraft, 16) in die Irre führen. Die Wirkung endet, wenn du aufhörst zu tanzen. Erlaubt <i>Aufrechterhalten</i>, erfordert <i>Konzentration</i>.\nFertigkeiten: Hellsicht, Zaubertänze",
+    "maechtig": "Du erhältst einen deutlichen/klaren Eindruck in die Gedanken deines Ziels.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Tanz des Wahrheitssinns (-8, Zone, 16 AsP; du liest die Gedanken aller Humanoiden im Radius von 4 Schritt, denen eine <i>Konterprobe</i> (MR, 12) misslingt.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Ztz 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "eqFhKYe0p1RniTrR",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429131,
+    "modifiedTime": 1767873429131,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!eqFhKYe0p1RniTrR"
+}

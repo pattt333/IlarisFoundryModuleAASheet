@@ -1,0 +1,42 @@
+{
+  "name": "Wesen des (Tieres)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Verständigung, Gaben des Odun",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du siehst die Gedanken des Tiers als verschwommene Bilder.\nFertigkeiten: Hellsicht, Verständigung, Gaben des Odun",
+    "maechtig": "Zusätzlich kannst du das Tier um einen kleineren/größeren/gefährlichen Gefallen bitten. Ob das Tier den Gefallen ausführen kann und will, ist Spielleiterentscheid.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Tier",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Dur 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "xaGICwwhwA93D3mw",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427100,
+    "modifiedTime": 1767873427100,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!xaGICwwhwA93D3mw"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Wasserbann",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Ringrituale, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eine Luftschicht schützt dich vor jeglichem Wasser. Du kannst unter Wasser atmen und hältst Druck und Strömungen stand, dafür sinkst du zu Boden und bewegst dich gehend fort. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Luft, Ringrituale, Wasser",
+    "maechtig": "Du kannst den Schutz auf eine Person oder einen ähnlich großen Gegenstand ausdehnen.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Erz4KPcJnfzzhJ5V",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428333,
+    "modifiedTime": 1767873428333,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Erz4KPcJnfzzhJ5V"
+}

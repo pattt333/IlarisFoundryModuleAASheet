@@ -1,0 +1,42 @@
+{
+  "name": "Leib des Erzes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du harmonierst mit dem Element Erz. Du bist immun gegen Erzschaden und dein RS gegen Metallwaffen steigt um 1.\nFertigkeiten: Erz, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Reise ins Element (-4; du kannst dich mit 1 Schritt pro Initiativephase durch Stein und Erz bewegen, als würdest du darin tauchen. Im Erz brauchst du nicht zu atmen.)\nBegleiter (-4; der Zauber betrifft auch eine weitere Person, mit der du permanent Hautkontakt halten musst.)\nLeib aus Erz (-8; Deine Kreaturenklasse wird zu \"Elementar\" mit allen entsprechenden Eigenschaften (S. 99). Du kannst während der Wirkungsdauer keine Zauber wirken.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Elf 18; Geo, Dru 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "R6gVlWgmNanlYCBZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424906,
+    "modifiedTime": 1767873424906,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!R6gVlWgmNanlYCBZ"
+}

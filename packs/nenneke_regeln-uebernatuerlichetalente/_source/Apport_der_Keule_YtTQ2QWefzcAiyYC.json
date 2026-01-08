@@ -1,0 +1,42 @@
+{
+  "name": "Apport der Keule",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Keulenrituale, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Knochenkeule kehrt fliegend mit einer Geschwindigkeit von 10 Meilen pro Stunde zu dir zurück. Sie weicht Hindernissen aus oder durchbricht sie notfalls, wenn die KK von PW Keulenrituale/2 oder Umwelt/2 dafür ausreicht.\nFertigkeiten: Keulenrituale, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "1 Meile",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Smn 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "YtTQ2QWefzcAiyYC",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427832,
+    "modifiedTime": 1767873427832,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!YtTQ2QWefzcAiyYC"
+}

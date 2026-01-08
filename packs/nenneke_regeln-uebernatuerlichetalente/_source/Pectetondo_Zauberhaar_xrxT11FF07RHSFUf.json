@@ -1,0 +1,42 @@
+{
+  "name": "Pectetondo Zauberhaar",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst den Schnitt und die Farbe deiner Haare und deines Bartes verändern. Dein Haar wächst während der Wirkungsdauer nicht.\nFertigkeiten: Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Farbtopf (-4; auch unnatürliche Farben sind wählbar.)\nOhne Kamm (0 Aktionen, 1 AsP; eine bereits mit diesem Zauber geformte Frisur kann mit dieser Modifikation wieder in den vorgesehenen Zustand gebracht werden.)\nWinterpelz und Katzenfell (-4; sämtliches Körperhaar kann verändert werden.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "4 AsP",
+    "erlernen": "Alch, Mag, Srl 14; Hex 18; Sch 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "xrxT11FF07RHSFUf",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426415,
+    "modifiedTime": 1767873426415,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!xrxT11FF07RHSFUf"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Glacioflumen Fluss aus Eis",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eis",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erzeugst eine dünne Schicht aus Eis auf dem Boden. Die Schicht gilt als eisiger Untergrund, was alle Proben im Kampf und zum Stehenbleiben um -4 erschwert. Ihre Fläche beträgt 16 Rechtschritt, ihre Form kannst du bestimmen.\nFertigkeiten: Eis",
+    "maechtig": "Verdoppelt die Fläche.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "m49rENmHWtVvAFk0",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424780,
+    "modifiedTime": 1767873424780,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!m49rENmHWtVvAFk0"
+}

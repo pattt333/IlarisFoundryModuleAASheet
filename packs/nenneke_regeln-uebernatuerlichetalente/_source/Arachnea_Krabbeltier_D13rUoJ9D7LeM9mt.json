@@ -1,0 +1,42 @@
+{
+  "name": "Arachnea Krabbeltier",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Alle Insekten, Spinnen, Maden und anderen wirbellosen Tiere in einem Radius von 64 Schritt streben auf dein Ziel zu und fallen dort über alles her, was in ihr Fressschema passt.\nFertigkeiten: Verständigung",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Maraskaner Verhältnisse (-8, Wirkungsdauer 1 Woche, 32 AsP)\nArtenkunde (-4; du kannst den Zauber auf eine bestimmte Art von Wesen beschränken oder eine Art ausnehmen)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "16 AsP",
+    "erlernen": "Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "D13rUoJ9D7LeM9mt",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426197,
+    "modifiedTime": 1767873426197,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!D13rUoJ9D7LeM9mt"
+}

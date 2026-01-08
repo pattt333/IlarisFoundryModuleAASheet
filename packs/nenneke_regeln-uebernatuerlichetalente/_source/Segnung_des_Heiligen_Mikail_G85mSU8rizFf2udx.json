@@ -1,0 +1,42 @@
+{
+  "name": "Segnung des Heiligen Mikail",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Jagd",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du bittest den Heiligen Mikail um Treffsicherheit für den Schützen. Der nächste Fernkampfangriff ist um +4 erleichtert und ignoriert eine Stufe Deckung des Ziels (S. 46).\nFertigkeiten: Jagd",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Langer Segen (-8, 8 KaP; die Liturgie wirkt auf alle Fernkampfangriffe während der Wirkungsdauer.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "4 KaP",
+    "erlernen": "Fir 12, Ifi 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "G85mSU8rizFf2udx",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430000,
+    "modifiedTime": 1767873430000,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!G85mSU8rizFf2udx"
+}

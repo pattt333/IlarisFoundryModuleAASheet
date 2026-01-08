@@ -1,0 +1,31 @@
+{
+  "name": "Lügen durchschauen",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "In erster Linie möchte ein Held durch seine Menschenkenntnis herausfinden, ob sein Gegenüber gelogen hat oder nicht. In diesem Fall wird die Fertigkeit mit dem Talent Lügen durchschauen als Vergleichsprobe gegen die Beeinflussung gegen die Beeinflussung des Gegenübers eingesetzt",
+    "fertigkeit": "Menschenkenntnis",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7j4kwb8WCWhgYsou",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090606,
+    "modifiedTime": 1767788090606,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7j4kwb8WCWhgYsou"
+}

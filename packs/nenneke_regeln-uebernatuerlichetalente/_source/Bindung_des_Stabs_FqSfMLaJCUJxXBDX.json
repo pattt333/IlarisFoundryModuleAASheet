@@ -1,0 +1,42 @@
+{
+  "name": "Bindung des Stabs",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Stabzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stellst eine enge magische Bindung zu deinem Zauberstab her, welche die Voraussetzung für alle weiteren Talente dieser Fertigkeit ist. Außerdem wird der Zauberstab unzerbrechlich und gilt als magische Waffe.\nFertigkeiten: Kraft, Stabzauber",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Zauberstab",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "permanent",
+    "kosten": "16 AsP",
+    "erlernen": "Mag 8; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "FqSfMLaJCUJxXBDX",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428481,
+    "modifiedTime": 1767873428481,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!FqSfMLaJCUJxXBDX"
+}

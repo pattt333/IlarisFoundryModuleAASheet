@@ -1,0 +1,42 @@
+{
+  "name": "Opferdolch (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dolchzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst Tierblut blutmagisch nutzen. Verfügst du zusätzlich über den Vorteil Blutmagie, kannst du aus Tieren insgesamt 2xWS AsP gewinnen.\nAnmerkung: Finstere Druiden hüten Varianten dieses Rituals, deren Wirkung nicht auf Tiere beschränkt ist.",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Dru 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "DHA5ir3aXdB1jbZH",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426802,
+    "modifiedTime": 1767873426802,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!DHA5ir3aXdB1jbZH"
+}

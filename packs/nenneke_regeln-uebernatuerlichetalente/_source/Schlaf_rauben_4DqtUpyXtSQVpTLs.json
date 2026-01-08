@@ -1,0 +1,42 @@
+{
+  "name": "Schlaf rauben",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Vertrautenmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das von deinem Vertrautentier beobachtete Opfer regeneriert in dieser Nacht keine AsP oder Wunden. Stattdessen erscheint ihm das Vertrautentier in fürchterlichen Albträumen.\nFertigkeiten: Einfluss, Vertrautenmagie",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Hex 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4DqtUpyXtSQVpTLs",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428772,
+    "modifiedTime": 1767873428772,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4DqtUpyXtSQVpTLs"
+}

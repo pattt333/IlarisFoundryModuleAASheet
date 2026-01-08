@@ -1,0 +1,42 @@
+{
+  "name": "Psychostabilis",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Magieresistenz-Proben des Ziels sind um +4 erleichtert.\nFertigkeiten: Antimagie, Eigenschaften",
+    "maechtig": "Erhöht den Bonus um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Schnellsteigerung (-4; Wirkungsdauer 16 Initiativephasen; verdoppelt die Erleichterung.)\nStabilisierung (-8; das Ziel darf sofort eine MR-Probe gegen einen auf es wirkenden Zauber wiederholen. Gelingt sie, wird dieser Zauber für die Wirkungsdauer des Psychostabilis unterdrückt.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Alch, Mag 12; Dru, Geo, Hex 14; Ach, Srl, Elf 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "mvS7c2jpS30zrDi2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423723,
+    "modifiedTime": 1767873423723,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!mvS7c2jpS30zrDi2"
+}

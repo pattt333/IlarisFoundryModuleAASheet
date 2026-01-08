@@ -1,0 +1,42 @@
+{
+  "name": "Disharmonischer Klang",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Einfluss, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Klang stört einen anderen Zauberer während dessen Zaubervorbereitung. Das Ziel muss eine <i>Konterprobe</i> (Willenskraft, 16) ablegen, um den Zauber fortzusetzen.\nFertigkeiten: Antimagie, Einfluss, Zaubermelodien",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Bard 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "IqJbuDpI5VsmpXXK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428861,
+    "modifiedTime": 1767873428861,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!IqJbuDpI5VsmpXXK"
+}

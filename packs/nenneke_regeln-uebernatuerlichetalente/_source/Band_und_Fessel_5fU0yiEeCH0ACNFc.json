@@ -1,0 +1,42 @@
+{
+  "name": "Band und Fessel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer kann einen kreisförmigen Bereich von 4 Schritt Radius nicht verlassen. Alle zwei Stunden darf es versuchen, sich mit einer <i>Konterprobe</i> (MU, 16) vom Zauber zu befreien. Dabei handelt es sich um eine mentale Barriere. Wird das Ziel mit Gewalt über die Barriere getragen – wogegen es sich wehren wird – endet der Effekt.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelwesen",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 14; Hex 16; Dru, Mag 18; Ach, Bor, Geo 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "5fU0yiEeCH0ACNFc",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424490,
+    "modifiedTime": 1767873424490,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5fU0yiEeCH0ACNFc"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Frigisphaero",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eis",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erschaffst eine elementare Kugel, die du mit <i>Konzentration</i> und Blickkontakt 16 Schritt pro Initiativephase bewegen kannst. Die Kugel explodiert, wenn du die <i>Konzentration</i> oder den Blickkontakt verlierst, du sie absichtlich zündest oder die Wirkungsdauer endet. Die Explosion richtet 4W6 TP an und verursacht <i>Erfrieren</i> (S. 98). Pro Schritt Entfernung fällt der niedrigste Würfel weg.\nFertigkeiten: Eis",
+    "maechtig": "Die TP steigen um 1W6.",
+    "schwierigkeit": "12",
+    "modifikationen": "Vorgegebene Bewegung (-4; du gibst der Kugel die Bewegung bis zur Explosion vor, <i>Konzentration</i> und Blickkontakt zur Kugel sind nicht nötig.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "2 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Ach, Mag 18; Dru 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "nJyXvrN5mcN6TkGN",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424774,
+    "modifiedTime": 1767873424774,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!nJyXvrN5mcN6TkGN"
+}

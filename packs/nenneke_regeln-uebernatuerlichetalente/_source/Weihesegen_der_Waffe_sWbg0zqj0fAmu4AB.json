@@ -1,0 +1,42 @@
+{
+  "name": "Weihesegen der Waffe",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Gutes Gold, Heerführung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst vier Nahkampfwaffen weihen.\nFertigkeiten: Gutes Gold, Heerführung",
+    "maechtig": "Du weihst zwei weitere Waffen.",
+    "schwierigkeit": "12",
+    "modifikationen": "Heeressegen (-8, 32 KaP; du segnest alle Waffen in einem Radius von 64 Schritt.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 KaP",
+    "erlernen": "Ron 12; Kor 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "sWbg0zqj0fAmu4AB",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431569,
+    "modifiedTime": 1767873431569,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!sWbg0zqj0fAmu4AB"
+}

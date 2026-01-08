@@ -1,0 +1,42 @@
+{
+  "name": "Eherne Kraft",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Erz",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Erde bebt. Alle Ziele in einem Radius von 4 Schritt werden niedergeschmettert, wenn eine <i>Konterprobe</i> (KK, 16) misslingt.\nFertigkeiten: Heiliges Erz",
+    "maechtig": "Verdoppelt jeweils den Radius und richtet Schäden an loser Keramik/Möbeln/Holzbauten/Steinbauten an.",
+    "schwierigkeit": "12",
+    "modifikationen": "Erdbeben (-8, 1 Stunde, 1 Meile, Wirkungsdauer 8 Initiativephasen, 32 KaP; Ingerimms Zorn fügt Gebäuden in einem Radius von 128 Schritt schwerste Schäden zu.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Ang, Ing 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "MuCoNRnp1MIkibKF",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430544,
+    "modifiedTime": 1767873430544,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!MuCoNRnp1MIkibKF"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Fürbitten des Heiligen Therbûn",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heilung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du heilst einen Gesegneten von allen Krankheiten bis maximal Stufe 20.\nFertigkeiten: Heilung\nAnmerkung: Alternativ kann die Liturgie wie Antimagie gegen Krankheitszauber oder Krankheitsdämonen wirken (S. 126). Die Randbedingungen entsprechen den dort angegebenen, außer dass die Kosten mit KaP bezahlt werden und die Liturgie um +4 erleichtert ist.",
+    "maechtig": "Die maximal aufgehobene Krankheitsstufe steigt um 4.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Per 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "BTwnX3M9TInHKaF5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430785,
+    "modifiedTime": 1767873430785,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!BTwnX3M9TInHKaF5"
+}

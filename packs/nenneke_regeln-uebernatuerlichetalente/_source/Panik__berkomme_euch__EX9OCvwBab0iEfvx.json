@@ -1,0 +1,42 @@
+{
+  "name": "Panik überkomme euch!",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erscheinst jedem, der dich sehen kann und der keine <i>Konterprobe</i> (Magieresistenz, 12) besteht, als ein Wesen mit Schreckgestalt II (S. 98).\nFertigkeiten: Dämonisch, Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Objekt (-4, Einzelobjekt)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Bor 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "EX9OCvwBab0iEfvx",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423947,
+    "modifiedTime": 1767873423947,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!EX9OCvwBab0iEfvx"
+}

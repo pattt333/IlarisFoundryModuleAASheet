@@ -1,0 +1,42 @@
+{
+  "name": "Odem Arcanum",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du nimmst magische Kraft um das Ziel kurz als roten Schimmer wahr. Das entspricht einem Analysegrad von 1 für die Intensitätsanalyse (mehr dazu S. 80).\nFertigkeiten: Hellsicht, Kraft",
+    "maechtig": "Der Analysegrad steigt um 1.",
+    "schwierigkeit": "12",
+    "modifikationen": "Sichtbereich (-4, Zone; wirkt auf alle Objekte im Sichtfeld.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelwesen, Einzelobjekt",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "2 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Ach, Alch, Elf, Mag 8; Dru, Geo, Hex 12; Bor, Sch, Srl 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "imMMDD3UZ2rOplwL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425122,
+    "modifiedTime": 1767873425122,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!imMMDD3UZ2rOplwL"
+}

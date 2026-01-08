@@ -38,6 +38,7 @@
         "nenneke_regeln-ruestungen",
         "nenneke_regeln-talente",
         "nenneke_regeln-uebernatuerlichefertigkeiten",
+        "nenneke_regeln-uebernatuerlichetalente",
         "nenneke_regeln-vorteile",
         "nenneke_regeln-waffen",
         "nenneke_regeln-waffeneigenschaften"
@@ -134,6 +135,17 @@
         "ASSISTANT": "OWNER"
       }
     },
+    {
+      "name": "nenneke_regeln-uebernatuerlichetalente",
+      "label": "Nenneke Übernatürliche Talente",
+      "path": "packs/nenneke_regeln-uebernatuerlichetalente",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
     {
       "name": "nenneke_regeln-vorteile",
       "label": "Nenneke Vorteile",

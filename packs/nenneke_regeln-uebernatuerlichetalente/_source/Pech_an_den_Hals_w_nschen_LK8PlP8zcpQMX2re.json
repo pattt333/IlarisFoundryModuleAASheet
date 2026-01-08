@@ -1,0 +1,42 @@
+{
+  "name": "Pech an den Hals wünschen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Hexenflüche",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer wird vom Unglück verfolgt. Seine Chance auf einen Patzer steigt um 1 auf dem W20 (zum Beispiel von 1 auf 1-2).\nFertigkeiten: Eigenschaften, Hexenflüche",
+    "maechtig": "Je zwei Stufen steigern die Chance auf einen Patzer um einen weiteren Punkt.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LK8PlP8zcpQMX2re",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427776,
+    "modifiedTime": 1767873427776,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LK8PlP8zcpQMX2re"
+}

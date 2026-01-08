@@ -1,0 +1,31 @@
+{
+  "name": "Motivation erkennen",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Nicht immer will man mit Menschenkenntnis eine Lüge durchschauen, sondern anhand subtiler Zeichen erkennen, was das Gegenüber im Schilde führt. Steckt hinter dem Plan des Auftraggebers beispielsweise sein Wunsch, Rache zu nehmen? Oder will er nur einen Konkurrenten loswerden? Dafür ist das Talent Motivation erkennen zuständig.",
+    "fertigkeit": "Menschenkenntnis",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "JXGPnUL0VrhhVVdz",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090613,
+    "modifiedTime": 1767788090613,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!JXGPnUL0VrhhVVdz"
+}

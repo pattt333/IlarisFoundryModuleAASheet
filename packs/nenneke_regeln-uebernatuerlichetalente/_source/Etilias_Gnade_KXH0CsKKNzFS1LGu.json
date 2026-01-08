@@ -1,0 +1,42 @@
+{
+  "name": "Etilias Gnade",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Tod",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ein Sterbender leidet keine Schmerzen mehr.\nFertigkeiten: Tod",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Marbos Aufschub (-8, 1 Stunde, 16 KaP; ein langsamer Tod durch Siechtum oder Schwäche verzögert sich zusätzlich um 1 Woche. Der Gesegnete ist jedoch nicht immun gegen einen gewaltsamen Tod.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "4 KaP",
+    "erlernen": "Brn 8; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "KXH0CsKKNzFS1LGu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429478,
+    "modifiedTime": 1767873429478,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!KXH0CsKKNzFS1LGu"
+}

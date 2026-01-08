@@ -1,0 +1,42 @@
+{
+  "name": "Analys Arcanstruktur",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du analysierst die magische Struktur eines arkanen Artefakts oder eines magischen Wesens. Das entspricht einem Analysegrad von 1 für die Strukturanalyse (mehr dazu siehe S. 80).\nFertigkeiten: Hellsicht, Kraft",
+    "maechtig": "Der Analysegrad steigt um 1.",
+    "schwierigkeit": "16",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelobjekt, Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Mag 12; Ach 14; Alch, Dru, Elf, Geo, Hex 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "k3E8UnVd437NKM1k",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425041,
+    "modifiedTime": 1767873425041,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!k3E8UnVd437NKM1k"
+}

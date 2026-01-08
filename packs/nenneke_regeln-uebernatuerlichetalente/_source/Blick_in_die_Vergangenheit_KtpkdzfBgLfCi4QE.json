@@ -1,0 +1,42 @@
+{
+  "name": "Blick in die Vergangenheit",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Temporal",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Geschichte des Ortes rauscht vor deinen Augen vorbei. Während der Wirkungsdauer erkennst du die wichtigsten Ereignisse des letzten Monats.\nFertigkeiten: Hellsicht, Temporal",
+    "maechtig": "Du blickst 1 Jahr/10 Jahre/100 Jahre/1000 Jahre zurück.",
+    "schwierigkeit": "12",
+    "modifikationen": "Objekt (-4, Einzelobjekt)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Dru, Geo 18; Mag 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "KtpkdzfBgLfCi4QE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425075,
+    "modifiedTime": 1767873425075,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!KtpkdzfBgLfCi4QE"
+}

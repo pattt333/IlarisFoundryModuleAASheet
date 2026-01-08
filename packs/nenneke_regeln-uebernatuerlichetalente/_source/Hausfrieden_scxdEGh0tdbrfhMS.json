@@ -1,0 +1,42 @@
+{
+  "name": "Hausfrieden",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heim und Herd",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Alle Lebewesen im gesegneten Zuhause verfallen in eine friedfertige Stimmung. Aggressive Handlungen erfordern eine <i>Konterprobe</i> (Willenskraft, 20).\nFertigkeiten: Heim und Herd",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Stunden",
+    "kosten": "8 KaP",
+    "erlernen": "Tra 8; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "scxdEGh0tdbrfhMS",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431685,
+    "modifiedTime": 1767873431685,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!scxdEGh0tdbrfhMS"
+}

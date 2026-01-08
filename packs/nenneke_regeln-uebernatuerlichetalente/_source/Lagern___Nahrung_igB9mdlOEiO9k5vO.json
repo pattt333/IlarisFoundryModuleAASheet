@@ -1,0 +1,31 @@
+{
+  "name": "Lagern & Nahrung",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Dieses Talent befähigt dazu ein Lager aufzuschlagen. Dies beinhaltet das Suchen eines geeigneten Platzes, das Aufbauen der Zelte, das Suchen und grobe Zubereiten von Nahrung und das Entzünden des Feuers.",
+    "fertigkeit": "Überlebensfertigkeiten",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "igB9mdlOEiO9k5vO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090673,
+    "modifiedTime": 1767788090673,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!igB9mdlOEiO9k5vO"
+}

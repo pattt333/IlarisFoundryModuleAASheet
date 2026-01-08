@@ -1,0 +1,42 @@
+{
+  "name": "Geräumiger Schuppenbeutel (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kristallmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Pro 4 volle Punkte PW Kristallmagie steigt das Volumen des Schuppenbeutels um 2 Liter. Von außen betrachtet bleibt die Größe des Beutels jedoch gleich.",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Ach 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "IYB7ql6gisG3JM3P",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427959,
+    "modifiedTime": 1767873427959,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!IYB7ql6gisG3JM3P"
+}

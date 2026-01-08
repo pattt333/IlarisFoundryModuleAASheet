@@ -1,0 +1,42 @@
+{
+  "name": "Schutz des Dolches",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dolchzauber, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dir steht die Natur schützend zur Seite. Du schwimmst leichter auf Wasser, Schnee bildet wärmende Höhlen und du findest überall Verstecke. Verbergen, Schwimmen, Überleben oder andere mit der Natur zusammenhängende Proben sind um +4 erleichtert.\nFertigkeiten: Dolchzauber, Umwelt",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 14; Dru 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oa5CkeNt8NuV2AEw",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426835,
+    "modifiedTime": 1767873426835,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oa5CkeNt8NuV2AEw"
+}

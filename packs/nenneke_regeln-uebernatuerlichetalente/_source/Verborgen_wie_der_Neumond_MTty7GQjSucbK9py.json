@@ -1,0 +1,42 @@
+{
+  "name": "Verborgen wie der Neumond",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Nächtlicher Schatten",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du passt dich deiner Umgebung an. Du erhältst den Vorteil Tarnung (S. 98) und deine Heimlichkeits-Proben sind um +4 erleichtert.\nFertigkeiten: Nächtlicher Schatten",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 KaP",
+    "erlernen": "Phe 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "MTty7GQjSucbK9py",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431068,
+    "modifiedTime": 1767873431068,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!MTty7GQjSucbK9py"
+}

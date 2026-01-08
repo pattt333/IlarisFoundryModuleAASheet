@@ -1,0 +1,42 @@
+{
+  "name": "Rahjas Sinnlichkeit",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Rausch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Durch den Segen der Göttin erhältst du Resistenz I (profan, magisch, geweiht, siehe S. 98). Gleichzeitig sind aber alle Sinneseindrücke verstärkt, weswegen du schon beim Erleiden von einer Wunde eine Wundschmerz-Probe ablegen musst.\nFertigkeiten: Rausch",
+    "maechtig": "Je zwei Stufen erhöhen die Resistenz um eine Stufe.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 KaP",
+    "erlernen": "Rah 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6mTRzQzj6xpEeZzE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431408,
+    "modifiedTime": 1767873431408,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6mTRzQzj6xpEeZzE"
+}

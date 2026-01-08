@@ -1,0 +1,42 @@
+{
+  "name": "Ängste mehren",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Hexenflüche",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Opfer leidet an einer Angst deiner Wahl. Wird die Angst ausgelöst, steht es unter einem Furcht-Effekt Stufe 1. Litt das Opfer bereits zuvor an dieser Angst, steigt die Stufe des Furcht-Effekts um 1.\nFertigkeiten: Einfluss, Hexenflüche",
+    "maechtig": "Der Furcht-Effekt steigt um eine Stufe.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Mrz3Ssa0jvjCbRKz",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427731,
+    "modifiedTime": 1767873427731,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Mrz3Ssa0jvjCbRKz"
+}

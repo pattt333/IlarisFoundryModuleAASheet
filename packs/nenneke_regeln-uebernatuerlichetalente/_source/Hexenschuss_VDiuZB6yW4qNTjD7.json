@@ -1,0 +1,42 @@
+{
+  "name": "Hexenschuss",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Hexenflüche",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Opfer wird vom Hexenschuss geplagt, der entweder alle körperlichen oder alle geistigen Tätigkeiten um -2 erschwert.\nFertigkeiten: Eigenschaften, Hexenflüche",
+    "maechtig": "Der Malus steigt um -1.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "4 Stunden",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 8; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "VDiuZB6yW4qNTjD7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427752,
+    "modifiedTime": 1767873427752,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!VDiuZB6yW4qNTjD7"
+}

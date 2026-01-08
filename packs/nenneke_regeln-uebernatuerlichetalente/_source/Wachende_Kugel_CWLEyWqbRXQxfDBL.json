@@ -1,0 +1,42 @@
+{
+  "name": "Wachende Kugel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kugelzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst einen Blick durch eine gebundene Kugel werfen. Der Kugel ist dabei nichts anzumerken.\nFertigkeiten: Hellsicht, Kugelzauber",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Kristallkugel",
+    "reichweite": "1 Meile",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Srl 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "CWLEyWqbRXQxfDBL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428167,
+    "modifiedTime": 1767873428167,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!CWLEyWqbRXQxfDBL"
+}

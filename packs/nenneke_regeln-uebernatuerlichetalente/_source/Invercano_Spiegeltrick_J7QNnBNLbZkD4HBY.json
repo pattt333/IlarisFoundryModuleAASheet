@@ -1,0 +1,42 @@
+{
+  "name": "Invercano Spiegeltrick",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verwandelst deine Hände in silbern glänzende Spiegel. Du kannst den nächsten, während der Wirkungsdauer auf dich gewirkten Zauber auf den Zauberer zurückwerfen, wenn dir eine <i>Konterprobe</i> (IN, 12) gelingt.\nFertigkeiten: Kraft",
+    "maechtig": "Ein weiterer Zauber wird zurückgeworfen.",
+    "schwierigkeit": "12",
+    "modifikationen": "Silberschild (-8, Einzelobjekt, Wirkungsdauer 1 Stunde; du verzauberst einen Schild, dessen Träger die Zauberwirkung nutzen kann.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Elf, Mag 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "J7QNnBNLbZkD4HBY",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425628,
+    "modifiedTime": 1767873425628,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!J7QNnBNLbZkD4HBY"
+}

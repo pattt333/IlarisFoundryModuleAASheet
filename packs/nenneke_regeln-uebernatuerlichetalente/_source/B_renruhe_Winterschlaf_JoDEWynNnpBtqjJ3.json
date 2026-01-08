@@ -1,0 +1,42 @@
+{
+  "name": "Bärenruhe Winterschlaf",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du versetzt dein Ziel in einen tiefen Winterschlaf. Während des Schlafes benötigt es keine Nahrung, und kein Wasser. Gifte, Krankheiten und Kälte fügen ihm keinen Schaden zu. Dafür regeneriert es auch nicht.\nFertigkeiten: Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Der lange Schlaf (-4, Wirkungsdauer 1 Monat, 16 AsP)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 16; Ach, Mag 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "JoDEWynNnpBtqjJ3",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426351,
+    "modifiedTime": 1767873426351,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!JoDEWynNnpBtqjJ3"
+}

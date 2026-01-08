@@ -1,0 +1,42 @@
+{
+  "name": "Balsam Salabunde",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel erhält 2W6+4 Heilpunkte, für jede Überschreitung der WS heilst du eine Wunde.\nFertigkeiten: Humus, Verwandlung",
+    "maechtig": "Erhöht die Heilpunkte um 4.",
+    "schwierigkeit": "12+Wund-Mod. des Ziels",
+    "modifikationen": "Blutung stoppen (Probenschwierigkeit 16, 8 Aktionen; stoppt eine Blutung)\nSofortige Regeneration (-16, 4 Aktionen, 32 AsP; das Ziel erhält für 32 Initiativephasen den Vorteil Regeneration I (S. 97).)",
+    "vorbereitung": "16 Minuten",
+    "ziel": "Einzelwesen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Elf, Mag 8; Ach, Geo 12; Alch, Dru 14; Srl 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "WkA8bfSNffyYqzeL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425195,
+    "modifiedTime": 1767873425195,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WkA8bfSNffyYqzeL"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Holterdipolter",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "In einem Radius von 8 Schritt um dich herum geht alles schief: Menschen stolpern, Knoten öffnen sich und Vasen fallen um. Dabei kommt niemand ernsthaft zu Schaden.\nFertigkeiten: Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "16 AsP",
+    "erlernen": "Sch 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Qa5q4xopO5CT56EM",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426074,
+    "modifiedTime": 1767873426074,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Qa5q4xopO5CT56EM"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Herr der Flammen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Feuer, Ringrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst ein bestehendes Feuer bis zur Größe einer Fackel formen oder verlöschen lassen. Die Verformung geschieht mit einer GS von 8 Schritt pro Initiativephase und benötigt <i>Konzentration</i>.\nFertigkeiten: Feuer, Ringrituale",
+    "maechtig": "Du kannst ein Feuer bis zur Größe eines Kaminfeuers/eines großen Lagerfeuers/eines Scheiterhaufens/eines brennenden Schiffes manipulieren.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "vT3gkDqm3AEpdnwO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428251,
+    "modifiedTime": 1767873428251,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!vT3gkDqm3AEpdnwO"
+}

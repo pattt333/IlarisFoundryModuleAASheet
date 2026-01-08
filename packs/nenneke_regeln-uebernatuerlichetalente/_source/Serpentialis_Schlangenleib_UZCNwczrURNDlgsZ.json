@@ -1,0 +1,42 @@
+{
+  "name": "Serpentialis Schlangenleib",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Arme verwandeln sich in grüne, 2 Schritt lange Giftschlangen, deren hinteres Ende noch mit deinem Rumpf verbunden ist. Die Schlangen können beide in einer Aktion Konflikt angreifen (WS 3, VT 10, RW 2, AT 10, TP 2W6) und ein Waffengift übertragen (Stufe 20, keine Verzögerung, Intervall 2 INI-Phasen, Wirkungsdauer 2 INI-Phasen, 2W6 SP).\nFertigkeiten: Verwandlung",
+    "maechtig": "Die WS der Schlangen steigt um +1, AT, VT und TP um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "Schlangengriff (Wirkungsdauer 4 Minuten, 4 AsP; die Arme verwandeln sich in kampfunfähige, aber geschickte Nattern, deren FF gleich deiner ist.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Ach 16; Hex, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "UZCNwczrURNDlgsZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426441,
+    "modifiedTime": 1767873426441,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!UZCNwczrURNDlgsZ"
+}

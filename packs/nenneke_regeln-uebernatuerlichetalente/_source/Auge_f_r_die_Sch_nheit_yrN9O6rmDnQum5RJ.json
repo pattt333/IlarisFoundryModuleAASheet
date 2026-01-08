@@ -1,0 +1,42 @@
+{
+  "name": "Auge für die Schönheit",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Harmonie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Gesegnete kann die Schönheit in sich selbst oder jemand anderem sehen. Dabei wird er nicht durch schlechte Eigenheiten oder andere Charakterschwächen und Vorurteile abgelenkt.\nFertigkeiten: Harmonie",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 KaP",
+    "erlernen": "Rah 8; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yrN9O6rmDnQum5RJ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431239,
+    "modifiedTime": 1767873431239,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yrN9O6rmDnQum5RJ"
+}

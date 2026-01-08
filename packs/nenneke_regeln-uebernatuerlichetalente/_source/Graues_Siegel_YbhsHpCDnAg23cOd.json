@@ -1,0 +1,42 @@
+{
+  "name": "Graues Siegel",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Nächtlicher Schatten, Wissen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verschlüsselst eine Nachricht, sodass sie nur noch von der von dir genannten Person gelesen werden kann. Die Verschlüsselung kann nur mit einer Freien Fertigkeit (z.B. Kryptograph) auf meisterlich oder mit einer <i>Konterprobe</i> (KL, 20) und 4 Stunden Zeitaufwand entschlüsselt werden.\nFertigkeiten: Nächtlicher Schatten, Wissen",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Personengruppe (-4; du kannst eine Personengruppe nennen.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 KaP",
+    "erlernen": "Nan, Phe 14; Hes 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "YbhsHpCDnAg23cOd",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430433,
+    "modifiedTime": 1767873430433,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!YbhsHpCDnAg23cOd"
+}

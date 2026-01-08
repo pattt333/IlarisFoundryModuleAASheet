@@ -1,0 +1,42 @@
+{
+  "name": "Zauberzwang",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erlegst dem Opfer eine Aufgabe auf, die nicht tödlich sein darf. Stehen die moralischen Vorstellungen des Opfers der Aufgabe entgegen, kann es mit einer <i>Konterprobe</i> (Willenskraft, 16) widerstehen. Ignoriert das Opfer die Aufgabe oder lässt sie absichtlich scheitern, erleidet es pro Woche 1 Wunde, die während der Wirkungsdauer nicht geheilt oder regeneriert werden kann.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "Bis die Aufgabe gelöst wurde, maximal 1 Monat",
+    "kosten": "32 AsP",
+    "erlernen": "Hex 14; Dru 18; Mag 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Z1vP31EJmVEKdFnA",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424743,
+    "modifiedTime": 1767873424743,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Z1vP31EJmVEKdFnA"
+}

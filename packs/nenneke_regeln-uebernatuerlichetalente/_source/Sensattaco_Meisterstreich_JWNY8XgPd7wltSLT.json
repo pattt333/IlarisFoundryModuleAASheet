@@ -1,0 +1,42 @@
+{
+  "name": "Sensattaco Meisterstreich",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Hellsicht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel erkennt intuitiv die Lücken in der Verteidigung des Gegners. Seine AT sind um +2 erleichtert und seine Chance auf einen Triumph bei einer AT steigt um 1 auf dem W20 (zum Beispiel von 20 auf 19-20).\nFertigkeiten: Eigenschaften, Hellsicht",
+    "maechtig": "Der Bonus steigt um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Mag 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "JWNY8XgPd7wltSLT",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424417,
+    "modifiedTime": 1767873424417,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!JWNY8XgPd7wltSLT"
+}

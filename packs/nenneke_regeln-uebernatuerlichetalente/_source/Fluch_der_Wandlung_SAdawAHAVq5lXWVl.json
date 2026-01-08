@@ -1,0 +1,42 @@
+{
+  "name": "Fluch der Wandlung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung, Geister des Zorns",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Ziel verwandelt sich im Laufe einer Woche in ein Tier, typischerweise in eine Schlange (bei manchen Völkern sind auch andere Tiere verbreitet). Mit Abschluss der Verwandlung verliert es die Erinnerung an sein früheres Leben. In der letzten Woche der Wirkungsdauer verwandelt sich das Ziel in seine ursprüngliche Gestalt zurück und gewinnt dabei auch sein Gedächtnis wieder.\nFertigkeiten: Verwandlung, Geister des Zorns",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Permanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, 16 AsP, davon 2 gAsP)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Meilen",
+    "wirkungsdauer": "1 Monat",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "SAdawAHAVq5lXWVl",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427359,
+    "modifiedTime": 1767873427359,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!SAdawAHAVq5lXWVl"
+}

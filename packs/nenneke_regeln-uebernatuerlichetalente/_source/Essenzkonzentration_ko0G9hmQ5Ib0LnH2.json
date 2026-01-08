@@ -1,0 +1,42 @@
+{
+  "name": "Essenzkonzentration",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schalenzauber, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du konzentrierst zwei alchemistische Produkte der gleichen Art zu einem. Das entstehende Produkt verfügt über die freiwilligen Modifikationen beider Ausgangsprodukte, höchstens aber 4 Modifikationen. Darüber hinausgehende Modifikationen verfallen - du entscheidest welche.\nFertigkeiten: Schalenzauber, Verwandlung\nAnmerkung: Die Essenzkonzentration erklärt, warum in uralten Gemäuern immer noch wirksame Alchemika zu finden sind.",
+    "maechtig": "Verzehnfacht die (verbesserte) Haltbarkeit und erlaubt eine weitere Modifikation.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Stunden",
+    "ziel": "zwei Elixiere",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Alch 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ko0G9hmQ5Ib0LnH2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428431,
+    "modifiedTime": 1767873428431,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ko0G9hmQ5Ib0LnH2"
+}

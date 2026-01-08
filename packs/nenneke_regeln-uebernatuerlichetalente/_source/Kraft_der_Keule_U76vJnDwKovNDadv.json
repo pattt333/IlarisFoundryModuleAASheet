@@ -1,0 +1,42 @@
+{
+  "name": "Kraft der Keule",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Keulenrituale, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Gegen \"Geister\" – also Wesen der Kategorie Dämon, Elementar, Untoter, Feenwesen – steigt der Waffenschaden der Keule um +2.\nFertigkeiten: Keulenrituale, Kraft",
+    "maechtig": "Der Bonus steigt um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "Permanenz (Wirkungsdauer bis die Bindung gelöst wird, Kosten 8 AsP, davon 1 gAsP)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Knochenkeule",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Smn 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "U76vJnDwKovNDadv",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427900,
+    "modifiedTime": 1767873427900,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!U76vJnDwKovNDadv"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Sapefacta Zauberschwamm",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Umwelt, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Kleidung ist so sauber, als wäre sie frisch gewaschen.\nFertigkeiten: Luft, Umwelt, Wasser",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Läusekamm (-4; du wirst auch von Kleintieren und Ungeziefer befreit.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Alch 12; Mag 14; Dru, Srl 16; Hex 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "q11mXBjGiZXEm83X",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425871,
+    "modifiedTime": 1767873425871,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!q11mXBjGiZXEm83X"
+}

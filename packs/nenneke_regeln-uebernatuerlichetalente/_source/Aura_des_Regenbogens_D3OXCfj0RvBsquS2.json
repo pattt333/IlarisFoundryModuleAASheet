@@ -1,0 +1,42 @@
+{
+  "name": "Aura des Regenbogens",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Friede",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Licht des Regenbogens erleuchtet deine Umgebung im Radius von 8 Schritt. Das Gebiet gilt als geweihter Boden. Zusätzlich erleiden alle Chimären innerhalb der Zone einen Furcht-Effekt Stufe 2.\nFertigkeiten: Friede",
+    "maechtig": "Mit zwei Stufen gilt der Boden als heilig.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 KaP",
+    "erlernen": "Tsa 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "D3OXCfj0RvBsquS2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431819,
+    "modifiedTime": 1767873431819,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!D3OXCfj0RvBsquS2"
+}

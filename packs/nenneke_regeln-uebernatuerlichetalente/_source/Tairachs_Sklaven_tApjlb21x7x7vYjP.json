@@ -1,0 +1,42 @@
+{
+  "name": "Tairachs Sklaven",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung, Geister des Zorns",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Geist fährt in den frischen Leichnam eines Lebewesens ein, der sich als von dir gesteuerter Untoter erhebt. Dabei sind keine Beschwörungs- oder Beherrschungsproben notwendig. Dein Körper bleibt währenddessen reglos zurück; sollte er vernichtet werden, endet der Zauber und du bist tot.\nFertigkeiten: Verständigung, Geister des Zorns",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Smn 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "tApjlb21x7x7vYjP",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427468,
+    "modifiedTime": 1767873427468,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!tApjlb21x7x7vYjP"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Flim Flam Funkel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ein bläuliches Licht erscheint und steigert die Helligkeit in einem Radius von 4 Schritt um eine Stufe (etwa von Mondlicht auf Dämmerung S. 38). Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Umwelt",
+    "maechtig": "Steigert die Helligkeit um eine weitere Stufe. Nach je 4 Schritt Radius nimmt die Helligkeit um eine Stufe weniger zu.",
+    "schwierigkeit": "12",
+    "modifikationen": "Variable Helligkeit (-4; du kannst die Helligkeit beliebig reduzieren und wieder auf das ursprüngliche Maß erhöhen.)\nBegleiter (-4; die Lichtkugel bewegt sich mit dir.)\nLeuchtturm (-4; Die Lichtkugel erscheint in 10 Schritt Höhe.)\nLichtblitz (-8, 8 AsP; du kannst die Kugel in einer Aktion Bereit machen explodieren lassen. Alle Beobachter sind 2 Initiativephasen lang geblendet, ihre Proben sind um die doppelte Helligkeitsstufe erschwert.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "1 AsP",
+    "erlernen": "Ach, Alch, Elf, Mag 8; Dru, Hex 12; Geo 14; Sch, Srl 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Kq8umaZzLETEPT0Z",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426039,
+    "modifiedTime": 1767873426039,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Kq8umaZzLETEPT0Z"
+}

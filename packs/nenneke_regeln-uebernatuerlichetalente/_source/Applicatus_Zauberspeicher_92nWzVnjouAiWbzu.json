@@ -1,0 +1,42 @@
+{
+  "name": "Applicatus Zauberspeicher",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der nächste Zauber, den du während der Wirkungsdauer sprichst, wird für einen Tag im Ziel gespeichert. Der Zauber wird ausgelöst, sobald das Objekt bewegt wird oder ein einfacher, von dir bestimmter Auslöser eintritt. Er trifft denjenigen, der den Zauber auslöst oder eine Zone darum.\nFertigkeiten: Kraft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Tragbar (-4; das Objekt kann bewegt werden.)\nHauswächter (-4, 16 AsP, nicht mit tragbar kombinierbar; der Zauber bleibt ein Jahr lang gespeichert.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Alch 14; Ach, Mag, Srl 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "92nWzVnjouAiWbzu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425582,
+    "modifiedTime": 1767873425582,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!92nWzVnjouAiWbzu"
+}

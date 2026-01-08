@@ -1,0 +1,42 @@
+{
+  "name": "Lodernder Zorn",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Feuer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Stichflammen schießen aus einem mindestens fackelgroßen Feuer empor. Die Flammen richten 4W6 TP an und verursachen <i>Nachbrennen</i> (S. 98). Pro Schritt Entfernung fällt der niedrigste Würfel weg. Du selbst bist gegen den Schaden immun.\nFertigkeiten: Heiliges Feuer\nAnmerkung: Wenige Hochgeweihte kennen angeblich eine noch mächtigere Variante mit einem deutlich höheren Wirkungsbereich.",
+    "maechtig": "Die TP steigen um 2W6.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 KaP",
+    "erlernen": "Ang 16; Ing 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "NKZwF9b4LQOzW2ah",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430685,
+    "modifiedTime": 1767873430685,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!NKZwF9b4LQOzW2ah"
+}

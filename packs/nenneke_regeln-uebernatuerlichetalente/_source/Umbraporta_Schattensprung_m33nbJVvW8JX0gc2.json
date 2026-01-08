@@ -1,0 +1,42 @@
+{
+  "name": "Umbraporta Schattensprung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du trittst in einen Schatten hinein und wirst sofort durch den Limbus zu einem anderen Schatten transportiert.\nFertigkeiten: Dämonisch, Kraft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Schattenportal (-8, 16 AsP; Du kannst eine Person mitnehmen. Mächtige Magie erlaubt zwei/drei/vier/fünf Personen.)\nSchattensprung (-8, 4 Aktionen, Wirkungsdauer 16 Initiativephasen, 16 AsP; du verschmilzt mit den Schatten und kannst dich in ihnen mit GS 12 bewegen. Du kannst nicht körperlich mit deiner Umwelt interagieren, aber mit einer Erschwernis von -4 zaubern. Ermöglicht <i>Aufrechterhalten</i>.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Zone",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Bor 18; Mag 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "m33nbJVvW8JX0gc2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424013,
+    "modifiedTime": 1767873424013,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!m33nbJVvW8JX0gc2"
+}

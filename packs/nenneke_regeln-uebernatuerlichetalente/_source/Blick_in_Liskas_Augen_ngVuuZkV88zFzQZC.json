@@ -1,0 +1,42 @@
+{
+  "name": "Blick in Liskas Augen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Geister rufen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erhältst den Vorteil Prophezeien (S. 30) und erleidest keine Erschöpfung durch den Einsatz dieser Gabe. Besitzt du die Gabe bereits, sind entsprechende Proben um +4 erleichtert. Notwendige Proben kannst du auf Geister rufen statt auf Willenskraft ablegen.\nFertigkeiten: Hellsicht, Geister rufen",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Smn 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ngVuuZkV88zFzQZC",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427481,
+    "modifiedTime": 1767873427481,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ngVuuZkV88zFzQZC"
+}

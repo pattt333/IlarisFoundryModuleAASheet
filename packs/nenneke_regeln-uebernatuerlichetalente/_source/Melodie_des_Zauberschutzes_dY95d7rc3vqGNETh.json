@@ -1,0 +1,42 @@
+{
+  "name": "Melodie des Zauberschutzes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Eigenschaften, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Magieresistenz-Proben aller Zuhörer im Radius von 4 Schritt sind um +2 erleichtert. Erfordert <i>Konzentration</i>, erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Antimagie, Eigenschaften, Zaubermelodien",
+    "maechtig": "Erhöht den Bonus um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Zone",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Bard 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "dY95d7rc3vqGNETh",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428994,
+    "modifiedTime": 1767873428994,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!dY95d7rc3vqGNETh"
+}

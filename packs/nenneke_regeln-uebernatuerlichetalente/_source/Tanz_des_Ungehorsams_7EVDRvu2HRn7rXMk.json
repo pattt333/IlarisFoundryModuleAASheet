@@ -1,0 +1,42 @@
+{
+  "name": "Tanz des Ungehorsams",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Eigenschaften, Zaubertänze",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "MR-Proben des Ziels sind um +4 erleichtert.\nFertigkeiten: Antimagie, Eigenschaften, Zaubertänze",
+    "maechtig": "Erhöht den Bonus um +2",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Ztz 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7EVDRvu2HRn7rXMk",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429166,
+    "modifiedTime": 1767873429166,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7EVDRvu2HRn7rXMk"
+}

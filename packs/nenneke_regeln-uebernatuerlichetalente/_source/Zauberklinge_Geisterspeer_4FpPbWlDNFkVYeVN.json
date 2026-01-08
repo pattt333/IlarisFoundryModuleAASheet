@@ -1,0 +1,42 @@
+{
+  "name": "Zauberklinge Geisterspeer",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die verzauberte Waffe gilt während der Wirkungsdauer als magisch.\nFertigkeiten: Kraft, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Schnellverzauberung (-4, 2 Aktionen, Wirkungsdauer 1 Stunde)\nPersonalisierung (-4; der Zauber wirkt nur, solange der beim Zaubern gewählte Träger die Waffe führt.)\nNamenssigille (-8; erfordert den wahren Namen eines Dämons. Wann immer der Dämon Wunden durch diese Waffe erleidet, erleidet er eine zusätzliche Wunde.)\nPermanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, 16 AsP, davon 2 gAsP)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "8 AsP",
+    "erlernen": "Ach, Mag 18; Elf, Hex, Geo, Dru 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4FpPbWlDNFkVYeVN",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425708,
+    "modifiedTime": 1767873425708,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4FpPbWlDNFkVYeVN"
+}

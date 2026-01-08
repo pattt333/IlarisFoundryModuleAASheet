@@ -1,0 +1,42 @@
+{
+  "name": "Seelenprüfung",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Zwölfgöttlicher Ritus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erkennst, ob eine Person oder ein Ort geweiht (auch dem Namenlosen), profan oder dämonisch verzerrt ist.\nFertigkeiten: Zwölfgöttlicher Ritus",
+    "maechtig": "Du kannst den Dämonen oder Gott/den Grad der Verdammnis oder der Weihe erkennen.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Pra 8; Ang, Aves, Brn, Eff, Fir, Hes, Ifi, Ing, Kor, Nan, Per, Phe, Rah, Ron, Tra, Tsa, Swa 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "OCoVX60j2iIsrhyF",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429335,
+    "modifiedTime": 1767873429335,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!OCoVX60j2iIsrhyF"
+}

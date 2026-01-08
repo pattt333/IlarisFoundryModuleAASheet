@@ -1,0 +1,42 @@
+{
+  "name": "Ernte des Dolches",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dolchzauber, Temporal, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die nächste mit dem Ritualgegenstand geerntete Pflanze ist viermal so lange haltbar.\nFertigkeiten: Dolchzauber, Temporal, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Ritualgegenstand",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "1 AsP",
+    "erlernen": "Dru, Geo 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "PkhNTWiu4eAXGWGL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426663,
+    "modifiedTime": 1767873426663,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!PkhNTWiu4eAXGWGL"
+}

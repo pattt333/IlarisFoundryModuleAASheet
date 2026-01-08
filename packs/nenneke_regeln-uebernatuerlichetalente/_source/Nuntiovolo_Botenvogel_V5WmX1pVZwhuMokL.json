@@ -1,0 +1,42 @@
+{
+  "name": "Nuntiovolo Botenvogel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du formst eine Rauchgestalt, die einen kleinen Gegenstand (wie einen Brief) mit etwa 50 Meilen pro Stunde an den gewünschten Zielort bringt. Der Zauber kann nur in der Nacht gewirkt werden und ist unzuverlässig: Wenn dem Spielleiter eine verdeckte Probe (6, I) misslingt, kommt die Rauchgestalt nicht an.\nFertigkeiten: Dämonisch",
+    "maechtig": "Die Schwierigkeit der Probe ist 5/4/3/2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "100 Meilen",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Mag 18; Ach, Bor, Hex 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "V5WmX1pVZwhuMokL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423933,
+    "modifiedTime": 1767873423933,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!V5WmX1pVZwhuMokL"
+}

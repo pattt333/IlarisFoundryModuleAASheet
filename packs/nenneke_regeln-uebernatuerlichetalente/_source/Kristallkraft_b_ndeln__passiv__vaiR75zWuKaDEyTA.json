@@ -1,0 +1,42 @@
+{
+  "name": "Kristallkraft bündeln (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kristallmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst einen Zauber mit der Essenz eines gebundenen Kristalls stärken. Der Zauber ist um +4 erleichtert und seine Kosten sinken um die gAsP des Kristalls. Nach dem Zauber zerfällt der Kristall zu Staub.",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Ach 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "vaiR75zWuKaDEyTA",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428048,
+    "modifiedTime": 1767873428048,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!vaiR75zWuKaDEyTA"
+}

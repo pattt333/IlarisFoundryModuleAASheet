@@ -1,0 +1,42 @@
+{
+  "name": "Seelenfeuer",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Ringrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Kalt leuchtendes Licht schießt in einem Radius von 4 Schritt aus dem Boden. Es erstarrt in der von dir gewünschten Form und verbrennt alle Humanoiden, die es berühren, mit 2W6 SP pro Initiativephase.\nFertigkeiten: Kraft, Ringrituale",
+    "maechtig": "Erhöht den Schaden um +4 SP und den Radius um 2 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Geo 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Kif8h8DdowRFAuJp",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428321,
+    "modifiedTime": 1767873428321,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Kif8h8DdowRFAuJp"
+}

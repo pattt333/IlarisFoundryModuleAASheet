@@ -1,0 +1,42 @@
+{
+  "name": "Rhythmen der Reinigung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Trommelrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Rhythmen gelten als <i>Konterprobe</i> (12) gegen sämtliche Zauber auf dem Ziel. Bei gelungener Probe werden die Zauber aufgehoben.\nFertigkeiten: Antimagie, Trommelrituale",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Stunden",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Der 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "aAe6P93DQHCTUEck",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428680,
+    "modifiedTime": 1767873428680,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!aAe6P93DQHCTUEck"
+}

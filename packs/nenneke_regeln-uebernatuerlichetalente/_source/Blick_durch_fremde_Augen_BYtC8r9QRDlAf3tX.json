@@ -1,0 +1,42 @@
+{
+  "name": "Blick durch fremde Augen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du blickst während der Wirkungsdauer durch die Augen deines Opfers, das davon nichts ahnt. Du kannst nur Opfer verzaubern, die du sehr gut kennst oder von denen du ein Körperteil besitzt.\nFertigkeiten: Hellsicht, Verständigung",
+    "maechtig": "Es reicht, wenn dir das Ziel persönlich bekannt ist/du es eine Weile beobachtet hast/du es vom Hörensagen kennst.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Mehrere Sinne (-4; du teilst einen weiteren Sinn mit dem Opfer. Mehrfach wählbar.)\nFremder Zauber (-8; du kannst während der Wirkungsdauer aus den Augen deines Opfers zaubern. Du musst dabei selbstverständlich auf Gesten und Formeln verzichten.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelwesen",
+    "reichweite": "16 Meilen",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Dru, Sch 18; Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "BYtC8r9QRDlAf3tX",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425059,
+    "modifiedTime": 1767873425059,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!BYtC8r9QRDlAf3tX"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Staub wandle!",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erschaffst einen Golem aus Holz, Stein oder anderen Materialien. Der Golem hat sich nach 1 Stunde an seine Existenz gewöhnt und ist einsatzfähig. Schwierigkeit und Kosten richten sich nach dessen Mächtigkeit auf der Skala schwach (z. B. laufende Truhe)/nützlich (z. B. Mephir)/stark (z. B. Homunculus)/mächtig (z. B. Ogerstatue). Die Beherrschungsprobe wird auf CH abgelegt. Wenn diese misslingt, kannst du es nach 1 Stunde erneut versuchen. Mehr zu Beschwörungen siehe S. 81.\nFertigkeiten: Erz",
+    "maechtig": "",
+    "schwierigkeit": "16/20/24/28",
+    "modifikationen": "",
+    "vorbereitung": "frei wählbar",
+    "ziel": "Material für einen einzelnen Golem",
+    "reichweite": "",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "8/16/24/32 AsP, ein Viertel der Basiskosten als gAsP",
+    "erlernen": "Mag 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "n3Mmuy84DCChnSVQ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424937,
+    "modifiedTime": 1767873424937,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!n3Mmuy84DCChnSVQ"
+}

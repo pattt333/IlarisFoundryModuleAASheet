@@ -1,0 +1,42 @@
+{
+  "name": "Nebelleib",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Verwandlung, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verwandelst dich in Nebel, während deine Ausrüstung zurückbleibt. In deiner Nebelgestalt bist du immun gegen profanen Schaden, kannst durch schmalste Öffnungen dringen und mit deiner gewöhnlichen GS bis zu 8 Schritt über dem Boden fliegen. Dafür kannst du nicht mit anderen Wesen kommunizieren, keine Zauber wirken und musst bei starkem Wind Willenskraft-Proben ablegen, um nicht weggeweht zu werden.\nFertigkeiten: Luft, Verwandlung, Wasser",
+    "maechtig": "Deine GS steigt um +4.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Dru, Geo 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "fZh6H3Ul5sYmKPC6",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425795,
+    "modifiedTime": 1767873425795,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!fZh6H3Ul5sYmKPC6"
+}

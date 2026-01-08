@@ -1,0 +1,42 @@
+{
+  "name": "Verschwindibus",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein bis zu 2 Stein schweres Ziel verschwindet für die Wirkungsdauer im näheren Limbus. Der Gegenstand darf nicht magisch, geweiht, befestigt oder mit einem Lebewesen in Kontakt sein.\nFertigkeiten: Kraft, Umwelt",
+    "maechtig": "Verdoppelt das maximale Gewicht.",
+    "schwierigkeit": "12",
+    "modifikationen": "Einmischen (-8; auch magische und geweihte Gegenstände können gewählt werden.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 8; Srl 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "kncRDrJWpx99hnAf",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425695,
+    "modifiedTime": 1767873425695,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!kncRDrJWpx99hnAf"
+}

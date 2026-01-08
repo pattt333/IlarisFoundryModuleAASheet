@@ -1,0 +1,42 @@
+{
+  "name": "Weidegründe finden",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Hellsicht, Geister der Stärkung, Geister rufen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Geister helfen dir auf dem Weg zu den nächsten Weidegründen. Entsprechende Überleben-Proben sind um +4 erleichtert.\nFertigkeiten: Eigenschaften, Hellsicht, Geister der Stärkung, Geister rufen",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "4 AsP",
+    "erlernen": "Smn 12; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "D8gI6nPC3xsG7Hmu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427313,
+    "modifiedTime": 1767873427313,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!D8gI6nPC3xsG7Hmu"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Gleichklang des Geistes",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Friede, Harmonie, Heilung, Wind und Wogen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erhältst einen Einblick in die Gefühle deines Gegenübers.\nFertigkeiten: Friede, Harmonie, Heilung, Wind und Wogen",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "1 KaP",
+    "erlernen": "Swa 8; Eff, Rah, Tsa 12, Per 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rpw3m7qjAuWE3S3A",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429883,
+    "modifiedTime": 1767873429883,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rpw3m7qjAuWE3S3A"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Hexenkrallen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Fingernägel werden lang, scharf und hart wie Raubtierklauen. Deine Hände richten 2W6 Waffenschaden an und verlieren die Eigenschaft Zerbrechlich.\nFertigkeiten: Eigenschaften, Verwandlung",
+    "maechtig": "Erhöht den Schaden um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "KpWB6hEpfwFCiBqX",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424349,
+    "modifiedTime": 1767873424349,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!KpWB6hEpfwFCiBqX"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Reinigung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Stabzauber, Umwelt, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Kleidung ist so sauber, als wäre sie frisch gewaschen.\nFertigkeiten: Luft, Stabzauber, Umwelt, Wasser",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Läusekamm (-4; du wirst auch von Kleintieren und Ungeziefer befreit.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Mag 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "BSm0uZBOGBA4t6qM",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428586,
+    "modifiedTime": 1767873428586,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!BSm0uZBOGBA4t6qM"
+}

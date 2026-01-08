@@ -1,0 +1,42 @@
+{
+  "name": "Somnigravis",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ein Ziel in einer ruhenden Position sinkt langsam in einen Tiefschlaf, aus dem es durch lauten Lärm oder Schmerzen geweckt werden kann.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Beliebiges Wesen (-4; der Zauber wirkt auf alle Wesen, die Schlaf kennen.)\nOhnmacht (-8, 1 Aktion, Wirkungsdauer 16 Initiativephasen; das Opfer wird schlagartig ohnmächtig und ist nicht zu wecken.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "4 Stunden",
+    "kosten": "8 AsP",
+    "erlernen": "Elf 12; Mag 14; Alch 16; Ach, Dru, Geo, Hex, Sch, Srl 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "d0ZhnaJG5obHOllu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424726,
+    "modifiedTime": 1767873424726,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!d0ZhnaJG5obHOllu"
+}

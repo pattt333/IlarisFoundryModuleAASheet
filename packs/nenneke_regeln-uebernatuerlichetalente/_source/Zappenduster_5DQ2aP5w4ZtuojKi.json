@@ -1,0 +1,42 @@
+{
+  "name": "Zappenduster",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Um deinen Körper herum entsteht eine Zone der Dunkelheit von 4 Schritt Radius. Die Helligkeit sinkt um eine Stufe (etwa von normal auf Dämmerung, von Sternenlicht auf absolute Dunkelheit, S. 38). Der Zauber gilt als <i>Konterprobe</i> (16) gegen alle Lichtzauber im Bereich, bei deren Gelingen die Lichtzauber aufgehoben werden. Alle profanen Lichtquellen im Bereich werden erstickt. Du selbst bist von dem Zauber nicht betroffen.\nFertigkeiten: Umwelt",
+    "maechtig": "Senkt die Helligkeit um eine weitere Stufe.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "5DQ2aP5w4ZtuojKi",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426186,
+    "modifiedTime": 1767873426186,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5DQ2aP5w4ZtuojKi"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Lied der Heilung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Lied stärkt die Lebenskraft der Verwundeten. Der am schwersten verletze Zuhörer in 4 Schritt Radius regeneriert in der nächsten Ruhephase zwei zusätzliche Wunden. Bei Gleichstand entscheidet der Spieler.\nFertigkeiten: Humus, Zaubermelodien",
+    "maechtig": "Mit zwei/vier Stufen erstreckt sich die Wirkung auch auf den am zweit-/drittstärksten Verletzten.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Bard 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oQzLPzq7vktVeJfu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428899,
+    "modifiedTime": 1767873428899,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oQzLPzq7vktVeJfu"
+}

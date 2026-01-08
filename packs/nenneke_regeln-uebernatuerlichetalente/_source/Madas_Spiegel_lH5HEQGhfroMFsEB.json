@@ -1,0 +1,42 @@
+{
+  "name": "Madas Spiegel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Spiegelung des Mondes auf der Wasseroberfläche verwandelt sich in das Abbild des Ziels. Zusätzlich kannst du kleine Teile des Hintergrunds erkennen und spürst flüchtig die Gefühlseindrücke deines Zieles. Dieses erinnert sich währenddessen an dich.\nFertigkeiten: Hellsicht, Verständigung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelperson",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 18; Dru, Srl 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "lH5HEQGhfroMFsEB",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425111,
+    "modifiedTime": 1767873425111,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!lH5HEQGhfroMFsEB"
+}

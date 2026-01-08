@@ -1,0 +1,42 @@
+{
+  "name": "Sinesigill Unerkannt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Während der Wirkungsdauer ist dein Gildensiegel von einer <i>Illusion</i> (Sicht) verdeckt und auch vor ungezielter Hellsicht verborgen.\nFertigkeiten: Antimagie, Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Fremde Hand (-4, Einzelperson)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "4 AsP",
+    "erlernen": "Mag 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Y6lEd654xwaiynR1",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423788,
+    "modifiedTime": 1767873423788,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Y6lEd654xwaiynR1"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Melodie des Windes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Elfenlieder, Hellsicht, Luft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du öffnest deine Sinne für Eindrücke aus der Windrichtung, die von der Harmonie des Ortes, seinen Pflanzen und Bewohnern künden. Die Stimmungen, Visionen oder Geräusche bleiben dabei stets vage. Erfordert <i>Konzentration</i>.\nFertigkeiten: Elfenlieder, Hellsicht, Luft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "4 AsP",
+    "erlernen": "Elf 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "patPoJj3Y5cc3ceh",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426982,
+    "modifiedTime": 1767873426982,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!patPoJj3Y5cc3ceh"
+}

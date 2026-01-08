@@ -1,0 +1,42 @@
+{
+  "name": "Wasserwand",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eine 3 Schritt hohe und bis zu 4 Schritt lange Wand aus rauschenden Wogen quillt entlang einer von dir bestimmten Linie aus dem Boden. Um die Wand zu durchqueren, musst du sie mit einer <i>Konterprobe</i> (KO, 16) betreten. Dann kannst du alle 2 Initiativephasen eine <i>Konterprobe</i> (KO, 16) zum Verlassen der Wand ablegen und erleidest dabei 1 Punkt Erschöpfung (egal ob die Probe gelingt).\nFertigkeiten: Wasser",
+    "maechtig": "Die Höhe steigt um 1 Schritt und die Länge um bis zu 2 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 16; Mag 18; Dru 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "I0HnX21WtVI4wZ64",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426554,
+    "modifiedTime": 1767873426554,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!I0HnX21WtVI4wZ64"
+}

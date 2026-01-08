@@ -1,0 +1,42 @@
+{
+  "name": "Dunkelheit",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Um deinen Körper herum entsteht eine Zone der Dunkelheit von 4 Schritt Radius. Die Helligkeit sinkt um eine Stufe (etwa von normal auf Dämmerung, von Sternenlicht auf absolute Dunkelheit, S. 38). Du selbst bist von dem Zauber nicht betroffen.\nFertigkeiten: Umwelt",
+    "maechtig": "Senkt die Helligkeit um eine weitere Stufe.",
+    "schwierigkeit": "12",
+    "modifikationen": "Begleiter (-4; die Dunkelheit bewegt sich mit dir.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Dru 8; Alch, Geo, Mag 16; Ach, Hex, Srl 18; Elf 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4gg1UjmBBcvM10Pf",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426028,
+    "modifiedTime": 1767873426028,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4gg1UjmBBcvM10Pf"
+}

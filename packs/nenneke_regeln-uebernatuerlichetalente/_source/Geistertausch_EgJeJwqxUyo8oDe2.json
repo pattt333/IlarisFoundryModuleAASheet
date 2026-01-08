@@ -1,0 +1,42 @@
+{
+  "name": "Geistertausch",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Geister rufen, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Wenn du ein Körperteil (z.B. Haare oder Blut) deines Opfers besitzt, kannst du mit ihm den Körper tauschen. Geistige Attribute, Fertigkeiten und Vorteile bleiben erhalten, körperliche werden getauscht. Wird einer der Körper während des Tausches vernichtet, endet der Tausch und der ursprüngliche Besitzer des vernichteten Körpers stirbt.\nFertigkeiten: Eigenschaften, Geister rufen, Verständigung",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Tiersinne (-4, Einzelwesen)\nFremdtausch (-8; zwei Ziele tauschen Körper.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Meilen",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "EgJeJwqxUyo8oDe2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427583,
+    "modifiedTime": 1767873427583,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!EgJeJwqxUyo8oDe2"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Stillstand",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eis, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erschaffst eine Zone mit 8 Schritt Radius, die alle Bewegungen außer deiner verlangsamt. Andere Ziele verlieren ihre nächste Aktion, wenn sie eine andere Aktion als Konzentration nutzen. Trifft eine Waffe ein Wesen in der Zone, richtet sie nur halben Schaden an.\nFertigkeiten: Eis, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Begleiter (-4; die Zone bewegt sich mit dir.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Ach 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "u5YMohPIzvImtYUP",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424824,
+    "modifiedTime": 1767873424824,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!u5YMohPIzvImtYUP"
+}

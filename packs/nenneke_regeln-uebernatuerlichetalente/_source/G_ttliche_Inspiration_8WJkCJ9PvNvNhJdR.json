@@ -1,0 +1,42 @@
+{
+  "name": "Göttliche Inspiration",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Handwerk, Harmonie, Neubeginn",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Wähle eine göttergefällige Freie Fertigkeit. Die Stufe dieser Freien Fertigkeit steigt um eins, oder du erhältst diese Fertigkeit auf unerfahren.\nTsa: Alle Fertigkeiten außer Sprachen und Schriften sind tsagefällig.\nRahja: Fertigkeiten mit Bezug zu Kunst, Weinbau und Pferdezucht.\nIngerimm & Angrosch: Fertigkeiten des ehrbaren Handwerks.\nFertigkeiten: Heiliges Handwerk, Harmonie, Neubeginn",
+    "maechtig": "Je zwei Stufen erhöhen die Stufe der Freien Fertigkeit um 1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 KaP",
+    "erlernen": "Tsa 12; Rah, Ing 16; Ang 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "8WJkCJ9PvNvNhJdR",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430735,
+    "modifiedTime": 1767873430735,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!8WJkCJ9PvNvNhJdR"
+}

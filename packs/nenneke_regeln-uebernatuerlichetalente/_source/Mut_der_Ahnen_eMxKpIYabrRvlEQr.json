@@ -1,0 +1,42 @@
+{
+  "name": "Mut der Ahnen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Geister der Stärkung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Ahnengeister stärken den Mut von bis zu 8 Gefährten. Sie erhalten eine Erleichterung von +2 auf alle MU-Proben und auf ihnen lastende Furcht-Effekte gelten als eine Stufe niedriger.\nFertigkeiten: Eigenschaften, Geister der Stärkung",
+    "maechtig": "Verdoppelt die Zahl der Ziele.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Stunden",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "eMxKpIYabrRvlEQr",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427189,
+    "modifiedTime": 1767873427189,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!eMxKpIYabrRvlEQr"
+}

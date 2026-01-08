@@ -1,0 +1,42 @@
+{
+  "name": "Argelions Spiegel",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Magie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der nächste auf dich gewirkte Zauber wird auf den Zauberer zurückgeworfen.\nFertigkeiten: Magie",
+    "maechtig": "Ein weiterer Zauber wird zurückgeworfen.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 KaP",
+    "erlernen": "Hes 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "okKSzPY2UqhBH8zC",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430258,
+    "modifiedTime": 1767873430258,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!okKSzPY2UqhBH8zC"
+}

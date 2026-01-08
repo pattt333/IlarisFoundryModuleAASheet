@@ -1,0 +1,42 @@
+{
+  "name": "Sanftmut",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das verzauberte Tier verliert seine Angriffslust, solange es nicht angegriffen oder gereizt wird.\nFertigkeiten: Einfluss",
+    "maechtig": "Die Lethargie hält sogar dann, wenn das Tier gereizt/leicht verletzt/schwer verletzt wird.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Tier",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Geo, Hex 12; Dru, Elf 16; Ach 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "9Ijv45bQ21lbwZyL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424687,
+    "modifiedTime": 1767873424687,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!9Ijv45bQ21lbwZyL"
+}

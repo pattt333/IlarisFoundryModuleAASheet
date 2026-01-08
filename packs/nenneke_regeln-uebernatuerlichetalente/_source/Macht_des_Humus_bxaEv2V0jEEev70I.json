@@ -1,0 +1,42 @@
+{
+  "name": "Macht des Humus",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Geister rufen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ruft ein Humuselementar herbei, das in deiner unmittelbaren Nähe erscheint. Schwierigkeit und Kosten richten sich nach dessen Mächtigkeit auf der Skala Diener (z. B. Kräuterkopf)/Dschinn (z. B. Abu al‘Azilat)/Meister (z. B. Eichbart). Die Beherrschungsprobe wird auf CH abgelegt. Beim Einsatz von Blutmagie ist diese um -4 erschwert. Mehr zur Beschwörung siehe S. 81.\nFertigkeiten: Humus, Geister rufen\nAnmerkung: Nicht überall sind die Wahren Namen und damit die Beschwörung von elementaren Dienern und vor allem Meistern bekannt.",
+    "maechtig": "",
+    "schwierigkeit": "16/24/32",
+    "modifikationen": "",
+    "vorbereitung": "frei wählbar",
+    "ziel": "einzelnes Elementar",
+    "reichweite": "",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16/32/64 AsP",
+    "erlernen": "Smn 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "bxaEv2V0jEEev70I",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427536,
+    "modifiedTime": 1767873427536,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!bxaEv2V0jEEev70I"
+}

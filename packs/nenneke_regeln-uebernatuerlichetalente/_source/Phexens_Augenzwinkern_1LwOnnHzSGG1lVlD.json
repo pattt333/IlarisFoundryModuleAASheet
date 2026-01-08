@@ -1,0 +1,42 @@
+{
+  "name": "Phexens Augenzwinkern",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "List, Stiller Wanderer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Ziel kann sich kaum an dein Gesicht erinnern. Selbst wenn er darauf angesprochen oder verhört wird, sind alle KL-Proben zur Erinnerung um -4 erschwert. Die Liturgie wirkt nur, wenn deine wahre Identität unbekannt ist.\nFertigkeiten: List , Stiller Wanderer",
+    "maechtig": "Der Malus steigt um -2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelperson",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Phe 12; Aves 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "1LwOnnHzSGG1lVlD",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430994,
+    "modifiedTime": 1767873430994,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!1LwOnnHzSGG1lVlD"
+}

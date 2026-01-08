@@ -1,0 +1,42 @@
+{
+  "name": "Apport des Iama",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Elfenlieder, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Iama kehrt fliegend mit einer Geschwindigkeit von 10 Meilen pro Stunde zu dir zurück. Er weicht Hindernissen aus oder durchbricht sie notfalls, wenn die KK von PW Elfenlieder/2 oder Umwelt/2 dafür ausreicht.\nFertigkeiten: Elfenlieder, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "1 Meile",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Elf 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "G3IbOX4BhlKJOkCf",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426896,
+    "modifiedTime": 1767873426896,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!G3IbOX4BhlKJOkCf"
+}

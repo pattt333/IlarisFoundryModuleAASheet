@@ -1,0 +1,42 @@
+{
+  "name": "Aerofugo Vakuum",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Luft, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du entfernst sämtliche Luft aus einem Bereich mit bis zu 4 Schritt Radius. Flammen erlöschen, Lebewesen erleiden alle DH* Initiativephasen 1 Punkt Erschöpfung und Luftelementare erleiden 1 Wunde pro Initiativephase.\nFertigkeiten: Luft, Umwelt",
+    "maechtig": "Der Radius steigt um 2 Schritt.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "4 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Ach, Alch, Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "H8FQf36nTdiEzyi8",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425728,
+    "modifiedTime": 1767873425728,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!H8FQf36nTdiEzyi8"
+}

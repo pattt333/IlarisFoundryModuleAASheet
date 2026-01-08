@@ -1,0 +1,42 @@
+{
+  "name": "Seidenweich Schuppengleich",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du gibst durch eine <i>Illusion</i> (Tastsinn) dem verzauberten Gegenstand eine Textur deiner Wahl.\nFertigkeiten: Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Zähneknirschen (-4; die Illusion betrifft nur Gaumen und Zunge.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "4 AsP",
+    "erlernen": "Sch 12; Srl 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wiezsqSUfAhMt0K8",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425538,
+    "modifiedTime": 1767873425538,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wiezsqSUfAhMt0K8"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Gabe der Ewigjungen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Friede",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "In deiner Hand erscheint eine Frühlingsblume. Solange die Blume blüht, erhält ihr Träger einen Bonus von +1 auf Menschenkenntnis. Die Blume verblüht, wenn der Träger einer Person begegnet, die ihm feindlich gesonnen ist, er sich gegen Tsa versündigt oder am Ende der Wirkungsdauer.\nFertigkeiten: Friede",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "4 KaP",
+    "erlernen": "Tsa 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "nPHxxmFYvaFkl0BL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431832,
+    "modifiedTime": 1767873431832,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!nPHxxmFYvaFkl0BL"
+}

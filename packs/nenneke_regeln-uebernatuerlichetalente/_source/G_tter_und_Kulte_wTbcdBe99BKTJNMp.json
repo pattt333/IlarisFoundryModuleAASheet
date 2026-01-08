@@ -1,0 +1,31 @@
+{
+  "name": "Götter und Kulte",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Götter und Kulte befasst sich mit dem Wesen der Götter, ihrer Schöpfung und ihren sterblichen Dienern. Dein Charakter kennt den Aufbau und die Ziele der Kirchen und weiß, wie man ihren Angehörigen gegenübertritt. Genauso kann er eine alte Kultstätte einer Gottheit oder vielleicht einem Erzdämonen zuordnen.",
+    "fertigkeit": "Bildung",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wTbcdBe99BKTJNMp",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090444,
+    "modifiedTime": 1767788090444,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wTbcdBe99BKTJNMp"
+}

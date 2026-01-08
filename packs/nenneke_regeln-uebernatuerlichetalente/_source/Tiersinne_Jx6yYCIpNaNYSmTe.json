@@ -1,0 +1,42 @@
+{
+  "name": "Tiersinne",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Verständigung, Vertrautenmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Vertrautentier schließt seine Augen und leiht dir seine Sinne. Deine Wahrnehmung steigt um +4, zusätzlich erhältst du einen Bonus je nach Tier (Katze und Eule Angepasst II (Dunkelheit), Rabe und Falke Sehsinn +4, Hund und Schlange Geruchssinn +4, Kröte Magiegespür, Affe Gehör +4, Spinne Tastsinn +4). Der Zauber endet, wenn der Vertraute seine Augen öffnet.\nFertigkeiten: Eigenschaften, Verständigung, Vertrautenmagie",
+    "maechtig": "Der Bonus steigt um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Geo, Hex 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Jx6yYCIpNaNYSmTe",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428814,
+    "modifiedTime": 1767873428814,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Jx6yYCIpNaNYSmTe"
+}

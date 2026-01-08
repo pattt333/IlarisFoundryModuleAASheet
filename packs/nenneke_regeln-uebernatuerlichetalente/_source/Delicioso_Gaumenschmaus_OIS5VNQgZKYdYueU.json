@@ -1,0 +1,42 @@
+{
+  "name": "Delicioso Gaumenschmaus",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst Geruch und Geschmack eines Gegenstandes – meist einer Speise – bestimmen. Dabei handelt es sich um eine <i>Illusion</i> (Geschmack und Geruch). Der Gegenstand kann maximal 1 Stein wiegen.\nFertigkeiten: Illusion",
+    "maechtig": "Verdoppelt das maximale Gewicht.",
+    "schwierigkeit": "12",
+    "modifikationen": "Aromenvielfalt (-4; du kannst die Geschmäcker einzelner Teile der Speise getrennt voneinander festlegen.)\nVöllerei (-4; die Speise scheint während der Wirkungsdauer nicht zu sättigen.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "2 AsP",
+    "erlernen": "Srl 14; Mag 16; Sch 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "OIS5VNQgZKYdYueU",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425401,
+    "modifiedTime": 1767873425401,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!OIS5VNQgZKYdYueU"
+}

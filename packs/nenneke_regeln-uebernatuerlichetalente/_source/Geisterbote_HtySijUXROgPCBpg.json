@@ -1,0 +1,42 @@
+{
+  "name": "Geisterbote",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Geister rufen, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Durch das Geisterreich schließt du eine Verbindung mit dem Ziel, von dem du einen Körperteil (z.B. ein Haar oder einen Blutstropfen) besitzt. Der Körperteil wird dabei verbraucht. Während der Wirkungsdauer kannst einmal am Tag einen beliebigen Zauber auf das Ziel sprechen, als könntest du es berühren. Die Zauber müssen wie üblich die Magieresistenz überwinden.\nFertigkeiten: Geister rufen, Verständigung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "aventurienweit",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 14; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "HtySijUXROgPCBpg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427502,
+    "modifiedTime": 1767873427502,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!HtySijUXROgPCBpg"
+}

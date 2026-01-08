@@ -1,0 +1,42 @@
+{
+  "name": "Stimme des Nipakau",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Geister rufen, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erforschst die Erinnerung eines Gegenstandes, einer Pflanze oder eines Tieres. Dabei beantwortet dir das Ziel 4 Ja/Nein-Fragen. Beachte, dass die meisten Gegenstände und Pflanzen nicht gerade intelligent sind und meist nur Dinge wahrnehmen, mit denen sie direkt in Kontakt stehen. Sollte das Ziel tatsächlich durch eine intelligente Wesenheit beseelt sein, beantwortet diese Wesenheit die Fragen.\nFertigkeiten: Hellsicht, Geister rufen, Verständigung",
+    "maechtig": "Beantwortet 2 weitere Fragen.",
+    "schwierigkeit": "12/Magieresistenz (bei Tieren)",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt/Tier",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "4 AsP",
+    "erlernen": "Smn 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LMRrSEe2OpgXrlva",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427653,
+    "modifiedTime": 1767873427653,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LMRrSEe2OpgXrlva"
+}

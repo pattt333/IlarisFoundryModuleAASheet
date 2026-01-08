@@ -1,0 +1,42 @@
+{
+  "name": "Kugel des Astrologen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kugelzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Über der Kugel entsteht ein Abbild des aktuellen Sternenhimmels, von dem du einzelne Teile hervortreten lassen kannst. Das Abbild leuchtet nur schwach und ist im Sonnenlicht nicht zu sehen.\nFertigkeiten: Hellsicht, Kugelzauber",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Kristallkugel",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "4 AsP",
+    "erlernen": "Srl 14; Mag 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "cWCblcLd0ONY5FFK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428190,
+    "modifiedTime": 1767873428190,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!cWCblcLd0ONY5FFK"
+}

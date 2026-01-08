@@ -1,0 +1,42 @@
+{
+  "name": "Federleichter Beutel (passiv)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kristallmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Pro 4 volle Punkte PW Kristallmagie halbiert sich das Gewicht der Gegenstände im Schuppenbeutel (z.B. bei einem PW von 9 auf ein Viertel).",
+    "maechtig": "",
+    "schwierigkeit": "",
+    "modifikationen": "",
+    "vorbereitung": "",
+    "ziel": "",
+    "reichweite": "",
+    "wirkungsdauer": "",
+    "kosten": "",
+    "erlernen": "Ach 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "lOSZOWgZY8EBFAm5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427948,
+    "modifiedTime": 1767873427948,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!lOSZOWgZY8EBFAm5"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Großer Eidsegen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Ehre, Heim und Herd, Ordnung, Zwölfgöttlicher Ritus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du segnest einen freiwillig geschworenen Eid, wie einen Traviabund oder einen Lehenseid. Alle Versuche, einen Schwörenden zum Eidbruch zu bewegen (etwa über Betören, Überreden oder einen Imperavi), sind um -4 erschwert. Bricht ein Schwörender den Eid im Vollbesitz seiner geistigen Kräfte, ruht die Wirkung des Segens, bis er Buße geübt hat.\nFertigkeiten: Ehre, Heim und Herd, Ordnung, Zwölfgöttlicher Ritus",
+    "maechtig": "Erhöht den Malus um -2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "zwei Personen",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "permanent",
+    "kosten": "8 KaP",
+    "erlernen": "Tra 8; Ang, Hes, Per, Pra, Rah, Swa, Tsa 14; Aves, Kor, Ron 18; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "a0zCUKs8Q1PD94It",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429251,
+    "modifiedTime": 1767873429251,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!a0zCUKs8Q1PD94It"
+}

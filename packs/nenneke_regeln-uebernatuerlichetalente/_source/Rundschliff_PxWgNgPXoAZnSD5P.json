@@ -1,0 +1,42 @@
+{
+  "name": "Rundschliff",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz, Kristallmagie, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du versiehst einen gebundenen Kristall mit einem Rundschliff. Wann immer du mit Hilfe dieses Kristalls einen Zauber wirkst, kannst du die spontane Modifikation Mehrere Ziele ohne Erschwernis ausführen. Nicht mit anderen Schliffen kombinierbar.\nFertigkeiten: Erz, Kristallmagie, Kraft",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Stunden",
+    "ziel": "gebundener Kristall",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "8 AsP, davon 2 gAsP",
+    "erlernen": "Ach 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "PxWgNgPXoAZnSD5P",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427993,
+    "modifiedTime": 1767873427993,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!PxWgNgPXoAZnSD5P"
+}

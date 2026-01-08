@@ -1,0 +1,42 @@
+{
+  "name": "Klickeradomms",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du zerbrichst einen Gegenstand, den du auch mit einem Fausthieb zertrümmern könntest. Der Gegenstand darf maximal 1 Stein wiegen.\nFertigkeiten: Umwelt",
+    "maechtig": "Das maximale Gewicht steigt um einen halben Stein.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "2 AsP",
+    "erlernen": "Sch 8; Hex, Mag, Srl 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "IBQ9exCRsFwZaxB2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426085,
+    "modifiedTime": 1767873426085,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!IBQ9exCRsFwZaxB2"
+}

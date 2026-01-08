@@ -1,0 +1,42 @@
+{
+  "name": "Gänsegeschnatter",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Fröhlicher Wanderer, Sichere Heimkehr",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Im Laufe des Tages fliegt dir eine Wildgans (Tra) oder ein Zugvogel (Aves) zu, die dich fortan begleitet. Das Tier hat äußerst scharfe Sinne (Wachsamkeit 12) und schlägt lautstark Alarm, sobald sich jemand deinem Nachtlager in böser Absicht nähert. Es verlässt dich, wenn du es schlecht behandelst, oder die Wirkungsdauer endet. Die Wirkung endet auch, wenn das Tier stirbt (WS 2).\nFertigkeiten: Fröhlicher Wanderer, Sichere Heimkehr",
+    "maechtig": "Die Wachsamkeit des Tiers steigt um +4.",
+    "schwierigkeit": "12",
+    "modifikationen": "Permanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, 8 KaP, davon 2 gKaP)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "8 KaP",
+    "erlernen": "Aves 14; Tra 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "w7KoPG3SjfTqK0NC",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431749,
+    "modifiedTime": 1767873431749,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!w7KoPG3SjfTqK0NC"
+}

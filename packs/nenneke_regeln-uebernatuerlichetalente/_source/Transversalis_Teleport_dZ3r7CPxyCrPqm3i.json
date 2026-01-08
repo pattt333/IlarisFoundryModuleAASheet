@@ -1,0 +1,42 @@
+{
+  "name": "Transversalis Teleport",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du teleportierst dich an einen beliebigen Ort. Der Ort darf maximal 4 Meilen entfernt sein und du musst schon einmal dort gewesen sein.\nFertigkeiten: Kraft",
+    "maechtig": "Vervierfacht die Distanz.",
+    "schwierigkeit": "12",
+    "modifikationen": "Anhalter (-4; du kannst eine Person mitnehmen. Mehrfach wählbar.)\nLastenteleport (-8, Einzelobjekt; du kannst eine Last von maximal 32 Stein teleportieren.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 AsP",
+    "erlernen": "Mag 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "dZ3r7CPxyCrPqm3i",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425684,
+    "modifiedTime": 1767873425684,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!dZ3r7CPxyCrPqm3i"
+}

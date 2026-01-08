@@ -1,0 +1,42 @@
+{
+  "name": "Schleier der Unwissenheit",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Kraft",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du schützt die magische Aura des Ziels vor der Entdeckung. Der Analysegrad jeder Analyse auf das Ziel sinkt um eins.\nFertigkeiten: Antimagie, Kraft",
+    "maechtig": "Der Analysegrad sinkt um einen weiteren Punkt.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelwesen, Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Stunden",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 12; Mag 16; Dru 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "xY3jK4CL7sdszGju",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423736,
+    "modifiedTime": 1767873423736,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!xY3jK4CL7sdszGju"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Zungenschwellung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Hexenflüche",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Es fällt dem Ziel schwer, artikuliert zu sprechen. Die Zuhörer müssen eine <i>Konterprobe</i> (Sinnenschärfe, 16) ablegen, um den Sprecher zu verstehen. Laut gesprochene oder gesungene Zauberformeln sind dadurch unmöglich.\nFertigkeiten: Eigenschaften, Hexenflüche",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "XhTVqHulelkcETpj",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427810,
+    "modifiedTime": 1767873427810,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!XhTVqHulelkcETpj"
+}

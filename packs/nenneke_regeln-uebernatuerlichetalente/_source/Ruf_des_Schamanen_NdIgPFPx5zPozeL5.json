@@ -1,0 +1,42 @@
+{
+  "name": "Ruf des Schamanen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Geister rufen, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du sendest ein geistiges Signal an alle Stammesmitglieder im Radius von 4 Meilen, dass sie zu dir kommen sollen. Sie wissen, in welcher Richtung du dich befindest.\nFertigkeiten: Geister rufen, Verständigung",
+    "maechtig": "Verdoppelt den Radius",
+    "schwierigkeit": "12",
+    "modifikationen": "Ruf der Gefährten (-8; du rufst alle engen Gefährten zu dir)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Smn 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "NdIgPFPx5zPozeL5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427642,
+    "modifiedTime": 1767873427642,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!NdIgPFPx5zPozeL5"
+}

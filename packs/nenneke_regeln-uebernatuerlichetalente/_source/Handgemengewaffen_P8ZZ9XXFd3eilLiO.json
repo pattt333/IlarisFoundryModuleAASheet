@@ -1,0 +1,31 @@
+{
+  "name": "Handgemengewaffen",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Verbessert den Einsatz von Messern, Dolchen, Schlagstöcken und Kettenstäben.",
+    "fertigkeit": "Handgemenge",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "P8ZZ9XXFd3eilLiO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788090283,
+    "modifiedTime": 1767788090283,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!P8ZZ9XXFd3eilLiO"
+}

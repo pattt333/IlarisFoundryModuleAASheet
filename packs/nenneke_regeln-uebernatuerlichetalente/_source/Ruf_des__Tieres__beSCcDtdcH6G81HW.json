@@ -1,0 +1,42 @@
+{
+  "name": "Ruf des (Tieres)",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Verständigung, Gaben des Odun",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst ein Exemplar deines Tiers herbei. Befindet sich ein Wesen dieser Art in einem Radius von 4 Meilen, eilt es herbei. Du kannst dieses Wesen um einen Gefallen bitten, das dieses wenn möglich erfüllen wird. Dann trollt sich das Wesen.\nFertigkeiten: Einfluss, Verständigung, Gaben des Odun",
+    "maechtig": "Verdoppelt den Radius und die Zahl der herbeieilenden Wesen.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Dur 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "beSCcDtdcH6G81HW",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427090,
+    "modifiedTime": 1767873427090,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!beSCcDtdcH6G81HW"
+}

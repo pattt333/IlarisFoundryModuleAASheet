@@ -1,0 +1,42 @@
+{
+  "name": "Mannschaftssegen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Seefahrt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die gesamte Schiffsmannschaft erhält eine Erleichterung von +2 auf MU-Proben und ignoriert eine Stufe jedes Furchteffekts, solange sie sich an Bord eines Schiffes aufhält.\nFertigkeiten: Seefahrt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "16 KaP, davon 2 gKaP",
+    "erlernen": "Swa 8; Eff 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "b2aeqTURQOGOKGX4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429790,
+    "modifiedTime": 1767873429790,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!b2aeqTURQOGOKGX4"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Spinnenlauf",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Hände und Füße haften an Oberflächen, sodass du mit GS 1 an glatten Wänden und sogar Decken ohne Griffen klettern kannst. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Eigenschaften",
+    "maechtig": "Erhöht die GS um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 16; Ach, Elf 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "zvTCNVAq7Gw9fLgz",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424427,
+    "modifiedTime": 1767873424427,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!zvTCNVAq7Gw9fLgz"
+}

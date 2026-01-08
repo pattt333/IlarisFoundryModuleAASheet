@@ -1,0 +1,42 @@
+{
+  "name": "Garafans gleißende Schwingen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Licht",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst einen Greifen (S. 101) herbei, der dir zur Seite steht. Was der Greif zu tun bereit ist und wie lange er bis zum Eintreffen benötigt, ist Spielleiterentscheid.\nFertigkeiten: Licht",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelwesen",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "32 KaP",
+    "erlernen": "Pra 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "DfvhthMYmjmnP9GL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431107,
+    "modifiedTime": 1767873431107,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!DfvhthMYmjmnP9GL"
+}

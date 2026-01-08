@@ -1,0 +1,42 @@
+{
+  "name": "Dinge aufspüren",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Vertrautenmagie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Vertrautentier teilt dir mit, in welcher Richtung sich ein Gegenstand aus deinem Besitz befindet.\nFertigkeiten: Hellsicht, Vertrautenmagie",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "16 Meilen",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Geo, Hex 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "8xVDqsth6AbslLrx",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428727,
+    "modifiedTime": 1767873428727,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!8xVDqsth6AbslLrx"
+}

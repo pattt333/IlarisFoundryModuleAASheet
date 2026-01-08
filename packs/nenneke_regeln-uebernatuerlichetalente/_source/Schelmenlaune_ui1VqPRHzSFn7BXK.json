@@ -1,0 +1,42 @@
+{
+  "name": "Schelmenlaune",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Stimmung überträgt sich auf jede Person in einem Umreis von 8 Schritt, der keine <i>Konterprobe</i> (Magieresistenz, 12) gelingt. Da Schelme grundsätzlich positiv gestimmt sind, sorgt dies meist für Massenhysterien.\nFertigkeiten: Einfluss",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "16 AsP",
+    "erlernen": "Sch 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ui1VqPRHzSFn7BXK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424700,
+    "modifiedTime": 1767873424700,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ui1VqPRHzSFn7BXK"
+}

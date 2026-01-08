@@ -1,0 +1,42 @@
+{
+  "name": "Beute!",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Hexenflüche",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Tiere reagieren aggressiv auf dein Opfer. Proben zum Umgang mit Nutztieren sind um -4 erschwert und Raubtiere greifen stets das Opfer an, wobei sie +1 TP anrichten.\nFertigkeiten: Eigenschaften, Hexenflüche",
+    "maechtig": "Der Malus steigt um -2, die TP um +1.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "8 AsP",
+    "erlernen": "Hex 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "g880dpElh9YhUg8T",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427742,
+    "modifiedTime": 1767873427742,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!g880dpElh9YhUg8T"
+}

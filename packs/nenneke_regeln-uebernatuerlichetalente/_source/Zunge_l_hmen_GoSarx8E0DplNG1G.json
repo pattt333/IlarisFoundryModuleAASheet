@@ -1,0 +1,42 @@
+{
+  "name": "Zunge lähmen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Opfer kann seine Zunge nicht mehr bewegen und kann keine verständlichen Äußerungen von sich geben. Wenn ein Zauber oder eine Liturgie eine gesprochene Formel oder Gebet benötigt, muss das Ziel die Zaubertechnik ignorieren.\nFertigkeiten: Eigenschaften",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Dru 14; Geo 16; Alch, Hex, Sch 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "GoSarx8E0DplNG1G",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424472,
+    "modifiedTime": 1767873424472,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!GoSarx8E0DplNG1G"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Apport der Schale",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schalenzauber, Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Schale der Alchemie kehrt fliegend mit einer Geschwindigkeit von 10 Meilen pro Stunde zu dir zurück. Sie weicht Hindernissen aus oder durchbricht sie notfalls, wenn die KK von PW Schalenzauber/2 oder Umwelt/2 dafür ausreicht.\nFertigkeiten: Schalenzauber, Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "1 Meile",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "1 AsP",
+    "erlernen": "Alch 12; Hex 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "vyBtGc28U0D2Gj3f",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428394,
+    "modifiedTime": 1767873428394,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!vyBtGc28U0D2Gj3f"
+}

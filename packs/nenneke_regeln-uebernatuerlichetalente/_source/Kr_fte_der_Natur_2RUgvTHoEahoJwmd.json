@@ -1,0 +1,42 @@
+{
+  "name": "Kräfte der Natur",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Ringrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Heilkraft Sumus beendet ein Gift oder eine Krankheit bis maximal Stufe 16.\nFertigkeiten: Humus, Ringrituale",
+    "maechtig": "Die maximal aufgehobene Gift-/Krankheitsstufe steigt um 4.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "2RUgvTHoEahoJwmd",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428266,
+    "modifiedTime": 1767873428266,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!2RUgvTHoEahoJwmd"
+}

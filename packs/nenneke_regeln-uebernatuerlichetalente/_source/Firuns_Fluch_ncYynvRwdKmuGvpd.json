@@ -1,0 +1,42 @@
+{
+  "name": "Firuns Fluch",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Jagd",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du schlägst dein Ziel mit Firuns Fluch. Alle Fernkampfangriffe auf dieses Ziel sind um +2 erleichtert und die Chance auf einen Triumph steigt um 1 auf dem W20 (zum Beispiel von 20 auf 19-20).\nFertigkeiten: Jagd",
+    "maechtig": "Der Bonus steigt um +1.",
+    "schwierigkeit": "12",
+    "modifikationen": "Permanenz (-4, Kosten 8 KaP, davon 2 gKaP, Wirkungsdauer bis die Bindung gelöst wird)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelwesen",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "8 KaP",
+    "erlernen": "Fir 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ncYynvRwdKmuGvpd",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429942,
+    "modifiedTime": 1767873429942,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ncYynvRwdKmuGvpd"
+}

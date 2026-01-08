@@ -1,0 +1,42 @@
+{
+  "name": "Weihe des Heimsteins",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heim und Herd",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du segnest einen Heimstein, der in die Unterkunft eingebaut wird. Solange sich die Bewohner in der Unterkunft befinden und an die Gesetze Travias halten, können sie die Auswirkung negativer sozialer Eigenheiten ignorieren. Außerdem bleibt die Unterkunft vor den Naturgewalten verschont. Letzteres gilt nicht, wenn die Unterkunft in einem besonders gefährdeten Gebiet errichtet wurde.\nFertigkeiten: Heim und Herd",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Stunden",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Unterkunft deutlich umgebaut wird",
+    "kosten": "16 KaP",
+    "erlernen": "Tra 8; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "uTDzuNraW1QOnrYq",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431722,
+    "modifiedTime": 1767873431722,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!uTDzuNraW1QOnrYq"
+}

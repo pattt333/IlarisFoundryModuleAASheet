@@ -1,0 +1,42 @@
+{
+  "name": "Macht des Blutes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Geister des Zorns",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel muss eine körperliche Handlung deiner Wahl ausführen. Widerspricht der Befehl dem Selbsterhaltungstrieb des Zieles, kann es mit einer <i>Konterprobe</i> (Willenskraft, 16) widerstehen. Du fügst dir beim Wirken dieses Rituals eine Wunde zu.\nFertigkeiten: Einfluss, Geister des Zorns",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Smn 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "iyROeSxt8EqMYNwF",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427413,
+    "modifiedTime": 1767873427413,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!iyROeSxt8EqMYNwF"
+}

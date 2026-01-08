@@ -1,0 +1,42 @@
+{
+  "name": "Nackedei",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Umwelt",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Sämtliche Stoffkleidung des Opfers fällt plötzlich zu Boden. Metallische Rüstung ist nicht betroffen.\nFertigkeiten: Umwelt",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Blechdose (-8; der Zauber betrifft auch Rüstungsteile aus Metall.)\nAbsatteln (-8; der Zauber betrifft auch Pferdegeschirr und Sattelgurte, wenn dein Ziel ein Reiter ist.)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Sch 12; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ja69T0YYX6qvtBJR",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426129,
+    "modifiedTime": 1767873426129,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ja69T0YYX6qvtBJR"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Sulvas Gnade",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Harmonie",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Gnade der göttlichen Stute stärkt deine Beziehung zu einem Pferd. Erstens sind Proben im Umgang mit dem Pferd sind um +4 erleichtert, Freie Fertigkeiten (wie Abrichter) zählen als eine Stufe höher. Zweitens erhältst du den Vorteil Tierempathie (S. 30) für dieses Pferd und erleidest keine Erschöpfung durch den Einsatz dieser Gabe. Besitzt du die Gabe bereits, sind damit verbundene Proben um +4 erleichtert. Die dafür nötigen Proben kannst du auch auf Harmonie statt auf Überleben ablegen.\nFertigkeiten: Harmonie",
+    "maechtig": "Erhöht den Bonus um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Tier",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "8 KaP, davon 2 gKaP",
+    "erlernen": "Rah 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "SAFvc2C6r4ALalm9",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431318,
+    "modifiedTime": 1767873431318,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!SAFvc2C6r4ALalm9"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Rhythmen der Güte",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Trommelrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Deine Rhythmen verschaffen allen Humanoiden im Radius von 4 Schritt einen erholsamen Schlaf. In ihrer nächsten Ruhepause regenerieren sie eine zusätzliche Wunde.\nFertigkeiten: Humus, Trommelrituale",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 AsP",
+    "erlernen": "Der 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "5hnWFYEP2HemhdeM",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428631,
+    "modifiedTime": 1767873428631,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5hnWFYEP2HemhdeM"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Verletzung der Miniatur",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dolchzauber, Verständigung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du fügst dir mit dem Dolch selbst eine oder mehrere Wunden zu. Das Opfer deiner Minitatur der Herrschaft (s.o.) erleidet genau so viele Wunden. Sollte das Opfer durch diese Wunden sterben, kann es eine <i>Konterprobe</i> (KO, 16) ablegen, um die Wunden abzuwehren.\nFertigkeiten: Dolchzauber, Verständigung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Miniatur der Herrschaft",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Dru 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "EhlkVl1l1Yz0u4s2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426846,
+    "modifiedTime": 1767873426846,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!EhlkVl1l1Yz0u4s2"
+}

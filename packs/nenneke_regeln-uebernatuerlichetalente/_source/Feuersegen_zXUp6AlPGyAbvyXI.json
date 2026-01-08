@@ -1,0 +1,42 @@
+{
+  "name": "Feuersegen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Feuer, Zwölfgöttlicher Ritus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eine kleine Flamme entsteht in deiner Hand. Die Flamme und ein mit ihr entzündetes Feuer wird durch Wind oder Regen nicht gelöscht.\nFertigkeiten: Heiliges Feuer, Zwölfgöttlicher Ritus",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "1 KaP",
+    "erlernen": "Ang, Ing 4; Aves, Brn, Fir, Hes, Ifi, Kor, Nan, Per, Phe, Pra, Rah, Ron, Swa, Tra, Tsa 8; Eff 12; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "zXUp6AlPGyAbvyXI",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429188,
+    "modifiedTime": 1767873429188,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!zXUp6AlPGyAbvyXI"
+}

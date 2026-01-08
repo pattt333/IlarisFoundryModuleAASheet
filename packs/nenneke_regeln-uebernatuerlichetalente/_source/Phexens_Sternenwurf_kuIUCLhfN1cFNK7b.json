@@ -1,0 +1,42 @@
+{
+  "name": "Phexens Sternenwurf",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Abu al'Mada",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst einen der Wurfsterne des Phex herbei. Dieser erleichtert die Fernkampfprobe um +4, richtet 2W20 TP an und verschwindet nach dem Wurf.\nFertigkeiten: Abu al'Mada",
+    "maechtig": "Erhöht die TP um 1W20.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelobjekt",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "16 KaP",
+    "erlernen": "Phe 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "kuIUCLhfN1cFNK7b",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430951,
+    "modifiedTime": 1767873430951,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!kuIUCLhfN1cFNK7b"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Segen der Erdgeister",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Geister der Stärkung, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du leitest das Wachstum einer Pflanze, kannst es beschleunigen und formen. Die Kosten, Zauberdauer und Modifikationen Mächtige Magie sind Meisterentscheid. Beispiele:\n4 AsP, keine Mächtige Magie, 1 Minute: Aus einem Samen wächst eine kleine Heilpflanze.\n8 AsP, 1x Mächtige Magie, eine halbe Stunde: Ein Baum trägt drei Monate zu früh Früchte.\n4 AsP, 2x Mächtige Magie, 4 Minuten: Die Rinde eines Baumes zeigt eine Botschaft;\n128 AsP, 4x Mächtige Magie, 4 Tage: Eine Baumkrone wird zu einem Baumhaus mit Möbeln, Dach und Fenstern\nFertigkeiten: Humus, Geister der Stärkung, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "nach Projekt",
+    "ziel": "Pflanze",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "nach Projekt",
+    "erlernen": "Smn 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "dHGtuCaD6yhF1yKI",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427266,
+    "modifiedTime": 1767873427266,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!dHGtuCaD6yhF1yKI"
+}

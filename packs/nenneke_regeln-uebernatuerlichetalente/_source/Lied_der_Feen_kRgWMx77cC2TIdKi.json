@@ -1,0 +1,42 @@
+{
+  "name": "Lied der Feen",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verständigung, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du rufst ein Feenwesen zur Hilfe. Befinden sich Feenwesen in einem Radius von 1 Meile, eilt eines von ihnen herbei. Du kannst das Feenwesen um einen Gefallen bitten, aber es entscheidet selbst, ob es den Gefallen erfüllt.\nFertigkeiten: Verständigung, Zaubermelodien",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Namensruf (-4; du rufst ein dir bereits bekanntes Feenwesen in einem Radius von 8 Meilen herbei.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Bard 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "kRgWMx77cC2TIdKi",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428873,
+    "modifiedTime": 1767873428873,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!kRgWMx77cC2TIdKi"
+}

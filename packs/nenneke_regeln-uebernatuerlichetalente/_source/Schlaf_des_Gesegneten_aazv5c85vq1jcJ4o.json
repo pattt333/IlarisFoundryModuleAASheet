@@ -1,0 +1,42 @@
+{
+  "name": "Schlaf des Gesegneten",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Harmonie, Heilung, Schlaf, Stiller Wanderer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel sinkt in einen tiefen Schlaf, während dem es 2 zusätzliche Wunden regeneriert.\nFertigkeiten: Harmonie, Heilung, Schlaf, Stiller Wanderer",
+    "maechtig": "Das Ziel regeneriert 1 weitere Wunde.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "4 KaP",
+    "erlernen": "Brn, Per 12; Aves, Rah 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "aazv5c85vq1jcJ4o",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429456,
+    "modifiedTime": 1767873429456,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!aazv5c85vq1jcJ4o"
+}

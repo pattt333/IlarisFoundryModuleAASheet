@@ -1,0 +1,42 @@
+{
+  "name": "Geistheilung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Geister vertreiben, Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel erhält 2W6+4 Heilpunkte, für jede Überschreitung der WS wird eine Wunde geheilt.\nFertigkeiten: Geister vertreiben, Humus",
+    "maechtig": "Erhöht die Heilpunkte um 4.",
+    "schwierigkeit": "12+Wund-Mod. des Ziels",
+    "modifikationen": "Siechtum heilen (Du stoppst die Wirkung eines Giftes oder einer Krankheit bis Stufe 16 sofort. Mächtige Magie erhöht die maximal aufgehobene Stufe um +4.)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 AsP",
+    "erlernen": "Smn 12; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "c0PsKEqvgJoYX8LZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427686,
+    "modifiedTime": 1767873427686,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!c0PsKEqvgJoYX8LZ"
+}

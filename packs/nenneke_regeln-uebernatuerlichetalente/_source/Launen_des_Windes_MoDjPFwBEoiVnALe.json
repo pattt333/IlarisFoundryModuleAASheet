@@ -1,0 +1,42 @@
+{
+  "name": "Launen des Windes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Luft, Ringrituale",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Körper wird leicht wie eine Feder, die emporschwebt und vom Wind fortgetragen wird. Du kannst die Flugrichtung nur durch das Abstoßen von Gegenständen beeinflussen. Gegen Ende der Wirkungsdauer nimmt dein Gewicht langsam wieder zu.\nFertigkeiten: Eigenschaften, Luft, Ringrituale",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Geo 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "MoDjPFwBEoiVnALe",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428278,
+    "modifiedTime": 1767873428278,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!MoDjPFwBEoiVnALe"
+}

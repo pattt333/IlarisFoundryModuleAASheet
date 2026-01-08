@@ -1,0 +1,42 @@
+{
+  "name": "Corpofrigo Kälteschock",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Eis",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du entziehst deinem Opfer die Körperwärme, bis sich sein Körper mit Raureif überzieht. Seine GS sinkt auf die Hälfte und alle Athletik-Proben zur Bewegung sind um -4 erschwert.\nFertigkeiten: Eigenschaften, Eis",
+    "maechtig": "Die GS sinkt auf ein Viertel/Achtel/Sechzehntel/Zweiunddreißigstel und der Malus steigt um -2.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelwesen",
+    "reichweite": "32 Schritt",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Ach, Dru 12; Mag 16; Alch 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "bLMiyRtQ1nP4gZQx",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424299,
+    "modifiedTime": 1767873424299,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!bLMiyRtQ1nP4gZQx"
+}

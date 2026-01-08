@@ -1,0 +1,42 @@
+{
+  "name": "Argelions Mantel",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Abu al'Mada, Magie, Magiebann",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du ignorierst bei allen auf dich gewirkten, schädlichen Zaubern zwei Stufen Mächtige Magie. Schädliche Zauber ohne Mächtige Magie haben auf dich keine Wirkung.\nFertigkeiten: Abu al'Mada, Magie, Magiebann",
+    "maechtig": "Du ignorierst eine weitere Stufe Mächtige Magie.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 KaP",
+    "erlernen": "Pra 14; Hes 16; Phe 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6aZBWg19D63saDIZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430245,
+    "modifiedTime": 1767873430245,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6aZBWg19D63saDIZ"
+}

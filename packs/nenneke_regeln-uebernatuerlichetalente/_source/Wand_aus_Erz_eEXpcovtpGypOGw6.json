@@ -1,0 +1,42 @@
+{
+  "name": "Wand aus Erz",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Erz",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Eine 3 Schritt hohe und bis zu 4 Schritt lange Wand aus massivem Erz wächst entlang einer von dir bestimmten Linie aus dem Boden. Sie verfügt über eine Härte von 32. Sie kann mit einer <i>Konterprobe</i> (Klettern, 20) in 8 Aktionen überwunden werden.\nFertigkeiten: Erz",
+    "maechtig": "Die Höhe steigt um 1 Schritt. Die Länge der Wand steigt um bis zu 2 Schritt. Die Härte der Wand steigt um 16.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Geo14; Mag 18; Dru 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "eEXpcovtpGypOGw6",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424946,
+    "modifiedTime": 1767873424946,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!eEXpcovtpGypOGw6"
+}

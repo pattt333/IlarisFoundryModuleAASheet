@@ -1,0 +1,42 @@
+{
+  "name": "Warnende Kugel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Hellsicht, Kugelzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Kugel leuchtet auf, falls sich eine feindlich gesinnte Person in weniger als 16 Schritt Entfernung befindet und ihr eine <i>Konterprobe</i> (MR, 12) misslingt.\nFertigkeiten: Hellsicht, Kugelzauber",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Kristallkugel",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "4 AsP",
+    "erlernen": "Srl 14; Mag 20; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rUJZ0tBh7WsfjBmr",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428180,
+    "modifiedTime": 1767873428180,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rUJZ0tBh7WsfjBmr"
+}

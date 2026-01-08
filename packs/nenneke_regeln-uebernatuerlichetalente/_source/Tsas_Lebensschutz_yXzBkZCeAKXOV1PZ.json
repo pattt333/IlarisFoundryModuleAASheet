@@ -1,0 +1,42 @@
+{
+  "name": "Tsas Lebensschutz",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Friede, Neubeginn",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Verstirbt der Gesegnete während der Wirkung der Liturgie, erscheint ein überraschend stabiles Ei an einem sicheren Ort in der Nähe. Nach einer Stunde schlüpft der Gesegnete aus dem Ei und erreicht innerhalb einer Woche seine ursprüngliche Größe (währenddessen Einschränkungen nach Spielleiterentscheid). Das Aussehen ähnelt seinem früheren Aussehen, kleinere Veränderungen wie eine bunte Haarsträhne sind aber wahrscheinlich. Die Wirkung der Liturgie kann nur einmal ausgelöst werden, dann endet ihre Wirkung.\nFertigkeiten: Friede, Neubeginn",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Permanenz (-8, Wirkungsdauer bis die Bindung gelöst wird, Kosten 16 KaP, davon 8 gKaP)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "16 KaP",
+    "erlernen": "Tsa 16; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yXzBkZCeAKXOV1PZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431858,
+    "modifiedTime": 1767873431858,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yXzBkZCeAKXOV1PZ"
+}

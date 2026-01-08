@@ -1,0 +1,42 @@
+{
+  "name": "Sumus Elixiere",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du stärkst ein frisch gebrautes, heilendes oder kräftigendes Elixier. Es erhält eine zusätzliche Stufe Hohe Qualität.\nFertigkeiten: Humus",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Potenzierung (-8; das Elixier muss nicht gerade frisch gebraut worden sein.)",
+    "vorbereitung": "4 Minuten",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "4 AsP",
+    "erlernen": "Geo 14; Alch, Dru 16; Hex 18; Mag 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "9cM76SBJhsrBXU4I",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425329,
+    "modifiedTime": 1767873425329,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!9cM76SBJhsrBXU4I"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Plumbumbarum schwerer Arm",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Alle AT des Ziels sind um -4 erschwert.\nFertigkeiten: Eigenschaften",
+    "maechtig": "Erhöht den Malus um -2.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Demotivation (-8; die Erschwernis wirkt auch auf Zauberproben.)",
+    "vorbereitung": "1 Aktion",
+    "ziel": "Einzelwesen",
+    "reichweite": "8 Schritt",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Mag, Dru, Geo, Hex 12; Ach, Alch, Elf, Sch 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "eCcNOxlZUUl64iQV",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424390,
+    "modifiedTime": 1767873424390,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!eCcNOxlZUUl64iQV"
+}

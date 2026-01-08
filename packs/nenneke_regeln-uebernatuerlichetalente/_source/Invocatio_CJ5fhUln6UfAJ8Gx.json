@@ -1,0 +1,42 @@
+{
+  "name": "Invocatio",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ruft einen Dämon herbei, der in deiner unmittelbaren Nähe erscheint. Schwierigkeit und Kosten richten sich nach dessen Mächtigkeit auf der Skala minder (z. B. Gotongi)/nieder (z. B. Zant)/weniggehörnt (z. B. Ulchuchu)/gehörnt (z. B. Shruuf)/vielgehörnt (z. B. Shruuf)/mächtig (z. B. Yo’Na‘Hoh). Die Beherrschungsprobe wird auf MU abgelegt. Beim Einsatz von Blutmagie ist die Beschwörungsprobe um +4 erleichtert, aber die Beherrschungsprobe um -4 erschwert. Mehr zur Beschwörungungen siehe S. 81.\nFertigkeiten: Dämonisch\nAnmerkung: Bei misslungenen Dämonenbeschwörungen kann es zu gefährlichen chaotischen Nebeneffekten kommen.\nChaotische Dämonen (optional): Dämonen sind Wesen des Chaos und oft weiß nicht einmal der Beschwörer, welche Eigenschaften das von ihm gerufene Wesen haben wird. Der Spielleiter kann dem Dämon versteckt zusätzliche Fähigkeiten verleihen entsprechend der Zufallstabelle auf S. 98.",
+    "maechtig": "",
+    "schwierigkeit": "16/20/24/28/32/36",
+    "modifikationen": "",
+    "vorbereitung": "frei wählbar",
+    "ziel": "einzelner Dämon",
+    "reichweite": "",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16/24/32/48/64/80 AsP",
+    "erlernen": "Mag 14; Bor, Hex 16; Ach, Alch, Dru 18; 120 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "CJ5fhUln6UfAJ8Gx",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873423913,
+    "modifiedTime": 1767873423913,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!CJ5fhUln6UfAJ8Gx"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Bishdariels Warnung",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Schlaf",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein Ziel wird Nacht für Nacht von der Albtraumgestalt Bishdariels heimgesucht, die Warnungen und Mahnungen überbringt. Es regeneriert in dieser Zeit nicht.\nFertigkeiten: Schlaf",
+    "maechtig": "Ab dem folgenden Tag sind alle Proben des Ziels sind um -1/-2/-3/-4 erschwert.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "dereweit",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "16 KaP",
+    "erlernen": "Brn 14; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yj111vnJfZAlIeIG",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429406,
+    "modifiedTime": 1767873429406,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yj111vnJfZAlIeIG"
+}

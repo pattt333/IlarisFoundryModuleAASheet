@@ -1,0 +1,42 @@
+{
+  "name": "Leib des Feuers",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Feuer, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du harmonierst mit dem Element Feuer. Du bist immun gegen Hitze und Feuerschaden.\nFertigkeiten: Feuer, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Reise ins Feuer (-4; du kannst dich mit 1 Schritt pro Initiativephase durch Feuer und Lava bewegen, als würdest du darin tauchen. Im Feuer brauchst du nicht zu atmen.)\nBegleiter (-4; der Zauber betrifft auch eine weitere Person, mit der du permanent Hautkontakt halten musst.)\nLeib aus Feuer (-8; Deine Kreaturenklasse wird zu \"Elementar\" mit allen entsprechenden Eigenschaften (S. 99). Du kannst während der Wirkungsdauer keine Zauber wirken.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Geo, Hex 16; Alch, Elf, Dru, Mag 20; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "R483E4SyvANZrcEZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425018,
+    "modifiedTime": 1767873425018,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!R483E4SyvANZrcEZ"
+}

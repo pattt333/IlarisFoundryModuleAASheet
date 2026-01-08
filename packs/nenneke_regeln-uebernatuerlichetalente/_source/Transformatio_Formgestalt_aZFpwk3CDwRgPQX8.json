@@ -1,0 +1,42 @@
+{
+  "name": "Transformatio Formgestalt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verwandelst dein Ziel. Die Kosten, Zauberdauer und Modifikationen Mächtige Magie sind Spielleiterentscheid. Beispiele:\n4 AsP, keine Mächtige Magie, 4 Aktionen: Du verwandelst ein Glas Wasser in Wein.\n8 AsP, 1x Mächtige Magie, 16 Aktionen: Ein Stein wird zu einem Kurzschwert.\n8 AsP, 3x Mächtige Magie, 4 Minuten: Aus einem Knäuel Kamelhaar wird ein feiner mhanadischer Teppich.\n32 AsP, 4x Mächtige Magie, 1 Stunde: Aus einem Baumstamm wird eine lebensechte Marmorstatue.\nFertigkeiten: Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Dauernde Form (-4, Wirkungsdauer 1 Woche)\nPermanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, zusätzlich ein Achtel der Basiskosten als gAsP)",
+    "vorbereitung": "nach Vorhaben",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "nach Vorhaben",
+    "erlernen": "Ach 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "aZFpwk3CDwRgPQX8",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426451,
+    "modifiedTime": 1767873426451,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!aZFpwk3CDwRgPQX8"
+}

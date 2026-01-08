@@ -1,0 +1,42 @@
+{
+  "name": "Fluch der Verwirrung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Einfluss, Geister des Zorns",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Fluch verwirrt alle Humanoide in einem Radius von 2 Schritt, denen keine MR-Gegenprobe (16) gelingt. Sie erleiden eine Erschwernis von -2 auf Proben.\nFertigkeiten: Dämonisch, Einfluss, Geister des Zorns",
+    "maechtig": "Erhöht den Malus um -1 und verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "16 Schritt",
+    "wirkungsdauer": "8 Initiativephasen",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "JjZs0DxmNBXcdTIZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427347,
+    "modifiedTime": 1767873427347,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!JjZs0DxmNBXcdTIZ"
+}

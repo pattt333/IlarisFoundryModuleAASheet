@@ -1,0 +1,42 @@
+{
+  "name": "Mirakel: Heilkunde",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Vergessen, Wildnis, Heilung, Heim und Herd, Friede",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Dein nächster Wurf auf Heilkunde ist um +4 Punkte erleichtert.",
+    "maechtig": "Erhöht die Erleichterung um +2.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "4 KaP",
+    "erlernen": "20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "TnA8lkNq8WhGrVsk",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873432215,
+    "modifiedTime": 1767873432215,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!TnA8lkNq8WhGrVsk"
+}

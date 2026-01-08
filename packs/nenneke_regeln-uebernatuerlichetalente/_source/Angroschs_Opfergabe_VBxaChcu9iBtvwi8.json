@@ -1,0 +1,42 @@
+{
+  "name": "Angroschs Opfergabe",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Erz",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst einen Gegenstand aus verarbeitetem Metall und Edelsteinen mit bis zu 8 Stein wieder mit dem Fels verschmelzen. Solche Gegenstände können nicht mehr herausgelöst werden.\nFertigkeiten: Heiliges Erz",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "2 KaP",
+    "erlernen": "Ang 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "VBxaChcu9iBtvwi8",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430530,
+    "modifiedTime": 1767873430530,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!VBxaChcu9iBtvwi8"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Abvenenum reine Speise",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du reinigst eine Mahlzeit für 10 Personen von Verfallserscheinungen, Giften und Krankheitserregern, bis zu einer Gift-/Krankheitsstufe von 20. Der Geschmack ändert sich nicht.\nFertigkeiten: Verwandlung",
+    "maechtig": "Die maximal aufgehobene Gift-/Krankheitsstufe steigt um 4.",
+    "schwierigkeit": "12",
+    "modifikationen": "Schutz vor Übelkeit (-4; auch ungefährliche, aber unangenehme Inhalte wie Salz im Meerwasser werden entfernt.)\nSchutz vor Vergiftung (-4, Wirkungsdauer 8 Stunden; du reinigst auch alles, was dem Essen hinzugefügt wird.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Einzelobjekte",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "4 AsP",
+    "erlernen": "Dru, Elf, Hex, Mag 12; Alch, Geo 14; Ach, Sch 16; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "vV8pWOvaDGcxu8U7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426316,
+    "modifiedTime": 1767873426316,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!vV8pWOvaDGcxu8U7"
+}

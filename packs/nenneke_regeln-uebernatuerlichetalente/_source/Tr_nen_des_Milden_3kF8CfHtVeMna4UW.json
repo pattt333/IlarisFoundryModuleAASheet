@@ -1,0 +1,42 @@
+{
+  "name": "Tränen des Milden",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Flüsse und Quellen",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Innerhalb des nächsten Tages regnet es auf die Felder im Radius von 1 Meile und das Saatgut kann wachsen.\nFertigkeiten: Flüsse und Quellen",
+    "maechtig": "Verdoppelt den Radius.",
+    "schwierigkeit": "12",
+    "modifikationen": "Tränen des Zürnenden (-8, 8 Aktionen, Wirkungsdauer 1 Stunde, 16 KaP; statt einem sanften Regen bricht nach 1 Minute ein heftiger Platzregen los, der Wege in Schlammpisten verwandelt und Fernkampfangriffe um -8 erschwert.)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 KaP",
+    "erlernen": "Eff 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "3kF8CfHtVeMna4UW",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429693,
+    "modifiedTime": 1767873429693,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!3kF8CfHtVeMna4UW"
+}

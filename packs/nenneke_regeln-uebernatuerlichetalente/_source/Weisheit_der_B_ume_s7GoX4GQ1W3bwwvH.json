@@ -1,0 +1,42 @@
+{
+  "name": "Weisheit der Bäume",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Humus, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verwandelst dich in einen prächtigen Baum. Während deiner Zeit als Baum verlierst du das Bewusstsein, dafür fügen dir Gifte und Krankheiten keinen Schaden zu. Erleidest du mehr als 4 Wunden, verwandelst du dich zurück.\nFertigkeiten: Humus, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Bewusst (-8; du bleibst bei Bewusstsein und kannst dich jederzeit zurückverwandeln.)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Jahr",
+    "kosten": "8 AsP",
+    "erlernen": "Geo, Dru 16; Elf 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "s7GoX4GQ1W3bwwvH",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425362,
+    "modifiedTime": 1767873425362,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!s7GoX4GQ1W3bwwvH"
+}

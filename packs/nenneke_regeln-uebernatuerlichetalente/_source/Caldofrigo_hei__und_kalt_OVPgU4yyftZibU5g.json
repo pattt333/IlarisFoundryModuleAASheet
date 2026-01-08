@@ -1,0 +1,42 @@
+{
+  "name": "Caldofrigo heiß und kalt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eis, Feuer, Umwelt, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du veränderst die Temperaturstufe (S. 35) eines Objektes um zwei Stufen.\nFertigkeiten: Eis, Feuer, Umwelt (Zone), Verwandlung",
+    "maechtig": "Du veränderst die Temperatur um eine weitere Stufe.",
+    "schwierigkeit": "12",
+    "modifikationen": "Zone (-4, selbst, 32 AsP; der Zauber betrifft einen Radius von 8 Schritt um dich herum.)\nFerne Zone (-8, Zone, 8 Schritt, 32 AsP)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "16 Minuten",
+    "kosten": "8 AsP",
+    "erlernen": "Ach, Dru, Mag 16; Alch, Geo, Srl 18; 60 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "OVPgU4yyftZibU5g",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424756,
+    "modifiedTime": 1767873424756,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!OVPgU4yyftZibU5g"
+}

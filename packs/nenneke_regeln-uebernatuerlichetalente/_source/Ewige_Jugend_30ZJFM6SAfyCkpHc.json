@@ -1,0 +1,42 @@
+{
+  "name": "Ewige Jugend",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Harmonie, Neubeginn",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Gesegnete behält Zeit seines Lebens ein jugendliches Aussehen. Frevelt der Gesegnete gegen die segenspendende Gottheit, setzt die natürliche Alterung wieder ein.\nFertigkeiten: Harmonie, Neubeginn",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Ewige Schönheit (-8, 32 KaP, Wirkungsdauer augenblicklich; verbessert das Aussehen des Gesegneten. Eine Eigenheit, die sich auf Hässlichkeit bezieht, verschwindet oder er erhält eine Eigenheit, die sich auf seine Schönheit bezieht.)",
+    "vorbereitung": "1 Tag",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "bis die Bindung gelöst wird",
+    "kosten": "16 KaP, davon 4 gKaP",
+    "erlernen": "Rah, Tsa 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "30ZJFM6SAfyCkpHc",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873431252,
+    "modifiedTime": 1767873431252,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!30ZJFM6SAfyCkpHc"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Geisterklinge",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Kraft, Geister der Stärkung, Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die verzauberte Waffe gilt während der Wirkungsdauer als magisch.\nFertigkeiten: Kraft, Geister der Stärkung, Verwandlung",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Personalisierung (-4; der Zauber wirkt nur, solange der beim Zaubern gewählte Träger die Waffe führt.)\nNamenssigille (-8; erfordert den wahren Namen eines Dämons. Wann immer der Dämon Wunden durch diese Waffe erleidet, erleidet er eine zusätzliche Wunde.)\nPermanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, 16 AsP, davon 2 gAsP)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "8 AsP",
+    "erlernen": "Smn 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "01Kk20AQ8ZyQNpv5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427157,
+    "modifiedTime": 1767873427157,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!01Kk20AQ8ZyQNpv5"
+}

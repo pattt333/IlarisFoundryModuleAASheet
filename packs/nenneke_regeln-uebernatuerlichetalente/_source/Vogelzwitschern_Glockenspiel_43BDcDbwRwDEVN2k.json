@@ -1,0 +1,42 @@
+{
+  "name": "Vogelzwitschern Glockenspiel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Ein bestimmtes Geräusch, welches das Ziel erzeugt, klingt wie ein anderes Geräusch ähnlicher Lautstärke. <i>Illusion</i> (Gehör).\nFertigkeiten: Illusion",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Orchester (-4; du kannst ein weiteres Geräusch des gleichen Zieles verändern. Mehrfach wählbar.)\nSpieluhr (-4, Einzelobjekt)\nPermanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, 8 AsP, davon 2 gAsP)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "2 Schritt",
+    "wirkungsdauer": "8 Stunden",
+    "kosten": "4 AsP",
+    "erlernen": "Srl 12; Mag 14; Sch 18; Alch 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "43BDcDbwRwDEVN2k",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873425562,
+    "modifiedTime": 1767873425562,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!43BDcDbwRwDEVN2k"
+}

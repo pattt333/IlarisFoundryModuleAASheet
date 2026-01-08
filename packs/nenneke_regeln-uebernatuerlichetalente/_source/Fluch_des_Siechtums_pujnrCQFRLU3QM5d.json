@@ -1,0 +1,42 @@
+{
+  "name": "Fluch des Siechtums",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Dämonisch, Geister des Zorns",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du infizierst dein Opfer mit einer dir bekannten Krankheit deiner Wahl, die dann ihren natürlichen Krankheitsverlauf nimmt. Die maximale Krankheitsstufe ist 16.\nFertigkeiten: Dämonisch, Geister des Zorns",
+    "maechtig": "Erhöht die maximale Krankheitsstufe um +4.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Einzelfall (-4; die Krankheit ist nicht ansteckend.)",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "16 AsP",
+    "erlernen": "Smn 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "pujnrCQFRLU3QM5d",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427391,
+    "modifiedTime": 1767873427391,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!pujnrCQFRLU3QM5d"
+}

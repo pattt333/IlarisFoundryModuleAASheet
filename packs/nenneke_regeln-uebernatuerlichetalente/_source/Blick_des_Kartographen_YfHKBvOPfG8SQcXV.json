@@ -1,0 +1,42 @@
+{
+  "name": "Blick des Kartographen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Stiller Wanderer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du kannst dir alle Landmarken, denen du während der Wirkungsdauer auf deiner Reise begegnest, perfekt einprägen. Reist du noch einmal durch die eingeprägte Region, sind Proben zur Orientierung um +4 erleichtert. Die Erinnerung verschwindet, wenn du eine Karte der Region anfertigst oder die Gelegenheit dazu verstreichen lässt.\nFertigkeiten: Stiller Wanderer\nAnmerkung: Eine mit diesem Wissen angefertigte Karte bringt einen Bonus von +2 (entsprechende Freie Fertigkeit auf erfahren) oder sogar +4 (Freie Fertigkeit auf meisterlich) auf Orientierungs-Proben in der Region.",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Woche",
+    "kosten": "4 KaP",
+    "erlernen": "Aves 12; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "YfHKBvOPfG8SQcXV",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873432019,
+    "modifiedTime": 1767873432019,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!YfHKBvOPfG8SQcXV"
+}

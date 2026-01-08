@@ -1,0 +1,42 @@
+{
+  "name": "Blick in die Flammen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Heiliges Feuer",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du erhältst grobe visionäre Einblicke in die Geschichte eines Brandes, der sich im Laufe des letzten Tages ereignet hat.\nFertigkeiten: Heiliges Feuer",
+    "maechtig": "Du erhältst einen ungefähren/guten/präzisen/vollständigen Eindruck. Spätestens dann erfährst du die Identität eines möglichen Brandstifters.",
+    "schwierigkeit": "12",
+    "modifikationen": "Vergangener Brand (-4 pro Zeitstufe; der Brand hat sich im Laufe der letzten Woche/des letzten Monats/des letzten Jahres/seit Zwergengedenken ereignet.)",
+    "vorbereitung": "16 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "8 KaP",
+    "erlernen": "Ang 12; Ing 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "cWQAwil2EVG2fXQr",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873430647,
+    "modifiedTime": 1767873430647,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!cWQAwil2EVG2fXQr"
+}

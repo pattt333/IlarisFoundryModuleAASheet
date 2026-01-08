@@ -1,0 +1,42 @@
+{
+  "name": "Zaubersiegel",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Illusion, Stabzauber",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Auf dem mit dem Stab berührten Objekt entsteht ein handtellergroßes Siegel. Diese <i>Illusion</i> (Sicht) leuchtet bei jeder weiteren Berührung mit deinem Stab auf.\nFertigkeiten: Illusion, Stabzauber",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Permanenz (-4, Wirkungsdauer bis die Bindung gelöst wird, Kosten 1 AsP, davon 1 gAsP)",
+    "vorbereitung": "0 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Monat",
+    "kosten": "1 AsP",
+    "erlernen": "Mag 18; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "MfiYGJAXv4CO0l2e",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428608,
+    "modifiedTime": 1767873428608,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!MfiYGJAXv4CO0l2e"
+}

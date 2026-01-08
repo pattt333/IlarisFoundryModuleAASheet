@@ -1,0 +1,42 @@
+{
+  "name": "Großer Geisterbann",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Antimagie, Geister vertreiben",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Hiermit bannst du beschworene Wesenheiten, in die keine gAsP geflossen sind (wie nicht gebundene Elementare und Dämonen).\nFertigkeiten: Antimagie, Geister vertreiben",
+    "maechtig": "",
+    "schwierigkeit": "Beschwörungsschwierigkeit des zu bannenden Wesens",
+    "modifikationen": "Geisterkerker (+4; das Wesen wird nicht verbannt, sondern permanent in ein Gefäß gesperrt. Wird das Gefäß geöffnet oder zerstört, ist das Wesen frei und meist sehr wütend auf den Schamanen und/oder den Befreier.)\nGebundene Geister (Probenschwierigkeit des Zaubers, Ziel Zauber, Vorbereitungszeit 1 Stunde, 2 Schritt, halbe Basiskosten des Zaubers; wirkt auch auf Zauber, zum Beispiel Artefakte oder ein permanente Flüche.)\nGeister vertreiben (Probenschwierigkeit 16 bis 28 (nach Mächtigkeit des Geistes), Vorbereitungszeit 16 Aktionen, Ziel einzelner Geist, 32 Schritt, 16 AsP; du zeichnest ein Pentagramm, durch das ein Geist deiner Wahl verschwindet. Er kann 1 Woche lang nicht mehr umherspuken. Mächtige Magie verlängert die Dauer auf 1 Monat/1 Jahr/10 Jahre/100 Jahre.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "Beschworenes Wesen",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "halbe Basiskosten der Beschwörung",
+    "erlernen": "Smn 16; 80 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "gQXZkkp2yMDmVVoZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427700,
+    "modifiedTime": 1767873427700,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!gQXZkkp2yMDmVVoZ"
+}

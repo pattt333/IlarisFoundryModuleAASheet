@@ -1,0 +1,42 @@
+{
+  "name": "Wellenlauf",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Wasser",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Wasser ist für dich ein fester Untergrund. Du erleidest keine Abzüge durch ungünstige Position und wirst nicht durch Wellen und Strömungen beeinflusst. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Eigenschaften, Wasser",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "Sinken (-4; du kannst die Zauberwirkung nach Belieben unterdrücken und wieder aktiv werden lassen. Bei Aktivierung unter Wasser wirst du an die Wasseroberfläche gehoben.)\nWasserwand (-8; du kannst selbst an Wasserfällen hochklettern, wofür einfache Klettern-Proben anfallen.)",
+    "vorbereitung": "2 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "4 Minuten",
+    "kosten": "4 AsP",
+    "erlernen": "Dru, Geo 12; Elf 14; Ach, Mag 20; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "qImydj9Bih8ZoyF6",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873424453,
+    "modifiedTime": 1767873424453,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!qImydj9Bih8ZoyF6"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Melodie der Verwirrung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Zaubermelodien",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Die Melodie verwirrt die Zuhörer in 4 Schritt Radius. Wenn ihnen eine Gegenprobe (Magieresistenz, 16) misslingt, sind alle Proben auf KL und IN um -2 erschwert, Proben auf Fertigkeiten mit KL und IN um -1. Erfordert <i>Konzentration</i>, erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Eigenschaften, Zaubermelodien",
+    "maechtig": "Der Malus steigt um -2/-1.",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Zone",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "16 Initiativephasen",
+    "kosten": "4 AsP",
+    "erlernen": "Bard 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "nT2gj71T3MGESzLq",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873428970,
+    "modifiedTime": 1767873428970,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!nT2gj71T3MGESzLq"
+}

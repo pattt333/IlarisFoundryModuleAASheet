@@ -1,0 +1,42 @@
+{
+  "name": "Tanz der Unantastbarkeit",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Zaubertänze",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Der Tanz verbessert deinen Gleichgewichtssinn und deine Körperbeherrschung. Du erhältst den Vorteil Körperbeherrschung (S. 58). Besitzt du den Vorteil bereits, erleidest du bei den ersten vier Einsätzen des Vorteils keine Erschöpfung.\nFertigkeiten: Eigenschaften, Zaubertänze",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Minuten",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "8 AsP",
+    "erlernen": "Ztz 18; 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7SD4ppwolKkAECqu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429118,
+    "modifiedTime": 1767873429118,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7SD4ppwolKkAECqu"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Weg des Windes",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Eigenschaften, Geister der Stärkung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Verdoppelt das DH* (S. 34) deines Ziels und das Intervall, in dem körperliche Anstrengung Erschöpfung verursacht. Proben, um natürliche Hindernisse zu überwinden, sind um +4 erleichtert.\nFertigkeiten: Eigenschaften, Geister der Stärkung",
+    "maechtig": "Der Bonus steigt um +2 und je zwei Stufen verdreifachen/vervierfachen das DH* und das Intervall.",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Smn 16; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Qmjwok1164mqwM30",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873427290,
+    "modifiedTime": 1767873427290,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Qmjwok1164mqwM30"
+}

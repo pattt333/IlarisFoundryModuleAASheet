@@ -1,0 +1,42 @@
+{
+  "name": "Tranksegen",
+  "type": "liturgie",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Seefahrt, Zwölfgöttlicher Ritus",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du reinigst 4 Liter Wasser von Schmutz, Fäulnis, Meersalz oder Krankheiten.\nFertigkeiten: Seefahrt, Zwölfgöttlicher Ritus",
+    "maechtig": "",
+    "schwierigkeit": "12",
+    "modifikationen": "",
+    "vorbereitung": "4 Aktionen",
+    "ziel": "Einzelobjekt",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "augenblicklich",
+    "kosten": "2 KaP",
+    "erlernen": "Eff, Swa 4; Aves, Brn, Fir, Hes, Ifi, Ing, Kor, Nan, Per, Phe, Pra, Rah, Ron, Tra, Tsa 8; 0 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "liturgie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "uccBVrrIcTqSnbRe",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429361,
+    "modifiedTime": 1767873429361,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!uccBVrrIcTqSnbRe"
+}

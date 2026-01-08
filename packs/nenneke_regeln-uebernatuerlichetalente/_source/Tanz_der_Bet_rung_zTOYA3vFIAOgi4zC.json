@@ -1,0 +1,42 @@
+{
+  "name": "Tanz der Betörung",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Einfluss, Verständigung, Zaubertänze",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Das Ziel entbrennt in heißer Leidenschaft zu dir. Auf einer Skala von abstoßend/uninteressant/neutral/begehrenswert/unwiderstehlich steigt seine Einstellung dir gegenüber um eine Stufe.\nFertigkeiten: Einfluss, Verständigung, Zaubertänze",
+    "maechtig": "",
+    "schwierigkeit": "Magieresistenz",
+    "modifikationen": "Tanz des Begehrens (-8, Zone, Wirkungsdauer 1 Stunde, alle Zuseher im Radius von 4 Schritt, denen eine <i>Konterprobe</i> (MR, 12) misslingt, entbrennen in Leidenschaft zu dir)",
+    "vorbereitung": "1 Stunde",
+    "ziel": "Einzelperson",
+    "reichweite": "4 Schritt",
+    "wirkungsdauer": "1 Tag",
+    "kosten": "8 AsP",
+    "erlernen": "Ztz 14; 20 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "zTOYA3vFIAOgi4zC",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873429101,
+    "modifiedTime": 1767873429101,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!zTOYA3vFIAOgi4zC"
+}

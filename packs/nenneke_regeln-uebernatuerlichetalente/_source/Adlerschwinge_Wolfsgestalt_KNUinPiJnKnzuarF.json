@@ -1,0 +1,42 @@
+{
+  "name": "Adlerschwinge Wolfsgestalt",
+  "type": "zauber",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "fertigkeiten": "Verwandlung",
+    "fertigkeit_ausgewaehlt": "auto",
+    "text": "Du verwandelst dich in das beim Erlernen gewählte Tier, wobei du deine geistigen Fähigkeiten behältst. Die körperlichen Fähigkeiten entsprechen denen des Tiers. Du kannst in Tiergestalt nicht zaubern. Erlaubt <i>Aufrechterhalten</i>.\nFertigkeiten: Verwandlung\nAnmerkung: Der Zauber muss für jedes Tier extra gelernt werden. Nur herausragende Verwandler können sich in Tiere verwandeln, die nicht zu den Größenklassen klein oder mittel gehören. Solche Verwandlungen sind prinzipiell um -8 erschwert. Die Lernkosten des Zaubers orientieren sich an der Tierart, wobei fliegende, giftige, sehr starke usw. Tiere teurer sind.",
+    "maechtig": "Das Tier ist ein überdurchschnittlicher/außergewöhnlicher/herausragender/einzigartiger Vertreter seiner Art, was die Werte des Tieres nach Spielleiterentscheid erhöht.",
+    "schwierigkeit": "12",
+    "modifikationen": "Seelentier (Wirkungsdauer 1 Tag, nur Elf; du kannst dich in dein Seelentier verwandeln. Dabei können die Instinkte des Tieres überhand nehmen.)",
+    "vorbereitung": "8 Aktionen",
+    "ziel": "selbst",
+    "reichweite": "Berührung",
+    "wirkungsdauer": "1 Stunde",
+    "kosten": "16 AsP",
+    "erlernen": "Elf 8; Ach, Alch, Mag 18; Dru, Hex, Srl 20; normalerweise 40 EP",
+    "pw": 0,
+    "gruppe": 0,
+    "typ": "zauber"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "KNUinPiJnKnzuarF",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767873426340,
+    "modifiedTime": 1767873426340,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!KNUinPiJnKnzuarF"
+}
