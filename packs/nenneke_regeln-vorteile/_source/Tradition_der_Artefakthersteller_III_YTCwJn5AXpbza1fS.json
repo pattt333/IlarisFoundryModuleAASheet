@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Artefakthersteller III",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut FF 8,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Artefakthersteller II",
+    "gruppe": 5,
+    "text": "Dein Verständnis für die Fluida der Magie ist so tief, dass du die Regeln ihrer Anwendung spontan verbiegen kannst, um deine Artefakte zu perfektionieren oder ihre Wirkung im entscheidenden Moment zu steigern.\n\nDu kannst die spontane Modifikation Zeit lassen, Erzwingen oder Zeremonie wählen und absofort benutzen.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "YTCwJn5AXpbza1fS",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!YTCwJn5AXpbza1fS"
+}

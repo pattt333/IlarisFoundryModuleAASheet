@@ -1,0 +1,33 @@
+{
+  "name": "Kraftvoller Kampf I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KK 4",
+    "gruppe": 3,
+    "text": "+1 Waffenschaden",
+    "sephrastoScript": "modifyKampfstil('Kraftvoller Kampf', 0, 0, 1, 0)",
+    "stilBedingungen": "einzelne Nahkampfwaffe",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "uYxp2pfSUrX47RcJ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867322743,
+    "modifiedTime": 1767867322743,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!uYxp2pfSUrX47RcJ"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Flinke Magie",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Zauberer I,Attribut IN 10",
+    "gruppe": 4,
+    "text": "Du kannst beim Wirken die Aktion Konzentration als einfache Aktion ausführen dafür kostet es dich die doppleten Basiskosten.\nSolltest du über den Vorteil Flinke Magie verfügen, verringern sich die Kosten auf das 1,5fache",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "puVLjKOyoIOhZaqQ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!puVLjKOyoIOhZaqQ"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Überlebensfertigkeiten",
+  "type": "fertigkeit",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "basis": 0,
+    "fw": 0,
+    "pw": 0,
+    "attribut_0": "GE",
+    "attribut_1": "FF",
+    "attribut_2": "KO",
+    "gruppe": 2,
+    "text": "Hierunter fallen alle Fähigkeiten, die zum Überleben in der Wildnis erforderlich sind. Du kannst dich orientieren oder einen Lagerplatz, Nahrung und Wasser finden. Außerdem bist du mit typischen Gefahren der Wildnis vertraut und kannst Fährten deuten und ihnen folgen. Die Fertigkeit ist von Nutzen, um seinen Weg zu einem gewünschten Ziel zu finden, gangbare Pässe und sichere Furten ausfindig zu machen oder eine Vorstellung zu haben, wie weit eine geplante Reise sein wird und welche Schwierigkeiten der Weg bereithält.",
+    "pwt": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "3w4CzCj801IC85kf",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788087972,
+    "modifiedTime": 1767788087972,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!3w4CzCj801IC85kf"
+}

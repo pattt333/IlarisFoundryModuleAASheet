@@ -1,0 +1,31 @@
+{
+  "name": "Stoffbearbeitung",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Dieses Talent deckt den gesamten Bereich der Verarbeitung von Stoffen und anderen fasrigen Materialien ab – vom Zurechtschneiden von für das Nähen bis hin zur Anfertigung von Kleidungsstücken und komplizierten Rüstungen.",
+    "fertigkeit": "Handwerk",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "5D0PlNlqGdJ6RtS3",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785733014,
+    "modifiedTime": 1767785733014,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5D0PlNlqGdJ6RtS3"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "WS",
+  "type": "abgeleiteter-wert",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "name": "",
+    "formel": "60 + KO*5",
+    "script": "60 + roundDown(getAttribut('KO')*5)",
+    "finalscript": "getWS() + getRS()",
+    "text": "Lebenspunktepool"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "JprrSSUMpnLtEyzg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734651,
+    "modifiedTime": 1767785734651,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!JprrSSUMpnLtEyzg"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "MR",
+  "type": "abgeleiteter-wert",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "name": "",
+    "formel": "1 je 4 MU",
+    "script": "roundDown(getAttribut('MU')/4)",
+    "finalscript": "",
+    "text": "Die Magieresistenz ist die Widerstandsfähigkeit gegen Zauberei. Die meisten Übernatürlichen Talente besitzen eine Gegenprobe, um den Effekt auch wieder abschütteln zu können. Deine Magieresistenz erleichtert diese Probe."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "kOIAI2fhollT8ftv",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734651,
+    "modifiedTime": 1767785734651,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!kOIAI2fhollT8ftv"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Hasenfuß",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 0,
+    "text": "Jede Probe auf das Fliehen ist um +4 erleichtert. Also die Athletik(Bewegung)-Probe aus dem Nahkampf und alle\nProben bei Verfolgungsjagden.\n\nVoraussetzungen: BE ohne den Vorteil Rüstungsgewöhnung maximal 1.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "1XB0MbYfXaLYegru",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!1XB0MbYfXaLYegru"
+}

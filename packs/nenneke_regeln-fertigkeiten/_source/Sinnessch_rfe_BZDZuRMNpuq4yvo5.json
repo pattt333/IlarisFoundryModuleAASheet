@@ -1,0 +1,36 @@
+{
+  "name": "Sinnesschärfe",
+  "type": "fertigkeit",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "basis": 0,
+    "fw": 0,
+    "pw": 0,
+    "attribut_0": "KL",
+    "attribut_1": "IN",
+    "attribut_2": "IN",
+    "gruppe": 2,
+    "text": "Sinnesschärfe ist die Fähigkeit, selbst kleinste Sinneseindrücke zu erfassen und richtig zu interpretieren.",
+    "pwt": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "BZDZuRMNpuq4yvo5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785731546,
+    "modifiedTime": 1767785731546,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!BZDZuRMNpuq4yvo5"
+}

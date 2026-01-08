@@ -1,0 +1,33 @@
+{
+  "name": "Hinterhältigkeit des Meuchlers",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Hinterhältiger Stoß",
+    "gruppe": 2,
+    "text": "Befindest du dich im Rücken des Gegners und führst eine Waffe mit Reichweite 0, verursachen Angriffe mit dieser Waffe SP statt TP (die Angriffe ignorieren also Rüstungsschutz)",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "c8VyxLSS2Ib2tsnf",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!c8VyxLSS2Ib2tsnf"
+}

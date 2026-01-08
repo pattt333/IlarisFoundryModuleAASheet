@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Beschwörer und Beherrscher IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut MU 10 ODER MeisterAttribut CH 10,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Beschwörer und Beherrscher III",
+    "gruppe": 5,
+    "text": "Deine Verbindung zu deinen Gefährten hat eine fast symbiotische Tiefe erreicht. Ihr Wesen ist ein Teil deiner eigenen magischen Matrix geworden. Wenn die physische Form zerbricht, bleibt der geisterhafte Abdruck in dir erhalten – ein Schmerz, den du sofort in machtvollen Gegenruf umwandeln kannst, um deinen Gefährten aus dem Nichts zurück in den Kampf zu reißen, wenn die Not am größten ist.\n\n<ul>Reserve der Seele: Die Menge an Fertigungspunkten, die du einem deiner gebundenen Wesen dauerhaft verleihen kannst, erhöht sich von 6 (Stufe II) auf 10 Punkte.</ul>\n<ul>Notfall-Wiederbeschwörung: Falls eines deiner gebundenen Wesen vernichtet wird, kannst du als Volle Aktion und für das 1,5-fache der ursprünglichen EN-Kosten sofort eine neue physische Form für es herbeirufen. Das Wesen erscheint in unmittelbarer Nähe mit allen ihm verliehenen Fertigkeiten. Die Probe wird mit der jeweiligen Fertigkeit gg. 12 gewürfelt auch, wenn die Fertigkeiten die Probe erschweren würden.</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "v4TD8kHB3xwKylZZ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!v4TD8kHB3xwKylZZ"
+}

@@ -1,0 +1,81 @@
+{
+  "name": "Willensstark II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut MU 6",
+    "gruppe": 1,
+    "text": "Deine MR steigt um 1 Punkt.\n\nDu ignorierst 2 Erschwernis durch Furcht",
+    "sephrastoScript": "modifyMR(1)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [
+    {
+      "name": "Willensstark II Effekt",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "changes": [
+        {
+          "key": "system.abgeleitete.mr",
+          "mode": 2,
+          "value": "1",
+          "priority": 20
+        }
+      ],
+      "description": "MR +1",
+      "transfer": true,
+      "flags": {
+        "ilaris": {
+          "sourceType": "vorteil"
+        }
+      },
+      "img": "icons/svg/upgrade.svg",
+      "_id": "GoNqqluNfLieAVDs",
+      "type": "base",
+      "system": {},
+      "origin": null,
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!UGiTKatW5NRzQ08C.GoNqqluNfLieAVDs"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "UGiTKatW5NRzQ08C",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867322165,
+    "modifiedTime": 1767867322165,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!UGiTKatW5NRzQ08C"
+}

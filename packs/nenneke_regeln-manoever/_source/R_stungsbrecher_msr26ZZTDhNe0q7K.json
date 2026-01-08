@@ -1,0 +1,46 @@
+{
+  "name": "Rüstungsbrecher",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Waffeneigenschaft Rüstungsbrechend",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 4,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 0,
+    "probe": "AT -4",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Der Angriff ignoriert die gegnerische Rüstung und richtet SP statt TP an.\n<i>Voraussetzung:</i> Waffeneigenschaft Rüstungsbrechend\n<b>Anmerkung:</b> Das Manöver lohnt sich, wenn der Gegner schwere Rüstung trägt oder du mehrere Wunden anrichten kannst.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "msr26ZZTDhNe0q7K",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788107972,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!msr26ZZTDhNe0q7K"
+}

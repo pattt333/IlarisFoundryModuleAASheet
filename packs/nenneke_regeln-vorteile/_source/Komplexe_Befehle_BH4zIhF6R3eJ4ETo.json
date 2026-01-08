@@ -1,0 +1,33 @@
+{
+  "name": "Komplexe Befehle",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut CH 10,Vorteil Anführer",
+    "gruppe": 2,
+    "text": "Du kannst die Aktion Kommando geben mit sich selbst kombinieren. Die Proben sind jedoch ganz normal um -4 erschwert. Du kannst deine Mistreiter dadurch von zwei unterschiedlichen Anführer-Effekten gleichzeitig profitieren lassen.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "BH4zIhF6R3eJ4ETo",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!BH4zIhF6R3eJ4ETo"
+}

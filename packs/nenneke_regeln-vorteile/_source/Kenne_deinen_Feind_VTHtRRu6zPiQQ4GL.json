@@ -1,0 +1,33 @@
+{
+  "name": "Kenne deinen Feind",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 2,
+    "text": "Du weißt im Kampf genau wie viel Schaden dein Gegner erlitten hat. Dafür ist eine freie Aktion und eine Probe Heilkunde (Wunden) gg. 24 (I) notwendig.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "VTHtRRu6zPiQQ4GL",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!VTHtRRu6zPiQQ4GL"
+}

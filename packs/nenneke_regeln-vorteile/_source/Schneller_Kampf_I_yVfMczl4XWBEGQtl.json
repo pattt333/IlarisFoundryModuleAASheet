@@ -1,0 +1,33 @@
+{
+  "name": "Schneller Kampf I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut GE 4",
+    "gruppe": 3,
+    "text": "+1 AT",
+    "sephrastoScript": "modifyKampfstil('Schneller Kampf', 1, 0, 0, 0)",
+    "stilBedingungen": "einzelne Nahkampfwaffe",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yVfMczl4XWBEGQtl",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867323066,
+    "modifiedTime": 1767867323066,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yVfMczl4XWBEGQtl"
+}

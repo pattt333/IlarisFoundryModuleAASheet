@@ -1,0 +1,48 @@
+{
+  "name": "Momentum Stören",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Parierwaffenkampf IV",
+    "input": {
+      "label": "Number",
+      "field": "NUMBER",
+      "min": 0,
+      "max": null
+    },
+    "modifications": {
+      "0": {
+        "type": "DEFENCE",
+        "value": 2,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": true
+      }
+    },
+    "gruppe": 13,
+    "probe": "VT-2X",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Nach einer erfolgreichen Parade, verringerst du die INI deines Gegners um -X bis zu seiner nächsten KR. \n\n<i>Voraussetzungen:</i> Parierwaffenkampf IV und Kampf in diesem Stil, 1KR Cooldown",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Fx7TEM1son2CF2RK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108422,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Fx7TEM1son2CF2RK"
+}

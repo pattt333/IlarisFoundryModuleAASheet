@@ -1,0 +1,33 @@
+{
+  "name": "Wurfwaffenkampf I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut FF 4",
+    "gruppe": 3,
+    "text": "+1 Waffenschaden",
+    "sephrastoScript": "modifyKampfstil('Wurfwaffenkampf', 0, 0, 1, 0)",
+    "stilBedingungen": "Fertigkeit Wurfwaffen",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "kJF79oAhckZJLPWS",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867324625,
+    "modifiedTime": 1767867324625,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!kJF79oAhckZJLPWS"
+}

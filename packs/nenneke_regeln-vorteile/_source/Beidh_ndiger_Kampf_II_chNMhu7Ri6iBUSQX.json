@@ -1,0 +1,33 @@
+{
+  "name": "Beidhändiger Kampf II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut GE 6,Vorteil Beidhändiger Kampf I",
+    "gruppe": 3,
+    "text": "+1 AT\n\nDeine zweite Waffe ignoriert die übliche Erschwernis für Nebenwaffen. Dadurch kannst du den vollen Nutzen aus zwei unterschiedlichen Waffen ziehen. Falls du dennoch zwei identische Waffen nutzt, kannst du den ersten (bzw. mit Wendigen Waffen zweiten) Passierschlag zwischen zwei INI-Phasen als Freie Reaktion ausführen.",
+    "sephrastoScript": "modifyKampfstil('Beidhändiger Kampf', 1, 0, 0, 0)",
+    "stilBedingungen": "",
+    "foundryScript": "ignoreSideWeaponMalus()"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "chNMhu7Ri6iBUSQX",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867322622,
+    "modifiedTime": 1767867322622,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!chNMhu7Ri6iBUSQX"
+}

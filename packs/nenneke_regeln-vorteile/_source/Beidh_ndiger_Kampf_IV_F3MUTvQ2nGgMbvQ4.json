@@ -1,0 +1,33 @@
+{
+  "name": "Beidhändiger Kampf IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut GE 10,Vorteil Beidhändiger Kampf III",
+    "gruppe": 3,
+    "text": "+1 AT. Erlaubt das Manöver Verbesserter Doppelangriff.",
+    "sephrastoScript": "modifyKampfstil('Beidhändiger Kampf', 1, 0, 0, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "F3MUTvQ2nGgMbvQ4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867322702,
+    "modifiedTime": 1767867322702,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!F3MUTvQ2nGgMbvQ4"
+}

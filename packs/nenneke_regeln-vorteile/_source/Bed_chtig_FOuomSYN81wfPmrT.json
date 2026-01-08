@@ -1,0 +1,33 @@
+{
+  "name": "Bedächtig",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut IN 8",
+    "gruppe": 1,
+    "text": "Du wartest in den meisten Fällen einfach ab was so passiert und zur Not bist du immer bereit deinen Verbündeten schnell zur Seite zu stehen.\n\nIn einer freien Aktion kannst du mit einer Probe IN (24,I) einem Verbündeten einen deiner Schicksalspunkte übertragen",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "FOuomSYN81wfPmrT",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!FOuomSYN81wfPmrT"
+}

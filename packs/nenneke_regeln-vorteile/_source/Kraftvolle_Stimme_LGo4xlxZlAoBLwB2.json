@@ -1,0 +1,33 @@
+{
+  "name": "Kraftvolle Stimme",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut CH 8,Vorteil Anführer",
+    "gruppe": 2,
+    "text": "Die Grundwirkungsdauer von Kommandos erhöht sich auf 4 Kampfrunden. Mit einer Stufe Hohe Qualität kann die Wirkungsdauer um 4KR erhöht werden, statt um 2.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LGo4xlxZlAoBLwB2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LGo4xlxZlAoBLwB2"
+}

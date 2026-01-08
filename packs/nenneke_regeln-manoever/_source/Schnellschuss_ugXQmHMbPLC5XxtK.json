@@ -1,0 +1,46 @@
+{
+  "name": "Schnellschuss",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Schnellziehen",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 4,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 1,
+    "probe": "FK -4",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Dieses Manöver ändert die Aktion Konzentration für diesen Fernkampfangriff zu einer einfachen Aktion, damit kann die Aktion mit anderen kombiniert werden. Man kann trotzdem noch durch Schaden unterbrochen werden!! 2KR Cooldown",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ugXQmHMbPLC5XxtK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108148,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ugXQmHMbPLC5XxtK"
+}

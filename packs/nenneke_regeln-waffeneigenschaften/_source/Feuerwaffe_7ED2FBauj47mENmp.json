@@ -1,0 +1,89 @@
+{
+  "name": "Feuerwaffe",
+  "type": "waffeneigenschaft",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "sephrastoScript": "",
+    "foundryScript": "",
+    "text": "Die Waffe verursacht bei einer 1-3 einen Patzer und bei 19-20 bereits einen Crit.",
+    "kategorie": "modifier",
+    "modifiers": {
+      "at": 0,
+      "vt": 0,
+      "schaden": 0,
+      "schadenFormula": "",
+      "rw": 0,
+      "fumbleThreshold": 3,
+      "critThreshold": 19,
+      "ignoreCover": false,
+      "ignoreArmor": false,
+      "additionalDice": 0,
+      "conditionalModifiers": []
+    },
+    "wieldingRequirements": {
+      "hands": 1,
+      "ignoreNebenMalus": false,
+      "noRider": false,
+      "requiresRider": false,
+      "penalties": {
+        "hauptOnly": {},
+        "nebenOnly": {},
+        "nebenWithoutExemption": {}
+      },
+      "condition": {
+        "type": "attribute_check",
+        "attribute": "KK",
+        "operator": "<",
+        "value": 0,
+        "onFailure": {
+          "at": 0,
+          "vt": 0,
+          "schaden": 0
+        }
+      }
+    },
+    "targetEffect": {
+      "trigger": "on_hit",
+      "resistCheck": {
+        "type": "none",
+        "attackerAttribute": "",
+        "defenderAttribute": "",
+        "attackerModifier": 0,
+        "defenderModifier": 0
+      },
+      "effect": {
+        "type": "status",
+        "statusName": "",
+        "duration": "",
+        "icon": ""
+      }
+    },
+    "actorModifiers": {
+      "modifiers": [],
+      "conditions": []
+    },
+    "customScript": "",
+    "name": "Feuerwaffe",
+    "beschreibung": "Feuerwaffen sind gefährlich für Anwender und Getroffenen"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7ED2FBauj47mENmp",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785731861,
+    "modifiedTime": 1767787417946,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7ED2FBauj47mENmp"
+}

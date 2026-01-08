@@ -1,0 +1,48 @@
+{
+  "name": "Durchbohren",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Reiterkampf IV",
+    "input": {
+      "label": "Number",
+      "field": "NUMBER",
+      "min": 0,
+      "max": null
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 1,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": true
+      }
+    },
+    "gruppe": 0,
+    "probe": "AT-X",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Deine Lanze durchbohrt deinen Gegner und reduziert seine GS für X Kampfrunden auf 0. Du verlierst dabei deine Lanze, da sie im Ziel stecken bleibt. Für das zurückgewinnen der Lanze gelten die gleichen Regeln wie für Wurfwaffen.\n\n<i>Voraussetzungen:</i> 1KR Cooldown",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "G3zhaMvLfzpLRQWg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108331,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!G3zhaMvLfzpLRQWg"
+}

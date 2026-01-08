@@ -1,0 +1,33 @@
+{
+  "name": "Körperbeherrschung",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut GE 10",
+    "gruppe": 1,
+    "text": "Du kannst Nah- oder Fernkampfangriffen, elementaren Schadenszaubern oder ähnlichen Schadensquellen mit einer GE-Gegenprobe entgehen. Der Einsatz von Körperbeherrschung wird angesagt, nachdem übliche Verteidigungsmöglichkeiten (wie eine Verteidigung) versagt haben, aber bevor der Schaden bestimmt wird. Anschließend erleidest du einen Stack Erschöpfung.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "EIQHgvyKEXF3NqEg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!EIQHgvyKEXF3NqEg"
+}

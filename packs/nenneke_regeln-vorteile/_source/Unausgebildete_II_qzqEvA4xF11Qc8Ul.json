@@ -1,0 +1,33 @@
+{
+  "name": "Unausgebildete II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut CH 8 ODER MeisterAttribut FF 8 ODER MeisterAttribut GE 8 ODER MeisterAttribut IN 8 ODER MeisterAttribut KK 8 ODER MeisterAttribut KL 8 ODER MeisterAttribut KO 8 ODER MeisterAttribut MU 4,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Unausgebildete I",
+    "gruppe": 5,
+    "text": "Mit der Zeit lernt sogar der Instinkt ein wenig Handwerk. Deine ursprünglich chaotische, unberechenbare Gabe findet eine grobe Form. Wo andere komplizierte Berechnungen und sorgfältige Gesten benötigen, vertraust du auf einen einzigen, klaren Impuls. Du ersetzt das komplexe Geflecht aus drei separaten Würfen – für Kraft, Form und Kontrolle – durch einen einzigen, entscheidenden Akt des Willens. Es ist riskanter, ungeschliffener, aber auch direkter und unmittelbarer. Deine Magie ist kein mehrstimmiger Chor mehr, sondern ein einzelner, durchdringender Schrei – und manchmal ist genau das, was gebraucht wird.\n\n<ul>Statt 3W20 kannst du 1W20 bei deinen übernatürlichen Fertigkeiten einsetzen. Dies ist vor allem bei riskanten Proben von Nutzen. </ul>\n<ul>Du musst nur 2 Eng zahlen um deine Meisterfertigkeiten zu wiederholen.</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "qzqEvA4xF11Qc8Ul",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!qzqEvA4xF11Qc8Ul"
+}

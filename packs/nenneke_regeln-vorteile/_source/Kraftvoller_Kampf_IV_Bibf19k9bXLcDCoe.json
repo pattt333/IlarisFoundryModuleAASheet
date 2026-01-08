@@ -1,0 +1,33 @@
+{
+  "name": "Kraftvoller Kampf IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut KK 10,Vorteil Kraftvoller Kampf III",
+    "gruppe": 3,
+    "text": "+1Waffenschaden. Erlaubt das Manöver Berserkerangriff.",
+    "sephrastoScript": "modifyKampfstil('Kraftvoller Kampf', 0, 0, 1, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Bibf19k9bXLcDCoe",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867322863,
+    "modifiedTime": 1767867322863,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Bibf19k9bXLcDCoe"
+}

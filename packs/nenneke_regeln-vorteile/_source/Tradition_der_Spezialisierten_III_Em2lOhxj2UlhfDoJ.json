@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Spezialisierten III",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KL 8 ODER Attribut CH 8,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Spezialisierten II",
+    "gruppe": 5,
+    "text": "Du kennst die Geheimnisse und Schwachstellen deiner Domäne so intim, dass du ihre grundlegenden Regeln an deine Bedürfnisse anpassen kannst. Du weißt, wann ein langsamer, sorgfältiger Aufbau nötig ist, wann rohes Durchsetzungsvermögen und wann die Macht der Gemeinschaft.\n\n<ul>  Du kannst die spontane Modifikation Zeit lassen, Erzwingen oder Zeremonie wählen und ab sofort benutzen.</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Em2lOhxj2UlhfDoJ",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Em2lOhxj2UlhfDoJ"
+}

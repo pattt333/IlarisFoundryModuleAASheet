@@ -1,0 +1,46 @@
+{
+  "name": "Ausfall",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Ausfall",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 2,
+        "operator": "SUBTRACT",
+        "target": "actor.system.abgeleitete.be",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 0,
+    "probe": "AT -2 -BE",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Das Ziel muss in einer Freien Reaktion bis zu 2 Schritt zurückweichen, du folgst in einer Freien Aktion. Möchte es in seiner nächsten Initiativephase einen anderen Gegner als dich angreifen, darfst du einen Passierschlag ausführen.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LvJS1dQLmgHBi7E8",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788107997,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LvJS1dQLmgHBi7E8"
+}

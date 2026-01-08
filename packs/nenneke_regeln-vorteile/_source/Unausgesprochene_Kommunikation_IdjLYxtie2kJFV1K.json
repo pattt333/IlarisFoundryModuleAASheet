@@ -1,0 +1,33 @@
+{
+  "name": "Unausgesprochene Kommunikation",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 2,
+    "text": "Durch Mimik und Gestik kannst du in einer freien Aktion so viele Informationen wie in einer vollen Aktion vermitteln. Mit diesem Vorteil kannst du 4 Worte in einer freien Aktion rufen, statt der üblichen 2 Worte.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "IdjLYxtie2kJFV1K",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!IdjLYxtie2kJFV1K"
+}

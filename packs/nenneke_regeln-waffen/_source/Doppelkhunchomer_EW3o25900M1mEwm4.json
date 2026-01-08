@@ -1,0 +1,84 @@
+{
+  "name": "Doppelkhunchomer",
+  "type": "nahkampfwaffe",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "haerte": 0,
+    "beschaedigung": 0,
+    "tp": "2W6+2",
+    "fertigkeit": "Klingenwaffen",
+    "talent": "Zweihandklingenwaffen",
+    "rw": 2,
+    "rw_mod": 0,
+    "hauptwaffe": false,
+    "nebenwaffe": false,
+    "eigenschaften": [
+      {
+        "key": "Kopflastig",
+        "parameters": []
+      },
+      {
+        "key": "Leicht",
+        "parameters": [
+          2
+        ]
+      },
+      {
+        "key": "Zweihändig",
+        "parameters": []
+      }
+    ],
+    "text": "",
+    "manoverausgleich": {
+      "value": 0,
+      "overcomplicated": true
+    },
+    "computed": {
+      "at": 0,
+      "vt": 0,
+      "fk": 0,
+      "schadenBonus": 0,
+      "rw": 0,
+      "handsRequired": 1,
+      "ignoreNebenMalus": false,
+      "noRider": false,
+      "modifiers": {
+        "at": [],
+        "vt": [],
+        "dmg": []
+      },
+      "targetEffects": [],
+      "combatMechanics": {},
+      "conditionalModifiers": [],
+      "hasActorModifiers": false
+    },
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0,
+    "gewicht": 0,
+    "preis": 0,
+    "quantity": 1,
+    "wm_at": 0,
+    "wm_vt": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "EW3o25900M1mEwm4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785732554,
+    "modifiedTime": 1767867314088,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!EW3o25900M1mEwm4"
+}

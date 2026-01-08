@@ -1,0 +1,36 @@
+{
+  "name": "Menschenkenntnis",
+  "type": "fertigkeit",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "basis": 0,
+    "fw": 0,
+    "pw": 0,
+    "attribut_0": "KL",
+    "attribut_1": "IN",
+    "attribut_2": "CH",
+    "gruppe": 3,
+    "text": "\"Glaube ich ihm?ïst eine der am häufigsten gestellten Fragen jeder Rollenspielrunde. Auch wenn Menschenkenntnis kein Lügendetektor in Fertigkeitsform ist, kann man hiermit sein Gegenüber besser einschätzen, gegebenenfalls Unwahrheiten durchschauen und sich ein Bild von den Motiven machen. Will der Karawanenführer uns in einen Hinterhalt führen, weil er gemeinsame Sache mit der Räuberbande macht? Lügt mich die Baronin an und ist sie entgegen ihrer eigenen Aussage verheiratet? Ist das Elixier des Alchimisten wirklich so gut, wie er sagt, obwohl er andauernd kichern muss?",
+    "pwt": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "BRkcxKB2VoO4UfhC",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788087957,
+    "modifiedTime": 1767788087957,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!BRkcxKB2VoO4UfhC"
+}

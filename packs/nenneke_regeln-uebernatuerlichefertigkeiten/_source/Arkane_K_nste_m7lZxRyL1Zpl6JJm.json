@@ -1,0 +1,36 @@
+{
+  "name": "Arkane Künste",
+  "type": "fertigkeit",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "basis": 0,
+    "fw": 0,
+    "pw": 0,
+    "attribut_0": "KL",
+    "attribut_1": "KL",
+    "attribut_2": "MU",
+    "gruppe": 4,
+    "text": "Die Magie ist in Aventurien zwar nicht alltäglich, aber allgegenwärtig. Daher ist es eine Wissenschaft für sich, Zauber anhand der genutzten Gesten oder beobachteten Effekte zu erkennen.",
+    "pwt": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "m7lZxRyL1Zpl6JJm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788087941,
+    "modifiedTime": 1767788087941,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!m7lZxRyL1Zpl6JJm"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Artefakthersteller I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut FF 4,Vorteil Zauberer I ODER Vorteil Geweiht I",
+    "gruppe": 5,
+    "text": "Du besitzt eine intuitive Begabung, übernatürliche Energie in physische Objekte zu binden. Deine Hände lernen die feinen Schwingungen von Magie in Materialien zu spüren, sei es beim Beschriften von Pergament, dem Mischen von Elixieren oder dem Schnitzen von Runen in Kristall. Dieser intuitive Zugang verleiht dir eine grundlegende Meisterschaft im Umgang mit magischen Gegenständen.\n\n<ul>Du kannst 3 übernatürliche Fertigkeiten wählen, auf die du Zugriff erhältst.</ul>\n<ul>Bei einer gelungenen Intensitätsprobe oder Strukturanalyseprobe steigt dein Analysegrad um 1.</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "5jyT1UFgrhBIn6qx",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5jyT1UFgrhBIn6qx"
+}

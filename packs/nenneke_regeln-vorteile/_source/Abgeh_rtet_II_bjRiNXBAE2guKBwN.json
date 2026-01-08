@@ -1,0 +1,81 @@
+{
+  "name": "Abgehärtet II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KO 6",
+    "gruppe": 1,
+    "text": "Proben zur Abwehr von Giften und Krankheiten sind um +2 erleichtert. Proben zum Abschütteln von Giften und Krankheiten können nicht Patzen.",
+    "sephrastoScript": "modifyDH(2)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [
+    {
+      "name": "Abgehärtet II Effekt",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "changes": [
+        {
+          "key": "system.abgeleitete.dh",
+          "mode": 2,
+          "value": "2",
+          "priority": 20
+        }
+      ],
+      "description": "DH +2",
+      "transfer": true,
+      "flags": {
+        "ilaris": {
+          "sourceType": "vorteil"
+        }
+      },
+      "img": "icons/svg/upgrade.svg",
+      "_id": "0q40CB0m3m9OyVNx",
+      "type": "base",
+      "system": {},
+      "origin": null,
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!bjRiNXBAE2guKBwN.0q40CB0m3m9OyVNx"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "bjRiNXBAE2guKBwN",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867321995,
+    "modifiedTime": 1767867321995,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!bjRiNXBAE2guKBwN"
+}

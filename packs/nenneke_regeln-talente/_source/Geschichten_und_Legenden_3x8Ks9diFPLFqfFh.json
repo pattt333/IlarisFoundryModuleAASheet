@@ -1,0 +1,31 @@
+{
+  "name": "Geschichten und Legenden",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Geschichten und Legenden ist das Wissen um alte Überlieferungen. Damit kannst du das Alter von Grabmälern und Artefakten bestimmen oder aus einer Sage die Vorlieben und Schwachpunkte eines Riesen ableiten.",
+    "fertigkeit": "Bildung",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "3x8Ks9diFPLFqfFh",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785733014,
+    "modifiedTime": 1767785733014,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!3x8Ks9diFPLFqfFh"
+}

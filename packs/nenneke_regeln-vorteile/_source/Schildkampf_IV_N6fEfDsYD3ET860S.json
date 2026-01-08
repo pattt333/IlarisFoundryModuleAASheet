@@ -1,0 +1,33 @@
+{
+  "name": "Schildkampf IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut KK 10,Vorteil Schildkampf III",
+    "gruppe": 3,
+    "text": "+1VT. Erlaubt das Manöver Schildwurf.",
+    "sephrastoScript": "modifyKampfstil('Schildkampf', 0, 1, 0, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "N6fEfDsYD3ET860S",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867323026,
+    "modifiedTime": 1767867323026,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!N6fEfDsYD3ET860S"
+}

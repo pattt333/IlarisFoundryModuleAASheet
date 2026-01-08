@@ -1,0 +1,33 @@
+{
+  "name": "Reiterkampf IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut GE 10 ODER MeisterAttribut KK 10,Vorteil Reiterkampf III",
+    "gruppe": 3,
+    "text": "+1AT, VT, Waffenschaden. Erlaubt das Manöver Durchbohren.",
+    "sephrastoScript": "modifyKampfstil('Reiterkampf', 1, 1, 1, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6mxIeSMCwhnBk5pq",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867323443,
+    "modifiedTime": 1767867323443,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6mxIeSMCwhnBk5pq"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Spiegelpanzer",
+  "type": "ruestung",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "haerte": 0,
+    "beschaedigung": 0,
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0,
+    "gewicht": 0,
+    "preis": 0,
+    "quantity": 1,
+    "rs": 0,
+    "be": 0,
+    "rs_beine": 2,
+    "rs_larm": 3,
+    "rs_rarm": 3,
+    "rs_bauch": 4,
+    "rs_brust": 4,
+    "rs_kopf": 0,
+    "aktiv": false,
+    "text": "Benötigt wattierte Unterkleidung."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "CqmYfFsLHuV7TQKz",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785732841,
+    "modifiedTime": 1767785732841,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!CqmYfFsLHuV7TQKz"
+}

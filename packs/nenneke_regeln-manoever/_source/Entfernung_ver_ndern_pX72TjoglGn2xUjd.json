@@ -1,0 +1,53 @@
+{
+  "name": "Entfernung verändern",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 1,
+        "operator": "SUBTRACT",
+        "target": "actor.system.abgeleitete.be",
+        "affectedByInput": false
+      },
+      "1": {
+        "type": "ATTACK",
+        "value": 1,
+        "operator": "ADD",
+        "target": "actor.system.abgeleitete.be",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 0,
+    "probe": "AT -2BE",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Dein Held kann sich aus dem Nahkampf lösen oder die Entfernung zu seinem Gegner verändern ohne Passierschläge zu erleiden. Man kommt mit diesem Manöver nur aus der Waffenreichweite seines Gegner. Danach müsste man noch weiter weglaufen.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "pX72TjoglGn2xUjd",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788107922,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!pX72TjoglGn2xUjd"
+}

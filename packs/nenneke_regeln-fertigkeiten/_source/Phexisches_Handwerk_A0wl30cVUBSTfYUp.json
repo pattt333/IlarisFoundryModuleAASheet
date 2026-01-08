@@ -1,0 +1,36 @@
+{
+  "name": "Phexisches Handwerk",
+  "type": "fertigkeit",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "basis": 0,
+    "fw": 0,
+    "pw": 0,
+    "attribut_0": "GE",
+    "attribut_1": "IN",
+    "attribut_2": "FF",
+    "gruppe": 2,
+    "text": "Die Phexischen Handwerke sind für alle Helden geeignet, die dem Herrn von List und Handel nahe sind.",
+    "pwt": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "A0wl30cVUBSTfYUp",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785731546,
+    "modifiedTime": 1767785731546,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!A0wl30cVUBSTfYUp"
+}

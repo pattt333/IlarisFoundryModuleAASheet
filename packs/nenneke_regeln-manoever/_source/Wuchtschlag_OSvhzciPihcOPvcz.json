@@ -1,0 +1,48 @@
+{
+  "name": "Wuchtschlag",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "",
+    "input": {
+      "label": "Number",
+      "field": "NUMBER",
+      "min": 0,
+      "max": null
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 1,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": true
+      }
+    },
+    "gruppe": 0,
+    "probe": "AT -X",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Der Angriff richtet X Trefferpunkte mehr an.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "OSvhzciPihcOPvcz",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788107956,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!OSvhzciPihcOPvcz"
+}

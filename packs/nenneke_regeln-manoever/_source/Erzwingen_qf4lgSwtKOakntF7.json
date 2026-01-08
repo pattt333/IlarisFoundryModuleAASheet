@@ -1,0 +1,46 @@
+{
+  "name": "Erzwingen",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Zauberer I",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 4,
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 2,
+    "probe": "Zauber +4",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Die Kosten des Zaubers steigen um die Hälfte der Basiskosten, dafür ist der Zauber um 4 Punkte erleichtert. Kann nur einmal pro Zauber eingesetzt werden.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "qf4lgSwtKOakntF7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108209,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!qf4lgSwtKOakntF7"
+}

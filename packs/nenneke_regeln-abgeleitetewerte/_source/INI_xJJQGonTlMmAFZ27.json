@@ -1,0 +1,32 @@
+{
+  "name": "INI",
+  "type": "abgeleiteter-wert",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "name": "",
+    "formel": "IN",
+    "script": "getAttribut('IN')",
+    "finalscript": "",
+    "text": "Die Initiative steht für Reaktionsgeschwindigkeit und Übersicht im Kampf. Kämpfer mit hoher Initiative können zu Beginn eines Kampfes schneller handeln und so den Erstschlag führen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "xJJQGonTlMmAFZ27",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734651,
+    "modifiedTime": 1767785734651,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!xJJQGonTlMmAFZ27"
+}

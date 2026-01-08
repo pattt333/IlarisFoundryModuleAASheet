@@ -1,0 +1,33 @@
+{
+  "name": "Länderkunde II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Länderkunde I",
+    "gruppe": 0,
+    "text": "Der Held kennt sich in einem Gebiet ganz gut aus. Sofern das entsprechende Gebiet betroffen ist, erhält der Held Erleichterungen von +2 auf Überlebensfertigkeiten und Derekunde. Alternativ kann jederzeit gegen Nachfrage allgemeines Wissen des Helden über das Gebiet vom Meister erfahren werden.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ZrVLCV168Uj2aUEM",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ZrVLCV168Uj2aUEM"
+}

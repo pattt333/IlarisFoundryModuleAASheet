@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Intuitiven I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut IN 4,Vorteil Zauberer I ODER Vorteil Geweiht I",
+    "gruppe": 5,
+    "text": "Du besitzt eine natürliche, fast symbiotische Verbindung zu den Strömen übernatürlicher Energie. Für dich ist Magie kein Werkzeug, das man greift, sondern ein Partner, mit dem man flüstert, ein Instinkt, dem man vertraut. Diese Verbindung äußert sich in kleinen, fügsamen Momenten der Klarheit und Gunst.\n\n<ul>Du kannst aus den übernatürlichen Fertigkeiten insgesamt 3 wählen, zu denen du Zugang erhalten willst. Du kannst alle Talente dieser Fertigkeiten wählen.</ul>\n<ul>Bei Proben zum Erspüren von Magie/Karmalem/Dämonischem sind die Proben um +2 erleichtert. Also bei Intensitäts- und Strukturproben oder Proben für die Vorteile Magischer Spürhund und Verseuchung erspüren. Du spürst die Anwesenheit von Magie oder Karmalen/Dämonischen in deiner näheren Umgebung und kannst grob die Richtung bestimmen (je nachdem ob Geweiht oder Zauberer).</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "HkE9QWPD8EDmKoMn",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!HkE9QWPD8EDmKoMn"
+}

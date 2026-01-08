@@ -1,0 +1,32 @@
+{
+  "name": "SchiP",
+  "type": "abgeleiteter-wert",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "name": "",
+    "formel": "4",
+    "script": "4",
+    "finalscript": "getSchiP() + ((getFinanzenIndex()-2) if getFinanzenIndex() >= 2 else -(2-getFinanzenIndex())*2)",
+    "text": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oIf92NoxJP2ojEPE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734651,
+    "modifiedTime": 1767785734651,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oIf92NoxJP2ojEPE"
+}

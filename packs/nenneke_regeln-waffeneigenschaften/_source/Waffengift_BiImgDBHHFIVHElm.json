@@ -1,0 +1,88 @@
+{
+  "name": "Waffengift",
+  "type": "waffeneigenschaft",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "sephrastoScript": "",
+    "foundryScript": "",
+    "text": "Giftstufe +4, Dauer +1 Intervall",
+    "kategorie": "modifier",
+    "modifiers": {
+      "at": 0,
+      "vt": 0,
+      "schaden": 0,
+      "schadenFormula": "",
+      "rw": 0,
+      "fumbleThreshold": null,
+      "critThreshold": null,
+      "ignoreCover": false,
+      "ignoreArmor": false,
+      "additionalDice": 0,
+      "conditionalModifiers": []
+    },
+    "wieldingRequirements": {
+      "hands": 1,
+      "ignoreNebenMalus": false,
+      "noRider": false,
+      "requiresRider": false,
+      "penalties": {
+        "hauptOnly": {},
+        "nebenOnly": {},
+        "nebenWithoutExemption": {}
+      },
+      "condition": {
+        "type": "attribute_check",
+        "attribute": "KK",
+        "operator": "<",
+        "value": 0,
+        "onFailure": {
+          "at": 0,
+          "vt": 0,
+          "schaden": 0
+        }
+      }
+    },
+    "targetEffect": {
+      "trigger": "on_hit",
+      "resistCheck": {
+        "type": "none",
+        "attackerAttribute": "",
+        "defenderAttribute": "",
+        "attackerModifier": 0,
+        "defenderModifier": 0
+      },
+      "effect": {
+        "type": "status",
+        "statusName": "",
+        "duration": "",
+        "icon": ""
+      }
+    },
+    "actorModifiers": {
+      "modifiers": [],
+      "conditions": []
+    },
+    "customScript": "",
+    "name": "Waffengift"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "BiImgDBHHFIVHElm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785731861,
+    "modifiedTime": 1767785731861,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!BiImgDBHHFIVHElm"
+}

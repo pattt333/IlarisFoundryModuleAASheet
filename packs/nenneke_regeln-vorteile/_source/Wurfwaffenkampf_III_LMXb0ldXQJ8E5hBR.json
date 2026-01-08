@@ -1,0 +1,33 @@
+{
+  "name": "Wurfwaffenkampf III",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut FF 8,Vorteil Wurfwaffenkampf II",
+    "gruppe": 3,
+    "text": "+1 Waffenschaden. Erlaubt das Manöver Eisenhagel.",
+    "sephrastoScript": "modifyKampfstil('Wurfwaffenkampf', 0, 0, 1, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LMXb0ldXQJ8E5hBR",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867324705,
+    "modifiedTime": 1767867324705,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LMXb0ldXQJ8E5hBR"
+}

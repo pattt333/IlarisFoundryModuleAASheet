@@ -1,0 +1,32 @@
+{
+  "name": "SB",
+  "type": "abgeleiteter-wert",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "name": "",
+    "formel": "1 je 4 KK",
+    "script": "roundDown(getAttribut('KK')/4)",
+    "finalscript": "",
+    "text": "Hohe Körperkraft erhöht den Waffenschaden bei allen Angriffen mit Nahkampf- und Wurfwaffen. Kopflastige Waffen profitieren sogar doppelt vom Schadensbonus."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "evyVcPBtuZ3FnTsI",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734651,
+    "modifiedTime": 1767785734651,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!evyVcPBtuZ3FnTsI"
+}

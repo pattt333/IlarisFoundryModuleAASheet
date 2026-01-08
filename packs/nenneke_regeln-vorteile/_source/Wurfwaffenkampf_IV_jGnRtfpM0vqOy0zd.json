@@ -1,0 +1,33 @@
+{
+  "name": "Wurfwaffenkampf IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut FF 10,Vorteil Wurfwaffenkampf III",
+    "gruppe": 3,
+    "text": "+1Waffenschaden. Alle Wurfwaffen erhalten die Waffeneigenschaft Kopflastig (sie profitieren also doppelt vom KKZ). Du kannst das Manöver Reichweite erhöhen ein weiteres Mal einsetzen.",
+    "sephrastoScript": "modifyKampfstil('Wurfwaffenkampf', 0, 0, 1, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "jGnRtfpM0vqOy0zd",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867324744,
+    "modifiedTime": 1767867324744,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!jGnRtfpM0vqOy0zd"
+}

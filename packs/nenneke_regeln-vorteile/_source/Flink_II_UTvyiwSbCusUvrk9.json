@@ -1,0 +1,81 @@
+{
+  "name": "Flink II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut GE 6",
+    "gruppe": 1,
+    "text": "Deine GS steigt um einen Punkt.\n\nBei Athletikproben gelten Patzer als gewöhnlich misslungen.",
+    "sephrastoScript": "modifyGS(1)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [
+    {
+      "name": "Flink II Effekt",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "changes": [
+        {
+          "key": "system.abgeleitete.gs",
+          "mode": 2,
+          "value": "1",
+          "priority": 20
+        }
+      ],
+      "description": "GS +1",
+      "transfer": true,
+      "flags": {
+        "ilaris": {
+          "sourceType": "vorteil"
+        }
+      },
+      "img": "icons/svg/upgrade.svg",
+      "_id": "0EBl28WnZVUQhXAS",
+      "type": "base",
+      "system": {},
+      "origin": null,
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!UTvyiwSbCusUvrk9.0EBl28WnZVUQhXAS"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "UTvyiwSbCusUvrk9",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867321863,
+    "modifiedTime": 1767867321863,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!UTvyiwSbCusUvrk9"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Schildkampf III",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KK 8,Vorteil Schildkampf II",
+    "gruppe": 3,
+    "text": "+1VT. \n\nDu kannst für Verbündete in GS*2 Reichweite Verteidigungen ausführen. Diese haben dabei die Chance sich zuerst zu verteidigen, falls sie sich dazu entscheiden sich nicht zu verteidigen, kannst du die Verteidigung ausführen.",
+    "sephrastoScript": "modifyKampfstil('Schildkampf', 0, 1, 0, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "9gHS1ZDExqJAN2Tb",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867322986,
+    "modifiedTime": 1767867322986,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!9gHS1ZDExqJAN2Tb"
+}

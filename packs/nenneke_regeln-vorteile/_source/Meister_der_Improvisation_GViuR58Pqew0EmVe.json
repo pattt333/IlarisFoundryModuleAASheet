@@ -1,0 +1,33 @@
+{
+  "name": "Meister der Improvisation",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut FF 8",
+    "gruppe": 1,
+    "text": "Du kannst eine weitere Stufe für die Werkstattvoraussetzung überwinden, dafür ist deine Probe aber um weitere -4 erschwert. Du kannst also Rezpte, die normalerweise\ndie beste Werkstatt brauchen auch mit der schlechtesten Werkstatt herstellen, dafür ist die Herstellungsprobe insgesamt um -8 erschwert.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "GViuR58Pqew0EmVe",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!GViuR58Pqew0EmVe"
+}

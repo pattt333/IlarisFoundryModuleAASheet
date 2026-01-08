@@ -1,0 +1,33 @@
+{
+  "name": "Schneller Kampf IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut GE 10,Vorteil Schneller Kampf III",
+    "gruppe": 3,
+    "text": "+1AT. Für jeden Angriff auf denselben Gegner (ohne Unterbrechung, es wurde also kein anderer Gegner nebenher angegriffen), erhältst Du (gegen diesen Gegner) +1AT, was sich bis zu +5AT summieren kann.",
+    "sephrastoScript": "modifyKampfstil('Schneller Kampf', 1, 0, 0, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "EXOgirhKc5vl5sm7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867323184,
+    "modifiedTime": 1767867323184,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!EXOgirhKc5vl5sm7"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Vorbereitendes Zaubern",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Zauberer I,Attribut KL 10",
+    "gruppe": 4,
+    "text": "Du kannst einen Zauber schon im voraus wirken und in Vorbereitung halten. Ein Ziel in Reichweite wird erst in einer Aktion Konflikt ausgewählt. Du kannst nur einen Zauber in Vorbereitung halten.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yiK11A8LttNdcXXe",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yiK11A8LttNdcXXe"
+}

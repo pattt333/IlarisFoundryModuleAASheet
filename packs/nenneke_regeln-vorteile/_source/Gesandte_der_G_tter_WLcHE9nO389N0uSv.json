@@ -1,0 +1,33 @@
+{
+  "name": "Gesandte der Götter",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut CH 8,Vorteil Geweiht I",
+    "gruppe": 4,
+    "text": "Alle Basiswerte des Wesens erhalten einen Bonus von +1. Du kannst durch dein Wesen sehen und Liturgien wirken, als würdest du selbst an seiner Stelle stehen.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "WLcHE9nO389N0uSv",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867325206,
+    "modifiedTime": 1767867325206,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!WLcHE9nO389N0uSv"
+}

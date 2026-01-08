@@ -1,0 +1,32 @@
+{
+  "name": "GS",
+  "type": "abgeleiteter-wert",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "name": "",
+    "formel": "4 + 1 je 4 GE",
+    "script": "4 + roundDown(getAttribut('GE')/4)",
+    "finalscript": "max(getGS() - getBE(), 1)",
+    "text": "Die Geschwindigkeit stellt die Schnelligkeit und Beweglichkeit deines Charakters dar. Sie bestimmt, wie weit er sich im Kampf bewegen kann und hilft auch bei Verfolgungsjagden zu Fuß."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ms4f8dhLleUd2qvB",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734651,
+    "modifiedTime": 1767785734651,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ms4f8dhLleUd2qvB"
+}

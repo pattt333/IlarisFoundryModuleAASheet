@@ -1,0 +1,55 @@
+{
+  "name": "Kosten sparen (M)",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Effizientes Zaubern",
+    "input": {
+      "label": "",
+      "field": "NUMBER",
+      "min": 0,
+      "max": 2
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": -4,
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
+      },
+      "1": {
+        "type": "SPECIAL_RESOURCE",
+        "value": 0.25,
+        "operator": "MULTIPLY",
+        "target": "",
+        "affectedByInput": true
+      }
+    },
+    "gruppe": 2,
+    "probe": "Zauber -4",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Die AsP-Kosten des Zaubers sinken um ein Viertel der Basiskosten. Die Kosten können dadurch nicht unter die Hälfte der Basiskosten sinken.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "3N5DcryNnWCkptJx",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108219,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!3N5DcryNnWCkptJx"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "Balläster",
+  "type": "fernkampfwaffe",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "haerte": 0,
+    "beschaedigung": 0,
+    "tp": "2W6+5",
+    "fertigkeit": "Schusswaffen",
+    "talent": "Armbrüste",
+    "rw": 32,
+    "rw_mod": 0,
+    "hauptwaffe": false,
+    "nebenwaffe": false,
+    "eigenschaften": [
+      {
+        "key": "Zweihändig",
+        "parameters": []
+      },
+      {
+        "key": "Schwer",
+        "parameters": [
+          4
+        ]
+      },
+      {
+        "key": "Schusswaffe",
+        "parameters": []
+      },
+      {
+        "key": "Kugel",
+        "parameters": []
+      }
+    ],
+    "text": "",
+    "manoverausgleich": {
+      "value": 0,
+      "overcomplicated": true
+    },
+    "computed": {
+      "at": 0,
+      "vt": 0,
+      "fk": 0,
+      "schadenBonus": 0,
+      "rw": 0,
+      "handsRequired": 1,
+      "ignoreNebenMalus": false,
+      "noRider": false,
+      "modifiers": {
+        "at": [],
+        "vt": [],
+        "dmg": []
+      },
+      "targetEffects": [],
+      "combatMechanics": {},
+      "conditionalModifiers": [],
+      "hasActorModifiers": false
+    },
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0,
+    "gewicht": 0,
+    "preis": 0,
+    "quantity": 1,
+    "wm_fk": 0,
+    "lz": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "kyjICSaxJPlNYNDH",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785732554,
+    "modifiedTime": 1767867315752,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!kyjICSaxJPlNYNDH"
+}

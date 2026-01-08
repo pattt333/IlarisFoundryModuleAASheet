@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Kampferprobten I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KO 4,Vorteil Zauberer I ODER Vorteil Geweiht I",
+    "gruppe": 5,
+    "text": "Dein Zugang zur Magie ist nicht der des Studiums oder der Hingabe, sondern der des Schlachtfeldes. Du hast gelernt, den Fokus im Auge des Sturms zu finden – den klaren, kalten Punkt, in dem der Wille schärfer wird, wenn das Blut rauscht und die Klingen singen. Deine Macht ist die des Durchhaltens, des Überwindens, des Weitermachens, wenn andere schon lange kollabiert wären. Sie ist nicht zart, sondern zäh wie Stahl.\n\nDu kannst aus den übernatürlichen Fertigkeiten insgesamt 3 wählen, zu denen du Zugang erhalten willst. Du kannst alle Talente dieser Fertigkeiten wählen.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "ZNpPYcPUCwHniIkH",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!ZNpPYcPUCwHniIkH"
+}

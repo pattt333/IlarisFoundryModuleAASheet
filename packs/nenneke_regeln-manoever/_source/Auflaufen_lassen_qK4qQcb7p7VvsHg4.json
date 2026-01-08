@@ -1,0 +1,46 @@
+{
+  "name": "Auflaufen lassen",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Auflaufen lassen",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": {
+      "0": {
+        "type": "DEFENCE",
+        "value": 4,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 13,
+    "probe": "VT -4",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Der Verteidiger fügt dem Angreifer seinen Waffenschaden plus die GS des Angreifers zu.\n<i>Voraussetzungen:</i> größere Reichweite; Gegner kombiniert die Aktionen Bewegung und Konflikt; die Bewegung muss vor dem Angriff ausgeführt werden.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "qK4qQcb7p7VvsHg4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788107965,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!qK4qQcb7p7VvsHg4"
+}

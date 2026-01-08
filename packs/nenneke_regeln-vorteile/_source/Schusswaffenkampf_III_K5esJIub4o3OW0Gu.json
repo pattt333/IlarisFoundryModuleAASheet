@@ -1,0 +1,33 @@
+{
+  "name": "Schusswaffenkampf III",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut FF 8,Vorteil Schusswaffenkampf II",
+    "gruppe": 3,
+    "text": "+1FK. Erlaubt das Manöver Scharfschuss.",
+    "sephrastoScript": "modifyKampfstil('Schusswaffenkampf', 1, 0, 0, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "K5esJIub4o3OW0Gu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867324541,
+    "modifiedTime": 1767867324541,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!K5esJIub4o3OW0Gu"
+}

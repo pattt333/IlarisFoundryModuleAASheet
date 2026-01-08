@@ -1,0 +1,36 @@
+{
+  "name": "Feuerwaffen",
+  "type": "fertigkeit",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "basis": 0,
+    "fw": 0,
+    "pw": 0,
+    "attribut_0": "FF",
+    "attribut_1": "KL",
+    "attribut_2": "IN",
+    "gruppe": 1,
+    "text": "Mit der Fertigkeit Feuerwaffen werden alle Waffen bedient, die mit Schwarzpulver funktionieren.\nTalente: Langfeuerwaffen, Kurzfeuerwaffen",
+    "pwt": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "iIUK7db3brxPhH8l",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785731546,
+    "modifiedTime": 1767785731546,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!iIUK7db3brxPhH8l"
+}

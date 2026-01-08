@@ -1,0 +1,33 @@
+{
+  "name": "Magische Angriffe",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut MU 6,Vorteil Zauberer I",
+    "gruppe": 4,
+    "text": "Waffen in deiner Hand gelten immer als magisch. Bereits magische Waffen verursachen +1W6TP gegen magisch begabte Wesen (also alles mit mind. Zauberer I).",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "F9wm4rIaNxb5TT7w",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!F9wm4rIaNxb5TT7w"
+}

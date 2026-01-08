@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Spezialisierten I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KL 4 ODER Attribut CH 4,Vorteil Zauberer I ODER Vorteil Geweiht I",
+    "gruppe": 5,
+    "text": "Du hast dich nicht breitflächig mit magischen Künsten beschäftigt, sondern eine spezifische Domäne gefunden, die zu dir spricht – sei es das Element des Feuers, die Geheimnisse des Waldes, die Täuschungen der Illusion oder ein bestimmter Aspekt deiner Gottheit. In dieser Domäne bewegst du dich mit einer intuitiven Sicherheit, die anderen fehlt.\n\n<ul>Du kannst aus den übernatürlichen Fertigkeiten insgesamt 3 wählen, zu denen du Zugang erhalten willst. Du kannst alle Talente dieser Fertigkeiten wählen.</ul>\n<ul>Domänen-Initiation: Wähle eine dieser drei Fertigkeiten als deine Hauptdomäne. Deine Verbindung zu diesem Bereich ist besonders ausgeprägt.\n<ul>Du erhältst eine dauerhafte Erleichterung von +2 auf Proben, um magische Effekte oder Phänomene deiner Hauptdomäne zu identifizieren, zu analysieren oder ihren Ursprung zu erkennen. Also bei Intensitäts- und Strukturanalysen und bei Proben auf die Vorteile Magischer Spürhund und Verseuchung erspüren. Du erkennst Magie/Wunder etc dieser Domäne automatisch.</ul>\n<ul>Du sparst bei allen übernatürlichen Talenten dieser Fertigkeit 1 Eng. Auch bis zu einem Minimum von 0 und nach Manövern wie Kosten sparen oder Erzwingen</ul>\n</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "cxIVwdvnGQxqpN6F",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!cxIVwdvnGQxqpN6F"
+}

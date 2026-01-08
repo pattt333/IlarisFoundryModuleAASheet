@@ -1,0 +1,48 @@
+{
+  "name": "Mächtige Magie",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Zauberer I",
+    "input": {
+      "label": "",
+      "field": "NUMBER",
+      "min": 0,
+      "max": null
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": -4,
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
+      }
+    },
+    "gruppe": 2,
+    "probe": "Zauber -4",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Verstärkt die Wirkung des Zaubers (siehe Zauber). Zusätzlich steigt die Schwierigkeit von <i>Konterproben</i> (S. 124) gegen den Zauber um +4 Punkte.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "CaqXc5gKUtV13cZ5",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108157,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!CaqXc5gKUtV13cZ5"
+}

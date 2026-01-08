@@ -1,0 +1,33 @@
+{
+  "name": "Tierempathie",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 0,
+    "text": "Mit der Gabe der Tierempathie kannst du ein passendes Talent der Fertigkeit Überleben verwenden, um die Gedanken von Tieren zu verstehen. Zusätzlich kannst du ihnen sogar einfache Botschaften zukommen lassen. Nach dem aktiven Einsatz der Gabe erleidest du 1 Punkt Erschöpfung.\n\nDie Kosten dieses Vorteils hängen von der Größe der Gruppe von Tieren ab, mit denen du kommunizieren kannst, und dem möglichen Spielnutzen dieser Fähigkeit. Beispiele wären:\n- Fische: Du kannst mit allen Fischen kommunizieren (20 EP).\n- Vögel: Du kannst mit allen Vögeln kommunizieren (40 EP).\n- Alle Tiere: Du kannst mit allen Tieren kommunizieren (60 EP).",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "zu7rN4s0JvCsi8D1",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!zu7rN4s0JvCsi8D1"
+}

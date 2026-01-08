@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Beschwörer und Beherrscher I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut MU 4 ODER Attribut CH 4,Vorteil Zauberer I ODER Vorteil Geweiht I",
+    "gruppe": 5,
+    "text": "Du besitzt eine natürliche Autorität über gerufene und gebundene Wesen. Dein Wille drückt sich nicht nur in Worten, sondern in einer unwiderstehlichen Präsenz aus, die Geister, Tiere und Elementare in ihren Bann zieht und gefügig macht. Diese Gabe manifestiert sich als scharfer Instinkt für die Schwächen und Bedürfnisse der von dir beherrschten Kreaturen.\n\n<ul>Du kannst aus den übernatürlichen Fertigkeiten insgesamt 3 wählen, zu denen du Zugang erhalten willst. Du kannst alle Talente dieser Fertigkeiten wählen.</ul>\n<ul>Die gebundenen Energiekosten für beschworene Wesen sind für dich um 4 Eng.</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7UQwXriTVpwDM4T7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7UQwXriTVpwDM4T7"
+}

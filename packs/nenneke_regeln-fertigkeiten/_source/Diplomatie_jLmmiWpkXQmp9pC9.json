@@ -1,0 +1,36 @@
+{
+  "name": "Diplomatie",
+  "type": "fertigkeit",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "basis": 0,
+    "fw": 0,
+    "pw": 0,
+    "attribut_0": "CH",
+    "attribut_1": "CH",
+    "attribut_2": "KL",
+    "gruppe": 0,
+    "text": "Die Fertigkeit ist dafür gedacht sich gut in der Gesellschaft zu benehmen. Der Held kennt also die nötigen Sitten und Bräuche, er kann Adelshäuser identifizieren und mit Leuten gut um Lohn und Gefangene verhandeln. Die Fertigkeit dreht darum sich sein Gegenüber auf Augenhöhe zu beeinflussen.",
+    "pwt": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "jLmmiWpkXQmp9pC9",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785731546,
+    "modifiedTime": 1767785731546,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!jLmmiWpkXQmp9pC9"
+}

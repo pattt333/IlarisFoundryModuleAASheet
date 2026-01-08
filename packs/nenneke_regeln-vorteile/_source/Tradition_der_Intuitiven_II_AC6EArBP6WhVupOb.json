@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Intuitiven II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut IN 6,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Intuitiven I",
+    "gruppe": 5,
+    "text": "Deine Bitte um Unterstützung wird erhört. Die Energie, die du rufst, bleibt dir länger treu und willig, als es anderen möglich wäre. Sie zögert den Moment des Zerfließens hinaus, als wolle sie dir gefallen.\n\n<ul>Deine übernatürlichen Talente besitzen die doppelte Wirkungsdauer.</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "AC6EArBP6WhVupOb",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!AC6EArBP6WhVupOb"
+}

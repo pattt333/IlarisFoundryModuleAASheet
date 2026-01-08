@@ -1,0 +1,33 @@
+{
+  "name": "Reiterkampf II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut GE 6 ODER Attribut KK 6,Vorteil Reiterkampf I",
+    "gruppe": 3,
+    "text": "+1 AT, VT, Waffenschaden\n\nDein Reittier ignoriert die üblichen Erschwernisse für Nebenwaffen (S. 39) und im Reiterkampf ist die BE durch Rüstungen um 1 gesenkt. Außerdem ignorierst du im Fernkampf du den Malus für berittene Schützen (S. 46).",
+    "sephrastoScript": "modifyKampfstil('Reiterkampf', 1, 1, 1, 0, -1)",
+    "stilBedingungen": "",
+    "foundryScript": "ignoreSideWeaponMalus('Reittier');ignoreMountedRangePenalty()"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oz5VbNXfD4kOnEri",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867323365,
+    "modifiedTime": 1767867323365,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oz5VbNXfD4kOnEri"
+}

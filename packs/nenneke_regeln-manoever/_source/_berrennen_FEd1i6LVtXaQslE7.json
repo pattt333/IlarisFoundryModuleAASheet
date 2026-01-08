@@ -1,0 +1,38 @@
+{
+  "name": "Überrennen",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Reiterkampf III",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": [],
+    "gruppe": 0,
+    "probe": "AT",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Das Reittier stürmt direkt in die gegnerische Formation. Seine Attacke trifft alle Gegner in seiner Bahn, bis es durch mind. 2 erfolgreiche Verteidigungen gestoppt wird. Der Angriff richtet GS Trefferpunkte zusätzlich an. \n\nDu wählst eine Richtung und bewegst dich GS Schritt in diese Richtung. \n\nDas Pferd benötigt GS Schritt Anlauf. Alle Ziele müssen in der gleichen oder einer kleineren Größenkategorie als der Reiters sein.\n\n<i>Voraussetzungen:</i> Reiterkampf III und Kampf in diesem Stil; 1KR Cooldown",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "FEd1i6LVtXaQslE7",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108081,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!FEd1i6LVtXaQslE7"
+}

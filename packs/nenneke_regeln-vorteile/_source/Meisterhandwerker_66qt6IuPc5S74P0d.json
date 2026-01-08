@@ -1,0 +1,33 @@
+{
+  "name": "Meisterhandwerker",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut FF 10",
+    "gruppe": 1,
+    "text": "Deine Hände sind Werkzeuge, die mit allem alles herstellen können was du dir vorstellst. Du ignorierst -4 Erschwernisse durch unzureichende Werkstattvoraussetzungen. Du\nkannst beim Herstellen von Gegenständen mit einer Erschwernis von -8 zwei Gegenstände mit den gleichen Materialien herstellen.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "66qt6IuPc5S74P0d",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!66qt6IuPc5S74P0d"
+}

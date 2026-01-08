@@ -1,0 +1,33 @@
+{
+  "name": "Meisterlicher Artefakthersteller",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Zauberer I ODER Vorteil Geweiht I,Attribut FF 10",
+    "gruppe": 4,
+    "text": "Artefakte kosten nur die halbe gebundene Energie. Alle bisher erstellten Artefakte erstatten die Hälfte der gebundenen Energie zurück.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "e3r3HQiAuHwcxqGw",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!e3r3HQiAuHwcxqGw"
+}

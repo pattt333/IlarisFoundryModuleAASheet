@@ -1,0 +1,33 @@
+{
+  "name": "Wächter",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 2,
+    "text": "Deine Passierschläge verringern die GS einer getroffenen Kreatur auf 0, bis zu seiner nächsten KR. Damit kann sie sich nicht mehr aus deinem Kontrollbereich bewegen und muss erneut versuchen vor dir weg zu laufen. Du kannst Passierschläge mit Basismanövern kombinieren",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "P6mFVu3RIBkV6FAu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!P6mFVu3RIBkV6FAu"
+}

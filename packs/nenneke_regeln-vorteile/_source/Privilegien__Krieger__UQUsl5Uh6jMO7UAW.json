@@ -1,0 +1,33 @@
+{
+  "name": "Privilegien (Krieger)",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 0,
+    "text": "Als Krieger/Schwertgeselle/Rondrageweihter darfst du an Turnieren teilnehmen und in Städten Waffen tragen. Diese Privilegien gelten im Mittel- und Horasreich, sowie fast überall, wo es einen anerkannten Kriegerstand gibt.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "UQUsl5Uh6jMO7UAW",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!UQUsl5Uh6jMO7UAW"
+}

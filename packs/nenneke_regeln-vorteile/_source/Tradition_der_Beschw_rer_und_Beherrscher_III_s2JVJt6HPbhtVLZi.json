@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Beschwörer und Beherrscher III",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut MU 8 ODER Attribut CH 8,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Beschwörer und Beherrscher II",
+    "gruppe": 5,
+    "text": "Dein Verständnis für die Prozesse der Beschwörung ist so tief, dass du ihre fundamentalen Parameter verschieben kannst. Du weißt, wann du Zeit opfern musst, um Macht zu horten, wann du sie mit roher Kraft erzwingen musst, und wann du Verbündete in die Zeremonie einweihen sollst, um Unmögliches zu erreichen.\n\n<ul> Du kannst die spontane Modifikation Zeit lassen, Erzwingen oder Zeremonie wählen und ab sofort benutzen.</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "s2JVJt6HPbhtVLZi",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!s2JVJt6HPbhtVLZi"
+}

@@ -1,0 +1,87 @@
+{
+  "name": "Mächtiger Astralkörper",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KO 10,Vorteil Zauberer I ODER Vorteil Geweiht I",
+    "gruppe": 4,
+    "text": "Deine Energie erhöht sich um 2*KO.",
+    "sephrastoScript": "modifyAsP(getKO()*2)\nmodifyKaP(getKO()*2)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [
+    {
+      "name": "Mächtiger Astralkörper Effekt",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "changes": [
+        {
+          "key": "system.abgeleitete.asp",
+          "mode": 2,
+          "value": "@attribute.KO.wert * 2",
+          "priority": 20
+        },
+        {
+          "key": "system.abgeleitete.kap",
+          "mode": 2,
+          "value": "@attribute.KO.wert * 2",
+          "priority": 20
+        }
+      ],
+      "description": "AsP +KO*2, KaP +KO*2",
+      "transfer": true,
+      "flags": {
+        "ilaris": {
+          "sourceType": "vorteil"
+        }
+      },
+      "img": "icons/svg/upgrade.svg",
+      "_id": "uujt4Uv6Z3vWK4Fu",
+      "type": "base",
+      "system": {},
+      "origin": null,
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!Nm8lsr40j5TpJvIG.uujt4Uv6Z3vWK4Fu"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "Nm8lsr40j5TpJvIG",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867325110,
+    "modifiedTime": 1767867325110,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!Nm8lsr40j5TpJvIG"
+}

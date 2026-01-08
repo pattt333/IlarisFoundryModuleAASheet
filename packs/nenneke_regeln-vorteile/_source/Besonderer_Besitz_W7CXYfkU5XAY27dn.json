@@ -1,0 +1,33 @@
+{
+  "name": "Besonderer Besitz",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 0,
+    "text": "Ein besonderer Gegenstand wie die 33-fach geflämmte Klinge deines ruhmreichen Großvaters oder ein heilendes Diadem befindet sich in deinem Besitz. Der Spielleiter sollte diesem Gegenstand einen gewissen Schutz gewähren; er wird nicht zufällig von einem Taschendieb gestohlen oder geht durch Pech verloren, ohne dass du ihn wieder zurückerlangen kannst. Umgekehrt darf der Charakter den Gegenstand auch nicht verkaufen.\n\nDie Kosten für einen Besonderen Besitz legt der Spielleiter fest, wobei er sich am Spielnutzen des Gegenstandes orientieren sollte. Ein Besonderer Besitz für 40 EP bringt einen willkommenen Bonus in manchen Situationen, während ein Besonderer Besitz für 160 EP in vielen Situationen entscheidend ist. Der Wert des Gegenstandes spielt hierbei keine Rolle.\n\nBeispiele für besonderen Besitz sind:\n- Schlachtross/verbesserte Waffe (+2 TP)/verbesserte Rüstung (-1 BE), Ferrara Kutsche mit Pferden (40 EP).\n- Verbesserte und magische Waffe, aufladbares Schutzartefakt mit einfachem Auslöser (80 EP).\n- Verbessertes Enduriumschwert, verbesserter Toschkrilpanzer, Reithippogriff (120 EP).\n- Bewaffnetes Handelsschiff, semipermanentes Universalschutzamulett mit intelligentem Auslöser (160 EP).",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "W7CXYfkU5XAY27dn",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!W7CXYfkU5XAY27dn"
+}

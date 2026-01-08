@@ -1,0 +1,46 @@
+{
+  "name": "Klingentanz",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Klingentanz",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": [
+      {
+        "type": "ATTACK",
+        "value": 4,
+        "operator": "SUBTRACT",
+        "affectedByInput": false,
+        "target": ""
+      }
+    ],
+    "gruppe": 0,
+    "probe": "AT -4",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Wenn der Angriff gelingt, darfst du sofort noch einmal angreifen. Dieser Folgeangriff ist nicht erschwert.\n<i>Besonderheit:</i> Bei einer Kombination von Klingentanz und Befreiungsschlag muss jedes Ziel getroffen werden, damit der Klingentanz gelingt.\n<i>Voraussetzung:</i> Kampf Vorteil Klingentanz, 1KR Cooldown",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LtVFWYjf9ggSJXVg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767785734146,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LtVFWYjf9ggSJXVg"
+}

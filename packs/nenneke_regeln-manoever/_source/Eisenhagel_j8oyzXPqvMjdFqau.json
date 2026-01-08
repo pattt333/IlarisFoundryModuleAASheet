@@ -1,0 +1,48 @@
+{
+  "name": "Eisenhagel",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Wurfwaffenkampf III",
+    "input": {
+      "label": "",
+      "field": "CHECKBOX",
+      "min": null,
+      "max": null
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 4,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 1,
+    "probe": "2xFK-4",
+    "gegenprobe": "",
+    "text": "Wirkung: Du wirfst in einer Aktion zwei Wurfwaffen. Jeder Angriff ist dabei um -4 erschwert. Das Ziel muss dabei nicht das gleiche sein. Beide Angriffe können mit eigenen Manövern versehen werden.\n\nVoraussetzungen:  nicht seit der letzten eigenen Initiativephase eingesetzt",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "j8oyzXPqvMjdFqau",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108384,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!j8oyzXPqvMjdFqau"
+}

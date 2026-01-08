@@ -1,0 +1,33 @@
+{
+  "name": "Reiterkampf I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut GE 4 ODER Attribut KK 4",
+    "gruppe": 3,
+    "text": "+1 AT, VT, Waffenschaden\n\nErlaubt das Manöver Sturmangriff mit dem Reittier.",
+    "sephrastoScript": "modifyKampfstil('Reiterkampf', 1, 1, 1, 0)",
+    "stilBedingungen": "beritten",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "boGAwXIFAuQZqnOu",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867323325,
+    "modifiedTime": 1767867323325,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!boGAwXIFAuQZqnOu"
+}

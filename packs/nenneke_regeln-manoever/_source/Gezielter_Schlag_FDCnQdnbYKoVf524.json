@@ -1,0 +1,46 @@
+{
+  "name": "Gezielter Schlag",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "",
+    "input": {
+      "label": "",
+      "field": "TREFFER_ZONE"
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 2,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 0,
+    "probe": "AT -2",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Du bestimmst, an welcher Trefferzone (S. 33) du den Gegner triffst. Nur beim Spiel mit Trefferzonen.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "FDCnQdnbYKoVf524",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767867320163,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!FDCnQdnbYKoVf524"
+}

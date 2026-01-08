@@ -1,0 +1,98 @@
+{
+  "name": "Zweihändig",
+  "type": "waffeneigenschaft",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "sephrastoScript": "",
+    "foundryScript": "",
+    "text": "Die Waffe benötigt die Führung mit beiden Händen. Bei einhändiger Führung erleidest du einen Malus von -2 und die Waffe richtet -4 TP weniger an. Zweihändige Fernkampfwaffen können nicht einhändig benutzt werden.",
+    "kategorie": "wielding",
+    "modifiers": {
+      "at": 0,
+      "vt": 0,
+      "schaden": 0,
+      "schadenFormula": "",
+      "rw": 0,
+      "fumbleThreshold": null,
+      "critThreshold": null,
+      "ignoreCover": false,
+      "ignoreArmor": false,
+      "additionalDice": 0,
+      "conditionalModifiers": []
+    },
+    "wieldingRequirements": {
+      "hands": 2,
+      "ignoreNebenMalus": false,
+      "noRider": false,
+      "requiresRider": false,
+      "penalties": {
+        "hauptOnly": {
+          "at": -2,
+          "vt": -2
+        },
+        "nebenOnly": {
+          "at": -2,
+          "vt": -2
+        },
+        "nebenWithoutExemption": {
+          "at": null,
+          "vt": null
+        }
+      },
+      "condition": {
+        "type": "attribute_check",
+        "attribute": "KK",
+        "operator": "<",
+        "value": 0,
+        "onFailure": {
+          "at": 0,
+          "vt": 0,
+          "schaden": 0
+        }
+      }
+    },
+    "targetEffect": {
+      "trigger": "on_hit",
+      "resistCheck": {
+        "type": "none",
+        "attackerAttribute": "",
+        "defenderAttribute": "",
+        "attackerModifier": 0,
+        "defenderModifier": 0
+      },
+      "effect": {
+        "type": "status",
+        "statusName": "",
+        "duration": "",
+        "icon": ""
+      }
+    },
+    "actorModifiers": {
+      "modifiers": [],
+      "conditions": []
+    },
+    "customScript": "",
+    "name": "Zweihändig",
+    "beschreibung": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yjidoxUaJYzqid24",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785731861,
+    "modifiedTime": 1767787717829,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yjidoxUaJYzqid24"
+}

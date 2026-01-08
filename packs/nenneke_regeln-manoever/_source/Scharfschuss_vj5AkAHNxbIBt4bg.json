@@ -1,0 +1,48 @@
+{
+  "name": "Scharfschuss",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Schusswaffenkampf III",
+    "input": {
+      "label": "Number",
+      "field": "NUMBER",
+      "min": null,
+      "max": null
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 1,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": true
+      }
+    },
+    "gruppe": 1,
+    "probe": "FK-X",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Der Angriff ist um -X schwerer abzuwehren.\n\n<i>Voraussetzungen:</i> nicht seit der letzten eigenen Initiativephase eingesetzt",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "vj5AkAHNxbIBt4bg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108115,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!vj5AkAHNxbIBt4bg"
+}

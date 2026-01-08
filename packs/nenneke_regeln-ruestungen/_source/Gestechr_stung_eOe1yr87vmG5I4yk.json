@@ -1,0 +1,45 @@
+{
+  "name": "Gestechrüstung",
+  "type": "ruestung",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "haerte": 0,
+    "beschaedigung": 0,
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0,
+    "gewicht": 0,
+    "preis": 0,
+    "quantity": 1,
+    "rs": 0,
+    "be": 0,
+    "rs_beine": 5,
+    "rs_larm": 5,
+    "rs_rarm": 5,
+    "rs_bauch": 5,
+    "rs_brust": 5,
+    "rs_kopf": 5,
+    "aktiv": false,
+    "text": "Sehr schwere Komplettrüstung, kann nicht ergänzt werden. Benötigt wattierte Unterkleidung. Der Helm schränkt die Wahrnehmung deutlich ein."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "eOe1yr87vmG5I4yk",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785732841,
+    "modifiedTime": 1767785732841,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!eOe1yr87vmG5I4yk"
+}

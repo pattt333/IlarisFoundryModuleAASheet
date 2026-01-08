@@ -1,0 +1,33 @@
+{
+  "name": "Adrenalinschub",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KK 10",
+    "gruppe": 1,
+    "text": "Du kannst dir eine Probe bei einer körperlichen Tätigkeit (z.B. Schmieden, Laufen, Nahkampfangriff) um +4 erleichtern. Anschließend erleidest du einen Stack Erschöpfung.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "yfMMA71p9Eyl1Dut",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!yfMMA71p9Eyl1Dut"
+}

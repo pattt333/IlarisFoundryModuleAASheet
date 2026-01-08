@@ -1,0 +1,45 @@
+{
+  "name": "Hartholzharnisch",
+  "type": "ruestung",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "haerte": 0,
+    "beschaedigung": 0,
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0,
+    "gewicht": 0,
+    "preis": 0,
+    "quantity": 1,
+    "rs": 0,
+    "be": 0,
+    "rs_beine": 1,
+    "rs_larm": 1,
+    "rs_rarm": 1,
+    "rs_bauch": 3,
+    "rs_brust": 3,
+    "rs_kopf": 0,
+    "aktiv": false,
+    "text": "Die Rüstung besteht aus maraskanischem Hartholz. Sie schützt vor Parasiten und ist feuchtigkeitsempfindlich. Benötigt wattierte Unterkleidung."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "bDuCKRIuFqZbjqls",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785732841,
+    "modifiedTime": 1767785732841,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!bDuCKRIuFqZbjqls"
+}

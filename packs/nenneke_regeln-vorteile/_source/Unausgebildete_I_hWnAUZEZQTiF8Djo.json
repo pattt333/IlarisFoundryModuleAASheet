@@ -1,0 +1,33 @@
+{
+  "name": "Unausgebildete I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut CH 4 ODER Attribut FF 4 ODER Attribut GE 4 ODER Attribut IN 4 ODER Attribut KK 4 ODER Attribut KL 4 ODER Attribut KO 4 ODER Attribut MU 4,Vorteil Zauberer I ODER Vorteil Geweiht I",
+    "gruppe": 5,
+    "text": "Dein Zugang zur übernatürlichen Welt ist nicht das Ergebnis langen Studiums, gelehrter Disziplin oder göttlicher Erwählung. Er ist ein instinktives Ding – ein Funke, der durch Zufall oder Vererbung in dir zündete, ein verstecktes Talent, das sich in Momenten der Not oder Ekstase Bahn bricht. Du hast keine Theorie, nur Praxis; kein System, nur Gefühl. Deine eigentliche Meisterschaft liegt woanders, in profanen Fähigkeiten, die du so weit verfeinert hast, dass sie selbst die Grenze zum Wunderbaren streifen. Wenn du Magie wirkt, tust du es nicht mit der Präzision eines Gelehrten, sondern mit der rohen, konzentrierten Leidenschaft des Autodidakten.\n\n<ul>Du kannst aus den übernatürlichen Fertigkeiten insgesamt 1 wählen zu der du Zugang erhalten willst. Du kannst alle Talente dieser Fertigkeit wählen.</ul>\n<ul>Du kannst ingesamt 2 profane Fertigkeiten wählen, die deine Meisterfertigkeiten darstellen. Proben dieser Fertigkeiten kannst du 1x wiederholen, wenn sie normal misslungen sind (zählt wie der Einsatz eines Schips, du kannst also die Probe nicht 2x wiederholen), wenn du 4 Eng einsetzt.</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "hWnAUZEZQTiF8Djo",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!hWnAUZEZQTiF8Djo"
+}

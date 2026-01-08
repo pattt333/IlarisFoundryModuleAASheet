@@ -1,0 +1,33 @@
+{
+  "name": "Waffenloser Kampf",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KK 6",
+    "gruppe": 2,
+    "text": "Deine unbewaffneten Angriffe erhalten die Waffeneigenschaften Kopflastig und Wendig (S. 47) und verlieren die Waffeneigenschaft Zerbrechlich",
+    "sephrastoScript": "for waffe in ['Hand', 'Fuß']:\n    addWaffeneigenschaft(waffe, 'Kopflastig')\n    addWaffeneigenschaft(waffe, 'Wendig')\n    removeWaffeneigenschaft(waffe, 'Zerbrechlich')",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "mx3aewBkQHAZ5PYA",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867322302,
+    "modifiedTime": 1767867322302,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!mx3aewBkQHAZ5PYA"
+}

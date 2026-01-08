@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Artefakthersteller II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut FF 6,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Artefakthersteller I",
+    "gruppe": 5,
+    "text": "Deine Fähigkeit, Energie zu binden, wird systematisch. Du lernst, Energie nicht nur zu verbrauchen, sondern sie dauerhaft in deinen Kreationen zu deponieren, was dir auch persönlich zugutekommt.\n\nHast du mindestens 2/4/8/16 Energie als gebundene Energie sind alle deine übernatürlichen Aktionen um +1/+2/+3/+4 erleichtert",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6i6kEQAmhYofX2w1",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6i6kEQAmhYofX2w1"
+}

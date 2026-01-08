@@ -1,0 +1,102 @@
+{
+  "name": "Jagdrohr",
+  "type": "fernkampfwaffe",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "haerte": 0,
+    "beschaedigung": 0,
+    "tp": "2W6+4",
+    "fertigkeit": "Feuerwaffen",
+    "talent": "Langfeuerwaffen",
+    "rw": 64,
+    "rw_mod": 0,
+    "hauptwaffe": false,
+    "nebenwaffe": false,
+    "eigenschaften": [
+      {
+        "key": "Feuerwaffe",
+        "parameters": []
+      },
+      {
+        "key": "Zweihändig",
+        "parameters": []
+      },
+      {
+        "key": "Ladezeit",
+        "parameters": []
+      },
+      {
+        "key": "Kugel",
+        "parameters": []
+      },
+      {
+        "key": "Rüstungsbrechend",
+        "parameters": []
+      },
+      {
+        "key": "Schwer",
+        "parameters": [
+          4
+        ]
+      },
+      {
+        "key": "Scharfschuss",
+        "parameters": [
+          4
+        ]
+      }
+    ],
+    "text": "",
+    "manoverausgleich": {
+      "value": 0,
+      "overcomplicated": true
+    },
+    "computed": {
+      "at": 0,
+      "vt": 0,
+      "fk": 0,
+      "schadenBonus": 0,
+      "rw": 0,
+      "handsRequired": 1,
+      "ignoreNebenMalus": false,
+      "noRider": false,
+      "modifiers": {
+        "at": [],
+        "vt": [],
+        "dmg": []
+      },
+      "targetEffects": [],
+      "combatMechanics": {},
+      "conditionalModifiers": [],
+      "hasActorModifiers": false
+    },
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0,
+    "gewicht": 0,
+    "preis": 0,
+    "quantity": 1,
+    "wm_fk": 1,
+    "lz": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "pLgwa0pMZeKerbZ2",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785732554,
+    "modifiedTime": 1767867317527,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!pLgwa0pMZeKerbZ2"
+}

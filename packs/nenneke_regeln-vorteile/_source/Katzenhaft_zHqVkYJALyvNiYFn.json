@@ -1,0 +1,33 @@
+{
+  "name": "Katzenhaft",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut GE 8",
+    "gruppe": 1,
+    "text": "Du kannst -2 Erschwernisse durch unsicheren Untergrund ignorieren und gegen den Schaden aus Stürzen, Zusammenstößen usw. kann die halbe GE als Rüstungsschutz verwendet werden.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "zHqVkYJALyvNiYFn",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!zHqVkYJALyvNiYFn"
+}

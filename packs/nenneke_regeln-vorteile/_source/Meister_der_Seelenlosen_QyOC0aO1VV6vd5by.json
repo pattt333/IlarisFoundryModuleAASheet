@@ -1,0 +1,33 @@
+{
+  "name": "Meister der Seelenlosen",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Zauberer I,Attribut MU 8",
+    "gruppe": 4,
+    "text": "Wenn du und dein Wesen in einer KR jeweils eine einfache Aktion ausführen, also du praktisch einfache Aktionen kombinierst, sind die Aktionen nicht um -4 erschwert wie sonst.\nDarüber hinaus kosten alle Aktionen des Wesens -2 Eng.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "QyOC0aO1VV6vd5by",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!QyOC0aO1VV6vd5by"
+}

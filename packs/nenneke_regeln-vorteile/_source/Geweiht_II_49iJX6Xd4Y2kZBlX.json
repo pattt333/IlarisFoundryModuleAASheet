@@ -1,0 +1,81 @@
+{
+  "name": "Geweiht II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Geweiht I",
+    "gruppe": 0,
+    "text": "Du verfügst über 16 Karmapunkte und kannst kirchliche Traditionen erlernen.",
+    "sephrastoScript": "modifyKaPBasis(8)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [
+    {
+      "name": "Geweiht II Effekt",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "changes": [
+        {
+          "key": "system.abgeleitete.kap",
+          "mode": 2,
+          "value": "8",
+          "priority": 20
+        }
+      ],
+      "description": "KaP +8",
+      "transfer": true,
+      "flags": {
+        "ilaris": {
+          "sourceType": "vorteil"
+        }
+      },
+      "img": "icons/svg/upgrade.svg",
+      "_id": "S4iVn14Ny1pj4fwa",
+      "type": "base",
+      "system": {},
+      "origin": null,
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!49iJX6Xd4Y2kZBlX.S4iVn14Ny1pj4fwa"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "49iJX6Xd4Y2kZBlX",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867321022,
+    "modifiedTime": 1767867321022,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!49iJX6Xd4Y2kZBlX"
+}

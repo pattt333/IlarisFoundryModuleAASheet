@@ -1,0 +1,33 @@
+{
+  "name": "Improvisieren, Anpassen, Überwinden",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Meister improvisierter Waffen",
+    "gruppe": 2,
+    "text": "Improvisierte Waffen haben eine WM von 1/0 und +1 TP. Schilde haben 0/1. Jede einhändige improvisierte Waffe, hat die Waffeneigenschaft Fernkampfoption und kann mit dem Talent kurze Wurfwaffen geworfen werden.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "0x06X2qdydLVrM3e",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!0x06X2qdydLVrM3e"
+}

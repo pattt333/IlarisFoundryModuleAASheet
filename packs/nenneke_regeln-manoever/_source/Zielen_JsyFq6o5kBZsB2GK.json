@@ -1,0 +1,46 @@
+{
+  "name": "Zielen",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": [
+      {
+        "type": "ATTACK",
+        "value": 2,
+        "operator": "ADD",
+        "affectedByInput": false,
+        "target": ""
+      }
+    ],
+    "gruppe": 1,
+    "probe": "FK +2",
+    "gegenprobe": "",
+    "text": "Verringert die INI um -2. Kann nur einmal pro Angriff eingesetzt werden. Der Vorteil Ruhige Hand verdoppelt den Bonus.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "JsyFq6o5kBZsB2GK",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767785734146,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!JsyFq6o5kBZsB2GK"
+}

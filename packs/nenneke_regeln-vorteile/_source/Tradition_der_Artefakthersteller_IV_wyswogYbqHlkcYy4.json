@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Artefakthersteller IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut FF 6,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Artefakthersteller III",
+    "gruppe": 5,
+    "text": "Du bist ein Meister der gebundenen Magie. Die Energie in deinen Artefakten und in dir selbst reagiert wie ein gut geöltes Uhrwerk auf deinen Willen, sodass komplexe Verstärkungen zum Kinderspiel werden.\n\nArtefakt-Notfallreserve: Wenn du einen magischen Gegenstand verwendest, der keine Ladungen/Verwendungen mehr hat, kannst du ihn einmalig durch pure Willenskraft aktivieren (Probe auf die jeweilige übernatürliche Fertigkeit ( 16,I)). Danach ist der Gegenstand für 1W6 Tage völlig unbrauchbar oder bis zum Ende des Abenteuers, was früher Eintritt.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wyswogYbqHlkcYy4",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wyswogYbqHlkcYy4"
+}

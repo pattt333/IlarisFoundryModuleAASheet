@@ -1,0 +1,36 @@
+{
+  "name": "Straßenkunde",
+  "type": "fertigkeit",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "basis": 0,
+    "fw": 0,
+    "pw": 0,
+    "attribut_0": "KL",
+    "attribut_1": "IN",
+    "attribut_2": "CH",
+    "gruppe": 0,
+    "text": "Die Fertigkeit ist dafür gedacht sich in einer Stadt zurechtzufinden oder die nötigen Personen ausfindig zu machen.",
+    "pwt": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "LmMEMQff63nsuwYs",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767788087969,
+    "modifiedTime": 1767788087969,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!LmMEMQff63nsuwYs"
+}

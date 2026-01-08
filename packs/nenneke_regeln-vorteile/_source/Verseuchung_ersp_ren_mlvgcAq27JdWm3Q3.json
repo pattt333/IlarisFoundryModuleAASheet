@@ -1,0 +1,33 @@
+{
+  "name": "Verseuchung erspüren",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut MU 4,Vorteil Geweiht I",
+    "gruppe": 4,
+    "text": "Mit einer Probe Sinnesschärfe (16) kannst du die Anwesenheit, Stärke und grobe Richtung von Dämonischer Verseuchung oder dunkler Magie (grundsätzlich Magie der Fertigkeit Dämonisch, vllt aber auch Magie, die mit fremd Blut gewirkt wurde) erfahren.\nHohe Qualität hat folgende Auswirkungen:\n<table>\n<tr>\n<th>Hohe Qualität</th>\n<th>Informationen</th>\n</tr>\n<tr>\n<td>0</td>\n<td> Anwesenheit, Stärke und grobe Richtung</td>\n</tr>\n<tr>\n<td>1</td>\n<td>Bei Anwesenheit von verschiedener Dämonischer Verseuchung oder Magie kannst du einzelne Anstralstränge aus machen</td>\n</tr>\n<tr>\n<td>2</td>\n<td>Wie mächtig ist die Magie/Verseuchung?</td>\n</tr>\n<tr>\n<td>3</td>\n<td>Woher kommt die Magie/Verseuchung? Wird sie durch einen Zauberer, Lebenskraft, dämonisches Wirken oder Kraftlinien gespeist?</td>\n</tr>\n</table>\n\nDu kannst mit Stufen Hohe Qualität auch die Reichweite des Vorteils erhöhen. (Sollte fair gehandhabt werden)",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "mlvgcAq27JdWm3Q3",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!mlvgcAq27JdWm3Q3"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "RS",
+  "type": "abgeleiteter-wert",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "name": "",
+    "formel": "",
+    "script": "getRüstungRS(0) if rüstungenCount() > 0 else 0",
+    "finalscript": "",
+    "text": "Der Rüstungsschutz erhöht die Wundschwelle entscheidend, wodurch dein Charakter seltener Wunden und Wundschmerz erleidet."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "hjTbjmWGKZUcYLFi",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734651,
+    "modifiedTime": 1767785734651,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!hjTbjmWGKZUcYLFi"
+}

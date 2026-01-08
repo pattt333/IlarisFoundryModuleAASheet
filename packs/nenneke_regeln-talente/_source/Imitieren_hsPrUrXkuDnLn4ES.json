@@ -1,0 +1,31 @@
+{
+  "name": "Imitieren",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "In einigen Situationen kann es ratsam sein, als jemand anderes zu erscheinen. Vielleicht will ein von der Garde gesuchter Abenteurer als Bettler das Stadttor passieren oder ein Hochstapler als Grafensohn getarnt auf einem Bankett auftreten, um unbemerkt ein Diadem stehlen zu können. Um die Täuschung aufrechtzuerhalten, muss dem Helden eine Probe auf Verkleiden gelingen. Verkleiden umfasst aber nicht nur die Verkleidung an sich, sondern auch notwendige Gesten, Mimik und Stimme.",
+    "fertigkeit": "Beeinflussung",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "hsPrUrXkuDnLn4ES",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785733014,
+    "modifiedTime": 1767785733014,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!hsPrUrXkuDnLn4ES"
+}

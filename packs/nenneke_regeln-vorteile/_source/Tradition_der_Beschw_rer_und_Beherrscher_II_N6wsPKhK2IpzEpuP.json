@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Beschwörer und Beherrscher II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut MU 6 ODER Attribut CH 6,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Beschwörer und Beherrscher I",
+    "gruppe": 5,
+    "text": "Deine Herrschaft wird zur Formung. Du kannst deinem Willen nicht nur Gehorsam entlocken, sondern ihm Gestalt verleihen, indem du dein Wissen und deine Absicht in das gerufene Wesen projizierst. Es wird nicht nur ein Diener, sondern ein spezialisiertes Werkzeug deines Geistes.\n\n<ul> Der Held kann beschworenen Wesen zusätzliche Fertigkeiten im Wert von 4 Punkten verleihen.</ul>",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "N6wsPKhK2IpzEpuP",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!N6wsPKhK2IpzEpuP"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Falschspiel",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Falschsspieler helfen dem Glück etwas nach, zum Beispiel beim Hütchenspiel oder Boltan. Proben auf Falschspielen werden oft vergleichend gegen die Wachsamkeit der Mitspieler abgelegt.",
+    "fertigkeit": "Phexisches Handwerk",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rgMlgGauBoTRv9jO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785733014,
+    "modifiedTime": 1767785733014,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rgMlgGauBoTRv9jO"
+}

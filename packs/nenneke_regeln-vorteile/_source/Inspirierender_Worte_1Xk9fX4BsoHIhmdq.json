@@ -1,0 +1,33 @@
+{
+  "name": "Inspirierender Worte",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Anführer",
+    "gruppe": 2,
+    "text": "Du kannst den Effekt deiner Kommandos mit maximal einer Stufen Hoher Qualität um 1 Stufe erhöhen, also statt +1AT +2AT oder statt +2TP +4TP, usw.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "1Xk9fX4BsoHIhmdq",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!1Xk9fX4BsoHIhmdq"
+}

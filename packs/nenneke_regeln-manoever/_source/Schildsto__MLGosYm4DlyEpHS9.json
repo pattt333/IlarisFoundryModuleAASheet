@@ -1,0 +1,48 @@
+{
+  "name": "Schildstoß",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Schildstoß",
+    "input": {
+      "label": "Number",
+      "field": "NUMBER",
+      "min": 0,
+      "max": null
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": 2,
+        "operator": "SUBTRACT",
+        "target": "",
+        "affectedByInput": true
+      }
+    },
+    "gruppe": 0,
+    "probe": "AT-2X",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Du führst einen Stoß mit deinem Schild gegen deinen Gegner aus. Er wird X Schritt zurückgedrängt. Dein Gegner muss sich in der gleichen oder einer kleineren Größenkategorie befinden (Spieler haben die Größenkategorie Mittel). Dein Ziel kann sich dadruch durch Kontrollzonen bewegen.\n\nDas Manöver senkt den Schaden des Angriffes auf 0. Sollte der Angriff ohnehin keinen Schaden anrichten – etwa durch andere Manöver – ist das Manöver nicht möglich.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "MLGosYm4DlyEpHS9",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108431,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!MLGosYm4DlyEpHS9"
+}

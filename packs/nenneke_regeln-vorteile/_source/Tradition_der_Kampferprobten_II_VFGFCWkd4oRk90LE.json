@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Kampferprobten II",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KO 6,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Kampferprobten I",
+    "gruppe": 5,
+    "text": "Dein Geist hat gelernt, Schmerz in Brennstoff zu verwandeln. Jeder schneidende Atemzug, jeder pochende Schmerz wird nicht zur Ablenkung, sondern zum Ankerpunkt deiner Konzentration. Du ziehst dich in die Festung deines Willens zurück, deren Mauern aus eigener Entschlossenheit und der rohen Energie deiner Wunden errichtet sind. Was andere lähmt, spornt dich an; deine Magie wird zu einem Kriegsschrei, der umso mächtiger ertönt, je mehr du blutest.\n\nDer Wundabzug schränkt dich beim Wirken von übernatürlichen Fertigkeiten nicht ein.\n\nDu erhälst den halben Wundabzug als Erleichterung für Proben auf übernatürliche Talente (Wundabzug). Kannst du den Wundabzug ohnehin ignorieren, sind deine übernatürlichen Aktionen um den vollen Wundabzug erleichtert.\n\nDu erhälst standardmäßig also den Wundabzug + Wundabzug/2 als Erleichterung für deine übernatürlichen Talente. Falls du Wundabzüge durch andere Effekte ignorieren kannst, erhälst du den vollen Wundabzug als Bonus zusätzlich zum Ausgleichsbonus.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "VFGFCWkd4oRk90LE",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!VFGFCWkd4oRk90LE"
+}

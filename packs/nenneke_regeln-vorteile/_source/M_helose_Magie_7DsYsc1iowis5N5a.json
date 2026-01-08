@@ -1,0 +1,33 @@
+{
+  "name": "Mühelose Magie",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Zauberer I,Attribut IN 8",
+    "gruppe": 4,
+    "text": "Zeigt der gewertete Würfel bei einem Zauber eine 16 oder höher, erhält der Zauber eine zusätzliche Stufe Mächtige Magie. Außerdem erhältst du die Hälfte der AsP zurück, die du für den Zauber bezahlt hast.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "7DsYsc1iowis5N5a",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!7DsYsc1iowis5N5a"
+}

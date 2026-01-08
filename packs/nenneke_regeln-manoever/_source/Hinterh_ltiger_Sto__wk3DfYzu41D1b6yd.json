@@ -1,0 +1,46 @@
+{
+  "name": "Hinterhältiger Stoß",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Hinterhältiger Stoß",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": -2,
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 0,
+    "probe": "Verbergen -2",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Du führst einen Angriff (-2) mit Phexisches Handwerk (Verbergen) gegen die Sinnesschärfe (Warhnehmen) deines Gegners aus. \n\nDer Angriff zählt immer als in Kampfgetümmel. \n\n<i>Voraussetzungen:</i> Waffe mit Reichweite 0,  2KR Cooldown, Vorteil Unehrenhafter Kampf",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wk3DfYzu41D1b6yd",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108348,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wk3DfYzu41D1b6yd"
+}

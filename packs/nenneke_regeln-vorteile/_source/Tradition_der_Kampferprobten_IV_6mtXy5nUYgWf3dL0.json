@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Kampferprobten IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut KO 10,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Kampferprobten III",
+    "gruppe": 5,
+    "text": "Du bist zum wahren Schlachtfeld-Asketen geworden. Dein Körper ist nur noch ein Kanal, durch den dein ungebrochener Wille und die explosive Energie deiner Verwundungen fließen. Schmerz existiert nicht mehr als Empfindung, sondern nur noch als reine, messbare Macht. Jede Wunde öffnet ein Tor zu einer tieferen, wilderen Schicht deiner Kraft. In diesem Zustand grenzt deine Magie an Raserei – sie ist kein gezielter Schuss mehr, sondern ein Breitseitenfeuer, gespeist vom eigenen Lebensfunken.\n\nDer Effekt von Kampf II wird verbessert.\nDu erhältst den vollen Wundabzug als Erleichterung für deine übernatürlichen Talente (Damit wird der Wundabzug ausglichen und du erhältst den vollen Wundabzug als Bonus). Kannst du durch andere Effekte Wundabzüge bereits ignorieren, erhälst du den doppelten Wundabzug als Bonus für übernatürliche Talente.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "6mtXy5nUYgWf3dL0",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!6mtXy5nUYgWf3dL0"
+}

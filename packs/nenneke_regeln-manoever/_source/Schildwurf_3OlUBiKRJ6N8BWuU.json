@@ -1,0 +1,40 @@
+{
+  "name": "Schildwurf",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Schildkampf IV",
+    "input": {
+      "label": "",
+      "field": "CHECKBOX",
+      "min": 0,
+      "max": null
+    },
+    "modifications": [],
+    "gruppe": 0,
+    "probe": "AT",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Verwende einen Schildangriff als Fernkampf-Angriff (RW 4 Schritt). Kann mit allen verfügbaren Fern- und Nahkampfbasismanövern kombiniert werden.\n\n<i>Voraussetzungen:</i> Schildkampf IV und Kampf in diesem Stil; 1KR Cooldown",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "3OlUBiKRJ6N8BWuU",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767867320563,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!3OlUBiKRJ6N8BWuU"
+}

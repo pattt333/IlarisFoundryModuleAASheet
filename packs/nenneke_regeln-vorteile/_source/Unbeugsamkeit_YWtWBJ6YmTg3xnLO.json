@@ -1,0 +1,33 @@
+{
+  "name": "Unbeugsamkeit",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut MU 10",
+    "gruppe": 1,
+    "text": "Deine MR steigt um MU/4 Punkte.\n\nStatt mit dem angegeben Talent kannst du Effekte durch Zauber/Liturigen/Anrufungen einfach mit einer MU-Probe abschütteln. Die Proben können nicht patzen.",
+    "sephrastoScript": "modifyMR(round(getMU()/4))",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "YWtWBJ6YmTg3xnLO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867322214,
+    "modifiedTime": 1767867322214,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!YWtWBJ6YmTg3xnLO"
+}

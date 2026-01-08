@@ -1,0 +1,38 @@
+{
+  "name": "Einmannarmee",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Einmannarmee",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": [],
+    "gruppe": 0,
+    "probe": "AT",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Mit diesem Manöver kannst du statt zu würfeln auch deinen maximalen Waffenschaden anrichten. Nach Einsatz dieses Vorteils erhältst du einen Stack Erschöpfung. Nur für Nahkampfangriffe. \n\nDu bekommst den Stack auch wenn dein Angriff misslingt.",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "BzDQ4pzojpwzOs5Z",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108415,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!BzDQ4pzojpwzOs5Z"
+}

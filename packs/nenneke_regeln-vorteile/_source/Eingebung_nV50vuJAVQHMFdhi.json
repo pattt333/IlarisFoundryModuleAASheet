@@ -1,0 +1,33 @@
+{
+  "name": "Eingebung",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KL 10",
+    "gruppe": 1,
+    "text": "Bei Proben für Ermittlungen, einer Informationssuche, in der Forschung oder zum Erinnern würfelst du einen W6, das Ergebnis wird als Hohe Qualität auf deine Probe gerechnet.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "nV50vuJAVQHMFdhi",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!nV50vuJAVQHMFdhi"
+}

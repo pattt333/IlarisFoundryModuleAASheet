@@ -1,0 +1,33 @@
+{
+  "name": "Aura der Heiligkeit",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut CH 6,Vorteil Geweiht I",
+    "gruppe": 4,
+    "text": "Aktionen von beschworenen Wesen kosten nur die Hälfte der angegebenen Energie Kosten. Bis zu einem Minimum von 0.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "NLg3SKklI16mtR7v",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!NLg3SKklI16mtR7v"
+}

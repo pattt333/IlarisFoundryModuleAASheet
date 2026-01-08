@@ -1,0 +1,33 @@
+{
+  "name": "Zuverlässiges Wunder",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut IN 6,Vorteil Geweiht I",
+    "gruppe": 4,
+    "text": "Die Erleichterung durch ein Mirakel erhöht sich um +2. Patzer bei Mirakeln zählen nur als misslungene Proben.\n\nDu kannst aus den profanen Fertigkeiten eine zusätzliche Fertigkeit für Mirakel wählen.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "jYwv0tuqEx4M1ZKg",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767788109739,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!jYwv0tuqEx4M1ZKg"
+}

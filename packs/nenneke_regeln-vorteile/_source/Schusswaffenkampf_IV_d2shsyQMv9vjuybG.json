@@ -1,0 +1,33 @@
+{
+  "name": "Schusswaffenkampf IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut FF 10,Vorteil Schusswaffenkampf III",
+    "gruppe": 3,
+    "text": "+1FK. Entfernt die Waffeneigenschaft Schusswaffen. Die Patzerchance wird also wieder um 1 reduziert (auf minimal 1).",
+    "sephrastoScript": "modifyKampfstil('Schusswaffenkampf', 1, 0, 0, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "d2shsyQMv9vjuybG",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867324586,
+    "modifiedTime": 1767867324586,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!d2shsyQMv9vjuybG"
+}

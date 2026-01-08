@@ -1,0 +1,46 @@
+{
+  "name": "Berserkerangriff",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Kraftvoller Kampf IV",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": {
+      "0": {
+        "type": "WEAPON_DAMAGE",
+        "value": 4,
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
+      }
+    },
+    "gruppe": 0,
+    "probe": "",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Du führst einen kraftvollen Angriff aus und lässt dabei deine Verteidigung schleifen. Dein Waffenschaden erhöht sich um 4TP, dafür reduziert sich deine VW um -4. Das Manöver beginnt mit dem eigenen Angriff und gilt bis zur eigenen nächsten Initiativephase.\n\n<i>Voraussetzungen:</i> Kraftvoller Kampf IV und Kampf in diesem Stil, 1KR Cooldown",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "i5SJ7O1tYdDBL3qb",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108322,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!i5SJ7O1tYdDBL3qb"
+}

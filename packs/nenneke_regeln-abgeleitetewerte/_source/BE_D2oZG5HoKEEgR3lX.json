@@ -1,0 +1,32 @@
+{
+  "name": "BE",
+  "type": "abgeleiteter-wert",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "name": "",
+    "formel": "",
+    "script": "getRüstungBE(0) if rüstungenCount() > 0 else 0",
+    "finalscript": "",
+    "text": "Rüstung schränkt die Beweglichkeit ein, was durch die Behinderung dargestellt wird. Normalerweise ist die Behinderung gleich hoch wie der Rüstungsschutz. Jeder Punkt Behinderung erschwert Kampfwürfe um -1, senkt die GS um -1 (bis minimal 1) und das Durchhaltevermögen um -2 (bis minimal 1, S. 34). Proben auf die Fertigkeit Athletik und GE sind nach Spielleiterentscheid um -2 (Reiten in schwierigem Gelände) bis -16 (Schwimmen in schwerer Rüstung) erschwert."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "D2oZG5HoKEEgR3lX",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734651,
+    "modifiedTime": 1767785734651,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!D2oZG5HoKEEgR3lX"
+}

@@ -1,0 +1,81 @@
+{
+  "name": "Gefäß der Sterne",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Zauberer I,Attribut CH 8",
+    "gruppe": 4,
+    "text": "Deine maximale Astralenergie steigt um 4 + CH Punkte. Solltest du nach dem Erwerb dieses Vorteils dein CH erhöhen, erhöht das auch deine Astralenergie.",
+    "sephrastoScript": "modifyAsP(getCH() + 4)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [
+    {
+      "name": "Gefäß der Sterne Effekt",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "changes": [
+        {
+          "key": "system.abgeleitete.asp",
+          "mode": 2,
+          "value": "@attribute.CH.wert  +  4",
+          "priority": 20
+        }
+      ],
+      "description": "AsP +CH+4",
+      "transfer": true,
+      "flags": {
+        "ilaris": {
+          "sourceType": "vorteil"
+        }
+      },
+      "img": "icons/svg/upgrade.svg",
+      "_id": "42NN1SwaOLayyZZH",
+      "type": "base",
+      "system": {},
+      "origin": null,
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!GnQzuVNjfD1PCHTm.42NN1SwaOLayyZZH"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "GnQzuVNjfD1PCHTm",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867323485,
+    "modifiedTime": 1767867323485,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!GnQzuVNjfD1PCHTm"
+}

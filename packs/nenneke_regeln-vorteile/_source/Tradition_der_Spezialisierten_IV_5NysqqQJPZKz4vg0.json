@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Spezialisierten IV",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "MeisterAttribut KL 10 ODER MeisterAttribut CH 10,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Spezialisierten III",
+    "gruppe": 5,
+    "text": "Du bist ein wahrer Archon deiner Domäne. In ihrem Bereich agierst du nicht mehr nur als Anwender, sondern als souveräne Autorität. Dein Wille formt die Energie mit solcher Leichtigkeit und Präzision, dass Verstärkungen, die andere anstrengen würden, für dich zur mühelosen Geste werden.\n\nDu kannst eine dir zur Verfügung stehende, weitere, übernatürliche Fertigkeit wählen. Wenn du ein Talent mit dieser verwendest, kannst du eine Basismodifikation (z.B. 1x Mächtige Magie) ohne Erschwernis ausführen. Diese erhält auch die Vorteile aus dem Vorteil Tradition der Spezialisierten I und II.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "5NysqqQJPZKz4vg0",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!5NysqqQJPZKz4vg0"
+}

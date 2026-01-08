@@ -1,0 +1,33 @@
+{
+  "name": "Verbindungen",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 0,
+    "text": "Du hast einen guten Draht zu einer bestimmten Organisation oder Person, die dir üblicherweise freundlich gegenübersteht. Außerdem gelten passende Verbindungen als Werkzeug für Recherchen und viele andere Tätigkeiten. Du kannst Verbindungen zu mehreren Organisationen und Personen haben. Die Kosten deiner Verbindungen legt der Spielleiter fest, wobei er sich an der Macht und dem Einflussbereich der Verbindungen orientieren sollte.\n\nBeispiele für Verbindungen sind:\n- Örtlicher Baron: Starker lokaler Einfluss mit geringem Einflussbereich (20 EP).\n- Badilakaner: Geringer Einfluss in weiten Teilen des zwölfgöttergläubigen Aventuriens (20 EP).\n- Efferdbrüder: Ansehnlicher Einfluss in Hafenstädten des zwölfgöttergläubigen Aventuriens (40 EP).\n- Haus Gareth: Immenser Einfluss im Mittelreich, weitreichende Beziehungen in ganz Aventurien (80 EP).",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "4lYPAGmbHaQZlsF0",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!4lYPAGmbHaQZlsF0"
+}

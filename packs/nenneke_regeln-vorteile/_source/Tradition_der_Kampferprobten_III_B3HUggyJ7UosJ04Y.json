@@ -1,0 +1,33 @@
+{
+  "name": "Tradition der Kampferprobten III",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut KO 8,Vorteil Zauberer I ODER Vorteil Geweiht I,Vorteil Tradition der Kampferprobten II",
+    "gruppe": 5,
+    "text": "Auf dem Schlachtfeld gibt es nur den richtigen Moment. Du hast die Disziplin erlangt, die Parameter deiner Macht den Erfordernissen des Kampfes unterzuordnen. Du weißt instinktiv, wann du Zeit opfern musst, um einen mächtigen, andauernden Effekt zu weben, wann du sie mit roher Willenskraft in einen sofortigen, vernichtenden Schlag erzwingen musst, und wann du die verbündeten Willen deiner Kameraden zu einer einzigen, zeremoniellen Waffe bündeln musst.\n\n    Du kannst die spontane Modifikation Zeit lassen, Erzwingen oder Zeremonie wählen und ab sofort benutzen.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "B3HUggyJ7UosJ04Y",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!B3HUggyJ7UosJ04Y"
+}

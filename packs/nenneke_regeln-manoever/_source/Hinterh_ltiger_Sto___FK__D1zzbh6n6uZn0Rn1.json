@@ -1,0 +1,46 @@
+{
+  "name": "Hinterhältiger Stoß (FK)",
+  "type": "manoever",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzungen": "Vorteil Ein Messer in jeder Tasche",
+    "input": {
+      "label": "Checkbox",
+      "field": "CHECKBOX"
+    },
+    "modifications": {
+      "0": {
+        "type": "ATTACK",
+        "value": -2,
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": false
+      }
+    },
+    "gruppe": 1,
+    "probe": "Verbergen -2",
+    "gegenprobe": "",
+    "text": "<i>Wirkung:</i> Du führst einen Angriff (-2) mit Phexisches Handwerk (Verbergen) gegen die Sinnesschärfe (Warhnehmen) deines Gegners aus. \n\nDer Angriff zählt immer als in Kampfgetümmel. \n\n<i>Voraussetzungen:</i> 2KR Cooldown",
+    "isBaseManoever": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "D1zzbh6n6uZn0Rn1",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734146,
+    "modifiedTime": 1767788108455,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!D1zzbh6n6uZn0Rn1"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Beidhändiger Kampf III",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut GE 8,Vorteil Beidhändiger Kampf II",
+    "gruppe": 3,
+    "text": "+1 AT\n\nErlaubt das Manöver Doppelangriff.",
+    "sephrastoScript": "modifyKampfstil('Beidhändiger Kampf', 1, 0, 0, 0)",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "wb7Y0zwViwFymz7O",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767867322662,
+    "modifiedTime": 1767867322662,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!wb7Y0zwViwFymz7O"
+}

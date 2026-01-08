@@ -1,0 +1,33 @@
+{
+  "name": "Empathie",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Attribut IN 10",
+    "gruppe": 1,
+    "text": "Bei einer Rast als Rast-Talent kannst du mit einer Probe auf Menschenkenntnis(Beruhigen,20,I) alle deine Gefährten beruhigen und inspirieren, bis zur nächsten Rast oder dem\nEnde des Abenteuer (was früher eintritt), können deine Gefährten eine Probe wiederholen, wie beim Einsatz eines Schicksalpunktes.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "CWLfJ9OAqa0zTHtb",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!CWLfJ9OAqa0zTHtb"
+}

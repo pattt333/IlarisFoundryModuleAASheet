@@ -1,0 +1,33 @@
+{
+  "name": "Matrixverständnis",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "Vorteil Zauberer I ODER Vorteil Geweiht I,Attribut FF 6",
+    "gruppe": 4,
+    "text": "Das erste übernatürliche Talent, das bei der Artefakterschaffung misslingt, darf einmal wiederholt werden. \nBei Artefaktanalysen erhält der Held einen zusätzlichen Analysegrad, wenn der gewertete Würfel eine 12 oder höher zeigt.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "oJ3URdqXpLzpHlSp",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!oJ3URdqXpLzpHlSp"
+}

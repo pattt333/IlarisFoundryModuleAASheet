@@ -1,0 +1,33 @@
+{
+  "name": "Kulturkunde I",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 0,
+    "text": "Der Held kennt sich in der Kultur gerade so aus. Sofern die entsprechende Kultur betroffen ist, erhält der Held Erleichterungen von +1 auf Straßenkunde und Diplomatie. Alternativ kann jederzeit gegen Nachfrage allgemeines Wissen des Helden über die Kultur vom Meister erfahren werden",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "VkLhVtlKodZQjwXO",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1767785734350,
+    "modifiedTime": 1767785734350,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!VkLhVtlKodZQjwXO"
+}
