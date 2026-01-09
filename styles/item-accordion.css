@@ -147,6 +147,7 @@
 .ilaris.sheet.actor.alternative .item-image {
   width: 48px !important;
   height: 48px !important;
+  position: relative;
 }
 
 .ilaris.sheet.actor.alternative .item-image img {
@@ -160,6 +161,18 @@
   filter: var(--filter-primary-hover);
   transform: scale(1.05);
   cursor: pointer;
+}
+
+/* Ammunition Warning Overlay */
+.ilaris.sheet.actor.alternative .ammunition-warning {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: #ff6b6b;
+  font-size: 18px;
+  z-index: 10;
+  pointer-events: none;
+  text-shadow: 0 0 3px black, 0 0 3px black;
 }
 
 /* Accordion Functionality */

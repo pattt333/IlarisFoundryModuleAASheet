@@ -104,12 +104,12 @@
             </div>
             <div class="aktionen-list">
                 {{#each actor.effectItems as |item|}}
-                <div class="aktion-item" data-item-id="{{item.id}}">
+                <div class="aktion-item" data-itemid="{{item.id}}">
                     <img src="{{item.img}}" alt="{{item.name}}" class="aktion-img"/>
                     <span class="aktion-name">{{item.name}}</span>
                     <div class="aktion-controls">
-                        <a class="item-control item-edit" title="Bearbeiten" data-action="edit"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Löschen" data-action="delete"><i class="fas fa-trash"></i></a>
+                        <a class="item-control item-edit" title="Bearbeiten" data-action="edit" data-itemid="{{item.id}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Löschen" data-action="delete" data-itemid="{{item.id}}"><i class="fas fa-trash"></i></a>
                     </div>
                 </div>
                 {{else}}

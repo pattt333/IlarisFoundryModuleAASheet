@@ -72,6 +72,34 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             // Add effect-items for the Kampf-Tab
             context.actor.effectItems = this.actor.items.filter(i => i.type === "effect-item");
             
+            // Add ammunition status for ranged weapons (only for "held" actor type)
+            if (this.actor.type === "held" && game.settings.get("ilaris-alternative-actor-sheet", "ammunitionTracking")) {
+                const AMMUNITION_TYPES = ["Kugel", "Pfeil", "Bolzen"];
+                const inventoryItems = this.actor.items.filter(i => i.type === "gegenstand");
+                
+                // Process each fernkampfwaffe
+                if (context.actor.fernkampfwaffen) {
+                    for (const weapon of context.actor.fernkampfwaffen) {
+                        // Find ammunition property
+                        const ammoProperty = weapon.system.eigenschaften?.find(
+                            e => AMMUNITION_TYPES.includes(e.key)
+                        );
+                        
+                        if (ammoProperty) {
+                            weapon.ammunitionType = ammoProperty.key;
+                            // Check if matching ammunition exists in inventory with quantity > 0
+                            const ammoItem = inventoryItems.find(
+                                i => i.name === ammoProperty.key && i.system.quantity > 0
+                            );
+                            weapon.hasAmmunition = !!ammoItem;
+                        } else {
+                            weapon.ammunitionType = undefined;
+                            weapon.hasAmmunition = true; // Weapons without ammo requirement always "have" ammo
+                        }
+                    }
+                }
+            }
+            
             console.log('IlarisAlternativeActorSheet | Successfully retrieved context');
             return context;
             
@@ -483,20 +511,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                     return data;
                 });
                 
-                // Check for Stack-Effects and handle auto-stacking
+                // Use shared utility function for adding effects with automatic stacking
                 for (const newEffectData of effectData) {
-                    if (newEffectData.name && newEffectData.name.includes("Stack")) {
-                        // Check if a stack effect with the same name already exists
-                        const existingStack = this.actor.effects.find(e => e.name === newEffectData.name);
-                        
-                        if (existingStack) {
-                            // Effect exists - increase stack instead of creating new
-                            await this._increaseEffectStack(existingStack);
-                            continue;
-                        }
-                    }
-                    // Create new effect (non-stack or first stack)
-                    await this.actor.createEmbeddedDocuments("ActiveEffect", [newEffectData]);
+                    await window.IlarisAlternativeActorSheet.addEffectWithStacking(this.actor, newEffectData);
                 }
                 
                 ui.notifications.info(`Effekt(e) von ${item.name} wurden verarbeitet.`);
@@ -555,33 +572,12 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
     
     /**
      * Increase the stack count of a stack effect
-     * Stack count is determined by changes.length
+     * Delegates to the shared utility function
      * @param {ActiveEffect} effect - The effect to increase
      * @private
      */
     async _increaseEffectStack(effect) {
-        const currentStacks = effect.changes.length;
-        
-        // Maximum check (5 stacks max)
-        if (currentStacks >= 5) {
-            ui.notifications.warn(`${effect.name} hat bereits maximale Stacks (5). Nur Duration aufgefrischt.`);
-            await effect.update({"duration.turns": 3});
-            return;
-        }
-        
-        // Copy the first change as template
-        const changeTemplate = foundry.utils.deepClone(effect.changes[0]);
-        
-        // Add new change to the array
-        const updatedChanges = [...effect.changes, changeTemplate];
-        
-        // Update effect with new changes and refreshed duration
-        await effect.update({
-            changes: updatedChanges,
-            "duration.turns": 3
-        });
-        
-        ui.notifications.info(`${effect.name} Stack erhöht auf ${updatedChanges.length}`);
+        await window.IlarisAlternativeActorSheet.increaseEffectStack(effect);
     }
     
     /**

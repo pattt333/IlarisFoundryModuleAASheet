@@ -4,6 +4,11 @@
         <div class="item-image {{#if rollable}}rollable{{/if}}" 
              {{#if rollable}}data-rolltype="{{rolltype}}" data-itemid="{{item.id}}" data-fertigkeit="{{fertigkeit}}"{{/if}}>
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            {{#if item.ammunitionType}}
+            {{#unless item.hasAmmunition}}
+            <i class="fas fa-exclamation-triangle ammunition-warning" data-tooltip="Keine Munition vorhanden"></i>
+            {{/unless}}
+            {{/if}}
         </div>
         <div class="item-name accordion-header">
             <div class="name-label">{{nameLabel}}<i class="fas fa-chevron-down"></i></div>
