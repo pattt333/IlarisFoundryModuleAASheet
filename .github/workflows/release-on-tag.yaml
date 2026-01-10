@@ -69,8 +69,13 @@ jobs:
           # Veröffentlicht das Release sofort
           prerelease: false
           # Token für die GitHub API
-          token: ${{ secrets.GITHUB_TOKEN }}ule.zip with the following structure:"
-          unzip -l module.zip | head -20
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Debug - Show ZIP contents
+        if: always()  # Wird auch bei Fehlern ausgeführt
+        run: |
+          echo "module.zip has the following structure:"
+          unzip -l module.zip | head -20    
 
       # 8. Das GitHub Release erstellen und alle Assets hochladen
       - name: Create Release and Upload Assets
