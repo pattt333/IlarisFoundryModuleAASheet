@@ -39,7 +39,6 @@ jobs:
           RELEASE_TAG="${{ github.ref_name }}"
           DOWNLOAD_URL="$REPO_URL/releases/download/$RELEASE_TAG"
           
-          # Mit 'jq' das JSON manipulieren
           jq --arg manifest "$DOWNLOAD_URL/module.json" \
              --arg download "$DOWNLOAD_URL/module.zip" \
              '.manifest = $manifest | .download = $download' \
@@ -52,35 +51,30 @@ jobs:
       # 6. Ein ZIP-Archiv für Foundry erstellen
       - name: Create module.zip
         run: |
+          # WICHTIG: Füge ALLE Dateien hinzu, die im Modul enthalten sein sollen.
+          # Die Option -x kann genutzt werden, um Quellverzeichnisse auszuschließen.
           zip -r module.zip \
+            module.json \
+            packs/*.db \
+            scripts/ \
+            styles/ \
+            templates/ \
+            languages/ \
+            assets/ \
+            -x packs/src/\*  # Beispiel: Quell-JSONs für Packs ausschließen
+
       # 7. Das GitHub Release erstellen und alle Assets hochladen
       - name: Create Release and Upload Assets
         uses: ncipollo/release-action@v1
         with:
-          # Der Tag, der den Workflow ausgelöst hat
           tag: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
-          # Die wichtigen Dateien, die Nutzer herunterladen werden
-          artifacts: "module.json,module.zip"
-          # Optional: Release Notes aus CHANGELOG.md generieren
-          bodyFile: "CHANGELOG.md"
-          # Setzt das Release auf "Draft", wenn du es vorab prüfen willst
-          draft: false
-          # Veröffentlicht das Release sofort
-          prerelease: false
-          # Token für die GitHub API
-          token: ${{ secrets.GITHUB_TOKEN }} 
-
-      # 8. Das GitHub Release erstellen und alle Assets hochladen
-      - name: Create Release and Upload Assets
-        uses: ncipollo/release-action@v1
-        with:
-          # Der Tag, der den Workflow ausgelöst hat
-          tag: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }}
-          # Die wichtigen Dateien, die Nutzer herunterladen werden
+          # Artefakte: Das ZIP UND die einzelnen DBs. Entscheide, was du möchtest.
+          # OPTION A: Nur das ZIP (alles enthalten)
+          # artifacts: "module.json, module.zip"
+          # OPTION B: ZIP + separate DBs (für manuelle Installation)
           artifacts: "module.json, module.zip, packs/*.db"
-          # Setzt das Release auf "Draft", wenn du es vorab prüfen willst
+          bodyFile: "CHANGELOG.md" # Entferne diese Zeile, wenn du keine CHANGELOG.md hast
           draft: false
-          # Veröffentlicht das Release sofort
           prerelease: false
+          # 'token' ist oft optional, da GITHUB_TOKEN automatisch injiziert wird.
