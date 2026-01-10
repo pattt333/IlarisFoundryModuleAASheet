@@ -53,7 +53,7 @@ jobs:
       - name: Create module.zip
         run: |
           zip -r module.zip \
-        7. Das GitHub Release erstellen und alle Assets hochladen
+      # 7. Das GitHub Release erstellen und alle Assets hochladen
       - name: Create Release and Upload Assets
         uses: ncipollo/release-action@v1
         with:
@@ -72,7 +72,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}ule.zip with the following structure:"
           unzip -l module.zip | head -20
 
-      # 6. Das GitHub Release erstellen und alle Assets hochladen
+      # 8. Das GitHub Release erstellen und alle Assets hochladen
       - name: Create Release and Upload Assets
         uses: ncipollo/release-action@v1
         with:
