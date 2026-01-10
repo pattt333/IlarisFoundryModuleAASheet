@@ -62,7 +62,7 @@ jobs:
             templates/ \
             languages/ \
             assets/ \
-            -x packs/_source/\*  # Beispiel: Quell-JSONs für Packs ausschließen
+            -x packs/**/_source/*  # Beispiel: Quell-JSONs für Packs ausschließen
 
       # 7. Das GitHub Release erstellen und alle Assets hochladen
       - name: Create Release and Upload Assets
