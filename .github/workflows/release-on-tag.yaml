@@ -55,13 +55,14 @@ jobs:
           # Die Option -x kann genutzt werden, um Quellverzeichnisse auszuschließen.
           zip -r module.zip \
             module.json \
+            module.js \
             packs/*.db \
             scripts/ \
             styles/ \
             templates/ \
             languages/ \
             assets/ \
-            -x packs/src/\*  # Beispiel: Quell-JSONs für Packs ausschließen
+            -x packs/_source/\*  # Beispiel: Quell-JSONs für Packs ausschließen
 
       # 7. Das GitHub Release erstellen und alle Assets hochladen
       - name: Create Release and Upload Assets
@@ -73,7 +74,7 @@ jobs:
           # OPTION A: Nur das ZIP (alles enthalten)
           # artifacts: "module.json, module.zip"
           # OPTION B: ZIP + separate DBs (für manuelle Installation)
-          artifacts: "module.json, module.zip, packs/*.db"
+          artifacts: "module.json, module.zip, packs/*.ldb"
           bodyFile: "CHANGELOG.md" # Entferne diese Zeile, wenn du keine CHANGELOG.md hast
           draft: false
           prerelease: false
