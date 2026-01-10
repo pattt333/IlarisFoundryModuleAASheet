@@ -25,7 +25,7 @@ export class MassInitiativeDialog extends Application {
             id: "mass-initiative-dialog",
             classes: ["ilaris", "mass-initiative-dialog"],
             template: "modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs",
-            width: 600,
+            width: 800,
             height: 600,
             title: "NPC Initiative",
             resizable: true
@@ -132,7 +132,7 @@ export class MassInitiativeDialog extends Application {
     async getData() {
         const context = await super.getData();
         
-        // Load available actions from compendium only (for NPCs)
+        // Load available actions from compendium only (for NPCs) - only once
         await this._loadAvailableActions();
         
         // Build NPC data for template
@@ -181,7 +181,8 @@ export class MassInitiativeDialog extends Application {
                 const documents = await pack.getDocuments();
                 for (const item of documents) {
                     this.availableActions.push({
-                        id: item.id,
+                        id: item.uuid,
+                        _id: item.id,
                         name: item.name,
                         description: item.system?.description ?? "",
                         img: item.img,
@@ -190,6 +191,7 @@ export class MassInitiativeDialog extends Application {
                         effects: item.effects?.contents ?? []
                     });
                 }
+                console.log('MassInitiativeDialog | Loaded actions:', this.availableActions.map(a => ({name: a.name, id: a.id})));
             }
         } catch (error) {
             console.warn("MassInitiativeDialog | Could not load actions compendium:", error);
@@ -277,12 +279,7 @@ export class MassInitiativeDialog extends Application {
         // Accordion toggle
         html.find('.accordion-header').click(this._onAccordionToggle.bind(this));
         
-        // Input fields (delegated for each NPC accordion)
-        html.find('input[name^="iniMod-"]').change(this._onIniModChange.bind(this));
-        html.find('input[name^="atMod-"]').change(this._onAtModChange.bind(this));
-        html.find('input[name^="vtMod-"]').change(this._onVtModChange.bind(this));
-        html.find('input[name^="kombinierteAktion-"]').change(this._onKombinierteAktionChange.bind(this));
-        html.find('select[name^="diceCount-"]').change(this._onDiceCountChange.bind(this));
+        // Actions dropdown
         html.find('select[name^="actions-"]').change(this._onActionsChange.bind(this));
         
         // Dice rolling
@@ -295,6 +292,9 @@ export class MassInitiativeDialog extends Application {
         // Main buttons
         html.find('.ini-ansagen-btn').click(this._onIniAnsagen.bind(this));
         html.find('.cancel-btn').click(this._onCancel.bind(this));
+        
+        // Form change handling for inputs
+        html.find('input, select').on('change', this._onFormChange.bind(this));
     }
     
     /**
@@ -321,90 +321,55 @@ export class MassInitiativeDialog extends Application {
     }
     
     /**
-     * Get combatant ID from input name
-     * @param {string} name
-     * @returns {string}
-     * @private
-     */
-    _getCombatantIdFromName(name) {
-        return name.split("-").pop();
-    }
-    
-    /**
-     * Handle INI modifier change
+     * Handle general form changes (inputs and selects except actions)
      * @param {Event} event
      * @private
      */
-    async _onIniModChange(event) {
-        const combatantId = this._getCombatantIdFromName(event.target.name);
+    async _onFormChange(event) {
+        const element = event.currentTarget;
+        const name = element.name;
+        
+        // Skip if it's an actions select (handled separately)
+        if (name.startsWith('actions-')) return;
+        
+        // Extract combatant ID from input name
+        const parts = name.split('-');
+        if (parts.length < 2) return;
+        
+        const combatantId = parts[parts.length - 1];
+        const fieldName = parts.slice(0, -1).join('-');
         const state = this.npcStates.get(combatantId);
-        if (state) {
-            state.iniMod = parseInt(event.target.value) || 0;
-            await this._saveNpcState(combatantId);
-            this.render(false);
-        }
-    }
-    
-    /**
-     * Handle AT modifier change
-     * @param {Event} event
-     * @private
-     */
-    async _onAtModChange(event) {
-        const combatantId = this._getCombatantIdFromName(event.target.name);
-        const state = this.npcStates.get(combatantId);
-        if (state) {
-            state.atMod = parseInt(event.target.value) || 0;
-            await this._saveNpcState(combatantId);
-            this.render(false);
-        }
-    }
-    
-    /**
-     * Handle VT modifier change
-     * @param {Event} event
-     * @private
-     */
-    async _onVtModChange(event) {
-        const combatantId = this._getCombatantIdFromName(event.target.name);
-        const state = this.npcStates.get(combatantId);
-        if (state) {
-            state.vtMod = parseInt(event.target.value) || 0;
-            await this._saveNpcState(combatantId);
-            this.render(false);
-        }
-    }
-    
-    /**
-     * Handle kombinierte Aktion checkbox change
-     * @param {Event} event
-     * @private
-     */
-    async _onKombinierteAktionChange(event) {
-        const combatantId = this._getCombatantIdFromName(event.target.name);
-        const state = this.npcStates.get(combatantId);
-        if (state) {
-            state.kombinierteAktion = event.target.checked;
-            await this._saveNpcState(combatantId);
-            this.render(false);
-        }
-    }
-    
-    /**
-     * Handle dice count selection change
-     * @param {Event} event
-     * @private
-     */
-    async _onDiceCountChange(event) {
-        const combatantId = this._getCombatantIdFromName(event.target.name);
-        const state = this.npcStates.get(combatantId);
-        if (state) {
-            state.diceCount = parseInt(event.target.value) || 1;
+        
+        if (!state) return;
+        
+        // Update state based on field type
+        if (fieldName === 'iniMod') {
+            state.iniMod = parseInt(element.value) || 0;
+        } else if (fieldName === 'atMod') {
+            state.atMod = parseInt(element.value) || 0;
+        } else if (fieldName === 'vtMod') {
+            state.vtMod = parseInt(element.value) || 0;
+        } else if (fieldName === 'kombinierteAktion') {
+            state.kombinierteAktion = element.checked;
+        } else if (fieldName === 'diceCount') {
+            state.diceCount = parseInt(element.value) || 1;
             state.diceResults = [];
             state.selectedDiceIndex = null;
             state.hasRolled = false;
-            await this._saveNpcState(combatantId);
-            this.render(false);
+        }
+        
+        // Save state
+        await this._saveNpcState(combatantId);
+        
+        // Update calculated INI display directly in DOM (avoid full re-render)
+        if (fieldName === 'iniMod' || fieldName === 'kombinierteAktion') {
+            const totalIni = this._calculateTotalInitiative(combatantId);
+            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
+            const iniDisplay = accordion.find('.current-ini strong');
+            if (iniDisplay.length) {
+                iniDisplay.text(totalIni);
+                iniDisplay.toggleClass('negative', totalIni < 0);
+            }
         }
     }
     
@@ -414,13 +379,23 @@ export class MassInitiativeDialog extends Application {
      * @private
      */
     async _onActionsChange(event) {
-        const combatantId = this._getCombatantIdFromName(event.target.name);
+        const parts = event.target.name.split('-');
+        const combatantId = parts[parts.length - 1];
         const state = this.npcStates.get(combatantId);
+        
         if (state) {
             const selectedOptions = Array.from(event.target.selectedOptions);
             state.selectedActionIds = selectedOptions.map(opt => opt.value).slice(0, 2);
             await this._saveNpcState(combatantId);
-            this.render(false);
+            
+            // Update calculated INI display directly in DOM
+            const totalIni = this._calculateTotalInitiative(combatantId);
+            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
+            const iniDisplay = accordion.find('.current-ini strong');
+            if (iniDisplay.length) {
+                iniDisplay.text(totalIni);
+                iniDisplay.toggleClass('negative', totalIni < 0);
+            }
         }
     }
     
@@ -451,7 +426,53 @@ export class MassInitiativeDialog extends Application {
             
             state.hasRolled = true;
             await this._saveNpcState(combatantId);
-            this.render(false);
+            
+            // Update dice display in DOM
+            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
+            const diceSection = accordion.find('.dice-section');
+            
+            // Show rolled indicator in header
+            const header = accordion.find('.accordion-header');
+            if (!header.find('.rolled-indicator').length) {
+                header.find('.accordion-icon').before('<i class="fas fa-check rolled-indicator"></i>');
+            }
+            
+            // Build dice results HTML
+            let diceHTML = '<div class="dice-results">';
+            state.diceResults.forEach((result, index) => {
+                const selected = (state.selectedDiceIndex === index) ? 'selected' : '';
+                const title = (state.diceCount === 2) ? 'Klicken zum Auswählen' : '';
+                diceHTML += `
+                    <div class="dice-result ${selected}" 
+                         data-combatant-id="${combatantId}"
+                         data-index="${index}"
+                         title="${title}">
+                        <div class="dice-face d6">
+                            <span class="dice-value">${result}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            diceHTML += '</div>';
+            
+            // Replace or insert dice results
+            const existingResults = diceSection.find('.dice-results');
+            if (existingResults.length) {
+                existingResults.replaceWith(diceHTML);
+            } else {
+                diceSection.append(diceHTML);
+            }
+            
+            // Re-bind click handlers for new dice
+            diceSection.find('.dice-result').click(this._onSelectDice.bind(this));
+            
+            // Update INI display
+            const totalIni = this._calculateTotalInitiative(combatantId);
+            const iniDisplay = accordion.find('.current-ini strong');
+            if (iniDisplay.length) {
+                iniDisplay.text(totalIni);
+                iniDisplay.toggleClass('negative', totalIni < 0);
+            }
         }
     }
     
@@ -470,7 +491,19 @@ export class MassInitiativeDialog extends Application {
         if (state && state.diceCount === 2) {
             state.selectedDiceIndex = index;
             await this._saveNpcState(combatantId);
-            this.render(false);
+            
+            // Update selected class in DOM
+            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
+            accordion.find('.dice-result').removeClass('selected');
+            $(event.currentTarget).addClass('selected');
+            
+            // Update INI display
+            const totalIni = this._calculateTotalInitiative(combatantId);
+            const iniDisplay = accordion.find('.current-ini strong');
+            if (iniDisplay.length) {
+                iniDisplay.text(totalIni);
+                iniDisplay.toggleClass('negative', totalIni < 0);
+            }
         }
     }
     
@@ -498,9 +531,54 @@ export class MassInitiativeDialog extends Application {
             
             state.hasRolled = true;
             await this._saveNpcState(combatantId);
+            
+            // Update dice display in DOM
+            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
+            const diceSection = accordion.find('.dice-section');
+            
+            // Show rolled indicator in header
+            const header = accordion.find('.accordion-header');
+            if (!header.find('.rolled-indicator').length) {
+                header.find('.accordion-icon').before('<i class="fas fa-check rolled-indicator"></i>');
+            }
+            
+            // Build dice results HTML
+            let diceHTML = '<div class="dice-results">';
+            state.diceResults.forEach((result, index) => {
+                const selected = (state.selectedDiceIndex === index) ? 'selected' : '';
+                const title = (state.diceCount === 2) ? 'Klicken zum Auswählen' : '';
+                diceHTML += `
+                    <div class="dice-result ${selected}" 
+                         data-combatant-id="${combatantId}"
+                         data-index="${index}"
+                         title="${title}">
+                        <div class="dice-face d6">
+                            <span class="dice-value">${result}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            diceHTML += '</div>';
+            
+            // Replace or insert dice results
+            const existingResults = diceSection.find('.dice-results');
+            if (existingResults.length) {
+                existingResults.replaceWith(diceHTML);
+            } else {
+                diceSection.append(diceHTML);
+            }
+            
+            // Update INI display
+            const totalIni = this._calculateTotalInitiative(combatantId);
+            const iniDisplay = accordion.find('.current-ini strong');
+            if (iniDisplay.length) {
+                iniDisplay.text(totalIni);
+                iniDisplay.toggleClass('negative', totalIni < 0);
+            }
         }
         
-        this.render(false);
+        // Re-bind click handlers for all new dice
+        this.element.find('.dice-result').click(this._onSelectDice.bind(this));
     }
     
     /**
@@ -602,6 +680,24 @@ export class MassInitiativeDialog extends Application {
                         origin: actor.uuid
                     }
                 });
+            }
+            
+            // Transfer all effects from selected action items to actor
+            for (const actionId of state.selectedActionIds) {
+                const action = this.availableActions.find(a => (a.id || a._id) === actionId);
+                if (action?.effects && action.effects.length > 0) {
+                    for (const effect of action.effects) {
+                        // Clone the effect data and adjust duration
+                        const effectData = foundry.utils.duplicate(effect);
+                        effectData.duration = effectData.duration || {};
+                        effectData.duration.turns = totalIni < 0 ? 2 : 1;
+                        effectData.origin = actor.uuid;
+                        effectsToCreate.push({
+                            actor: actor,
+                            effectData: effectData
+                        });
+                    }
+                }
             }
             
             // Prepare initiative update

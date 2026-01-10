@@ -160,11 +160,13 @@ export class InitiativeDialog extends Application {
         const actorEffectItems = this.actor.items.filter(i => i.type === "effect-item");
         for (const item of actorEffectItems) {
             this.availableActions.push({
-                id: item.id,
+                id: item.uuid,
+                _id: item.id,
                 name: item.name,
                 description: item.system?.description ?? "",
                 img: item.img,
                 source: "actor",
+                uuid: item.uuid,
                 effects: item.effects?.contents ?? []
             });
         }
@@ -176,7 +178,8 @@ export class InitiativeDialog extends Application {
                 const documents = await pack.getDocuments();
                 for (const item of documents) {
                     this.availableActions.push({
-                        id: item.id,
+                        id: item.uuid,
+                        _id: item.id,
                         name: item.name,
                         description: item.system?.description ?? "",
                         img: item.img,
@@ -189,6 +192,8 @@ export class InitiativeDialog extends Application {
         } catch (error) {
             console.warn("InitiativeDialog | Could not load actions compendium:", error);
         }
+        
+        console.log('InitiativeDialog | Loaded actions:', this.availableActions.map(a => ({name: a.name, id: a.id})));
     }
     
     /**
@@ -259,12 +264,7 @@ export class InitiativeDialog extends Application {
     activateListeners(html) {
         super.activateListeners(html);
         
-        // Input fields
-        html.find('input[name="iniMod"]').change(this._onIniModChange.bind(this));
-        html.find('input[name="atMod"]').change(this._onAtModChange.bind(this));
-        html.find('input[name="vtMod"]').change(this._onVtModChange.bind(this));
-        html.find('input[name="kombinierteAktion"]').change(this._onKombinierteAktionChange.bind(this));
-        html.find('select[name="diceCount"]').change(this._onDiceCountChange.bind(this));
+        // Actions dropdown
         html.find('select[name="actions"]').change(this._onActionsChange.bind(this));
         
         // Dice rolling
@@ -277,66 +277,38 @@ export class InitiativeDialog extends Application {
     }
     
     /**
+     * Handle form submission
+     * @param {Event} event
+     * @param {Object} formData
+     * @private
+     */
+    async _updateObject(event, formData) {
+        // Update local state from form data
+        this.iniMod = parseInt(formData.iniMod) || 0;
+        this.atMod = parseInt(formData.atMod) || 0;
+        this.vtMod = parseInt(formData.vtMod) || 0;
+        this.kombinierteAktion = formData.kombinierteAktion || false;
+        this.diceCount = parseInt(formData.diceCount) || 1;
+        
+        // Save to actor flags
+        await this._savePersistedState();
+        
+        // Update calculated INI display directly in DOM
+        const totalIni = this._calculateTotalIni();
+        const iniDisplay = this.element.find('.current-ini strong');
+        if (iniDisplay.length) {
+            iniDisplay.text(totalIni);
+            iniDisplay.toggleClass('negative', totalIni < 0);
+        }
+    }
+    
+    /**
      * Handle INI modifier change
      * @param {Event} event
      * @private
      */
-    async _onIniModChange(event) {
-        this.iniMod = parseInt(event.target.value) || 0;
-        await this._savePersistedState();
-        this.render(false);
-    }
-    
-    /**
-     * Handle AT modifier change
-     * @param {Event} event
-     * @private
-     */
-    async _onAtModChange(event) {
-        this.atMod = parseInt(event.target.value) || 0;
-        await this._savePersistedState();
-        this.render(false);
-    }
-    
-    /**
-     * Handle VT modifier change
-     * @param {Event} event
-     * @private
-     */
-    async _onVtModChange(event) {
-        this.vtMod = parseInt(event.target.value) || 0;
-        await this._savePersistedState();
-        this.render(false);
-    }
-    
-    /**
-     * Handle kombinierte Aktion checkbox change
-     * @param {Event} event
-     * @private
-     */
-    async _onKombinierteAktionChange(event) {
-        this.kombinierteAktion = event.target.checked;
-        await this._savePersistedState();
-        this.render(false);
-    }
-    
     /**
      * Handle dice count selection change
-     * @param {Event} event
-     * @private
-     */
-    async _onDiceCountChange(event) {
-        this.diceCount = parseInt(event.target.value) || 1;
-        // Reset dice results when changing count
-        this.diceResults = [];
-        this.selectedDiceIndex = null;
-        this.hasRolled = false;
-        await this._savePersistedState();
-        this.render(false);
-    }
-    
-    /**
-     * Handle actions selection change
      * @param {Event} event
      * @private
      */
@@ -344,7 +316,14 @@ export class InitiativeDialog extends Application {
         const selectedOptions = Array.from(event.target.selectedOptions);
         this.selectedActionIds = selectedOptions.map(opt => opt.value).slice(0, 2); // Max 2 actions
         await this._savePersistedState();
-        this.render(false);
+        
+        // Update calculated INI display directly in DOM
+        const totalIni = this._calculateTotalIni();
+        const iniDisplay = this.element.find('.current-ini strong');
+        if (iniDisplay.length) {
+            iniDisplay.text(totalIni);
+            iniDisplay.toggleClass('negative', totalIni < 0);
+        }
     }
     
     /**
@@ -371,7 +350,45 @@ export class InitiativeDialog extends Application {
         
         this.hasRolled = true;
         await this._savePersistedState();
-        this.render(false);
+        
+        // Update dice display in DOM
+        const diceSection = this.element.find('.dice-section');
+        
+        // Build dice results HTML
+        let diceHTML = '<div class="dice-results">';
+        this.diceResults.forEach((result, index) => {
+            const selected = (this.selectedDiceIndex === index) ? 'selected' : '';
+            const title = (this.diceCount === 2) ? 'Klicken zum Auswählen' : '';
+            diceHTML += `
+                <div class="dice-result ${selected}" 
+                     data-index="${index}"
+                     title="${title}">
+                    <div class="dice-face d6">
+                        <span class="dice-value">${result}</span>
+                    </div>
+                </div>
+            `;
+        });
+        diceHTML += '</div>';
+        
+        // Replace or insert dice results
+        const existingResults = diceSection.find('.dice-results');
+        if (existingResults.length) {
+            existingResults.replaceWith(diceHTML);
+        } else {
+            diceSection.append(diceHTML);
+        }
+        
+        // Re-bind click handlers for new dice
+        diceSection.find('.dice-result').click(this._onSelectDice.bind(this));
+        
+        // Update INI display
+        const totalIni = this._calculateTotalIni();
+        const iniDisplay = this.element.find('.current-ini strong');
+        if (iniDisplay.length) {
+            iniDisplay.text(totalIni);
+            iniDisplay.toggleClass('negative', totalIni < 0);
+        }
     }
     
     /**
@@ -387,7 +404,18 @@ export class InitiativeDialog extends Application {
         const index = parseInt(event.currentTarget.dataset.index);
         this.selectedDiceIndex = index;
         await this._savePersistedState();
-        this.render(false);
+        
+        // Update selected class in DOM
+        this.element.find('.dice-result').removeClass('selected');
+        $(event.currentTarget).addClass('selected');
+        
+        // Update INI display
+        const totalIni = this._calculateTotalIni();
+        const iniDisplay = this.element.find('.current-ini strong');
+        if (iniDisplay.length) {
+            iniDisplay.text(totalIni);
+            iniDisplay.toggleClass('negative', totalIni < 0);
+        }
     }
     
     /**
@@ -459,6 +487,22 @@ export class InitiativeDialog extends Application {
             });
         }
         
+        // Transfer all effects from selected action items to actor
+        const effectsToCreate = [];
+        for (const actionId of this.selectedActionIds) {
+            const action = this.availableActions.find(a => (a.id || a._id) === actionId);
+            if (action?.effects && action.effects.length > 0) {
+                for (const effect of action.effects) {
+                    // Clone the effect data and adjust duration
+                    const effectData = foundry.utils.duplicate(effect);
+                    effectData.duration = effectData.duration || {};
+                    effectData.duration.turns = totalIni < 0 ? 2 : 1;
+                    effectData.origin = this.actor.uuid;
+                    effectsToCreate.push(effectData);
+                }
+            }
+        }
+        
         // Remove old combat modifier effects
         const oldEffects = this.actor.effects.filter(e => 
             e.name.startsWith("Kampf-Modifikatoren Runde")
@@ -480,6 +524,11 @@ export class InitiativeDialog extends Application {
             };
             
             await this.actor.createEmbeddedDocuments("ActiveEffect", [effectData]);
+        }
+        
+        // Create effects from selected actions
+        if (effectsToCreate.length > 0) {
+            await this.actor.createEmbeddedDocuments("ActiveEffect", effectsToCreate);
         }
         
         // Set initiative in combat tracker

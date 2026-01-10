@@ -34,13 +34,13 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    background: var(--header-bg-color, #3c4658);
-    border-bottom: 1px solid var(--color-border-light, #ccc);
+    background: var(--header-bg-color);
+    border-bottom: 1px solid var(--color-border-light-1);
     flex-shrink: 0;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .sheet-header {
-    background: var(--header-bg-color, #3c4658);
+    background: var(--header-bg-color);
     color: white;
     padding: 10px 15px;
     display: block;
@@ -153,7 +153,7 @@
 .ilaris.sheet.actor.alternative.kreatur .name-section input:focus {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    outline: 1px solid var(--primary-color, #4299e1);
+    outline: 1px solid var(--primary-color);
 }
 
 /* Stats Section */
@@ -177,7 +177,7 @@
     justify-content: center;
     width: 60px;
     height: 70px;
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color);
 }
 
 .ilaris.sheet.actor.alternative.kreatur .ws-shield i.fa-shield-alt {
@@ -213,7 +213,7 @@
 }
 
 .ilaris.sheet.actor.alternative.kreatur .ws-shield .be-badge i {
-    color: #cbd5e0;
+    color: var(--color-text-light-6);
 }
 
 .ilaris.sheet.actor.alternative.kreatur .ws-shield .be-badge .be-value {
@@ -239,7 +239,7 @@
 .ilaris.sheet.actor.alternative.kreatur .hex-main {
     width: 48px;
     height: 55px;
-    background: var(--primary-color, #4299e1);
+    background: var(--primary-color);
     position: relative;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
@@ -252,7 +252,7 @@
 }
 
 .ilaris.sheet.actor.alternative.kreatur .hex-main:hover {
-    background: #3182ce;
+    background: var(--color-primary-dark);
     transform: scale(1.05);
 }
 
@@ -274,9 +274,9 @@
 .ilaris.sheet.actor.alternative.kreatur .hex-small {
     width: 22px;
     height: 26px;
-    background: #2d3748;
+    background: var(--text-dark);
     position: absolute;
-    bottom: -2px;
+    bottom: -10px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     align-items: center;
@@ -287,7 +287,7 @@
 }
 
 .ilaris.sheet.actor.alternative.kreatur .hex-small:hover {
-    background: #4a5568;
+    background: var(--color-text-dark-5);
     transform: scale(1.1);
 }
 
@@ -324,7 +324,7 @@
 }
 
 .ilaris.sheet.actor.alternative.kreatur .profile-stat i {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color);
     font-size: 0.9em;
 }
 
@@ -340,11 +340,11 @@
 
 /* Health modifier color coding */
 .ilaris.sheet.actor.alternative.kreatur .profile-stat.health-mod.positive .stat-value {
-    color: #68d391;
+    color: var(--color-success);
 }
 
 .ilaris.sheet.actor.alternative.kreatur .profile-stat.health-mod.negative .stat-value {
-    color: #fc8181;
+    color: var(--color-danger);
 }
 
 /* ===================================
@@ -374,7 +374,7 @@
 
 .ilaris.sheet.actor.alternative.kreatur .sheet-tabs .item.active {
     color: white;
-    border-bottom-color: var(--primary-color, #4299e1);
+    border-bottom-color: var(--primary-color);
 }
 
 /* ===================================
@@ -406,33 +406,33 @@
     justify-content: space-between;
     margin-bottom: 8px;
     padding-bottom: 4px;
-    border-bottom: 2px solid var(--primary-color, #4299e1);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .ilaris.sheet.actor.alternative.kreatur .section-header h3 {
     margin: 0;
     font-size: 1em;
     font-weight: 600;
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark);
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .section-header h3 i {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color);
 }
 
 /* Effect Library Open Button */
 .ilaris.sheet.actor.alternative.kreatur .effect-library-open {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color);
     cursor: pointer;
     padding: 4px;
     transition: all 0.2s ease;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .effect-library-open:hover {
-    color: #3182ce;
+    color: var(--color-primary-dark);
     transform: scale(1.1);
 }
 
@@ -450,7 +450,7 @@
     grid-column: 1 / -1;
     text-align: center;
     padding: 20px;
-    color: #718096;
+    color: var(--color-text-light-6);
     font-style: italic;
 }
 
@@ -461,24 +461,24 @@
 .ilaris.sheet.actor.alternative.kreatur .statblockreihe {
     padding: 10px 12px;
     margin-bottom: 8px;
-    background: #f7fafc;
-    border-left: 4px solid var(--primary-color, #4299e1);
+    background: var(--color-bg-light);
+    border-left: 4px solid var(--primary-color);
     border-radius: 0 4px 4px 0;
     line-height: 1.8;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .statblockreihe b {
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark);
     font-weight: 600;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .statblockreihe b i {
     margin-right: 4px;
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color);
 }
 
 .ilaris.sheet.actor.alternative.kreatur .empty-inline {
-    color: #a0aec0;
+    color: var(--color-text-light-5);
     font-style: italic;
 }
 
@@ -499,31 +499,31 @@
 }
 
 .ilaris.sheet.actor.alternative.kreatur .weapon-name a {
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark);
     text-decoration: none;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .weapon-name a:hover {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .weapon-stat {
     font-size: 0.9em;
-    color: #4a5568;
+    color: var(--color-text-dark-5);
     white-space: nowrap;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .weapon-eigenschaften {
     font-size: 0.85em;
-    color: #718096;
+    color: var(--text-dark);
     margin-left: 45px;
     margin-bottom: 8px;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .eigenschaft-tag {
     display: inline-block;
-    background: #e2e8f0;
+    background: var(--color-border-light-2);
     padding: 1px 6px;
     border-radius: 3px;
     margin-right: 4px;
@@ -538,7 +538,7 @@
     width: 32px;
     height: 32px;
     font-size: 1.3em;
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color);
     background: rgba(66, 153, 225, 0.1);
     border-radius: 6px;
     cursor: pointer;
@@ -548,33 +548,33 @@
 .ilaris.sheet.actor.alternative.kreatur .rollable.icon-large:hover {
     transform: scale(1.15);
     color: white;
-    background: var(--primary-color, #4299e1);
+    background: var(--primary-color);
     box-shadow: 0 2px 8px rgba(66, 153, 225, 0.4);
 }
 
 /* Small Dice Buttons (for damage, skills) */
 .ilaris.sheet.actor.alternative.kreatur .rollable.icon-small {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color);
     cursor: pointer;
     transition: all 0.2s ease;
     margin-left: 2px;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .rollable.icon-small:hover {
-    color: #3182ce;
+    color: var(--color-primary-dark);
     transform: scale(1.2);
 }
 
 /* Delete Icon */
 .ilaris.sheet.actor.alternative.kreatur .item-delete.icon-small {
-    color: #a0aec0;
+    color: var(--color-text-light-5);
     cursor: pointer;
     transition: all 0.2s ease;
     margin-left: auto;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .item-delete.icon-small:hover {
-    color: #e53e3e;
+    color: var(--color-danger);
 }
 
 /* ===================================
@@ -590,14 +590,14 @@
 .ilaris.sheet.actor.alternative.kreatur .spell-entry a.item-edit,
 .ilaris.sheet.actor.alternative.kreatur .skill-entry a.item-edit,
 .ilaris.sheet.actor.alternative.kreatur .item-entry a.item-edit {
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark);
     text-decoration: none;
 }
 
 .ilaris.sheet.actor.alternative.kreatur .spell-entry a.item-edit:hover,
 .ilaris.sheet.actor.alternative.kreatur .skill-entry a.item-edit:hover,
 .ilaris.sheet.actor.alternative.kreatur .item-entry a.item-edit:hover {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
@@ -609,7 +609,7 @@
     width: 100%;
     min-height: 80px;
     padding: 10px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border-light-2);
     border-radius: 4px;
     font-family: inherit;
     font-size: 0.95em;
@@ -619,7 +619,7 @@
 
 .ilaris.sheet.actor.alternative.kreatur .kurzbeschreibung-container textarea:focus {
     outline: none;
-    border-color: var(--primary-color, #4299e1);
+    border-color: var(--primary-color);
     box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
 }
 
@@ -643,7 +643,7 @@
 .ilaris.sheet.actor.alternative.kreatur .kampfwert-input label {
     font-weight: 600;
     font-size: 0.8em;
-    color: #4a5568;
+    color: var(--color-text-dark-5);
     margin-bottom: 3px;
     text-transform: uppercase;
 }
@@ -652,7 +652,7 @@
     width: 45px;
     text-align: center;
     padding: 4px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border-light-2);
     border-radius: 4px;
     font-size: 1em;
     font-weight: bold;
@@ -660,7 +660,7 @@
 
 .ilaris.sheet.actor.alternative.kreatur .kampfwert-input input:focus {
     outline: none;
-    border-color: var(--primary-color, #4299e1);
+    border-color: var(--primary-color);
 }
 
 /* ===================================
@@ -677,7 +677,7 @@
     flex: 1;
     max-width: 250px;
     padding: 6px 10px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border-light-2);
     border-radius: 4px;
     font-size: 0.95em;
 }
@@ -687,7 +687,7 @@
     align-items: center;
     gap: 6px;
     padding: 6px 14px;
-    background: var(--primary-color, #4299e1);
+    background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 4px;
@@ -697,7 +697,7 @@
 }
 
 .ilaris.sheet.actor.alternative.kreatur .item-controls button:hover {
-    background: #3182ce;
+    background: var(--color-primary-dark);
     transform: translateY(-1px);
 }
 
@@ -706,7 +706,7 @@
    =================================== */
 
 .ilaris.sheet.actor.alternative.kreatur .window-header {
-    background: var(--header-bg-color, #3c4658);
+    background: var(--header-bg-color);
     margin: 0;
     padding: 4px;
     border: 0;
@@ -722,7 +722,7 @@
 }
 
 .ilaris.sheet.actor.alternative.kreatur .window-content {
-    background: #f8f8f8;
+    background: var(--color-bg-light);
     padding: 0;
 }
 
