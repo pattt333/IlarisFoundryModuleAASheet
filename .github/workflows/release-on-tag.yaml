@@ -23,11 +23,15 @@ jobs:
         with:
           node-version: '18'
 
-      # 3. Dein Pack-Script ausführen
-      - name: Run Pack Script
-        run: npm run pack-all # oder den Befehl, der deine packs/*.db Dateien erzeugt
+      # 3. Dependencies installieren
+      - name: Install dependencies
+        run: npm install
 
-      # 4. (KRITISCH) module.json mit Release-Pfaden aktualisieren
+      # 4. Dein Pack-Script ausführen
+      - name: Run Pack Script
+        run: npm run pack-all
+
+      # 5. (KRITISCH) module.json mit Release-Pfaden aktualisieren
       #    Das ${{ github.ref_name }} enthält den Tag-Namen (z.B. v1.0.0)
       - name: Update module.json Manifest URLs
         run: |
@@ -35,19 +39,38 @@ jobs:
           RELEASE_TAG="${{ github.ref_name }}"
           DOWNLOAD_URL="$REPO_URL/releases/download/$RELEASE_TAG"
           
-          # Mit 'jq' das JSON manipulieren (muss vorher installiert sein)
-          # Falls jq nicht verfügbar ist, kann auch ein Node/Python Skript verwendet werden
+          # Mit 'jq' das JSON manipulieren
           jq --arg manifest "$DOWNLOAD_URL/module.json" \
              --arg download "$DOWNLOAD_URL/module.zip" \
              '.manifest = $manifest | .download = $download' \
              module.json > module.json.tmp && mv module.json.tmp module.json
           
-          # Oder mit sed für eine einfache Ersetzung (wenn dein JSON einzeilig ist)
-          # sed -i "s|https://github.com/.*/releases/latest/download|$DOWNLOAD_URL|g" module.json
+          echo "Updated module.json URLs:"
+          echo "  manifest: $DOWNLOAD_URL/module.json"
+          echo "  download: $DOWNLOAD_URL/module.zip"
 
-      # 5. Optional: Ein endgültiges ZIP-Archiv für Foundry erstellen
+      # 6. Ein ZIP-Archiv für Foundry erstellen
       - name: Create module.zip
-        run: zip -r module.zip module.json packs/ languages/ scripts/ styles/ modules/ -x packs/src/\* # Quelle ausnehmen
+        run: |
+          zip -r module.zip \
+        7. Das GitHub Release erstellen und alle Assets hochladen
+      - name: Create Release and Upload Assets
+        uses: ncipollo/release-action@v1
+        with:
+          # Der Tag, der den Workflow ausgelöst hat
+          tag: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          # Die wichtigen Dateien, die Nutzer herunterladen werden
+          artifacts: "module.json,module.zip"
+          # Optional: Release Notes aus CHANGELOG.md generieren
+          bodyFile: "CHANGELOG.md"
+          # Setzt das Release auf "Draft", wenn du es vorab prüfen willst
+          draft: false
+          # Veröffentlicht das Release sofort
+          prerelease: false
+          # Token für die GitHub API
+          token: ${{ secrets.GITHUB_TOKEN }}ule.zip with the following structure:"
+          unzip -l module.zip | head -20
 
       # 6. Das GitHub Release erstellen und alle Assets hochladen
       - name: Create Release and Upload Assets
