@@ -6,7 +6,8 @@
     "sephrastoScript": "",
     "foundryScript": "",
     "text": "Ermöglicht den Kampf im Schildkampfstil. Verteidigungen mit einem Schild sind um +4 erleichtert, wenn der Angreifer in einer höheren Größenklasse ist. Ein Schildträger kann sowohl Angriffe von Tieren und größeren Gegnern parieren,\nals auch Fernkampfangriffe. Schilde bieten dem Träger Halbe Deckung (Fernkampfangriffe -4).",
-    "kategorie": "modifier",
+    "kategorie": "passive",
+    "parameterSlots": [],
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -63,7 +64,8 @@
       "conditions": []
     },
     "customScript": "",
-    "name": "Schild"
+    "name": "Schild",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +83,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768118089592,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!C9Cgmgqma6fbYoas"

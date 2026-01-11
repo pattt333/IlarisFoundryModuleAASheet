@@ -6,7 +6,8 @@
     "sephrastoScript": "",
     "foundryScript": "",
     "text": "Die Waffe benötigt Zeit zum Laden. Waffen mit dieser Waffeneigenschaft verschieben dich immer in die nächste\nKR. Ausnahme ist der erste Schuss im Kampf, sofern die Waffe zu Kampfbeginn bereits im geladenen Zustand war.",
-    "kategorie": "modifier",
+    "kategorie": "passive",
+    "parameterSlots": [],
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -63,7 +64,8 @@
       "conditions": []
     },
     "customScript": "",
-    "name": "Ladezeit"
+    "name": "Ladezeit",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +83,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768117383094,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!mffhfpFSphnOtxJ3"

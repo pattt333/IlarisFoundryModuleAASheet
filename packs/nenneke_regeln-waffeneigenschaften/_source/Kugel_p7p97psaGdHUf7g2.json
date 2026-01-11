@@ -6,7 +6,8 @@
     "sephrastoScript": "",
     "foundryScript": "",
     "text": "Munitionsart",
-    "kategorie": "modifier",
+    "kategorie": "passive",
+    "parameterSlots": [],
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -63,7 +64,8 @@
       "conditions": []
     },
     "customScript": "",
-    "name": "Kugel"
+    "name": "Kugel",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +83,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768117378542,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!p7p97psaGdHUf7g2"

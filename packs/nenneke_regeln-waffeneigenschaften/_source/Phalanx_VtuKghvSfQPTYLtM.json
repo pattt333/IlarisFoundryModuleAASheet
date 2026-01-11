@@ -6,7 +6,8 @@
     "sephrastoScript": "",
     "foundryScript": "",
     "text": "Waffen mit dieser Eigenschaft sind dazu in der Lage über/neben einem anderem Charakter vorbeizustechen, um\ndamit einen anderen Charakter zu treffen. Das heißt, wenn ein Verbündeter vor dir steht, kannst du effektiv über 2 Felder (=RW2) hinweg angreifen. Ein Charakter, der eine solche Waffe als Hauptwaffe führt, zählt nicht (= wird nicht berücksichtigt), wenn es darum geht zu bestimmen, ob ein Nahkampf ein Kampfgetümmel ist oder nicht.",
-    "kategorie": "modifier",
+    "kategorie": "passive",
+    "parameterSlots": [],
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -63,7 +64,8 @@
       "conditions": []
     },
     "customScript": "",
-    "name": "Phalanx"
+    "name": "Phalanx",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +83,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768118055477,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!VtuKghvSfQPTYLtM"

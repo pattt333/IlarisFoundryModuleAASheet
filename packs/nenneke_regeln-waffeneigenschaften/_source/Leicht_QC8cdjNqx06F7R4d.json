@@ -7,6 +7,16 @@
     "foundryScript": "",
     "text": "Erhöht deine INI um +X.",
     "kategorie": "actor_modifier",
+    "parameterSlots": {
+      "0": {
+        "name": "actorIniMod",
+        "type": "number",
+        "label": "Actor INI Mod",
+        "usage": "actorModifiers.modifiers.{{index}}.value",
+        "defaultValue": null,
+        "required": true
+      }
+    },
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -62,7 +72,7 @@
       "modifiers": {
         "0": {
           "property": "ini",
-          "mode": "augment",
+          "mode": "actionAugment",
           "value": 1
         }
       },
@@ -88,7 +98,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767787549262,
+    "modifiedTime": 1768120862065,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!QC8cdjNqx06F7R4d"

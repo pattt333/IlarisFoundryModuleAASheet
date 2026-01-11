@@ -6,7 +6,8 @@
     "sephrastoScript": "",
     "foundryScript": "",
     "text": "Proben auf Einschüchtern sind mit dieser Waffe um +X erleichtert.",
-    "kategorie": "modifier",
+    "kategorie": "passive",
+    "parameterSlots": [],
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -82,7 +83,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767787349342,
+    "modifiedTime": 1768117312931,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!DmU4mBDg5Bkv5dKN"

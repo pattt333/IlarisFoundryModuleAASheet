@@ -7,6 +7,16 @@
     "foundryScript": "",
     "text": "Ein Reittier ist Voraussetzung für den Reiterkampfstil. Angriffe mit dem Reittier sind um +4 erleichtert, wenn das Reittier in einer höheren Größenklasse als das Ziel ist.",
     "kategorie": "actor_modifier",
+    "parameterSlots": {
+      "0": {
+        "name": "",
+        "type": "number",
+        "label": "",
+        "usage": "",
+        "defaultValue": null,
+        "required": false
+      }
+    },
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -88,7 +98,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767787605857,
+    "modifiedTime": 1768118077910,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!eXSTj4pyJzJOOGEd"

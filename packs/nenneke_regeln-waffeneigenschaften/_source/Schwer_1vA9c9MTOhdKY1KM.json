@@ -6,7 +6,17 @@
     "sephrastoScript": "modifyINI(-getEigenschaftParam(0))",
     "foundryScript": "",
     "text": "Verringert deine INI um -X.",
-    "kategorie": "modifier",
+    "kategorie": "actor_modifier",
+    "parameterSlots": {
+      "0": {
+        "name": "actorIniMod",
+        "type": "number",
+        "label": "Actor INI Mod",
+        "usage": "actorModifiers.modifiers.{{index}}.value",
+        "defaultValue": null,
+        "required": false
+      }
+    },
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -59,11 +69,18 @@
       }
     },
     "actorModifiers": {
-      "modifiers": [],
+      "modifiers": {
+        "0": {
+          "property": "ini",
+          "mode": "actionNegAugment",
+          "value": 1
+        }
+      },
       "conditions": []
     },
     "customScript": "",
-    "name": "Schwer"
+    "name": "Schwer",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +98,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768120876525,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!1vA9c9MTOhdKY1KM"

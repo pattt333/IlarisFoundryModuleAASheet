@@ -6,7 +6,7 @@
     "sephrastoScript": "",
     "foundryScript": "",
     "text": "",
-    "kategorie": "modifier",
+    "kategorie": "wielding",
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -23,12 +23,21 @@
     "wieldingRequirements": {
       "hands": 1,
       "ignoreNebenMalus": false,
-      "noRider": false,
+      "noRider": true,
       "requiresRider": false,
       "penalties": {
-        "hauptOnly": {},
-        "nebenOnly": {},
-        "nebenWithoutExemption": {}
+        "hauptOnly": {
+          "at": null,
+          "vt": null
+        },
+        "nebenOnly": {
+          "at": null,
+          "vt": null
+        },
+        "nebenWithoutExemption": {
+          "at": null,
+          "vt": null
+        }
       },
       "condition": {
         "type": "attribute_check",
@@ -63,7 +72,8 @@
       "conditions": []
     },
     "customScript": "",
-    "name": "kein Reittier"
+    "name": "kein Reittier",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +91,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768080078689,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!8dl7B4vCCTYWfm9h"

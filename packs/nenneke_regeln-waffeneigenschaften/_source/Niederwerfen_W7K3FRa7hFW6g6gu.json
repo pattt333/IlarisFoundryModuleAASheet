@@ -6,7 +6,8 @@
     "sephrastoScript": "",
     "foundryScript": "",
     "text": "Schon gewöhnliche Angriffe haben den Effekt des Manövers Niederwerfen. In Klammern befinden sich - falls relevant - der Modifikator der Gegenprobe und die Ansage des Manövers.",
-    "kategorie": "modifier",
+    "kategorie": "passive",
+    "parameterSlots": [],
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -63,7 +64,8 @@
       "conditions": []
     },
     "customScript": "",
-    "name": "Niederwerfen"
+    "name": "Niederwerfen",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +83,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768118041847,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!W7K3FRa7hFW6g6gu"

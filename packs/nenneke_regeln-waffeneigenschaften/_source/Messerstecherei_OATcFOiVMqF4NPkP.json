@@ -6,7 +6,8 @@
     "sephrastoScript": "",
     "foundryScript": "",
     "text": "Waffen mit dieser Eigenschaft verursachen in Kampfgetümmel Nahkämpfen +1W6 TP. Zusätzlich bei Fern-\nkampfwaffen mit dieser Eigenschaft beträgt die Patzerchance für Schüsse ins Kampfgetümmel nur -1/-2 in Duellen/Kampfgetümmeln.",
-    "kategorie": "modifier",
+    "kategorie": "passive",
+    "parameterSlots": [],
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -82,7 +83,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767787725260,
+    "modifiedTime": 1768118036556,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!OATcFOiVMqF4NPkP"

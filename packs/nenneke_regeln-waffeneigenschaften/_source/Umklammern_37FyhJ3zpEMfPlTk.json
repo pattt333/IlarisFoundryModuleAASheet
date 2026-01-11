@@ -6,7 +6,17 @@
     "sephrastoScript": "",
     "foundryScript": "",
     "text": "Schon gewöhnliche Angriffe haben den Effekt des Manövers Umklammern. In Klammern befinden sich - falls relevant - der Modifikator der Gegenprobe und die Ansage des Manövers.",
-    "kategorie": "modifier",
+    "kategorie": "target_effect",
+    "parameterSlots": {
+      "0": {
+        "name": "",
+        "type": "number",
+        "label": "",
+        "usage": "targetEffect.resistCheck.defenderModifier",
+        "defaultValue": null,
+        "required": false
+      }
+    },
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -56,14 +66,16 @@
         "statusName": "",
         "duration": "",
         "icon": ""
-      }
+      },
+      "name": ""
     },
     "actorModifiers": {
       "modifiers": [],
       "conditions": []
     },
     "customScript": "",
-    "name": "Umklammern"
+    "name": "Umklammern",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +93,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768118164225,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!37FyhJ3zpEMfPlTk"

@@ -6,7 +6,8 @@
     "sephrastoScript": "getEigenschaftParam(0)",
     "foundryScript": "",
     "text": "Die Waffe hat eine Fernkampfoption. In Klammern ist der Name der Fernkampfoption angegeben",
-    "kategorie": "modifier",
+    "kategorie": "passive",
+    "parameterSlots": [],
     "modifiers": {
       "at": 0,
       "vt": 0,
@@ -63,7 +64,8 @@
       "conditions": []
     },
     "customScript": "",
-    "name": "Fernkampfoption"
+    "name": "Fernkampfoption",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +83,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768117322131,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!qloaQgIKZHebOIjT"

@@ -7,13 +7,14 @@
     "foundryScript": "",
     "text": "Die Waffe verursacht auch bei einer 2 einen Patzer. Dafür kann sie auch um Schilde herumschlagen, was Angriffe gegen Schildträger um +4 erleichtert.",
     "kategorie": "modifier",
+    "parameterSlots": [],
     "modifiers": {
       "at": 0,
       "vt": 0,
       "schaden": 0,
       "schadenFormula": "",
       "rw": 0,
-      "fumbleThreshold": null,
+      "fumbleThreshold": 2,
       "critThreshold": null,
       "ignoreCover": false,
       "ignoreArmor": false,
@@ -63,7 +64,8 @@
       "conditions": []
     },
     "customScript": "",
-    "name": "Unberechenbar"
+    "name": "Unberechenbar",
+    "beschreibung": ""
   },
   "effects": [],
   "folder": null,
@@ -81,7 +83,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785731861,
-    "modifiedTime": 1767785731861,
+    "modifiedTime": 1768118177817,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!qIItiL1UqwRAkjOg"
