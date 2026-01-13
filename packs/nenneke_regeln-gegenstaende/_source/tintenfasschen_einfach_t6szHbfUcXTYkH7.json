@@ -1,0 +1,39 @@
+{
+  "_id": "t6szHbfUcXTYkH7",
+  "_key": "!items!t6szHbfUcXTYkH7",
+  "name": "Tintenfässchen (einfach)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.2,
+    "gewicht": 0.2,
+    "preis": 2,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "249",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140728,
+    "modifiedTime": 1768336140728,
+    "lastModifiedBy": null
+  }
+}

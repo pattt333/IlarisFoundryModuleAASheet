@@ -1,0 +1,39 @@
+{
+  "_id": "6hUOR1G4rpHb6Tnm",
+  "_key": "!items!6hUOR1G4rpHb6Tnm",
+  "name": "Pfeffer",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.1,
+    "gewicht": 0.1,
+    "preis": 4.5,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "184",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140337,
+    "modifiedTime": 1768336140337,
+    "lastModifiedBy": null
+  }
+}

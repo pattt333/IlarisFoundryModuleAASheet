@@ -1,0 +1,39 @@
+{
+  "_id": "DBhGJ7XKbXQf1enf",
+  "_key": "!items!DBhGJ7XKbXQf1enf",
+  "name": "Becher",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.1,
+    "gewicht": 0.1,
+    "preis": 0.3,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "19",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139004,
+    "modifiedTime": 1768336139004,
+    "lastModifiedBy": null
+  }
+}

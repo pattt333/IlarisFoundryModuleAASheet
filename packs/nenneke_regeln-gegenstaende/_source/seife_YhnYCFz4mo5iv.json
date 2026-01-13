@@ -1,0 +1,39 @@
+{
+  "_id": "YhnYCFz4mo5iv",
+  "_key": "!items!YhnYCFz4mo5iv",
+  "name": "Seife",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.5,
+    "gewicht": 0.5,
+    "preis": 1,
+    "quantity": 1,
+    "text": "Seife wird in ganz Aventurien geschätzt, um den Schmutz von Arbeit und Straße von Körper und Kleidung zu entfernen. Sie ist ein leicht herzustellendes Produkt, das selbst in abgelegenen Ortschaften zu bekommen ist und in kaum einem Reisegepäck fehlt. Es gibt sie in edel, parfümiert und mit Blüten versetzt ebenso wie in sehr einfach mit groben Klümpchen zu kaufen, je nach Geldbeutel.\n\n Seifen lassen sich recht gut in Form schnitzen und teilweise werden edle Sorten in bestimmte Formen, z. B. Blumenblüten, geschnitten verkauft. Seifen müssen bei der Herstellung nach dem Sieden getrocknet werden und nehmen Wasser ausgesetzt wieder eine weiche Konsistenz an. Findige Phexgeweihte, Agenten und Schmuggler nutzen Seife gerne, um darin Nachrichten im Inneren eines aufgeschnittenen und dann mit etwas Wasser wieder zusammengeklebten Stücks zu schmuggeln. Auch um Abdrücke von Schlüsseln oder Siegelringen zu machen, um diese genauer nachmachen zu können, ist Seife sehr beliebt. Gerüchten zufolge ist ein Stück Seife in einem Tuch oder einer Socke auch als unangenehme, nicht tödliche Waffe nutzbar."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "211",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140474,
+    "modifiedTime": 1768336140474,
+    "lastModifiedBy": null
+  }
+}

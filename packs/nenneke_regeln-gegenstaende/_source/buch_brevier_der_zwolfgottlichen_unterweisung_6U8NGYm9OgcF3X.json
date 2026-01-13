@@ -1,0 +1,39 @@
+{
+  "_id": "6U8NGYm9OgcF3X",
+  "_key": "!items!6U8NGYm9OgcF3X",
+  "name": "Buch (Brevier der zwölfgöttlichen Unterweisung)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 75,
+    "quantity": 1,
+    "text": "So oder ähnlich beginnt das Brevier der zwölfgöttlichen Unterweisung. Es ist ein Buch, das den zwölfgöttlichen Glauben in gut verständlicher Sprache für alle zugänglich zusammenfasst. \n\nEs gibt eine Vielzahl verschiedener Versionen des Breviers, die sich nicht nur in der Buchqualität und der Verwendung von Illustrationen unterscheiden, sondern auch inhaltlich deutliche Unterschiede aufweisen können. In jeder Fassung des Breviers wird die Schöpfung der Welt beschrieben, anschließend folgt ein Kapitel zu jedem der zwölf Götter und ihren halbgöttlichen Kinder. Alle weiteren Kapitel hängen von der Version des Breviers ab, viele Ausgaben beinhalten Gebete und Abschnitte über die wichtigsten Heiligen, aber auch Texte über gutes, götterfürchtiges Verhalten sind häufig. Im Mittelreich gibt es mehrere Varianten mit einem Vorwort eines Provinzherrschers oder Kaisers und ergänzt um unterweisende Abhandlungen über Untertanentreue. \n\nVerbreitet ist das Buch besonders dort, wo Geweihte viel Umgang mit dem einfachen Volk haben, besonders in den Kirchen von Ingerimm, Travia und Peraine, in einigen Regionen auch von Efferd. Die Geweihten von Praios, Hesinde und Boron schätzen es ebenfalls, besonders für Dorfgeweihte, reisende Prediger und ihre Novizen zum Lesenlernen. Wenig Verwendung findet es bei den Geweihten von Tsa, Firun und Phex, die sich ohnehin wenig für niedergeschriebene Regularien interessieren. In allen anderen Kirchen gibt es in der Verwendung große regionale Unterschiede. \n\nBesonders beliebt ist es bei Missionaren und reisenden Geweihten aller Kirchen, die immer wieder Nicht-Zwölfgöttergläubigen begegnen. Viele Akoluthen, aber auch fromme Bürger nennen oft ein Brevier ihr Eigen, um ihm Gebete, Lebensweisheiten und -regeln zu entnehmen. Ein Brevier der zwölfgöttlichen Unterweisung lässt sich im Mittel- und Horasreich in jeder Stadt kaufen, besonders in gedruckter Form ist es weit verbreitet. Wer jedoch eine bestimmte Version will, muss eventuell eine Suche auf sich nehmen. \n\nGerade nach der Zerstörung von Arivor und der Zeit des Sternenfalls machen sich die Zwölfgöttergläubigen große Sorgen um die Zukunft, sodass das Brevier wieder zum Verkaufsschlager geworden ist und reißenden Absatz findet. Immerhin wollen sich viele an die Gebote der Zwölfgötter halten, um nicht in die Fänge des Namenlosen zu geraten. Und das Brevier widmet sich in fast allen Ausgaben auch dem Namenlosen, seiner Gefangennahme und seiner möglichen Befreiung, wenn man sich nicht an die Gebote der alveranischen Götter hält."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "38",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139143,
+    "modifiedTime": 1768336139143,
+    "lastModifiedBy": null
+  }
+}

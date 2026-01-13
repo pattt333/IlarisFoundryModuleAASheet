@@ -1,0 +1,39 @@
+{
+  "_id": "4sRIkyWkL2y8p7",
+  "_key": "!items!4sRIkyWkL2y8p7",
+  "name": "Pfeil",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.05,
+    "gewicht": 0.05,
+    "preis": 0.1,
+    "quantity": 1,
+    "text": "Pfeil für Bögen"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "185",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140342,
+    "modifiedTime": 1768336140342,
+    "lastModifiedBy": null
+  }
+}

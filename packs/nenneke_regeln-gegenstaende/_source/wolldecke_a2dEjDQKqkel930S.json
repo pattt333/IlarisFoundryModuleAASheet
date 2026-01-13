@@ -1,0 +1,39 @@
+{
+  "_id": "a2dEjDQKqkel930S",
+  "_key": "!items!a2dEjDQKqkel930S",
+  "name": "Wolldecke",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1.5,
+    "gewicht": 1.5,
+    "preis": 2,
+    "quantity": 1,
+    "text": "Grobe und feine Wolle – nichts wärmt besser als das überschüssige Fell von Schaf und Ziege. Die meisten handelsüblichen Wolldecken sind groß genug, dass sich der Durchschnittsaventurier komplett darin einhüllen kann. Aber auch kleinere Decken sind gerne gesehen, etwa als Hausschmuck oder Sitzteppich. Je nach Qualität und Dicke der verwendeten Wolle kommt die Decke sehr günstig oder unheimlich teuer über die Markttheke. Wer sich dennoch keine leisten kann, greift auch gern zu Tuch um sich einzuhüllen, oder macht sich eine Decke aus Flicken. Gerade in kühleren Gebieten Aventuriens besitzt jeder, nicht bloß zur Reiseausstattung, eine oder mehrere Wolldecken. Dagegen sollen oft Bewohner wärmerer Gegenden darüber spotten, weshalb man einen dickpelzigen Teppich mit sich herum schleppen sollte.\n\n Auf Reisen ist aber jeder dankbar, wenn er auf weicherem Untergrund als dem kühlen Waldboden oder dem stechenden Stroh im Stall nächtigen oder sich in der Kälte der Nacht zudecken kann. Eine Wolldecke hat schon so manchen Aventurier vor dem Kältetod bewahrt und bei den Fjarningern ist eine Frau mit einer guten und warmen Wolldecke reicher als ein Mann mit 5 Stein Gold. Die besten Wolldecken werden auf den Zyklopeninseln angefertigt. Hier verwendet man gerne die Wolle des Phraischafs, das für eine besonders gute Qualität bekannt ist. Es schützt auch deutlich besser vor der Kälte, aber es ist auch empfindlicher als einfache Wolle."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "266",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140827,
+    "modifiedTime": 1768336140827,
+    "lastModifiedBy": null
+  }
+}

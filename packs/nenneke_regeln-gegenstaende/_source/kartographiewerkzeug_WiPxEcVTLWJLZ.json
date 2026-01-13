@@ -1,0 +1,39 @@
+{
+  "_id": "WiPxEcVTLWJLZ",
+  "_key": "!items!WiPxEcVTLWJLZ",
+  "name": "Kartographiewerkzeug",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 50,
+    "quantity": 1,
+    "text": "Reisende Abenteurer, Gelehrte und Seeleute, aber auch Diebe und Gesetzeshüter kommen immer wieder in die Situation, eine Karte anfertigen zu wollen. Während sich eine schnelle Übersichtsskizze einfach erstellen lässt, werden für eine gute Karte neben Papier und Schreibwerkzeug noch einige andere Werkzeuge benötigt. Vorwiegend sind dies Lineal, Zirkel, verschiedenfarbige Tinten und eine gute Lichtquelle, außerdem ein Messer. Letzteres dient dazu, Feder oder Stift immer angespitzt zu halten, damit jeder Strich mit Präzision durchgeführt werden kann. Zirkel und Lineal dienen dazu, Entfernungen und Abstände abzumessen und zu übertragen, damit der Maßstab der Karte in sich stimmig ist.\n\n Aventurische Gelehrte streiten sich, wie eine gute Karte auszusehen hat. Wo der Mittelpunkt einer Weltkarte sein soll oder welche Seite der Karte nach oben zeigt, ob die Karte also genordet oder gesüdet werden soll, wird immer wieder heftig diskutiert. Üblich ist es jedoch meistens, den Südpfeil der Windrose stärker zu betonen als den Nordpfeil, schließlich zeigt der aventurische Kompass auch nach Süden."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "131",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139813,
+    "modifiedTime": 1768336139813,
+    "lastModifiedBy": null
+  }
+}

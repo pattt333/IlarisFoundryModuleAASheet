@@ -1,0 +1,39 @@
+{
+  "_id": "2WQTVXxGDWrpCO",
+  "_key": "!items!2WQTVXxGDWrpCO",
+  "name": "Truhe (Schatztruhe)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 6,
+    "gewicht": 6,
+    "preis": 25,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "254",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140758,
+    "modifiedTime": 1768336140758,
+    "lastModifiedBy": null
+  }
+}

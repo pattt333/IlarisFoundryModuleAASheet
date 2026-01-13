@@ -1,0 +1,39 @@
+{
+  "_id": "wZFT8uCyOEiVx",
+  "_key": "!items!wZFT8uCyOEiVx",
+  "name": "Astrolabium",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 3,
+    "gewicht": 3,
+    "preis": 250,
+    "quantity": 1,
+    "text": "Ein Astrolabium ist ein komplexes Instrument, mit dem Astrologen Kalenderdaten, die Uhrzeit, den Stand der Gestirne, Auf- und Untergang dieser sowie deren zukünftigen Lauf am Himmel berechnen können. \n\nErfunden haben soll es vor Jahrhunderten Niobara von Anchopal, die berühmteste Sternkundlerin Aventuriens. Verwendet wird es vor allem von Gelehrten, die sich der Sternkunde widmen, Zauberkundigen, die den idealen Sternenstand für Rituale bestimmen wollen, und von echten wie selbsternannten Zukunftsdeutern. Auch in der Seefahrt findet es hin und wieder Anwendung zur Bestimmung der eigenen Position. \n\nEin Astrolabium besteht aus mehreren gegeneinander drehbaren Scheiben und Zeigern. Diese werden zunächst auf das aktuelle oder zu berechnende Datum eingestellt, dann auf ein gut bestimmbares Gestirn wie Sonne, Mond oder den Nordstern. Anschließend lassen sich die entsprechenden Positionen der Wandelsterne, des Zwölfkreises und weiterer Sternbilder bestimmen. Dabei lässt sich erkennen, wie weit die Gestirne über dem Horizont stehen, ob sie auf- oder absteigen und wie sie sich in nä- herer Zukunft bewegen werden. Nebenbei kann man au- ßerdem die aktuelle Uhrzeit erkennen. \n\nNeben den flachen Astrolabien gibt es auch sphärenförmige, bei denen statt der Scheiben und Zeiger einzelne Sterne und Sternbilder auf kreisförmigen Bahnen um Dere und einander bewegt werden können. Diese Astrolabien werden auch als Armillarsphären bezeichnet. Sie sind für den Laien deutlich einfacher zu verwenden, da sie weniger komplexe Berechnungen zu Beginn benö- tigen und optisch sehr viel anschaulicher sind, decken aber nach Meinung einiger Astrologen nicht alle Möglichkeiten ab. Für Wahrsagerei aus den Sternen ist diese Version jedoch beliebter, schon weil sie gegenüber Ratsuchenden mehr Eindruck macht. \n\nSeit dem Sternenfall sind Astrolabien nicht mehr zuverlässig. Eine Bestimmung des aktuellen Sternenhimmels ist noch möglich, doch alles, was zukünftige Ereignisse am Himmel betrifft, entspricht häufig nicht den angezeigten Ergebnissen. Wenige Tage im Voraus ist die Anzeige häufig noch korrekt, aber nicht bis ins Detail verlässlich. \n\nUm entsprechende Berechnungen wieder zuverlässig aufnehmen zu können, wird bereits eifrig geforscht. Bis die Veränderungen des Himmels in den Astrolabien der Wissenschaft abgebildet werden können und daraus wieder sichere Forschungsergebnisse entstehen, wird jedoch noch einige Zeit ins Land gehen. Manche bezweifeln sogar, dass dies jemals wieder der Fall sein wird. Gestirnverläufe der Vergangenheit lassen sich jedoch immer noch korrekt abbilden. \n\nVerbreitet sind Astrolabien in ganz Aventurien, überall dort, wo Sternkunde betrieben wird, besonders jedoch in den Tulamidenlanden, im Horasreich, in Tempeln von Hesinde und Phex und bei Propheten."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "17",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336138993,
+    "modifiedTime": 1768336138993,
+    "lastModifiedBy": null
+  }
+}

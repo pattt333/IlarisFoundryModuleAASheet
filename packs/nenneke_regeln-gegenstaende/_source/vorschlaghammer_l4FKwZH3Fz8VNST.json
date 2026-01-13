@@ -1,0 +1,39 @@
+{
+  "_id": "l4FKwZH3Fz8VNST",
+  "_key": "!items!l4FKwZH3Fz8VNST",
+  "name": "Vorschlaghammer",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 5,
+    "gewicht": 5,
+    "preis": 30,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "261",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140800,
+    "modifiedTime": 1768336140800,
+    "lastModifiedBy": null
+  }
+}

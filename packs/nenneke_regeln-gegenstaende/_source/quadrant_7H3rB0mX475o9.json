@@ -1,0 +1,39 @@
+{
+  "_id": "7H3rB0mX475o9",
+  "_key": "!items!7H3rB0mX475o9",
+  "name": "Quadrant",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.75,
+    "gewicht": 0.75,
+    "preis": 70,
+    "quantity": 1,
+    "text": "Nur wenige Auserwählte wissen um die Geheimnisse, die am fernen Himmel über Dere kreisen. Doch hat sich so manche Erkenntnis eines Astrologen auch in die Köpfe der aventurischen Allgemeinheit geschlichen, sodass ein Apparat wie der Quadrant nicht mehr nur ein Dasein in Magierlaboren und Sternwarten fristet, sondern sich auf vielen Reisen zum unverzichtbaren Gefährten gemausert hat.\n\n Der Quadrant ist ein Winkelmesser, meist aus Holz, Messing oder ähnlichen Metallen. Er bildet einen Viertelkreis, an dem nebst Peilvorrichtungen ein bewegliches Lot befestigt ist.\n\n Besonders in Brabak wird der Quadrant oft hergestellt, da er dort zur magischen Praxis in den Magierakademie verwendet wird. Den größten Handel mit Quadranten findet man jedoch in Vinsalt. Hier steht die bekannteste Werkstatt zur Anfertigung astrologisch wertvoller Gerätschaften unter der Führung des Obermechanikus Leuerich Kolrean, von der aus in alle Länder Aventuriens geliefert wird. Werkzeuge aus Kolreans Sternenschmiede gelten schon seit einigen Jahren als hohes Statussymbol und glänzen durch unübertroffene Qualität. Sogar Adlige lassen sich zum Kauf eines solchen Werkzeugs verleiten, und sei es nur aus Prestigegründen.\n\n In der Sternenkunde findet der Quadrant Anwendung, um Höhe und Position des Sonnen- und Sternenstands zu bestimmen. Durch Berechnung weiß der Astrologe etwa, wie weit ein bestimmter Stern von einem anderen entfernt liegt oder wie nah ein Himmelskörper zu Dere ist. Den meisten Aventuriern bleibt es ein großes Rätsel, wie der Quadrant genau funktioniert, denn unverständlich ist ihnen, wie man so viel Weisheit aus einem so simplen Gegenstand ziehen kann. Viele meinen gar, es wäre eine besondere Art von Hellseherei im Spiel, wenn mit Hilfe des Quadranten ein anstehender Sternenschnuppenflug vorausgesagt wird. Manch einer glaubt dagegen auch, es wäre bloß ein Gerät, welches sich gut in der Hand eines Redners macht, um seiner Philosophie über die Geschehnisse außerhalb Deres mehr Ausdruck zu verleihen.\n\n Allerdings erfreut sich der Quadrant großer Beliebtheit bei Seefahrern, insbesondere Navigatoren. In der Ausrüstung einer Heldengruppe, die vorhat, die weiten Ozeane zu bereisen, sollte der Quadrant nicht fehlen. Hat der Navigator eine Schulung im Bereich der Sternkunde erfahren, vermag er aus der Position der Himmelskörper und der auf dem Quadranten abgelesenen Winkel, den genauen Standort zu ermitteln und so seinen Kurs auf See zu halten, oder notfalls zu ändern. Hierzu muss er allerdings weitreichende Kenntnisse über den Stand der Sonne und Sterne zu bestimmten Zeiten an bestimmten Orten haben.\n\n Das Messinstrument wird auch gerne in Kombination mit einem Astrolabium verwendet, um noch genauere Messergebnisse zu erhalten."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "191",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140373,
+    "modifiedTime": 1768336140373,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "EjqRNMK2njsLz",
+  "_key": "!items!EjqRNMK2njsLz",
+  "name": "Laterne",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.5,
+    "gewicht": 0.5,
+    "preis": 8,
+    "quantity": 1,
+    "text": "Laternen sind in ganz Aventurien bekannt und geschätzt, denn sie schützen das Licht in ihrem Inneren vor Regen und Windstößen und die Umgebung vor ungeplantem Entzünden. Besonders großer Beliebtheit erfreuen sie sich in Mittel- und Nordaventurien, im Bergbau und auf See, die Öllaterne auch in den Tulamidenlanden.\n\n Die einfachste Version ist die Kerzenlaterne, bei der die Lichtquelle in der Lampe eine Kerze ist. Deutlich heller, aber auch etwas teurer, ist die Öllaterne, die einer Öllampe mit Schutzgehäuse entspricht. Beide Varianten haben jedoch einen Nachteil: Das Licht strahlt von der Laterne aus gleichmäßig in alle Richtungen. Um es zu löschen, muss die Laterne je nach Bauart erst abgesetzt und geöffnet werden. Ein darübergeworfener Mantel verbirgt das Licht zwar, droht aber anzukokeln.\n\n Um diesen Missstand zu beheben, wurde die Blendlaterne erfunden. Diese hat ein Metallgehäuse mit Schiebern, die sich über die Lichtöffnungen bewegen lassen und so das Licht auf einen Bereich fokussieren oder komplett abblenden. Es ist ungewiss, ob sie ursprünglich von Bergleuten erdacht wurde, um gezielt bestimmte Bereiche ausleuchten zu können, oder von phexgefälligen Handwerkern, die es mit dem Eigentum anderer Leute nicht so genau nahmen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "154",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140119,
+    "modifiedTime": 1768336140119,
+    "lastModifiedBy": null
+  }
+}

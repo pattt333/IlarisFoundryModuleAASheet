@@ -1,0 +1,39 @@
+{
+  "_id": "RE0w0QTPvFtbEHp",
+  "_key": "!items!RE0w0QTPvFtbEHp",
+  "name": "Laute",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 2,
+    "gewicht": 2,
+    "preis": 150,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "155",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140125,
+    "modifiedTime": 1768336140125,
+    "lastModifiedBy": null
+  }
+}

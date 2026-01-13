@@ -1,0 +1,3954 @@
+[
+  {
+    "_id": "1",
+    "name": "ABAKUS",
+    "description": "ABAKUS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 500.0
+  },
+  {
+    "_id": "2",
+    "name": "ABBLENDLATERNE",
+    "description": "ABBLENDLATERNE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 15,
+    "weight": 1500.0
+  },
+  {
+    "_id": "3",
+    "name": "ALCHIMISTENLABOR",
+    "description": "ALCHIMISTENLABOR_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5000,
+    "weight": 1000000.0
+  },
+  {
+    "_id": "4",
+    "name": "AMBOSS_GROSS",
+    "description": "AMBOSS_GROSS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 300,
+    "weight": 350000.0
+  },
+  {
+    "_id": "5",
+    "name": "AMBOSS_KLEIN",
+    "description": "AMBOSS_KLEIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 25000.0
+  },
+  {
+    "_id": "6",
+    "name": "AMBOSS_REISEAMBOSS",
+    "description": "AMBOSS_REISEAMBOSS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 250,
+    "weight": 150000.0
+  },
+  {
+    "_id": "7",
+    "name": "AMULETT_BRONZE",
+    "description": "AMULETT_BRONZE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7.5,
+    "weight": 50.0
+  },
+  {
+    "_id": "8",
+    "name": "AMULETT_GOLD",
+    "description": "AMULETT_GOLD_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 107,
+    "weight": 100.0
+  },
+  {
+    "_id": "9",
+    "name": "AMULETT_SILBER",
+    "description": "AMULETT_SILBER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 12,
+    "weight": 50.0
+  },
+  {
+    "_id": "10",
+    "name": "ANGEL_10_SCHRITT_ANGELSCHNUR",
+    "description": "ANGEL_10_SCHRITT_ANGELSCHNUR_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 500.0
+  },
+  {
+    "_id": "11",
+    "name": "ARCHAISCHES_LABOR",
+    "description": "ARCHAISCHES_LABOR_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 30000.0
+  },
+  {
+    "_id": "12",
+    "name": "ARMILLARSPHAERE",
+    "description": "ARMILLARSPHAERE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 150,
+    "weight": 3500.0
+  },
+  {
+    "_id": "13",
+    "name": "ARMREIF_BRONZE",
+    "description": "ARMREIF_BRONZE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5.5,
+    "weight": 50.0
+  },
+  {
+    "_id": "14",
+    "name": "ARMREIF_GOLD",
+    "description": "ARMREIF_GOLD_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 105,
+    "weight": 100.0
+  },
+  {
+    "_id": "15",
+    "name": "ARMREIF_SILBER",
+    "description": "ARMREIF_SILBER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 50.0
+  },
+  {
+    "_id": "16",
+    "name": "ARMREIF_DER_WILLENSSTAERKE",
+    "description": "ARMREIF_DER_WILLENSSTAERKE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1050,
+    "weight": 200.0
+  },
+  {
+    "_id": "17",
+    "name": "ASTROLABIUM",
+    "description": "ASTROLABIUM_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 250,
+    "weight": 3000.0
+  },
+  {
+    "_id": "18",
+    "name": "BADEOEL",
+    "description": "BADEOEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 100,
+    "weight": 1000.0
+  },
+  {
+    "_id": "19",
+    "name": "BECHER",
+    "description": "BECHER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.3,
+    "weight": 100.0
+  },
+  {
+    "_id": "20",
+    "name": "BEIL",
+    "description": "BEIL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 750.0
+  },
+  {
+    "_id": "21",
+    "name": "BERNSTEINBRILLE",
+    "description": "BERNSTEINBRILLE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1000,
+    "weight": 100.0
+  },
+  {
+    "_id": "22",
+    "name": "BESEN",
+    "description": "BESEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 750.0
+  },
+  {
+    "_id": "23",
+    "name": "BIER_KLEINES_FAESSCHEN",
+    "description": "BIER_KLEINES_FAESSCHEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.16,
+    "weight": 2000.0
+  },
+  {
+    "_id": "24",
+    "name": "BLUTEGEL",
+    "description": "BLUTEGEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.3,
+    "weight": 1.0
+  },
+  {
+    "_id": "25",
+    "name": "BOLTANKARTENSET_PAPIER",
+    "description": "BOLTANKARTENSET_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 200.0
+  },
+  {
+    "_id": "26",
+    "name": "BOLTANKARTENSET_PAPIER_GEZINKT",
+    "description": "BOLTANKARTENSET_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 40,
+    "weight": 200.0
+  },
+  {
+    "_id": "27",
+    "name": "BOLTANKARTENSET_STOFF",
+    "description": "BOLTANKARTENSET_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 250.0
+  },
+  {
+    "_id": "28",
+    "name": "BOLTANKARTENSET_STOFF_GEZINKT",
+    "description": "BOLTANKARTENSET_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 250.0
+  },
+  {
+    "_id": "29",
+    "name": "BOLZEN",
+    "description": "BOLZEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.1,
+    "weight": 100.0
+  },
+  {
+    "_id": "30",
+    "name": "BRATSPIESS_EISEN",
+    "description": "BRATSPIESS_EISEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 16,
+    "weight": 3000.0
+  },
+  {
+    "_id": "31",
+    "name": "BRECHEISEN",
+    "description": "BRECHEISEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 26,
+    "weight": 5000.0
+  },
+  {
+    "_id": "32",
+    "name": "BRECHSTANGE",
+    "description": "BRECHEISEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 38,
+    "weight": 6000.0
+  },
+  {
+    "_id": "33",
+    "name": "BRENNGLAS",
+    "description": "BRENNGLAS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 65,
+    "weight": 100.0
+  },
+  {
+    "_id": "34",
+    "name": "BRETTSPIEL",
+    "description": "BRETTSPIEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 1000.0
+  },
+  {
+    "_id": "35",
+    "name": "BROTBEUTEL_GROSS",
+    "description": "BROTBEUTEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.6,
+    "weight": 100.0
+  },
+  {
+    "_id": "36",
+    "name": "BROTBEUTEL_KLEIN",
+    "description": "BROTBEUTEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.6,
+    "weight": 50.0
+  },
+  {
+    "_id": "37",
+    "name": "BUCH_ANNALEN_DES_GOETTERALTERS",
+    "description": "BUCH_ANNALEN_DES_GOETTERALTERS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 500,
+    "weight": 2000.0
+  },
+  {
+    "_id": "38",
+    "name": "BUCH_BREVIER_DER_ZWOELFGOETTLICHEN_UNTERWEISUNG",
+    "description": "BUCH_BREVIER_DER_ZWOELFGOETTLICHEN_UNTERWEISUNG_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 75,
+    "weight": 1000.0
+  },
+  {
+    "_id": "39",
+    "name": "BUCH_CODEX_ALBYRICUS",
+    "description": "BUCH_CODEX_ALBYRICUS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 500,
+    "weight": 1000.0
+  },
+  {
+    "_id": "40",
+    "name": "BUCH_ENCYCLOPAEDIA_MAGICA_1_BAND",
+    "description": "BUCH_ENCYCLOPAEDIA_MAGICA_1_BAND_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 800,
+    "weight": 2000.0
+  },
+  {
+    "_id": "41",
+    "name": "BUCH_GROSSER_AVENTURISCHER_ATLAS",
+    "description": "BUCH_GROSSER_AVENTURISCHER_ATLAS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1200,
+    "weight": 3000.0
+  },
+  {
+    "_id": "42",
+    "name": "BUCH_HERBARIUM_KUSLIKUM",
+    "description": "BUCH_HERBARIUM_KUSLIKUM_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 250,
+    "weight": 1000.0
+  },
+  {
+    "_id": "43",
+    "name": "BUCH_HILFFREYCHER_LEYTFADEN_DES_WANDERNDEN_ADEPTEN",
+    "description": "BUCH_HILFFREYCHER_LEYTFADEN_DES_WANDERNDEN_ADEPTEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 150,
+    "weight": 1000.0
+  },
+  {
+    "_id": "44",
+    "name": "BUCH_PREMS_TIERLEBEN",
+    "description": "BUCH_PREMS_TIERLEBEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 250,
+    "weight": 1000.0
+  },
+  {
+    "_id": "45",
+    "name": "BUCH_VADEMECUM_FUER_DAS_WAFFENHANDWERK",
+    "description": "BUCH_VADEMECUM_FUER_DAS_WAFFENHANDWERK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 150,
+    "weight": 1000.0
+  },
+  {
+    "_id": "46",
+    "name": "BUCH_WIE_MAN_KAEMPFT_REITET_UND_BIER_TRINKT",
+    "description": "BUCH_WIE_MAN_KAEMPFT_REITET_UND_BIER_TRINKT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 70,
+    "weight": 750.0
+  },
+  {
+    "_id": "47",
+    "name": "BUERSTE",
+    "description": "BUERSTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4,
+    "weight": 250.0
+  },
+  {
+    "_id": "48",
+    "name": "CHIRURGISCHE_INSTRUMENTE",
+    "description": "CHIRURGISCHE_INSTRUMENTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 80,
+    "weight": 1500.0
+  },
+  {
+    "_id": "49",
+    "name": "CHIRURGISCHE_INSTRUMENTE_HOCHWERTIGES_INSTRUMENTARIUM",
+    "description": "CHIRURGISCHE_INSTRUMENTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 80,
+    "weight": 1500.0
+  },
+  {
+    "_id": "50",
+    "name": "DIETRICHE",
+    "description": "DIETRICHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 250.0
+  },
+  {
+    "_id": "51",
+    "name": "DIETRICHSET_6_STUECK",
+    "description": "DIETRICHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 50,
+    "weight": 1500.0
+  },
+  {
+    "_id": "52",
+    "name": "DREHLEIER",
+    "description": "DREHLEIER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 2000.0
+  },
+  {
+    "_id": "53",
+    "name": "DREIZACK",
+    "description": "DREIZACK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 50,
+    "weight": 2000.0
+  },
+  {
+    "_id": "54",
+    "name": "DRESCHFLEGEL",
+    "description": "DRESCHFLEGEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 15,
+    "weight": 1500.0
+  },
+  {
+    "_id": "55",
+    "name": "EDELSTEIN_AMETHIST",
+    "description": "EDELSTEIN_AMETHIST_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1.5,
+    "weight": 20.0
+  },
+  {
+    "_id": "56",
+    "name": "EDELSTEIN_AQUAMARIN",
+    "description": "EDELSTEIN_AQUAMARIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 18,
+    "weight": 20.0
+  },
+  {
+    "_id": "57",
+    "name": "EDELSTEIN_AVENTURIN",
+    "description": "EDELSTEIN_AVENTURIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2.5,
+    "weight": 20.0
+  },
+  {
+    "_id": "58",
+    "name": "EDELSTEIN_BERGKRISTALL",
+    "description": "EDELSTEIN_BERGKRISTALL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 20.0
+  },
+  {
+    "_id": "59",
+    "name": "EDELSTEIN_BERNSTEIN",
+    "description": "EDELSTEIN_BERNSTEIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 90,
+    "weight": 20.0
+  },
+  {
+    "_id": "60",
+    "name": "EDELSTEIN_DIAMANT",
+    "description": "EDELSTEIN_DIAMANT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 150,
+    "weight": 20.0
+  },
+  {
+    "_id": "61",
+    "name": "EDELSTEIN_GRANAT",
+    "description": "EDELSTEIN_GRANAT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 8,
+    "weight": 20.0
+  },
+  {
+    "_id": "62",
+    "name": "EDELSTEIN_GRUENE_JADE",
+    "description": "EDELSTEIN_GRUENE_JADE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 20.0
+  },
+  {
+    "_id": "63",
+    "name": "EDELSTEIN_KARNEOL",
+    "description": "EDELSTEIN_KARNEOL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 20.0
+  },
+  {
+    "_id": "64",
+    "name": "EDELSTEIN_LAPISLAZULI",
+    "description": "EDELSTEIN_LAPISLAZULI_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 17,
+    "weight": 20.0
+  },
+  {
+    "_id": "65",
+    "name": "EDELSTEIN_MONDSTEIN",
+    "description": "EDELSTEIN_MONDSTEIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 20.0
+  },
+  {
+    "_id": "66",
+    "name": "EDELSTEIN_ONYX",
+    "description": "EDELSTEIN_ONYX_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1.5,
+    "weight": 20.0
+  },
+  {
+    "_id": "67",
+    "name": "EDELSTEIN_OPAL",
+    "description": "EDELSTEIN_OPAL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 22,
+    "weight": 20.0
+  },
+  {
+    "_id": "68",
+    "name": "EDELSTEIN_PERLE",
+    "description": "EDELSTEIN_PERLE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 70,
+    "weight": 20.0
+  },
+  {
+    "_id": "69",
+    "name": "EDELSTEIN_RUBIN",
+    "description": "EDELSTEIN_RUBIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 140,
+    "weight": 20.0
+  },
+  {
+    "_id": "70",
+    "name": "EDELSTEIN_SAPHIR",
+    "description": "Keine Beschreibung",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 120,
+    "weight": 20.0
+  },
+  {
+    "_id": "71",
+    "name": "EDELSTEIN_SMARAGD",
+    "description": "EDELSTEIN_SAPHIR_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 110,
+    "weight": 20.0
+  },
+  {
+    "_id": "72",
+    "name": "EDELSTEIN_TOPAS",
+    "description": "EDELSTEIN_TOPAS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 20.0
+  },
+  {
+    "_id": "73",
+    "name": "EDELSTEIN_TUERKIS",
+    "description": "EDELSTEIN_TUERKIS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 15,
+    "weight": 20.0
+  },
+  {
+    "_id": "74",
+    "name": "ESSBESTECK",
+    "description": "ESSBESTECK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 100.0
+  },
+  {
+    "_id": "75",
+    "name": "FACKEL",
+    "description": "FACKEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 500.0
+  },
+  {
+    "_id": "76",
+    "name": "FALSCHER_BART",
+    "description": "FALSCHER_BART_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 200.0
+  },
+  {
+    "_id": "77",
+    "name": "FANFARE",
+    "description": "FANFARE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 50,
+    "weight": 1000.0
+  },
+  {
+    "_id": "78",
+    "name": "FEDERKIEL_GANS",
+    "description": "FEDERKIEL_GANS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.1,
+    "weight": 50.0
+  },
+  {
+    "_id": "79",
+    "name": "FEDERKIEL_PELIKAN",
+    "description": "FEDERKIEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.3,
+    "weight": 60.0
+  },
+  {
+    "_id": "80",
+    "name": "FEDERKIEL_SCHWAN",
+    "description": "FEDERKIEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.4,
+    "weight": 60.0
+  },
+  {
+    "_id": "81",
+    "name": "FEDERKIEL_STORCH",
+    "description": "FEDERKIEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.2,
+    "weight": 80.0
+  },
+  {
+    "_id": "82",
+    "name": "FEDERMESSER",
+    "description": "FEDERMESSER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 200.0
+  },
+  {
+    "_id": "83",
+    "name": "FEILE",
+    "description": "FEILE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 15,
+    "weight": 500.0
+  },
+  {
+    "_id": "84",
+    "name": "FEINWERKMECHANIKER_WERKZEUG",
+    "description": "FEINWERKMECHANIKER_WERKZEUG_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 100,
+    "weight": 500.0
+  },
+  {
+    "_id": "85",
+    "name": "FELDFLASCHE",
+    "description": "FELDFLASCHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 6,
+    "weight": 250.0
+  },
+  {
+    "_id": "86",
+    "name": "FERNROHR",
+    "description": "FERNROHR_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 150,
+    "weight": 1250.0
+  },
+  {
+    "_id": "87",
+    "name": "FERNROHR_GROSS",
+    "description": "FERNROHR_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1500,
+    "weight": 5000.0
+  },
+  {
+    "_id": "88",
+    "name": "FERNROHR_KLEIN",
+    "description": "FERNROHR_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 75,
+    "weight": 500.0
+  },
+  {
+    "_id": "89",
+    "name": "FERNROHR_ZUSAMMENSCHIEBBAR",
+    "description": "FERNROHR_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 400,
+    "weight": 1000.0
+  },
+  {
+    "_id": "90",
+    "name": "FESSELSEIL_HANF_10_SCHRITT",
+    "description": "FESSELSEIL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 250.0
+  },
+  {
+    "_id": "91",
+    "name": "FESSELSEIL_LEDER_10_SCHRITT",
+    "description": "FESSELSEIL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4,
+    "weight": 250.0
+  },
+  {
+    "_id": "92",
+    "name": "FEUERSTEIN_UND_STAHL",
+    "description": "FEUERSTEIN_UND_STAHL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 250.0
+  },
+  {
+    "_id": "93",
+    "name": "FIBEL_BRONZE",
+    "description": "FIBEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5.25,
+    "weight": 25.0
+  },
+  {
+    "_id": "94",
+    "name": "FIBEL_GOLD",
+    "description": "FIBEL_DESCRIPTIONg",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 55,
+    "weight": 50.0
+  },
+  {
+    "_id": "95",
+    "name": "FIBEL_SILBER",
+    "description": "FIBEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7.5,
+    "weight": 25.0
+  },
+  {
+    "_id": "96",
+    "name": "FIRNKLINGE",
+    "description": "FIRNKLINGE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1680,
+    "weight": 1000.0
+  },
+  {
+    "_id": "97",
+    "name": "FLASCHENZUG_MAX_250_STEIN",
+    "description": "FLASCHENZUG_MAX_250_STEIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 55,
+    "weight": 5000.0
+  },
+  {
+    "_id": "98",
+    "name": "FLEISCHERBEIL",
+    "description": "FLEISCHERBEIL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 25,
+    "weight": 1000.0
+  },
+  {
+    "_id": "99",
+    "name": "FLOETE",
+    "description": "FLOETE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 250.0
+  },
+  {
+    "_id": "100",
+    "name": "GELDBEUTEL",
+    "description": "GELDBEUTEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 50.0
+  },
+  {
+    "_id": "101",
+    "name": "GELDKATZE",
+    "description": "GELDBEUTEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 100.0
+  },
+  {
+    "_id": "102",
+    "name": "GOETTERFIGUERCHEN",
+    "description": "GOETTERFIGUERCHEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 200.0
+  },
+  {
+    "_id": "103",
+    "name": "GRAVURWERKZEUG",
+    "description": "GRAVURWERKZEUG_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 30,
+    "weight": 500.0
+  },
+  {
+    "_id": "104",
+    "name": "GUERTELTASCHE",
+    "description": "GUERTELTASCHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4,
+    "weight": 250.0
+  },
+  {
+    "_id": "105",
+    "name": "GWEN_PETRYL_STEIN_FAUSTGROSS",
+    "description": "GWEN_PETRYL_STEIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1000,
+    "weight": 750.0
+  },
+  {
+    "_id": "106",
+    "name": "GWEN_PETRYL_STEIN_FINGERKUPPENGROSS",
+    "description": "GWEN_PETRYL_STEIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 100,
+    "weight": 75.0
+  },
+  {
+    "_id": "107",
+    "name": "GWEN_PETRYL_STEIN_KOPFGROSS",
+    "description": "GWEN_PETRYL_STEIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10000,
+    "weight": 7500.0
+  },
+  {
+    "_id": "108",
+    "name": "HALSKETTE_BRONZE",
+    "description": "HALSKETTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 6.5,
+    "weight": 150.0
+  },
+  {
+    "_id": "109",
+    "name": "HALSKETTE_GOLD",
+    "description": "HALSKETTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 157,
+    "weight": 300.0
+  },
+  {
+    "_id": "110",
+    "name": "HALSKETTE_SILBER",
+    "description": "HALSKETTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 22,
+    "weight": 150.0
+  },
+  {
+    "_id": "111",
+    "name": "HAMMER",
+    "description": "HAMMER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 500.0
+  },
+  {
+    "_id": "112",
+    "name": "HANDAXT",
+    "description": "HANDAXT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 750.0
+  },
+  {
+    "_id": "113",
+    "name": "HANDBOHRER",
+    "description": "HANDBOHRER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7,
+    "weight": 1000.0
+  },
+  {
+    "_id": "114",
+    "name": "HANDHARFE",
+    "description": "HANDHARFE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 100,
+    "weight": 1000.0
+  },
+  {
+    "_id": "115",
+    "name": "HANDSAEGE",
+    "description": "HANDSAEGE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 500.0
+  },
+  {
+    "_id": "116",
+    "name": "HANDSPIEGEL",
+    "description": "HANDSPIEGEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 60,
+    "weight": 500.0
+  },
+  {
+    "_id": "117",
+    "name": "HAENGEMATTE",
+    "description": "HAENGEMATTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 2000.0
+  },
+  {
+    "_id": "119",
+    "name": "HEXENKUECHE",
+    "description": "HEXENKUECHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1000,
+    "weight": 200000.0
+  },
+  {
+    "_id": "120",
+    "name": "HOLZFAELLERAXT",
+    "description": "HOLZFAELLERAXT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 80,
+    "weight": 1500.0
+  },
+  {
+    "_id": "121",
+    "name": "HOLZSCHALE",
+    "description": "HOLZSCHALE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.8,
+    "weight": 200.0
+  },
+  {
+    "_id": "122",
+    "name": "HOLZTELLER",
+    "description": "HOLZTELLER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.9,
+    "weight": 250.0
+  },
+  {
+    "_id": "123",
+    "name": "JONGLIERBALL",
+    "description": "JONGLIERBALL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 200.0
+  },
+  {
+    "_id": "124",
+    "name": "JONGLIERBALL_MIT_GEWICHTEN",
+    "description": "JONGLIERBALL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.8,
+    "weight": 300.0
+  },
+  {
+    "_id": "125",
+    "name": "KABASFLOETE",
+    "description": "KABASFLOETE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4,
+    "weight": 750.0
+  },
+  {
+    "_id": "126",
+    "name": "KAFFEE_GEROESTET",
+    "description": "KAFFEE_GEROESTET_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 100.0
+  },
+  {
+    "_id": "127",
+    "name": "KAKAO",
+    "description": "KAKAO_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4,
+    "weight": 100.0
+  },
+  {
+    "_id": "128",
+    "name": "KAMELSPIEL",
+    "description": "KAMELSPIEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 1000.0
+  },
+  {
+    "_id": "129",
+    "name": "KAMELSPIEL_GEZINKT",
+    "description": "KAMELSPIEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 1000.0
+  },
+  {
+    "_id": "130",
+    "name": "KAMM",
+    "description": "KAMM_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 100.0
+  },
+  {
+    "_id": "131",
+    "name": "KARTOGRAPHIEWERKZEUG",
+    "description": "KARTOGRAPHIEWERKZEUG_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 50,
+    "weight": 250.0
+  },
+  {
+    "_id": "132",
+    "name": "KERZE",
+    "description": "KERZE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.6,
+    "weight": 50.0
+  },
+  {
+    "_id": "133",
+    "name": "KERZE_STUNDENKERZE",
+    "description": "KERZE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 100.0
+  },
+  {
+    "_id": "134",
+    "name": "KERZE_ZAUBERKERZE",
+    "description": "KERZE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 100.0
+  },
+  {
+    "_id": "135",
+    "name": "KERZENSTAENDER",
+    "description": "KERZENSTAENDER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 11.5,
+    "weight": 750.0
+  },
+  {
+    "_id": "136",
+    "name": "KETTE_10_SCHRITT",
+    "description": "KETTE_10_SCHRITT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 120,
+    "weight": 20000.0
+  },
+  {
+    "_id": "137",
+    "name": "KIEPE",
+    "description": "KIEPE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7,
+    "weight": 2000.0
+  },
+  {
+    "_id": "138",
+    "name": "KLETTERHAKEN",
+    "description": "KLETTERHAKEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2.7,
+    "weight": 100.0
+  },
+  {
+    "_id": "139",
+    "name": "KLETTERSEIL_10_SCHRITT",
+    "description": "KLETTERSEIL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 5000.0
+  },
+  {
+    "_id": "140",
+    "name": "KLETTERSEIL_SEIDE_10_SCHRITT",
+    "description": "KLETTERSEIL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 2000.0
+  },
+  {
+    "_id": "141",
+    "name": "KOHLESTIFT",
+    "description": "KOHLESTIFT_DESCRIPTIONg",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.2,
+    "weight": 50.0
+  },
+  {
+    "_id": "142",
+    "name": "KOMPASS_SUEDWEISER",
+    "description": "KOMPASS_SUEDWEISER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 6,
+    "weight": 250.0
+  },
+  {
+    "_id": "143",
+    "name": "KOMPASS_SUEDWEISER_METALLGEHAEUSE",
+    "description": "KOMPASS_SUEDWEISER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 60,
+    "weight": 300.0
+  },
+  {
+    "_id": "144",
+    "name": "KOPFTUCH",
+    "description": "KOPFTUCH_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.6,
+    "weight": 300.0
+  },
+  {
+    "_id": "145",
+    "name": "KOPFTUCH_KEFFIYA",
+    "description": "KOPFTUCH_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 250.0
+  },
+  {
+    "_id": "146",
+    "name": "KOPFTUCH_PIRATENKOPFTUCH",
+    "description": "KOPFTUCH_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.6,
+    "weight": 250.0
+  },
+  {
+    "_id": "147",
+    "name": "KREIDE",
+    "description": "KREIDE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.2,
+    "weight": 50.0
+  },
+  {
+    "_id": "148",
+    "name": "KREIDE_ZAUBERKREIDE",
+    "description": "KREIDE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 100.0
+  },
+  {
+    "_id": "149",
+    "name": "KRISTALLKUGEL",
+    "description": "KRISTALLKUGEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2000,
+    "weight": 1500.0
+  },
+  {
+    "_id": "150",
+    "name": "KRUG",
+    "description": "KRUG_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1.5,
+    "weight": 750.0
+  },
+  {
+    "_id": "151",
+    "name": "KUGEL",
+    "description": "KUGEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.1,
+    "weight": 200.0
+  },
+  {
+    "_id": "152",
+    "name": "KUPFERKESSEL",
+    "description": "KUPFERKESSEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 24,
+    "weight": 4000.0
+  },
+  {
+    "_id": "153",
+    "name": "LAMPENOEL_12_STUNDEN",
+    "description": "LAMPENOEL_12_STUNDEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.2,
+    "weight": 500.0
+  },
+  {
+    "_id": "154",
+    "name": "LATERNE",
+    "description": "LATERNE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 8,
+    "weight": 500.0
+  },
+  {
+    "_id": "155",
+    "name": "LAUTE",
+    "description": "LAUTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 150,
+    "weight": 2000.0
+  },
+  {
+    "_id": "158",
+    "name": "LEIM",
+    "description": "LEIM_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 1000.0
+  },
+  {
+    "_id": "159",
+    "name": "LIPPENROT",
+    "description": "LIPPENROT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 50.0
+  },
+  {
+    "_id": "166",
+    "name": "MANTEL",
+    "description": "MANTEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7,
+    "weight": 1500.0
+  },
+  {
+    "_id": "167",
+    "name": "MEISSEL",
+    "description": "MEISSEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5.5,
+    "weight": 200.0
+  },
+  {
+    "_id": "169",
+    "name": "NADEL_UND_ZWIRNSET",
+    "description": "NADEL_UND_ZWIRNSET_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4.5,
+    "weight": 100.0
+  },
+  {
+    "_id": "170",
+    "name": "NAEGEL_10_STUECK",
+    "description": "NAEGEL_10_STUECK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.6,
+    "weight": 100.0
+  },
+  {
+    "_id": "171",
+    "name": "NAGELFEILE",
+    "description": "NAGELFEILE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 50.0
+  },
+  {
+    "_id": "172",
+    "name": "NAEHKAESTCHEN",
+    "description": "NAEHKAESTCHEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 250.0
+  },
+  {
+    "_id": "173",
+    "name": "NUDELHOLZ",
+    "description": "NUDELHOLZ_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 500.0
+  },
+  {
+    "_id": "174",
+    "name": "OHRRING_BRONZE",
+    "description": "OHRRING_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7.25,
+    "weight": 25.0
+  },
+  {
+    "_id": "175",
+    "name": "OHRRING_GOLD",
+    "description": "OHRRING_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 57,
+    "weight": 50.0
+  },
+  {
+    "_id": "176",
+    "name": "OHRRING_SILBER",
+    "description": "OHRRING_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7.5,
+    "weight": 25.0
+  },
+  {
+    "_id": "177",
+    "name": "OELLAMPE",
+    "description": "OELLAMPE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 250.0
+  },
+  {
+    "_id": "178",
+    "name": "PAPIER_1_BLATT",
+    "description": "PAPIER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.1,
+    "weight": 50.0
+  },
+  {
+    "_id": "179",
+    "name": "PAPIER_HOHE_QUALITAET_1_BLATT",
+    "description": "PAPIER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.3,
+    "weight": 50.0
+  },
+  {
+    "_id": "180",
+    "name": "PARFUEM",
+    "description": "PARFUEM_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 120,
+    "weight": 100.0
+  },
+  {
+    "_id": "181",
+    "name": "PERGAMENT_1_BLATT",
+    "description": "PAPIER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 50.0
+  },
+  {
+    "_id": "182",
+    "name": "PERGAMENT_HOHE_QUALITAET_1_BLATT",
+    "description": "PAPIER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 50.0
+  },
+  {
+    "_id": "183",
+    "name": "PFANNE",
+    "description": "PFANNE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 12,
+    "weight": 2000.0
+  },
+  {
+    "_id": "184",
+    "name": "PFEFFER",
+    "description": "PFEFFER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4.5,
+    "weight": 100.0
+  },
+  {
+    "_id": "185",
+    "name": "PFEIL",
+    "description": "PFEIL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.1,
+    "weight": 50.0
+  },
+  {
+    "_id": "186",
+    "name": "PHIOLE",
+    "description": "PHIOLE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 100.0
+  },
+  {
+    "_id": "187",
+    "name": "PINSEL",
+    "description": "PINSEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 50.0
+  },
+  {
+    "_id": "188",
+    "name": "PROVIANT_1_TAG",
+    "description": "PROVIANT_1_TAG_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 1500.0
+  },
+  {
+    "_id": "189",
+    "name": "PUDER",
+    "description": "PUDER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 50.0
+  },
+  {
+    "_id": "190",
+    "name": "PUDERDOESCHEN",
+    "description": "PUDERDOESCHEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 6,
+    "weight": 250.0
+  },
+  {
+    "_id": "191",
+    "name": "QUADRANT",
+    "description": "QUADRANT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 70,
+    "weight": 750.0
+  },
+  {
+    "_id": "192",
+    "name": "RING_BRONZE",
+    "description": "RING_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5.25,
+    "weight": 25.0
+  },
+  {
+    "_id": "193",
+    "name": "RING_GOLD",
+    "description": "RING_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 55,
+    "weight": 50.0
+  },
+  {
+    "_id": "194",
+    "name": "RING_SILBER",
+    "description": "RING_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7.5,
+    "weight": 25.0
+  },
+  {
+    "_id": "195",
+    "name": "SACK",
+    "description": "SACK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 750.0
+  },
+  {
+    "_id": "196",
+    "name": "SACKPFEIFE",
+    "description": "SACKPFEIFE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 30,
+    "weight": 2000.0
+  },
+  {
+    "_id": "198",
+    "name": "SCHAUFEL",
+    "description": "SCHAUFEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 8.5,
+    "weight": 2000.0
+  },
+  {
+    "_id": "199",
+    "name": "SCHELLE",
+    "description": "SCHELLE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 50.0
+  },
+  {
+    "_id": "200",
+    "name": "SCHERE",
+    "description": "SCHERE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 250.0
+  },
+  {
+    "_id": "201",
+    "name": "SCHERE_SCHNEIDERSCHERE",
+    "description": "SCHERE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7,
+    "weight": 300.0
+  },
+  {
+    "_id": "202",
+    "name": "SCHLAFSACK",
+    "description": "SCHLAFSACK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7,
+    "weight": 2000.0
+  },
+  {
+    "_id": "203",
+    "name": "SCHMIEDEHAMMER",
+    "description": "SCHMIEDEHAMMER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 100,
+    "weight": 1250.0
+  },
+  {
+    "_id": "204",
+    "name": "SCHMUCKKAESTCHEN",
+    "description": "SCHMUCKKAESTCHEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 1000.0
+  },
+  {
+    "_id": "205",
+    "name": "SCHNAPS",
+    "description": "SCHNAPS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 1000.0
+  },
+  {
+    "_id": "206",
+    "name": "SCHNEESCHUHE",
+    "description": "SCHNEESCHUHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 6.5,
+    "weight": 1000.0
+  },
+  {
+    "_id": "207",
+    "name": "SCHNUR_10_SCHRITT",
+    "description": "SCHNUR_10_SCHRITT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 100.0
+  },
+  {
+    "_id": "208",
+    "name": "SCHOKOLADE",
+    "description": "SCHOKOLADE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 100.0
+  },
+  {
+    "_id": "209",
+    "name": "SCHROEPFGLAS",
+    "description": "SCHROEPFGLAS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 250.0
+  },
+  {
+    "_id": "210",
+    "name": "SCHWAMM",
+    "description": "SCHWAMM_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 100.0
+  },
+  {
+    "_id": "211",
+    "name": "SEIFE",
+    "description": "SEIFE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 500.0
+  },
+  {
+    "_id": "212",
+    "name": "SEIFE_PARFUEMIERT",
+    "description": "SEIFE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 500.0
+  },
+  {
+    "_id": "213",
+    "name": "SENSE",
+    "description": "SENSE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 40,
+    "weight": 3500.0
+  },
+  {
+    "_id": "214",
+    "name": "SICHEL",
+    "description": "SICHEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 500.0
+  },
+  {
+    "_id": "215",
+    "name": "SIEGELWACHS",
+    "description": "SIEGELWACHS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 100.0
+  },
+  {
+    "_id": "216",
+    "name": "SIGNALHORN",
+    "description": "SIGNALHORN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 1000.0
+  },
+  {
+    "_id": "217",
+    "name": "SPATEN",
+    "description": "SPATEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 8.5,
+    "weight": 2000.0
+  },
+  {
+    "_id": "218",
+    "name": "SPIELKARTEN",
+    "description": "SPIELKARTEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 250.0
+  },
+  {
+    "_id": "219",
+    "name": "SPIELUHR",
+    "description": "SPIELUHR_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 400,
+    "weight": 250.0
+  },
+  {
+    "_id": "220",
+    "name": "SPINETT",
+    "description": "SPINETT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4000,
+    "weight": 100000.0
+  },
+  {
+    "_id": "221",
+    "name": "SPITZHACKE",
+    "description": "SPATEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 2750.0
+  },
+  {
+    "_id": "222",
+    "name": "STANDHARFE",
+    "description": "STANDHARFE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 550,
+    "weight": 5500.0
+  },
+  {
+    "_id": "223",
+    "name": "STECKENPFERD",
+    "description": "STECKENPFERD_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 1000.0
+  },
+  {
+    "_id": "224",
+    "name": "STIRNREIF_BRONZE",
+    "description": "STIRNREIF_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 8,
+    "weight": 100.0
+  },
+  {
+    "_id": "225",
+    "name": "STIRNREIF_GOLD",
+    "description": "STIRNREIF_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 207,
+    "weight": 200.0
+  },
+  {
+    "_id": "226",
+    "name": "STIRNREIF_SILBER",
+    "description": "STIRNREIF_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 17,
+    "weight": 100.0
+  },
+  {
+    "_id": "227",
+    "name": "STOFFPUPPE",
+    "description": "STOFFPUPPE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 250.0
+  },
+  {
+    "_id": "228",
+    "name": "STORCHENMASKE",
+    "description": "STORCHENMASKE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 8,
+    "weight": 500.0
+  },
+  {
+    "_id": "230",
+    "name": "STRICKLEITER_10_SCHRITT",
+    "description": "STRICKLEITER_10_SCHRITT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 25,
+    "weight": 5000.0
+  },
+  {
+    "_id": "231",
+    "name": "STUNDENGLAS",
+    "description": "STUNDENGLAS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 40,
+    "weight": 500.0
+  },
+  {
+    "_id": "232",
+    "name": "TABAK_KNASTER",
+    "description": "TABAK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.05,
+    "weight": 100.0
+  },
+  {
+    "_id": "233",
+    "name": "TABAK_METHUMIS_TABAK",
+    "description": "TABAK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.2,
+    "weight": 100.0
+  },
+  {
+    "_id": "234",
+    "name": "TABAK_MOHACCA",
+    "description": "TABAK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.6,
+    "weight": 100.0
+  },
+  {
+    "_id": "235",
+    "name": "TABAK_NORBARDISCHER_TABAK",
+    "description": "TABAK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.05,
+    "weight": 100.0
+  },
+  {
+    "_id": "236",
+    "name": "TABAK_SINODA_KRAUT",
+    "description": "TABAK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.3,
+    "weight": 100.0
+  },
+  {
+    "_id": "237",
+    "name": "TABAK_STANDARD",
+    "description": "TABAK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.1,
+    "weight": 100.0
+  },
+  {
+    "_id": "238",
+    "name": "TABAKDOSE",
+    "description": "TABAKDOSE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 50.0
+  },
+  {
+    "_id": "239",
+    "name": "TABAKPFEIFE",
+    "description": "TABAKPFEIFE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 100.0
+  },
+  {
+    "_id": "240",
+    "name": "TAGEBUCH",
+    "description": "TAGEBUCH_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 11,
+    "weight": 1500.0
+  },
+  {
+    "_id": "241",
+    "name": "TASCHENTUCH",
+    "description": "TASCHENTUCH_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 100.0
+  },
+  {
+    "_id": "242",
+    "name": "TASCHENUHR_VINSALTER_EI",
+    "description": "TASCHENUHR_VINSALTER_EI_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 800,
+    "weight": 250.0
+  },
+  {
+    "_id": "243",
+    "name": "TAETOWIERWERKZEUG",
+    "description": "TAETOWIERWERKZEUG_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 500.0
+  },
+  {
+    "_id": "244",
+    "name": "TIEGEL",
+    "description": "TIEGEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 250.0
+  },
+  {
+    "_id": "245",
+    "name": "TINTE_CHORHOPER_TINTE",
+    "description": "TINTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4,
+    "weight": 100.0
+  },
+  {
+    "_id": "246",
+    "name": "TINTE_GALLUSTINTE",
+    "description": "TINTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 100.0
+  },
+  {
+    "_id": "247",
+    "name": "TINTE_PURPURTINTE",
+    "description": "TINTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 8,
+    "weight": 100.0
+  },
+  {
+    "_id": "248",
+    "name": "TINTENFAESSCHEN_EDEL",
+    "description": "TINTENFAESSCHEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 250.0
+  },
+  {
+    "_id": "249",
+    "name": "TINTENFAESSCHEN_EINFACH",
+    "description": "TINTENFAESSCHEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 200.0
+  },
+  {
+    "_id": "250",
+    "name": "TRINKHORN",
+    "description": "TRINKHORN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 250.0
+  },
+  {
+    "_id": "251",
+    "name": "TROMMEL",
+    "description": "TROMMEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 15,
+    "weight": 500.0
+  },
+  {
+    "_id": "252",
+    "name": "TRUHE",
+    "description": "TRUHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 18,
+    "weight": 5000.0
+  },
+  {
+    "_id": "253",
+    "name": "TRUHE_REISETRUHE",
+    "description": "TRUHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 22,
+    "weight": 6000.0
+  },
+  {
+    "_id": "254",
+    "name": "TRUHE_SCHATZTRUHE",
+    "description": "TRUHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 25,
+    "weight": 6000.0
+  },
+  {
+    "_id": "255",
+    "name": "TRUHE_SEEKISTE",
+    "description": "TRUHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 7000.0
+  },
+  {
+    "_id": "256",
+    "name": "TUCHBEUTEL",
+    "description": "TUCHBEUTEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.75,
+    "weight": 500.0
+  },
+  {
+    "_id": "257",
+    "name": "UMHAENGETASCHE",
+    "description": "UMHAENGETASCHE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 8.5,
+    "weight": 500.0
+  },
+  {
+    "_id": "258",
+    "name": "VASE",
+    "description": "VASE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 2000.0
+  },
+  {
+    "_id": "259",
+    "name": "VERBAND_10_STUECK",
+    "description": "VERBAND_10_STUECK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 12.5,
+    "weight": 5.0
+  },
+  {
+    "_id": "260",
+    "name": "VORHAENGESCHLOSS",
+    "description": "VORHAENGESCHLOSS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 3000.0
+  },
+  {
+    "_id": "261",
+    "name": "VORSCHLAGHAMMER",
+    "description": "VORSCHLAGHAMMER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 30,
+    "weight": 5000.0
+  },
+  {
+    "_id": "262",
+    "name": "WASSERPFEIFFE",
+    "description": "WASSERPFEIFFE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 30,
+    "weight": 1000.0
+  },
+  {
+    "_id": "263",
+    "name": "WASSERSCHLAUCH",
+    "description": "WASSERSCHLAUCH_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5.5,
+    "weight": 250.0
+  },
+  {
+    "_id": "264",
+    "name": "WEIN",
+    "description": "WEIN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.45,
+    "weight": 1000.0
+  },
+  {
+    "_id": "265",
+    "name": "WOLFSFELL",
+    "description": "WOLFSFELL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 2000.0
+  },
+  {
+    "_id": "266",
+    "name": "WOLLDECKE",
+    "description": "WOLLDECKE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 1500.0
+  },
+  {
+    "_id": "267",
+    "name": "WOLLDECKE_PHRAISCHAFWOLLDECKE",
+    "description": "WOLLDECKE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 8,
+    "weight": 1500.0
+  },
+  {
+    "_id": "268",
+    "name": "WUNDNAEHZEUG",
+    "description": "WUNDNAEHZEUG_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 4.5,
+    "weight": 100.0
+  },
+  {
+    "_id": "269",
+    "name": "WUERFEL_SECHSSEITIG",
+    "description": "WUERFEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.5,
+    "weight": 50.0
+  },
+  {
+    "_id": "270",
+    "name": "WUERFEL_SECHSSEITIG_GEZINKT",
+    "description": "WUERFEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 2,
+    "weight": 60.0
+  },
+  {
+    "_id": "271",
+    "name": "WUERFEL_ZWANZIGSEITIG",
+    "description": "WUERFEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 60.0
+  },
+  {
+    "_id": "272",
+    "name": "WUERFEL_ZWANZIGSEITIG_GEZINKT",
+    "description": "WUERFEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 12,
+    "weight": 70.0
+  },
+  {
+    "_id": "273",
+    "name": "WURFHAKEN",
+    "description": "WURFHAKEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 7,
+    "weight": 1000.0
+  },
+  {
+    "_id": "274",
+    "name": "ZANGE",
+    "description": "ZANGE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 6,
+    "weight": 500.0
+  },
+  {
+    "_id": "275",
+    "name": "ZELT_1_PERSON",
+    "description": "ZELT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 14.5,
+    "weight": 3000.0
+  },
+  {
+    "_id": "276",
+    "name": "ZELT_2_PERSONEN",
+    "description": "ZELT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 25,
+    "weight": 6000.0
+  },
+  {
+    "_id": "277",
+    "name": "ZELT_4_PERSONEN",
+    "description": "ZELT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 40,
+    "weight": 8000.0
+  },
+  {
+    "_id": "278",
+    "name": "ZELT_GROSSZELT_12_PERSONEN",
+    "description": "ZELT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 20000.0
+  },
+  {
+    "_id": "279",
+    "name": "ZIMMERMANNSKASTEN",
+    "description": "ZIMMERMANNSKASTEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 50,
+    "weight": 5000.0
+  },
+  {
+    "_id": "280",
+    "name": "ZUNDER_25_PORTIONEN",
+    "description": "ZUNDER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0.2,
+    "weight": 25.0
+  },
+  {
+    "_id": "281",
+    "name": "ZUNDERDOSE_FUER_25_PORTIONEN",
+    "description": "ZUNDER_DOSE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 1,
+    "weight": 200.0
+  },
+  {
+    "_id": "282",
+    "name": "SAMTHAUCH",
+    "description": "SAMTHAUCH_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 1.0
+  },
+  {
+    "_id": "283",
+    "name": "TRAUMKRAUT",
+    "description": "TRAUMKRAUT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 50,
+    "weight": 1.0
+  },
+  {
+    "_id": "284",
+    "name": "ANGSTGIFT",
+    "description": "ANGSTGIFT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 40,
+    "weight": 250.0
+  },
+  {
+    "_id": "285",
+    "name": "ANTIDOT",
+    "description": "ANTIDOT",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 250.0
+  },
+  {
+    "_id": "286",
+    "name": "ARAX",
+    "description": "ARAX_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 250.0
+  },
+  {
+    "_id": "287",
+    "name": "BANNPULVER_GEGE_UNSICHTBARES",
+    "description": "BANNPULVER_GEGE_UNSICHTBARES_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 150,
+    "weight": 250.0
+  },
+  {
+    "_id": "288",
+    "name": "BANNSTAUB",
+    "description": "BANNSTAUB_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 40,
+    "weight": 250.0
+  },
+  {
+    "_id": "289",
+    "name": "BERSERKERELEXIER",
+    "description": "BERSERKERELEXIER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 150,
+    "weight": 250.0
+  },
+  {
+    "_id": "290",
+    "name": "BRANDSALBE",
+    "description": "BRANDSALBE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 50,
+    "weight": 250.0
+  },
+  {
+    "_id": "291",
+    "name": "EGELSCHRECKPASTE",
+    "description": "EGELSCHRECKPASTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 250.0
+  },
+  {
+    "_id": "292",
+    "name": "EINBEERENTRANK",
+    "description": "EINBEERENTRANK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 250.0
+  },
+  {
+    "_id": "293",
+    "name": "ELIXIERE_DER_TUGEND",
+    "description": "ELIXIERE_DER_TUGEND_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 250,
+    "weight": 250.0
+  },
+  {
+    "_id": "294",
+    "name": "ERSCHOEPFUNGSPILLEN",
+    "description": "ERSCHOEPFUNGSPILLEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 40,
+    "weight": 250.0
+  },
+  {
+    "_id": "295",
+    "name": "EULENTRAENEN",
+    "description": "EULENTRAENEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 250.0
+  },
+  {
+    "_id": "296",
+    "name": "GEHEIMTINTE",
+    "description": "GEHEIMTINTE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 3,
+    "weight": 250.0
+  },
+  {
+    "_id": "297",
+    "name": "GULMONDTEE",
+    "description": "GULMONDTEE_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 20,
+    "weight": 250.0
+  },
+  {
+    "_id": "298",
+    "name": "FURCHTLOS_TROPFEN",
+    "description": "FURCHTLOS_TROPFEN_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 250.0
+  },
+  {
+    "_id": "299",
+    "name": "HEILTRANK",
+    "description": "HEILTRANK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 40,
+    "weight": 250.0
+  },
+  {
+    "_id": "300",
+    "name": "HYLAILER_FEUER",
+    "description": "HYLAILER_FEUER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 150,
+    "weight": 250.0
+  },
+  {
+    "_id": "301",
+    "name": "KALTES_LICHT",
+    "description": "KALTES_LICHT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 5,
+    "weight": 250.0
+  },
+  {
+    "_id": "302",
+    "name": "KUKRIS",
+    "description": "KUKRIS_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 400,
+    "weight": 250.0
+  },
+  {
+    "_id": "303",
+    "name": "LIEBESTRUNK",
+    "description": "LIEBESTRUNK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 250.0
+  },
+  {
+    "_id": "304",
+    "name": "PURPUBLITZ",
+    "description": "PURPUBLITZ_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 600,
+    "weight": 250.0
+  },
+  {
+    "_id": "305",
+    "name": "PURPUSWASSER",
+    "description": "PURPUSWASSER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 300,
+    "weight": 250.0
+  },
+  {
+    "_id": "306",
+    "name": "SCHWADENBEUTEL",
+    "description": "SCHWADENBEUTEL_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 10,
+    "weight": 250.0
+  },
+  {
+    "_id": "307",
+    "name": "WAFFENBALSAM",
+    "description": "WAFFENBALSAM_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 250.0
+  },
+  {
+    "_id": "308",
+    "name": "WILLENSTRUNK",
+    "description": "WILLENSTRUNK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 250,
+    "weight": 250.0
+  },
+  {
+    "_id": "309",
+    "name": "SCHLAFGIFT",
+    "description": "SCHLAFGIFT_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 250.0
+  },
+  {
+    "_id": "310",
+    "name": "UNSICHTBARKEITSELEXIER",
+    "description": "UNSICHTBARKEITSELEXIER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 400,
+    "weight": 250.0
+  },
+  {
+    "_id": "311",
+    "name": "UNVERWUNDBARKEITSTRANK",
+    "description": "UNVERWUNDBARKEITSTRANK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 250.0
+  },
+  {
+    "_id": "312",
+    "name": "VERWANDLUNGSELEXIER",
+    "description": "VERWANDLUNGSELEXIER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 600,
+    "weight": 250.0
+  },
+  {
+    "_id": "313",
+    "name": "ZAUBERTRANK",
+    "description": "ZAUBERTRANK_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 300,
+    "weight": 250.0
+  },
+  {
+    "_id": "314",
+    "name": "ZIELWASSER",
+    "description": "ZIELWASSER_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 200,
+    "weight": 250.0
+  },
+  {
+    "_id": "315",
+    "name": "OLGINSUD",
+    "description": "OLGINSUD_DESCRIPTION",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 160,
+    "weight": 250.0
+  },
+  {
+    "_id": "316",
+    "name": "SEGENREICHES_WASSER",
+    "description": "SEGENREICHES_WASSER",
+    "actionModifierDto": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    },
+    "cost": 0,
+    "weight": 0.0
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "_id": "gSpyJG8cn93udSA",
+  "_key": "!items!gSpyJG8cn93udSA",
+  "name": "Schmiedehammer",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1.25,
+    "gewicht": 1.25,
+    "preis": 100,
+    "quantity": 1,
+    "text": "Auch wenn der Schmiedehammer schon bei der näheren Betrachtung wie eine Waffe wirkt, ist er doch in erster Linie ein ingerimmgefälliges Werkzeug. Das Arbeitsinstrument der aventurischen Schmiede ist dazu gedacht, auf heißen Stahl zu schlagen und ihm so seine Form zu geben. Der Herstellungsprozess des Schmiedens setzt einiges an Kraft voraus und durch den schweren Kopf des Hammers kann die Kraft des Schmiedes sogar noch besser genutzt wurden. Der wuchtige Schmiedehammer ist keine Waffe für raffinierte Angriffe. Täuschungsmanöver lassen sich mit ihm nur sehr schwer ausführen, da die Waffe sehr kopflastig ist. Aus dem gleichen Grund ist das Verteidigen mit einem Schmiedehammer schwierig, was ihn für Paraden nicht gerade zu einer idealen Waffe macht."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "203",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140436,
+    "modifiedTime": 1768336140436,
+    "lastModifiedBy": null
+  }
+}

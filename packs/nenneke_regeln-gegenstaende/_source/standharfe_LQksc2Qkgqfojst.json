@@ -1,0 +1,39 @@
+{
+  "_id": "LQksc2Qkgqfojst",
+  "_key": "!items!LQksc2Qkgqfojst",
+  "name": "Standharfe",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 5.5,
+    "gewicht": 5.5,
+    "preis": 550,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "222",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140558,
+    "modifiedTime": 1768336140558,
+    "lastModifiedBy": null
+  }
+}

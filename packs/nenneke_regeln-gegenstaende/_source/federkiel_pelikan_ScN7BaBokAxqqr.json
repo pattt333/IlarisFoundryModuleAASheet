@@ -1,0 +1,39 @@
+{
+  "_id": "ScN7BaBokAxqqr",
+  "_key": "!items!ScN7BaBokAxqqr",
+  "name": "Federkiel (Pelikan)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.06,
+    "gewicht": 0.06,
+    "preis": 0.3,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "79",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139472,
+    "modifiedTime": 1768336139472,
+    "lastModifiedBy": null
+  }
+}

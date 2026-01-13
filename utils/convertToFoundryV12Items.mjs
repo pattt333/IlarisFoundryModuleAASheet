@@ -610,10 +610,17 @@ const FOUNDRY_V12_ITEM_TEMPLATE = {
 function generateFoundryId() {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
-    const bytes = crypto.randomBytes(12);
     
-    for (let i = 0; i < 13; i++) {
-        result += chars[bytes[i] % chars.length];
+    // Generiere zufällige Länge zwischen 13 und 16 Zeichen
+    const length = Math.floor(Math.random() * 4) + 13; // 13, 14, 15 oder 16
+    
+    // Generiere ausreichend zufällige Bytes
+    const bytes = crypto.randomBytes(length);
+    
+    for (let i = 0; i < length; i++) {
+        // Sicherstellen, dass der Index innerhalb des bytes-Arrays bleibt
+        const byte = bytes[i];
+        result += chars[byte % chars.length];
     }
     
     return result;

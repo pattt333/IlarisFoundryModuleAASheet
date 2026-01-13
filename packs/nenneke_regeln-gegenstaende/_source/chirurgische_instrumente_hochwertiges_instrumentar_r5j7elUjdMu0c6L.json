@@ -1,0 +1,39 @@
+{
+  "_id": "r5j7elUjdMu0c6L",
+  "_key": "!items!r5j7elUjdMu0c6L",
+  "name": "Chirurgische Instrumente (Hochwertiges Instrumentarium)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1.5,
+    "gewicht": 1.5,
+    "preis": 80,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "49",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139205,
+    "modifiedTime": 1768336139205,
+    "lastModifiedBy": null
+  }
+}

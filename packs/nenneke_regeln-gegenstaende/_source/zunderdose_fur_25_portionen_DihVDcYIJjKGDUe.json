@@ -1,0 +1,39 @@
+{
+  "_id": "DihVDcYIJjKGDUe",
+  "_key": "!items!DihVDcYIJjKGDUe",
+  "name": "Zunderdose (für 25 Portionen)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.2,
+    "gewicht": 0.2,
+    "preis": 1,
+    "quantity": 1,
+    "text": "Damit der Zunder, der mit Feuerstein und Stahl entzündet wird, auch richtig brennt, muss er trocken gelagert werden. Dazu dienen Zunderdosen, kleine Dosen mit Deckel, die in keinem Rucksack eines Abenteurers fehlen dürfen. Auch in vielen Küchen steht eine, falls das Feuer im Herd neu entfacht werden muss. Die meisten Dosen sind etwa so groß wie ein Handteller, doch es gibt auch größere und kleinere Exemplare. Um möglichst feuchtigkeitsabweisend zu sein, werden sie aus Metall gefertigt und oft noch extra in Wachstuch eingeschlagen. Beliebt sind Bronze und Kupfer, aber prächtige Zunderdosen adliger Entdecker können auch aus Silber mit kunstvollen Verzierungen sein. Tatsächlich sind viele der Dosen relativ dicht und der Zunder darin übersteht auch einen schweren Regenguss oder ein unfreiwilliges Bad ohne sofort breiförmige Konsistenz anzunehmen. Feucht wird er trotzdem, sodass es länger dauert bis er Feuer fängt. Zunderdosen sind nicht nur für Zunder geeignet, in ihnen werden auch Süßigkeiten, Ringe oder geheime Karten transportiert. Hauptsächlich wird darin aber Zunder aufbewahrt, um ihn zum Feuermachen parat zu haben."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "281",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140919,
+    "modifiedTime": 1768336140919,
+    "lastModifiedBy": null
+  }
+}

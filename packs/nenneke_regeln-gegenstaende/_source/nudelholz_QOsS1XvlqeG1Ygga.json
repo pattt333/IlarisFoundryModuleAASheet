@@ -1,0 +1,39 @@
+{
+  "_id": "QOsS1XvlqeG1Ygga",
+  "_key": "!items!QOsS1XvlqeG1Ygga",
+  "name": "Nudelholz",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.5,
+    "gewicht": 0.5,
+    "preis": 10,
+    "quantity": 1,
+    "text": "Kaum jemand würde auf die Idee kommen, ein Nudelholz als Waffe zu benutzen. Dennoch kann man hin und wieder erleben, dass ein Zuckerbäcker sein Nudelholz ergreift, um damit Jagd auf Tortendiebe zu machen. Im Gegensatz zu einem Knüppel, der zwar auch keine ideale Waffe ist, zerbricht ein Nudelholz aber oft schon während eines ersten Schlagabtauschs mit einer anderen Waffe.\n\n Gefährlich wird das Holz aber, wenn man damit einen Schlag gegen den Kopf bekommt. Es kann so leicht zu Desorientierung führen und steht in dieser Hinsicht einer echten Keule in nichts nach.\n\n Allerdings werden nur wenige Helden wohl jemals mit einem Teigholz kämpfen müssen. Vielmehr stellt es die letzte Verteidigungsmöglichkeit eines reisenden Traviageweihten oder einer Zuckerbäckerin dar, aber es handelt sich nicht um eine echte Waffe."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "173",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140269,
+    "modifiedTime": 1768336140269,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "PLgXeGbaRsXrXCZC",
+  "_key": "!items!PLgXeGbaRsXrXCZC",
+  "name": "Egelschreckpaste",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 20,
+    "quantity": 1,
+    "text": "Proben zum Stoppen von Blutungen sind um +4 erleichtert."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "291",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140985,
+    "modifiedTime": 1768336140985,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "wczJeeNNAo29q9kD",
+  "_key": "!items!wczJeeNNAo29q9kD",
+  "name": "Verband (1 Verband)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.005,
+    "gewicht": 0.005,
+    "preis": 12.5,
+    "quantity": 1,
+    "text": "Verbandszeug darf auf keiner Reise fehlen, egal wohin und mit welchem Fortbewegungsmittel. Einfaches Verbandszeug umfasst einige Stoffverbände, Nadel und Faden zum Nähen einer Wunde, eine Pinzette und ein scharfes Schneidwerkzeug. Am besten wäre ein Skalpell, genutzt wird hier bei schlechter Ausstattung des Heilers häufig ein Messer.\n\n Eine bessere Ausrüstung enthält mindestens ein Skalpell, ein Spreizwerkzeug und einen Spatel, dazu kommen oft eine Knochensäge und eine Schere zum Zertrennen der Kleidung neben der Wunde. Auch eine Auswahl schmerz- und blutungsstillender Kräuter und Pulver oder flüssige Tinkturen zum Reinigen oder Behandeln einer Verletzung dürfen nicht fehlen. Ergänzt wird alles durch starken Schnaps, einige mehr oder weniger wirksame Hausmittel und ein paar Glücksbringer, die meistens reiner Aberglaube sind.\n\n Verbandszeug ist relativ einfach zu bekommen, besonders wenn es nur darum geht, die Stoffverbände zu ersetzen. Diese lassen sich in der Not auch recht einfach improvisieren.\n\n Das beste Verbandszeug lässt sich immer in Städten mit einem großen Perainetempel kaufen, ist die Heilkunst doch eine der höchsten Pflichten der Geweihten der Göttin."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "259",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140787,
+    "modifiedTime": 1768336140787,
+    "lastModifiedBy": null
+  }
+}

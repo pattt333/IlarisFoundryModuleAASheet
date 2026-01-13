@@ -1,0 +1,39 @@
+{
+  "_id": "ig2A7Lpc0kG6c",
+  "_key": "!items!ig2A7Lpc0kG6c",
+  "name": "Edelstein (Türkis)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.02,
+    "gewicht": 0.02,
+    "preis": 15,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "73",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139418,
+    "modifiedTime": 1768336139418,
+    "lastModifiedBy": null
+  }
+}

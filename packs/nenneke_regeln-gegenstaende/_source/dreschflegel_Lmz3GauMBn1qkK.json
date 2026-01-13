@@ -1,0 +1,39 @@
+{
+  "_id": "Lmz3GauMBn1qkK",
+  "_key": "!items!Lmz3GauMBn1qkK",
+  "name": "Dreschflegel",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1.5,
+    "gewicht": 1.5,
+    "preis": 15,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "54",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139236,
+    "modifiedTime": 1768336139236,
+    "lastModifiedBy": null
+  }
+}

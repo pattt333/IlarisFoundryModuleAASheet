@@ -1,0 +1,39 @@
+{
+  "_id": "dEgDnsteAHkTD4A",
+  "_key": "!items!dEgDnsteAHkTD4A",
+  "name": "Pergament (1 Blatt)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.05,
+    "gewicht": 0.05,
+    "preis": 1,
+    "quantity": 1,
+    "text": "Papier und Pergament darf in Tempeln, Magierakademien, Kontoren, in der Verwaltung und allen anderen Horten der Gelehrsamkeit nicht fehlen, selbst wenn letztere nur aus dem Rucksack eines reisenden Entdeckers bestehen. Die beiden Begriffe werden auch in Aventurien häufig gleichbedeutend benutzt, bezeichnen jedoch zwei unterschiedliche Schreibmaterialien.\n\n Pergament wird aus ungegerbter Tierhaut hergestellt. Diese wird mit Wasser, Kalk und weiteren alchimistischen Substanzen eingeweicht, von allen Haaren befreit und anschließend glattgeschabt. Damit die Schreibfläche möglichst glatt und fein ist, muss eine möglichst feine Haut verwendet werden, das beste Pergament entsteht aus der Haut neugeborener Lämmer. Aufgrund des Ausgangsmaterials ist die maximale Größe eines einzelnen Pergamentbogens begrenzt. Pergament lässt sich nicht gut reißen, quillt in Wasser langsamer auf als Papier und ist für Buchdruck und -bindung ungeeignet. Dennoch werden einzelne Pergamentrollen mit einem in sich abgeschlossenen Text auch oft als Buch bezeichnet.\n\n Anders als Pergament ist Papier für die Herstellung von gebundenen Büchern geeignet und lässt sich ausgezeichnet bedrucken. Für Papier werden Lumpen oder Pflanzenfasern, z.B. Reisstroh oder Hanffasern , zerkleinert, in Wasser eingeweicht und zu einem Brei gestampft."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "181",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140319,
+    "modifiedTime": 1768336140319,
+    "lastModifiedBy": null
+  }
+}

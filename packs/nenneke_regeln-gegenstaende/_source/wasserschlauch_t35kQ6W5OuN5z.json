@@ -1,0 +1,39 @@
+{
+  "_id": "t35kQ6W5OuN5z",
+  "_key": "!items!t35kQ6W5OuN5z",
+  "name": "Wasserschlauch",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 5.5,
+    "quantity": 1,
+    "text": "Ähnlich wie die Feldflasche ist auch der unförmige Wasserschlauch zum Transport von Flüssigkeiten auf langen Reisen gedacht. Anders jedoch als diese, von der meist jeder Abenteurer seine eigene mit sich führt, ist der Wasserschlauch dazu geeignet, große Mengen an Wasser, Bier oder Wein zu tragen. Aufgrund ihrer Größe sind Wasserschläuche aus Leder unheimlich teuer, weshalb sie meist aus Tierdärmen und -mägen, etwa von Kühen oder Schafen, genäht werden. Sie haben jeweils einen großen bauchigen Füllraum und einen schlauchförmigen Ansatz, der dem Wasserschlauch seinen Namen gibt. Über diesen Schlauch sind sie befüllbar und lassen sich praktisch an jeden Zapfhahn anschließen.\n\n Am leichtesten fällt der Transport der mehrere Maß fassenden Schläuche, wenn man zwei etwa gleich voll gefüllte Wasserschläuche an den Ansätzen verknotet und über ein Joch, einen langen hölzernen Stecken, gehangen trägt.\n\n Nur selten sieht man den einzelnen Wasserschlauch, der mit einem Pfropf aus Kork oder Wachs versiegelt ist. Das Verschließen fällt bei ihm schwerer, da der Schlauch keine feste Form behält, dafür ist man aber auch nicht gezwungen, zwei Schläuche zu tragen und kann einiges an Gewicht einsparen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "263",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140812,
+    "modifiedTime": 1768336140812,
+    "lastModifiedBy": null
+  }
+}

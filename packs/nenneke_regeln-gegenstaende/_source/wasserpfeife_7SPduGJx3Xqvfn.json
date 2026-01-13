@@ -1,0 +1,39 @@
+{
+  "_id": "7SPduGJx3Xqvfn",
+  "_key": "!items!7SPduGJx3Xqvfn",
+  "name": "Wasserpfeife",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 30,
+    "quantity": 1,
+    "text": "Zu dem Bild, das viele Aventurier von den Tulamidenlanden haben, gehört dazu, dass dort auf Kissen sitzend oder liegend Wasserpfeife geraucht wird. Tatsächlich entspricht dieses Klischee weitestgehend der Wahrheit, denn Wasserpfeifen lassen sich in den Tulamidenlanden und Aranien in jedem Teehaus, jeder Herberge und jeder Karawanserei bestellen oder auf jedem Markt kaufen, denn der Genuss einer solchen ist für beiderlei Geschlecht fester Bestandteil der tulamidischen Lebensart.\n\n Sie zu rauchen ist auch meistens ein gesellschaftliches Ereignis, bei dem sich Freunde, Geschäftspartner oder auch Feinde eine Pfeife teilen und Konversation betreiben, eine Kleinigkeit essen oder Rote-und-Wei- ße-Kamele spielen. Auch so mancher Sieg wurde im Pfeifenrauch gefeiert und manche bedeutende Beratung fand in einer Teestube bei einer Wasserpfeife statt.\n\n In Wasserpfeifen geraucht wird üblicherweise Tabak, der für den feineren Gaumen, oder um den Tabak zu strecken, auch aromatisiert wird mit den Schalen von Äpfeln, Orangen oder getrockneten Blüten und Früchten."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "262",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140807,
+    "modifiedTime": 1768336140807,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "kj1kPtGJ0w0E0L",
+  "_key": "!items!kj1kPtGJ0w0E0L",
+  "name": "Hexenküche",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 200,
+    "gewicht": 200,
+    "preis": 1000,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "119",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139744,
+    "modifiedTime": 1768336139744,
+    "lastModifiedBy": null
+  }
+}

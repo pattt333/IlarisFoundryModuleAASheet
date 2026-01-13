@@ -1,0 +1,39 @@
+{
+  "_id": "stpKGBAZ7MTor",
+  "_key": "!items!stpKGBAZ7MTor",
+  "name": "Vorhängeschloss",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 3,
+    "gewicht": 3,
+    "preis": 10,
+    "quantity": 1,
+    "text": "Wo die meisten Schlösser in das zu verschließende Objekt wie eine Tür oder Truhe fest eingebaut werden, ist das Vorhängeschloss unabhängig davon. Es kann ganz nach Bedarf zum Abschließen verwendet und mitgeführt werden, falls es unterwegs eine Truhe, einen Schrank oder ein Tor zu verschließen gilt. Manch ein angehender Einbrecher besitzt auch ein Vorhängeschloss zu Übungszwecken.\n\n Vorhängeschlösser werden in unterschiedlichen Grö- ßen und aus unterschiedlichem Metall gefertigt. Zierende Ausfertigungen aus Gold und Silber sollen Schmuckschatullen oder hin und wieder auch Keuschheitsgürtel verschließen, während eine Geldtruhe oder ein Kerker ein möglichst großes, komplex aussehendes Exemplar benötigt, wenn es nicht ohnehin ein fest verbautes Schloss gibt.\n\n Besonders abschreckende Exemplare haben ebenso wie andere Schlösser versteckte Dornen, die beim Öffnen ohne Schlüssel hervorspringen und den Dieb in die Hand stechen. Von besonders skrupellosen Gestalten werden diese Dornen sogar noch vergiftet. Diebe fürchten diese Schlösser ähnlich wie besonders stark verrostete Vorhängeschlösser, die einem Dietrich widerstehen.\n\n Vorhängeschlösser sind weit verbreitet und in allen großen Städten zu kaufen, besonders im Horasreich kann man hier, wie bei vielen anderen Feinmechaniken auch, außerordentlich gute Qualität bekommen. Die besten Exemplare werden jedoch von Zwergen hergestellt, die als Erfinder der Mechanik aller Schlösser gelten."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "260",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140793,
+    "modifiedTime": 1768336140793,
+    "lastModifiedBy": null
+  }
+}

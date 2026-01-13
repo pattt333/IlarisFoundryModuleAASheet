@@ -1,0 +1,39 @@
+{
+  "_id": "ricxmL0zGAXMlr",
+  "_key": "!items!ricxmL0zGAXMlr",
+  "name": "Gwen-Petryl-Stein (faustgroß)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.75,
+    "gewicht": 0.75,
+    "preis": 1000,
+    "quantity": 1,
+    "text": "Da nicht jede Situation in Dunkelheit nach einem Feuer schreit und es gar auch Helden gibt, denen offene Flammen und Fackeln nicht geheuer sind, findet auch schon mal ein Gwen Petryl-Stein seinen Weg in die Rucksäcke der Abenteurer. Als die Zitadelle von Alveran während der Gigantenkriege zerstört wurde, sollen Bruchstücke davon auf Dere gefallen sein. Dort verschluckten vor allem Efferds wü- tende Wogen das seltene Gestein. Durch seine Gunst werden oftmals kleinere sowie größere Steinstücke an Küsten angeschwemmt. Strandgutsammlern fallen diese Steine schon von Weitem durch ihr starkes grün-blaues Leuchten auf. In seltenen Fällen sollen auch schon gelblich-orange leuchtende Steine gefunden worden sein. Die Gerüchte halten sich außerdem, dass auch hellrot leuchtende Steine gesichtet wurden. Der Leuchtradius ist dabei abhängig von der Größe des Steins, halb-faustgroße Steine, die am häufigsten gefunden werden, erhellen bis zu einige Schritt weit dunkle Höhlen, ähnlich dem Schein einer Fackel.\n\n Es heißt, der Gwen Petryl sei Efferd heilig. Auch als Efferdfeuer bezeichnet, findet sein Leuchten vor allem in der Kirche des Meervaters Verwendung. Ob als Leuchtfeuer in Küsten- oder Leuchttürmen, als Raumbeleuchtung oder als Fackelersatz, etwa indem man den Gwen Petryl-Stein in ein Fischernetz hüllt und vor sich her trägt – das seltene Gestein wird dort oft genutzt, nicht zuletzt, weil offenes Feuer im Efferdtempel streng verboten ist. Nur Wärme vermag dieser wundersame Stein nicht zu spenden. Obwohl sich der Verdacht hält, das starke Leuchten wäre magischer Natur, kommen Vertreter aller Zwölfgötter zu dem Schluss, dass es einen karmalen Ursprung für die Eigenschaften des Gwen Petryl geben muss. Gwen Petryl-Steine sind nebst anderen Gaben beliebte Opfer an den Gott der Meere. Die Efferdkirche verlangt zudem die Abgabe jedes Leuchtsteins, der mindestens die Größe einer Faust erreicht.\n\n Abgesehen von Küstengebieten können Gwen Petryl-Steine auch in größeren Gebirgsketten gefunden werden, und vor allem in den Salamandersteinen, einem Gebirgszug Nordaventuriens, sollen mehrere dieser Steine aufgetaucht sein. Gut informierte Abenteurer reisen gern auch nach Havena, da man dort viele Steine auf dem Markt findet, und das zu ausgesprochen günstigen Preisen. Ob das Monopol der Efferdkirche in Anbetracht der Tatsache, dass das Gestein nicht nur vom Meer angespült wird, sondern auch noch andernorts auftaucht, gerechtfertigt ist, bleibt strittig. Es ist unklar, ob andere Götter ein ähnliches Interesse an dem Leuchtstein haben, doch Priester der Charyb’Yzz behaupten, der Gwen Petryl-Stein wäre einzig ihrer Gottheit heilig, und gerade bei den rötlicheren Steinen drängt sich der Verdacht auf, dass Praios einen Anspruch darauf hätte."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "105",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139668,
+    "modifiedTime": 1768336139668,
+    "lastModifiedBy": null
+  }
+}

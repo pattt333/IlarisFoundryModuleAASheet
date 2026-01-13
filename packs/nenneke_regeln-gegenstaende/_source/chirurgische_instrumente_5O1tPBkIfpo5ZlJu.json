@@ -1,0 +1,39 @@
+{
+  "_id": "5O1tPBkIfpo5ZlJu",
+  "_key": "!items!5O1tPBkIfpo5ZlJu",
+  "name": "Chirurgische Instrumente",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1.5,
+    "gewicht": 1.5,
+    "preis": 80,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "48",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139198,
+    "modifiedTime": 1768336139198,
+    "lastModifiedBy": null
+  }
+}

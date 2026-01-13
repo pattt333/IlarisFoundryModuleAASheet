@@ -1,0 +1,39 @@
+{
+  "_id": "FRRC6cWIrtWALHI7",
+  "_key": "!items!FRRC6cWIrtWALHI7",
+  "name": "Furchtlos Tropfen",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 10,
+    "quantity": 1,
+    "text": "Für 1 Stunde sinken Furcht-Effekte um eine Stufe."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "298",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336141021,
+    "modifiedTime": 1768336141021,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "4JY3L25vTMQBD8e",
+  "_key": "!items!4JY3L25vTMQBD8e",
+  "name": "Fesselseil, Leder (pro 1 Schritt)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 4,
+    "quantity": 1,
+    "text": "Unter einem Fesselseil wird üblicherweise ein dünner, fester Strick von etwa einem Schritt Länge verstanden. Dieser ist aus Pflanzenfasern, wie zum Beispiel Hanf, oder verdrehtem Leder hergestellt, maximal so dick wie ein kleiner Finger, aber außerordentlich reißfest. Ein solches Seil ist gut geeignet, um jemanden zu fesseln, viele Gardisten und auch Schergen von brutalen Unterweltgrößen tragen extra zu diesem Zweck ein oder zwei entsprechende Exemplare mit sich.\n\n Seine effektive Anwendung zur Fesselung erfordert jedoch vor allem gute Knoten und die richtige Technik. In einer besonders grausamen Variante werden Fesselseile aus Leder vor der Verwendung angefeuchtet. Da sich Leder beim Trocken zusammenzieht, werden derartige Fesseln mit der Zeit immer enger. Dieser Effekt ist mit Seilen aus anderem Material jedoch nicht möglich. Aufgrund der Vielzahl der Verwendungsmöglichkeiten und der weit verbreiteten Materialien gibt es Fesselseile fast überall zu kaufen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "91",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139584,
+    "modifiedTime": 1768336139584,
+    "lastModifiedBy": null
+  }
+}

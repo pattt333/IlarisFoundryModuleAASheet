@@ -1,0 +1,39 @@
+{
+  "_id": "rEbU9UCRsIueG",
+  "_key": "!items!rEbU9UCRsIueG",
+  "name": "Kugel",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.2,
+    "gewicht": 0.2,
+    "preis": 0.1,
+    "quantity": 1,
+    "text": "Kugel für Torsionsgeschütz"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "151",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336140095,
+    "modifiedTime": 1768336140095,
+    "lastModifiedBy": null
+  }
+}

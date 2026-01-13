@@ -1,0 +1,39 @@
+{
+  "_id": "RpQHU2ack5Pdo7o",
+  "_key": "!items!RpQHU2ack5Pdo7o",
+  "name": "Olginsund",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 160,
+    "quantity": 1,
+    "text": "Der Trinkende ist eine Woche immun gegen Gifte und Krankheiten bis Stufe 20."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "315",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336141205,
+    "modifiedTime": 1768336141205,
+    "lastModifiedBy": null
+  }
+}

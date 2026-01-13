@@ -1,0 +1,39 @@
+{
+  "_id": "eelTFG7cpWIE3tGq",
+  "_key": "!items!eelTFG7cpWIE3tGq",
+  "name": "Verwandlungselexier",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 600,
+    "quantity": 1,
+    "text": "Der Trinkende verwandelt sich für 1 Stunde in ein Kleintier (abhängig von der Herstellung)."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "312",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336141190,
+    "modifiedTime": 1768336141190,
+    "lastModifiedBy": null
+  }
+}

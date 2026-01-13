@@ -1,0 +1,39 @@
+{
+  "_id": "agkmRlTZID6Nnz",
+  "_key": "!items!agkmRlTZID6Nnz",
+  "name": "Hängematte",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 2,
+    "gewicht": 2,
+    "preis": 2,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "117",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768336139740,
+    "modifiedTime": 1768336139740,
+    "lastModifiedBy": null
+  }
+}
