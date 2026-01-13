@@ -17,6 +17,13 @@
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": true
+      },
+      "1": {
+        "type": "DAMAGE",
+        "value": 1,
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
       }
     },
     "gruppe": 0,
