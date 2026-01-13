@@ -1,0 +1,39 @@
+{
+  "_id": "JqDVu4VvYRjn9HHl",
+  "_key": "!items!JqDVu4VvYRjn9HHl",
+  "name": "Edelstein (Lapislazuli)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.02,
+    "gewicht": 0.02,
+    "preis": 17,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "64",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338157102,
+    "modifiedTime": 1768338157102,
+    "lastModifiedBy": null
+  }
+}

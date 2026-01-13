@@ -1,0 +1,39 @@
+{
+  "_id": "NMKCdjJpRN0Ci1c9",
+  "_key": "!items!NMKCdjJpRN0Ci1c9",
+  "name": "Kukris",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 400,
+    "quantity": 1,
+    "text": "Ein tödliches Einnahme- und Waffengift (Stufe 24)."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "302",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338159236,
+    "modifiedTime": 1768338159236,
+    "lastModifiedBy": null
+  }
+}

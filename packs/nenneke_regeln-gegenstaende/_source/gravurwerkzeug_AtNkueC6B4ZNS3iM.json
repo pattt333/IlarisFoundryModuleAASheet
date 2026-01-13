@@ -1,0 +1,39 @@
+{
+  "_id": "AtNkueC6B4ZNS3iM",
+  "_key": "!items!AtNkueC6B4ZNS3iM",
+  "name": "Gravurwerkzeug",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.5,
+    "gewicht": 0.5,
+    "preis": 30,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "103",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338157403,
+    "modifiedTime": 1768338157403,
+    "lastModifiedBy": null
+  }
+}

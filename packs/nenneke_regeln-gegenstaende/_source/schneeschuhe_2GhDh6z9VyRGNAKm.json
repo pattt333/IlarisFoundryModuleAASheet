@@ -1,0 +1,39 @@
+{
+  "_id": "2GhDh6z9VyRGNAKm",
+  "_key": "!items!2GhDh6z9VyRGNAKm",
+  "name": "Schneeschuhe",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 6.5,
+    "quantity": 1,
+    "text": "Für einen Firnelfen ist es wahrscheinlich ein großer Spaß, über die Schneeschuhe der Nivesen- und Norbardensippen zu witzeln. Jedoch gleiten diese filigranen Bewohner der mit Eis bedeckten Länder Aventuriens auf diese Weise über den Schnee hinweg, wohingegen andere Völker sich mühsam an der weißen Masse abstrampeln.\n\n In den Nivesenlanden sind Schneeschuhe weit verbreitet und die menschlichen Siedler nutzen sie täglich, um Schnee und Eis zu trotzen. Dort werden auch gerne Skier verwendet, welche sich jedoch aufgrund der hohen Verletzungsgefahr nicht im Großteil Aventuriens durchgesetzt haben.\n\n Die aus Bast und Holz geflochtenen Schneeschuhe werden über den, in der Kälte unverzichtbaren, gefütterten Stiefel getragen. Durch die breitere Trittfläche, das Korbgeflecht, das unten am Schuh anliegt, erlangt man im Schneegestöber und tiefem Pulverschnee einen sicheren Stand und vermag sich deutlich schneller fortzubewegen. Nicht selten wird auch ein Schneetreiber, eine weitere Korbgeflechtschiene, die vor dem Schuh einen breiten und hohen Rand bildet, an den Schneeschuhen angebracht. Dadurch kann man sich auf flachem Untergrund schlurfend durch das Eis bewegen und für Reisegefährten oder Reittiere eine Schneise schlagen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "206",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338158176,
+    "modifiedTime": 1768338158176,
+    "lastModifiedBy": null
+  }
+}

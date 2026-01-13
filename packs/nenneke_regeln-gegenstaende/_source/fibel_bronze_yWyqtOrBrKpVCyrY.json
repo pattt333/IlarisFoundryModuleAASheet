@@ -1,0 +1,39 @@
+{
+  "_id": "yWyqtOrBrKpVCyrY",
+  "_key": "!items!yWyqtOrBrKpVCyrY",
+  "name": "Fibel (Bronze)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.025,
+    "gewicht": 0.025,
+    "preis": 5.25,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "93",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338157334,
+    "modifiedTime": 1768338157334,
+    "lastModifiedBy": null
+  }
+}

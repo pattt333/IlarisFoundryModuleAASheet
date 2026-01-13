@@ -1,0 +1,39 @@
+{
+  "_id": "Lw9HaTD8GNOt66Px",
+  "_key": "!items!Lw9HaTD8GNOt66Px",
+  "name": "Feinmechaniker-Werkzeug",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.5,
+    "gewicht": 0.5,
+    "preis": 100,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "84",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338157246,
+    "modifiedTime": 1768338157246,
+    "lastModifiedBy": null
+  }
+}

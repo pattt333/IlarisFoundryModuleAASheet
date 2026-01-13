@@ -1,0 +1,39 @@
+{
+  "_id": "DZp8S9mxQFlt8Nn1",
+  "_key": "!items!DZp8S9mxQFlt8Nn1",
+  "name": "Kompass (Südweiser),Metallgehäuse",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.3,
+    "gewicht": 0.3,
+    "preis": 60,
+    "quantity": 1,
+    "text": "Der Kompass wird von den meisten Aventuriern als Südweiser bezeichnet, denn die Nadel dieses Geräts weist stets nach Süden. Viele bekommen jedoch in ihrem ganzen Leben keinen zu Gesicht, denn Südweiser sind alles andere als alltäglich. Nur in der Nautik und bei einigen reisenden Abenteurern sind Südweiser recht verbreitet. Denn der Kompass zeigt immer zuverlässig die Himmelsrichtungen an, unabhängig vom Wetter und überall, wo es Helden hin verschlägt, sei es im tiefsten Dschungel, auf See oder in unterirdischen Katakomben.\n\n Ein üblicher Südweiser hat die Himmelsrichtungen auf eine runde Fläche gemalt, über der ein drehbarer Zeiger, Nadel genannt, angebracht ist, deren eines Ende sich stets nach Süden ausrichtet.\n\n Unter Seeleuten verbreitete, kleine Kompasse haben meist einen Deckel, um die sensible Mechanik vor den Unbilden des Wetters schützen zu können. Besonders prächtige Exemplare sind mit Einlegearbeiten aus farbigem Glas, Edelmetallen oder Juwelen verziert. Südweiser gibt es in verschiedenen Größen, die meisten lassen sich in einer Hand halten, doch auf einigen Schiffen, in Kapitänsschulen oder Palästen lassen sich wagenradgroße, hängende oder in eine Tischplatte eingebaute Exemplare bewundern.\n\n Bei den meisten Kompassen ist die Windrose mit den Himmelsrichtungen beschriftet, besonders fromme Mechaniker verwenden jedoch Götternamen: Praios steht dabei für den Süden und Firun für Norden, Efferd bezeichnet den Westen, Rahja oder Aves Osten. Auch wird die Windrose oft um nautische oder mythische Details ergänzt.\n\n Einen Südweiser herzustellen, erfordert neben mechanischem Geschick auch das richtige Material: die Nadel enthält immer wenigstens eine winzige Menge Meteoreisen. Dieses geheimnisvolle Metall ist selten und teuer, doch ohne seine Zugabe richtet sich die Kompassnadel nicht korrekt aus.\n\n Südweiser sind den Aventuriern schon seit Jahrtausenden bekannt, bereits die Urtulamiden und alten Bosparaner verwendeten sie zur Navigation auf See. Doch nicht nur Menschen kennen und nutzen Südweiser, auch Achaz und besonders Zwerge schätzen das Gerät seit langer Zeit.\n\n Da die Nadel des Südweisers weder magnetisch noch in irgendeiner Weise magisch ist, rätseln aventurische Gelehrte, warum die Nadel sich stets nach Süden ausrichtet. Über eine noch unbekannte Energie wird dabei ebenso spekuliert wie über Praios’ Ordnung. Einige Geoden und Druiden, die sich mit dem Phänomen des Magnetismus auskennen, nehmen an, dass sich weit im Süden etwas befindet, das die Spitze der Nadel anzieht. Darüber, was genau es ist, herrscht jedoch keine Einigkeit, von der ewigen Zitadelle des Elements Feuer ist dabei ebenso die Rede wie von einem übergroßen anziehenden Berg oder einem gestürzten Stern."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "143",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338157820,
+    "modifiedTime": 1768338157820,
+    "lastModifiedBy": null
+  }
+}

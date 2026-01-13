@@ -1,0 +1,39 @@
+{
+  "_id": "WfGA5zAdL1sr2CiU",
+  "_key": "!items!WfGA5zAdL1sr2CiU",
+  "name": "Archaisches Labor",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 30,
+    "gewicht": 30,
+    "preis": 200,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "11",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338156769,
+    "modifiedTime": 1768338156769,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "jeAidzS6lZFzYIXx",
+  "_key": "!items!jeAidzS6lZFzYIXx",
+  "name": "Buch (Prems Tierleben)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 250,
+    "quantity": 1,
+    "text": "Prems Tierleben ist eine umfassende Sammlung über die Tierwelt der West- und Nordküste, des Orklandes, Albernias, des Lieblichen Feldes und der Zyklopeninseln. Um 923 BF wurde der Band herausgegeben. Die Texte wurden jedoch größtenteils weitaus früher verfasst, vermutlich durch unterschiedliche thorwalsche Autoren, und sind mit Zeichnungen versehen. Die etwa 200 direkten Abschriften sind meist kommentiert, das Original wird in Prem aufbewahrt. Abschriften der kommentierten Fassungen sind zwar meist umfangreicher, dafür aber oft ungenauer bei den einzelnen Beschreibungen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "44",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338156969,
+    "modifiedTime": 1768338156969,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "ROcbJqEXa4ctdmiO",
+  "_key": "!items!ROcbJqEXa4ctdmiO",
+  "name": "Buch (Herbarium Kuslikum)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 250,
+    "quantity": 1,
+    "text": "Das Herbarium Kuslikum ist eine umfangreiche Abhandlung über die aventurische Flora in neun Bänden von je 200 Seiten, die der Kusliker Hesindetempel 1005 BF herausgegeben hat. Die Bände sind erstaunlich unterhaltsam zu lesen, enthalten viele Quellenhinweise und jede Menge Skizzen und Zeichnungen. Die Lektüre ist ein Muss für jeden, der sich in Buchform mit der Pflanzenkunde beschäftigen will. Insgesamt kursieren etwa 700 Kopien unterschiedlicher Qualität. Die Manuskriptsammlung wird in den Hallen der Weisheit zu Kuslik verwahrt und von den Geweihten immer weiter ergänzt."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "42",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338156952,
+    "modifiedTime": 1768338156952,
+    "lastModifiedBy": null
+  }
+}

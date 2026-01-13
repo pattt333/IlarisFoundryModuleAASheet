@@ -1,0 +1,39 @@
+{
+  "_id": "vqdjZb93TRiYSVqE",
+  "_key": "!items!vqdjZb93TRiYSVqE",
+  "name": "Fackel",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.5,
+    "gewicht": 0.5,
+    "preis": 0.5,
+    "quantity": 1,
+    "text": "Fackeln sind eine in ganz Aventurien beliebte und bekannte Möglichkeit der Beleuchtung. Sie lassen sich gut transportieren, brennen relativ lange, auch bei Regenwetter, und spenden viel Licht. Auch dass sie meistens recht stark rußen, kann diese Vorteile nicht aufwiegen und etwas an ihrer großen Beliebtheit bei Entdeckern mindern.\n\n Ihr Hang zum Funkenflug macht sie unter strohgedeckten, niedrigen Dächern gefährlich, doch in steinernen Pyramiden, dunklen Tunneln und finsteren Kerkern sind sie das beste und oft auch charakteristischste Leuchtmittel. Häufig gibt es in Steingebäuden an der Wand befestigte Halter, um eine Fackel aufzunehmen. Auch im Freien werden sie gern verwendet, so gibt es im Horasreich und in den Tulamidenlanden verzierte Fackelhalter für die Illuminierung rauschender Gartenfeste.\n\n Fackeln bestehen aus einem Stück Holz, das an der Spitze mit einem Stofffetzen oder Seil umwickelt und anschließend in Öl oder Pech getaucht wurde. Fackeln gibt es auf den meisten Märkten zu kaufen, sie lassen sich aber in der Not auch mit einem Stück des eigenen Gewands oder einer Handvoll Stroh und etwas Lampenöl improvisieren."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "75",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338157179,
+    "modifiedTime": 1768338157179,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "rtr5g0HyqUpUd9Lw",
+  "_key": "!items!rtr5g0HyqUpUd9Lw",
+  "name": "Spinett",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 100,
+    "gewicht": 100,
+    "preis": 4000,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "220",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338158369,
+    "modifiedTime": 1768338158369,
+    "lastModifiedBy": null
+  }
+}

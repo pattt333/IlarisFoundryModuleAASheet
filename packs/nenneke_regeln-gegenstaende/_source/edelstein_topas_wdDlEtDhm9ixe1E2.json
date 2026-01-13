@@ -1,0 +1,39 @@
+{
+  "_id": "wdDlEtDhm9ixe1E2",
+  "_key": "!items!wdDlEtDhm9ixe1E2",
+  "name": "Edelstein (Topas)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.02,
+    "gewicht": 0.02,
+    "preis": 20,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "72",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338157158,
+    "modifiedTime": 1768338157158,
+    "lastModifiedBy": null
+  }
+}

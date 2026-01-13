@@ -1,0 +1,39 @@
+{
+  "_id": "CqFyQHM9xDpcKB3x",
+  "_key": "!items!CqFyQHM9xDpcKB3x",
+  "name": "Samthauch (1 Portion)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.001,
+    "gewicht": 0.001,
+    "preis": 200,
+    "quantity": 1,
+    "text": "Samthauch, auch Kamaluqs Tatze oder Scharlachkatze genannt, ist ein Rauschmittel, das aus den Blütenblättern des Schleichenden Todes gewonnen wird. In hoher Dosierung kann es auch als tödliches Atemgift verwendet werden. Im Mittelreich steht es auf dem Wehrheimer Index. Preis pro Portion."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "282",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338159117,
+    "modifiedTime": 1768338159117,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "HKerkLLes0DmgFOF",
+  "_key": "!items!HKerkLLes0DmgFOF",
+  "name": "Buch (Annalen des Götteralters)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 2,
+    "gewicht": 2,
+    "preis": 500,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "37",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338156910,
+    "modifiedTime": 1768338156910,
+    "lastModifiedBy": null
+  }
+}

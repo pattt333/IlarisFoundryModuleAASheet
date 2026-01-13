@@ -1,0 +1,39 @@
+{
+  "_id": "SBH0bQiJfrODoIiA",
+  "_key": "!items!SBH0bQiJfrODoIiA",
+  "name": "Buch (Vademecum für das Waffenhandwerk)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 150,
+    "quantity": 1,
+    "text": "985 BF von der inzwischen verstorbenen Garether Schwertmeisterin Krona Adersin als erstes explizites Fechtbuch verfasst, gilt das Adersin-Vademecum als wichtiger Schritt für die Begründung des Schwertgesellentums. Es beschreibt anschaulich unterschiedliche Kampfweisen mit Anderthalbhänder, Schwert, Schild und Linkhand und vergleicht ihre Wirksamkeit. Das Buch stieß auf den Widerstand der Kriegerakademien und Rondratempel, verbreitete sich aber schnell. Etwa 200 Abschriften sind derzeit im Umlauf. Die Arbeiten an einer gedruckten Neuauflage, die von Kronas Söhnen um weitere Techniken mit dem Anderthalbhänder ergänzt wurde, wurden auch nach Jost Andersins Tod fortgeführt. Bisher ließ sich Schwertmeister Erlan Adersin jedoch noch keine Aussage zum Erscheinen der Überarbeitung entlocken."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "45",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338156978,
+    "modifiedTime": 1768338156978,
+    "lastModifiedBy": null
+  }
+}

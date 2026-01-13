@@ -1,0 +1,39 @@
+{
+  "_id": "5hM2i3sa7iGPQElp",
+  "_key": "!items!5hM2i3sa7iGPQElp",
+  "name": "Fernrohr",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1.25,
+    "gewicht": 1.25,
+    "preis": 150,
+    "quantity": 1,
+    "text": "Auch in Aventurien nutzen Seefahrer, Piraten, Astrologen, Kundschafter und Entdecker Fernrohre. In einigen Regionen sind diese Geräte nahezu unbekannt, in anderen deutlich häufiger. Aber immer sind sie teuer in der Anschaffung und für die allermeisten kein alltäglicher Gegenstand.\n\n Am weitesten verbreitet ist ein handliches Fernrohr von etwa einem Drittel Schritt Länge, mit dem sich entfernte Objekte besser erkennen lassen. Das Rohr ist aus Metall oder Holz, ganz schlicht oder mit nautischen oder astrologischen Symbolen verziert. Auch das Wappen des Besitzers ist sehr beliebt. Es gibt eine starre Ausfertigung und eine leicht teurere zum Zusammenschieben. Sternkundler bevorzugen, außer auf der Reise, ein grö- ßeres Fernrohr mit stärkerer Vergrößerung, die größten Exemplare sind die gewaltigen Teleskope der Sternwarten. Entsprechende Fernrohre für Observatorien sind immer Spezialanfertigungen, gibt es doch kaum mehr als eine Handvoll entsprechend ausgerüstete Sternwarten in Aventurien. Gleiches gilt auch für die ebenfalls seltenen kleinen Fernrohre, die vor allem bei Spionen, Dieben und anderen Phexensjüngern verbreitet sind und sich in einer Gürteltasche verstecken lassen.\n\n Da das korrekte Montieren und vor allem Schleifen der Linsen aufwändig ist und besonderes Fachwissen erfordert, sind Fernrohre nur in großen Städten erhältlich. Besonders in Seefahrerfamilien werden sie oft weitervererbt und es gilt als große Ehre, ein solches Exemplar als Geschenk zu bekommen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "86",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338157267,
+    "modifiedTime": 1768338157267,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "bEA8FDOjhWyet8yF",
+  "_key": "!items!bEA8FDOjhWyet8yF",
+  "name": "Stirnreif (Gold)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.2,
+    "gewicht": 0.2,
+    "preis": 207,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "225",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338158462,
+    "modifiedTime": 1768338158462,
+    "lastModifiedBy": null
+  }
+}

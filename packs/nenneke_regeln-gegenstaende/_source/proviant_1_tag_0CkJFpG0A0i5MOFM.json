@@ -1,0 +1,39 @@
+{
+  "_id": "0CkJFpG0A0i5MOFM",
+  "_key": "!items!0CkJFpG0A0i5MOFM",
+  "name": "Proviant (1 Tag)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1.5,
+    "gewicht": 1.5,
+    "preis": 0.5,
+    "quantity": 1,
+    "text": "Äpfel, Birnen, Hammelkeule – die Liste der Nahrungsmittel, die aventurische Helden mit auf Reisen nehmen, ist lang. Es will gut überlegt sein, was man sich zur Verpflegung einpackt, denn je nach Klima des Reiseziels oder Dauer des Abenteuers werden gerade die beliebtesten Happen schnell schlecht und entwickeln ein Eigenleben.\n\n Gut geeignet ist stets, was nicht so bald verdirbt, nur wenig Platz einnimmt und trotzdem sättigt. Trockenfleisch sowie getrocknete Früchte aller Art, sind eine gute Wahl, damit der Reisende nicht dauerhaft in der Wildnis suchen oder seine Reisekasse in einer Taverne anbrechen muss.\n\n Fischhändler schwören zudem darauf, dass in Salz eingelegter Fisch viele Tage hält, ohne faul zu werden. Zweifach gebackenes Brot ist ebenfalls sehr resistent gegen den Pelz Mishkaras und bietet eine gute Beigabe zum Trockenfleisch oder eignet sich zum Andicken einer frischen Suppe.\n\n Da sich viele Abenteurer auch selbst etwas kochen und nicht nur vom eingelegten Proviant essen wollen, nehmen viele Helden auch Gewürze und Kräuter mit. Salz, Zucker, Koriander, sogar Honig und exotische Pulver werden gerne eingekauft und mitgeführt, um einem Braten, einer Suppe oder anderen Gerichten den letzten Schliff zu verleihen.\n\n Doch nicht nur für Speis muss gut gesorgt sein, auch in Sachen Trank sollte der Abenteurer vorgesorgt haben. Hat man nicht gerade Feldflasche oder Wasserschlauch zur Hand, kochen sich viele Aventurier mit Kräutern versetztes Wasser auf, um ihren Durst zu stillen oder dem einen oder anderen Zipperlein Linderung zu verschaffen. Ansonsten sind Wein und Wasser lang haltbare Durstlöscher."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "188",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338158051,
+    "modifiedTime": 1768338158051,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "HUAyhlqhERKlakqi",
+  "_key": "!items!HUAyhlqhERKlakqi",
+  "name": "Sackpfeife",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 2,
+    "gewicht": 2,
+    "preis": 30,
+    "quantity": 1,
+    "text": "Ich habe auch eine Sackpfeife - in meiner Hose!"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "196",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338158112,
+    "modifiedTime": 1768338158112,
+    "lastModifiedBy": null
+  }
+}

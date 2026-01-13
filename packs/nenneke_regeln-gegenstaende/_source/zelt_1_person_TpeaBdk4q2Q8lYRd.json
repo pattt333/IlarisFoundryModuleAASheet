@@ -1,0 +1,39 @@
+{
+  "_id": "TpeaBdk4q2Q8lYRd",
+  "_key": "!items!TpeaBdk4q2Q8lYRd",
+  "name": "Zelt (1 Person)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 3,
+    "gewicht": 3,
+    "preis": 14.5,
+    "quantity": 1,
+    "text": "Die meisten Abenteurerzelte sind aus Stoffflicken, alten Wolldecken und Lederstücken gefertigt. Nur wohlhabendere Helden oder Nomadenvölker, die sich selbst Zelte fertigen können, werden ein aus einheitlichen Stücken bestehendes Zelt besitzen.\n\n Unter Gläubigen der Zwölfgötter gilt das Reisezelt als eine von Aves’ Gaben. Es soll dafür sorgen, dass man auch im provisorisch aufgeschlagenen Lager die Vorteile von Haus und Hof genießen kann. Es fällt so sogar strengen Glaubensanhängern Travias leichter, sich für eine Reise zu rüsten, da sie das Zelt als transportable Erweiterung ihres eigenen Heims verstehen können. Für einen traviagefälligen Abenteurer gilt es daher, die Gesetze seiner Kirche am Lagerplatz und im Zelt ebenso zu wahren, als auch anderen Reisegefährten nahezubringen.\n\n Ein Zelt kann an Bäumen aufgehängt und am Boden verankert werden. Durch angespitzte Pflöcke, genannt Heringe, aus Holz oder Stahl, kann das Zelt auf weichem Boden aufgebaut werden."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "275",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338159074,
+    "modifiedTime": 1768338159074,
+    "lastModifiedBy": null
+  }
+}

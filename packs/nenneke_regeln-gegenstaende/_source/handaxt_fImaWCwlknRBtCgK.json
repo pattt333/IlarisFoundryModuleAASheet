@@ -1,0 +1,39 @@
+{
+  "_id": "fImaWCwlknRBtCgK",
+  "_key": "!items!fImaWCwlknRBtCgK",
+  "name": "Handaxt",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.75,
+    "gewicht": 0.75,
+    "preis": 20,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "112",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338157453,
+    "modifiedTime": 1768338157453,
+    "lastModifiedBy": null
+  }
+}

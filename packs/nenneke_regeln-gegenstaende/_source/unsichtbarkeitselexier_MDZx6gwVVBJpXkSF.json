@@ -1,0 +1,39 @@
+{
+  "_id": "MDZx6gwVVBJpXkSF",
+  "_key": "!items!MDZx6gwVVBJpXkSF",
+  "name": "Unsichtbarkeitselexier",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 400,
+    "quantity": 1,
+    "text": "Der Trinkende wird für 1 Stunde unsichtbar, Kleidung und andere Gegenstände sind nicht betroffen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "310",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338159285,
+    "modifiedTime": 1768338159285,
+    "lastModifiedBy": null
+  }
+}

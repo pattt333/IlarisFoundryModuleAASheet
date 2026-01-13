@@ -1,0 +1,39 @@
+{
+  "_id": "zsMyHX0A7fMAe1jr",
+  "_key": "!items!zsMyHX0A7fMAe1jr",
+  "name": "Sack",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.75,
+    "gewicht": 0.75,
+    "preis": 1,
+    "quantity": 1,
+    "text": "Ein alter Sack."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "195",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338158105,
+    "modifiedTime": 1768338158105,
+    "lastModifiedBy": null
+  }
+}

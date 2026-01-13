@@ -1,0 +1,39 @@
+{
+  "_id": "76JCABLiZn44sZbB",
+  "_key": "!items!76JCABLiZn44sZbB",
+  "name": "Heiltrank",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 40,
+    "quantity": 1,
+    "text": "Kampfunfähigkeit und Blutungen werden geheilt. Außerdem erhält das Ziel 2W6+4 Heilpunkte, für jede Überschreitung der WS wird eine Wunde geheilt."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "299",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338159219,
+    "modifiedTime": 1768338159219,
+    "lastModifiedBy": null
+  }
+}

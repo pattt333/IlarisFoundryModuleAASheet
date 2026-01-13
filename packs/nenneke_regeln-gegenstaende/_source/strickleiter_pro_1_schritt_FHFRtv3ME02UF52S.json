@@ -1,0 +1,39 @@
+{
+  "_id": "FHFRtv3ME02UF52S",
+  "_key": "!items!FHFRtv3ME02UF52S",
+  "name": "Strickleiter (pro 1 Schritt)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 5,
+    "gewicht": 5,
+    "preis": 25,
+    "quantity": 1,
+    "text": "Wem ein Kletterseil nicht reicht, oder wer nicht genug Halt daran findet, der greift sich direkt zwei Exemplare davon und verbindet sie mit mehreren Tritthölzern oder Seilstücken und macht sich daraus eine simple Strickleiter. Meist sind sie zwischen fünf und sechs Schritt lang. Ebenso leicht wie das Kletterseil lässt sich eine Strickleiter aufrollen und im Reisegepäck unterbringen.\n\n Zwar dauert das Aufhängen einer Strickleiter im Schnitt deutlich länger als der Gebrauch des Kletterseils, doch kann es sich für eine große Reisegesellschaft lohnen, einen deutlich leichteren Auf- und Abstieg zu haben. Der Aufwand des Bauens und Aufhängens einer Strickleiter wird für viele durch den schnellen und deutlich sichereren Ablauf beim Klettern in den Hintergrund gedrängt. Außer auf Reisen findet sich die Strickleiter auf vielen Höfen und in Scheunen. Dort wird sie genutzt, um die Dachkammern und Strohlager zu erreichen, da eine massive Treppe meist zu viel Stauraum stehlen würde. Auch als Kinderspiel erfreut sich diese Leiter großer Beliebtheit. An einen Ast gebunden, hängen sich Kinder an die im Wind schaukelnde Leiter und versuchen sich so lange festzuhalten, bis sie herunterfallen. Wenn mehrere Kinder an dem Spiel beteiligt sind, versuchen sie sich gerne gegenseitig herunterzustoßen, oder schwingen nacheinander, um zu sehen, wer sich länger halten konnte. Die Strickleiter ist vor allem im Mittelreich sehr verbreitet."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "230",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768338158513,
+    "modifiedTime": 1768338158513,
+    "lastModifiedBy": null
+  }
+}

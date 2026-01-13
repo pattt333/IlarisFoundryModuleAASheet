@@ -611,8 +611,7 @@ function generateFoundryId() {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     
-    // Generiere zufällige Länge zwischen 13 und 16 Zeichen
-    const length = Math.floor(Math.random() * 4) + 13; // 13, 14, 15 oder 16
+    const length = 16;
     
     // Generiere ausreichend zufällige Bytes
     const bytes = crypto.randomBytes(length);
