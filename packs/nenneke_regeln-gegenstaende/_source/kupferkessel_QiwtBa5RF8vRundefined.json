@@ -1,0 +1,39 @@
+{
+  "_id": "QiwtBa5RF8vRundefined",
+  "_key": "!items!QiwtBa5RF8vRundefined",
+  "name": "Kupferkessel",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 4,
+    "gewicht": 4,
+    "preis": 24,
+    "quantity": 1,
+    "text": "Kessel gibt es aus verschiedenen Metallen, doch die meisten Aventurier bevorzugen ein Exemplar aus Kupfer. Es rostet kaum, wird schnell warm und sieht außerdem noch gut aus. Kupferkessel sind ideale Kochutensilien, außerdem lässt sich in ihnen braten und auch für die Ausstattung eines alchimistischen Labors sind sie gut geeignet. So mancher reisende Abenteurer hat auch schon andere Verwendungsmöglichkeiten für einen Kessel gefunden, als Eimer, als Wohnort für einen magischen Fisch oder als improvisierter, wenig hilfreicher, aber eindrucksvoller Helm.\n\n Kupferkessel werden in unterschiedlichen Größen hergestellt, die kleinsten fassen kaum mehr als eine Schüssel. Die größten Exemplare dagegen lassen sich kaum alleine bewegen, schon gar nicht, wenn sie mit heißer Suppe gefüllt sind.\n\n Da Kupfer Orange, der Farbe der Göttin Travia, sehr ähnlich sieht, gilt es in besonders frommen Haushalten als außerordentlich wichtig, die kupfernen Kessel und Pfannen stets auf Hochglanz zu polieren. Der seltene Schmuck eines Traviatempels wird auch häufig aus Kupfer gefertigt und viele Geweihte sehen große Kupferkessel als den wichtigsten Schmuck ihres Gotteshauses.\n\n Ähnlich wie Alchimisten nutzen Hexen kupferne Kessel nicht nur zum Kochen, sondern auch zum Brauen von besonderen Tränken und Salben. Gerüchten zufolge sollen sie auch magische Kessel besitzen, die Tote zum Leben erwecken können oder andere geheimnisvolle Dinge bewerkstellen können."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "152",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327866871,
+    "modifiedTime": 1768327866871,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "9rRjJ5TnO9qLundefined",
+  "_key": "!items!9rRjJ5TnO9qLundefined",
+  "name": "Wurfhaken",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 7,
+    "quantity": 1,
+    "text": "Anders als der Kletterhaken besitzt der Wurfhaken drei bis fünf lange gebogene Stahlstreben. Er wird am Ende eines Seils angebracht und mit viel Schwung auf eine Anhöhe geschleudert. Um ein Seil für einen Bergstieg zu befestigen, eignet sich dieser Haken besonders gut, wenn sich genug Klemmfläche finden lässt, denn der Haken nützt nichts, wenn er sich nirgends festzukrallen vermag. Hat sich der Haken dann gut verkeilt, sollte man vor dem Aufstieg kräftig an dem Seil ziehen, um sich zu vergewissern, dass es auch sicher ist und sich beim Kletterversuch nicht lösen kann. Gerade wenn mehrere Personen gleichzeitig oder nacheinander zu klettern beabsichtigen, sollten das Seil und der Haken mehrfach geprüft werden.\n\n Er gehört somit zur Standardausrüstung jedes Gebirgswanderers. Aber auch jeder Fassadenkletterer, der etwas auf sich hält, wird einen Wurfhaken im Gepäck haben.\n\n Manchmal wurde der Wurfhaken an einem Seil auch als improvisierte Waffe missbraucht. Man kann den Haken schwingen und versuchen, seinen Gegner mit einem gezielten Treffer zu erwischen. Allerdings gehört viel Übung dazu und es kann ähnlich viel dabei schiefgehen wie mit einem Morgenstern."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "273",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327867939,
+    "modifiedTime": 1768327867939,
+    "lastModifiedBy": null
+  }
+}

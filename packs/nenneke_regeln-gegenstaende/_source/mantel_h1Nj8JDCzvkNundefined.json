@@ -1,0 +1,39 @@
+{
+  "_id": "h1Nj8JDCzvkNundefined",
+  "_key": "!items!h1Nj8JDCzvkNundefined",
+  "name": "Mantel",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1.5,
+    "gewicht": 1.5,
+    "preis": 7,
+    "quantity": 1,
+    "text": "Mäntel können in Aventurien vieles sein, von einem überlebenswichtigen Kälteschutz bis hin zu einem modischen Accessoire. Verbreitet sind sie auf dem ganzen Kontinent, doch nicht jeder versteht dasselbe darunter. Für einen Fjarninger ist ein guter Pelz, um die Schultern gelegt, ein Mantel, im Süden dagegen reicht ein zarter Seidenschleier, und modebewusste Horasier kennen gleich mehrere Arten Mäntel.\n\n Für eine Reise wird fast überall ein knielanger Mantel bevorzugt, der vor Regen und auch einigermaßen vor Kälte schützt. Ob mit oder ohne Kapuze, ist dabei eine Geschmacksfrage. Gleiches gilt für Ärmel oder Öffnungen für die Arme, auch ein Umhang gilt in Aventurien als Mantel. Über den reinen Wetterschutz und das Setzen eines modisch-gesellschaftlichen Akzentes hinaus lassen sich Mäntel für viele weitere Dinge verwenden, zum Beispiel als Decke oder improvisierter Beutel. Extravagante Fechter benutzen einen Mantel mitunter auch als Parierwaffe.\n\n Einige Mäntel haben es zu großer Berühmtheit gebracht, besonders natürlich die Krönungsmäntel verschiedener Herrscher. Die Traviakirche hütet mit dem Mantel der Heiligen Mascha den Mantel einer Heiligen. Dieser hat die wundersame Eigenschaft, sich in Decken für Frierende teilen zu lassen. Und viele, vor allem tulamidische Märchen berichten von magischen Mänteln, die ihren Träger unsichtbar oder unverwundbar machen oder ihm andere, zauberhafte Fähigkeiten verleihen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "166",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327866921,
+    "modifiedTime": 1768327866921,
+    "lastModifiedBy": null
+  }
+}

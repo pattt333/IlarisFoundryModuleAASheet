@@ -1,0 +1,39 @@
+{
+  "_id": "MYh5ls8Ou1wTundefined",
+  "_key": "!items!MYh5ls8Ou1wTundefined",
+  "name": "Kaffee, geröstet",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.1,
+    "gewicht": 0.1,
+    "preis": 20,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "126",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327866635,
+    "modifiedTime": 1768327866635,
+    "lastModifiedBy": null
+  }
+}

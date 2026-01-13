@@ -1,0 +1,39 @@
+{
+  "_id": "25fyHh2F6BHeundefined",
+  "_key": "!items!25fyHh2F6BHeundefined",
+  "name": "Fibel (Gold)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.05,
+    "gewicht": 0.05,
+    "preis": 55,
+    "quantity": 1,
+    "text": "FIBEL_DESCRIPTIONg"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "94",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327866292,
+    "modifiedTime": 1768327866292,
+    "lastModifiedBy": null
+  }
+}

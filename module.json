@@ -41,7 +41,8 @@
         "nenneke_regeln-uebernatuerlichetalente",
         "nenneke_regeln-vorteile",
         "nenneke_regeln-waffen",
-        "nenneke_regeln-waffeneigenschaften"
+        "nenneke_regeln-waffeneigenschaften",
+        "nenneke_regeln-gegenstaende"
       ],
       "folders": []
     }
@@ -172,6 +173,17 @@
       "name": "nenneke_regeln-waffeneigenschaften",
       "label": "Nenneke Waffeneigenschaften",
       "path": "packs/nenneke_regeln-waffeneigenschaften",
+      "type": "Item",
+      "system": "Ilaris",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "nenneke_regeln-gegenstaende",
+      "label": "Nenneke Gegenstände",
+      "path": "packs/nenneke_regeln-gegenstaende",
       "type": "Item",
       "system": "Ilaris",
       "ownership": {

@@ -1,0 +1,39 @@
+{
+  "_id": "3y4eA6cqkN01undefined",
+  "_key": "!items!3y4eA6cqkN01undefined",
+  "name": "Schnur (pro 10 Schritt)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.1,
+    "gewicht": 0.1,
+    "preis": 0.5,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "207",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327867415,
+    "modifiedTime": 1768327867415,
+    "lastModifiedBy": null
+  }
+}

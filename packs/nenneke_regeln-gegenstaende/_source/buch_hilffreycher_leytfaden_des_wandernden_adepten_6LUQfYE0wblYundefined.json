@@ -1,0 +1,39 @@
+{
+  "_id": "6LUQfYE0wblYundefined",
+  "_key": "!items!6LUQfYE0wblYundefined",
+  "name": "Buch (Hilffreycher Leytfaden des wandernden Adepten)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 150,
+    "quantity": 1,
+    "text": "Während seiner Ausbildung lernt ein jeder Jungmagus so manchen Trick fürs Leben, allerdings stumpft der Umgang gegenüber der Welt außerhalb der Akademie oder des Magierturms seines Lehrmeisters stark ab. Damit sich ein Magier nach einem Abschluss nicht verrennt, führt er bei seinem ersten Gang in die Außenwelt gerne diese Fibel bei sich. \n\nDer Hilffreyche Leytfaden des wandernden Adepten, um 715 BF in Khunchom zusammengestellt, listet zwar keine Zauberformeln auf, schließlich sollte der Magus sich diese während seiner Lehrzeit bereits angeeignet haben, dafür aber eine Vielzahl an Anleitungen zur korrekten Intonation und Atmung während der Vorbereitung auf einen Zauberspruch. Auch weist das Buch den Schüler daraufhin, welchen Zauber er in welcher Situation am ehesten gebrauchen soll, sollte dieser sich einmal nicht mehr sicher sein."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "43",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327865903,
+    "modifiedTime": 1768327865903,
+    "lastModifiedBy": null
+  }
+}

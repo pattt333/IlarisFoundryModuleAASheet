@@ -1,0 +1,39 @@
+{
+  "_id": "bFLPbHDSlj8vundefined",
+  "_key": "!items!bFLPbHDSlj8vundefined",
+  "name": "Amboss (klein)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 25,
+    "gewicht": 25,
+    "preis": 200,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "5",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327865707,
+    "modifiedTime": 1768327865707,
+    "lastModifiedBy": null
+  }
+}

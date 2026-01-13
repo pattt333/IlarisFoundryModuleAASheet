@@ -1,0 +1,39 @@
+{
+  "_id": "C2ek1sdyGjePundefined",
+  "_key": "!items!C2ek1sdyGjePundefined",
+  "name": "Hylailer Feuer",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 150,
+    "quantity": 1,
+    "text": "Die ölige Flüssigkeit entzündet sich, wenn ihr Behältnis zerbricht und ist nicht mit Wasser zu löschen. Bei 1–15 auf dem 1W20 versagt das Hylailer Feuer."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "300",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327868126,
+    "modifiedTime": 1768327868126,
+    "lastModifiedBy": null
+  }
+}

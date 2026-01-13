@@ -1,0 +1,39 @@
+{
+  "_id": "Mv5TjhcERcFHundefined",
+  "_key": "!items!Mv5TjhcERcFHundefined",
+  "name": "Angsgift",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 40,
+    "quantity": 1,
+    "text": "Ein nicht-tödliches Waffengift (Stufe 20)."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "284",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327868004,
+    "modifiedTime": 1768327868004,
+    "lastModifiedBy": null
+  }
+}

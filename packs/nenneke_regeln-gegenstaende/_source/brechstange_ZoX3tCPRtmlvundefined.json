@@ -1,0 +1,39 @@
+{
+  "_id": "ZoX3tCPRtmlvundefined",
+  "_key": "!items!ZoX3tCPRtmlvundefined",
+  "name": "Brechstange",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 6,
+    "gewicht": 6,
+    "preis": 38,
+    "quantity": 1,
+    "text": "Nicht jeder ist darin bewandert, eine Tür mittels eines Dietrichs zu öffnen. Dann ist das Werkzeug der Wahl meistens ein Brecheisen. Unter Einbrechern ist es nicht sonderlich beliebt, denn es hinterlässt Kratzspuren an der damit geöffneten Tür. Dennoch beherrschen die meisten Schurken dieser Art den Umgang damit außerordentlich gut. \n\nDas Brecheisen trägt seinen Namen zurecht, ist es doch aus stabilem Eisen gefertigt. Aufgrund seiner Form wird es mitunter auch als Brechstange bezeichnet, insbesondere etwas längere Varianten. \n\nBrecheisen werden auch von Gardisten verwendet, um verschlossene Türen zu öffnen. Oder von Zöllnern, die in die Kisten unkooperativer Händler blicken wollen. Auch in Steinbrüchen finden sie als Hebelwerkzeuge Verwendung. Zu einem ähnlichen Zweck benutzen das Brecheisen auch Schatzsucher, wobei sie es vor allem zu ihrer Ausrüstung zählen, um alte Schatztruhen zu öffnen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "32",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327865843,
+    "modifiedTime": 1768327865843,
+    "lastModifiedBy": null
+  }
+}

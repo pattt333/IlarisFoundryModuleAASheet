@@ -1,0 +1,39 @@
+{
+  "_id": "GvTaU9MjM9CAundefined",
+  "_key": "!items!GvTaU9MjM9CAundefined",
+  "name": "Ohrring (Gold)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.05,
+    "gewicht": 0.05,
+    "preis": 57,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "175",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327866979,
+    "modifiedTime": 1768327866979,
+    "lastModifiedBy": null
+  }
+}

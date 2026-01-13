@@ -1,0 +1,39 @@
+{
+  "_id": "pllUrKZyt7UXundefined",
+  "_key": "!items!pllUrKZyt7UXundefined",
+  "name": "Schere (Schneiderschere)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.3,
+    "gewicht": 0.3,
+    "preis": 7,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "201",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327867338,
+    "modifiedTime": 1768327867338,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "oMDx1XpTaAGYundefined",
+  "_key": "!items!oMDx1XpTaAGYundefined",
+  "name": "Feuerstein und Stahl",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.25,
+    "gewicht": 0.25,
+    "preis": 3,
+    "quantity": 1,
+    "text": "Früher oder später wird ein Held auf Reisen, sollte er gezwungen sein, in der Wildnis zu nächtigen, ein Feuer machen wollen. Sei es, um nach Travias Gunst an einem warmen Lagerfeuer zu sitzen, zu rasten und zu speisen, oder um nach Ingerimms feuriger Weisung ein Schmiedefeuer zu entfachen, denn selbst dem erfahrensten Streiter Aventuriens bricht schon mal die Klinge. Ein Feuer hält zudem Wildtiere ab. Um dies zu bewerkstelligen, benutzen Aventurier meist Feuerstein und Stahl. Der Feuerstein, ein aschgraues Gestein, findet sich in vielen Gebirgen und kommt häufig vor. Auf jedem guten Markt und in jeder Schmiede wird man fündig werden.\n\n Schlägt man diese Steine im geeignetem Winkel gegen ein Stück Stahl oder schleift sie schnell daran, so vermögen sie Funken zu werfen, die sich gut zur Bildung einer Glut auf trockenen Ästen, Blättern oder Zunder eignen. Der Glaube hält sich stark unter Zwölfgöttergläubigen, dass Ingerimm den Feuersteinen die Macht verlieh, aus kleinen Funken herrlich brennende Flammen erstehen zu lassen. In einer Gruppe aus Abenteurern herrscht selten ein Mangel an Stahl, denn schlecht vorbereitet wären die Helden, führten sie keine Waffe aus gehärtetem Stahl mit sich. Speziell zum Zwecke des Feuermachens werden Stahlstücke in jeder Schmiede angeboten. Unter einiger Anstrengung gelingt es auch durch das Aneinanderschlagen zweier solcher Stahlstücke, einen Funken zu erzeugen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "92",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327866279,
+    "modifiedTime": 1768327866279,
+    "lastModifiedBy": null
+  }
+}

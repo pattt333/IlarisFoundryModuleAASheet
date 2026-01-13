@@ -1,0 +1,39 @@
+{
+  "_id": "gi06uZ9V7R5rundefined",
+  "_key": "!items!gi06uZ9V7R5rundefined",
+  "name": "Firnklinge",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 1680,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "96",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327866312,
+    "modifiedTime": 1768327866312,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "FQF7TUF0jydnundefined",
+  "_key": "!items!FQF7TUF0jydnundefined",
+  "name": "Kamelspiel (gezinkt)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 1,
+    "gewicht": 1,
+    "preis": 20,
+    "quantity": 1,
+    "text": "Rote und Weiße Kamele, oder kurz nur Kamelspiel genannt, ist das berühmteste Brettspiel der Tulamidenlande, aber auch in anderen Teilen Aventuriens ist es weit verbreitet. Wie alt das Spiel genau ist, weiß niemand zu sagen, aber es soll bereits zu Zeiten der Urtulamiden gespielt worden sein. Es wird in Palästen ebenso gespielt wie in den zahlreichen Teehäusern und Karawansereien, von Frauen, Männern und auch Kindern, unter guten Freunden ebenso wie in einer gepflegten Feindschaft.\n\n Rote und Weiße Kamele wird üblicherweise zu zweit gegeneinander gespielt, wobei jeder Spieler eine zu Beginn festgelegte Anzahl Kamele und Waren bekommt. Mit diesen Kamelen können Karawanen zusammengestellt und über das Spielfeld geführt werden, um die eigenen Waren möglichst lukrativ einzusetzen. Außerdem können Kamele, statt eine Karawane zu bilden, auch als Kriegskamele eingesetzt werden, um die Karawanen des Gegners zu erobern und so dessen Pläne zu vereiteln. Strategisches Denken und Geschäftssinn sind dem Erfolg beim Kamelspiel zuträglich, aber nicht allein ausschlaggebend, es kommt auch auf Glück an. \n\nGespielt wird auf dem Boden, einem Tisch oder einem Teppich, je nach Situation und Geldbeutel des Spielbesitzers möglicherweise sogar auf einem ausschließlich dafür verwendeten oder extra hergestellten Exemplar. Die Spielfiguren sind bei armen Leuten oft kaum mehr als Kieselsteine oder hölzerne Schnitzereien, doch in vermögenden Kreisen kann das Spiel nicht prächtig genug sein. Farbiges Glas, Elfenbein, Unauer Porzellan, Alabaster und natürlich Gold und Edelsteine sind einigen Potentaten kaum gut genug für die Spielfiguren, magische Metalle und andere seltene Materialien müssen es sein. Auch ein fliegender Teppich soll schon als Spielfeld gedient haben.\n\n Besonders über zauberkräftige Herrscher in Gegenwart und Vergangenheit wird immer wieder berichtet, sie hätten magische Kamelspiele, die sich selbst spielen oder den Spieler beraten. Von anderen Spielen dagegen heißt es, sie seien verflucht und brächten jedem Unglück, der sie verwendet. Und in mehr als einem Märchen wird von besonders grausamen Zaubersultanen berichtet, die ihre Feinde in Figuren für ihr Kamelspiel verwandelten, wohingegen andere finstere Gestalten von listigen Helden bei einer Partie Rote und Weiße Kamele um ihr Leben oder ihre Kräfte gebracht worden sein sollen.\n\n Etliche Tulamiden sehen es als das phexgefälligste Spiel überhaupt an und viele haben schon ihr gesamtes Vermögen oder auch ein Herrschaftsgebiet in einer einzigen Partie verloren – oder gewonnen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "129",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327866668,
+    "modifiedTime": 1768327866668,
+    "lastModifiedBy": null
+  }
+}

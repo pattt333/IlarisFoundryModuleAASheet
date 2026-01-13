@@ -1,0 +1,39 @@
+{
+  "_id": "Z5e98EGSifBBundefined",
+  "_key": "!items!Z5e98EGSifBBundefined",
+  "name": "Schlafsack",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 2,
+    "gewicht": 2,
+    "preis": 7,
+    "quantity": 1,
+    "text": "Nicht jedem ist es recht, in der Wildnis auf rauem Boden zu nächtigen. So mancher bevorzugt neben Wolldecke und Zelt einen warmen, gemütlichen Schlafsack. Man munkelt, dass reisende Geweihte des Aves die ersten Schlafsäcke hergestellt und unter die Leute gebracht haben.\n\n Die ersten und primitiveren Schlafsäcke sollen noch aus Flicken und dicken Stoffen bestanden haben. Heutzutage findet man immer häufiger Schlafsäcke aus mit Schafswolle gefüttertem Leder. Auch hört man Geschichten von armen Wandersleuten, die in leeren Jute- und Kartoffelsäcken übernachtet haben sollen.\n\n Der Schlafsack umhüllt den Körper mit Ausnahme des Kopfes komplett und wärmt so von allen Seiten. Er ist ringsum vernäht, sodass man vom Kopfende aus hineinschlüpfen muss, an dem sich kapuzengleich ein weiteres Stück Stoff befindet, in welches man den Kopf einhüllen kann. Für bessere Bequemlichkeit lässt sich das Kopfstück eingerollt als Stützkissen nutzen.\n\n Geschickt gefaltet und gerollt lässt sich der Schlafsack ohne Schwierigkeit auf langen Reisen transportieren, etwa unter den Arm geklemmt, durch einen Riemen am Rucksack befestigt oder an einen Sattel geknüpft."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "202",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327867345,
+    "modifiedTime": 1768327867345,
+    "lastModifiedBy": null
+  }
+}

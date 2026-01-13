@@ -1,0 +1,39 @@
+{
+  "_id": "DxykvlBsftofundefined",
+  "_key": "!items!DxykvlBsftofundefined",
+  "name": "Bolzen",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 0.1,
+    "gewicht": 0.1,
+    "preis": 0.1,
+    "quantity": 1,
+    "text": "Bolzen für Armbrüste"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "29",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327865825,
+    "modifiedTime": 1768327865825,
+    "lastModifiedBy": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "MvmIq6qGCFW7undefined",
+  "_key": "!items!MvmIq6qGCFW7undefined",
+  "name": "Buch (Großer Aventurischer Atlas)",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 3,
+    "gewicht": 3,
+    "preis": 1200,
+    "quantity": 1,
+    "text": "Keine Beschreibung"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "41",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327865892,
+    "modifiedTime": 1768327865892,
+    "lastModifiedBy": null
+  }
+}

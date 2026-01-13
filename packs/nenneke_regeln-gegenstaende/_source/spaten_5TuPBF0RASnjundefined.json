@@ -1,0 +1,39 @@
+{
+  "_id": "5TuPBF0RASnjundefined",
+  "_key": "!items!5TuPBF0RASnjundefined",
+  "name": "Spaten",
+  "type": "gegenstand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "aufbewahrungs_ort": "mitführend",
+    "bewahrt_auf": [],
+    "gewicht_summe": 2,
+    "gewicht": 2,
+    "preis": 8.5,
+    "quantity": 1,
+    "text": "Ein stabiler Spaten und eine ebensolche Spitzhacke gehören zur Ausstattung eines jeden Schatzsuchers, Forschers, Bergmanns oder Grabräubers. Mit ihnen lassen sich verschüttete Ruinen ausgraben, edle Erze und Steine aus dem Gestein lösen, steinerne und andere Türen aufbrechen und Höhlen erkunden. Daneben sind sie auch in der Landwirtschaft nützlich, besonders der Spaten, der natürlich auch verwendet wird, um die traurige Aufgabe zu erfüllen, ein Grab zu schaufeln.\n\n Beide Werkzeuge sind etwas sperrig, aber bei einer archäologischen Expedition unabdingbar. Immerhin brauchen sie nicht großartig vor Wind und Wetter geschützt zu werden, sondern lassen sich einfach so mit im Reisegepäck unterbringen.\n\n Beide geben im Notfall eine passable improvisierte Waffe ab, wobei die Spitzhacke deutlich stabiler und vor allem gefährlicher ist. Es wurde schon mehr als ein Grabräuber oder leichtgläubiger Entdecker mit einer Spitzhacke von neidischen Mitreisenden hinterrücks erschlagen."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "originalId": "217",
+    "originalActionModifier": {
+      "modifierName": "",
+      "modifierType": "EMPTY",
+      "modifierValue": 0,
+      "source": "EMPTY"
+    }
+  },
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": "12.0.0",
+    "createdTime": 1768327867526,
+    "modifiedTime": 1768327867526,
+    "lastModifiedBy": null
+  }
+}
