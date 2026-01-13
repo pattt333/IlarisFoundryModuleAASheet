@@ -7,7 +7,7 @@
                 <h2>{{actor.name}}</h2>
                 <div class="base-stats">
                     <span class="base-ini">Basis-INI: <strong>{{baseIni}}</strong></span>
-                    <span class="current-ini">Berechnet: <strong class="{{#if isNegativeIni}}negative{{/if}}">{{calculatedIni}}</strong></span>
+                    <span class="current-ini">Berechnet: <strong class="{{#if negativeIni}}negative{{/if}}">{{calculatedIni}}</strong></span>
                 </div>
             </div>
         </div>
@@ -20,35 +20,52 @@
             
             <div class="form-group">
                 <label for="iniMod">INI-Modifikator</label>
-                <input type="number" name="iniMod" id="iniMod" value="{{iniMod}}" {{#if isNegativeIni}}disabled{{/if}}/>
+                <input type="number" name="iniMod" id="iniMod" value="{{iniMod}}" {{#if movedAction}}disabled{{/if}}/>
             </div>
             
             <div class="form-group">
                 <label for="atMod">AT-Modifikator</label>
-                <input type="number" name="atMod" id="atMod" value="{{atMod}}" {{#if isNegativeIni}}disabled{{/if}}/>
-                <span class="hint">system.modifikatoren.nahkampfmod</span>
+                <input type="number" name="atMod" id="atMod" value="{{atMod}}" {{#if movedAction}}disabled{{/if}}/>
             </div>
             
             <div class="form-group">
                 <label for="vtMod">VT-Modifikator</label>
-                <input type="number" name="vtMod" id="vtMod" value="{{vtMod}}" {{#if isNegativeIni}}disabled{{/if}}/>
-                <span class="hint">system.modifikatoren.verteidigungmod</span>
+                <input type="number" name="vtMod" id="vtMod" value="{{vtMod}}" {{#if movedAction}}disabled{{/if}}/>
             </div>
             
             <div class="form-group checkbox-group">
                 <label class="checkbox-label" title="Bei kombinierten Aktionen sind AT und VT um 4 erschwert">
-                    <input type="checkbox" name="kombinierteAktion" {{#if kombinierteAktion}}checked{{/if}} {{#if isNegativeIni}}disabled{{/if}}/>
+                    <input type="checkbox" name="kombinierteAktion" {{#if kombinierteAktion}}checked{{/if}} {{#if movedAction}}disabled{{/if}}/>
                     <span>Kombinierte Aktion (-4 AT/VT)</span>
                 </label>
             </div>
         </section>
 
-        {{!-- Actions Section --}}
-        <section class="actions-section">
-            <h3><i class="fas fa-running"></i> Aktionen auswählen (max. 2)</h3>
+        {{!-- Weapon Selection Section (PC only) --}}
+        <section class="weapon-section">
+            <h3><i class="fas fa-sword"></i> Waffenauswahl</h3>
             
             <div class="form-group">
-                <multi-select name="actions" id="actions" title="Wählen Sie bis zu 2 Aktionen aus Ihrem Charakterbogen oder Kompendium" {{#if isNegativeIni}}disabled{{/if}}>
+                <label for="selectedWeapon">Waffe</label>
+                <select name="selectedWeapon" id="selectedWeapon" {{#if (or movedAction (not availableWeapons.length))}}disabled{{/if}}>
+                    <option value="">keine Waffe</option>
+                    {{{selectOptions availableWeapons selected=selectedWeaponId valueAttr="id" labelAttr="name"}}}
+                </select>
+            </div>
+            
+            {{#if selectedWeaponData}}
+            <div class="weapon-properties">
+                <strong>Eigenschaften:</strong> {{eigenschaften selectedWeaponData.system.eigenschaften ", "}}
+            </div>
+            {{/if}}
+        </section>
+
+        {{!-- Actions Section --}}
+        <section class="actions-section">
+            <h3><i class="fas fa-running"></i> Aktionen auswählen (max. 2), niedrigster INI Mod gewinnt</h3>
+            
+            <div class="form-group">
+                <multi-select name="actions" id="actions" title="Wählen Sie bis zu 2 Aktionen aus Ihrem Charakterbogen oder Kompendium" {{#if movedAction}}disabled{{/if}}>
                     {{{selectOptions availableActions selected=selectedActionIds valueAttr="id" labelAttr="name"}}}
                 </multi-select>
             </div>
@@ -57,8 +74,8 @@
             <div class="selected-actions-info">
                 {{#each selectedActions as |action|}}
                 <div class="action-description">
-                    <strong>{{action.name}}:</strong>
-                    <p>{{{action.description}}}</p>
+                    <strong>{{action.name}}</strong>
+                    <p>(INI-Mod: {{{action.iniMod}}})</p>
                 </div>
                 {{/each}}
             </div>

@@ -116,6 +116,12 @@ Hooks.once('init', async function() {
     }
     return result;
   });
+
+  Handlebars.registerHelper('isCaster', function (actor) {
+      return (
+          actor.system.abgeleitete.zauberer || actor.system.abgeleitete.geweihter
+      )
+  })
   
   Handlebars.registerHelper('add', function(a, b) {
     return (a || 0) + (b || 0);
@@ -151,7 +157,7 @@ Hooks.once('init', async function() {
   });
 
   // Eigenschaften helper - handles both array and object formats
-  Handlebars.registerHelper('eigenschaften', function(eigenschaften, separator) {
+  Handlebars.registerHelper('eigenschaften', function(eigenschaften, separator = ', ') {
     if (!eigenschaften) return '';
     
     // Handle array format: [{key: "name", parameters: ["param1", "param2"]}, ...]
@@ -516,6 +522,10 @@ Hooks.on("combatTurn", async (combat, updateData, options) => {
   
   // Check if this combatant has negative initiative
   if (currentCombatant.initiative === null || currentCombatant.initiative >= 0) return;
+  
+  // Check if movedAction flag is set (only show dialog if action was moved)
+  const dialogState = actor.getFlag("ilaris-alternative-actor-sheet", "dialogState");
+  if (!dialogState?.movedAction) return;
   
   // Check if this actor has the combat modifier effect
   const hasEffect = actor.effects.some(e => 

@@ -94,6 +94,32 @@
             </div>
         </div>
 
+        {{!-- Kampf Advantages Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Kampf Vorteile</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Vorteil erstellen" data-type="vorteil"><i class="fas fa-plus"></i> Vorteil hinzufügen</a>
+                </div>
+            </div>
+            <div class="items-list">
+                {{#each actor.vorteil.kampf as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=item 
+                    rollable=false
+                    nameLabel="Vorteil"
+                    isWeapon=false
+                    itemclass="vorteil"
+                    editTitle="Vorteil bearbeiten"
+                    deleteTitle="Vorteil löschen"
+                    details=(array 
+                        (hash label="Beschreibung" value=item.system.text isDescription=true)
+                    )
+                }}
+                {{/each}}
+            </div>
+        </div>
+
         {{!-- Kampf-Aktionen Section --}}
         <div class="items-section kampf-aktionen-section">
             <div class="items-header">

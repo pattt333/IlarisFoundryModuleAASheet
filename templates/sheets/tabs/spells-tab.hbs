@@ -1,7 +1,20 @@
 {{!-- Spells Tab --}}
 <div class="tab spells" data-group="primary" data-tab="spells">
     <div class="flexcol">
+        {{!-- Superstil Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Übernatürlicher Stil</h3>
+            </div>
+            <div class="kampfstil-controls">
+                <select class="selected-kampfstil" name="system.misc.selected_uebernatuerlicher_stil">
+                    {{selectOptions actor.misc.uebernatuerliche_stile_list selected=actor.system.misc.selected_uebernatuerlicher_stil}}
+                </select>
+            </div>
+        </div>
+
         {{!-- Zauber Section --}}
+        {{#if actor.uebernatuerlich.zauber.length}}
         <div class="items-section">
             <div class="items-header">
                 <h3>Zauber</h3>
@@ -35,8 +48,10 @@
                 {{/each}}
             </div>
         </div>
+        {{/if}}
 
         {{!-- Liturgien Section --}}
+        {{#if actor.uebernatuerlich.liturgien.length}}
         <div class="items-section">
             <div class="items-header">
                 <h3>Liturgien</h3>
@@ -64,6 +79,47 @@
                         (hash label="Reichweite" value=item.system.reichweite)
                         (hash label="Vorbereitung" value=item.system.vorbereitung)
                         (hash label="Wirkungsdauer" value=item.system.wirkungsdauer)
+                        (hash label="Beschreibung" value=item.system.text isDescription=true)
+                    )
+                }}
+                {{/each}}
+            </div>
+        </div>
+        {{/if}}
+
+        {{!-- Super Advantages Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Übernatürliche Vorteile</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Vorteil erstellen" data-type="vorteil"><i class="fas fa-plus"></i> Vorteil hinzufügen</a>
+                </div>
+            </div>
+            <div class="items-list">
+                {{#each actor.vorteil.magie as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=item 
+                    rollable=false
+                    nameLabel="Vorteil"
+                    isWeapon=false
+                    itemclass="vorteil"
+                    editTitle="Vorteil bearbeiten"
+                    deleteTitle="Vorteil löschen"
+                    details=(array 
+                        (hash label="Beschreibung" value=item.system.text isDescription=true)
+                    )
+                }}
+                {{/each}}
+                {{#each actor.vorteil.karma as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=item 
+                    rollable=false
+                    nameLabel="Vorteil"
+                    isWeapon=false
+                    itemclass="vorteil"
+                    editTitle="Vorteil bearbeiten"
+                    deleteTitle="Vorteil löschen"
+                    details=(array 
                         (hash label="Beschreibung" value=item.system.text isDescription=true)
                     )
                 }}

@@ -120,6 +120,7 @@
     border-radius: 4px;
     padding: 6px;
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .combat-item:hover {
@@ -151,6 +152,11 @@
 
 .combat-item-content {
     padding-left: 22px;
+}
+
+.combat-item-content .eigenschaften {
+    padding-top: 0.5em;
+    font-size: 0.9em;
 }
 
 /* Kampfstil Item */

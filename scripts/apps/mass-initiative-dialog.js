@@ -57,6 +57,8 @@ export class MassInitiativeDialog extends Application {
                 diceResults: savedState.diceResults ?? [],
                 selectedDiceIndex: savedState.selectedDiceIndex ?? null,
                 hasRolled: savedState.hasRolled ?? false,
+                movedAction: savedState.movedAction ?? false,
+                movedActionRounds: savedState.movedActionRounds ?? 0,
                 processed: false
             });
         } else {
@@ -70,6 +72,8 @@ export class MassInitiativeDialog extends Application {
                 diceResults: [],
                 selectedDiceIndex: null,
                 hasRolled: false,
+                movedAction: false,
+                movedActionRounds: 0,
                 processed: false
             });
         }
@@ -94,7 +98,9 @@ export class MassInitiativeDialog extends Application {
                 diceCount: state.diceCount,
                 diceResults: state.diceResults,
                 selectedDiceIndex: state.selectedDiceIndex,
-                hasRolled: state.hasRolled
+                hasRolled: state.hasRolled,
+                movedAction: state.movedAction,
+                movedActionRounds: state.movedActionRounds
             });
         }
     }
@@ -193,6 +199,18 @@ export class MassInitiativeDialog extends Application {
                 }
                 console.log('MassInitiativeDialog | Loaded actions:', this.availableActions.map(a => ({name: a.name, id: a.id})));
             }
+            this.availableActions.forEach(action => {
+                if (action?.effects) {
+                    for (const effect of action.effects) {
+                        const iniChange = effect.changes?.find(c => 
+                            c.key === "system.abgeleitete.ini" || c.key.includes("ini")
+                        );
+                        if (iniChange) {
+                            action.iniMod = parseInt(iniChange.value) || 0;
+                        }
+                    }
+                }
+            });
         } catch (error) {
             console.warn("MassInitiativeDialog | Could not load actions compendium:", error);
         }
@@ -217,15 +235,8 @@ export class MassInitiativeDialog extends Application {
         if (state.selectedActionIds.length > 0) {
             const actionMods = state.selectedActionIds.map(id => {
                 const action = this.availableActions.find(a => (a.id || a._id) === id);
-                if (action?.effects) {
-                    for (const effect of action.effects) {
-                        const iniChange = effect.changes?.find(c => 
-                            c.key === "system.abgeleitete.ini" || c.key.includes("ini")
-                        );
-                        if (iniChange) {
-                            return parseInt(iniChange.value) || 0;
-                        }
-                    }
+                if (action?.iniMod) {
+                    return parseInt(action.iniMod) || 0;
                 }
                 return 0;
             });
@@ -236,6 +247,25 @@ export class MassInitiativeDialog extends Application {
         const diceResult = state.selectedDiceIndex !== null 
             ? (state.diceResults[state.selectedDiceIndex] ?? 0)
             : (state.diceResults[0] ?? 0);
+        
+        // Calculate with movedActionRounds multiplier
+        if (state.movedAction && state.movedActionRounds > 0) {
+            // Suche bestehenden Effect
+            const existingEffect = combatant.actor.effects.find(e => 
+                e.name.startsWith("Kampf-Modifikatoren Runde")
+            );
+            let effectChange = 0;
+            if (existingEffect) {
+                const iniChange = existingEffect.changes.find(c => 
+                    c.key === "system.kampfwerte.ini" || c.key.includes("ini")
+                );
+                if (iniChange) {
+                    effectChange = parseInt(iniChange.value) || 0;
+                }
+            }
+            // Total = Effect-Change + Basis-INI + Action-Mod + (Basis-INI × movedActionRounds) + Würfel
+            return effectChange + baseIni + actionIniMod + (baseIni * state.movedActionRounds) + diceResult;
+        }
         
         return baseIni + state.iniMod + actionIniMod + diceResult;
     }
@@ -384,8 +414,8 @@ export class MassInitiativeDialog extends Application {
         const state = this.npcStates.get(combatantId);
         
         if (state) {
-            const selectedOptions = Array.from(event.target.selectedOptions);
-            state.selectedActionIds = selectedOptions.map(opt => opt.value).slice(0, 2);
+            const selectedOptions = Array.from(event.target.value);
+            state.selectedActionIds = selectedOptions.slice(0, 2);
             await this._saveNpcState(combatantId);
             
             // Update calculated INI display directly in DOM
@@ -628,76 +658,145 @@ export class MassInitiativeDialog extends Application {
                 finalVtMod -= 4;
             }
             
-            // Determine effect duration
-            const effectDuration = totalIni < 0 ? 2 : 1;
+            // Get dice result
+            const diceResult = state.selectedDiceIndex !== null 
+                ? state.diceResults[state.selectedDiceIndex]
+                : state.diceResults[0];
             
-            // Build Active Effect changes
-            const changes = [];
-            
-            if (state.iniMod !== 0) {
-                changes.push({
-                    key: "system.abgeleitete.ini",
-                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: state.iniMod.toString()
-                });
-            }
-            
-            if (finalAtMod !== 0) {
-                changes.push({
-                    key: "system.modifikatoren.nahkampfmod",
-                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: finalAtMod.toString()
-                });
-            }
-            
-            if (finalVtMod !== 0) {
-                changes.push({
-                    key: "system.modifikatoren.verteidigungmod",
-                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: finalVtMod.toString()
-                });
-            }
-            
-            // Remove old combat modifier effects
-            const oldEffects = actor.effects.filter(e => 
+            // Find existing combat modifier effect
+            const existingEffect = actor.effects.find(e => 
                 e.name.startsWith("Kampf-Modifikatoren Runde")
             );
-            if (oldEffects.length > 0) {
-                await actor.deleteEmbeddedDocuments("ActiveEffect", oldEffects.map(e => e.id));
-            }
             
-            // Prepare effect creation if there are changes
-            if (changes.length > 0) {
-                effectsToCreate.push({
-                    actor: actor,
-                    effectData: {
+            // Handle negative initiative with movedAction
+            if (totalIni < 0) {
+                // Update movedActionRounds
+                if (!state.movedAction) {
+                    state.movedActionRounds = 1;
+                } else {
+                    state.movedActionRounds += 1;
+                }
+                state.movedAction = true;
+                
+                // Update existing effect if present
+                if (existingEffect) {
+                    const iniChange = existingEffect.changes.find(c => 
+                        c.key === "system.kampfwerte.ini" || c.key.includes("ini")
+                    );
+                    
+                    if (iniChange) {
+                        // Update: Alter Change + neuer Würfel
+                        const oldChangeValue = parseInt(iniChange.value) || 0;
+                        const newChangeValue = oldChangeValue + diceResult;
+                        
+                        // Update effect with new change value
+                        const updatedChanges = existingEffect.changes.map(c => {
+                            if (c.key === "system.kampfwerte.ini" || c.key.includes("ini")) {
+                                return {
+                                    ...c,
+                                    value: newChangeValue.toString()
+                                };
+                            }
+                            return c;
+                        });
+                        
+                        await existingEffect.update({
+                            changes: updatedChanges,
+                            "duration.turns": 2
+                        });
+                    }
+                } else {
+                    // Create new effect for first negative INI
+                    const changes = [];
+                    
+                    // Effect speichert nur INI-Mod + Würfel
+                    if (state.iniMod !== 0 || diceResult !== 0) {
+                        changes.push({
+                            key: "system.kampfwerte.ini",
+                            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                            value: (state.iniMod + diceResult).toString()
+                        });
+                    }
+                    
+                    if (finalAtMod !== 0) {
+                        changes.push({
+                            key: "system.modifikatoren.nahkampfmod",
+                            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                            value: finalAtMod.toString()
+                        });
+                    }
+                    
+                    if (finalVtMod !== 0) {
+                        changes.push({
+                            key: "system.modifikatoren.verteidigungmod",
+                            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                            value: finalVtMod.toString()
+                        });
+                    }
+                    
+                    if (changes.length > 0) {
+                        await actor.createEmbeddedDocuments("ActiveEffect", [{
+                            name: `Kampf-Modifikatoren Runde ${this.combat?.round ?? 1}`,
+                            icon: "icons/svg/dice-target.svg",
+                            changes: changes,
+                            duration: {
+                                turns: 2
+                            },
+                            origin: actor.uuid
+                        }]);
+                    }
+                }
+                
+                // Save state with movedActionRounds
+                await this._saveNpcState(combatant.id);
+            } else {
+                // Positive INI: Create normal effect, clear moved action state
+                const changes = [];
+                
+                if (state.iniMod !== 0 || diceResult !== 0) {
+                    changes.push({
+                        key: "system.kampfwerte.ini",
+                        mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                        value: (state.iniMod + diceResult).toString()
+                    });
+                }
+                
+                if (finalAtMod !== 0) {
+                    changes.push({
+                        key: "system.modifikatoren.nahkampfmod",
+                        mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                        value: finalAtMod.toString()
+                    });
+                }
+                
+                if (finalVtMod !== 0) {
+                    changes.push({
+                        key: "system.modifikatoren.verteidigungmod",
+                        mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                        value: finalVtMod.toString()
+                    });
+                }
+                
+                // Remove old combat modifier effects
+                if (existingEffect) {
+                    await actor.deleteEmbeddedDocuments("ActiveEffect", [existingEffect.id]);
+                }
+                
+                // Create new effect with duration 1
+                if (changes.length > 0) {
+                    await actor.createEmbeddedDocuments("ActiveEffect", [{
                         name: `Kampf-Modifikatoren Runde ${this.combat?.round ?? 1}`,
                         icon: "icons/svg/dice-target.svg",
                         changes: changes,
                         duration: {
-                            turns: effectDuration
+                            turns: 1
                         },
                         origin: actor.uuid
-                    }
-                });
-            }
-            
-            // Transfer all effects from selected action items to actor
-            for (const actionId of state.selectedActionIds) {
-                const action = this.availableActions.find(a => (a.id || a._id) === actionId);
-                if (action?.effects && action.effects.length > 0) {
-                    for (const effect of action.effects) {
-                        // Clone the effect data and adjust duration
-                        const effectData = foundry.utils.duplicate(effect);
-                        effectData.duration = effectData.duration || {};
-                        effectData.duration.turns = totalIni < 0 ? 2 : 1;
-                        effectData.origin = actor.uuid;
-                        effectsToCreate.push({
-                            actor: actor,
-                            effectData: effectData
-                        });
-                    }
+                    }]);
                 }
+                
+                // Clear state
+                await this._clearNpcState(combatant.id);
             }
             
             // Prepare initiative update
@@ -707,10 +806,6 @@ export class MassInitiativeDialog extends Application {
             });
             
             // Prepare chat message
-            const diceResult = state.selectedDiceIndex !== null 
-                ? state.diceResults[state.selectedDiceIndex]
-                : state.diceResults[0];
-            
             chatMessages.push({
                 actor: actor,
                 totalIni: totalIni,
@@ -724,14 +819,6 @@ export class MassInitiativeDialog extends Application {
             
             // Mark as processed
             state.processed = true;
-            
-            // Clear persisted state
-            await this._clearNpcState(combatant.id);
-        }
-        
-        // Batch create effects
-        for (const { actor, effectData } of effectsToCreate) {
-            await actor.createEmbeddedDocuments("ActiveEffect", [effectData]);
         }
         
         // Batch set initiatives

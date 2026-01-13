@@ -74,7 +74,7 @@
                 {{!-- Hauptwaffe Section --}}
                 {{#each actor.nahkampfwaffen as |weapon|}}
                 {{#if weapon.system.hauptwaffe}}
-                <div class="combat-item weapon-item hauptwaffe">
+                <div class="combat-item weapon-item hauptwaffe rollable" data-rolltype="angriff_diag" data-itemid="{{weapon.id}}">
                     <div class="combat-item-header">
                         <div class="weapon-image">
                             <img src="{{weapon.img}}" alt="{{weapon.name}}" />
@@ -90,6 +90,7 @@
                             <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.vt}}">VT {{weapon.system.vt}}</span>
                             <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.dmg}}">TP {{weapon.system.schaden}}</span>
                         </div>
+                        <div class="eigenschaften">{{eigenschaften weapon.system.eigenschaften ", "}}</div>
                     </div>
                 </div>
                 {{/if}}
@@ -97,7 +98,7 @@
 
                 {{#each actor.fernkampfwaffen as |weapon|}}
                 {{#if weapon.system.hauptwaffe}}
-                <div class="combat-item weapon-item hauptwaffe">
+                <div class="combat-item weapon-item hauptwaffe rollable" data-rolltype="fernkampf_diag" data-itemid="{{weapon.id}}">
                     <div class="combat-item-header">
                         <div class="weapon-image">
                             <img src="{{weapon.img}}" alt="{{weapon.name}}" />
@@ -113,6 +114,7 @@
                             <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.dmg}}">TP {{weapon.system.schaden}}</span>
                         </div>
                     </div>
+                    <div class="eigenschaften">{{eigenschaften weapon.system.eigenschaften ", "}}</div>
                 </div>
                 {{/if}}
                 {{/each}}
@@ -121,7 +123,7 @@
                 {{#each actor.nahkampfwaffen as |weapon|}}
                 {{#unless weapon.system.hauptwaffe}}
                 {{#if weapon.system.nebenwaffe}}
-                <div class="combat-item weapon-item nebenwaffe">
+                <div class="combat-item weapon-item nebenwaffe rollable" data-rolltype="angriff_diag" data-itemid="{{weapon.id}}">
                     <div class="combat-item-header">
                         <div class="weapon-image">
                             <img src="{{weapon.img}}" alt="{{weapon.name}}" />
@@ -137,6 +139,7 @@
                             <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.vt}}">VT {{weapon.system.vt}}</span>
                             <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.dmg}}">TP {{weapon.system.schaden}}</span>
                         </div>
+                        <div class="eigenschaften">{{eigenschaften weapon.system.eigenschaften ", "}}</div>
                     </div>
                 </div>
                 {{/if}}
@@ -146,7 +149,7 @@
                 {{#each actor.fernkampfwaffen as |weapon|}}
                 {{#unless weapon.system.hauptwaffe}}
                 {{#if weapon.system.nebenwaffe}}
-                <div class="combat-item weapon-item nebenwaffe">
+                <div class="combat-item weapon-item nebenwaffe rollable" data-rolltype="fernkampf_diag" data-itemid="{{weapon.id}}">
                     <div class="combat-item-header">
                         <div class="weapon-image">
                             <img src="{{weapon.img}}" alt="{{weapon.name}}" />
@@ -161,6 +164,7 @@
                             <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.at}}">FK {{weapon.system.fk}}</span>
                             <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.dmg}}">TP {{weapon.system.schaden}}</span>
                         </div>
+                        <div class="eigenschaften">{{eigenschaften weapon.system.eigenschaften ", "}}</div>
                     </div>
                 </div>
                 {{/if}}

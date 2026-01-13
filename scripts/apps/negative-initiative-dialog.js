@@ -35,6 +35,10 @@ export class NegativeInitiativeDialog extends Dialog {
                         if (effectsToRemove.length > 0) {
                             await actor.deleteEmbeddedDocuments("ActiveEffect", effectsToRemove.map(e => e.id));
                         }
+                        
+                        // Clear dialogState (movedAction and movedActionRounds)
+                        await actor.unsetFlag("ilaris-alternative-actor-sheet", "dialogState");
+                        
                         ui.notifications.info(`${actor.name}'s Kampf-Modifikatoren wurden entfernt.`);
                     }
                 }

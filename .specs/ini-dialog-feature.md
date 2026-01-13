@@ -46,7 +46,37 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
   - Aktivierung reduziert AT- und VT-Modifikator um jeweils 4
   - Tooltip: "Bei kombinierten Aktionen sind AT und VT um 4 erschwert"
 
-#### 2.4 Aktions-Dropdown
+#### 2.4 Helden-Waffen-Dropdown
+- **Beschriftung**: "Waffenauswahl"
+- **Position**: Nach den Modifikator-Feldern (INI-Mod, AT-Mod, VT-Mod)
+- **Sichtbarkeit**: **NUR im PC-Dialog** (nicht im NPC-Massen-Dialog)
+- **Datenquelle**: 
+  - Item-Typ: `"waffe"` aus Actor-Inventory
+  - Filter: Items mit `item.system.hauptwaffe === true` ODER `item.system.nebenwaffe === true`
+  - Duplikat-Behandlung: Wenn beide Properties true sind, gilt die Waffe als **1** Eintrag
+  - Default-Option: "keine Waffe"
+- **Leerer Zustand**: Wenn keine passenden Waffen vorhanden sind:
+  - Zeige nur Option "keine Waffe"
+  - Dropdown wird disabled
+- **Persistierung**: 
+  - Gespeichert in `actor.flags.ilaris-alternative-actor-sheet.dialogState.selectedWeaponId`
+  - Item-ID wird gespeichert (nicht Name)
+  - Beim erneuten Öffnen des Dialogs wird die gespeicherte Waffe wieder ausgewählt
+- **INI-Berechnung**: 
+  - Prüfung: `item.system.computed.hasActorModifiers === true` UND `item.system.computed.actorModifiers` ist nicht leer
+  - Konvertierung: `Object.values(item.system.computed.actorModifiers)` zu Array
+  - Filter: Suche nach Modifiern mit:
+    - `mode === "actionNegAugment"` ODER `mode === "actionAugment"`
+    - UND `property === "ini"`
+  - Anwendung: 
+    - Bei `actionNegAugment`: INI-Wert wird negativ beeinflusst (Basis-INI - modifier.value)
+    - Bei `actionAugment`: INI-Wert wird positiv beeinflusst (Basis-INI + modifier.value)
+- **Eigenschaften-Anzeige**: 
+  - Zeige Waffeneigenschaften mit Handlebars-Helper `eigenschaften`
+  - Anzeige unter dem Dropdown (nur wenn Waffe ausgewählt)
+- **Template-Hinweis**: Foundry verwendet `selectOptions` Helper für Dropdown-Optionen
+
+#### 2.5 Aktions-Dropdown
 - **Beschriftung**: "Aktionen auswählen (max. 2)"
 - **Datenquelle**:
   - PC-Dialog: Effect-Items aus Character-Inventory (Typ `effect-item`) UND Kompendium `nenneke.nenneke-aktionen`
@@ -63,7 +93,7 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
     </multi-select>
     ```
 
-#### 2.5 Würfel-Sektion
+#### 2.6 Würfel-Sektion
 - **Position**: Als eigene Sektion unter den Eingabefeldern
 - **Würfel-Optionen** (nur bei automatischem Würfeln):
   - **Beschriftung**: "Würfelanzahl"
@@ -80,7 +110,7 @@ Ein Dialog-System zur Erfassung von Initiativmodifikatoren, Aktionen und Kampfmo
   - Klick auf Würfel wählt diesen aus (nur bei 2-Würfel-Option)
 - **Würfel-Ergebnis**: Nach Auswahl wird Ergebnis in Active Effect als Change umgewandelt
 
-#### 2.6 Status-Anzeige
+#### 2.7 Status-Anzeige
 - **Für Massen-Dialog**: "X von Y NPCs bearbeitet" (nur im GM-Dialog sichtbar)
 - **Für Spieler-Dialog**: Warntext beim "INI ansagen"-Button falls nicht gewürfelt
 
@@ -188,16 +218,94 @@ Hooks.on("updateCombat", async (combat, updateData, options, userId) => {
 - **Effect-Duration**: `duration.turns = 2` statt 1
 - **Turn-Dialog** (wenn Combatant mit negativer INI dran ist):
   - **Trigger**: `Hooks.on("combatTurn", ...)` - wird aufgerufen wenn der Combatant mit negativer INI regulär an der Reihe wäre
-  - **Empfänger**: Nur der Owner des Actors sieht den Dialog
+  - **Sichtbarkeit**: Nur der Owner des Actors sieht den Dialog **UND nur wenn `dialogState.movedAction === true`**
   - **Frage**: "Aktion fortsetzen?" (Ja/Nein)
   - **Bei "Ja"**: 
     - Actor wird übersprungen (nächster Combatant)
     - Effect bleibt bestehen
     - Nächste Runde: Dialog verhält sich wieder normal
   - **Bei "Nein"**:
-    - Active Effect wird sofort entfernt
+    - Active Effect "Kampf-Modifikatoren Runde X" wird sofort entfernt
+    - DialogState wird gecleared (`movedAction` und `movedActionRounds` zurückgesetzt)
     - Nächste Runde: Dialog öffnet sich ganz normal ohne Einschränkungen
   - **Nach Dialog**: Automatischer Sprung zum nächsten Combatant via `combat.nextTurn()`
+
+#### 8.2 Verschobene Aktionen über mehrere Runden
+Wenn ein Actor eine Aktion mit negativer Initiative ansagt und diese über mehrere Runden verschoben wird, gilt folgende Mechanik:
+
+**Konzept**:
+- Der Active Effect "Kampf-Modifikatoren Runde X" speichert **kumulativ nur**: INI-Mod + Würfel (jeder Runde)
+- Die Basis-INI wird bei jeder Folgerunde **mehrfach** hinzugerechnet basierend auf `movedActionRounds`
+- Aktionen und Waffen-Mods werden aus `dialogState` geladen
+
+**Tracking-Variable**:
+- `dialogState.movedActionRounds`: Zählt wie oft die Aktion bereits verschoben wurde (Startwert: 0)
+- Bei negativer INI: `movedActionRounds += 1`
+- Bei positiver INI: Variable wird mit `dialogState` gecleared
+
+**Berechnung bei Folgerunden**:
+```
+Total-INI = Effect-Change + Basis-INI + Action-Mod + (Basis-INI × movedActionRounds) + neuer Würfel
+```
+
+**Beispiel-Szenario**:
+
+**Runde 1 (ursprüngliche Ansage)**:
+- INI-Mod: -18
+- Basis-INI: 5
+- Action "Bewegung": +2
+- Würfel: 1
+- **Total-INI**: -18 + 5 + 2 + 1 = **-10**
+- **Effect-Change**: -18 + 1 = **-17** (nur INI-Mod + Würfel)
+- **Persistierung**: `movedAction = true`, `movedActionRounds = 1`, Action "Bewegung" gespeichert
+- **Effect**: Duration = 2
+
+**Runde 2 (Aktion fortgesetzt)**:
+- Effect-Change (alt): -17
+- Basis-INI: 5
+- Action "Bewegung" (aus DialogState): +2
+- movedActionRounds: 1 → **+5** Basis-INI (1 × 5)
+- Neuer Würfel: 1
+- **Total-INI**: -17 + 5 + 2 + 5 + 1 = **-4**
+- **Effect-Update**:
+  - Suche Effect "Kampf-Modifikatoren Runde X" mit INI-Change
+  - Update Change: -17 + 1 = **-16** (alter Change + neuer Würfel)
+  - Setze Duration = 2
+- **Persistierung**: `movedActionRounds = 2`
+
+**Runde 3 (Aktion wird positiv)**:
+- Effect-Change (alt): -16
+- Basis-INI: 5
+- Action "Bewegung" (aus DialogState): +2
+- movedActionRounds: 2 → **+10** Basis-INI (2 × 5)
+- Neuer Würfel: 1
+- **Total-INI**: -16 + 5 + 2 + 10 + 1 = **+2**
+- **Effect-Behandlung**:
+  - INI > 0 → Effect wird **nicht** verlängert
+  - Duration bleibt = 1 (läuft ab wenn Actor dran ist)
+  - DialogState wird gecleared (`movedAction = false`, `movedActionRounds = 0`)
+
+**Implementierungs-Details**:
+1. **Bei negativer Total-INI nach "INI ansagen"**:
+   - Wenn `movedAction === false`: Setze `movedAction = true`, `movedActionRounds = 1`
+   - Wenn `movedAction === true`: Erhöhe `movedActionRounds += 1`
+   - Suche bestehenden Effect "Kampf-Modifikatoren Runde X" mit INI-Change
+   - Update Effect-Change: Alter Change + neuer Würfel
+   - Setze `duration.turns = 2`
+   - Persistiere DialogState (inkl. Actions, Weapon, `movedActionRounds`)
+
+2. **Bei positiver Total-INI nach "INI ansagen"**:
+   - Erstelle neuen Effect mit Duration = 1 (falls noch keiner existiert)
+   - Führe `clearPersistedState()` aus (alle Flags werden entfernt)
+
+3. **Dialog-Öffnung bei bestehender `movedAction`**:
+   - Lade Actions/Weapon aus `dialogState`
+   - Berechne angezeigte Total-INI: Effect-Change + Basis-INI + Action-Mod + (Basis-INI × movedActionRounds)
+   - Alle Eingabefelder außer Würfel-Sektion sind disabled
+
+4. **NegativeInitiativeDialog**:
+   - Zeige nur wenn `dialogState.movedAction === true`
+   - Bei "Nein": Lösche Effect und clearen DialogState komplett
 
 ### 9. Kompendium
 - **Name**: `nenneke.nenneke-aktionen`
@@ -211,10 +319,15 @@ Hooks.on("updateCombat", async (combat, updateData, options, userId) => {
 - **Gespeicherte Daten**:
   - INI-Mod, AT-Mod, VT-Mod
   - Gewählte Aktionen (Item-IDs)
+  - Gewählte Waffe (Item-ID)
   - Kombinierte Aktion (ja/nein)
   - Würfelanzahl-Auswahl
   - Gewürfeltes Ergebnis (falls vorhanden)
-- **Reset-Trigger**: Klick auf "INI ansagen"
+  - `movedAction` (boolean): Gibt an ob Aktion verschoben wurde
+  - `movedActionRounds` (number): Anzahl der Runden, die Aktion bereits verschoben wurde (Startwert: 0)
+- **Reset-Trigger**: 
+  - Klick auf "INI ansagen" mit positiver Total-INI
+  - "Nein" im NegativeInitiativeDialog
 - **Persistenz-Check**: `combatant.initiative !== null` zeigt an, ob bereits bestätigt wurde
 
 ### 11. Chat-Integration
@@ -349,7 +462,9 @@ Hooks.on("combatTurn", async (combat, updateData, options) => {
 -   INI-Berechnung mit niedrigstem Aktions-Mod korrekt
 -   AT/VT-Mods summieren sich korrekt
 -   Negative Initiative wird korrekt behandelt (duration.turns = 2)
--   Dialog-Persistenz in actor.flags.ilaris-alternative-actor-sheet.dialogState bis "INI ansagen"
+-   Verschobene Aktionen: `movedActionRounds` wird korrekt getrackt und Basis-INI multipliziert
+-   Effect-Update bei Folgerunden: Nur Würfel wird zum bestehenden Change addiert
+-   Dialog-Persistenz in actor.flags.ilaris-alternative-actor-sheet.dialogState bis "INI ansagen" mit positiver INI
 
 ### Dialog-Verhalten
 -   Einzeldialog für PCs mit Aktionen aus Inventory UND Kompendium
@@ -380,9 +495,13 @@ Hooks.on("combatTurn", async (combat, updateData, options) => {
 -   Eingabefelder werden bei negativer INI disabled
 -   Nur Würfel-Sektion bleibt aktiv
 -   duration.turns = 2 wird gesetzt
--   Rundenende-Dialog erscheint am richtigen Zeitpunkt
--   "Ja"-Option: Actor wird übersprungen
--   "Nein"-Option: Effect wird entfernt, Dialog nächste Runde normal
+-   Rundenende-Dialog erscheint **nur wenn `movedAction === true`**
+-   "Ja"-Option: Actor wird übersprungen, Effect bleibt bestehen
+-   "Nein"-Option: Effect wird entfernt, DialogState gecleared
+-   `movedActionRounds` wird bei jeder negativen INI erhöht
+-   Bei Folgerunden wird Basis-INI × `movedActionRounds` hinzugerechnet
+-   Effect-Change wird bei Folgerunden aktualisiert (+ neuer Würfel)
+-   Bei positiver INI wird DialogState automatisch gecleared
 
 ### Kampf-Tab
 -   Tab umbenannt zu "kampf-tab"
