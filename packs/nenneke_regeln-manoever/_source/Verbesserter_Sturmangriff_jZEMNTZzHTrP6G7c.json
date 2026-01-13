@@ -15,9 +15,16 @@
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": false
+      },
+      "1": {
+        "type": "DAMAGE",
+        "value": 1,
+        "operator": "ADD",
+        "target": "actor.system.abgeleitete.gs",
+        "affectedByInput": false
       }
     },
-    "gruppe": 0,
+    "gruppe": "0",
     "probe": "AT-4",
     "gegenprobe": "",
     "text": "<i>Wirkung:</i> Der Sturmangriff kombiniert die Bewegung und den Angriff. Voraussetzung für das Manöver Sturmangriff ist die Kombination aus Bewegung und Angriff. Nur der Angriff ist um -4 erschwert, sollte für die Bewegung eine Probe notwendig sein, ist diese nicht wie sonst um -4 erschwert. Der Angriff richtet +GS TP zusätzlich an. Die Bewegung muss vor dem Angriff ausgeführt werden.\n\n<i>Voraussetzungen:</i> Kampfvorteil Verbesserter Sturmangriff, die Bewegung muss vor dem Angriff ausgeführt werden",
@@ -39,7 +46,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734146,
-    "modifiedTime": 1767788108439,
+    "modifiedTime": 1768336963589,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!jZEMNTZzHTrP6G7c"

@@ -17,9 +17,16 @@
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": true
+      },
+      "1": {
+        "type": "SPECIAL_TEXT",
+        "value": "Ziel -X VT",
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
       }
     },
-    "gruppe": 1,
+    "gruppe": "1",
     "probe": "FK-X",
     "gegenprobe": "",
     "text": "<i>Wirkung:</i> Der Angriff ist um -X schwerer abzuwehren.\n\n<i>Voraussetzungen:</i> nicht seit der letzten eigenen Initiativephase eingesetzt",
@@ -41,7 +48,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734146,
-    "modifiedTime": 1767788108115,
+    "modifiedTime": 1768336764277,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!vj5AkAHNxbIBt4bg"

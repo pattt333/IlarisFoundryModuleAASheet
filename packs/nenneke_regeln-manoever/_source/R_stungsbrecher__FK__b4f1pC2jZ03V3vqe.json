@@ -15,9 +15,16 @@
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": false
+      },
+      "1": {
+        "type": "SPECIAL_TEXT",
+        "value": "Verursacht SP",
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
       }
     },
-    "gruppe": 1,
+    "gruppe": "1",
     "probe": "FK -4",
     "gegenprobe": "",
     "text": "<i>Wirkung:</i> Der Angriff ignoriert die gegnerische Rüstung und richtet SP statt TP an.\n<i>Voraussetzung:</i> Pfeile mit Waffeneigenschaft Rüstungsbrechend.",
@@ -39,7 +46,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734146,
-    "modifiedTime": 1767788108137,
+    "modifiedTime": 1768336740352,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!b4f1pC2jZ03V3vqe"

@@ -15,9 +15,16 @@
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": false
+      },
+      "1": {
+        "type": "SPECIAL_TEXT",
+        "value": "Verusacht 1 Stack Erschöpfung",
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
       }
     },
-    "gruppe": 0,
+    "gruppe": "0",
     "probe": "AT-2",
     "gegenprobe": "",
     "text": "<i>Wirkung:</i> Der Angriff verursacht einen Stack Erschöpfung.\n<i>Voraussetzung:</i> Waffeneigenschaft Stumpf.",
@@ -39,7 +46,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734146,
-    "modifiedTime": 1767788107981,
+    "modifiedTime": 1768336842845,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!5nnLqIGfXk5KNK5Q"

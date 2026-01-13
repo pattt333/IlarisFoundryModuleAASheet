@@ -15,9 +15,16 @@
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": false
+      },
+      "1": {
+        "type": "SPECIAL_TEXT",
+        "value": "+ LeP/4 SP",
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
       }
     },
-    "gruppe": 0,
+    "gruppe": "0",
     "probe": "AT -8",
     "gegenprobe": "",
     "text": "<i>Wirkung:</i> Der Angriff richtet 2/8 der aktuellen LeP (aufgerundet) deines Ziels an SP an, danach kann das Manöver für die nächsten 5KR nicht wieder eingesetzt werden.\n\n<i>Voraussetzungen:</i> Vorteil Todesstoß, 5 KR Cooldown",
@@ -39,7 +46,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734146,
-    "modifiedTime": 1767788108072,
+    "modifiedTime": 1768336919727,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!t0m0bRToPhGW9k8r"

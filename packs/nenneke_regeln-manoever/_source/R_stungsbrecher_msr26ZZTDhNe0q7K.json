@@ -15,9 +15,16 @@
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": false
+      },
+      "1": {
+        "type": "SPECIAL_TEXT",
+        "value": "Verursacht SP",
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
       }
     },
-    "gruppe": 0,
+    "gruppe": "0",
     "probe": "AT -4",
     "gegenprobe": "",
     "text": "<i>Wirkung:</i> Der Angriff ignoriert die gegnerische Rüstung und richtet SP statt TP an.\n<i>Voraussetzung:</i> Waffeneigenschaft Rüstungsbrechend\n<b>Anmerkung:</b> Das Manöver lohnt sich, wenn der Gegner schwere Rüstung trägt oder du mehrere Wunden anrichten kannst.",
@@ -39,7 +46,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734146,
-    "modifiedTime": 1767788107972,
+    "modifiedTime": 1768336723610,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!msr26ZZTDhNe0q7K"

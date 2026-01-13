@@ -8,15 +8,15 @@
       "label": "Checkbox",
       "field": "CHECKBOX"
     },
-    "modifications": {
-      "0": {
+    "modifications": [
+      {
         "type": "ATTACK",
         "value": 4,
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": false
       }
-    },
+    ],
     "gruppe": 1,
     "probe": "FK -4",
     "gegenprobe": "",
@@ -39,7 +39,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734146,
-    "modifiedTime": 1767788108106,
+    "modifiedTime": 1768336703823,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!ZmQQPglv3aTACUR3"

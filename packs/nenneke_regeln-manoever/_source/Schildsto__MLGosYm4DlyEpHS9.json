@@ -17,9 +17,16 @@
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": true
+      },
+      "1": {
+        "type": "SPECIAL_TEXT",
+        "value": "Ziel wird X zurükgestoßen",
+        "operator": "ADD",
+        "target": "",
+        "affectedByInput": true
       }
     },
-    "gruppe": 0,
+    "gruppe": "0",
     "probe": "AT-2X",
     "gegenprobe": "",
     "text": "<i>Wirkung:</i> Du führst einen Stoß mit deinem Schild gegen deinen Gegner aus. Er wird X Schritt zurückgedrängt. Dein Gegner muss sich in der gleichen oder einer kleineren Größenkategorie befinden (Spieler haben die Größenkategorie Mittel). Dein Ziel kann sich dadruch durch Kontrollzonen bewegen.\n\nDas Manöver senkt den Schaden des Angriffes auf 0. Sollte der Angriff ohnehin keinen Schaden anrichten – etwa durch andere Manöver – ist das Manöver nicht möglich.",
@@ -41,7 +48,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734146,
-    "modifiedTime": 1767788108431,
+    "modifiedTime": 1768336790315,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!MLGosYm4DlyEpHS9"

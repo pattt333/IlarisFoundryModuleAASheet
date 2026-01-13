@@ -15,9 +15,16 @@
         "operator": "SUBTRACT",
         "target": "",
         "affectedByInput": false
+      },
+      "1": {
+        "type": "WEAPON_DAMAGE",
+        "value": 2,
+        "operator": "MULTIPLY",
+        "target": "",
+        "affectedByInput": false
       }
     },
-    "gruppe": 0,
+    "gruppe": "0",
     "probe": "AT -8",
     "gegenprobe": "",
     "text": "<i>Wirkung:</i> Der Angriff richtet doppelten Waffenschaden an. Zusätzliche TP aus Kommandos, anderen Manövern usw. werden nicht verdoppelt. 1KR Cooldown",
@@ -39,7 +46,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734146,
-    "modifiedTime": 1767788108023,
+    "modifiedTime": 1768336599525,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!qGb3nVyku3WTtk7l"
