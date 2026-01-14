@@ -80,6 +80,14 @@
                         <span class="stat-value">{{actor.system.modifikatoren.manuellermod}}</span>
                     </div>
                 </div>
+                {{!-- Schips Display --}}
+                <div class="schips-stat">
+                    <i class="fas fa-clover" title="Schicksalspunkte"></i>
+                    <span class="stat-label">Schips</span>
+                    <span class="stat-value">{{actor.system.schips.schips_stern}} / {{actor.system.schips.schips}}</span>
+                    <a class="schip-decrease" title="Schip entfernen"><i class="fas fa-minus"></i></a>
+                    <a class="schip-increase" title="Schip hinzufügen"><i class="fas fa-plus"></i></a>
+                </div>
             </div>
             {{!-- Sheet Tab Navigation - Also sticky --}}
             <nav class="sheet-tabs tabs sticky-tabs" data-group="primary">

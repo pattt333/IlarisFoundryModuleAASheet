@@ -142,6 +142,10 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             // Editable stats (our custom feature)
             html.find('.editable-stat').click(this._onEditStat.bind(this));
             
+            // Schips increment/decrement (our custom feature)
+            html.find('.schips-stat .schip-decrease').click(this._onSchipDecrease.bind(this));
+            html.find('.schips-stat .schip-increase').click(this._onSchipIncrease.bind(this));
+            
             // Effect library open button (our custom feature)
             html.find('.effect-library-open').click(this._onOpenEffectLibrary.bind(this));
             
@@ -307,6 +311,45 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         
         // Show info notification to the user
         ui.notifications.info("Ziehe einen Effekt aus der Bibliothek auf das Charakterblatt, um nur den Effekt hinzuzufügen.");
+    }
+
+    /**
+     * Handle increasing Schips by 1
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onSchipIncrease(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const currentSchips = this.actor.system.schips.schips_stern || 0;
+        const maxSchips = this.actor.system.schips.schips || 0;
+        
+        // Increment by 1, but don't exceed max
+        const newSchips = Math.min(currentSchips + 1, maxSchips);
+        
+        await this.actor.update({
+            'system.schips.schips_stern': newSchips
+        });
+    }
+
+    /**
+     * Handle decreasing Schips by 1
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onSchipDecrease(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const currentSchips = this.actor.system.schips.schips_stern || 0;
+        
+        // Decrement by 1, but don't go below 0
+        const newSchips = Math.max(currentSchips - 1, 0);
+        
+        await this.actor.update({
+            'system.schips.schips_stern': newSchips
+        });
     }
 
     /**

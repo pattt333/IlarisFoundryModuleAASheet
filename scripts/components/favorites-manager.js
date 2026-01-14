@@ -108,7 +108,7 @@ export class FavoritesManager {
      * @param {jQuery} html - The rendered HTML
      */
     restoreFavoritesTab(html) {
-        const savedTab = sessionStorage.getItem(`ilaris-favorites-active-tab-${this.actorId}`) || 'favorites';
+        const savedTab = sessionStorage.getItem(`ilaris-favorites-active-tab-${this.actorId}`) || 'combat';
         
         // Activate the saved tab
         const targetTab = html.find(`[data-tab="${savedTab}"]`);
