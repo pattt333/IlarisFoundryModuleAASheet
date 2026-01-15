@@ -229,6 +229,8 @@ export class MassInitiativeDialog extends Application {
         if (!combatant?.actor || !state) return 0;
         
         const baseIni = this._getBaseInitiative(combatant.actor);
+        const currentIni = combatant.actor.system.abgeleitete?.ini ?? 0;
+
         
         // Get the lowest INI mod from selected actions
         let actionIniMod = 0;
@@ -250,24 +252,11 @@ export class MassInitiativeDialog extends Application {
         
         // Calculate with movedActionRounds multiplier
         if (state.movedAction && state.movedActionRounds > 0) {
-            // Suche bestehenden Effect
-            const existingEffect = combatant.actor.effects.find(e => 
-                e.name.startsWith("Kampf-Modifikatoren Runde")
-            );
-            let effectChange = 0;
-            if (existingEffect) {
-                const iniChange = existingEffect.changes.find(c => 
-                    c.key === "system.kampfwerte.ini" || c.key.includes("ini")
-                );
-                if (iniChange) {
-                    effectChange = parseInt(iniChange.value) || 0;
-                }
-            }
-            // Total = Effect-Change + Basis-INI + Action-Mod + (Basis-INI × movedActionRounds) + Würfel
-            return effectChange + baseIni + actionIniMod + (baseIni * state.movedActionRounds) + diceResult;
+            // Total = Current-INI + Action-Mod + (Basis-INI × movedActionRounds) + Würfel
+            return currentIni + actionIniMod + (baseIni * state.movedActionRounds) + diceResult;
         }
         
-        return baseIni + state.iniMod + actionIniMod + diceResult;
+        return currentIni + state.iniMod + actionIniMod + diceResult;
     }
     
     /**

@@ -408,7 +408,7 @@ Hooks.on("updateCombat", async (combat, updateData, options, userId) => {
   
   // Handle negative initiative at round end
   // Only the GM should handle this
-  if (game.user.isGM && "round" in updateData && updateData.round > combat.previous?.round) {
+  if ("round" in updateData && updateData.round > combat.previous?.round) {
     // Check for combatants with negative initiative that haven't acted
     for (const combatant of combat.combatants) {
       if (combatant.initiative === null) continue;
@@ -514,8 +514,11 @@ Hooks.on("updateCombatant", async (combatant, updateData, options, userId) => {
 // Hook: Check for negative initiative when a combatant's turn starts
 Hooks.on("combatTurn", async (combat, updateData, options) => {
   // Get the current combatant
+  console.log('Ilaris Alternative Actor Sheet | Combat turn hook triggered');
   const currentCombatant = combat.combatant;
   if (!currentCombatant) return;
+
+  console.log('Ilaris Alternative Actor Sheet | Combat turn hook triggered for', currentCombatant);
   
   const actor = currentCombatant.actor;
   if (!actor) return;

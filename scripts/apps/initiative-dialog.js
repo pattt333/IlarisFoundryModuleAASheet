@@ -260,7 +260,8 @@ export class InitiativeDialog extends Application {
      * @returns {number} The calculated initiative
      */
     _calculateTotalInitiative() {
-        const baseIni = this.actor.system.abgeleitete?.ini ?? 0;
+        const baseIni = this._getBaseInitiative();
+        const currentIni = this.actor.system.abgeleitete?.ini ?? 0;
         
         // Get weapon INI modifier
         let weaponIniMod = 0;
@@ -287,32 +288,14 @@ export class InitiativeDialog extends Application {
             ? (this.diceResults[this.selectedDiceIndex] ?? 0)
             : (this.diceResults[0] ?? 0);
         
-        // Calculate with movedActionRounds multiplier
-        // Formula: Effect-Change + Basis-INI + Action-Mod + (Basis-INI × movedActionRounds) + neuer Würfel
-        // Bei erster Runde: movedActionRounds = 0, also normale Berechnung
-        // Bei Folgerunden: movedActionRounds > 0, also zusätzlich Basis-INI × Runden
-        
         // Wenn movedAction aktiv ist, holen wir den Effect-Change statt Basis-INI zu verwenden
-        let effectChange = 0;
         if (this.movedAction && this.movedActionRounds > 0) {
-            // Suche bestehenden Effect
-            const existingEffect = this.actor.effects.find(e => 
-                e.name.startsWith("Kampf-Modifikatoren Runde")
-            );
-            if (existingEffect) {
-                const iniChange = existingEffect.changes.find(c => 
-                    c.key === "system.abgeleitete.ini" || c.key.includes("ini")
-                );
-                if (iniChange) {
-                    effectChange = parseInt(iniChange.value) || 0;
-                }
-            }
-            // Total = Effect-Change + Basis-INI + Action-Mod + (Basis-INI × movedActionRounds) + Würfel
-            return effectChange + baseIni + weaponIniMod + actionIniMod + (baseIni * this.movedActionRounds) + diceResult;
+            // Total = Basis-INI + Action-Mod + (Basis-INI × movedActionRounds) + Würfel
+            return currentIni + weaponIniMod + actionIniMod + (baseIni * this.movedActionRounds) + diceResult;
         }
         
         // Normale Berechnung für erste Ansage
-        return baseIni + weaponIniMod + this.iniMod + actionIniMod + diceResult;
+        return currentIni + weaponIniMod + this.iniMod + actionIniMod + diceResult;
     }
     
     /**
