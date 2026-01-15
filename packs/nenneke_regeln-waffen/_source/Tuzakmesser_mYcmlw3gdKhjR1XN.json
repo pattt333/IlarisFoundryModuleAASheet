@@ -1,7 +1,7 @@
 {
   "name": "Tuzakmesser",
   "type": "nahkampfwaffe",
-  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/two-handed-sword.svg",
   "system": {
     "haerte": 0,
     "beschaedigung": 0,

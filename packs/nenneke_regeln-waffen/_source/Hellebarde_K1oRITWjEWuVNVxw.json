@@ -1,7 +1,7 @@
 {
   "name": "Hellebarde",
   "type": "nahkampfwaffe",
-  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/glaive.svg",
   "system": {
     "haerte": 0,
     "beschaedigung": 0,
