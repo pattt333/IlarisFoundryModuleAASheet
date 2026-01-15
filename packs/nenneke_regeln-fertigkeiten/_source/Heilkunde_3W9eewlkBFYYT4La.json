@@ -1,7 +1,7 @@
 {
   "name": "Heilkunde",
   "type": "fertigkeit",
-  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/fertigkeiten/hand-bandage.svg",
   "system": {
     "basis": 0,
     "fw": 0,

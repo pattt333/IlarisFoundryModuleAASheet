@@ -1,7 +1,7 @@
 {
   "name": "Sinnesschärfe",
   "type": "fertigkeit",
-  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/fertigkeiten/awareness.svg",
   "system": {
     "basis": 0,
     "fw": 0,

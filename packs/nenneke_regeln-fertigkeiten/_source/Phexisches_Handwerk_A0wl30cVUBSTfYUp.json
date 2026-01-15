@@ -1,7 +1,7 @@
 {
   "name": "Phexisches Handwerk",
   "type": "fertigkeit",
-  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/fertigkeiten/lockpicks.svg",
   "system": {
     "basis": 0,
     "fw": 0,
