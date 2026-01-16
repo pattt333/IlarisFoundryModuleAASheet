@@ -63,7 +63,17 @@ npm run prettier
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-Game Icons from https://game-icons.net/
+
+### Third-Party Assets
+
+This module uses icons from [game-icons.net](https://game-icons.net/), which are licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). 
+
+**Icon Attribution:**
+- All weapon and skill icons in `assets/icons/` are sourced from game-icons.net
+- Created by various artists: Lorc, Delapouite, Carl Olsen, Skoll, Willdabeast, and others
+- Full attribution details: https://game-icons.net/about.html#authors
+
+See [CREDITS.md](CREDITS.md) for complete attribution information.
 
 ## Support
 
