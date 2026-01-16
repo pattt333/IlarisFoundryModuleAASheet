@@ -1,0 +1,31 @@
+{
+  "name": "Ausweichen",
+  "type": "talent",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "text": "Zum Ausweichen von Fernkampfangriffen und anderen Ausweichmanövern. Im Nahkampf existiert das Manöver \"Ausweichen\"",
+    "fertigkeit": "Athletik",
+    "pw": 0,
+    "gruppe": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "rx5SQSdRZTPopG8P",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1768566526684,
+    "modifiedTime": 1768566526684,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!rx5SQSdRZTPopG8P"
+}
