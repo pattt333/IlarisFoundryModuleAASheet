@@ -228,8 +228,8 @@ export class MassInitiativeDialog extends Application {
         
         if (!combatant?.actor || !state) return 0;
         
-        const baseIni = this._getBaseInitiative(combatant.actor);
-        const currentIni = combatant.actor.system.abgeleitete?.ini ?? 0;
+        const baseIni = combatant.actor.system.kampfwerte?.baseIni ?? 0;
+        const currentIni = this._getBaseInitiative(combatant.actor);
 
         
         // Get the lowest INI mod from selected actions

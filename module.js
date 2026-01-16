@@ -511,15 +511,15 @@ Hooks.on("updateCombatant", async (combatant, updateData, options, userId) => {
   }
 });
 
-// Hook: Check for negative initiative when a combatant's turn starts
-Hooks.on("combatTurn", async (combat, updateData, options) => {
-  // Get the current combatant
-  console.log('Ilaris Alternative Actor Sheet | Combat turn hook triggered');
-  const currentCombatant = combat.combatant;
+// Hook: Turn-Index correction after combatant initiative update
+Hooks.on("combatTurnChange", async (combat, prior, current) => {
+  console.log('Ilaris Alternative Actor Sheet | Combatant turn changed hook triggered', combat, prior, current);
+
+  const currentCombatant = combat.combatants.get(current.combatantId);
   if (!currentCombatant) return;
 
   console.log('Ilaris Alternative Actor Sheet | Combat turn hook triggered for', currentCombatant);
-  
+
   const actor = currentCombatant.actor;
   if (!actor) return;
   
@@ -539,6 +539,7 @@ Hooks.on("combatTurn", async (combat, updateData, options) => {
   
   // Only show to the owner of the actor
   if (!actor.testUserPermission(game.user, "OWNER")) return;
+  if (actor.type === "held" && game.user.isGM) return;
   
   // Show the negative initiative dialog
   const dialog = new NegativeInitiativeDialog(actor, combat, {}, {
