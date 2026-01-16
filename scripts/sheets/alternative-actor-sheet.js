@@ -152,6 +152,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             // Stack effect controls (our custom feature)
             html.on("click", ".effect-stack-increase", this._onEffectStackIncrease.bind(this));
             html.on("click", ".effect-stack-decrease", this._onEffectStackDecrease.bind(this));
+            
+            // Rest button (our custom feature)
+            html.find('.rest-button').click(this._onRest.bind(this));
         }
         
         // Initialize accordion functionality
@@ -684,6 +687,134 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             console.error('Failed to copy UUID:', err);
             ui.notifications.error('Failed to copy UUID to clipboard');
         });
+    }
+
+    /**
+     * Handle rest button click - opens regeneration dialog
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onRest(event) {
+        event.preventDefault();
+        
+        // Check if required data paths exist
+        if (!this.actor.system?.abgeleitete || !this.actor.system?.gesundheit) {
+            console.warn('IlarisAlternativeActorSheet | Missing required data for rest dialog');
+            ui.notifications.warn('Fehler: Erforderliche Daten nicht gefunden');
+            return;
+        }
+        
+        const abgeleitete = this.actor.system.abgeleitete;
+        const gesundheit = this.actor.system.gesundheit;
+        
+        // Determine character type
+        const isZauberer = abgeleitete.zauberer;
+        const isGeweihter = abgeleitete.geweihter;
+        
+        // Build dialog content
+        let energySection = '';
+        let energyType = null;
+        
+        if (isZauberer) {
+            const currentASP = abgeleitete.asp_stern || 0;
+            const maxASP = abgeleitete.asp || 0;
+            const basisRegen = Math.ceil(maxASP / 8);
+            
+            energyType = 'asp';
+            energySection = `
+                <div class="form-group">
+                    <h3>Astralenergie</h3>
+                    <p><strong>Aktuelle ASP:</strong> ${currentASP} / ${maxASP}</p>
+                    <p><strong>Basis-Regeneration (1/8 aufgerundet):</strong> ${basisRegen}</p>
+                    <label>Zusätzliche ASP:</label>
+                    <input type="number" name="additional-energy" value="0" min="0" />
+                    <p class="hint" id="energy-preview">Gesamt nach Rast: ${Math.min(currentASP + basisRegen, maxASP)} / ${maxASP}</p>
+                </div>
+            `;
+        } else if (isGeweihter) {
+            const currentKAP = abgeleitete.kap_stern || 0;
+            const maxKAP = abgeleitete.kap || 0;
+            const basisRegen = Math.ceil(maxKAP / 16);
+            
+            energyType = 'kap';
+            energySection = `
+                <div class="form-group">
+                    <h3>Karmalenergie</h3>
+                    <p><strong>Aktuelle KAP:</strong> ${currentKAP} / ${maxKAP}</p>
+                    <p><strong>Basis-Regeneration (1/16 aufgerundet):</strong> ${basisRegen}</p>
+                    <label>Zusätzliche KAP:</label>
+                    <input type="number" name="additional-energy" value="0" min="0" />
+                    <p class="hint" id="energy-preview">Gesamt nach Rast: ${Math.min(currentKAP + basisRegen, maxKAP)} / ${maxKAP}</p>
+                </div>
+            `;
+        }
+        
+        // Wounds section (always visible)
+        const currentHP = gesundheit.hp.value || 0;
+        const lawWert = abgeleitete.law || 0;
+        const ws = abgeleitete.ws || 0;
+        const neueWunden = Math.min(ws, currentHP + lawWert);
+        
+        const woundsSection = `
+            <div class="form-group">
+                <h3>Lebenspunkte</h3>
+                <p><strong>Aktuelle LeP:</strong> ${currentHP}</p>
+                <p><strong>Regeneration durch 1 Law:</strong> ${lawWert}</p>
+                <input type="number" name="law-times" value="0" min="0" />
+                <p class="hint">Neue LeP nach Rast: ${neueWunden}</p>
+            </div>
+        `;
+        
+        const content = `
+            <form>
+                ${energySection}
+                ${woundsSection}
+            </form>
+        `;
+        
+        // Show dialog
+        new Dialog({
+            title: "Regeneration während Rast",
+            content: content,
+            buttons: {
+                rest: {
+                    icon: '<i class="fas fa-bed"></i>',
+                    label: "Rast durchführen",
+                    callback: async (html) => {
+                        const additionalEnergy = parseInt(html.find('[name="additional-energy"]').val()) || 0;
+                        
+                        const updateData = {};
+                        
+                        // Update energy if character is spellcaster or blessed
+                        if (energyType === 'asp') {
+                            const currentASP = abgeleitete.asp_stern || 0;
+                            const maxASP = abgeleitete.asp || 0;
+                            const basisRegen = Math.ceil(maxASP / 8);
+                            const newASP = Math.min(currentASP + basisRegen + additionalEnergy, maxASP);
+                            updateData['system.abgeleitete.asp_stern'] = newASP;
+                        } else if (energyType === 'kap') {
+                            const currentKAP = abgeleitete.kap_stern || 0;
+                            const maxKAP = abgeleitete.kap || 0;
+                            const basisRegen = Math.ceil(maxKAP / 16);
+                            const newKAP = Math.min(currentKAP + basisRegen + additionalEnergy, maxKAP);
+                            updateData['system.abgeleitete.kap_stern'] = newKAP;
+                        }
+                        
+                        // Update wounds
+                        const newWunden = Math.max(0, (gesundheit.wunden || 0) - lawWert);
+                        updateData['system.gesundheit.wunden'] = newWunden;
+                        
+                        await this.actor.update(updateData);
+                        ui.notifications.info('Rast durchgeführt - Regeneration abgeschlossen');
+                    }
+                },
+                cancel: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "Abbrechen"
+                }
+            },
+            default: "rest"
+        }).render(true);
     }
 
 
