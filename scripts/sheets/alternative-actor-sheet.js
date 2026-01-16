@@ -724,11 +724,12 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             energySection = `
                 <div class="form-group">
                     <h3>Astralenergie</h3>
-                    <p><strong>Aktuelle ASP:</strong> ${currentASP} / ${maxASP}</p>
-                    <p><strong>Basis-Regeneration (1/8 aufgerundet):</strong> ${basisRegen}</p>
-                    <label>Zusätzliche ASP:</label>
+                    <p><strong>Aktuelle AsP:</strong> ${currentASP} / ${maxASP}</p>
+                </div>
+                <p><strong>Basis-Regeneration (1/8 aufgerundet):</strong> ${basisRegen} AsP</p>
+                <div class="form-group">
+                    <label>Zusätzliche AsP:</label>
                     <input type="number" name="additional-energy" value="0" min="0" />
-                    <p class="hint" id="energy-preview">Gesamt nach Rast: ${Math.min(currentASP + basisRegen, maxASP)} / ${maxASP}</p>
                 </div>
             `;
         } else if (isGeweihter) {
@@ -740,11 +741,12 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             energySection = `
                 <div class="form-group">
                     <h3>Karmalenergie</h3>
-                    <p><strong>Aktuelle KAP:</strong> ${currentKAP} / ${maxKAP}</p>
-                    <p><strong>Basis-Regeneration (1/16 aufgerundet):</strong> ${basisRegen}</p>
-                    <label>Zusätzliche KAP:</label>
+                    <p><strong>Aktuelle KaP:</strong> ${currentKAP} / ${maxKAP}</p>
+                </div>
+                <p><strong>Basis-Regeneration (1/16 aufgerundet):</strong> ${basisRegen} KaP</p>
+                <div class="form-group">
+                    <label>Zusätzliche KaP:</label>
                     <input type="number" name="additional-energy" value="0" min="0" />
-                    <p class="hint" id="energy-preview">Gesamt nach Rast: ${Math.min(currentKAP + basisRegen, maxKAP)} / ${maxKAP}</p>
                 </div>
             `;
         }
@@ -759,16 +761,20 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             <div class="form-group">
                 <h3>Lebenspunkte</h3>
                 <p><strong>Aktuelle LeP:</strong> ${currentHP}</p>
-                <p><strong>Regeneration durch 1 Law:</strong> ${lawWert}</p>
-                <input type="number" name="law-times" value="0" min="0" />
-                <p class="hint">Neue LeP nach Rast: ${neueWunden}</p>
+            </div>
+            <p><strong>Law:</strong> ${lawWert} LeP</p>
+            <div class="form-group">
+                <label>Law Regeneration:</label>
+                <input style="padding-left: 0.5rem" type="number" name="law-times" value="1" min="1" />
             </div>
         `;
         
         const content = `
             <form>
-                ${energySection}
                 ${woundsSection}
+                <hr/>
+                ${energySection}
+                <hr/>
             </form>
         `;
         
@@ -782,6 +788,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                     label: "Rast durchführen",
                     callback: async (html) => {
                         const additionalEnergy = parseInt(html.find('[name="additional-energy"]').val()) || 0;
+                        const additionalLaw = parseInt(html.find('[name="law-times"]').val()) || 1;
                         
                         const updateData = {};
                         
@@ -801,7 +808,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                         }
                         
                         // Update wounds
-                        const newWunden = Math.max(0, (gesundheit.wunden || 0) - lawWert);
+                        const newWunden = Math.max(0, (gesundheit.wunden || 0) - (lawWert * additionalLaw));
                         updateData['system.gesundheit.wunden'] = newWunden;
                         
                         await this.actor.update(updateData);
