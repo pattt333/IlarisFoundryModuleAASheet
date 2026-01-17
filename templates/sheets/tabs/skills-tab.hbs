@@ -82,5 +82,32 @@
                 {{/each}}
             </div>
         </div>
+
+        {{!--free Skills Section --}}
+        <div class="items-section">
+            <div class="items-header">
+                <h3>Freie Fertigkeiten</h3>
+                <div class="item-controls">
+                    <a class="item-control item-create" title="Fertigkeit erstellen" data-type="fertigkeit"><i class="fas fa-plus"></i> Fertigkeit hinzufügen</a>
+                </div>
+            </div>
+            <div class="items-list">
+                {{#each actor.profan.freie as |item id|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs" 
+                    item=item 
+                    rollable=true 
+                    rolltype="freie_fertigkeit"
+                    fertigkeit=id
+                    nameLabel="Fertigkeit"
+                    stats=(array)
+                    stats2=(array)
+                    itemclass="fertigkeit"
+                    editTitle="Fertigkeit bearbeiten"
+                    deleteTitle="Fertigkeit löschen"
+                    details=(array)
+                }}
+                {{/each}}
+            </div>
+        </div>
     </div>
 </div>
