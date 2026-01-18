@@ -1,5 +1,10 @@
 {{!-- Item Accordion Template --}}
-<div class="item accordion-item" data-item-id="{{item._id}}">
+<div class="item accordion-item {{#if draggable}}item-drag-handle{{/if}}" 
+    data-item-id="{{item._id}}"
+    {{#if draggable}}
+    data-item-uuid="{{item.uuid}}"
+    data-transfer-type="Item"
+    {{/if}}>
     <div class="item-header-row">
         <div class="item-image {{#if rollable}}rollable{{/if}}" 
              {{#if rollable}}data-rolltype="{{rolltype}}" data-itemid="{{item.id}}" data-fertigkeit="{{fertigkeit}}"{{/if}}>
@@ -44,9 +49,11 @@
             <a class="item-control item-edit" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{editTitle}}">
                 <i class="fas fa-edit ilaris-button-icon"></i>
             </a>
+            {{#unless (eq showDelete false)}}
             <a class="item-control item-delete" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{deleteTitle}}">
                 <i class="fas fa-trash ilaris-button-icon"></i>
             </a>
+            {{/unless}}
         </div>
         <div class="item-details">
             {{#each details}}

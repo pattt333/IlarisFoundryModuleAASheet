@@ -246,3 +246,29 @@
   width: 100%;
   height: 48px;
 }
+
+/* Drag & Drop Support */
+.ilaris.sheet.actor.alternative .items-list .item.draggable .item-drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 48px;
+  cursor: grab;
+  color: #cbd5e0;
+  margin-right: 8px;
+  transition: color 0.2s;
+}
+
+.ilaris.sheet.actor.alternative .items-list .item.draggable .item-drag-handle:hover {
+  color: var(--primary-color);
+}
+
+.ilaris.sheet.actor.alternative .items-list .item.draggable .item-drag-handle:active {
+  cursor: grabbing;
+}
+
+.ilaris.sheet.actor.alternative .items-list .item.draggable .item-drag-handle i {
+  font-size: 14px;
+  user-select: none;
+}

@@ -162,6 +162,27 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             
             // Rest button (our custom feature)
             html.find('.rest-button').click(this._onRest.bind(this));
+
+            // 1. DragDrop Controller erstellen und konfigurieren
+            // Foundry erwartet this._dragDrop als Array!
+            const dragDrop = new DragDrop({
+                // CSS-Selektor für den Drag-Handle (nicht das gesamte Item!)
+                dragSelector: ".item-drag-handle",
+                // CSS-Selektor für alle Drop-Zonen
+                dropSelector: ".drop-target",
+                // Callback-Funktionen für die Ereignisse
+                callbacks: {
+                    dragstart: this._onDragStart.bind(this),
+                    // Wird aufgerufen, wenn ein Element losgelassen wird
+                    drop: this._onDrop.bind(this)
+                }
+            });
+
+            // 2. Als Array zuweisen (Foundry erwartet Array)
+            this._dragDrop = [dragDrop];
+            
+            // 3. Den Controller an das HTML-Element deines Sheets binden
+            dragDrop.bind(html[0] || html);
         }
         
         // Initialize accordion functionality
@@ -685,6 +706,68 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         } catch (error) {
             console.error('IlarisAlternativeActorSheet | Error advancing effect time:', error);
             ui.notifications.error("Fehler beim Vorrücken der Effekt-Zeit");
+        }
+    }
+
+    /**
+     * Handle drag start for items with drag & drop support
+     * @param {Event} event   The originating dragstart event
+     * @private
+     */
+    _onDragStart(event) {
+        // Finde das übergeordnete .item Element vom Drag-Handle
+        const itemElement = event.currentTarget.closest('.item');
+        if (!itemElement) return;
+        
+        const itemUuid = itemElement.dataset.itemUuid;
+        if (!itemUuid) return;
+        
+        const item = fromUuidSync(itemUuid);
+        if (!item) return;
+        
+        const dragData = item.toDragData();
+        event.dataTransfer.setData("text/plain", JSON.stringify(dragData));
+    }
+
+    /**
+     * Wird aufgerufen, wenn ein Item losgelassen wird.
+     * Hier wird die Aktion (in den eigenen Bestand legen, handeln) ausgeführt.
+     */
+    async _onDrop(event) {
+        event.preventDefault();
+        event.target.classList.remove("drag-over");
+
+        try {
+            // Hole die übertragenen Daten
+            const dropData = JSON.parse(event.dataTransfer.getData("text/plain"));
+
+            // Unterscheidung basierend auf dem Drop-Ziel oder den Daten
+            const dropType = event.target.dataset.dropType;
+
+            if (dropType === "itemPile") {
+                // Sonderlogik für Item Piles Handel
+                await this._handleItemPileTrade(dropData);
+            } else {
+                // Standard-Item-Drop in den eigenen Bestand
+                await super._onDrop(event);
+            }
+        } catch (err) {
+            console.error("Fehler beim Verarbeiten des Drop-Ereignisses:", err);
+            ui.notifications.error("Item konnte nicht übertragen werden.");
+        }
+    }
+
+    // Hilfsfunktion für den Handel mit Item Piles
+    async _handleItemPileTrade(dropData) {
+        // Diese Logik hängt stark von der Item Piles API ab.
+        // Üblicherweise würdest du hier den Handel über das Item Piles Modul anstoßen.
+        // Beispiel (konkrete Implementierung kann abweichen):
+        if (game.modules.get("item-piles")?.active) {
+            // Prüfe, ob das Ziel ein gültiger Item Pile/Händler ist
+            const targetPile = await ItemPiles.API.getPileForActor(this.actor);
+            if (targetPile?.isTrader) {
+                await ItemPiles.API.tradeItems(dropData.actorId, this.actor.id, [dropData.itemPileData]);
+            }
         }
     }
 
