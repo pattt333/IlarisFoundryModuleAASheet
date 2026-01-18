@@ -1,9 +1,21 @@
-{{!-- Health Resource - Bar style --}}
+{{!-- Health Resource - Bar style with LAW segments --}}
 <div class="health-bar-container">
     <div class="energy-bar">
         <label class="energy-label">LeP</label>
         <div class="energy-progress clickable" data-field="system.gesundheit.hp" data-current="{{actor.system.gesundheit.hp}}" data-max="{{actor.system.gesundheit.hp_max}}">
-            <div class="energy-fill health-fill" style="width: {{percentage actor.system.gesundheit.hp.value actor.system.gesundheit.hp.max}}%"></div>
+            {{!-- Segmented health bar --}}
+            <div class="health-segments">
+                {{#each (healthSegments actor) as |segment|}}
+                <div class="health-segment segment-{{segment.color}}" 
+                     style="width: {{segment.width}}%; flex: {{segment.size}}"
+                     data-segment="{{segment.number}}"
+                     data-segment-start="{{segment.start}}"
+                     data-segment-end="{{segment.end}}"
+                     title="Segment {{segment.number}}: {{segment.start}}-{{segment.end}} LeP">
+                    <div class="segment-fill" style="width: {{segment.fillPercentage}}%"></div>
+                </div>
+                {{/each}}
+            </div>
             <div class="energy-text">
                 {{actor.system.gesundheit.hp.value}} / {{actor.system.gesundheit.hp.max}} LeP
                 <a class="energy-settings" data-health-settings="true" title="Wunden bearbeiten"><i class="fas fa-cog"></i></a>

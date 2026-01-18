@@ -156,5 +156,54 @@ export function registerHandlebarsHelpers() {
     return a === b;
   });
 
+  // Health segments helper - creates LAW-based health segments with colors
+  Handlebars.registerHelper('healthSegments', function(actor) {
+    const hp = actor?.system?.gesundheit?.hp || {};
+    const currentHP = hp.value ?? 0;
+    const maxHP = hp.max ?? 0;
+    const law = actor?.system?.abgeleitete?.law ?? Math.ceil(maxHP / 8);
+
+    if (!maxHP || !law) return [];
+
+    const segments = [];
+    
+    // Create 7 segments (Segments 1-6 individual, Segment 7 = rest up to maxHP)
+    for (let i = 1; i <= 7; i++) {
+      const isLastSegment = i === 7;
+      const segmentStart = (i - 1) * law + 1;
+      const segmentSize = isLastSegment ? maxHP - (6 * law) : law; // Last segment: remaining HP to max
+      const segmentEnd = isLastSegment ? maxHP : segmentStart + segmentSize - 1;
+      
+      // Determine color: 1-4 = red, 5-6 = yellow, 7 = green
+      let color = 'red';
+      if (i >= 5 && i <= 6) color = 'yellow';
+      if (i === 7) color = 'green';
+      
+      // Calculate fill percentage for this segment
+      let fillPercentage = 0;
+      if (currentHP >= segmentEnd) {
+        // Segment is completely filled
+        fillPercentage = 100;
+      } else if (currentHP >= segmentStart) {
+        // Segment is partially filled
+        const hpInSegment = currentHP - segmentStart + 1;
+        fillPercentage = Math.max(0, Math.min(100, (hpInSegment / segmentSize) * 100));
+      }
+      // else: currentHP < segmentStart, segment is empty (fillPercentage = 0)
+      
+      segments.push({
+        number: i,
+        start: segmentStart,
+        end: segmentEnd,
+        size: segmentSize,
+        color: color,
+        fillPercentage: Math.round(fillPercentage),
+        width: (segmentSize / maxHP) * 100 // Width proportional to segment size
+      });
+    }
+    
+    return segments;
+  });
+
   console.log('Ilaris Alternative Actor Sheet | Handlebars helpers registered');
 }
