@@ -422,20 +422,6 @@
 .ilaris.sheet.actor.alternative.kreatur .section-header h3 i {
     color: var(--primary-color);
 }
-
-/* Effect Library Open Button */
-.ilaris.sheet.actor.alternative.kreatur .effect-library-open {
-    color: var(--primary-color);
-    cursor: pointer;
-    padding: 4px;
-    transition: all 0.2s ease;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .effect-library-open:hover {
-    color: var(--color-primary-dark);
-    transform: scale(1.1);
-}
-
 /* ===================================
    Effects Grid
    =================================== */

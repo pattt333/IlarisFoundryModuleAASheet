@@ -12,6 +12,7 @@
  * - Flat Structure: No accordions - all information immediately visible for fast access
  */
 import { KreaturSheet } from "../../../../systems/Ilaris/scripts/sheets/kreatur.js";
+import { advanceEffectTime } from "../utilities.js";
 
 export class IlarisAlternativeCreatureSheet extends KreaturSheet {
     
@@ -80,6 +81,9 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             
             // Check if creature is a caster
             context.isCaster = this.actor.system.abgeleitete?.zauberer || this.actor.system.abgeleitete?.geweihter;
+
+            // Add canAdvanceTime flag for effect time-advance button
+            context.canAdvanceTime = this.actor.isOwner;
             
             console.log('IlarisAlternativeCreatureSheet | Successfully retrieved context');
             return context;
@@ -131,6 +135,9 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             // Stack effect controls (our custom feature)
             html.on("click", ".effect-stack-increase", this._onEffectStackIncrease.bind(this));
             html.on("click", ".effect-stack-decrease", this._onEffectStackDecrease.bind(this));
+
+            // Effect time-advance button (our custom feature)
+            html.find('.effect-advance-time').click(this._onEffectAdvanceTime.bind(this));
         }
     }
 
@@ -519,6 +526,35 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
         });
         
         ui.notifications.info(`${effect.name} Stack reduziert auf ${updatedChanges.length}`);
+    }
+
+    /**
+     * Advance time for all temporary effects
+     * Decrements duration.turns and duration.rounds by 1 for all effects that have them
+     * Effects reaching 0 duration are automatically removed by the Foundry system
+     * @param {Event} event - The originating click event
+     * @private
+     */
+    async _onEffectAdvanceTime(event) {
+        event.preventDefault();
+        
+        try {
+            // Use shared utility function to advance effect time
+            const effectsReduced = await advanceEffectTime(this.actor);
+            
+            // Check if there are any temporary effects
+            if (effectsReduced === 0) {
+                ui.notifications.info("Keine temporären Effekte vorhanden");
+                return;
+            }
+            
+            // Show success notification
+            ui.notifications.info("Temporäre Effekte wurden um 1 Zeiteinheit reduziert");
+            
+        } catch (error) {
+            console.error('IlarisAlternativeActorSheet | Error advancing effect time:', error);
+            ui.notifications.error("Fehler beim Vorrücken der Effekt-Zeit");
+        }
     }
 
     /**

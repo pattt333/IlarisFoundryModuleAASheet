@@ -5,9 +5,12 @@
     <section class="creature-section effects-section">
         <div class="section-header">
             <h3><i class="fas fa-magic"></i> Aktive Effekte</h3>
-            <a class="effect-library-open" data-pack="ilaris-alternative-actor-sheet.effect-library" title="Effekt-Bibliothek öffnen">
-                <i class="fas fa-book-open"></i>
-            </a>
+            <div class="item-controls">
+                {{#if canAdvanceTime}}
+                <a class="item-control effect-advance-time" title="Zeit vorrücken"><i class="fas fa-stopwatch"></i> Zeit vorrücken</a>
+                {{/if}}
+                <a class="item-control effect-library-open" title="Öffne Effekt Bibliothek" data-pack="ilaris-alternative-actor-sheet.effect-library"><i class="fas fa-book"></i> Effekt Bibliothek</a>
+            </div>
         </div>
         <div class="effects-grid">
             {{#if actor.appliedEffects.length}}
