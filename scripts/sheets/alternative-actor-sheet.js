@@ -8,6 +8,7 @@
 import { HeldenSheet } from "../../../../systems/Ilaris/scripts/sheets/helden.js";
 import { AccordionManager } from "../components/accordion-manager.js";
 import { FavoritesManager } from "../components/favorites-manager.js";
+import { advanceEffectTime } from "../utilities.js";
 
 export class IlarisAlternativeActorSheet extends HeldenSheet {
     
@@ -71,6 +72,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             
             // Add effect-items for the Kampf-Tab
             context.actor.effectItems = this.actor.items.filter(i => i.type === "effect-item");
+            
+            // Add canAdvanceTime flag for effect time-advance button
+            context.canAdvanceTime = this.actor.isOwner;
             
             // Add ammunition status for ranged weapons (only for "held" actor type)
             if (this.actor.type === "held" && game.settings.get("ilaris-alternative-actor-sheet", "ammunitionTracking")) {
@@ -152,6 +156,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             // Stack effect controls (our custom feature)
             html.on("click", ".effect-stack-increase", this._onEffectStackIncrease.bind(this));
             html.on("click", ".effect-stack-decrease", this._onEffectStackDecrease.bind(this));
+            
+            // Effect time-advance button (our custom feature)
+            html.find('.effect-advance-time').click(this._onEffectAdvanceTime.bind(this));
             
             // Rest button (our custom feature)
             html.find('.rest-button').click(this._onRest.bind(this));
@@ -262,8 +269,8 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             <form>
                 <div class="form-group">
                     <label>Trefferpunkte erlitten:</label>
-                    <input type="number" name="wunden" value="${currentWounds}" min="0" />
-                    <p class="hint">Das sind die Trefferpunkte, die du erlitten hast bis jetzt.</p>
+                    <input type="number" name="wunden" value="0" />
+                    <p class="hint">Das sind die Trefferpunkte, die du erlitten hast. Negative Werte bedeuten Heilung.</p>
                 </div>
             </form>
         `;
@@ -280,7 +287,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                         const newWounds = parseInt(html.find('[name="wunden"]').val());
                         
                         await this.actor.update({
-                            'system.gesundheit.wunden': Math.max(newWounds, 0)
+                            'system.gesundheit.wunden': Math.max(newWounds + currentWounds, 0)
                         });
                     }
                 },
@@ -650,6 +657,35 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         });
         
         ui.notifications.info(`${effect.name} Stack reduziert auf ${updatedChanges.length}`);
+    }
+
+    /**
+     * Advance time for all temporary effects
+     * Decrements duration.turns and duration.rounds by 1 for all effects that have them
+     * Effects reaching 0 duration are automatically removed by the Foundry system
+     * @param {Event} event - The originating click event
+     * @private
+     */
+    async _onEffectAdvanceTime(event) {
+        event.preventDefault();
+        
+        try {
+            // Use shared utility function to advance effect time
+            const effectsReduced = await advanceEffectTime(this.actor);
+            
+            // Check if there are any temporary effects
+            if (effectsReduced === 0) {
+                ui.notifications.info("Keine temporären Effekte vorhanden");
+                return;
+            }
+            
+            // Show success notification
+            ui.notifications.info("Temporäre Effekte wurden um 1 Zeiteinheit reduziert");
+            
+        } catch (error) {
+            console.error('IlarisAlternativeActorSheet | Error advancing effect time:', error);
+            ui.notifications.error("Fehler beim Vorrücken der Effekt-Zeit");
+        }
     }
 
     /** @override */

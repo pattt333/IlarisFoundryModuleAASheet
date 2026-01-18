@@ -2,7 +2,7 @@
   "id": "ilaris-alternative-actor-sheet",
   "title": "Ilaris Alternative Actor Sheet",
   "description": "An alternative actor sheet module for the Ilaris Foundry VTT system, providing enhanced character sheet layouts and functionality.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "compatibility": {
     "minimum": 12,
     "verified": 12,

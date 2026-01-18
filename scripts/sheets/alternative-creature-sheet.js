@@ -232,8 +232,8 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             <form>
                 <div class="form-group">
                     <label>Trefferpunkte erlitten:</label>
-                    <input type="number" name="wunden" value="${currentWounds}" min="0" />
-                    <p class="hint">Das sind die Trefferpunkte, die die Kreatur erlitten hat.</p>
+                    <input type="number" name="wunden" value="0" />
+                    <p class="hint">Das sind die Trefferpunkte, die du erlitten hast. Negative Werte bedeuten Heilung.</p>
                 </div>
             </form>
         `;
@@ -250,7 +250,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
                         const newWounds = parseInt(html.find('[name="wunden"]').val());
                         
                         await this.actor.update({
-                            'system.gesundheit.wunden': Math.max(newWounds, 0)
+                            'system.gesundheit.wunden': Math.max(newWounds + currentWounds, 0)
                         });
                     }
                 },
