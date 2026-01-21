@@ -1,20 +1,24 @@
 {
-  "name": "Improvisierte Einhandklingenwaffe",
-  "type": "nahkampfwaffe",
-  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/sword-hilt.svg",
+  "name": "Improvisierte Wurfwaffe",
+  "type": "fernkampfwaffe",
+  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/thrown-daggers.svg",
   "system": {
-    "haerte": 0,
-    "beschaedigung": 0,
+    "haerte": "0",
+    "beschaedigung": "0",
     "tp": "1W6+2",
-    "fertigkeit": "Klingenwaffen",
-    "talent": "Einhandklingenwaffen",
-    "rw": 0,
+    "fertigkeit": "Wurfwaffen",
+    "talent": "Kurze Wurfwaffen",
+    "rw": 4,
     "rw_mod": 0,
     "hauptwaffe": false,
     "nebenwaffe": false,
     "eigenschaften": [
       {
         "key": "Zerbrechlich",
+        "parameters": []
+      },
+      {
+        "key": "Messerstecherei",
         "parameters": []
       },
       {
@@ -52,8 +56,8 @@
     "gewicht": 0,
     "preis": 0,
     "quantity": 1,
-    "wm_at": -4,
-    "wm_vt": -4
+    "wm_fk": -4,
+    "lz": 0
   },
   "effects": [],
   "folder": null,
@@ -63,16 +67,16 @@
     "default": 0,
     "bRsoRPItEVb33T1L": 3
   },
-  "_id": "13dLeuGoNfG6ZAjY",
+  "_id": "ut6epapKT1180yAs",
   "_stats": {
     "compendiumSource": null,
     "duplicateSource": null,
     "coreVersion": "12.343",
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
-    "createdTime": 1767785732554,
-    "modifiedTime": 1769022865004,
+    "createdTime": 1769022865362,
+    "modifiedTime": 1769022920213,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
-  "_key": "!items!13dLeuGoNfG6ZAjY"
+  "_key": "!items!ut6epapKT1180yAs"
 }

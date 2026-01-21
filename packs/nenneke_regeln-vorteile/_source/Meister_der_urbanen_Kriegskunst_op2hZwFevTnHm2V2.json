@@ -1,11 +1,11 @@
 {
-  "name": "Mac Olivari",
+  "name": "Meister der urbanen Kriegskunst",
   "type": "vorteil",
   "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
   "system": {
-    "voraussetzung": "",
+    "voraussetzung": "Vorteil Meister improvisierter Waffen",
     "gruppe": 2,
-    "text": "Du kannst ohne Erschwernisse in einer Aktion Bereit machen etwas in deiner Umgebung zu einer sinnvollen improvisierten Waffe machen.",
+    "text": "Meister der urbanen Kriegskunst Improvisierte Waffen haben eine WM von 1/1. Schilde haben 0/1.\n\nJede improvisierte Waffe, hat die Waffeneigenschaft Fernkampfoption (Improvisierte Wurfwaffe).",
     "sephrastoScript": "",
     "stilBedingungen": "",
     "foundryScript": ""
@@ -18,16 +18,16 @@
     "default": 0,
     "bRsoRPItEVb33T1L": 3
   },
-  "_id": "5SKZfWnA0rLWkogs",
+  "_id": "op2hZwFevTnHm2V2",
   "_stats": {
     "compendiumSource": null,
     "duplicateSource": null,
     "coreVersion": "12.343",
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
-    "createdTime": 1767785734350,
-    "modifiedTime": 1767785734350,
+    "createdTime": 1769017849910,
+    "modifiedTime": 1769017849910,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
-  "_key": "!items!5SKZfWnA0rLWkogs"
+  "_key": "!items!op2hZwFevTnHm2V2"
 }

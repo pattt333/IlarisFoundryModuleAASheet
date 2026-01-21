@@ -1,18 +1,32 @@
 {
-  "name": "Improvisierte Einhandklingenwaffe",
+  "name": "Improvisierter Schild",
   "type": "nahkampfwaffe",
-  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/sword-hilt.svg",
+  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/round-shield.svg",
   "system": {
-    "haerte": 0,
-    "beschaedigung": 0,
-    "tp": "1W6+2",
-    "fertigkeit": "Klingenwaffen",
-    "talent": "Einhandklingenwaffen",
+    "haerte": "0",
+    "beschaedigung": "0",
+    "tp": "1W6+1",
+    "fertigkeit": "Handgemenge",
+    "talent": "Unbewaffnet",
     "rw": 0,
     "rw_mod": 0,
     "hauptwaffe": false,
     "nebenwaffe": false,
     "eigenschaften": [
+      {
+        "key": "Schild",
+        "parameters": []
+      },
+      {
+        "key": "Stumpf",
+        "parameters": []
+      },
+      {
+        "key": "Schwer",
+        "parameters": [
+          4
+        ]
+      },
       {
         "key": "Zerbrechlich",
         "parameters": []
@@ -53,7 +67,7 @@
     "preis": 0,
     "quantity": 1,
     "wm_at": -4,
-    "wm_vt": -4
+    "wm_vt": 0
   },
   "effects": [],
   "folder": null,
@@ -63,16 +77,16 @@
     "default": 0,
     "bRsoRPItEVb33T1L": 3
   },
-  "_id": "13dLeuGoNfG6ZAjY",
+  "_id": "9f0WofpeLYDkA9Tc",
   "_stats": {
     "compendiumSource": null,
     "duplicateSource": null,
     "coreVersion": "12.343",
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
-    "createdTime": 1767785732554,
-    "modifiedTime": 1769022865004,
+    "createdTime": 1769022865345,
+    "modifiedTime": 1769022977155,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
-  "_key": "!items!13dLeuGoNfG6ZAjY"
+  "_key": "!items!9f0WofpeLYDkA9Tc"
 }

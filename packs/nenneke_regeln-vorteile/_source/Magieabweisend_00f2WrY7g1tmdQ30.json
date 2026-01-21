@@ -5,7 +5,7 @@
   "system": {
     "voraussetzung": "",
     "gruppe": 0,
-    "text": "Zauber wirken auf dich deutlich schwächer. Du ignorierst bei allen Zaubern eine Stufe der spontanen Modifikation Mächtige Magie. Zauber ohne Mächtige Magie haben auf dich keine Wirkung.",
+    "text": "+4MR. Du kannst Widerstandsproben gg. übernatürliche Talente in einer einfachen sozialen Aktion ausführen, du kannst diese Aktion also mit anderen einfachen Aktionen frei kombinieren und sie gilt nicht als Konzentration und kann damit nicht unterbrochen werden.",
     "sephrastoScript": "",
     "stilBedingungen": "",
     "foundryScript": ""
@@ -26,7 +26,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734350,
-    "modifiedTime": 1767785734350,
+    "modifiedTime": 1769017845693,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!00f2WrY7g1tmdQ30"

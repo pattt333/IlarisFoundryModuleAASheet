@@ -26,6 +26,14 @@
         "parameters": []
       },
       {
+        "key": "Zerbrechlich",
+        "parameters": []
+      },
+      {
+        "key": "Improvisiert",
+        "parameters": []
+      },
+      {
         "key": "Kugel",
         "parameters": []
       },
@@ -64,7 +72,7 @@
     "gewicht": 0,
     "preis": 0,
     "quantity": 1,
-    "wm_fk": 0,
+    "wm_fk": -4,
     "lz": 0
   },
   "effects": [],
@@ -83,7 +91,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785732554,
-    "modifiedTime": 1767867317500,
+    "modifiedTime": 1769022865292,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!rgy84zmo60xVkId3"

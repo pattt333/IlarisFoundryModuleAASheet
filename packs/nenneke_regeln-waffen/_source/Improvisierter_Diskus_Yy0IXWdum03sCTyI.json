@@ -1,14 +1,14 @@
 {
-  "name": "Improvisierte Einhandklingenwaffe",
-  "type": "nahkampfwaffe",
-  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/sword-hilt.svg",
+  "name": "Improvisierter Diskus",
+  "type": "fernkampfwaffe",
+  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/chakram.svg",
   "system": {
-    "haerte": 0,
-    "beschaedigung": 0,
-    "tp": "1W6+2",
-    "fertigkeit": "Klingenwaffen",
-    "talent": "Einhandklingenwaffen",
-    "rw": 0,
+    "haerte": "0",
+    "beschaedigung": "0",
+    "tp": "2W6-1",
+    "fertigkeit": "Wurfwaffen",
+    "talent": "Diskusse",
+    "rw": 16,
     "rw_mod": 0,
     "hauptwaffe": false,
     "nebenwaffe": false,
@@ -52,8 +52,8 @@
     "gewicht": 0,
     "preis": 0,
     "quantity": 1,
-    "wm_at": -4,
-    "wm_vt": -4
+    "wm_fk": -4,
+    "lz": 0
   },
   "effects": [],
   "folder": null,
@@ -63,16 +63,16 @@
     "default": 0,
     "bRsoRPItEVb33T1L": 3
   },
-  "_id": "13dLeuGoNfG6ZAjY",
+  "_id": "Yy0IXWdum03sCTyI",
   "_stats": {
     "compendiumSource": null,
     "duplicateSource": null,
     "coreVersion": "12.343",
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
-    "createdTime": 1767785732554,
-    "modifiedTime": 1769022865004,
+    "createdTime": 1769022865353,
+    "modifiedTime": 1769022941608,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
-  "_key": "!items!13dLeuGoNfG6ZAjY"
+  "_key": "!items!Yy0IXWdum03sCTyI"
 }

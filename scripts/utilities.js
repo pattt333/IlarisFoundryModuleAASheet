@@ -10,6 +10,15 @@
 // ==========================================
 
 /**
+ * Check if a weapon is a throwable weapon (Wurfwaffen skill)
+ * @param {Item} item - The item to check
+ * @returns {boolean} - True if weapon uses Wurfwaffen skill
+ */
+export function isThrowableWeapon(item) {
+  return item.type === "fernkampfwaffe" && item.system.fertigkeit === "Wurfwaffen";
+}
+
+/**
  * Automatically adds the corresponding Fernkampfwaffe when a Nahkampfwaffe 
  * with the "Fernkampfoption" property is added to an actor
  * @param {Item} nahkampfwaffe - The melee weapon with Fernkampfoption
@@ -28,13 +37,15 @@ export async function addFernkampfoption(nahkampfwaffe, actor) {
     
     const fernkampfName = fernkampfOption.parameters[0];
     
-    // Check if actor already has this fernkampfwaffe (prevent duplicates)
+    // Check if THIS specific melee weapon already triggered an addition
     const existingWeapon = actor.items.find(
-      i => i.name === fernkampfName && i.type === "fernkampfwaffe"
+      i => i.type === "fernkampfwaffe" && 
+           i.name === fernkampfName && 
+           i.getFlag("ilaris-alternative-actor-sheet", "linkedMeleeId") === nahkampfwaffe.id
     );
     
     if (existingWeapon) {
-      console.log(`Ilaris Alternative Actor Sheet | Fernkampfoption: ${fernkampfName} already exists on actor`);
+      console.log(`Ilaris Alternative Actor Sheet | Fernkampfoption: ${fernkampfName} already added for this specific melee weapon`);
       return;
     }
     
@@ -59,14 +70,110 @@ export async function addFernkampfoption(nahkampfwaffe, actor) {
     
     // Get the full document and add it to the actor
     const fernkampfWeapon = await pack.getDocument(fernkampfEntry._id);
-    await actor.createEmbeddedDocuments("Item", [fernkampfWeapon.toObject()], {
+    const createdItems = await actor.createEmbeddedDocuments("Item", [fernkampfWeapon.toObject()], {
       fernkampfOptionAutoAdded: true
     });
+    
+    const createdFernkampfwaffe = createdItems[0];
+    
+    // Establish bidirectional flag links
+    await nahkampfwaffe.setFlag("ilaris-alternative-actor-sheet", "linkedRangedId", createdFernkampfwaffe.id);
+    await createdFernkampfwaffe.setFlag("ilaris-alternative-actor-sheet", "linkedMeleeId", nahkampfwaffe.id);
     
     ui.notifications.info(`${fernkampfName} automatisch hinzugefügt`);
     
   } catch (error) {
     console.error(`Ilaris Alternative Actor Sheet | Error adding Fernkampfoption:`, error);
+  }
+}
+
+/**
+ * Delete linked weapon when one weapon of a linked pair is deleted
+ * @param {Item} item - The deleted item
+ * @param {Actor} actor - The actor owning the item
+ */
+export async function deleteLinkedWeapon(item, actor) {
+  try {
+    // Check for linked weapon ID based on item type
+    let linkedId = null;
+    if (item.type === "nahkampfwaffe") {
+      linkedId = item.getFlag("ilaris-alternative-actor-sheet", "linkedRangedId");
+    } else if (item.type === "fernkampfwaffe") {
+      linkedId = item.getFlag("ilaris-alternative-actor-sheet", "linkedMeleeId");
+    }
+    
+    if (!linkedId) {
+      return; // No linked weapon
+    }
+    
+    // Find and delete linked item
+    const linkedItem = actor.items.get(linkedId);
+    if (linkedItem) {
+      await linkedItem.delete({ linkedWeaponDeletion: true });
+    }
+  } catch (error) {
+    console.error(`Ilaris Alternative Actor Sheet | Error deleting linked weapon:`, error);
+  }
+}
+
+/**
+ * Create item pile with thrown weapon next to actor token
+ * @param {Actor} actor - The actor throwing the weapon
+ * @param {Item} weapon - The thrown weapon
+ * @param {Token} token - The actor's token
+ */
+export async function createThrowableWeaponPile(actor, weapon, token) {
+  try {
+    // Check if Item Piles module is active
+    if (!game.modules.get("item-piles")?.active) {
+      console.log("Ilaris Alternative Actor Sheet | Item Piles module not active, skipping pile creation");
+      return;
+    }
+
+    // Fetch linked melee weapon via flag
+    const linkedMeleeId = weapon.getFlag("ilaris-alternative-actor-sheet", "linkedMeleeId");
+    let linkedMeleeWeapon = null;
+    if (linkedMeleeId) {
+      linkedMeleeWeapon = actor.items.get(linkedMeleeId);
+    }
+
+    // Calculate hex grid position offset (one square to the right)
+    const pileX = token.x + canvas.grid.size;
+    const pileY = token.y;
+
+    // Determine which item to put in pile
+    let pileItem;
+    if (linkedMeleeWeapon) {
+      // Use melee weapon instead of thrown weapon
+      pileItem = linkedMeleeWeapon.toObject();
+    } else {
+      // Use thrown weapon
+      pileItem = weapon.toObject();
+    }
+
+    // Create item pile using Item Piles API
+    // API expects position object and optional config with items
+    await game.itempiles.API.createItemPile(
+      { x: pileX, y: pileY },
+      { items: [pileItem] }
+    );
+
+    // Handle quantity consumption and cleanup
+    if (linkedMeleeWeapon) {
+      // Consume melee weapon quantity
+      await consumeAmmunition(actor, linkedMeleeWeapon.name, 1);
+      // Delete thrown weapon without consuming
+      await weapon.delete();
+    } else {
+      // Consume thrown weapon quantity
+      await consumeAmmunition(actor, weapon.name, 1);
+    }
+
+    // Show notification
+    ui.notifications.info(`${weapon.name} zu Boden gefallen`);
+
+  } catch (error) {
+    console.error(`Ilaris Alternative Actor Sheet | Error creating throwable weapon pile:`, error);
   }
 }
 

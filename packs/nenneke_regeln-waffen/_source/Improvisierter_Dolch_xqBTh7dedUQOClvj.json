@@ -1,18 +1,22 @@
 {
-  "name": "Improvisierte Einhandklingenwaffe",
+  "name": "Improvisierter Dolch",
   "type": "nahkampfwaffe",
-  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/sword-hilt.svg",
+  "img": "modules/ilaris-alternative-actor-sheet/assets/icons/weapons/plain-dagger.svg",
   "system": {
-    "haerte": 0,
-    "beschaedigung": 0,
+    "haerte": "0",
+    "beschaedigung": "0",
     "tp": "1W6+2",
-    "fertigkeit": "Klingenwaffen",
-    "talent": "Einhandklingenwaffen",
+    "fertigkeit": "Handgemenge",
+    "talent": "Handgemengewaffen",
     "rw": 0,
     "rw_mod": 0,
     "hauptwaffe": false,
     "nebenwaffe": false,
     "eigenschaften": [
+      {
+        "key": "Messerstecherei",
+        "parameters": []
+      },
       {
         "key": "Zerbrechlich",
         "parameters": []
@@ -63,16 +67,16 @@
     "default": 0,
     "bRsoRPItEVb33T1L": 3
   },
-  "_id": "13dLeuGoNfG6ZAjY",
+  "_id": "xqBTh7dedUQOClvj",
   "_stats": {
     "compendiumSource": null,
     "duplicateSource": null,
     "coreVersion": "12.343",
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
-    "createdTime": 1767785732554,
-    "modifiedTime": 1769022865004,
+    "createdTime": 1769022865335,
+    "modifiedTime": 1769022961306,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
-  "_key": "!items!13dLeuGoNfG6ZAjY"
+  "_key": "!items!xqBTh7dedUQOClvj"
 }

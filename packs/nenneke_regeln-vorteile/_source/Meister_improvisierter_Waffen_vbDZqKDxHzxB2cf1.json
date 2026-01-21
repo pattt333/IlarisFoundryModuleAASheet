@@ -3,9 +3,9 @@
   "type": "vorteil",
   "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
   "system": {
-    "voraussetzung": "Vorteil Mac Olivari",
+    "voraussetzung": "Vorteil Gassenkünstler",
     "gruppe": 2,
-    "text": "Improvisierte Waffen haben nur eine WM von -2/-2 und +1 TP. Schilde haben -3/1",
+    "text": "Meister improvisierter Waffen Improvisierte Waffen haben nur eine WM von -2/-2. Schilde haben -2/0. Du kannst einer improvisierten Waffen eine der folgenden Waffeneigenschaften geben: Kopflastig, Wendig, Stumpf, Parierwaffe, Haken",
     "sephrastoScript": "",
     "stilBedingungen": "",
     "foundryScript": ""
@@ -26,7 +26,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767785734350,
-    "modifiedTime": 1767785734350,
+    "modifiedTime": 1769017849777,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!vbDZqKDxHzxB2cf1"

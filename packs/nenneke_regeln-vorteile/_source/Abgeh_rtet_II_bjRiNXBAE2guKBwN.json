@@ -6,7 +6,7 @@
     "voraussetzung": "Attribut KO 6",
     "gruppe": 1,
     "text": "Proben zur Abwehr von Giften und Krankheiten sind um +2 erleichtert. Proben zum Abschütteln von Giften und Krankheiten können nicht Patzen.",
-    "sephrastoScript": "modifyDH(2)",
+    "sephrastoScript": "",
     "stilBedingungen": "",
     "foundryScript": ""
   },
@@ -74,7 +74,7 @@
     "systemId": "Ilaris",
     "systemVersion": "12.2.6",
     "createdTime": 1767867321995,
-    "modifiedTime": 1767867321995,
+    "modifiedTime": 1769017846415,
     "lastModifiedBy": "bRsoRPItEVb33T1L"
   },
   "_key": "!items!bjRiNXBAE2guKBwN"

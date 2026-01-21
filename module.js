@@ -14,12 +14,15 @@ import { NegativeInitiativeDialog } from './scripts/apps/negative-initiative-dia
 import { registerHandlebarsHelpers } from './scripts/handlebars-helpers.js';
 import {
   addFernkampfoption,
+  deleteLinkedWeapon,
   increaseEffectStack,
   addEffectWithStacking,
   consumeAmmunition,
   showNoAmmunitionWarning,
   handleFumble,
   advanceEffectTimeForAllActors,
+  isThrowableWeapon,
+  createThrowableWeaponPile,
   AMMUNITION_TYPES
 } from './scripts/utilities.js';
 
@@ -44,6 +47,29 @@ Hooks.on("createItem", (item, options, userId) => {
   
   // Fire and forget - don't await
   addFernkampfoption(item, item.parent);
+});
+
+/**
+ * Hook: Automatically delete linked weapon when one is deleted
+ */
+Hooks.on("deleteItem", (item, options, userId) => {
+  // Skip if this deletion was triggered by linked weapon deletion (prevent infinite loop)
+  if (options.linkedWeaponDeletion) {
+    return;
+  }
+  
+  // Only process items deleted from actors
+  if (!item.parent || item.parent.documentName !== "Actor") {
+    return;
+  }
+  
+  // Only process nahkampfwaffe or fernkampfwaffe
+  if (item.type !== "nahkampfwaffe" && item.type !== "fernkampfwaffe") {
+    return;
+  }
+  
+  // Fire and forget - don't await
+  deleteLinkedWeapon(item, item.parent);
 });
 
 // Module initialization hook
@@ -342,6 +368,26 @@ Hooks.on("Ilaris.fernkampfAngriffClick", async (rollResult, actor, item) => {
   const lockFlag = actor.getFlag("ilaris-alternative-actor-sheet", "processingAmmunition");
   if (lockFlag) {
     console.log("Ilaris Alternative Actor Sheet | Ammunition processing already in progress, skipping");
+    return;
+  }
+  
+  // Check if weapon is throwable and handle item pile creation
+  if (isThrowableWeapon(item)) {
+    // Validate token exists on canvas
+    const activeTokens = actor.getActiveTokens();
+    if (activeTokens.length === 0) {
+      console.log("Ilaris Alternative Actor Sheet | No token on scene for thrown weapon, skipping");
+      return;
+    }
+    
+    const token = canvas.tokens.get(activeTokens[0].id);
+    if (!token) {
+      console.log("Ilaris Alternative Actor Sheet | Token not found on canvas, skipping");
+      return;
+    }
+    
+    // Fire and forget - create pile without awaiting
+    createThrowableWeaponPile(actor, item, token);
     return;
   }
   

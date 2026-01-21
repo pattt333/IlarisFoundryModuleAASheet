@@ -1,0 +1,33 @@
+{
+  "name": "Gassenkünstler",
+  "type": "vorteil",
+  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+  "system": {
+    "voraussetzung": "",
+    "gruppe": 2,
+    "text": "Wenn du eine improvisierte Waffe aus deiner Umgebung verwenden willst, kannst du diese in einer Aktion Bereit machen (einfach) ausrüsten, hier dürfen nur Waffen mit der Waffeneigenschaft Improvisiert gewechselt werden KEINE normalen Waffen (Kampfstil ist normal möglich).\n\nIst die Aktion Bereit machen bereits für dich eine einfache Aktion, entfällt die\nErschwernis beim kombinieren von Aktionen.",
+    "sephrastoScript": "",
+    "stilBedingungen": "",
+    "foundryScript": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "bRsoRPItEVb33T1L": 3
+  },
+  "_id": "F76sFoFGz5q0hI33",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.343",
+    "systemId": "Ilaris",
+    "systemVersion": "12.2.6",
+    "createdTime": 1769017849901,
+    "modifiedTime": 1769017849901,
+    "lastModifiedBy": "bRsoRPItEVb33T1L"
+  },
+  "_key": "!items!F76sFoFGz5q0hI33"
+}
