@@ -44,6 +44,12 @@ Hooks.on("createItem", (item, options, userId) => {
   if (item.type !== "nahkampfwaffe") {
     return;
   }
+
+    // Only process if user is owner of the actor
+  const user = game.users.get(userId);
+  if (!user || !item.parent.testUserPermission(user, "OWNER") || game.user.isGM) {
+    return;
+  }
   
   // Fire and forget - don't await
   addFernkampfoption(item, item.parent);
@@ -65,6 +71,12 @@ Hooks.on("deleteItem", (item, options, userId) => {
   
   // Only process nahkampfwaffe or fernkampfwaffe
   if (item.type !== "nahkampfwaffe" && item.type !== "fernkampfwaffe") {
+    return;
+  }
+  
+  // Only process if user is owner of the actor
+  const user = game.users.get(userId);
+  if (!user || !item.parent.testUserPermission(user, "OWNER") || game.user.isGM) {
     return;
   }
   

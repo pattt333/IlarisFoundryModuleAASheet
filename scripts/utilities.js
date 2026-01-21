@@ -25,6 +25,9 @@ export function isThrowableWeapon(item) {
  * @param {Actor} actor - The actor to add the ranged weapon to
  */
 export async function addFernkampfoption(nahkampfwaffe, actor) {
+  if(actor.type !== "held") {
+    return; // Only for "held" actors
+  }
   try {
     // Find Fernkampfoption property
     const fernkampfOption = nahkampfwaffe.system.eigenschaften?.find(
@@ -153,9 +156,10 @@ export async function createThrowableWeaponPile(actor, weapon, token) {
 
     // Create item pile using Item Piles API
     // API expects position object and optional config with items
-    await game.itempiles.API.createItemPile(
-      { x: pileX, y: pileY },
-      { items: [pileItem] }
+    await game.itempiles.API.createItemPile({
+       position: {x: pileX, y: pileY },
+       items: [pileItem] 
+      }
     );
 
     // Handle quantity consumption and cleanup
