@@ -552,58 +552,6 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         }).render(true);
     }
 
-    /** @override */
-    async _onDrop(event) {
-        const data = TextEditor.getDragEventData(event);
-        
-        // If dropping an Item from the effect library compendium, transfer only its effects
-        if (data.type === "Item" && data.uuid?.includes("ilaris-alternative-actor-sheet.effect-library")) {
-            event.preventDefault();
-            
-            try {
-                // Get the item from the UUID
-                const item = await fromUuid(data.uuid);
-                
-                if (!item) {
-                    ui.notifications.warn("Item konnte nicht gefunden werden.");
-                    return;
-                }
-                
-                // Check if the item has effects
-                const effects = item.effects?.contents || [];
-                
-                if (effects.length === 0) {
-                    ui.notifications.warn(`${item.name} hat keine Effekte zum übertragen.`);
-                    return;
-                }
-                
-                // Transfer only the effects to the actor
-                const effectData = effects.map(e => {
-                    const data = e.toObject();
-                    // Update the origin to point to this actor
-                    data.origin = this.actor.uuid;
-                    return data;
-                });
-                
-                // Use shared utility function for adding effects with automatic stacking
-                for (const newEffectData of effectData) {
-                    await window.IlarisAlternativeActorSheet.addEffectWithStacking(this.actor, newEffectData);
-                }
-                
-                ui.notifications.info(`Effekt(e) von ${item.name} wurden verarbeitet.`);
-                
-            } catch (error) {
-                console.error("Error transferring effects:", error);
-                ui.notifications.error("Fehler beim Übertragen der Effekte.");
-            }
-            
-            return;
-        }
-        
-        // For all other drops, use the default behavior
-        return super._onDrop(event);
-    }
-
     /**
      * Handle click on stack increase button
      * @param {Event} event - The originating click event
@@ -737,6 +685,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         event.preventDefault();
         event.target.classList.remove("drag-over");
 
+        console.log('IlarisAlternativeActorSheet | Drop event data:', event.dataTransfer.getData("text/plain"));
         try {
             // Hole die übertragenen Daten
             const dropData = JSON.parse(event.dataTransfer.getData("text/plain"));
@@ -749,6 +698,51 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 await this._handleItemPileTrade(dropData);
             } else {
                 // Standard-Item-Drop in den eigenen Bestand
+                const data = TextEditor.getDragEventData(event);
+        
+                // If dropping an Item from the effect library compendium, transfer only its effects
+                if (data.type === "Item" && data.uuid?.includes("ilaris-alternative-actor-sheet.effect-library")) {
+                    event.preventDefault();
+                    console.log('IlarisAlternativeActorSheet | Drop data:', data);
+                    try {
+                        // Get the item from the UUID
+                        const item = await fromUuid(data.uuid);
+                        
+                        if (!item) {
+                            ui.notifications.warn("Item konnte nicht gefunden werden.");
+                            return;
+                        }
+                        
+                        // Check if the item has effects
+                        const effects = item.effects?.contents || [];
+                        
+                        if (effects.length === 0) {
+                            ui.notifications.warn(`${item.name} hat keine Effekte zum übertragen.`);
+                            return;
+                        }
+                        
+                        // Transfer only the effects to the actor
+                        const effectData = effects.map(e => {
+                            const data = e.toObject();
+                            // Update the origin to point to this actor
+                            data.origin = this.actor.uuid;
+                            return data;
+                        });
+                        
+                        // Use shared utility function for adding effects with automatic stacking
+                        for (const newEffectData of effectData) {
+                            await window.IlarisAlternativeActorSheet.addEffectWithStacking(this.actor, newEffectData);
+                        }
+                        
+                        ui.notifications.info(`Effekt(e) von ${item.name} wurden verarbeitet.`);
+                        
+                    } catch (error) {
+                        console.error("Error transferring effects:", error);
+                        ui.notifications.error("Fehler beim Übertragen der Effekte.");
+                    }
+                    
+                    return;
+                }
                 await super._onDrop(event);
             }
         } catch (err) {
