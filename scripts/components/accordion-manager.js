@@ -1,7 +1,8 @@
 /**
  * Accordion Manager
  * 
- * Handles accordion functionality and state persistence for the alternative actor sheet
+ * Handles accordion functionality and state persistence for the alternative actor sheet.
+ * Uses Vanilla DOM (no jQuery dependency).
  */
 
 export class AccordionManager {
@@ -12,14 +13,17 @@ export class AccordionManager {
 
     /**
      * Initialize accordion listeners and restore states
-     * @param {jQuery} html - The rendered HTML
+     * @param {HTMLElement} element - The rendered sheet DOM element
      */
-    initialize(html) {
+    initialize(element) {
         // Add accordion click listeners
-        html.find('.accordion-header').click(this.onAccordionToggle.bind(this));
+        const headers = element.querySelectorAll('.accordion-header');
+        for (const header of headers) {
+            header.addEventListener('click', this.onAccordionToggle.bind(this));
+        }
         
         // Restore saved accordion states
-        this.restoreAccordionStates(html);
+        this.restoreAccordionStates(element);
     }
 
     /**
@@ -30,16 +34,18 @@ export class AccordionManager {
         event.preventDefault();
         event.stopPropagation();
         
-        const accordionItem = $(event.currentTarget).closest('.accordion-item');
-        const itemId = accordionItem.data('item-id');
-        const isExpanded = accordionItem.hasClass('expanded');
+        const accordionItem = event.currentTarget.closest('.accordion-item');
+        if (!accordionItem) return;
+
+        const itemId = accordionItem.dataset.itemId;
+        const isExpanded = accordionItem.classList.contains('expanded');
                 
         // Toggle current accordion
         if (isExpanded) {
-            accordionItem.removeClass('expanded');
+            accordionItem.classList.remove('expanded');
             this.removeAccordionState(itemId);
         } else {
-            accordionItem.addClass('expanded');
+            accordionItem.classList.add('expanded');
             this.saveAccordionState(itemId);
         }
     }
@@ -76,21 +82,21 @@ export class AccordionManager {
 
     /**
      * Restore accordion states from session storage
-     * @param {jQuery} html - The rendered HTML
+     * @param {HTMLElement} element - The rendered sheet DOM element
      */
-    restoreAccordionStates(html) {
+    restoreAccordionStates(element) {
         const storageKey = this.getAccordionStorageKey();
         const states = JSON.parse(sessionStorage.getItem(storageKey) || '{}');
         
         // Apply saved states
-        Object.keys(states).forEach(itemId => {
+        for (const itemId of Object.keys(states)) {
             if (states[itemId]) {
-                const accordionItem = html.find(`.accordion-item[data-item-id="${itemId}"]`);
-                if (accordionItem.length) {
-                    accordionItem.addClass('expanded');
+                const accordionItem = element.querySelector(`.accordion-item[data-item-id="${itemId}"]`);
+                if (accordionItem) {
+                    accordionItem.classList.add('expanded');
                 }
             }
-        });
+        }
     }
 
     /**

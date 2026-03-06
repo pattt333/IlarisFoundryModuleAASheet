@@ -1,9 +1,11 @@
 {{!-- Main Tab --}}
-<div class="tab main" data-group="primary" data-tab="main">
+<div class="tab main {{tab.cssClass}}" data-group="primary" data-tab="main">
     {{!-- Top-level character information. --}}
-    <div class="grid grid-2col">        <div class="abilities">
+    <div class="grid grid-2col">   
+        <div class="abilities">
             <h3>Attribute</h3>
-            {{#each actor.system.attribute as |attribute key|}}            <div class="ability flexrow flex-group-center">
+            {{#each actor.system.attribute as |attribute key|}}
+            <div class="ability flexrow flex-group-center">
                 <label for="system.attribute.{{key}}.wert" class="resource-label">{{key}}</label>
                 <input type="number" name="system.attribute.{{key}}.wert" value="{{attribute.wert}}" data-dtype="Number"/>
                 <span>{{attribute.pw}}</span>

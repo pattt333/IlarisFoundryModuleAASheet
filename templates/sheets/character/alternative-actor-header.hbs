@@ -1,0 +1,100 @@
+{{!-- Sheet Header - Tidy 5e inspired layout --}}
+<header class="sheet-header sticky-header">
+    {{!-- Left side: Actor portrait with einschränkungen and energy below --}}
+        <div class="actor-profile">
+            <div class="portrait-container">
+                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="120" width="120"/>
+            </div>
+            {{!-- Energy bars below einschränkungen --}}
+            <div class="profile-energy">
+                {{> modules/ilaris-alternative-actor-sheet/templates/components/energy-resources.hbs}}
+            </div>                
+            {{!-- Einschränkungen grid directly below portrait --}}
+            <div class="profile-einschraenkungen">
+                {{> modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs}}
+                {{!-- Wundenignorieren Toggle --}}
+                <div class="wunden-toggle">
+                    <a class="icon-small toggle-bool" data-action="toggleBool" data-togglevariable="system.gesundheit.wundenignorieren" title="Wunden {{#if actor.system.gesundheit.wundenignorieren}}nicht {{/if}} ignorieren">
+                        <i class="fas {{#if actor.system.gesundheit.wundenignorieren}}fa-eye-slash{{else}}fa-eye{{/if}}"></i>
+                        <span>{{#if actor.system.gesundheit.wundenignorieren}}ignoriert Wunden{{else}}Wunden nicht ignoriert{{/if}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        {{!-- Right side: Name and stats --}}
+        <div class="header-details">
+            <div class="name-section">
+                <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+            </div>
+            <div class="stats-section">
+                {{!-- Shield Icon for WS/BE --}}
+                <div class="ws-shield-container">
+                    <div class="ws-shield" title="Kopf: {{actor.system.abgeleitete.ws_kopf}}&#10;Torso: {{actor.system.abgeleitete.ws_torso}}&#10;Arme: {{actor.system.abgeleitete.ws_arme}}&#10;Beine: {{actor.system.abgeleitete.ws_beine}}">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="ws-value">{{actor.system.abgeleitete.ws_stern}}</span>
+                        <div class="be-badge">
+                            <i class="fas fa-weight-hanging"></i>
+                            <span class="be-value">{{actor.system.abgeleitete.be}} BE</span>
+                        </div>
+                    </div>
+                </div>
+                {{!-- Primary Attributes in One Row --}}
+                <div class="primary-attributes flex-row">
+                    {{!-- Attribute Hexagons --}}
+                    {{#each actor.system.attribute as |attribute key|}}
+                    <div class="attribute-hexagon">
+                        <div class="hex-main" data-action="rollable" data-rolltype="fertigkeit_diag" data-probetype="attribut" data-attribut="{{key}}">
+                            <label class="hex-label">{{key}}</label>
+                            <span class="hex-pw">{{attribute.pw}}</span>
+                        </div>
+                        <div class="hex-small" data-action="hexagonEdit" data-attribute="{{key}}">
+                            <span class="hex-wert">{{attribute.wert}}</span>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{!-- Secondary Stats with Icons --}}
+            <div class="profile-secondary-stats">
+                <div class="profile-stat">
+                    <i class="fas fa-hat-wizard" title="Magieresistenz"></i>
+                    <span class="stat-label">MR</span>
+                    <span class="stat-value">{{actor.system.abgeleitete.mr}}</span>
+                </div>
+                <div class="profile-stat">
+                    <i class="fas fa-running" title="Geschwindigkeit"></i>
+                    <span class="stat-label">GS</span>
+                    <span class="stat-value">{{actor.system.abgeleitete.gs}}</span>
+                </div>
+                <div class="profile-stat">
+                    <i class="fas fa-bolt" title="Initiative"></i>
+                    <span class="stat-label">INI</span>
+                    <span class="stat-value">{{actor.system.abgeleitete.ini}}</span>
+                </div>
+                <div class="profile-stat">
+                    <i class="fas fa-heart" title="Lebenspunkteabschnittswert"></i>
+                    <span class="stat-label">LAW</span>
+                    <span class="stat-value">{{actor.system.abgeleitete.law}}</span>
+                </div>
+                <div class="profile-stat editable-stat" data-action="editStat" data-stat-field="system.modifikatoren.manuellermod">
+                    <i class="fas fa-dice-d20" title="Manueller Modifikator"></i>
+                    <span class="stat-label">Manueller. Mod</span>
+                    <span class="stat-value">{{actor.system.modifikatoren.manuellermod}}</span>
+                </div>
+            </div>
+            {{!-- Schips Display --}}
+            <div class="schips-stat">
+                <i class="fas fa-clover" title="Schicksalspunkte"></i>
+                <span class="stat-label">Schips</span>
+                <span class="stat-value">{{actor.system.schips.schips_stern}} / {{actor.system.schips.schips}}</span>
+                <a class="schip-decrease" data-action="schipDecrease" title="Schip entfernen"><i class="fas fa-minus"></i></a>
+                <a class="schip-increase" data-action="schipIncrease" title="Schip hinzufügen"><i class="fas fa-plus"></i></a>
+            </div>
+        </div>        {{!-- Rest Action Button --}}
+        <div class="header-actions">
+            <button class="rest-button" type="button" data-action="rest" title="Rasten">
+                <i class="fas fa-campground"></i>
+            </button>
+        </div>
+</header>

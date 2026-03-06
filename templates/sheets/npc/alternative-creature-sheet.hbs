@@ -1,8 +1,7 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
+<section class="{{cssClass}} flexcol" autocomplete="off">
     
     {{!-- Sheet Header - Sticky header with creature info --}}
     <header class="sheet-header sticky-header">
-        <div class="sheet-header-info">
             {{!-- Left side: Actor portrait with health and energy --}}
         <div class="actor-profile">
             <div class="portrait-container">
@@ -13,7 +12,7 @@
                 {{> modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs}}
                 {{!-- Wundenignorieren Toggle --}}
                 <div class="wunden-toggle">
-                    <a class="icon-small toggle-bool" data-togglevariable="system.gesundheit.wundenignorieren" title="Wunden {{#if actor.system.gesundheit.wundenignorieren}}nicht {{/if}} ignorieren">
+                    <a class="icon-small toggle-bool" data-action="toggleBool" data-togglevariable="system.gesundheit.wundenignorieren" title="Wunden {{#if actor.system.gesundheit.wundenignorieren}}nicht {{/if}} ignorieren">
                         <i class="fas {{#if actor.system.gesundheit.wundenignorieren}}fa-eye-slash{{else}}fa-eye{{/if}}"></i>
                         <span>{{#if actor.system.gesundheit.wundenignorieren}}ignoriert Wunden{{else}}Wunden nicht ignoriert{{/if}}</span>
                     </a>
@@ -44,11 +43,11 @@
                 <div class="primary-attributes flex-row">
                     {{#each actor.system.attribute as |attribute key|}}
                     <div class="attribute-hexagon">
-                        <div class="hex-main" data-rolltype="fertigkeit_diag" data-probetype="attribut" data-attribut="{{key}}">
+                        <div class="hex-main" data-action="rollable" data-rolltype="fertigkeit_diag" data-probetype="attribut" data-attribut="{{key}}">
                             <label class="hex-label">{{key}}</label>
                             <span class="hex-pw">{{attribute.pw}}</span>
                         </div>
-                        <div class="hex-small" data-attribute="{{key}}">
+                        <div class="hex-small" data-action="hexagonEdit" data-attribute="{{key}}">
                             <span class="hex-wert">{{attribute.pw}}</span>
                         </div>
                     </div>
@@ -77,7 +76,7 @@
                     <span class="stat-label">INI</span>
                     <span class="stat-value">{{actor.system.kampfwerte.ini}}</span>
                 </div>
-                <div class="profile-stat editable-stat" data-stat-field="system.modifikatoren.manuellermod">
+                <div class="profile-stat editable-stat" data-action="editStat" data-stat-field="system.modifikatoren.manuellermod">
                     <i class="fas fa-dice-d20" title="Manueller Modifikator"></i>
                     <span class="stat-label">Mod</span>
                     <span class="stat-value">{{actor.system.modifikatoren.manuellermod}}</span>
@@ -85,12 +84,12 @@
             </div>
             {{!-- Secondary Stats Row 2 --}}
             <div class="profile-secondary-stats">
-                <div class="profile-stat editable-stat" data-stat-field="system.kampfwerte.ws">
+                <div class="profile-stat editable-stat" data-action="editStat" data-stat-field="system.kampfwerte.ws">
                     <i class="fas fa-heart" title="Maximale Lebenspunkte"></i>
                     <span class="stat-label">LeP-Max</span>
                     <span class="stat-value">{{actor.system.kampfwerte.ws}}</span>
                 </div>
-                <div class="profile-stat editable-stat" data-stat-field="system.kreaturentyp">
+                <div class="profile-stat editable-stat" data-action="editStat" data-stat-field="system.kreaturentyp">
                     <i class="fas fa-paw" title="Kreaturentyp"></i>
                     <span class="stat-label">Typ</span>
                     <span class="stat-value">{{capitalize actor.system.kreaturentyp}}</span>
@@ -105,26 +104,5 @@
                 {{/if}}
             </div>
         </div>
-        </div>
-        
-        {{!-- Sheet Tab Navigation - Sticky tabs --}}
-        <nav class="sheet-tabs tabs sticky-tabs" data-group="primary">
-            <a class="item" data-tab="kampf">Kampf</a>
-            <a class="item" data-tab="allgemein">Allgemein</a>
-        </nav>
     </header>
-
-    {{!-- Sheet Body - Scrollable content --}}
-    <section class="sheet-body scrollable-content">
-        <div class="sheet-content-layout creature-layout">
-            {{!-- Main tab content --}}
-            <div class="tab-content-area">
-                {{!-- Kampf Tab --}}
-                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/creature-kampf-tab.hbs}}
-
-                {{!-- Allgemein Tab --}}
-                {{> modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/creature-allgemein-tab.hbs}}
-            </div>
-        </div>
-    </section>
-</form>
+</section>

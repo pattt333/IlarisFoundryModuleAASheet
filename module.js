@@ -102,16 +102,24 @@ Hooks.once('init', async function() {
   registerHandlebarsHelpers();
   
   // Preload Handlebars templates
-  await loadTemplates([
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/main-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/skills-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/kampf-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/items-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/spells-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/effects-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/biography-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/creature-kampf-tab.hbs",
-    "modules/ilaris-alternative-actor-sheet/templates/sheets/tabs/creature-allgemein-tab.hbs",
+  await foundry.applications.handlebars.loadTemplates([
+    // Character sheet
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/character/alternative-actor-header.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/character/alternative-actor-sidebar.hbs",
+    // Character tabs
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/main-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/skills-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/kampf-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/items-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/spells-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/effects-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/biography-tab.hbs",
+    // NPC/Creature sheet
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/npc/alternative-creature-sheet.hbs",
+    // NPC/Creature tabs
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/npc/tabs/creature-kampf-tab.hbs",
+    "modules/ilaris-alternative-actor-sheet/templates/sheets/npc/tabs/creature-allgemein-tab.hbs",
+    // Components
     "modules/ilaris-alternative-actor-sheet/templates/components/energy-resources.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/components/health-resources.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/components/item-accordion.hbs",
@@ -120,6 +128,7 @@ Hooks.once('init', async function() {
     "modules/ilaris-alternative-actor-sheet/templates/components/supporting.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/components/handcart.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/components/effect-card.hbs",
+    // Apps
     "modules/ilaris-alternative-actor-sheet/templates/apps/initiative-dialog.hbs",
     "modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs"
   ]);
@@ -142,14 +151,14 @@ Hooks.once('init', async function() {
   document.head.appendChild(creatureLink);
   
   // Register the alternative actor sheet for "held" type only
-  Actors.registerSheet("Ilaris", IlarisAlternativeActorSheet, {
+  foundry.documents.collections.Actors.registerSheet("Ilaris", IlarisAlternativeActorSheet, {
     types: ["held"],
     makeDefault: false,
     label: "Alternative Actor Sheet"
   });
 
   // Register the alternative creature sheet for "kreatur" type only
-  Actors.registerSheet("Ilaris", IlarisAlternativeCreatureSheet, {
+  foundry.documents.collections.Actors.registerSheet("Ilaris", IlarisAlternativeCreatureSheet, {
     types: ["kreatur"],
     makeDefault: false,
     label: "Alternative Creature Sheet"
@@ -257,9 +266,9 @@ Hooks.on("combatStart", (combat, updateData) => {
 });
 
 // Hook: Override the default initiative roll button
-Hooks.on("renderCombatTracker", (app, html, data) => {
-  // Find initiative roll buttons
-  html.find('.combatant-control[data-control="rollInitiative"]').each((i, btn) => {
+Hooks.on("renderCombatTracker", (app, htmlDOM, data) => {
+  // Find initiative roll buttons (htmlDOM is a plain DOM element in Foundry v13+)
+  htmlDOM.querySelectorAll('.combatant-control[data-control="rollInitiative"]').forEach((btn) => {
     const li = btn.closest('.combatant');
     const combatantId = li?.dataset?.combatantId;
     
@@ -271,8 +280,11 @@ Hooks.on("renderCombatTracker", (app, html, data) => {
     const combatant = combat.combatants.get(combatantId);
     if (!combatant) return;
     
-    // Replace click handler
-    $(btn).off('click').on('click', async (event) => {
+    // Replace click handler by cloning the button to remove existing listeners
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+    
+    newBtn.addEventListener('click', async (event) => {
       event.preventDefault();
       event.stopPropagation();
       
@@ -282,9 +294,9 @@ Hooks.on("renderCombatTracker", (app, html, data) => {
         return;
       }
       
-      if(!game.user.isGM) {
-      // Open the appropriate dialog
-      InitiativeDialogManager.openDialog(combat, combatant);
+      if (!game.user.isGM) {
+        // Open the appropriate dialog
+        InitiativeDialogManager.openDialog(combat, combatant);
       } else {
         const allCombatants = combat.combatants.contents;
         // For GM, open mass dialog for NPCs or single dialog for PCs
@@ -444,20 +456,14 @@ Hooks.on("Ilaris.fernkampfAngriffClick", async (rollResult, actor, item) => {
  * Hook: Add scene control button for advancing time on all actors
  */
 Hooks.on("getSceneControlButtons", (controls) => {
-  // Only show for GM
-  if (!game.user.isGM) return;
-  
-  // Find the token controls
-  const tokenControls = controls.find(c => c.name === "token");
-  if (!tokenControls) return;
-  
-  // Add button at the end of the tools list
-  tokenControls.tools.push({
+  controls.tokens.tools["advance-time-all"] = {
     name: "advance-time-all",
     title: "Zeit vorrücken (Alle Actoren)",
-    icon: "fas fa-stopwatch",
+    icon: "fa-solid fa-stopwatch",
+    order: Object.keys(controls.tokens.tools).length,
     button: true,
-    onClick: async () => {
+    visible: game.user.isGM,
+    onChange: async () => {
       try {
         // Use shared utility function
         const stats = await advanceEffectTimeForAllActors();
@@ -479,5 +485,5 @@ Hooks.on("getSceneControlButtons", (controls) => {
         }
       }
     }
-  });
+  };
 });

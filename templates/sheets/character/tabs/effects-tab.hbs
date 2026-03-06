@@ -1,5 +1,5 @@
 {{!-- Effects Tab --}}
-<div class="tab effects" data-group="primary" data-tab="effects">
+<div class="tab effects {{tab.cssClass}}" data-group="primary" data-tab="effects">
     <div class="flexcol">
         {{!-- Active Effects Section --}}
         <div class="items-section">
@@ -7,9 +7,9 @@
                 <h3>Aktive Effekte</h3>
                 <div class="item-controls">
                     {{#if canAdvanceTime}}
-                    <a class="item-control effect-advance-time" title="Zeit vorrücken"><i class="fas fa-stopwatch"></i> Zeit vorrücken</a>
+                    <a class="item-control effect-advance-time" data-action="effectAdvanceTime" title="Zeit vorrücken"><i class="fas fa-stopwatch"></i> Zeit vorrücken</a>
                     {{/if}}
-                    <a class="item-control effect-library-open" title="Öffne Effekt Bibliothek" data-pack="ilaris-alternative-actor-sheet.effect-library"><i class="fas fa-book"></i> Effekt Bibliothek</a>
+                    <a class="item-control effect-library-open" data-action="openEffectLibrary" title="Öffne Effekt Bibliothek" data-pack="ilaris-alternative-actor-sheet.effect-library"><i class="fas fa-book"></i> Effekt Bibliothek</a>
                 </div>
             </div>
             <div class="effects-grid">

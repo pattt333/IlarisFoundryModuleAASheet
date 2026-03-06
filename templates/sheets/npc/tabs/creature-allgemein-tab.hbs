@@ -1,5 +1,5 @@
 {{!-- Creature Allgemein Tab - General information --}}
-<div class="tab allgemein-tab" data-group="primary" data-tab="allgemein">
+<div class="tab allgemein-tab {{tab.cssClass}}" data-group="primary" data-tab="allgemein">
     
     {{!-- Section A: Kurzbeschreibung --}}
     <section class="creature-section description-section">
@@ -18,7 +18,7 @@
             <b><i class="fas fa-star"></i> Eigenschaften: </b>
             {{#each actor.eigenschaften as |eigenschaft|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{eigenschaft._id}}">{{eigenschaft.name}}</a>{{#unless @last}}, {{/unless}}
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{eigenschaft._id}}">{{eigenschaft.name}}</a>{{#unless @last}}, {{/unless}}
                 </span>
             {{/each}}
         </div>
@@ -32,47 +32,47 @@
             <b><i class="fas fa-award"></i> Vorteile: </b>
             {{#each actor.vorteil.allgemein as |vorteil|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
                 </span>
             {{/each}}
             {{#each actor.vorteil.profan as |vorteil|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
                 </span>
             {{/each}}
             {{#each actor.vorteil.kampf as |vorteil|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
                 </span>
             {{/each}}
             {{#each actor.vorteil.kampfstil as |vorteil|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
                 </span>
             {{/each}}
             {{#each actor.vorteil.magie as |vorteil|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
                 </span>
             {{/each}}
             {{#each actor.vorteil.zaubertraditionen as |vorteil|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
                 </span>
             {{/each}}
             {{#each actor.vorteil.karma as |vorteil|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
                 </span>
             {{/each}}
             {{#each actor.vorteil.geweihtentradition as |vorteil|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
                 </span>
             {{/each}}
             {{#each actor.vorteil.tiergeist as |vorteil|}}
                 <span class="item-entry">
-                    <a class="item-edit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{vorteil._id}}">{{vorteil.name}}</a>, 
                 </span>
             {{/each}}
         </div>
@@ -86,8 +86,8 @@
             <b><i class="fas fa-book"></i> Fertigkeiten: </b>
             {{#each actor.freietalente as |fertigkeit|}}
                 <span class="skill-entry">
-                    <a class="item-edit" data-itemid="{{fertigkeit._id}}">{{fertigkeit.name}}</a> ({{fertigkeit.system.pw}}
-                    <a class="rollable icon-small" data-rolltype="fertigkeit_diag" data-probetype="simple" data-fertigkeit="{{fertigkeit.name}}" data-pw="{{fertigkeit.system.pw}}" title="Fertigkeit würfeln">
+                    <a class="item-edit" data-action="itemEdit" data-itemid="{{fertigkeit._id}}">{{fertigkeit.name}}</a> ({{fertigkeit.system.pw}}
+                    <a class="rollable icon-small" data-action="rollable" data-rolltype="fertigkeit_diag" data-probetype="simple" data-fertigkeit="{{fertigkeit.name}}" data-pw="{{fertigkeit.system.pw}}" title="Fertigkeit würfeln">
                         <i class="fas fa-dice-d20"></i>
                     </a>){{#unless @last}}, {{/unless}}
                 </span>

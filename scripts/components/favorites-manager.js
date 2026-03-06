@@ -2,7 +2,8 @@
  * Favorites Manager
  * 
  * Handles favorites component functionality including tab switching,
- * collapse/expand, and state persistence for the alternative actor sheet
+ * collapse/expand, and state persistence for the alternative actor sheet.
+ * Uses Vanilla DOM (no jQuery dependency).
  */
 
 export class FavoritesManager {
@@ -13,23 +14,29 @@ export class FavoritesManager {
 
     /**
      * Initialize favorites component functionality
-     * @param {jQuery} html - The rendered HTML
+     * @param {HTMLElement} element - The rendered sheet DOM element
      */
-    initialize(html) {
+    initialize(element) {
         // Favorites tab switching
-        html.find('.favorites-tab').click(this.onFavoritesTabSwitch.bind(this));
+        const tabs = element.querySelectorAll('.favorites-tab');
+        for (const tab of tabs) {
+            tab.addEventListener('click', this.onFavoritesTabSwitch.bind(this));
+        }
         
         // Favorites collapse/expand toggle
-        html.find('.favorites-collapse').click(this.onFavoritesToggle.bind(this));
+        const collapseButtons = element.querySelectorAll('.favorites-collapse');
+        for (const btn of collapseButtons) {
+            btn.addEventListener('click', this.onFavoritesToggle.bind(this));
+        }
         
         // Favorites clear button
-        html.find('.favorites-clear').click(this.onFavoritesClear.bind(this));
+        const clearButtons = element.querySelectorAll('.favorites-clear');
+        for (const btn of clearButtons) {
+            btn.addEventListener('click', this.onFavoritesClear.bind(this));
+        }
         
         // Restore last active tab
-        this.restoreFavoritesTab(html);
-        
-        // TODO: Future drag and drop support will be added here
-        console.log('Favorites component initialized');
+        this.restoreFavoritesTab(element);
     }
 
     /**
@@ -38,15 +45,20 @@ export class FavoritesManager {
      */
     onFavoritesToggle(event) {
         event.preventDefault();
-        const favoritesComponent = $(event.currentTarget).closest('.favorites-component');
-        favoritesComponent.toggleClass('collapsed');
+        const favoritesComponent = event.currentTarget.closest('.favorites-component');
+        if (!favoritesComponent) return;
+
+        favoritesComponent.classList.toggle('collapsed');
         
         // Update the chevron icon
-        const icon = $(event.currentTarget).find('i');
-        icon.toggleClass('fa-chevron-up fa-chevron-down');
+        const icon = event.currentTarget.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-chevron-up');
+            icon.classList.toggle('fa-chevron-down');
+        }
         
         // Save collapse state to session storage
-        const isCollapsed = favoritesComponent.hasClass('collapsed');
+        const isCollapsed = favoritesComponent.classList.contains('collapsed');
         sessionStorage.setItem(`ilaris-favorites-collapsed-${this.actorId}`, isCollapsed);
     }
 
@@ -54,21 +66,20 @@ export class FavoritesManager {
      * Handle clearing all favorites
      * @param {Event} event - The originating click event  
      */
-    onFavoritesClear(event) {
+    async onFavoritesClear(event) {
         event.preventDefault();
         
-        // Show confirmation dialog
-        Dialog.confirm({
-            title: "Favoriten löschen",
+        // Show confirmation dialog using DialogV2
+        const confirmed = await foundry.applications.api.DialogV2.confirm({
+            window: { title: "Favoriten löschen" },
             content: "<p>Möchten Sie wirklich alle Favoriten löschen?</p>",
-            yes: () => {
-                // TODO: Clear favorites from actor flags
-                ui.notifications.info("Favoriten gelöscht");
-                console.log('All favorites cleared');
-            },
-            no: () => {},
-            defaultYes: false
+            rejectClose: false
         });
+
+        if (confirmed) {
+            // TODO: Clear favorites from actor flags
+            ui.notifications.info("Favoriten gelöscht");
+        }
     }
 
     /**
@@ -77,67 +88,90 @@ export class FavoritesManager {
      */
     onFavoritesTabSwitch(event) {
         event.preventDefault();
-        const clickedTab = $(event.currentTarget);
-        const targetTab = clickedTab.data('tab');
+        const clickedTab = event.currentTarget;
+        const targetTab = clickedTab.dataset.tab;
         
-        // Update tab active states
-        clickedTab.siblings('.favorites-tab').removeClass('active');
-        clickedTab.addClass('active');
+        // Update tab active states — remove active from siblings, add to clicked
+        const parent = clickedTab.parentElement;
+        if (parent) {
+            for (const sibling of parent.querySelectorAll('.favorites-tab')) {
+                sibling.classList.remove('active');
+            }
+        }
+        clickedTab.classList.add('active');
         
         // Update content active states
         const favoritesComponent = clickedTab.closest('.favorites-component');
-        favoritesComponent.find('.favorites-tab-content').removeClass('active');
-        favoritesComponent.find(`[data-tab-content="${targetTab}"]`).addClass('active');
+        if (!favoritesComponent) return;
+
+        const allContents = favoritesComponent.querySelectorAll('.favorites-tab-content');
+        for (const content of allContents) {
+            content.classList.remove('active');
+        }
+        const targetContent = favoritesComponent.querySelector(`[data-tab-content="${targetTab}"]`);
+        if (targetContent) {
+            targetContent.classList.add('active');
+        }
         
         // Save active tab to session storage
         sessionStorage.setItem(`ilaris-favorites-active-tab-${this.actorId}`, targetTab);
         
         // Update clear button visibility (only show on favorites tab)
-        const clearButton = favoritesComponent.find('.favorites-clear');
-        if (targetTab === 'favorites') {
-            clearButton.show();
-        } else {
-            clearButton.hide();
+        const clearButton = favoritesComponent.querySelector('.favorites-clear');
+        if (clearButton) {
+            clearButton.style.display = (targetTab === 'favorites') ? '' : 'none';
         }
-        
-        console.log(`Switched to favorites tab: ${targetTab}`);
     }
 
     /**
      * Restore the last active favorites tab
-     * @param {jQuery} html - The rendered HTML
+     * @param {HTMLElement} element - The rendered sheet DOM element
      */
-    restoreFavoritesTab(html) {
+    restoreFavoritesTab(element) {
         const savedTab = sessionStorage.getItem(`ilaris-favorites-active-tab-${this.actorId}`) || 'combat';
         
         // Activate the saved tab
-        const targetTab = html.find(`[data-tab="${savedTab}"]`);
-        if (targetTab.length) {
-            targetTab.siblings('.favorites-tab').removeClass('active');
-            targetTab.addClass('active');
+        const targetTab = element.querySelector(`.favorites-tab[data-tab="${savedTab}"]`);
+        if (targetTab) {
+            const parent = targetTab.parentElement;
+            if (parent) {
+                for (const sibling of parent.querySelectorAll('.favorites-tab')) {
+                    sibling.classList.remove('active');
+                }
+            }
+            targetTab.classList.add('active');
             
             // Activate corresponding content
-            html.find('.favorites-tab-content').removeClass('active');
-            html.find(`[data-tab-content="${savedTab}"]`).addClass('active');
+            const allContents = element.querySelectorAll('.favorites-tab-content');
+            for (const content of allContents) {
+                content.classList.remove('active');
+            }
+            const targetContent = element.querySelector(`[data-tab-content="${savedTab}"]`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
             
             // Update clear button visibility
-            const clearButton = html.find('.favorites-clear');
-            if (savedTab === 'favorites') {
-                clearButton.show();
-            } else {
-                clearButton.hide();
+            const clearButton = element.querySelector('.favorites-clear');
+            if (clearButton) {
+                clearButton.style.display = (savedTab === 'favorites') ? '' : 'none';
             }
         }
         
         // Restore collapse state
         const isCollapsed = sessionStorage.getItem(`ilaris-favorites-collapsed-${this.actorId}`) === 'true';
         if (isCollapsed) {
-            const favoritesComponent = html.find('.favorites-component');
-            favoritesComponent.addClass('collapsed');
+            const favoritesComponent = element.querySelector('.favorites-component');
+            if (favoritesComponent) {
+                favoritesComponent.classList.add('collapsed');
+            }
             
             // Update the chevron icon
-            const icon = html.find('.favorites-collapse i');
-            icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            const icon = element.querySelector('.favorites-collapse i');
+            if (icon) {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
         }
     }
 }

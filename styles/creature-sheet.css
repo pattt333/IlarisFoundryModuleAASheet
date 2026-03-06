@@ -16,12 +16,6 @@
     padding: 0;
 }
 
-.ilaris.sheet.actor.alternative.kreatur form {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 .ilaris.sheet.actor.alternative.kreatur .creature-layout {
     width: 100%;
 }

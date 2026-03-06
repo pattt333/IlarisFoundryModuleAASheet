@@ -7,7 +7,7 @@
     {{/if}}>
     <div class="item-header-row">
         <div class="item-image {{#if rollable}}rollable{{/if}}" 
-             {{#if rollable}}data-rolltype="{{rolltype}}" data-itemid="{{item.id}}" data-fertigkeit="{{fertigkeit}}"{{/if}}>
+             {{#if rollable}}data-action="rollable" data-rolltype="{{rolltype}}" data-itemid="{{item.id}}" data-fertigkeit="{{fertigkeit}}"{{/if}}>
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
             {{#if item.ammunitionType}}
             {{#unless item.hasAmmunition}}
@@ -17,7 +17,7 @@
         </div>
         <div class="item-name accordion-header">
             <div class="name-label">{{nameLabel}}<i class="fas fa-chevron-down"></i></div>
-            <h3>{{item.name}}</h3>
+            <h3 class="small">{{item.name}}</h3>
         </div>
         {{#if stats}}
         <div class="item-stats accordion-header">
@@ -37,20 +37,20 @@
     <div class="accordion-content">
         <div class="item-controls">
             {{#if isWeapon}}
-            <a class="item-toggle {{item.system.hauptwaffe}}" data-itemid="{{item.id}}"
+            <a class="item-toggle {{item.system.hauptwaffe}}" data-action="toggleItem" data-itemid="{{item.id}}"
                 data-toggletype="hauptwaffe">
                 <span>HW</span>
             </a>
-            <a class="item-toggle {{item.system.nebenwaffe}}" data-itemid="{{item.id}}"
+            <a class="item-toggle {{item.system.nebenwaffe}}" data-action="toggleItem" data-itemid="{{item.id}}"
                 data-toggletype="nebenwaffe">
                 <span>NW</span>
             </a>
             {{/if}}
-            <a class="item-control item-edit" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{editTitle}}">
+            <a class="item-control item-edit" data-action="itemEdit" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{editTitle}}">
                 <i class="fas fa-edit ilaris-button-icon"></i>
             </a>
             {{#unless (eq showDelete false)}}
-            <a class="item-control item-delete" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{deleteTitle}}">
+            <a class="item-control item-delete" data-action="itemDelete" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{deleteTitle}}">
                 <i class="fas fa-trash ilaris-button-icon"></i>
             </a>
             {{/unless}}

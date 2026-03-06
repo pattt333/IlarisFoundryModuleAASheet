@@ -18,6 +18,19 @@ body {
   --filter-primary-hover: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1552%) hue-rotate(187deg) brightness(130%) contrast(119%);
 }
 
+.ilaris.sheet.actor.alternative h3 {
+  font-size: 24px;
+}
+
+.ilaris.sheet.actor.alternative h3.small {
+  font-size: 20px;
+}
+
+.ilaris.sheet.actor.alternative h4 {
+  font-size: 18px;
+  font-family: var(--font-h3);
+}
+
 .ilaris.sheet.actor.alternative .actor-profile {
   display: flex;
   flex-direction: column;
@@ -488,10 +501,7 @@ body {
 
 .ilaris.sheet.actor.alternative .sticky-header {
   position: sticky;
-  top: 0;
   z-index: 10;
-  background: var(--color-bg, #f8f8f8);
-  border-bottom: 1px solid var(--color-border-light, #ccc);
   flex-shrink: 0;
 }
 
@@ -612,6 +622,42 @@ body {
 
 /* Alternative Sheet Specific Styles */
 
+.ilaris.sheet.actor.helden.alternative .window-content {
+  display: grid;
+  grid-template-columns: 220px calc(100% - 220px);
+  grid-template-rows: 330px 60px calc(100% - 60px - 330px);
+  grid-template-areas:
+    "header header"
+    "navigation navigation"
+    "sidebar tab";
+    gap: 0
+}
+
+.ilaris.sheet.actor.kreaturen.alternative .window-content {
+  display: grid;
+  grid-template-rows: 330px 60px calc(100% - 60px - 330px);
+  grid-template-areas:
+    "header"
+    "navigation"
+    "tab";
+    gap: 0
+}
+
+.ilaris.sheet.actor.alternative .sheet-tabs.tabs a {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.ilaris.sheet.actor.alternative .sheet-tabs.tabs {
+  background: var(--header-bg-color);
+  line-height: 1.5;
+}
+
+.ilaris.sheet.actor.alternative .tab {
+  margin-top: 16px;
+}
+
 .ilaris.sheet.actor.alternative .window-content {
   background: #f8f8f8;
   padding: 0;
@@ -644,6 +690,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  flex-direction: row;
 }
 
 .ilaris.sheet.actor.alternative .sheet-header .profile-img {
@@ -674,13 +721,6 @@ body {
   justify-content: space-around;
   margin: 0;
   padding: 0;
-}
-
-.ilaris.sheet.actor.alternative .sheet-tabs .item {
-  /* flex: 1;
-  border: none;
-  text-decoration: none;
-  font-weight: bold; */
 }
 
 .ilaris.sheet.actor.alternative .sheet-tabs .item:last-child {
@@ -730,8 +770,6 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-
-
 /* Abilities Section */
 .ilaris.sheet.actor.alternative .abilities h3 {
   color: #2d3748;
@@ -768,10 +806,6 @@ body {
   padding: 4px;
   margin: 0 10px;
 }
-
-
-
-
 
 /* Biography Editor */
 .ilaris.sheet.actor.alternative .editor {
