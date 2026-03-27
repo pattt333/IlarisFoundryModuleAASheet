@@ -43,6 +43,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             ]
         },
         actions: {
+            itemCreate: IlarisAlternativeActorSheet.onItemCreate,
             hexagonEdit: IlarisAlternativeActorSheet.onHexagonEdit,
             energySettings: IlarisAlternativeActorSheet.onEnergySettings,
             healthSettings: IlarisAlternativeActorSheet.onHealthSettings,

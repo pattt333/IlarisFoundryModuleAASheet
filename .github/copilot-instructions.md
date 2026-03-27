@@ -1,149 +1,98 @@
-# Copilot Instructions for IlarisFoundryModuleAASheet
+# Repository-Wide Copilot Instructions — Ilaris FoundryVTT System
 
-## Project Overview
+## Project Summary
 
-This repository contains an alternative actor sheet module for the **Ilaris** tabletop RPG system in **Foundry Virtual Tabletop (VTT)**. The module provides custom character sheets and actor management functionality specifically designed for the Ilaris game system.
+Ilaris is a **Foundry VTT game system** implementing the Ilaris tabletop RPG ruleset (German P&P). It provides character sheets (Helden, Kreaturen), combat mechanics, skill checks, spells/liturgies, weapon properties, and compendium data management.
 
-## About Foundry VTT
+- **Repository**: <https://github.com/Ilaris-Tools/IlarisFoundryVTT>
+- **Runtime**: Foundry VTT (browser-based, ES modules)
+- **Language**: JavaScript (ES modules), HTML (Handlebars `.hbs`), CSS
+- **Domain language**: German (labels, identifiers, comments, compendium data). Code structure and documentation use a mix of German and English.
 
-Foundry Virtual Tabletop is a self-hosted, one-time purchase software for tabletop RPG gaming. This module is built for **Foundry VTT v12**.
+## Architecture at a Glance
 
-### Key Foundry VTT Concepts:
-- **Modules**: Add-on packages that extend Foundry's functionality
-- **Actor Sheets**: UI components that display and manage character/NPC data
-- **Systems**: Game-specific rulesets (Ilaris in this case)
-- **Applications**: Foundry's window/dialog framework
-- **Hooks**: Event system for module integration
+| Directory            | Purpose                                                                          |
+| -------------------- | -------------------------------------------------------------------------------- |
+| `scripts/core/`      | Entry point (`hooks.js` → `init.js`), config, Handlebars helpers, base documents |
+| `scripts/actors/`    | Actor data models (`held`, `kreatur`, `nsc`), sheets (AppV2), hooks              |
+| `scripts/items/`     | 22 item types, data models, sheets, hooks                                        |
+| `scripts/waffe/`     | Weapon subsystem (properties, migrations, computed values)                       |
+| `scripts/combat/`    | Combat tracker, dialogs, dice logic                                              |
+| `scripts/dice/`      | Dice rolling UI and logic                                                        |
+| `scripts/effects/`   | Active effects system                                                            |
+| `scripts/skills/`    | Skill check dialogs and dice                                                     |
+| `scripts/tokens/`    | Token configuration and rendering                                                |
+| `scripts/importer/`  | XML import from Sephrasto                                                        |
+| `scripts/settings/`  | System settings UI                                                               |
+| `scripts/changelog/` | In-app changelog notification                                                    |
+| `comp_packs/`        | LevelDB compendium packs with `_source/` JSON                                    |
+| `assets/`            | Images, fonts, icons                                                             |
+| `styles/`            | Global CSS                                                                       |
+| `docs/`              | User and developer documentation (MkDocs)                                        |
+| `utils/`             | Build/migration scripts (pack-all, compendium tools)                             |
 
-## API Documentation
+## Key Files
 
-- **Primary Reference**: [Foundry VTT v12 API Documentation](https://foundryvtt.com/api/v12/index.html)
-- **Actor Sheets**: Focus on `ActorSheet` class and related APIs
-- **Application Framework**: `Application` and `FormApplication` classes
+- `system.json` — System manifest (id, version, compatibility, esmodules, styles)
+- `template.json` — Data model schemas for all Actor and Item types
+- `scripts/core/hooks.js` — ES module entry point (imports all feature hooks)
+- `scripts/core/init.js` — `Hooks.once('init', ...)` registration of sheets, document classes, config
+- `scripts/core/config.js` — `CONFIG.ILARIS` constants
 
-## Ilaris System Context
+## Build & Development
 
-Ilaris is a German tabletop RPG system. When working on this module:
-- Understand that this provides an **alternative** actor sheet to the default Ilaris system sheet
-- Character data structure should be compatible with the existing Ilaris system
-- UI/UX should follow Ilaris game conventions and terminology
+- **Install**: `npm install`
+- **Test**: `npm test` (Jest, config in `jest.config.mjs`, setup in `jest.setup.js`)
+- **Lint**: `npm run lint` (ESLint + Prettier)
+- **Format**: `npm run prettier`
+- **Pack compendiums**: `npm run pack-all` (packs `_source/` JSON into LevelDB)
+- **Start Foundry**: `npm run start-foundry` (runs pack-all, then `fvtt launch`)
+- **Optimize SVGs**: `npm run optimize-svgs`
+- **Pre-commit**: Husky + lint-staged runs ESLint and Prettier on staged files
 
-## Development Guidelines
+Always run `npm install` before building or testing. Always run `npm run pack-all` after modifying compendium `_source/` data.
 
-### Module Structure
-```
-module.json          # Module manifest (defines module metadata)
-module.js           # Main module entry point
-styles/             # CSS/SCSS stylesheets
-templates/          # Handlebars templates for actor sheets
-scripts/            # JavaScript modules
-lang/              # Localization files
-```
+## Code Conventions
 
-### Foundry VTT Module Best Practices
+- **ES Modules** throughout (`import`/`export`, declared in `system.json` `esmodules`)
+- **Foundry AppV2** for sheets: `HandlebarsApplicationMixin(ActorSheetV2)` / `HandlebarsApplicationMixin(ItemSheetV2)`
+- **Static class properties**: `DEFAULT_OPTIONS`, `PARTS`, `TABS` on sheet classes
+- **Handlebars templates**: `.hbs` files in per-feature `templates/` directories
+- **Tests**: `_spec/` directories colocated with feature code, Jest with Babel transforms
+- **Naming**: German domain terms in data/UI (Fertigkeiten, Zauber, Waffen), English in structural code (hooks, sheets, utils)
+- **No TypeScript** — pure JavaScript with JSDoc where present
 
-1. **Module Manifest (module.json)**:
-   - Always include proper version, compatibility, and dependency information
-   - Use semantic versioning
-   - Include proper esmodules or scripts declarations
+## Foundry VTT API
 
-2. **Actor Sheet Development**:
-   - Extend `ActorSheet` class, not generic `Application`
-   - Use `actor.system` for game-specific data
-   - Implement proper form submission handling
-   - Use Foundry's templating system with Handlebars
+**Always consult**: <https://foundryvtt.com/api/>
 
-3. **Event Handling**:
-   - Use Foundry's event delegation patterns
-   - Handle form submissions through `_updateObject()` method
-   - Implement proper drag-and-drop functionality
+Never guess about Hooks, utility methods (`foundry.utils.*`), Document classes, data models, socket communication, or Canvas/rendering APIs. If the API docs are unclear, ask the user.
 
-4. **Data Management**:
-   - Never modify `actor.data` directly, use `actor.update()`
-   - Use `prepareData()` for computed values
-   - Handle async operations properly
+## Precedence Rules
 
-5. **UI/UX**:
-   - Follow Foundry's CSS class conventions
-   - Use Foundry's icon fonts and styling
-   - Ensure responsive design for different screen sizes
-   - Implement proper accessibility features
+Instruction precedence (highest to lowest):
 
-### Code Conventions
+1. **Path-specific instructions** (`.github/instructions/*.instructions.md`) — scoped by `applyTo` glob
+2. **This file** (`.github/copilot-instructions.md`) — repository-wide baseline
+3. **`AGENTS.md`** (root) — tool-agnostic agent behavior and orchestration contracts
+4. **`.agents/` documentation** — detailed project knowledge base
 
-- Use ES6+ modules and modern JavaScript
-- Follow Foundry's naming conventions (camelCase for methods, kebab-case for CSS)
-- Use JSDoc comments for public methods
-- Implement proper error handling and logging
-- Use Foundry's localization system for all user-facing text
+In case of conflict, higher-precedence instructions override lower ones. See `.agents/README.md` for the full documentation map.
 
-### Common Foundry VTT Patterns
+## Agent Profile Resolution (Mandatory)
 
-```javascript
-// Registering an actor sheet
-Actors.registerSheet("ilaris", MyActorSheet, {
-  types: ["character"],
-  makeDefault: true
-});
+When delegating work to a subagent, use `.github/agents/*.md` as the canonical source for that subagent's role, scope, boundaries, and output format.
 
-// Basic actor sheet structure
-export default class MyActorSheet extends ActorSheet {
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["ilaris", "sheet", "actor"],
-      template: "modules/my-module/templates/actor-sheet.hbs",
-      width: 600,
-      height: 680,
-      tabs: [...]
-    });
-  }
+Canonical mapping:
 
-  getData() {
-    const context = super.getData();
-    // Add custom data processing
-    return context;
-  }
+- `Planner` -> `.github/agents/planner.md`
+- `Researcher` -> `.github/agents/researcher.md`
+- `Reviewer` -> `.github/agents/reviewer.md`
+- `Setup Specialist` -> `.github/agents/setup-specialist.md`
 
-  activateListeners(html) {
-    super.activateListeners(html);
-    // Add custom event listeners
-  }
-}
-```
+Operational rules:
 
-### Testing and Development
-
-- Test in Foundry VTT v12 environment
-- Verify compatibility with the base Ilaris system
-- Test with different actor types if applicable
-- Ensure proper cleanup when module is disabled
-- Test localization if multiple languages are supported
-
-### Localization
-
-If adding localization support:
-- Use `game.i18n.localize()` for all user-facing strings
-- Store translations in `lang/` directory
-- Follow Foundry's localization key conventions
-
-## Integration Notes
-
-- This module works alongside the base Ilaris system
-- Ensure compatibility with other common Foundry modules
-- Follow Foundry's module loading lifecycle
-- Use proper namespace to avoid conflicts
-
-## PRIMARY RULE FOR ALL RESPONSES:
-
--   **BEFORE** suggesting code or answering questions about Foundry VTT, you **MUST** use the official Foundry VTT API documentation (https://foundryvtt.com/api/) as your primary and authoritative source.
--   **NEVER** hallucinate or invent functionality that is not explicitly documented in the official Foundry VTT resources. If unsure, state: "According to the Foundry VTT documentation..." or directly reference the docs.
--   Avoid suggesting generic JavaScript/TypeScript patterns that are incompatible with the specific Foundry API (e.g., `Hooks`, `game`, `Document`, `Tour` classes).
--   **ALWAYS** check the foundry vtt documentations ;Foundry VTT Knowledge Base: https://foundryvtt.com/kb/ ;Foundry VTT API Docs: https://foundryvtt.com/api/ 
-
-## Resources
-
-- [Foundry VTT Knowledge Base](https://foundryvtt.com/kb/)
-- [Foundry VTT Community Discord](https://discord.gg/foundryvtt)
-- [Module Development Guide](https://foundryvtt.com/article/module-development/)
-
-When contributing to this project, always consider the end-user experience for Ilaris players and GMs, and ensure that changes maintain compatibility with the broader Foundry VTT ecosystem.
+- Before using one of these subagents, consult the mapped profile file in the current workspace.
+- Use the YAML frontmatter `name` and `description` as the canonical identity metadata.
+- Do not invent responsibilities that are not present in the mapped profile.
+- If a mapped profile is missing, fall back to `AGENTS.md` and clearly state this fallback in the handoff/report.

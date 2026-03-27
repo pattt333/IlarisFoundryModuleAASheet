@@ -123,7 +123,7 @@
                 <select name="system.additemtype" class="item-type-select">
                     {{selectOptions kreaturItemOptions selected=actor.system.additemtype}}
                 </select>
-                <button class="item-create" data-itemclass="{{actor.system.additemtype}}" type="button">
+                <button class="item-create" data-action="itemCreate" data-itemclass="{{actor.system.additemtype}}" type="button">
                     <i class="fas fa-plus"></i> Hinzufügen
                 </button>
             </div>
