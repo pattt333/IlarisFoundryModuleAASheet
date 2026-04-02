@@ -36,15 +36,6 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
     static DEFAULT_OPTIONS = {
         classes: ["alternative"],
         position: { width: 820, height: 900 },
-        window: {
-            controls: [
-                {
-                    icon: "fa-solid fa-passport",
-                    label: "UUID kopieren",
-                    action: "copyUUID"
-                }
-            ]
-        },
         actions: {
             itemCreate: IlarisAlternativeCreatureSheet.onItemCreate,
             hexagonEdit: IlarisAlternativeCreatureSheet.onHexagonEdit,
@@ -55,7 +46,6 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             effectStackIncrease: IlarisAlternativeCreatureSheet.onEffectStackIncrease,
             effectStackDecrease: IlarisAlternativeCreatureSheet.onEffectStackDecrease,
             effectAdvanceTime: IlarisAlternativeCreatureSheet.onEffectAdvanceTime,
-            copyUUID: IlarisAlternativeCreatureSheet.onCopyUUID,
         }
     }
 
@@ -553,20 +543,5 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             console.error('IlarisAlternativeCreatureSheet | Error advancing effect time:', error);
             ui.notifications.error("Fehler beim Vorrücken der Effekt-Zeit");
         }
-    }
-
-    /**
-     * Handle copying the actor's UUID to clipboard
-     * @param {PointerEvent} event
-     * @param {HTMLElement} target
-     */
-    static async onCopyUUID(event, target) {
-        const uuid = this.actor.uuid;
-        navigator.clipboard.writeText(uuid).then(() => {
-            ui.notifications.info(`UUID kopiert: ${uuid}`);
-        }).catch(err => {
-            console.error('Failed to copy UUID:', err);
-            ui.notifications.error('Fehler beim Kopieren der UUID');
-        });
     }
 }

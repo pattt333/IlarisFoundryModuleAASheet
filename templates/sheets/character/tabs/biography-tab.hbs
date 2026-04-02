@@ -1,15 +1,4 @@
 {{!-- Biography Tab --}}
 <div class="tab biography {{tab.cssClass}}" data-group="primary" data-tab="biography">
-    {{#if editable}}
-    <prose-mirror
-        name="system.notes"
-        button="true"
-        editable="{{editable}}"
-        toggled="false"
-        value="{{system.notes}}">
-        {{{notesHTML}}}
-    </prose-mirror>
-    {{else}}
-    {{{notesHTML}}}
-    {{/if}}
+    <prose-mirror name="system.notes" value="{{ source.system.notes }}" toggled>{{{notesHTML}}}</prose-mirror>
 </div>

@@ -33,15 +33,6 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
     static DEFAULT_OPTIONS = {
         classes: ["alternative"],
         position: { width: 820, height: 900 },
-        window: {
-            controls: [
-                {
-                    icon: "fa-solid fa-passport",
-                    label: "UUID kopieren",
-                    action: "copyUUID"
-                }
-            ]
-        },
         actions: {
             itemCreate: IlarisAlternativeActorSheet.onItemCreate,
             hexagonEdit: IlarisAlternativeActorSheet.onHexagonEdit,
@@ -53,7 +44,6 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             effectStackDecrease: IlarisAlternativeActorSheet.onEffectStackDecrease,
             effectAdvanceTime: IlarisAlternativeActorSheet.onEffectAdvanceTime,
             rest: IlarisAlternativeActorSheet.onRest,
-            copyUUID: IlarisAlternativeActorSheet.onCopyUUID,
             schipIncrease: IlarisAlternativeActorSheet.onSchipIncrease,
             schipDecrease: IlarisAlternativeActorSheet.onSchipDecrease,
         }
@@ -179,7 +169,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 config: CONFIG.ILARIS || {},
                 isCharacter: this.actor.type === "held",
                 isOwner: this.actor.isOwner,
-                editable: this.isEditable,
+                // editable: this.isEditable,
                 effectItems: this.actor.items.filter(i => i.type === "effect-item")
             };
         }
@@ -692,21 +682,6 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             console.error('IlarisAlternativeActorSheet | Error advancing effect time:', error);
             ui.notifications.error("Fehler beim Vorrücken der Effekt-Zeit");
         }
-    }
-
-    /**
-     * Handle copying the actor's UUID to clipboard
-     * @param {PointerEvent} event
-     * @param {HTMLElement} target
-     */
-    static async onCopyUUID(event, target) {
-        const uuid = this.actor.uuid;
-        navigator.clipboard.writeText(uuid).then(() => {
-            ui.notifications.info(`UUID kopiert: ${uuid}`);
-        }).catch(err => {
-            console.error('Failed to copy UUID:', err);
-            ui.notifications.error('Fehler beim Kopieren der UUID');
-        });
     }
 
     /**
