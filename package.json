@@ -1,6 +1,6 @@
 {
   "name": "ilaris-alternative-actor-sheet",
-  "version": "1.0.0",
+  "version": "1.0.12",
   "description": "An alternative actor sheet module for the Ilaris Foundry VTT system, providing enhanced character sheet layouts and functionality.",
   "main": "module.js",
   "type": "module",
@@ -38,9 +38,9 @@
     "@foundryvtt/foundryvtt-cli": "^3.0.0"
   },
   "foundry": {
-    "version": "12.0.0",
-    "minimumCoreVersion": "12.0.0",
-    "compatibleCoreVersion": "12"
+    "version": "13.0.0",
+    "minimumCoreVersion": "13",
+    "compatibleCoreVersion": "13"
   },
   "files": [
     "module.js",
