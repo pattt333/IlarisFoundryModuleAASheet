@@ -113,6 +113,13 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             // Add effect-items for the Kampf-Tab
             context.actor.effectItems = this.actor.items.filter(i => i.type === "effect-item");
 
+            // Normalize unset attribute pw values to 0 for display
+            if (context.actor.system?.attribute) {
+                for (const attr of Object.values(context.actor.system.attribute)) {
+                    if (attr.pw == null) attr.pw = 0;
+                }
+            }
+
             // Check if creature is a caster
             context.isCaster = this.actor.system.abgeleitete?.zauberer || this.actor.system.abgeleitete?.geweihter;
 
@@ -440,7 +447,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
 
         const attributeKey = target.dataset.attribute;
         const attributeData = actor.system.attribute[attributeKey];
-        const currentValue = attributeData?.wert || 0;
+        const currentValue = attributeData?.pw || 0;
 
         const content = `
             <div class="form-group">
@@ -471,7 +478,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
 
         if (!result || typeof result !== "object") return;
 
-        const updatePath = `system.attribute.${attributeKey}.wert`;
+        const updatePath = `system.attribute.${attributeKey}.pw`;
         await actor.update({ [updatePath]: result.value });
     }
 
