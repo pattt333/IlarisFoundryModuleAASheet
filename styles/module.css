@@ -12,6 +12,7 @@ body {
   --color-select-option-bg: white;
   --color-scrollbar: #4299e1; 
   --color-light-1: white;
+  --color-bg-light: white;
   --header-bg-color: #3c4658;
   --text-dark: #2d3748;
   --filter-primary: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(187deg) brightness(119%) contrast(119%);
@@ -655,7 +656,7 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .tab {
-  margin-top: 16px;
+  padding: 16px;
 }
 
 .ilaris.sheet.actor.alternative .window-content {

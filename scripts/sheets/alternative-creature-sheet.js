@@ -46,6 +46,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             ]
         },
         actions: {
+            itemCreate: IlarisAlternativeCreatureSheet.onItemCreate,
             hexagonEdit: IlarisAlternativeCreatureSheet.onHexagonEdit,
             energySettings: IlarisAlternativeCreatureSheet.onEnergySettings,
             healthSettings: IlarisAlternativeCreatureSheet.onHealthSettings,

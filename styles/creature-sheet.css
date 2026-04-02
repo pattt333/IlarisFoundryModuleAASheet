@@ -2,399 +2,46 @@
  * Ilaris Alternative Creature Sheet Styles
  * 
  * This CSS provides styling for the alternative creature sheet.
- * Namespace: .ilaris.sheet.actor.alternative.kreatur
+ * Namespace: .ilaris.sheet.actor.alternative.kreaturen
  */
 
 /* ===================================
    Base Layout
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .creature-layout {
-    width: 100%;
-}
-
-/* ===================================
-   Sticky Header
-   =================================== */
-
-.ilaris.sheet.actor.alternative.kreatur .sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: var(--header-bg-color);
-    border-bottom: 1px solid var(--color-border-light-1);
-    flex-shrink: 0;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .sheet-header {
-    background: var(--header-bg-color);
-    color: white;
-    padding: 10px 15px;
-    display: block;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .sheet-header-info {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* ===================================
-   Actor Profile (Left side)
-   =================================== */
-
-.ilaris.sheet.actor.alternative.kreatur .actor-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 140px;
-    flex-shrink: 0;
-    gap: 5px;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .portrait-container {
-    position: relative;
-    width: 120px;
-    height: 120px;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
-    cursor: pointer;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .profile-img:hover {
-    transform: scale(1.02);
-}
-
-/* Health Bar Container */
-.ilaris.sheet.actor.alternative.kreatur .health-bar-container {
-    width: 100%;
-    max-width: 140px;
-}
-
-/* Wunden Toggle */
-.ilaris.sheet.actor.alternative.kreatur .wunden-toggle {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 2px;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .wunden-toggle a {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 0.75em;
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    padding: 2px 6px;
-    border-radius: 3px;
-    transition: all 0.2s ease;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .wunden-toggle a:hover {
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Energy Bar */
-.ilaris.sheet.actor.alternative.kreatur .profile-energy {
-    width: 100%;
-    max-width: 140px;
-}
-
-/* ===================================
-   Header Details (Center)
-   =================================== */
-
-.ilaris.sheet.actor.alternative.kreatur .header-details {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    min-width: 400px;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .name-section h1 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .name-section input {
-    background: transparent;
-    border: none;
-    font-size: inherit;
-    font-weight: inherit;
-    color: white;
-    width: 100%;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .name-section input:focus {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    outline: 1px solid var(--primary-color);
-}
-
-/* Stats Section */
-.ilaris.sheet.actor.alternative.kreatur .stats-section {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-}
-
-/* WS Shield */
-.ilaris.sheet.actor.alternative.kreatur .ws-shield-container {
-    display: flex;
-    align-items: center;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .ws-shield {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 70px;
-    color: var(--primary-color);
-}
-
-.ilaris.sheet.actor.alternative.kreatur .ws-shield i.fa-shield-alt {
-    font-size: 4em;
-    z-index: 1;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.ilaris.sheet.actor.alternative.kreatur .ws-shield .ws-value {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-.ilaris.sheet.actor.alternative.kreatur .ws-shield .be-badge {
-    position: absolute;
-    bottom: 0;
-    right: -5px;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    background: rgba(45, 55, 72, 0.9);
-    border-radius: 8px;
-    padding: 2px 5px;
-    z-index: 3;
-    font-size: 0.7em;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .ws-shield .be-badge i {
-    color: var(--color-text-light-6);
-}
-
-.ilaris.sheet.actor.alternative.kreatur .ws-shield .be-badge .be-value {
-    font-weight: bold;
-    color: white;
-}
-
-/* Primary Attributes - Hexagons */
-.ilaris.sheet.actor.alternative.kreatur .primary-attributes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .attribute-hexagon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-bottom: 8px;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .hex-main {
-    width: 48px;
-    height: 55px;
-    background: var(--primary-color);
-    position: relative;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .hex-main:hover {
-    background: var(--color-primary-dark);
-    transform: scale(1.05);
-}
-
-.ilaris.sheet.actor.alternative.kreatur .hex-label {
-    font-size: 0.65em;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.ilaris.sheet.actor.alternative.kreatur .hex-pw {
-    color: white;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.ilaris.sheet.actor.alternative.kreatur .hex-small {
-    width: 22px;
-    height: 26px;
-    background: var(--text-dark);
-    position: absolute;
-    bottom: -10px;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .hex-small:hover {
-    background: var(--color-text-dark-5);
-    transform: scale(1.1);
-}
-
-.ilaris.sheet.actor.alternative.kreatur .hex-wert {
-    color: white;
-    font-size: 0.75em;
-    font-weight: bold;
+.ilaris.sheet.actor.alternative.kreaturen {
+    background-image: none;
+    background-color: var(--color-bg-light);
 }
 
 /* Secondary Stats */
-.ilaris.sheet.actor.alternative.kreatur .profile-secondary-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
 
-.ilaris.sheet.actor.alternative.kreatur .profile-stat {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 8px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    font-size: 0.85em;
-    transition: all 0.2s ease;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .profile-stat.editable-stat {
+.ilaris.sheet.actor.alternative.kreaturen .profile-stat.editable-stat {
     cursor: pointer;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .profile-stat.editable-stat:hover {
+.ilaris.sheet.actor.alternative.kreaturen .profile-stat.editable-stat:hover {
     background: rgba(66, 153, 225, 0.3);
 }
 
-.ilaris.sheet.actor.alternative.kreatur .profile-stat i {
-    color: var(--primary-color);
-    font-size: 0.9em;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .profile-stat .stat-label {
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.ilaris.sheet.actor.alternative.kreatur .profile-stat .stat-value {
-    font-weight: bold;
-    color: white;
-}
-
 /* Health modifier color coding */
-.ilaris.sheet.actor.alternative.kreatur .profile-stat.health-mod.positive .stat-value {
+.ilaris.sheet.actor.alternative.kreaturen .profile-stat.health-mod.positive .stat-value {
     color: var(--color-success);
 }
 
-.ilaris.sheet.actor.alternative.kreatur .profile-stat.health-mod.negative .stat-value {
+.ilaris.sheet.actor.alternative.kreaturen .profile-stat.health-mod.negative .stat-value {
     color: var(--color-danger);
-}
-
-/* ===================================
-   Tab Navigation
-   =================================== */
-
-.ilaris.sheet.actor.alternative.kreatur .sheet-tabs {
-    background: transparent;
-    display: flex;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 5px 15px 0;
-    gap: 10px;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .sheet-tabs .item {
-    padding: 8px 16px;
-    color: rgba(255, 255, 255, 0.7);
-    border-bottom: 3px solid transparent;
-    transition: all 0.2s ease;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .sheet-tabs .item:hover {
-    color: white;
-    border-bottom-color: rgba(255, 255, 255, 0.5);
-}
-
-.ilaris.sheet.actor.alternative.kreatur .sheet-tabs .item.active {
-    color: white;
-    border-bottom-color: var(--primary-color);
-}
-
-/* ===================================
-   Sheet Body
-   =================================== */
-
-.ilaris.sheet.actor.alternative.kreatur .sheet-body {
-    flex: 1;
-    overflow-y: auto;
-    padding: 15px;
-    background: white;
-}
-
-.ilaris.sheet.actor.alternative.kreatur .tab-content-area {
-    width: 100%;
 }
 
 /* ===================================
    Creature Sections
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur .creature-section {
+.ilaris.sheet.actor.alternative.kreaturen .creature-section {
     margin-bottom: 15px;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .section-header {
+.ilaris.sheet.actor.alternative.kreaturen .section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -403,7 +50,7 @@
     border-bottom: 2px solid var(--primary-color);
 }
 
-.ilaris.sheet.actor.alternative.kreatur .section-header h3 {
+.ilaris.sheet.actor.alternative.kreaturen .section-header h3 {
     margin: 0;
     font-size: 1em;
     font-weight: 600;
@@ -413,20 +60,20 @@
     gap: 6px;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .section-header h3 i {
+.ilaris.sheet.actor.alternative.kreaturen .section-header h3 i {
     color: var(--primary-color);
 }
 /* ===================================
    Effects Grid
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur .effects-grid {
+.ilaris.sheet.actor.alternative.kreaturen .effects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 8px;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .empty-state {
+.ilaris.sheet.actor.alternative.kreaturen .empty-state {
     grid-column: 1 / -1;
     text-align: center;
     padding: 20px;
@@ -438,7 +85,7 @@
    Statblock Rows
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur .statblockreihe {
+.ilaris.sheet.actor.alternative.kreaturen .statblockreihe {
     padding: 10px 12px;
     margin-bottom: 8px;
     background: var(--color-bg-light);
@@ -447,17 +94,17 @@
     line-height: 1.8;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .statblockreihe b {
+.ilaris.sheet.actor.alternative.kreaturen .statblockreihe b {
     color: var(--text-dark);
     font-weight: 600;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .statblockreihe b i {
+.ilaris.sheet.actor.alternative.kreaturen .statblockreihe b i {
     margin-right: 4px;
     color: var(--primary-color);
 }
 
-.ilaris.sheet.actor.alternative.kreatur .empty-inline {
+.ilaris.sheet.actor.alternative.kreaturen .empty-inline {
     color: var(--color-text-light-5);
     font-style: italic;
 }
@@ -466,7 +113,7 @@
    Weapon Rows (Larger Dice Buttons)
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur .weapon-row {
+.ilaris.sheet.actor.alternative.kreaturen .weapon-row {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -474,34 +121,34 @@
     padding: 4px 0;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .weapon-name {
+.ilaris.sheet.actor.alternative.kreaturen .weapon-name {
     min-width: 100px;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .weapon-name a {
+.ilaris.sheet.actor.alternative.kreaturen .weapon-name a {
     color: var(--text-dark);
     text-decoration: none;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .weapon-name a:hover {
+.ilaris.sheet.actor.alternative.kreaturen .weapon-name a:hover {
     color: var(--primary-color);
     text-decoration: underline;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .weapon-stat {
+.ilaris.sheet.actor.alternative.kreaturen .weapon-stat {
     font-size: 0.9em;
     color: var(--color-text-dark-5);
     white-space: nowrap;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .weapon-eigenschaften {
+.ilaris.sheet.actor.alternative.kreaturen .weapon-eigenschaften {
     font-size: 0.85em;
     color: var(--text-dark);
     margin-left: 45px;
     margin-bottom: 8px;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .eigenschaft-tag {
+.ilaris.sheet.actor.alternative.kreaturen .eigenschaft-tag {
     display: inline-block;
     background: var(--color-border-light-2);
     padding: 1px 6px;
@@ -511,7 +158,7 @@
 }
 
 /* Large Dice Buttons (for attacks) */
-.ilaris.sheet.actor.alternative.kreatur .rollable.icon-large {
+.ilaris.sheet.actor.alternative.kreaturen .rollable.icon-large {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -525,7 +172,7 @@
     transition: all 0.2s ease;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .rollable.icon-large:hover {
+.ilaris.sheet.actor.alternative.kreaturen .rollable.icon-large:hover {
     transform: scale(1.15);
     color: white;
     background: var(--primary-color);
@@ -533,27 +180,27 @@
 }
 
 /* Small Dice Buttons (for damage, skills) */
-.ilaris.sheet.actor.alternative.kreatur .rollable.icon-small {
+.ilaris.sheet.actor.alternative.kreaturen .rollable.icon-small {
     color: var(--primary-color);
     cursor: pointer;
     transition: all 0.2s ease;
     margin-left: 2px;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .rollable.icon-small:hover {
+.ilaris.sheet.actor.alternative.kreaturen .rollable.icon-small:hover {
     color: var(--color-primary-dark);
     transform: scale(1.2);
 }
 
 /* Delete Icon */
-.ilaris.sheet.actor.alternative.kreatur .item-delete.icon-small {
+.ilaris.sheet.actor.alternative.kreaturen .item-delete.icon-small {
     color: var(--color-text-light-5);
     cursor: pointer;
     transition: all 0.2s ease;
     margin-left: auto;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .item-delete.icon-small:hover {
+.ilaris.sheet.actor.alternative.kreaturen .item-delete.icon-small:hover {
     color: var(--color-danger);
 }
 
@@ -561,22 +208,22 @@
    Spell/Skill Entries
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur .spell-entry,
-.ilaris.sheet.actor.alternative.kreatur .skill-entry,
-.ilaris.sheet.actor.alternative.kreatur .item-entry {
+.ilaris.sheet.actor.alternative.kreaturen .spell-entry,
+.ilaris.sheet.actor.alternative.kreaturen .skill-entry,
+.ilaris.sheet.actor.alternative.kreaturen .item-entry {
     display: inline;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .spell-entry a.item-edit,
-.ilaris.sheet.actor.alternative.kreatur .skill-entry a.item-edit,
-.ilaris.sheet.actor.alternative.kreatur .item-entry a.item-edit {
+.ilaris.sheet.actor.alternative.kreaturen .spell-entry a.item-edit,
+.ilaris.sheet.actor.alternative.kreaturen .skill-entry a.item-edit,
+.ilaris.sheet.actor.alternative.kreaturen .item-entry a.item-edit {
     color: var(--text-dark);
     text-decoration: none;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .spell-entry a.item-edit:hover,
-.ilaris.sheet.actor.alternative.kreatur .skill-entry a.item-edit:hover,
-.ilaris.sheet.actor.alternative.kreatur .item-entry a.item-edit:hover {
+.ilaris.sheet.actor.alternative.kreaturen .spell-entry a.item-edit:hover,
+.ilaris.sheet.actor.alternative.kreaturen .skill-entry a.item-edit:hover,
+.ilaris.sheet.actor.alternative.kreaturen .item-entry a.item-edit:hover {
     color: var(--primary-color);
     text-decoration: underline;
 }
@@ -585,7 +232,7 @@
    Kurzbeschreibung
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur .kurzbeschreibung-container textarea {
+.ilaris.sheet.actor.alternative.kreaturen .kurzbeschreibung-container textarea {
     width: 100%;
     min-height: 80px;
     padding: 10px;
@@ -597,7 +244,7 @@
     resize: vertical;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .kurzbeschreibung-container textarea:focus {
+.ilaris.sheet.actor.alternative.kreaturen .kurzbeschreibung-container textarea:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
@@ -607,20 +254,20 @@
    Kampfwerte Grid
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur .kampfwerte-grid {
+.ilaris.sheet.actor.alternative.kreaturen .kampfwerte-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .kampfwert-input {
+.ilaris.sheet.actor.alternative.kreaturen .kampfwert-input {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 50px;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .kampfwert-input label {
+.ilaris.sheet.actor.alternative.kreaturen .kampfwert-input label {
     font-weight: 600;
     font-size: 0.8em;
     color: var(--color-text-dark-5);
@@ -628,7 +275,7 @@
     text-transform: uppercase;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .kampfwert-input input {
+.ilaris.sheet.actor.alternative.kreaturen .kampfwert-input input {
     width: 45px;
     text-align: center;
     padding: 4px;
@@ -638,7 +285,7 @@
     font-weight: bold;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .kampfwert-input input:focus {
+.ilaris.sheet.actor.alternative.kreaturen .kampfwert-input input:focus {
     outline: none;
     border-color: var(--primary-color);
 }
@@ -647,13 +294,13 @@
    Item Add Controls
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur .item-controls .form-group {
+.ilaris.sheet.actor.alternative.kreaturen .item-controls .form-group {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .item-type-select {
+.ilaris.sheet.actor.alternative.kreaturen .item-type-select {
     flex: 1;
     max-width: 250px;
     padding: 6px 10px;
@@ -662,7 +309,7 @@
     font-size: 0.95em;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .item-controls button {
+.ilaris.sheet.actor.alternative.kreaturen .item-controls button {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -676,7 +323,7 @@
     transition: all 0.2s ease;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .item-controls button:hover {
+.ilaris.sheet.actor.alternative.kreaturen .item-controls button:hover {
     background: var(--color-primary-dark);
     transform: translateY(-1px);
 }
@@ -685,7 +332,7 @@
    Window Header
    =================================== */
 
-.ilaris.sheet.actor.alternative.kreatur .window-header {
+.ilaris.sheet.actor.alternative.kreaturen .window-header {
     background: var(--header-bg-color);
     margin: 0;
     padding: 4px;
@@ -693,15 +340,15 @@
     justify-content: flex-end;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .window-title {
+.ilaris.sheet.actor.alternative.kreaturen .window-title {
     display: none;
 }
 
-.ilaris.sheet.actor.alternative.kreatur.minimized .window-title {
+.ilaris.sheet.actor.alternative.kreaturen.minimized .window-title {
     display: flex;
 }
 
-.ilaris.sheet.actor.alternative.kreatur .window-content {
+.ilaris.sheet.actor.alternative.kreaturen .window-content {
     background: var(--color-bg-light);
     padding: 0;
 }
@@ -711,26 +358,22 @@
    =================================== */
 
 @media (max-width: 750px) {
-    .ilaris.sheet.actor.alternative.kreatur .sheet-header {
-        flex-direction: column;
-        align-items: center;
-    }
     
-    .ilaris.sheet.actor.alternative.kreatur .header-details {
+    .ilaris.sheet.actor.alternative.kreaturen .header-details {
         min-width: 100%;
         align-items: center;
     }
     
-    .ilaris.sheet.actor.alternative.kreatur .stats-section {
+    .ilaris.sheet.actor.alternative.kreaturen .stats-section {
         flex-direction: column;
         align-items: center;
     }
     
-    .ilaris.sheet.actor.alternative.kreatur .primary-attributes {
+    .ilaris.sheet.actor.alternative.kreaturen .primary-attributes {
         justify-content: center;
     }
     
-    .ilaris.sheet.actor.alternative.kreatur .profile-secondary-stats {
+    .ilaris.sheet.actor.alternative.kreaturen .profile-secondary-stats {
         justify-content: center;
     }
 }
