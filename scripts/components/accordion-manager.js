@@ -1,12 +1,11 @@
 /**
  * Accordion Manager
- * 
+ *
  * Handles accordion functionality and state persistence for the alternative actor sheet.
  * Uses Vanilla DOM (no jQuery dependency).
  */
 
 export class AccordionManager {
-    
     constructor(actorId) {
         this.actorId = actorId;
     }
@@ -21,7 +20,7 @@ export class AccordionManager {
         for (const header of headers) {
             header.addEventListener('click', this.onAccordionToggle.bind(this));
         }
-        
+
         // Restore saved accordion states
         this.restoreAccordionStates(element);
     }
@@ -33,13 +32,13 @@ export class AccordionManager {
     onAccordionToggle(event) {
         event.preventDefault();
         event.stopPropagation();
-        
+
         const accordionItem = event.currentTarget.closest('.accordion-item');
         if (!accordionItem) return;
 
         const itemId = accordionItem.dataset.itemId;
         const isExpanded = accordionItem.classList.contains('expanded');
-                
+
         // Toggle current accordion
         if (isExpanded) {
             accordionItem.classList.remove('expanded');
@@ -87,7 +86,7 @@ export class AccordionManager {
     restoreAccordionStates(element) {
         const storageKey = this.getAccordionStorageKey();
         const states = JSON.parse(sessionStorage.getItem(storageKey) || '{}');
-        
+
         // Apply saved states
         for (const itemId of Object.keys(states)) {
             if (states[itemId]) {

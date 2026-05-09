@@ -1,16 +1,16 @@
 /**
  * Alternative Creature Sheet for Ilaris (AppV2)
- * 
+ *
  * This class extends the KreaturSheet (which uses HandlebarsApplicationMixin + ActorSheetV2)
  * and provides an alternative layout with a combat-focused interface optimized for GM use.
- * 
+ *
  * Design Philosophy:
  * - Combat-First: Most important information (attacks, effects, spells) in the default "Kampf" tab
  * - Statblock-Style: Dense, text-focused presentation for quick reference during play
  * - Component Reuse: Leverages existing health-resources, energy-resources, and effect-card components
  * - Visual Consistency: Same hexagon attributes and styling as the alternative character sheet
  * - Flat Structure: No accordions - all information immediately visible for fast access
- * 
+ *
  * Migrated from ApplicationV1 to ApplicationV2 patterns:
  * - static DEFAULT_OPTIONS instead of get defaultOptions()
  * - static PARTS instead of template in defaultOptions
@@ -19,11 +19,10 @@
  * - Static action methods instead of jQuery event handlers
  * - Vanilla DOM instead of jQuery selectors in actions
  */
-import { KreaturSheet } from "../../../../systems/Ilaris/scripts/actors/sheets/kreatur.js";
-import { advanceEffectTime } from "../utilities.js";
+import { KreaturSheet } from '../../../../systems/Ilaris/scripts/actors/sheets/kreatur.js';
+import { advanceEffectTime } from '../utilities.js';
 
 export class IlarisAlternativeCreatureSheet extends KreaturSheet {
-    
     constructor(...args) {
         super(...args);
     }
@@ -34,7 +33,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
 
     /** @override */
     static DEFAULT_OPTIONS = {
-        classes: ["alternative"],
+        classes: ['alternative'],
         position: { width: 820, height: 900 },
         actions: {
             itemCreate: IlarisAlternativeCreatureSheet.onItemCreate,
@@ -46,37 +45,36 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             effectStackIncrease: IlarisAlternativeCreatureSheet.onEffectStackIncrease,
             effectStackDecrease: IlarisAlternativeCreatureSheet.onEffectStackDecrease,
             effectAdvanceTime: IlarisAlternativeCreatureSheet.onEffectAdvanceTime,
-        }
-    }
+        },
+    };
 
     /** @override - Single monolithic template part */
     static PARTS = {
         header: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/npc/alternative-creature-sheet.hbs"
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/npc/alternative-creature-sheet.hbs',
         },
         tabs: {
             template: 'templates/generic/tab-navigation.hbs',
         },
         allgemein: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/npc/tabs/creature-allgemein-tab.hbs",
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/npc/tabs/creature-allgemein-tab.hbs',
             scrollable: [''],
         },
         kampf: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/npc/tabs/creature-kampf-tab.hbs",
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/npc/tabs/creature-kampf-tab.hbs',
             scrollable: [''],
         },
-    }
+    };
 
     static TABS = {
         primary: {
             tabs: [
-                { id: "allgemein", icon: "fa-solid fa-chart-simple", label: "Attribute" },
-                { id: "kampf", icon: "fa-solid fa-fist-raised", label: "Kampf" },
+                { id: 'allgemein', icon: 'fa-solid fa-chart-simple', label: 'Attribute' },
+                { id: 'kampf', icon: 'fa-solid fa-fist-raised', label: 'Kampf' },
             ],
-            initial: "kampf", // Set the initial tab
+            initial: 'kampf', // Set the initial tab
         },
     };
-
 
     /* -------------------------------------------- */
     /*  Context Preparation                          */
@@ -101,7 +99,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             context.kreaturItemOptions = foundry.utils.duplicate(CONFIG.ILARIS.kreatur_item_options || {});
 
             // Add effect-items for the Kampf-Tab
-            context.actor.effectItems = this.actor.items.filter(i => i.type === "effect-item");
+            context.actor.effectItems = this.actor.items.filter(i => i.type === 'effect-item');
 
             // Normalize unset attribute pw values to 0 for display
             if (context.actor.system?.attribute) {
@@ -117,7 +115,6 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             context.canAdvanceTime = this.actor.isOwner;
 
             return context;
-
         } catch (error) {
             console.error('IlarisAlternativeCreatureSheet | Error in _prepareContext:', error);
 
@@ -126,12 +123,12 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
                 data: this.actor.system,
                 system: this.actor.system,
                 config: CONFIG.ILARIS || {},
-                isCreature: this.actor.type === "kreatur",
+                isCreature: this.actor.type === 'kreatur',
                 isOwner: this.actor.isOwner,
                 editable: this.isEditable,
-                effectItems: this.actor.items.filter(i => i.type === "effect-item"),
+                effectItems: this.actor.items.filter(i => i.type === 'effect-item'),
                 kreaturItemOptions: foundry.utils.duplicate(CONFIG.ILARIS?.kreatur_item_options || {}),
-                isCaster: this.actor.system.abgeleitete?.zauberer || this.actor.system.abgeleitete?.geweihter
+                isCaster: this.actor.system.abgeleitete?.zauberer || this.actor.system.abgeleitete?.geweihter,
             };
         }
     }
@@ -141,12 +138,12 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
         switch (partId) {
             case 'allgemein':
             case 'kampf':
-                context.tab = context.tabs[partId]
-                break
+                context.tab = context.tabs[partId];
+                break;
             default:
         }
 
-        return context
+        return context;
     }
 
     /* -------------------------------------------- */
@@ -168,14 +165,14 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
         const data = TextEditor.getDragEventData(event);
 
         // If dropping an Item from the effect library compendium, transfer only its effects
-        if (data.type === "Item" && data.uuid?.includes("ilaris-alternative-actor-sheet.effect-library")) {
+        if (data.type === 'Item' && data.uuid?.includes('ilaris-alternative-actor-sheet.effect-library')) {
             event.preventDefault();
 
             try {
                 const item = await fromUuid(data.uuid);
 
                 if (!item) {
-                    ui.notifications.warn("Item konnte nicht gefunden werden.");
+                    ui.notifications.warn('Item konnte nicht gefunden werden.');
                     return;
                 }
 
@@ -197,10 +194,9 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
                 }
 
                 ui.notifications.info(`Effekt(e) von ${item.name} wurden verarbeitet.`);
-
             } catch (error) {
-                console.error("Error transferring effects:", error);
-                ui.notifications.error("Fehler beim Übertragen der Effekte.");
+                console.error('Error transferring effects:', error);
+                ui.notifications.error('Fehler beim Übertragen der Effekte.');
             }
 
             return;
@@ -233,7 +229,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             labels = {
                 current: 'Eng aktuell',
                 blocked: 'gEng (geblockt)',
-                title: 'Energie bearbeiten'
+                title: 'Energie bearbeiten',
             };
         } else if (energyType === 'kap') {
             currentValue = actor.system.abgeleitete.kap_stern || 0;
@@ -242,7 +238,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             labels = {
                 current: 'Eng aktuell',
                 blocked: 'gEng (geblockt)',
-                title: 'Energie bearbeiten'
+                title: 'Energie bearbeiten',
             };
         }
 
@@ -266,26 +262,26 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             content: content,
             buttons: [
                 {
-                    action: "save",
-                    label: "Speichern",
-                    icon: "fas fa-check",
+                    action: 'save',
+                    label: 'Speichern',
+                    icon: 'fas fa-check',
                     default: true,
                     callback: (event, button, dialog) => {
                         const newCurrent = button.form.elements.current.valueAsNumber || 0;
                         const newBlocked = button.form.elements.blocked.valueAsNumber || 0;
                         return { current: newCurrent, blocked: newBlocked };
-                    }
+                    },
                 },
                 {
-                    action: "cancel",
-                    label: "Abbrechen",
-                    icon: "fas fa-times"
-                }
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                    icon: 'fas fa-times',
+                },
             ],
-            rejectClose: false
+            rejectClose: false,
         });
 
-        if (!result || typeof result !== "object") return;
+        if (!result || typeof result !== 'object') return;
 
         const updateData = {};
         if (energyType === 'asp') {
@@ -322,27 +318,27 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             content: content,
             buttons: [
                 {
-                    action: "save",
-                    label: "Speichern",
-                    icon: "fas fa-check",
+                    action: 'save',
+                    label: 'Speichern',
+                    icon: 'fas fa-check',
                     default: true,
                     callback: (event, button, dialog) => {
                         return button.form.elements.wunden.valueAsNumber || 0;
-                    }
+                    },
                 },
                 {
-                    action: "cancel",
-                    label: "Abbrechen",
-                    icon: "fas fa-times"
-                }
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                    icon: 'fas fa-times',
+                },
             ],
-            rejectClose: false
+            rejectClose: false,
         });
 
-        if (result === null || typeof result === "string") return;
+        if (result === null || typeof result === 'string') return;
 
         await actor.update({
-            'system.gesundheit.wunden': Math.max(result + currentWounds, 0)
+            'system.gesundheit.wunden': Math.max(result + currentWounds, 0),
         });
     }
 
@@ -363,7 +359,9 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
         }
 
         pack.render(true);
-        ui.notifications.info("Ziehe einen Effekt aus der Bibliothek auf das Charakterblatt, um nur den Effekt hinzuzufügen.");
+        ui.notifications.info(
+            'Ziehe einen Effekt aus der Bibliothek auf das Charakterblatt, um nur den Effekt hinzuzufügen.'
+        );
     }
 
     /**
@@ -384,7 +382,8 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
         const title = iconEl?.getAttribute('title') || label;
 
         // Determine input type based on field
-        const inputType = statField.includes('hp.max') || statField.includes('mod') || statField.includes('ws') ? 'number' : 'text';
+        const inputType =
+            statField.includes('hp.max') || statField.includes('mod') || statField.includes('ws') ? 'number' : 'text';
 
         const content = `
             <div class="form-group">
@@ -398,9 +397,9 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             content: content,
             buttons: [
                 {
-                    action: "save",
-                    label: "Speichern",
-                    icon: "fas fa-check",
+                    action: 'save',
+                    label: 'Speichern',
+                    icon: 'fas fa-check',
                     default: true,
                     callback: (event, button, dialog) => {
                         const input = button.form.elements.value;
@@ -409,18 +408,18 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
                             newValue = parseInt(newValue) || 0;
                         }
                         return { value: newValue };
-                    }
+                    },
                 },
                 {
-                    action: "cancel",
-                    label: "Abbrechen",
-                    icon: "fas fa-times"
-                }
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                    icon: 'fas fa-times',
+                },
             ],
-            rejectClose: false
+            rejectClose: false,
         });
 
-        if (!result || typeof result !== "object") return;
+        if (!result || typeof result !== 'object') return;
 
         await actor.update({ [statField]: result.value });
     }
@@ -451,22 +450,22 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             content: content,
             buttons: [
                 {
-                    action: "save",
-                    label: "Speichern",
+                    action: 'save',
+                    label: 'Speichern',
                     default: true,
                     callback: (event, button, dialog) => {
                         return { value: button.form.elements.value.valueAsNumber || 0 };
-                    }
+                    },
                 },
                 {
-                    action: "cancel",
-                    label: "Abbrechen"
-                }
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                },
             ],
-            rejectClose: false
+            rejectClose: false,
         });
 
-        if (!result || typeof result !== "object") return;
+        if (!result || typeof result !== 'object') return;
 
         const updatePath = `system.attribute.${attributeKey}.pw`;
         await actor.update({ [updatePath]: result.value });
@@ -485,7 +484,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
         const effect = this.actor.effects.get(effectId);
 
         if (!effect) {
-            ui.notifications.error("Effect nicht gefunden");
+            ui.notifications.error('Effect nicht gefunden');
             return;
         }
 
@@ -505,7 +504,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
         const effect = this.actor.effects.get(effectId);
 
         if (!effect) {
-            ui.notifications.error("Effect nicht gefunden");
+            ui.notifications.error('Effect nicht gefunden');
             return;
         }
 
@@ -534,14 +533,14 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             const effectsReduced = await advanceEffectTime(this.actor);
 
             if (effectsReduced === 0) {
-                ui.notifications.info("Keine temporären Effekte vorhanden");
+                ui.notifications.info('Keine temporären Effekte vorhanden');
                 return;
             }
 
-            ui.notifications.info("Temporäre Effekte wurden um 1 Zeiteinheit reduziert");
+            ui.notifications.info('Temporäre Effekte wurden um 1 Zeiteinheit reduziert');
         } catch (error) {
             console.error('IlarisAlternativeCreatureSheet | Error advancing effect time:', error);
-            ui.notifications.error("Fehler beim Vorrücken der Effekt-Zeit");
+            ui.notifications.error('Fehler beim Vorrücken der Effekt-Zeit');
         }
     }
 }

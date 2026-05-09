@@ -8,10 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-01-XX
 
 ### Added
+
 - Initial release of the Ilaris Alternative Actor Sheet module
 - Enhanced character sheet layout with improved visual design
 - Tabbed interface for better organization of character information
-- Organized sections for attributes, skills, items, spells, and biography  
+- Organized sections for attributes, skills, items, spells, and biography
 - Modern CSS styling with responsive design
 - Support for all standard Ilaris actor types (held/character and kreatur/creature)
 - Item management with categorized sections for weapons, equipment, and spells
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integration with the base Ilaris system without conflicts
 
 ### Technical
+
 - Module manifest (module.json) with proper dependencies
 - ES6 module structure following Foundry VTT best practices
 - Handlebars templates for flexible layout customization

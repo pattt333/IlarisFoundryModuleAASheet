@@ -11,6 +11,7 @@
 ### PHASE 6: jQuery-Entfernung — JETZT VOLLSTÄNDIG ✅
 
 #### AccordionManager → Vanilla DOM ✅
+
 **Datei:** `scripts/components/accordion-manager.js`
 
 Alle jQuery-Aufrufe durch native DOM-Methoden ersetzt:
@@ -28,6 +29,7 @@ Alle jQuery-Aufrufe durch native DOM-Methoden ersetzt:
 **Parameter-Signatur geändert:** `initialize(html)` (jQuery-Objekt) → `initialize(element)` (HTMLElement)
 
 #### FavoritesManager → Vanilla DOM ✅
+
 **Datei:** `scripts/components/favorites-manager.js`
 
 Alle jQuery-Aufrufe durch native DOM-Methoden ersetzt:
@@ -47,12 +49,13 @@ Alle jQuery-Aufrufe durch native DOM-Methoden ersetzt:
 
 **Parameter-Signatur geändert:** `initialize(html)` → `initialize(element)`, `restoreFavoritesTab(html)` → `restoreFavoritesTab(element)`
 
-#### jQuery aus _onRender() entfernt ✅
+#### jQuery aus \_onRender() entfernt ✅
+
 **Datei:** `scripts/sheets/alternative-actor-sheet.js`
 
-| Alt | Neu |
-|---|---|
-| `const html = $(this.element);` | Entfernt |
+| Alt                                       | Neu                                               |
+| ----------------------------------------- | ------------------------------------------------- |
+| `const html = $(this.element);`           | Entfernt                                          |
 | `this.accordionManager.initialize(html);` | `this.accordionManager.initialize(this.element);` |
 | `this.favoritesManager.initialize(html);` | `this.favoritesManager.initialize(this.element);` |
 
@@ -64,32 +67,33 @@ Alle V1 `Dialog` Aufrufe wurden zu `foundry.applications.api.DialogV2` migriert.
 
 #### alternative-actor-sheet.js — 5 Dialoge migriert ✅
 
-| Dialog-Methode | Änderung |
-|---|---|
+| Dialog-Methode     | Änderung                                                        |
+| ------------------ | --------------------------------------------------------------- |
 | `onEnergySettings` | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
 | `onHealthSettings` | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
-| `onEditStat` | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
-| `onHexagonEdit` | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
-| `onRest` | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
+| `onEditStat`       | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
+| `onHexagonEdit`    | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
+| `onRest`           | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
 
 #### alternative-creature-sheet.js — 4 Dialoge migriert ✅
 
-| Dialog-Methode | Änderung |
-|---|---|
+| Dialog-Methode     | Änderung                                                        |
+| ------------------ | --------------------------------------------------------------- |
 | `onEnergySettings` | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
 | `onHealthSettings` | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
-| `onEditStat` | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
-| `onHexagonEdit` | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
+| `onEditStat`       | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
+| `onHexagonEdit`    | `new Dialog({...}).render(true)` → `await DialogV2.wait({...})` |
 
 #### favorites-manager.js — 1 Dialog migriert ✅
 
-| Dialog-Methode | Änderung |
-|---|---|
+| Dialog-Methode     | Änderung                                                  |
+| ------------------ | --------------------------------------------------------- |
 | `onFavoritesClear` | `Dialog.confirm({...})` → `await DialogV2.confirm({...})` |
 
 **Dialog-Migration Pattern:**
 
 Altes V1 Pattern:
+
 ```javascript
 new Dialog({
     title: "...",
@@ -110,6 +114,7 @@ new Dialog({
 ```
 
 Neues V2 Pattern:
+
 ```javascript
 const result = await foundry.applications.api.DialogV2.wait({
     window: { title: "..." },
@@ -133,6 +138,7 @@ await actor.update({...});
 ```
 
 Wesentliche Unterschiede:
+
 - `<form>` Wrapper wird von DialogV2 automatisch erzeugt → aus `content` entfernt
 - `icon` akzeptiert CSS-Klasse direkt statt HTML `<i>` Element
 - `buttons` ist ein Array statt Objekt
@@ -152,44 +158,47 @@ AccordionManager und FavoritesManager nutzen jetzt ausschließlich Vanilla DOM. 
 
 ## 📁 Geänderte Dateien (diese Session)
 
-| Datei | Änderungen |
-|---|---|
-| `scripts/components/accordion-manager.js` | Komplett zu Vanilla DOM migriert |
-| `scripts/components/favorites-manager.js` | Komplett zu Vanilla DOM migriert + Dialog → DialogV2 |
-| `scripts/sheets/alternative-actor-sheet.js` | jQuery aus `_onRender()` entfernt + 5 Dialoge → DialogV2 |
-| `scripts/sheets/alternative-creature-sheet.js` | 4 Dialoge → DialogV2 |
+| Datei                                          | Änderungen                                               |
+| ---------------------------------------------- | -------------------------------------------------------- |
+| `scripts/components/accordion-manager.js`      | Komplett zu Vanilla DOM migriert                         |
+| `scripts/components/favorites-manager.js`      | Komplett zu Vanilla DOM migriert + Dialog → DialogV2     |
+| `scripts/sheets/alternative-actor-sheet.js`    | jQuery aus `_onRender()` entfernt + 5 Dialoge → DialogV2 |
+| `scripts/sheets/alternative-creature-sheet.js` | 4 Dialoge → DialogV2                                     |
 
 ---
 
 ## 📊 Aktualisierte Gesamtübersicht
 
-| Phase | Status | Kommentar |
-|---|---|---|
-| Phase 1: Deduplication | ✅ Erledigt | Session 1 |
-| Phase 2: DEFAULT_OPTIONS | ✅ Erledigt | Session 1 |
-| Phase 3: _prepareContext | ✅ Erledigt | Session 1 |
-| Phase 4: Event-Handler | ✅ Erledigt | Session 1 |
-| Phase 5: Static Actions | ✅ Erledigt | Session 1 |
-| Phase 6: jQuery-Entfernung | ✅ **Vollständig** | **Session 2** — Manager + Sheets komplett jQuery-frei |
-| Phase 7: Dialog-Modernisierung | ✅ **Vollständig** | **Session 2** — Alle 10 Dialoge zu DialogV2 migriert |
-| Phase 8: Form-Submission | ✅ Erledigt | Session 1 |
-| Phase 9: Template-Struktur | ⏭️ Übersprungen | Niedrige Priorität — monolithisch beibehalten (wie empfohlen) |
-| Phase 10: Utilities | ✅ **Vollständig** | DragDrop (Session 1) + Manager (Session 2) |
-| Phase 11: Testing | ❌ Offen | Manuelles Testen in Foundry VTT v13 erforderlich |
+| Phase                          | Status             | Kommentar                                                     |
+| ------------------------------ | ------------------ | ------------------------------------------------------------- |
+| Phase 1: Deduplication         | ✅ Erledigt        | Session 1                                                     |
+| Phase 2: DEFAULT_OPTIONS       | ✅ Erledigt        | Session 1                                                     |
+| Phase 3: \_prepareContext      | ✅ Erledigt        | Session 1                                                     |
+| Phase 4: Event-Handler         | ✅ Erledigt        | Session 1                                                     |
+| Phase 5: Static Actions        | ✅ Erledigt        | Session 1                                                     |
+| Phase 6: jQuery-Entfernung     | ✅ **Vollständig** | **Session 2** — Manager + Sheets komplett jQuery-frei         |
+| Phase 7: Dialog-Modernisierung | ✅ **Vollständig** | **Session 2** — Alle 10 Dialoge zu DialogV2 migriert          |
+| Phase 8: Form-Submission       | ✅ Erledigt        | Session 1                                                     |
+| Phase 9: Template-Struktur     | ⏭️ Übersprungen    | Niedrige Priorität — monolithisch beibehalten (wie empfohlen) |
+| Phase 10: Utilities            | ✅ **Vollständig** | DragDrop (Session 1) + Manager (Session 2)                    |
+| Phase 11: Testing              | ❌ Offen           | Manuelles Testen in Foundry VTT v13 erforderlich              |
 
 ---
 
 ## ⚠️ Verbleibende offene Tasks
 
 ### PHASE 9: Template-Struktur (OPTIONAL — Niedrige Priorität)
+
 - Monolithische Templates beibehalten
 - Potenzielle Optimierung: Aufteilen in PARTS für Partial-Rendering
 - **Empfehlung:** Nur umsetzen wenn Performance-Probleme beim Re-Rendering auftreten
 
 ### PHASE 11: Testing & Validierung — NICHT BEGONNEN
+
 Manuelles Testen in Foundry VTT v13 erforderlich:
 
 #### Funktionalitäts-Tests
+
 - [ ] Actor Sheet öffnet sich korrekt
 - [ ] Creature Sheet öffnet sich korrekt
 - [ ] Tab-Switching funktioniert
@@ -211,6 +220,7 @@ Manuelles Testen in Foundry VTT v13 erforderlich:
 - [ ] Favorites State-Persistence über Re-Render
 
 #### Browser-Konsolen-Check
+
 - [ ] Keine jQuery-Fehler (`$ is not defined` o.ä.)
 - [ ] Keine `undefined this`-Kontexte in Actions
 - [ ] Keine Template-Rendering-Fehler
@@ -218,6 +228,7 @@ Manuelles Testen in Foundry VTT v13 erforderlich:
 - [ ] Keine 404-Fehler für Templates
 
 ### Bekannte jQuery-Verbleibsel (außerhalb Migration-Scope)
+
 - `scripts/apps/initiative-dialog.js` — 1 jQuery-Aufruf (Zeile 568)
 - `scripts/apps/mass-initiative-dialog.js` — 2 jQuery-Aufrufe (Zeilen 326, 517)
 - Diese sind **nicht** Teil der Actor-Sheet-Migration und können in einer separaten Session behandelt werden

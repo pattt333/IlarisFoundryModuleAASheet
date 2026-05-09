@@ -5,11 +5,13 @@
 Based on research of the Ilaris system repository and popular Foundry modules, we implemented a clean inheritance pattern:
 
 ### Original Complex Approach (Removed)
+
 - Multiple fallback import paths
 - Dynamic imports with complex error handling
 - Attempts to import classes directly from system files
 
 ### Current Proper Import Approach
+
 Based on repository analysis of the Ilaris system, the module now uses direct imports from the correct system paths:
 
 ```javascript
@@ -40,20 +42,23 @@ IlarisItemSheet = itemSheetModule.IlarisItemSheet;
 ## Key Features Implemented
 
 ### Tidy 5e-Inspired Layout
+
 - Vertical stacking of components
 - Actor portrait prominently displayed
 - Einschränkungen (wounds/exhaustion) below portrait
 - Energy bars with slider-style progress indication
 
 ### Interactive Elements
+
 - **Hexagon Attributes**: Rotated 90° with overlapping design
-  - Large hex: Click to roll
-  - Small hex: Click to edit value
-  - Hover effects and cursor changes
+    - Large hex: Click to roll
+    - Small hex: Click to edit value
+    - Hover effects and cursor changes
 - **Einschränkungen Boxes**: Click to cycle through wound/exhaustion states
 - **Energy Bars**: Visual progress indicators with percentage calculations
 
 ### Custom Handlebars Helpers
+
 - `percentage`: Calculate percentage for progress bars
 - `add`: Simple addition for template calculations
 - `gte`: Greater-than-or-equal comparison
@@ -61,22 +66,25 @@ IlarisItemSheet = itemSheetModule.IlarisItemSheet;
 - `multiply`/`divide`: Mathematical operations
 
 ### CSS Features
+
 - Hexagon shapes using `clip-path: polygon()`
 - Smooth transitions and hover effects
 - CSS Grid layouts for responsive design
 - Custom scrollbars and styling
 
 ## File Structure
+
 ```
 /scripts/sheets/alternative-actor-sheet.js  - Main sheet class
 /templates/sheets/alternative-actor-sheet.hbs - Main template
 /templates/sheets/tabs/ - Tab-specific templates
-/templates/sheets/energy-resources.hbs - Energy bar component  
+/templates/sheets/energy-resources.hbs - Energy bar component
 /templates/sheets/health-resources.hbs - Einschränkungen component
 /styles/module.css - All styling including hexagons
 ```
 
 ## Integration Status
+
 ✅ UI Layout Complete
 ✅ Interactive Elements Working  
 ✅ Attribute Rolling Integrated

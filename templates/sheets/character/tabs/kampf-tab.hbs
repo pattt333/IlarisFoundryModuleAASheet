@@ -41,7 +41,7 @@
                     nameLabel="Waffenname"
                     stats=(array (concat "AT " item.system.at) (concat "VT " item.system.vt))
                     statsTooltips=(array item.system.computed.modifiers.at item.system.computed.modifiers.vt)
-                    stats2=(array (concat "TP " item.system.schaden) )
+                    stats2=(array (concat "TP " item.system.tp) )
                     stats2Tooltips=(array item.system.computed.modifiers.dmg)
                     itemclass="nahkampfwaffe"
                     editTitle="Waffe bearbeiten"
@@ -75,7 +75,7 @@
                     nameLabel="Waffenname"
                     stats=(array (concat "FK " item.system.fk) )
                     statsTooltips=(array item.system.computed.modifiers.fk)
-                    stats2=(array (concat "TP " item.system.schaden) )
+                    stats2=(array (concat "TP " item.system.tp) )
                     stats2Tooltips=(array item.system.computed.modifiers.dmg)
                     itemclass="fernkampfwaffe"
                     editTitle="Waffe bearbeiten"
@@ -86,7 +86,7 @@
                         (hash label="RW" value=item.system.rw)
                         (hash label="Fertigkeit" value=item.system.fertigkeit)
                         (hash label="Talent" value=item.system.talent)
-                        (hash label="Härte" value=item.system.härte)
+                        (hash label="Härte" value=item.system.haerte)
                         (hash label="Eigenschaften" value=(eigenschaften item.system.eigenschaften ", ") isDescription=true)
                     )
                 }}

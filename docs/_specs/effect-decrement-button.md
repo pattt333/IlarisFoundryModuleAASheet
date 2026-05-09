@@ -1,6 +1,7 @@
 # Plan: Time-Advance Buttons für temporäre Effekte
 
 Implementierung von zwei "Zeit vorrücken"-Features:
+
 1. **Actor Sheet Button**: Button im Effects-Tab für einzelne Actoren
 2. **Scene Control Button**: GM-only Button in der Scene-Steuerleiste für alle Token-Actoren
 
@@ -27,6 +28,7 @@ Button im Effects-Tab eines einzelnen Actor Sheets.
 ## Requirements Summary
 
 ### Functional Requirements
+
 - Button mit Stopwatch-Icon (`fas fa-stopwatch`) und Label "Zeit vorrücken"
 - Position: Links vom "Effekt Bibliothek" Button in der items-header
 - Sichtbarkeit: Nur für Actor-Owner (`actor.isOwner === true`)
@@ -37,11 +39,13 @@ Button im Effects-Tab eines einzelnen Actor Sheets.
 - Effekte bei duration = 0 werden automatisch vom Foundry-System entfernt
 
 ### User Feedback
+
 - **Erfolg**: Info-Notification "Temporäre Effekte wurden um 1 Zeiteinheit reduziert"
 - **Keine Effekte**: Info-Notification "Keine temporären Effekte vorhanden"
 - **Fehler**: Error-Notification bei Update-Fehlschlag
 
 ### Non-Functional Requirements
+
 - Keine Bestätigungsdialog (direktes Dekrementieren)
 - Keine Localization (hardcoded deutsche Texte)
 - Button-Styling identisch zu "Effekt Bibliothek" Button
@@ -50,6 +54,7 @@ Button im Effects-Tab eines einzelnen Actor Sheets.
 ## Technical Details
 
 ### Effect Duration Structure (Foundry v12)
+
 ```javascript
 {
   duration: {
@@ -65,24 +70,25 @@ Button im Effects-Tab eines einzelnen Actor Sheets.
 ```
 
 ### Filter Logic
+
 ```javascript
 const temporaryEffects = this.actor.effects.filter(effect => {
-  const turns = effect.duration?.turns;
-  const rounds = effect.duration?.rounds;
-  return (Number.isInteger(turns) && turns > 0) || 
-         (Number.isInteger(rounds) && rounds > 0);
+    const turns = effect.duration?.turns;
+    const rounds = effect.duration?.rounds;
+    return (Number.isInteger(turns) && turns > 0) || (Number.isInteger(rounds) && rounds > 0);
 });
 ```
 
 ### Update Logic
+
 ```javascript
 const updates = temporaryEffects.map(effect => ({
-  _id: effect.id,
-  "duration.turns": Math.max(0, (effect.duration.turns || 0) - 1),
-  "duration.rounds": Math.max(0, (effect.duration.rounds || 0) - 1)
+    _id: effect.id,
+    'duration.turns': Math.max(0, (effect.duration.turns || 0) - 1),
+    'duration.rounds': Math.max(0, (effect.duration.rounds || 0) - 1),
 }));
 
-await this.actor.updateEmbeddedDocuments("ActiveEffect", updates);
+await this.actor.updateEmbeddedDocuments('ActiveEffect', updates);
 ```
 
 ---
@@ -108,6 +114,7 @@ GM-only Button in der linken Foundry VTT Steuerleiste für alle Token-Actoren au
 ### Requirements Summary
 
 #### Functional Requirements
+
 - **Button Position**: Ganz unten in `main-controls` → Token Controls Liste
 - **Icon**: `fas fa-stopwatch` (identisch zum Actor Sheet Button)
 - **Tooltip**: "Zeit vorrücken (Alle Actoren)"
@@ -118,6 +125,7 @@ GM-only Button in der linken Foundry VTT Steuerleiste für alle Token-Actoren au
 - **Dekrementierung**: Beide `duration.turns` UND `duration.rounds` um 1 reduzieren (falls > 0)
 
 #### User Feedback
+
 - **Keine aktive Scene**: Warning "Keine aktive Szene vorhanden"
 - **Erfolg**: Info "Zeit für alle Actoren wurde vorgerückt"
 - **Keine Effekte**: Info "Keine temporären Effekte auf der Szene vorhanden"
@@ -125,6 +133,7 @@ GM-only Button in der linken Foundry VTT Steuerleiste für alle Token-Actoren au
 - **Console Log**: `"Advanced time: X actors, Y effects reduced"` für Debugging
 
 #### Non-Functional Requirements
+
 - Keine Bestätigungsdialog (direktes Ausführen)
 - Keine detaillierte Statistik in UI (nur Console)
 - Keine Localization (hardcoded deutsche Texte)
@@ -135,46 +144,49 @@ GM-only Button in der linken Foundry VTT Steuerleiste für alle Token-Actoren au
 ### Technical Details
 
 #### Scene Control Button Registration
+
 ```javascript
-Hooks.on("getSceneControlButtons", (controls) => {
-  if (!game.user.isGM) return;
-  
-  const tokenControls = controls.find(c => c.name === "token");
-  if (!tokenControls) return;
-  
-  tokenControls.tools.push({
-    name: "advance-time-all",
-    title: "Zeit vorrücken (Alle Actoren)",
-    icon: "fas fa-stopwatch",
-    button: true,
-    onClick: () => advanceTimeForAllActors()
-  });
+Hooks.on('getSceneControlButtons', controls => {
+    if (!game.user.isGM) return;
+
+    const tokenControls = controls.find(c => c.name === 'token');
+    if (!tokenControls) return;
+
+    tokenControls.tools.push({
+        name: 'advance-time-all',
+        title: 'Zeit vorrücken (Alle Actoren)',
+        icon: 'fas fa-stopwatch',
+        button: true,
+        onClick: () => advanceTimeForAllActors(),
+    });
 });
 ```
 
 #### Token Iteration
+
 ```javascript
 const tokens = canvas.scene.tokens; // TokenDocument collection
 
 for (const tokenDoc of tokens) {
-  const actor = tokenDoc.actor; // Gets actual actor (including synthetic)
-  if (!actor) continue;
-  
-  // Process actor effects...
+    const actor = tokenDoc.actor; // Gets actual actor (including synthetic)
+    if (!actor) continue;
+
+    // Process actor effects...
 }
 ```
 
 #### Effect Filter Logic (reused from Actor Sheet)
+
 ```javascript
 const temporaryEffects = actor.effects.filter(effect => {
-  const turns = effect.duration?.turns;
-  const rounds = effect.duration?.rounds;
-  return (Number.isInteger(turns) && turns > 0) || 
-         (Number.isInteger(rounds) && rounds > 0);
+    const turns = effect.duration?.turns;
+    const rounds = effect.duration?.rounds;
+    return (Number.isInteger(turns) && turns > 0) || (Number.isInteger(rounds) && rounds > 0);
 });
 ```
 
 #### Update Logic per Actor
+
 ```javascript
 if (temporaryEffects.length === 0) continue;
 
@@ -191,12 +203,15 @@ totalEffectsReduced += updates.length;
 ```
 
 #### Notifications
+
 ```javascript
 if (totalActorsProcessed > 0) {
-  ui.notifications.info("Zeit für alle Actoren wurde vorgerückt");
-  console.log(`Ilaris Alternative Actor Sheet | Advanced time: ${totalActorsProcessed} actors, ${totalEffectsReduced} effects reduced`);
+    ui.notifications.info('Zeit für alle Actoren wurde vorgerückt');
+    console.log(
+        `Ilaris Alternative Actor Sheet | Advanced time: ${totalActorsProcessed} actors, ${totalEffectsReduced} effects reduced`
+    );
 } else {
-  ui.notifications.info("Keine temporären Effekte auf der Szene vorhanden");
+    ui.notifications.info('Keine temporären Effekte auf der Szene vorhanden');
 }
 ```
 

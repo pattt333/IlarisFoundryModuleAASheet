@@ -9,21 +9,25 @@ Die Komponente ist bereits implementiert als Handlebars Partial und wird durch v
 ### Existing Features
 
 #### Core Structure
+
 - **Header Row**: Item-Image, Name, Stats, Stats2 (optional)
 - **Accordion Content**: Item Controls, Item Details
 - **Image**: Zeigt Item-Bild (24x24px), optional rollable für Würfelwürfe
 - **Ammunition Warning**: Icon bei fehlendem Munition (nur bei Waffen mit Munitionstyp)
 
 #### Item Controls (in Content)
+
 - **Weapon Toggles** (nur bei Waffen): Hauptwaffe/Nebenwaffe Toggle-Buttons
 - **Edit Button**: Item bearbeiten
 - **Delete Button**: Item löschen
 
 #### Stats Display
+
 - **stats**: Array von Stat-Strings (mit optionalen Tooltips via `statsTooltips`)
 - **stats2**: Zweites Array (optional, mit `stats2Tooltips`)
 
 #### Details Section
+
 - Flexible Detail-Rows mit Label/Value Paaren
 - Spezielle Formatierung für Description-Felder (`isDescription: true`)
 - Null/undefined/empty values werden nicht angezeigt
@@ -62,6 +66,7 @@ Ermöglicht Drag & Drop von Items für Integration mit externen Modulen wie Item
 #### Requirements
 
 **Functional Requirements:**
+
 - **Opt-in via Parameter**: `draggable=true/false` (default: `false`)
 - **Drag Handle**: Bei aktiviertem Drag wird gesamte Header-Row zu Drag-Handle
 - **Visual Feedback**: CSS-Klasse `draggable` auf `.item` Container bei aktiviertem Drag
@@ -70,12 +75,14 @@ Ermöglicht Drag & Drop von Items für Integration mit externen Modulen wie Item
 - **Module Independence**: Keine direkten Item Piles Dependencies
 
 **Technical Implementation:**
+
 - `draggable="true"` Attribut auf `.item` Container wenn Parameter gesetzt
 - `data-item-uuid="{{item.uuid}}"` Attribut für Drag-Daten
 - CSS `:hover` Cursor-Change bei draggable Items
 - Foundry `dragstart` Event mit standardisiertem Data-Format
 
 **Non-Functional Requirements:**
+
 - Keine Breaking Changes für bestehende Verwendungen
 - Kein JavaScript in Template (nur HTML/Handlebars)
 - CSS-only Visual Feedback
@@ -86,8 +93,8 @@ Ermöglicht Drag & Drop von Items für Integration mit externen Modulen wie Item
 ##### Template Changes (item-accordion.hbs)
 
 ```handlebars
-<div class="item accordion-item 
-    {{#if draggable}}draggable{{/if}}" 
+<div class="item accordion-item
+    {{#if draggable}}draggable{{/if}}"
     data-item-id="{{item._id}}"
     {{#if draggable}}
     draggable="true"
@@ -117,16 +124,16 @@ Ermöglicht Drag & Drop von Items für Integration mit externen Modulen wie Item
 
 ```handlebars
 {{!-- Mit Drag & Drop aktiviert --}}
-{{> "item-accordion.hbs" 
-    item=item 
+{{> "item-accordion.hbs"
+    item=item
     draggable=true
     nameLabel="Gegenstand"
     ...
 }}
 
 {{!-- Ohne Drag & Drop (default) --}}
-{{> "item-accordion.hbs" 
-    item=item 
+{{> "item-accordion.hbs"
+    item=item
     nameLabel="Gegenstand"
     ...
 }}
@@ -139,10 +146,10 @@ Ermöglicht Drag & Drop von Items für Integration mit externen Modulen wie Item
 _onDragStart(event) {
     const itemUuid = event.currentTarget.dataset.itemUuid;
     if (!itemUuid) return;
-    
+
     const item = fromUuidSync(itemUuid);
     if (!item) return;
-    
+
     const dragData = item.toDragData();
     event.dataTransfer.setData("text/plain", JSON.stringify(dragData));
 }
@@ -160,12 +167,14 @@ Ermöglicht Kontrolle über Sichtbarkeit des Delete-Buttons (z.B. für Read-Only
 #### Requirements
 
 **Functional Requirements:**
+
 - **Opt-in via Parameter**: `showDelete=true/false` (default: `true` für Backward Compatibility)
 - **Complete Removal**: Button wird nicht gerendert (nicht nur hidden)
 - **No Layout Shift**: Item-Controls Layout passt sich an
 - **Independent**: Funktioniert unabhängig von Edit-Button
 
 **Use Cases:**
+
 - Trade-Dialogs: Items anzeigen ohne Delete-Option
 - Read-Only Inventories: Ansicht ohne Modifikationsmöglichkeiten
 - Shared Containers: Nur eigene Items löschbar
@@ -175,24 +184,27 @@ Ermöglicht Kontrolle über Sichtbarkeit des Delete-Buttons (z.B. für Read-Only
 ##### Template Changes (item-accordion.hbs)
 
 ```handlebars
-<div class="item-controls">
+<div class='item-controls'>
     {{#if isWeapon}}
-    <a class="item-toggle {{item.system.hauptwaffe}}" data-itemid="{{item.id}}"
-        data-toggletype="hauptwaffe">
-        <span>HW</span>
-    </a>
-    <a class="item-toggle {{item.system.nebenwaffe}}" data-itemid="{{item.id}}"
-        data-toggletype="nebenwaffe">
-        <span>NW</span>
-    </a>
+        <a class='item-toggle {{item.system.hauptwaffe}}' data-itemid='{{item.id}}' data-toggletype='hauptwaffe'>
+            <span>HW</span>
+        </a>
+        <a class='item-toggle {{item.system.nebenwaffe}}' data-itemid='{{item.id}}' data-toggletype='nebenwaffe'>
+            <span>NW</span>
+        </a>
     {{/if}}
-    <a class="item-control item-edit" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{editTitle}}">
-        <i class="fas fa-edit ilaris-button-icon"></i>
+    <a class='item-control item-edit' data-itemclass='{{itemclass}}' data-itemid='{{item._id}}' title='{{editTitle}}'>
+        <i class='fas fa-edit ilaris-button-icon'></i>
     </a>
     {{#unless (eq showDelete false)}}
-    <a class="item-control item-delete" data-itemclass="{{itemclass}}" data-itemid="{{item._id}}" title="{{deleteTitle}}">
-        <i class="fas fa-trash ilaris-button-icon"></i>
-    </a>
+        <a
+            class='item-control item-delete'
+            data-itemclass='{{itemclass}}'
+            data-itemid='{{item._id}}'
+            title='{{deleteTitle}}'
+        >
+            <i class='fas fa-trash ilaris-button-icon'></i>
+        </a>
     {{/unless}}
 </div>
 ```
@@ -201,23 +213,23 @@ Ermöglicht Kontrolle über Sichtbarkeit des Delete-Buttons (z.B. für Read-Only
 
 ```handlebars
 {{!-- Delete Button hidden --}}
-{{> "item-accordion.hbs" 
-    item=item 
+{{> "item-accordion.hbs"
+    item=item
     showDelete=false
     nameLabel="Gegenstand (Trade)"
     ...
 }}
 
 {{!-- Delete Button visible (default) --}}
-{{> "item-accordion.hbs" 
-    item=item 
+{{> "item-accordion.hbs"
+    item=item
     nameLabel="Gegenstand"
     ...
 }}
 
 {{!-- Explicit visible --}}
-{{> "item-accordion.hbs" 
-    item=item 
+{{> "item-accordion.hbs"
+    item=item
     showDelete=true
     nameLabel="Gegenstand"
     ...
@@ -245,10 +257,10 @@ Ermöglicht Kontrolle über Sichtbarkeit des Delete-Buttons (z.B. für Read-Only
     deleteTitle="string"
     details=(array ...)
     isWeapon=boolean
-    
+
     // NEW: Optional Drag & Drop
     draggable=boolean              // Default: false
-    
+
     // NEW: Optional Delete Button
     showDelete=boolean             // Default: true (backward compatible)
 }}
@@ -259,14 +271,17 @@ Ermöglicht Kontrolle über Sichtbarkeit des Delete-Buttons (z.B. für Read-Only
 ## Implementation Steps
 
 ### Step 1: Add Drag & Drop Support
+
 1. **Update [item-accordion.hbs](templates/components/item-accordion.hbs)** — Add conditional `draggable`, `data-item-uuid`, `data-transfer-type` attributes auf `.item` div, CSS-Klasse `draggable`
 2. **Update [item-accordion.css](styles/item-accordion.css)** — Add `.item.draggable` styles mit `cursor: grab/grabbing`, `opacity` bei active, `user-select: none` für header
 3. **Update Actor Sheets** — Add `_onDragStart` Handler in [alternative-actor-sheet.js](scripts/sheets/alternative-actor-sheet.js) `activateListeners()`, bind auf `.item.draggable`
 
 ### Step 2: Add Optional Delete Button
+
 1. **Update [item-accordion.hbs](templates/components/item-accordion.hbs)** — Wrap delete button in `{{#unless (eq showDelete false)}}` conditional
 
 ### Step 3: Update Usage Examples (Optional)
+
 1. **Update [carrying.hbs](templates/components/carrying.hbs)** — Optional: Add `draggable=true` parameter for testing
 2. **Update [supporting.hbs](templates/components/supporting.hbs)** — Optional: Add parameters
 3. **Update [handcart.hbs](templates/components/handcart.hbs)** — Optional: Add parameters
@@ -293,6 +308,7 @@ Das Modul bleibt vollständig unabhängig von Item Piles, aber ermöglicht Integ
 ### Data Format Compatibility
 
 Foundry's Standard Item Drag Data:
+
 ```javascript
 {
     type: "Item",
@@ -307,6 +323,7 @@ Dieser Standard wird durch die UUID-based Implementation automatisch unterstütz
 ## Testing Checklist
 
 ### Drag & Drop Testing
+
 - [ ] Drag funktioniert nur wenn `draggable=true`
 - [ ] Cursor ändert sich zu grab/grabbing
 - [ ] Visual Feedback (opacity) bei Drag
@@ -315,6 +332,7 @@ Dieser Standard wird durch die UUID-based Implementation automatisch unterstütz
 - [ ] Keine Fehler bei `draggable=false` oder nicht gesetzt
 
 ### Delete Button Testing
+
 - [ ] Button sichtbar bei `showDelete=true`
 - [ ] Button sichtbar bei nicht gesetztem Parameter (default)
 - [ ] Button hidden bei `showDelete=false`
@@ -322,6 +340,7 @@ Dieser Standard wird durch die UUID-based Implementation automatisch unterstütz
 - [ ] Funktioniert unabhängig von anderen Controls
 
 ### Backward Compatibility Testing
+
 - [ ] Alle existierenden Verwendungen funktionieren ohne Änderung
 - [ ] Keine Breaking Changes
 - [ ] CSS nicht gebrochen
@@ -332,22 +351,26 @@ Dieser Standard wird durch die UUID-based Implementation automatisch unterstütz
 ## Technical Notes
 
 ### Why UUID instead of Item ID?
+
 - UUIDs sind globally unique und funktionieren über Actor-Grenzen
 - Foundry's `fromUuidSync()` ermöglicht einfache Item-Resolution
 - Standard für Foundry's Drag & Drop System
 
 ### Why CSS-only Visual Feedback?
+
 - Keine JavaScript-Overhead für Hover-States
 - Bessere Performance
 - Einfachere Wartung
 - Standard Browser-Verhalten
 
 ### Why Default `showDelete=true`?
+
 - Backward Compatibility mit allen existierenden Verwendungen
 - Erwartetes Standardverhalten (Items sind löschbar)
 - Explizites Opt-out für spezielle Fälle
 
 ### Module Independence
+
 - Keine direkten Dependencies zu Item Piles
 - Standard Foundry Drag & Drop API
 - Kann mit beliebigen Modulen verwendet werden

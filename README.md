@@ -22,6 +22,7 @@ This is an alternative actor sheet module for the [Ilaris Foundry VTT system](ht
 ### Manifest URL
 
 Use this manifest URL to install directly through Foundry VTT:
+
 ```
 https://raw.githubusercontent.com/pattt333/IlarisFoundryModuleAASheet/main/module.json
 ```
@@ -29,7 +30,7 @@ https://raw.githubusercontent.com/pattt333/IlarisFoundryModuleAASheet/main/modul
 ## Usage
 
 1. **Enable the Module**: After installation, enable the module in your world's module settings
-2. **Configure Actor Sheets**: Right-click on any actor and select "Configure Sheet" 
+2. **Configure Actor Sheets**: Right-click on any actor and select "Configure Sheet"
 3. **Select Alternative Sheet**: Choose "Alternative Actor Sheet" from the dropdown
 4. **Enjoy**: The actor will now use the enhanced alternative layout
 
@@ -66,9 +67,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Third-Party Assets
 
-This module uses icons from [game-icons.net](https://game-icons.net/), which are licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). 
+This module uses icons from [game-icons.net](https://game-icons.net/), which are licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 
 **Icon Attribution:**
+
 - All weapon and skill icons in `assets/icons/` are sourced from game-icons.net
 - Created by various artists: Lorc, Delapouite, Carl Olsen, Skoll, Willdabeast, and others
 - Full attribution details: https://game-icons.net/about.html#authors

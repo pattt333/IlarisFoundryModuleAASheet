@@ -6,7 +6,7 @@ Implementing automatic item pile creation next to actor token when thrown weapon
 
 1. **Create thrown weapon detection function** in [utilities.js](scripts/utilities.js) called `isThrowableWeapon(item)` returning true if `item.type === "fernkampfwaffe" && item.system.fertigkeit === "Wurfwaffen"`, export for reuse
 
-2. **Add token validation and hex grid position calculation** in hook handler: after ammunition lock check, verify token exists with `canvas.tokens.get(actor.getActiveTokens()[0]?.id)` – if no token, log silent and return early without consuming weapon. Calculate hex grid offset: `const pileX = token.x + canvas.grid.size; const pileY = token.y;`
+2. **Add token validation and hex grid position calculation** in hook handler for `Ilaris.postAngriff`: first filter with `dialog.attackType === "ranged"`, map `actor`/`weapon` from `dialog`, then after ammunition lock check verify token exists with `canvas.tokens.get(actor.getActiveTokens()[0]?.id)` – if no token, log silent and return early without consuming weapon. Calculate hex grid offset: `const pileX = token.x + canvas.grid.size; const pileY = token.y;`
 
 3. **Extract thrown weapon logic to separate async function** called `createThrowableWeaponPile(actor, weapon, token)` without await in hook (fire-and-forget pattern), with try-catch logging errors only
 

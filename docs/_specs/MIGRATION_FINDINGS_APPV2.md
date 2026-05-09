@@ -30,7 +30,7 @@ export class IlarisActorSheet extends ActorSheet {
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ['ilaris', 'sheet', 'actor'],
             // ...
-        })
+        });
     }
 }
 ```
@@ -38,18 +38,18 @@ export class IlarisActorSheet extends ActorSheet {
 #### ✅ NEUES SYSTEM (V2 - Target)
 
 ```javascript
-const { HandlebarsApplicationMixin, ActorSheetV2 } = foundry.applications.api
+const { HandlebarsApplicationMixin, ActorSheetV2 } = foundry.applications.api;
 
 export class IlarisActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     static DEFAULT_OPTIONS = {
         // Konfiguration ohne mergeObject!
-    }
+    };
 
     static PARTS = {
         header: { template: 'path/to/header.hbs' },
         tabs: { template: 'path/to/tabs.hbs' },
         body: { template: 'path/to/body.hbs' },
-    }
+    };
 }
 ```
 
@@ -306,11 +306,9 @@ async _prepareContext(options) {
 #### ❌ ALT (überall jQuery)
 
 ```javascript
-html.find('.ausklappen-trigger').click((ev) => this._ausklappView(ev))
-html.find('.toggle-bool').click((ev) => this._onToggleBool(ev))
-html.find('input[name="system.gesundheit.wunden"]').on('input', (ev) =>
-    this._onHealthValueChange(ev),
-)
+html.find('.ausklappen-trigger').click(ev => this._ausklappView(ev));
+html.find('.toggle-bool').click(ev => this._onToggleBool(ev));
+html.find('input[name="system.gesundheit.wunden"]').on('input', ev => this._onHealthValueChange(ev));
 ```
 
 #### ✅ NEU (Actions + vanilla)
@@ -518,12 +516,12 @@ parts/
 // In Template:
 {
     {
-        actor.name
+        actor.name;
     }
 }
 {
     {
-        actor.system.attribute
+        actor.system.attribute;
     }
 }
 ```
@@ -556,7 +554,7 @@ async _prepareContext(options) {
 #### ❌ ALT (Foundry-verwaltet)
 
 ```javascript
-scrollY: ['.herotab'] // Automatisch
+scrollY: ['.herotab']; // Automatisch
 ```
 
 #### ✅ NEU (CSS-basiert)

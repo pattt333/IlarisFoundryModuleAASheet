@@ -1,9 +1,9 @@
 /**
  * Alternative Actor Sheet for Ilaris (AppV2)
- * 
+ *
  * This class extends the base HeldenSheet (which uses HandlebarsApplicationMixin + ActorSheetV2)
  * and provides an alternative layout with enhanced functionality.
- * 
+ *
  * Migrated from ApplicationV1 to ApplicationV2 patterns:
  * - static DEFAULT_OPTIONS instead of get defaultOptions()
  * - static PARTS instead of template in defaultOptions
@@ -12,13 +12,12 @@
  * - Static action methods instead of jQuery event handlers
  * - Vanilla DOM instead of jQuery selectors in actions
  */
-import { HeldenSheet } from "../../../../systems/Ilaris/scripts/actors/sheets/held.js";
-import { AccordionManager } from "../components/accordion-manager.js";
-import { FavoritesManager } from "../components/favorites-manager.js";
-import { advanceEffectTime } from "../utilities.js";
+import { HeldenSheet } from '../../../../systems/Ilaris/scripts/actors/sheets/held.js';
+import { AccordionManager } from '../components/accordion-manager.js';
+import { FavoritesManager } from '../components/favorites-manager.js';
+import { advanceEffectTime } from '../utilities.js';
 
 export class IlarisAlternativeActorSheet extends HeldenSheet {
-    
     constructor(...args) {
         super(...args);
         this.accordionManager = new AccordionManager(this.actor.id);
@@ -31,7 +30,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
 
     /** @override */
     static DEFAULT_OPTIONS = {
-        classes: ["alternative"],
+        classes: ['alternative'],
         position: { width: 820, height: 900 },
         actions: {
             itemCreate: IlarisAlternativeActorSheet.onItemCreate,
@@ -46,62 +45,62 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             rest: IlarisAlternativeActorSheet.onRest,
             schipIncrease: IlarisAlternativeActorSheet.onSchipIncrease,
             schipDecrease: IlarisAlternativeActorSheet.onSchipDecrease,
-        }
-    }
+        },
+    };
 
     /** @override - Single monolithic template part */
     static PARTS = {
         header: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/character/alternative-actor-header.hbs"
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/character/alternative-actor-header.hbs',
         },
         sidebar: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/character/alternative-actor-sidebar.hbs"
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/character/alternative-actor-sidebar.hbs',
         },
         tabs: {
             template: 'templates/generic/tab-navigation.hbs',
         },
         main: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/main-tab.hbs",
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/main-tab.hbs',
             scrollable: [''],
         },
         kampf: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/kampf-tab.hbs",
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/kampf-tab.hbs',
             scrollable: [''],
         },
         skills: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/skills-tab.hbs",
-            scrollable: ['']
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/skills-tab.hbs',
+            scrollable: [''],
         },
         spells: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/spells-tab.hbs",
-            scrollable: ['']
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/spells-tab.hbs',
+            scrollable: [''],
         },
         items: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/items-tab.hbs",
-            scrollable: ['']
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/items-tab.hbs',
+            scrollable: [''],
         },
         effects: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/effects-tab.hbs",
-            scrollable: ['']
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/effects-tab.hbs',
+            scrollable: [''],
         },
         biography: {
-            template: "modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/biography-tab.hbs",
+            template: 'modules/ilaris-alternative-actor-sheet/templates/sheets/character/tabs/biography-tab.hbs',
             scrollable: [''],
-        }
-    }
+        },
+    };
 
     static TABS = {
         primary: {
             tabs: [
-                { id: "main", icon: "fa-solid fa-chart-simple", label: "Attribute" },
-                { id: "kampf", icon: "fa-solid fa-fist-raised", label: "Kampf" },
-                { id: "skills", icon: "fa-solid fa-book", label: "Fertigkeiten" },
-                { id: "spells", icon: "fa-solid fa-magic", label: "Übernatürlich" },
-                { id: "items", icon: "fa-solid fa-box", label: "Inventar" },
-                { id: "effects", icon: "fa-solid fa-bolt", label: "Effekte" },
-                { id: "biography", icon: "fa-solid fa-user", label: "Notizen" }
+                { id: 'main', icon: 'fa-solid fa-chart-simple', label: 'Attribute' },
+                { id: 'kampf', icon: 'fa-solid fa-fist-raised', label: 'Kampf' },
+                { id: 'skills', icon: 'fa-solid fa-book', label: 'Fertigkeiten' },
+                { id: 'spells', icon: 'fa-solid fa-magic', label: 'Übernatürlich' },
+                { id: 'items', icon: 'fa-solid fa-box', label: 'Inventar' },
+                { id: 'effects', icon: 'fa-solid fa-bolt', label: 'Effekte' },
+                { id: 'biography', icon: 'fa-solid fa-user', label: 'Notizen' },
             ],
-            initial: "kampf", // Set the initial tab
+            initial: 'kampf', // Set the initial tab
         },
     };
 
@@ -127,21 +126,22 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             }
 
             // Add effect-items for the Kampf-Tab
-            context.actor.effectItems = this.actor.items.filter(i => i.type === "effect-item");
+            context.actor.effectItems = this.actor.items.filter(i => i.type === 'effect-item');
 
             // Add canAdvanceTime flag for effect time-advance button
             context.canAdvanceTime = this.actor.isOwner || game.user.isGM;
 
             // Add ammunition status for ranged weapons (only for "held" actor type)
-            if (this.actor.type === "held" && game.settings.get("ilaris-alternative-actor-sheet", "ammunitionTracking")) {
-                const AMMUNITION_TYPES = ["Kugel", "Pfeil", "Bolzen"];
-                const inventoryItems = this.actor.items.filter(i => i.type === "gegenstand");
+            if (
+                this.actor.type === 'held' &&
+                game.settings.get('ilaris-alternative-actor-sheet', 'ammunitionTracking')
+            ) {
+                const AMMUNITION_TYPES = ['Kugel', 'Pfeil', 'Bolzen'];
+                const inventoryItems = this.actor.items.filter(i => i.type === 'gegenstand');
 
                 if (context.actor.fernkampfwaffen) {
                     for (const weapon of context.actor.fernkampfwaffen) {
-                        const ammoProperty = weapon.system.eigenschaften?.find(
-                            e => AMMUNITION_TYPES.includes(e.key)
-                        );
+                        const ammoProperty = weapon.system.eigenschaften?.find(e => AMMUNITION_TYPES.includes(e.key));
 
                         if (ammoProperty) {
                             weapon.ammunitionType = ammoProperty.key;
@@ -158,7 +158,6 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             }
 
             return context;
-
         } catch (error) {
             console.error('IlarisAlternativeActorSheet | Error in _prepareContext:', error);
 
@@ -167,10 +166,10 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 data: this.actor.system,
                 system: this.actor.system,
                 config: CONFIG.ILARIS || {},
-                isCharacter: this.actor.type === "held",
+                isCharacter: this.actor.type === 'held',
                 isOwner: this.actor.isOwner,
                 // editable: this.isEditable,
-                effectItems: this.actor.items.filter(i => i.type === "effect-item")
+                effectItems: this.actor.items.filter(i => i.type === 'effect-item'),
             };
         }
     }
@@ -185,12 +184,12 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             case 'items':
             case 'biography':
             case 'effects':
-                context.tab = context.tabs[partId]
-                break
+                context.tab = context.tabs[partId];
+                break;
             default:
         }
 
-        return context
+        return context;
     }
 
     /* -------------------------------------------- */
@@ -209,12 +208,12 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
 
         // DragDrop setup
         const dragDrop = new foundry.applications.ux.DragDrop.implementation({
-            dragSelector: ".item-drag-handle",
-            dropSelector: ".drop-target",
+            dragSelector: '.item-drag-handle',
+            dropSelector: '.drop-target',
             callbacks: {
                 dragstart: this._onDragStart.bind(this),
-                drop: this._onDrop.bind(this)
-            }
+                drop: this._onDrop.bind(this),
+            },
         });
         dragDrop.bind(this.element);
     }
@@ -245,7 +244,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         if (!item) return;
 
         const dragData = item.toDragData();
-        event.dataTransfer.setData("text/plain", JSON.stringify(dragData));
+        event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
     }
 
     /**
@@ -256,24 +255,23 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
     async _onDrop(event) {
         event.preventDefault();
         const target = event.target;
-        if (target.classList) target.classList.remove("drag-over");
+        if (target.classList) target.classList.remove('drag-over');
 
         try {
-            const dropData = JSON.parse(event.dataTransfer.getData("text/plain"));
+            const dropData = JSON.parse(event.dataTransfer.getData('text/plain'));
             const dropType = target.dataset?.dropType;
 
-            if (dropType === "itemPile") {
+            if (dropType === 'itemPile') {
                 await this._handleItemPileTrade(dropData);
             } else {
                 const data = TextEditor.getDragEventData(event);
                 const item = await fromUuid(data.uuid);
 
                 // Effect library drop: transfer only effects
-                if (item.type === "effect-item") {
+                if (item.type === 'effect-item') {
                     try {
-                        
                         if (!item) {
-                            ui.notifications.warn("Item konnte nicht gefunden werden.");
+                            ui.notifications.warn('Item konnte nicht gefunden werden.');
                             return;
                         }
 
@@ -295,16 +293,16 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
 
                         ui.notifications.info(`Effekt(e) von ${item.name} wurden verarbeitet.`);
                     } catch (error) {
-                        console.error("Error transferring effects:", error);
-                        ui.notifications.error("Fehler beim Übertragen der Effekte.");
+                        console.error('Error transferring effects:', error);
+                        ui.notifications.error('Fehler beim Übertragen der Effekte.');
                     }
                     return;
                 }
                 await super._onDrop(event);
             }
         } catch (err) {
-            console.error("Fehler beim Verarbeiten des Drop-Ereignisses:", err);
-            ui.notifications.error("Item konnte nicht übertragen werden.");
+            console.error('Fehler beim Verarbeiten des Drop-Ereignisses:', err);
+            ui.notifications.error('Item konnte nicht übertragen werden.');
         }
     }
 
@@ -314,7 +312,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
      * @private
      */
     async _handleItemPileTrade(dropData) {
-        if (game.modules.get("item-piles")?.active) {
+        if (game.modules.get('item-piles')?.active) {
             const targetPile = await ItemPiles.API.getPileForActor(this.actor);
             if (targetPile?.isTrader) {
                 await ItemPiles.API.tradeItems(dropData.actorId, this.actor.id, [dropData.itemPileData]);
@@ -340,7 +338,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         const newSchips = Math.min(currentSchips + 1, maxSchips);
 
         await this.actor.update({
-            'system.schips.schips_stern': newSchips
+            'system.schips.schips_stern': newSchips,
         });
     }
 
@@ -357,7 +355,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         const newSchips = Math.max(currentSchips - 1, 0);
 
         await this.actor.update({
-            'system.schips.schips_stern': newSchips
+            'system.schips.schips_stern': newSchips,
         });
     }
 
@@ -380,7 +378,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             labels = {
                 current: 'AsP/Eng aktuell',
                 blocked: 'gAsP/gEng (geblockt)',
-                title: 'AsP/Energie bearbeiten'
+                title: 'AsP/Energie bearbeiten',
             };
         } else if (energyType === 'kap') {
             currentValue = actor.system.abgeleitete.kap_stern || 0;
@@ -389,7 +387,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             labels = {
                 current: 'KaP/Eng aktuell',
                 blocked: 'gKaP/gEng (geblockt)',
-                title: 'KaP/Energie bearbeiten'
+                title: 'KaP/Energie bearbeiten',
             };
         }
 
@@ -413,26 +411,26 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             content: content,
             buttons: [
                 {
-                    action: "save",
-                    label: "Speichern",
-                    icon: "fas fa-check",
+                    action: 'save',
+                    label: 'Speichern',
+                    icon: 'fas fa-check',
                     default: true,
                     callback: (event, button, dialog) => {
                         const newCurrent = button.form.elements.current.valueAsNumber || 0;
                         const newBlocked = button.form.elements.blocked.valueAsNumber || 0;
                         return { current: newCurrent, blocked: newBlocked };
-                    }
+                    },
                 },
                 {
-                    action: "cancel",
-                    label: "Abbrechen",
-                    icon: "fas fa-times"
-                }
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                    icon: 'fas fa-times',
+                },
             ],
-            rejectClose: false
+            rejectClose: false,
         });
 
-        if (!result || typeof result !== "object") return;
+        if (!result || typeof result !== 'object') return;
 
         const updateData = {};
         if (energyType === 'asp') {
@@ -469,27 +467,27 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             content: content,
             buttons: [
                 {
-                    action: "save",
-                    label: "Speichern",
-                    icon: "fas fa-check",
+                    action: 'save',
+                    label: 'Speichern',
+                    icon: 'fas fa-check',
                     default: true,
                     callback: (event, button, dialog) => {
                         return button.form.elements.wunden.valueAsNumber || 0;
-                    }
+                    },
                 },
                 {
-                    action: "cancel",
-                    label: "Abbrechen",
-                    icon: "fas fa-times"
-                }
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                    icon: 'fas fa-times',
+                },
             ],
-            rejectClose: false
+            rejectClose: false,
         });
 
-        if (result === null || typeof result === "string") return;
+        if (result === null || typeof result === 'string') return;
 
         await actor.update({
-            'system.gesundheit.wunden': Math.max(result + currentWounds, 0)
+            'system.gesundheit.wunden': Math.max(result + currentWounds, 0),
         });
     }
 
@@ -510,7 +508,9 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         }
 
         pack.render(true);
-        ui.notifications.info("Ziehe einen Effekt aus der Bibliothek auf das Charakterblatt, um nur den Effekt hinzuzufügen.");
+        ui.notifications.info(
+            'Ziehe einen Effekt aus der Bibliothek auf das Charakterblatt, um nur den Effekt hinzuzufügen.'
+        );
     }
 
     /**
@@ -542,24 +542,24 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             content: content,
             buttons: [
                 {
-                    action: "save",
-                    label: "Speichern",
-                    icon: "fas fa-check",
+                    action: 'save',
+                    label: 'Speichern',
+                    icon: 'fas fa-check',
                     default: true,
                     callback: (event, button, dialog) => {
                         return { value: button.form.elements.value.valueAsNumber || 0 };
-                    }
+                    },
                 },
                 {
-                    action: "cancel",
-                    label: "Abbrechen",
-                    icon: "fas fa-times"
-                }
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                    icon: 'fas fa-times',
+                },
             ],
-            rejectClose: false
+            rejectClose: false,
         });
 
-        if (!result || typeof result !== "object") return;
+        if (!result || typeof result !== 'object') return;
 
         await actor.update({ [statField]: result.value });
     }
@@ -590,22 +590,22 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             content: content,
             buttons: [
                 {
-                    action: "save",
-                    label: "Speichern",
+                    action: 'save',
+                    label: 'Speichern',
                     default: true,
                     callback: (event, button, dialog) => {
                         return { value: button.form.elements.value.valueAsNumber || 0 };
-                    }
+                    },
                 },
                 {
-                    action: "cancel",
-                    label: "Abbrechen"
-                }
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                },
             ],
-            rejectClose: false
+            rejectClose: false,
         });
 
-        if (!result || typeof result !== "object") return;
+        if (!result || typeof result !== 'object') return;
 
         const updatePath = `system.attribute.${attributeKey}.wert`;
         await actor.update({ [updatePath]: result.value });
@@ -624,7 +624,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         const effect = this.actor.effects.get(effectId);
 
         if (!effect) {
-            ui.notifications.error("Effect nicht gefunden");
+            ui.notifications.error('Effect nicht gefunden');
             return;
         }
 
@@ -644,7 +644,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         const effect = this.actor.effects.get(effectId);
 
         if (!effect) {
-            ui.notifications.error("Effect nicht gefunden");
+            ui.notifications.error('Effect nicht gefunden');
             return;
         }
 
@@ -673,14 +673,14 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             const effectsReduced = await advanceEffectTime(this.actor);
 
             if (effectsReduced === 0) {
-                ui.notifications.info("Keine temporären Effekte vorhanden");
+                ui.notifications.info('Keine temporären Effekte vorhanden');
                 return;
             }
 
-            ui.notifications.info("Temporäre Effekte wurden um 1 Zeiteinheit reduziert");
+            ui.notifications.info('Temporäre Effekte wurden um 1 Zeiteinheit reduziert');
         } catch (error) {
             console.error('IlarisAlternativeActorSheet | Error advancing effect time:', error);
-            ui.notifications.error("Fehler beim Vorrücken der Effekt-Zeit");
+            ui.notifications.error('Fehler beim Vorrücken der Effekt-Zeit');
         }
     }
 
@@ -764,33 +764,33 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         `;
 
         const result = await foundry.applications.api.DialogV2.wait({
-            window: { title: "Regeneration während Rast" },
+            window: { title: 'Regeneration während Rast' },
             content: content,
             buttons: [
                 {
-                    action: "rest",
-                    label: "Rast durchführen",
-                    icon: "fas fa-bed",
+                    action: 'rest',
+                    label: 'Rast durchführen',
+                    icon: 'fas fa-bed',
                     default: true,
                     callback: (event, button, dialog) => {
-                        const additionalEnergyInput = button.form.elements["additional-energy"];
-                        const lawTimesInput = button.form.elements["law-times"];
+                        const additionalEnergyInput = button.form.elements['additional-energy'];
+                        const lawTimesInput = button.form.elements['law-times'];
                         return {
-                            additionalEnergy: additionalEnergyInput ? (additionalEnergyInput.valueAsNumber || 0) : 0,
-                            additionalLaw: lawTimesInput ? (lawTimesInput.valueAsNumber || 1) : 1
+                            additionalEnergy: additionalEnergyInput ? additionalEnergyInput.valueAsNumber || 0 : 0,
+                            additionalLaw: lawTimesInput ? lawTimesInput.valueAsNumber || 1 : 1,
                         };
-                    }
+                    },
                 },
                 {
-                    action: "cancel",
-                    label: "Abbrechen",
-                    icon: "fas fa-times"
-                }
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                    icon: 'fas fa-times',
+                },
             ],
-            rejectClose: false
+            rejectClose: false,
         });
 
-        if (!result || typeof result !== "object") return;
+        if (!result || typeof result !== 'object') return;
 
         const updateData = {};
 
@@ -798,15 +798,21 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
             const currentASP = abgeleitete.asp_stern || 0;
             const maxASP = abgeleitete.asp || 0;
             const basisRegen = Math.ceil(maxASP / 8);
-            updateData['system.abgeleitete.asp_stern'] = Math.min(currentASP + basisRegen + result.additionalEnergy, maxASP);
+            updateData['system.abgeleitete.asp_stern'] = Math.min(
+                currentASP + basisRegen + result.additionalEnergy,
+                maxASP
+            );
         } else if (energyType === 'kap') {
             const currentKAP = abgeleitete.kap_stern || 0;
             const maxKAP = abgeleitete.kap || 0;
             const basisRegen = Math.ceil(maxKAP / 16);
-            updateData['system.abgeleitete.kap_stern'] = Math.min(currentKAP + basisRegen + result.additionalEnergy, maxKAP);
+            updateData['system.abgeleitete.kap_stern'] = Math.min(
+                currentKAP + basisRegen + result.additionalEnergy,
+                maxKAP
+            );
         }
 
-        const newWunden = Math.max(0, (gesundheit.wunden || 0) - (lawWert * result.additionalLaw));
+        const newWunden = Math.max(0, (gesundheit.wunden || 0) - lawWert * result.additionalLaw);
         updateData['system.gesundheit.wunden'] = newWunden;
 
         await actor.update(updateData);

@@ -93,16 +93,19 @@
 ## Implementation Notes
 
 ### Data Structure
+
 - Weapon properties are stored in `item.system.eigenschaften` as array of objects
 - Each property has structure: `{key: "PropertyName", parameters: [...]}`
 - Fernkampfoption parameter contains the exact name of the fernkampfwaffe
 
 ### Compendium Structure
+
 - Pack ID: `"ilaris-alternative-actor-sheet.nenneke_regeln-waffen"`
 - Contains both nahkampfwaffe and fernkampfwaffe types
 - Search uses exact name match from parameters[0]
 
 ### Technical Constraints
+
 - Hook must be non-async to allow fire-and-forget pattern
 - Async operations extracted to separate helper function
 - Guard clauses must return early for non-applicable items

@@ -18,20 +18,21 @@ Erweitere [item-accordion.hbs](templates/components/item-accordion.hbs): Innerha
 
 ### 4. Hook-Handler Grundstruktur mit Locking
 
-Implementiere in [module.js](module.js) `Hooks.on('Ilaris.fernkampfAngriffClick', async (rollResult, actor, item) => {...})`: Prüfe Setting via `game.settings.get()`, prüfe `actor.type === "held"`. Implementiere einfachen Locking-Mechanismus: Prüfe Flag `actor.getFlag("ilaris-alternative-actor-sheet", "processingAmmunition")`, falls true return early. Setze Flag auf true via `actor.setFlag()` zu Beginn, setze auf false am Ende (try-finally Block). Extrahiere Munitionstyp aus `item.system.eigenschaften.find()`.
+Implementiere in [module.js](module.js) `Hooks.on('Ilaris.postAngriff', async (rollResult, dialog) => {...})`: Prüfe zuerst `dialog.attackType === "ranged"`, extrahiere danach `actor` und `item` aus `dialog`. Prüfe Setting via `game.settings.get()`, prüfe `actor.type === "held"`. Implementiere einfachen Locking-Mechanismus: Prüfe Flag `actor.getFlag("ilaris-alternative-actor-sheet", "processingAmmunition")`, falls true return early. Setze Flag auf true via `actor.setFlag()` zu Beginn, setze auf false am Ende (try-finally Block). Extrahiere Munitionstyp aus `item.system.eigenschaften.find()`.
 
 ### 5. Fumble-Handling und Munitionsverbrauch
 
-Im Hook: Falls `rollResult.fumble === true`, würfle `new Roll("2d6")`, evaluiere async. Erstelle ChatMessage mit inline HTML: Roter container `<div style="border: 2px solid #ff0000; padding: 10px;"><h3><i class="fas fa-skull-crossbones"></i> Fernkampf-Fumble!</h3><p><strong>2W6 Ergebnis:</strong> ${roll.total}</p><p>${effectText}</p></div>`. 
+Im Hook: Falls `rollResult.fumble === true`, würfle `new Roll("2d6")`, evaluiere async. Erstelle ChatMessage mit inline HTML: Roter container `<div style="border: 2px solid #ff0000; padding: 10px;"><h3><i class="fas fa-skull-crossbones"></i> Fernkampf-Fumble!</h3><p><strong>2W6 Ergebnis:</strong> ${roll.total}</p><p>${effectText}</p></div>`.
 
-Effect-Text basierend auf Roll: 
-- **(2)** Hole "Blutung" aus `game.packs.get("ilaris-alternative-actor-sheet.effect-library")`, `pack.getDocuments()`, finde nach Name, clone und `actor.createEmbeddedDocuments("Item", [itemData])`, bei Fehler `ui.notifications.warn()` und Chat-Text "Blutung muss manuell hinzugefügt werden", verbrauche 1 Munition. 
-- **(3)** Text "Doppelter Munitionsverbrauch", verbrauche 2 Munition (silent wenn nicht vorhanden). 
-- **(4-8)** Text "Fehlschuss, Waffe muss mit einer Aktion bereit gemacht werden", verbrauche 1 Munition. 
-- **(9-11)** Würfle `new Roll(item.system.schaden)`, evaluiere, Text "Ein Verbündeter erleidet ${damageRoll.total} Schaden (Hälfte aufgerundet: ${Math.ceil(damageRoll.total/2)})", verbrauche 1 Munition. 
-- **(12)** Würfle Schaden, Text "Du erleidest ${damageRoll.total} Schaden", addiere via `actor.update({"system.gesundheit.wunden": actor.system.gesundheit.wunden + damageRoll.total})`, verbrauche 1 Munition. 
+Effect-Text basierend auf Roll:
 
-Bei nicht-Fumble: Verbrauche 1 Munition. 
+- **(2)** Hole "Blutung" aus `game.packs.get("ilaris-alternative-actor-sheet.effect-library")`, `pack.getDocuments()`, finde nach Name, clone und `actor.createEmbeddedDocuments("Item", [itemData])`, bei Fehler `ui.notifications.warn()` und Chat-Text "Blutung muss manuell hinzugefügt werden", verbrauche 1 Munition.
+- **(3)** Text "Doppelter Munitionsverbrauch", verbrauche 2 Munition (silent wenn nicht vorhanden).
+- **(4-8)** Text "Fehlschuss, Waffe muss mit einer Aktion bereit gemacht werden", verbrauche 1 Munition.
+- **(9-11)** Würfle `new Roll(item.system.schaden)`, evaluiere, Text "Ein Verbündeter erleidet ${damageRoll.total} Schaden (Hälfte aufgerundet: ${Math.ceil(damageRoll.total/2)})", verbrauche 1 Munition.
+- **(12)** Würfle Schaden, Text "Du erleidest ${damageRoll.total} Schaden", addiere via `actor.update({"system.gesundheit.wunden": actor.system.gesundheit.wunden + damageRoll.total})`, verbrauche 1 Munition.
+
+Bei nicht-Fumble: Verbrauche 1 Munition.
 
 Munitionsverbrauch-Helper: Suche `gegenstand` mit `ammunitionType`, falls nicht vorhanden zeige `ui.notifications.warn()` und ChatMessage mit Actor name/img, falls vorhanden: `update({"system.quantity": newQty})`, bei 0 `delete()`.
 
@@ -57,12 +58,12 @@ Munitionsverbrauch-Helper: Suche `gegenstand` mit `ammunitionType`, falls nicht 
 
 ```javascript
 ChatMessage.create({
-  speaker: ChatMessage.getSpeaker({actor}),
-  content: `<div style="border: 2px solid #ff0000; padding: 10px; border-radius: 5px;">
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: `<div style="border: 2px solid #ff0000; padding: 10px; border-radius: 5px;">
     <h3><i class="fas fa-skull-crossbones"></i> Fernkampf-Fumble!</h3>
     <p><strong>2W6 Ergebnis:</strong> ${roll.total}</p>
     <p>${effectDescription}</p>
-  </div>`
+  </div>`,
 });
 ```
 
@@ -70,36 +71,36 @@ ChatMessage.create({
 
 ```javascript
 // Am Anfang der Hook-Funktion
-if (actor.getFlag("ilaris-alternative-actor-sheet", "processingAmmunition")) return;
+if (actor.getFlag('ilaris-alternative-actor-sheet', 'processingAmmunition')) return;
 try {
-  await actor.setFlag("ilaris-alternative-actor-sheet", "processingAmmunition", true);
-  // ... Haupt-Logik ...
+    await actor.setFlag('ilaris-alternative-actor-sheet', 'processingAmmunition', true);
+    // ... Haupt-Logik ...
 } finally {
-  await actor.setFlag("ilaris-alternative-actor-sheet", "processingAmmunition", false);
+    await actor.setFlag('ilaris-alternative-actor-sheet', 'processingAmmunition', false);
 }
 ```
 
 ### Blutung-Item aus Pack
 
 ```javascript
-const pack = game.packs.get("ilaris-alternative-actor-sheet.effect-library");
+const pack = game.packs.get('ilaris-alternative-actor-sheet.effect-library');
 const documents = await pack.getDocuments();
-const blutungItem = documents.find(d => d.name === "Blutung");
+const blutungItem = documents.find(d => d.name === 'Blutung');
 if (blutungItem) {
-  const itemData = blutungItem.toObject();
-  await actor.createEmbeddedDocuments("Item", [itemData]);
+    const itemData = blutungItem.toObject();
+    await actor.createEmbeddedDocuments('Item', [itemData]);
 }
 ```
 
 ## Fumble-Regeltabelle (Referenz)
 
-| 2W6 | Auswirkung |
-|-----|------------|
-| 2 | Du erhältst einen Stack Blutung |
-| 3 | Du verbrauchst doppelt so viel Munition |
-| 4-8 | Fehlschuss, du musst deine Waffe mit einer Aktion Bereit machen |
+| 2W6  | Auswirkung                                                                                                                                                                                                                                    |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2    | Du erhältst einen Stack Blutung                                                                                                                                                                                                               |
+| 3    | Du verbrauchst doppelt so viel Munition                                                                                                                                                                                                       |
+| 4-8  | Fehlschuss, du musst deine Waffe mit einer Aktion Bereit machen                                                                                                                                                                               |
 | 9-11 | Ein Verbündetes Ziel in Reichweite (vom Spielleiter gewählt oder nächstes Ziel in der Schusslinie) erleidet die Hälfte deines normalen Waffenschadens (aufgerundet). Falls keines vorhanden ist, verfehlt der Schuss knapp deinen eigenen Fuß |
-| 12 | Du erleidest deinen Waffenschaden |
+| 12   | Du erleidest deinen Waffenschaden                                                                                                                                                                                                             |
 
 ## Implementierungs-Details
 
@@ -112,10 +113,10 @@ if (blutungItem) {
 ### UI-Verhalten
 
 - Exclamation-Icon erscheint nur wenn:
-  - Setting ist aktiviert
-  - Actor ist vom Typ "held"
-  - Waffe hat Munitions-Eigenschaft
-  - Keine passende Munition im Inventar (quantity > 0)
+    - Setting ist aktiviert
+    - Actor ist vom Typ "held"
+    - Waffe hat Munitions-Eigenschaft
+    - Keine passende Munition im Inventar (quantity > 0)
 - Icon verschwindet automatisch wenn Munition hinzugefügt wird (Sheet re-rendered durch System)
 
 ### Hook-Verhalten

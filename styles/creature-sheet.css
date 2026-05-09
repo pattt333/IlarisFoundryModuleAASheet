@@ -358,21 +358,20 @@
    =================================== */
 
 @media (max-width: 750px) {
-    
     .ilaris.sheet.actor.alternative.kreaturen .header-details {
         min-width: 100%;
         align-items: center;
     }
-    
+
     .ilaris.sheet.actor.alternative.kreaturen .stats-section {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .ilaris.sheet.actor.alternative.kreaturen .primary-attributes {
         justify-content: center;
     }
-    
+
     .ilaris.sheet.actor.alternative.kreaturen .profile-secondary-stats {
         justify-content: center;
     }

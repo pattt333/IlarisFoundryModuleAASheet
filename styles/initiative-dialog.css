@@ -144,7 +144,7 @@
     font-size: 0.85rem;
 }
 
-.initiative-dialog-form .form-group input[type="number"],
+.initiative-dialog-form .form-group input[type='number'],
 .initiative-dialog-form .form-group select {
     width: 100%;
     padding: 0.4rem;
@@ -156,7 +156,7 @@
     height: auto;
 }
 
-.mass-initiative-dialog-form .form-group input[type="number"],
+.mass-initiative-dialog-form .form-group input[type='number'],
 .mass-initiative-dialog-form .form-group select {
     width: 100%;
     padding: 0.4rem;
@@ -168,17 +168,17 @@
     height: auto;
 }
 
-.initiative-dialog-form .form-group input[type="number"]:focus,
+.initiative-dialog-form .form-group input[type='number']:focus,
 .initiative-dialog-form .form-group select:focus,
-.mass-initiative-dialog-form .form-group input[type="number"]:focus,
+.mass-initiative-dialog-form .form-group input[type='number']:focus,
 .mass-initiative-dialog-form .form-group select:focus {
     outline: 1px solid var(--primary-color);
     border-color: var(--primary-color);
 }
 
-.initiative-dialog-form .form-group input[type="number"]:disabled,
+.initiative-dialog-form .form-group input[type='number']:disabled,
 .initiative-dialog-form .form-group select:disabled,
-.mass-initiative-dialog-form .form-group input[type="number"]:disabled,
+.mass-initiative-dialog-form .form-group input[type='number']:disabled,
 .mass-initiative-dialog-form .form-group select:disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -214,8 +214,8 @@
     color: #ddd;
 }
 
-.initiative-dialog-form .checkbox-label input[type="checkbox"],
-.mass-initiative-dialog-form .checkbox-label input[type="checkbox"] {
+.initiative-dialog-form .checkbox-label input[type='checkbox'],
+.mass-initiative-dialog-form .checkbox-label input[type='checkbox'] {
     width: auto;
     margin: 0;
 }
@@ -257,7 +257,7 @@
     display: flex;
     margin-bottom: 0.5rem;
     align-items: center;
-    gap:0.5rem;
+    gap: 0.5rem;
 }
 
 .initiative-dialog-form .action-description:last-child {
@@ -329,7 +329,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 
+    box-shadow:
         inset 0 2px 4px rgba(255, 255, 255, 0.5),
         0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease;
@@ -472,8 +472,13 @@
 }
 
 @keyframes pulse-border {
-    0%, 100% { border-color: #ff6b6b; }
-    50% { border-color: #ff9b9b; }
+    0%,
+    100% {
+        border-color: #ff6b6b;
+    }
+    50% {
+        border-color: #ff9b9b;
+    }
 }
 
 .mass-initiative-dialog-form .accordion-header {
@@ -553,11 +558,11 @@
     color: var(--text-dark);
 }
 
-.mass-initiative-dialog-form .accordion-content .form-group input[type="number"],
+.mass-initiative-dialog-form .accordion-content .form-group input[type='number'],
 .mass-initiative-dialog-form .accordion-content .form-group select {
     background: white;
     color: var(--text-dark);
-    border-bottom-color: var(--header-bg-color);    
+    border-bottom-color: var(--header-bg-color);
 }
 
 .mass-initiative-dialog-form .accordion-content .npc-stats {

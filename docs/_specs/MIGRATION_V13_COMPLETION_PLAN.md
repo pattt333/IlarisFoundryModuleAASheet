@@ -22,10 +22,10 @@ Einen belastbaren Abschlussplan für die vollständige Foundry-v13-Migration der
 ### Umgesetzter Fix aus Step 3
 
 - `package.json` harmonisiert:
-   - `version` von `1.0.0` auf `1.0.12` angehoben (konsistent zu `module.json`)
-   - `foundry.version` auf `13.0.0`
-   - `foundry.minimumCoreVersion` auf `13`
-   - `foundry.compatibleCoreVersion` auf `13`
+    - `version` von `1.0.0` auf `1.0.12` angehoben (konsistent zu `module.json`)
+    - `foundry.version` auf `13.0.0`
+    - `foundry.minimumCoreVersion` auf `13`
+    - `foundry.compatibleCoreVersion` auf `13`
 
 ### Aktuelle Restpunkte
 
@@ -105,27 +105,27 @@ Einen belastbaren Abschlussplan für die vollständige Foundry-v13-Migration der
 
 - Manueller Check in Foundry v13 durch den Maintainer.
 - Mindestens zu prüfen:
-  - Actor Sheet öffnet ohne Fehler.
-  - Creature Sheet öffnet ohne Fehler.
-  - Tabwechsel funktioniert.
-  - Actions und Dialoge reagieren korrekt.
-  - Form-Updates werden gespeichert.
-  - DragDrop funktioniert.
-  - Effektbibliothek und Effekt-Stacking funktionieren.
-  - Accordion/Favorites bleiben stabil über Re-Render.
-  - Browser-Konsole bleibt frei von relevanten Fehlern.
+    - Actor Sheet öffnet ohne Fehler.
+    - Creature Sheet öffnet ohne Fehler.
+    - Tabwechsel funktioniert.
+    - Actions und Dialoge reagieren korrekt.
+    - Form-Updates werden gespeichert.
+    - DragDrop funktioniert.
+    - Effektbibliothek und Effekt-Stacking funktionieren.
+    - Accordion/Favorites bleiben stabil über Re-Render.
+    - Browser-Konsole bleibt frei von relevanten Fehlern.
 - Erwartetes Ergebnis: Abschlussfreigabe für v13 oder eine klar begrenzte Restfehlerliste mit Reproduktion.
 
 ## 5. Delegation Map
 
-| Step | Specialist | Input | Expected Output |
-| ---- | ---------- | ----- | --------------- |
-| 1 | code | Aktueller Sheet-Code, Modul-Metadaten, bestehende Migrationsdokumente | Verifizierte Ist-Analyse mit belastbarer Restpunktbasis |
-| 2 | docs | Ergebnis aus Step 1 | Konsolidierte Restpunktliste in dieser Datei |
-| 3 | code | Restpunktliste aus Step 2 | Bereinigte statische und deklarative v13-Inkonsistenzen |
-| 4 | code | Bereinigter Stand aus Step 3 | Sequenziell gefixte Sheet-Restpunkte |
-| 5 | docs | Ergebnisse aus Step 4 | Aktualisierte Plan-Datei mit sauberem Status |
-| 6 | user | Finaler Code-Stand aus Step 5 | Manueller Abschlusscheck und dokumentiertes Ergebnis |
+| Step | Specialist | Input                                                                 | Expected Output                                         |
+| ---- | ---------- | --------------------------------------------------------------------- | ------------------------------------------------------- |
+| 1    | code       | Aktueller Sheet-Code, Modul-Metadaten, bestehende Migrationsdokumente | Verifizierte Ist-Analyse mit belastbarer Restpunktbasis |
+| 2    | docs       | Ergebnis aus Step 1                                                   | Konsolidierte Restpunktliste in dieser Datei            |
+| 3    | code       | Restpunktliste aus Step 2                                             | Bereinigte statische und deklarative v13-Inkonsistenzen |
+| 4    | code       | Bereinigter Stand aus Step 3                                          | Sequenziell gefixte Sheet-Restpunkte                    |
+| 5    | docs       | Ergebnisse aus Step 4                                                 | Aktualisierte Plan-Datei mit sauberem Status            |
+| 6    | user       | Finaler Code-Stand aus Step 5                                         | Manueller Abschlusscheck und dokumentiertes Ergebnis    |
 
 ## Konkrete Startreihenfolge
 

@@ -1,34 +1,34 @@
-{{!-- Favorites Component with Tabs --}}
-<div class="favorites-component">
-    <div class="favorites-header">
-        <div class="favorites-tabs">
-            {{!-- <a class="favorites-tab active" data-tab="favorites" title="Favoriten">
+{{! Favorites Component with Tabs }}
+<div class='favorites-component'>
+    <div class='favorites-header'>
+        <div class='favorites-tabs'>
+            {{! <a class="favorites-tab active" data-tab="favorites" title="Favoriten">
                 <i class="fas fa-star"></i>
-            </a> --}}
-            <a class="favorites-tab" data-tab="combat" title="Kampfausrüstung">
-                <i class="fas fa-sword"></i>
+            </a> }}
+            <a class='favorites-tab' data-tab='combat' title='Kampfausrüstung'>
+                <i class='fas fa-sword'></i>
             </a>
         </div>
-        <div class="favorites-controls">
-            <a class="favorites-control favorites-clear" title="Alle Favoriten löschen">
-                <i class="fas fa-trash"></i>
+        <div class='favorites-controls'>
+            <a class='favorites-control favorites-clear' title='Alle Favoriten löschen'>
+                <i class='fas fa-trash'></i>
             </a>
         </div>
     </div>
-    
-    <div class="favorites-content">
-        {{!-- Favorites Tab Content --}}
-        <div class="favorites-tab-content active" data-tab-content="favorites">
-            <div class="favorites-list">
-                {{!-- Placeholder content for now --}}
-                <div class="favorites-empty">
-                    <i class="fas fa-star-o"></i>
+
+    <div class='favorites-content'>
+        {{! Favorites Tab Content }}
+        <div class='favorites-tab-content active' data-tab-content='favorites'>
+            <div class='favorites-list'>
+                {{! Placeholder content for now }}
+                <div class='favorites-empty'>
+                    <i class='fas fa-star-o'></i>
                     <p>Keine Favoriten</p>
                     <small>Ziehe Gegenstände, Fertigkeiten oder Zauber hierher, um sie als Favoriten zu markieren.</small>
                 </div>
             </div>
-            
-            {{!-- Future: Favorite items will be rendered here --}}
+
+            {{! Future: Favorite items will be rendered here }}
             {{!-- {{#each favorites as |favorite|}}
             <div class="favorite-item" data-favorite-id="{{favorite.id}}" data-item-type="{{favorite.type}}">
                 <div class="favorite-image">
@@ -50,138 +50,169 @@
             {{/each}} --}}
         </div>
 
-        {{!-- Combat Gear Tab Content --}}
-        <div class="favorites-tab-content" data-tab-content="combat">
-            <div class="combat-gear-list">
-                {{!-- Kampfstil Section --}}
+        {{! Combat Gear Tab Content }}
+        <div class='favorites-tab-content' data-tab-content='combat'>
+            <div class='combat-gear-list'>
+                {{! Kampfstil Section }}
                 {{#if actor.system.misc.selected_kampfstil}}
-                <div class="combat-item kampfstil-item">
-                    <div class="combat-item-header">
-                        <i class="fas fa-fist-raised"></i>
-                        <h4>Kampfstil</h4>
+                    <div class='combat-item kampfstil-item'>
+                        <div class='combat-item-header'>
+                            <i class='fas fa-fist-raised'></i>
+                            <h4>Kampfstil</h4>
+                        </div>
+                        <div class='combat-item-content'>
+                            <span class='kampfstil-name'>{{actor.system.misc.selected_kampfstil}}</span>
+                            {{#if actor.system.misc.ist_beritten}}
+                                <span class='beritten-indicator'>
+                                    <i class='fas fa-horse'></i>
+                                    Beritten
+                                </span>
+                            {{/if}}
+                        </div>
                     </div>
-                    <div class="combat-item-content">
-                        <span class="kampfstil-name">{{actor.system.misc.selected_kampfstil}}</span>
-                        {{#if actor.system.misc.ist_beritten}}
-                        <span class="beritten-indicator">
-                            <i class="fas fa-horse"></i> Beritten
-                        </span>
+                {{/if}}
+
+                {{! Hauptwaffe Section }}
+                {{#each actor.nahkampfwaffen as |weapon|}}
+                    {{#if weapon.system.hauptwaffe}}
+                        <div
+                            class='combat-item weapon-item hauptwaffe rollable'
+                            data-rolltype='angriff_diag'
+                            data-itemid='{{weapon.id}}'
+                        >
+                            <div class='combat-item-header'>
+                                <div class='weapon-image'>
+                                    <img src='{{weapon.img}}' alt='{{weapon.name}}' />
+                                </div>
+                                <div class='weapon-info'>
+                                    <h4>{{weapon.name}}</h4>
+                                    <span class='weapon-type'>Hauptwaffe</span>
+                                </div>
+                            </div>
+                            <div class='combat-item-content'>
+                                <div class='weapon-stats'>
+                                    <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.at}}'>AT
+                                        {{weapon.system.at}}</span>
+                                    <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.vt}}'>VT
+                                        {{weapon.system.vt}}</span>
+                                    <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.dmg}}'>TP
+                                        {{weapon.system.tp}}</span>
+                                </div>
+                                <div class='eigenschaften'>{{eigenschaften weapon.system.eigenschaften ', '}}</div>
+                            </div>
+                        </div>
+                    {{/if}}
+                {{/each}}
+
+                {{#each actor.fernkampfwaffen as |weapon|}}
+                    {{#if weapon.system.hauptwaffe}}
+                        <div
+                            class='combat-item weapon-item hauptwaffe rollable'
+                            data-rolltype='fernkampf_diag'
+                            data-itemid='{{weapon.id}}'
+                        >
+                            <div class='combat-item-header'>
+                                <div class='weapon-image'>
+                                    <img src='{{weapon.img}}' alt='{{weapon.name}}' />
+                                </div>
+                                <div class='weapon-info'>
+                                    <h4>{{weapon.name}}</h4>
+                                    <span class='weapon-type'>Hauptwaffe (FK)</span>
+                                </div>
+                            </div>
+                            <div class='combat-item-content'>
+                                <div class='weapon-stats'>
+                                    <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.at}}'>FK
+                                        {{weapon.system.fk}}</span>
+                                    <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.dmg}}'>TP
+                                        {{weapon.system.tp}}</span>
+                                </div>
+                            </div>
+                            <div class='eigenschaften'>{{eigenschaften weapon.system.eigenschaften ', '}}</div>
+                        </div>
+                    {{/if}}
+                {{/each}}
+
+                {{! Nebenwaffe Section }}
+                {{#each actor.nahkampfwaffen as |weapon|}}
+                    {{#unless weapon.system.hauptwaffe}}
+                        {{#if weapon.system.nebenwaffe}}
+                            <div
+                                class='combat-item weapon-item nebenwaffe rollable'
+                                data-rolltype='angriff_diag'
+                                data-itemid='{{weapon.id}}'
+                            >
+                                <div class='combat-item-header'>
+                                    <div class='weapon-image'>
+                                        <img src='{{weapon.img}}' alt='{{weapon.name}}' />
+                                    </div>
+                                    <div class='weapon-info'>
+                                        <h4>{{weapon.name}}</h4>
+                                        <span class='weapon-type'>Nebenwaffe</span>
+                                    </div>
+                                </div>
+                                <div class='combat-item-content'>
+                                    <div class='weapon-stats'>
+                                        <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.at}}'>AT
+                                            {{weapon.system.at}}</span>
+                                        <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.vt}}'>VT
+                                            {{weapon.system.vt}}</span>
+                                        <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.dmg}}'>TP
+                                            {{weapon.system.tp}}</span>
+                                    </div>
+                                    <div class='eigenschaften'>{{eigenschaften weapon.system.eigenschaften ', '}}</div>
+                                </div>
+                            </div>
                         {{/if}}
-                    </div>
-                </div>
-                {{/if}}
-
-                {{!-- Hauptwaffe Section --}}
-                {{#each actor.nahkampfwaffen as |weapon|}}
-                {{#if weapon.system.hauptwaffe}}
-                <div class="combat-item weapon-item hauptwaffe rollable" data-rolltype="angriff_diag" data-itemid="{{weapon.id}}">
-                    <div class="combat-item-header">
-                        <div class="weapon-image">
-                            <img src="{{weapon.img}}" alt="{{weapon.name}}" />
-                        </div>
-                        <div class="weapon-info">
-                            <h4>{{weapon.name}}</h4>
-                            <span class="weapon-type">Hauptwaffe</span>
-                        </div>
-                    </div>
-                    <div class="combat-item-content">
-                        <div class="weapon-stats">
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.at}}">AT {{weapon.system.at}}</span>
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.vt}}">VT {{weapon.system.vt}}</span>
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.dmg}}">TP {{weapon.system.schaden}}</span>
-                        </div>
-                        <div class="eigenschaften">{{eigenschaften weapon.system.eigenschaften ", "}}</div>
-                    </div>
-                </div>
-                {{/if}}
+                    {{/unless}}
                 {{/each}}
 
                 {{#each actor.fernkampfwaffen as |weapon|}}
-                {{#if weapon.system.hauptwaffe}}
-                <div class="combat-item weapon-item hauptwaffe rollable" data-rolltype="fernkampf_diag" data-itemid="{{weapon.id}}">
-                    <div class="combat-item-header">
-                        <div class="weapon-image">
-                            <img src="{{weapon.img}}" alt="{{weapon.name}}" />
-                        </div>
-                        <div class="weapon-info">
-                            <h4>{{weapon.name}}</h4>
-                            <span class="weapon-type">Hauptwaffe (FK)</span>
-                        </div>
-                    </div>
-                    <div class="combat-item-content">
-                        <div class="weapon-stats">
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.at}}">FK {{weapon.system.fk}}</span>
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.dmg}}">TP {{weapon.system.schaden}}</span>
-                        </div>
-                    </div>
-                    <div class="eigenschaften">{{eigenschaften weapon.system.eigenschaften ", "}}</div>
-                </div>
-                {{/if}}
+                    {{#unless weapon.system.hauptwaffe}}
+                        {{#if weapon.system.nebenwaffe}}
+                            <div
+                                class='combat-item weapon-item nebenwaffe rollable'
+                                data-rolltype='fernkampf_diag'
+                                data-itemid='{{weapon.id}}'
+                            >
+                                <div class='combat-item-header'>
+                                    <div class='weapon-image'>
+                                        <img src='{{weapon.img}}' alt='{{weapon.name}}' />
+                                    </div>
+                                    <div class='weapon-info'>
+                                        <h4>{{weapon.name}}</h4>
+                                        <span class='weapon-type'>Nebenwaffe (FK)</span>
+                                    </div>
+                                </div>
+                                <div class='combat-item-content'>
+                                    <div class='weapon-stats'>
+                                        <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.at}}'>FK
+                                            {{weapon.system.fk}}</span>
+                                        <span class='stat' data-tooltip='{{weapon.system.computed.modifiers.dmg}}'>TP
+                                            {{weapon.system.tp}}</span>
+                                    </div>
+                                    <div class='eigenschaften'>{{eigenschaften weapon.system.eigenschaften ', '}}</div>
+                                </div>
+                            </div>
+                        {{/if}}
+                    {{/unless}}
                 {{/each}}
 
-                {{!-- Nebenwaffe Section --}}
-                {{#each actor.nahkampfwaffen as |weapon|}}
-                {{#unless weapon.system.hauptwaffe}}
-                {{#if weapon.system.nebenwaffe}}
-                <div class="combat-item weapon-item nebenwaffe rollable" data-rolltype="angriff_diag" data-itemid="{{weapon.id}}">
-                    <div class="combat-item-header">
-                        <div class="weapon-image">
-                            <img src="{{weapon.img}}" alt="{{weapon.name}}" />
-                        </div>
-                        <div class="weapon-info">
-                            <h4>{{weapon.name}}</h4>
-                            <span class="weapon-type">Nebenwaffe</span>
-                        </div>
+                {{! Empty state for combat gear }}
+                {{#unless
+                    (or
+                        actor.system.misc.selected_kampfstil
+                        (some actor.nahkampfwaffen 'system.hauptwaffe')
+                        (some actor.nahkampfwaffen 'system.nebenwaffe')
+                        (some actor.fernkampfwaffen 'system.hauptwaffe')
+                        (some actor.fernkampfwaffen 'system.nebenwaffe')
+                    )
+                }}
+                    <div class='combat-empty'>
+                        <i class='fas fa-sword'></i>
+                        <p>Keine Kampfausrüstung</p>
+                        <small>Wähle Waffen als Haupt-/Nebenwaffe und einen Kampfstil aus.</small>
                     </div>
-                    <div class="combat-item-content">
-                        <div class="weapon-stats">
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.at}}">AT {{weapon.system.at}}</span>
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.vt}}">VT {{weapon.system.vt}}</span>
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.dmg}}">TP {{weapon.system.schaden}}</span>
-                        </div>
-                        <div class="eigenschaften">{{eigenschaften weapon.system.eigenschaften ", "}}</div>
-                    </div>
-                </div>
-                {{/if}}
-                {{/unless}}
-                {{/each}}
-
-                {{#each actor.fernkampfwaffen as |weapon|}}
-                {{#unless weapon.system.hauptwaffe}}
-                {{#if weapon.system.nebenwaffe}}
-                <div class="combat-item weapon-item nebenwaffe rollable" data-rolltype="fernkampf_diag" data-itemid="{{weapon.id}}">
-                    <div class="combat-item-header">
-                        <div class="weapon-image">
-                            <img src="{{weapon.img}}" alt="{{weapon.name}}" />
-                        </div>
-                        <div class="weapon-info">
-                            <h4>{{weapon.name}}</h4>
-                            <span class="weapon-type">Nebenwaffe (FK)</span>
-                        </div>
-                    </div>
-                    <div class="combat-item-content">
-                        <div class="weapon-stats">
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.at}}">FK {{weapon.system.fk}}</span>
-                            <span class="stat" data-tooltip="{{weapon.system.computed.modifiers.dmg}}">TP {{weapon.system.schaden}}</span>
-                        </div>
-                        <div class="eigenschaften">{{eigenschaften weapon.system.eigenschaften ", "}}</div>
-                    </div>
-                </div>
-                {{/if}}
-                {{/unless}}
-                {{/each}}
-
-                {{!-- Empty state for combat gear --}}
-                {{#unless (or actor.system.misc.selected_kampfstil 
-                              (some actor.nahkampfwaffen "system.hauptwaffe")
-                              (some actor.nahkampfwaffen "system.nebenwaffe")
-                              (some actor.fernkampfwaffen "system.hauptwaffe")
-                              (some actor.fernkampfwaffen "system.nebenwaffe"))}}
-                <div class="combat-empty">
-                    <i class="fas fa-sword"></i>
-                    <p>Keine Kampfausrüstung</p>
-                    <small>Wähle Waffen als Haupt-/Nebenwaffe und einen Kampfstil aus.</small>
-                </div>
                 {{/unless}}
             </div>
         </div>

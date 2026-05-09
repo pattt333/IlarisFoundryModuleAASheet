@@ -21,8 +21,8 @@ Never assume Hook signatures, Document methods, or utility functions. Verify aga
 Sheets extend `HandlebarsApplicationMixin(ActorSheetV2)` or `HandlebarsApplicationMixin(ItemSheetV2)`:
 
 ```js
-const { HandlebarsApplicationMixin } = foundry.applications.api
-const { ItemSheetV2 } = foundry.applications.sheets
+const { HandlebarsApplicationMixin } = foundry.applications.api;
+const { ItemSheetV2 } = foundry.applications.sheets;
 
 export class MySheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     static DEFAULT_OPTIONS = {
@@ -32,16 +32,16 @@ export class MySheet extends HandlebarsApplicationMixin(ItemSheetV2) {
             /* action handlers */
         },
         form: { handler: MySheet.#onSubmitForm, submitOnChange: true, closeOnSubmit: false },
-    }
+    };
 
     static PARTS = {
         main: { template: 'systems/Ilaris/scripts/.../template.hbs' },
-    }
+    };
 
     async _prepareContext(options) {
-        const context = await super._prepareContext(options)
-        context.config = CONFIG.ILARIS
-        return context
+        const context = await super._prepareContext(options);
+        context.config = CONFIG.ILARIS;
+        return context;
     }
 }
 ```
@@ -67,10 +67,10 @@ Each feature module exports hooks via its own `hooks.js`:
 ```js
 Hooks.once('init', () => {
     /* register sheets, config */
-})
+});
 Hooks.on('renderActorSheet', (sheet, html) => {
     /* modify rendered sheet */
-})
+});
 ```
 
 ## Testing

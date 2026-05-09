@@ -1,33 +1,33 @@
 {
-  "name": "Meister der urbanen Kriegskunst",
-  "type": "vorteil",
-  "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
-  "system": {
-    "voraussetzung": "Vorteil Meister improvisierter Waffen",
-    "gruppe": 2,
-    "text": "Meister der urbanen Kriegskunst Improvisierte Waffen haben eine WM von 1/1. Schilde haben 0/1.\n\nJede improvisierte Waffe, hat die Waffeneigenschaft Fernkampfoption (Improvisierte Wurfwaffe).",
-    "sephrastoScript": "",
-    "stilBedingungen": "",
-    "foundryScript": ""
-  },
-  "effects": [],
-  "folder": null,
-  "sort": 0,
-  "flags": {},
-  "ownership": {
-    "default": 0,
-    "bRsoRPItEVb33T1L": 3
-  },
-  "_id": "op2hZwFevTnHm2V2",
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.343",
-    "systemId": "Ilaris",
-    "systemVersion": "12.2.6",
-    "createdTime": 1769017849910,
-    "modifiedTime": 1769017849910,
-    "lastModifiedBy": "bRsoRPItEVb33T1L"
-  },
-  "_key": "!items!op2hZwFevTnHm2V2"
+    "name": "Meister der urbanen Kriegskunst",
+    "type": "vorteil",
+    "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
+    "system": {
+        "voraussetzung": "Vorteil Meister improvisierter Waffen",
+        "gruppe": 2,
+        "text": "Meister der urbanen Kriegskunst Improvisierte Waffen haben eine WM von 1/1. Schilde haben 0/1.\n\nJede improvisierte Waffe, hat die Waffeneigenschaft Fernkampfoption (Improvisierte Wurfwaffe).",
+        "sephrastoScript": "",
+        "stilBedingungen": "",
+        "foundryScript": ""
+    },
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "flags": {},
+    "ownership": {
+        "default": 0,
+        "bRsoRPItEVb33T1L": 3
+    },
+    "_id": "op2hZwFevTnHm2V2",
+    "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.343",
+        "systemId": "Ilaris",
+        "systemVersion": "12.2.6",
+        "createdTime": 1769017849910,
+        "modifiedTime": 1769017849910,
+        "lastModifiedBy": "bRsoRPItEVb33T1L"
+    },
+    "_key": "!items!op2hZwFevTnHm2V2"
 }

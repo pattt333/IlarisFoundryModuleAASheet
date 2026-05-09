@@ -1,81 +1,81 @@
 name: Build and Publish Release
 
 on:
-  push:
-    tags:
-      - 'v*' # Wird ausgelöst, wenn ein Tag wie v1.0.0 oder v2.1.5-beta gepusht wird
+    push:
+        tags:
+            - 'v*' # Wird ausgelöst, wenn ein Tag wie v1.0.0 oder v2.1.5-beta gepusht wird
 
 jobs:
-  build-and-release:
-    runs-on: ubuntu-latest
-    # Wichtig: Berechtigung für das Erstellen von Releases setzen
-    permissions:
-      contents: write
+    build-and-release:
+        runs-on: ubuntu-latest
+        # Wichtig: Berechtigung für das Erstellen von Releases setzen
+        permissions:
+            contents: write
 
-    steps:
-      # 1. Repository-Code auschecken
-      - name: Checkout code
-        uses: actions/checkout@v4
+        steps:
+            # 1. Repository-Code auschecken
+            - name: Checkout code
+              uses: actions/checkout@v4
 
-      # 2. Node.js Umgebung einrichten (falls nötig)
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
+            # 2. Node.js Umgebung einrichten (falls nötig)
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '18'
 
-      # 3. Dependencies installieren
-      - name: Install dependencies
-        run: npm install
+            # 3. Dependencies installieren
+            - name: Install dependencies
+              run: npm install
 
-      # 4. Dein Pack-Script ausführen
-      - name: Run Pack Script
-        run: npm run pack-all
+            # 4. Dein Pack-Script ausführen
+            - name: Run Pack Script
+              run: npm run pack-all
 
-      # 5. (KRITISCH) module.json mit Release-Pfaden aktualisieren
-      #    Das ${{ github.ref_name }} enthält den Tag-Namen (z.B. v1.0.0)
-      - name: Update module.json Manifest URLs
-        run: |
-          REPO_URL="https://github.com/${{ github.repository }}"
-          RELEASE_TAG="${{ github.ref_name }}"
-          DOWNLOAD_URL="$REPO_URL/releases/download/$RELEASE_TAG"
-          
-          jq --arg manifest "$DOWNLOAD_URL/module.json" \
-             --arg download "$DOWNLOAD_URL/module.zip" \
-             '.manifest = $manifest | .download = $download' \
-             module.json > module.json.tmp && mv module.json.tmp module.json
-          
-          echo "Updated module.json URLs:"
-          echo "  manifest: $DOWNLOAD_URL/module.json"
-          echo "  download: $DOWNLOAD_URL/module.zip"
+            # 5. (KRITISCH) module.json mit Release-Pfaden aktualisieren
+            #    Das ${{ github.ref_name }} enthält den Tag-Namen (z.B. v1.0.0)
+            - name: Update module.json Manifest URLs
+              run: |
+                  REPO_URL="https://github.com/${{ github.repository }}"
+                  RELEASE_TAG="${{ github.ref_name }}"
+                  DOWNLOAD_URL="$REPO_URL/releases/download/$RELEASE_TAG"
 
-      # 6. Ein ZIP-Archiv für Foundry erstellen
-      - name: Create module.zip
-        run: |
-          # WICHTIG: Füge ALLE Dateien hinzu, die im Modul enthalten sein sollen.
-          # Die Option -x kann genutzt werden, um Quellverzeichnisse auszuschließen.
-          zip -r module.zip \
-            module.json \
-            module.js \
-            packs/ \
-            scripts/ \
-            styles/ \
-            templates/ \
-            languages/ \
-            assets/ \
-            -x packs/**/_source/*  # Beispiel: Quell-JSONs für Packs ausschließen
+                  jq --arg manifest "$DOWNLOAD_URL/module.json" \
+                     --arg download "$DOWNLOAD_URL/module.zip" \
+                     '.manifest = $manifest | .download = $download' \
+                     module.json > module.json.tmp && mv module.json.tmp module.json
 
-      # 7. Das GitHub Release erstellen und alle Assets hochladen
-      - name: Create Release and Upload Assets
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }}
-          # Artefakte: Das ZIP UND die einzelnen DBs. Entscheide, was du möchtest.
-          # OPTION A: Nur das ZIP (alles enthalten)
-          # artifacts: "module.json, module.zip"
-          # OPTION B: ZIP + separate DBs (für manuelle Installation)
-          artifacts: "module.json, module.zip, packs/*.ldb"
-          bodyFile: "CHANGELOG.md" # Entferne diese Zeile, wenn du keine CHANGELOG.md hast
-          draft: false
-          prerelease: false
-          # 'token' ist oft optional, da GITHUB_TOKEN automatisch injiziert wird.
+                  echo "Updated module.json URLs:"
+                  echo "  manifest: $DOWNLOAD_URL/module.json"
+                  echo "  download: $DOWNLOAD_URL/module.zip"
+
+            # 6. Ein ZIP-Archiv für Foundry erstellen
+            - name: Create module.zip
+              run: |
+                  # WICHTIG: Füge ALLE Dateien hinzu, die im Modul enthalten sein sollen.
+                  # Die Option -x kann genutzt werden, um Quellverzeichnisse auszuschließen.
+                  zip -r module.zip \
+                    module.json \
+                    module.js \
+                    packs/ \
+                    scripts/ \
+                    styles/ \
+                    templates/ \
+                    languages/ \
+                    assets/ \
+                    -x packs/**/_source/*  # Beispiel: Quell-JSONs für Packs ausschließen
+
+            # 7. Das GitHub Release erstellen und alle Assets hochladen
+            - name: Create Release and Upload Assets
+              uses: ncipollo/release-action@v1
+              with:
+                  tag: ${{ github.ref_name }}
+                  name: Release ${{ github.ref_name }}
+                  # Artefakte: Das ZIP UND die einzelnen DBs. Entscheide, was du möchtest.
+                  # OPTION A: Nur das ZIP (alles enthalten)
+                  # artifacts: "module.json, module.zip"
+                  # OPTION B: ZIP + separate DBs (für manuelle Installation)
+                  artifacts: 'module.json, module.zip, packs/*.ldb'
+                  bodyFile: 'CHANGELOG.md' # Entferne diese Zeile, wenn du keine CHANGELOG.md hast
+                  draft: false
+                  prerelease: false
+                  # 'token' ist oft optional, da GITHUB_TOKEN automatisch injiziert wird.
