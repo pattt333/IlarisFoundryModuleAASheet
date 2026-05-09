@@ -1,6 +1,6 @@
 {
     "name": "Aktion ungewöhnliche Kampfaktion",
-    "type": "effect-item",
+    "type": "effectItem",
     "_id": "5HeTvecXSf02VfKH",
     "img": "icons/svg/item-bag.svg",
     "system": {

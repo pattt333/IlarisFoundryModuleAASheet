@@ -125,8 +125,8 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 CONFIG.ILARIS = {};
             }
 
-            // Add effect-items for the Kampf-Tab
-            context.actor.effectItems = this.actor.items.filter(i => i.type === 'effect-item');
+            // Add effectItems for the Kampf-Tab
+            context.actor.effectItems = this.actor.items.filter(i => i.type === 'effectItem');
 
             // Add canAdvanceTime flag for effect time-advance button
             context.canAdvanceTime = this.actor.isOwner || game.user.isGM;
@@ -169,7 +169,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 isCharacter: this.actor.type === 'held',
                 isOwner: this.actor.isOwner,
                 // editable: this.isEditable,
-                effectItems: this.actor.items.filter(i => i.type === 'effect-item'),
+                effectItems: this.actor.items.filter(i => i.type === 'effectItem'),
             };
         }
     }
@@ -268,7 +268,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 const item = await fromUuid(data.uuid);
 
                 // Effect library drop: transfer only effects
-                if (item.type === 'effect-item') {
+                if (item.type === 'effectItem') {
                     try {
                         if (!item) {
                             ui.notifications.warn('Item konnte nicht gefunden werden.');

@@ -1,6 +1,6 @@
 {
     "name": "Gift",
-    "type": "effect-item",
+    "type": "effectItem",
     "_id": "jRUpIGmpJtMKF6el",
     "img": "icons/svg/poison.svg",
     "system": {

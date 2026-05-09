@@ -98,8 +98,8 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
             // Add creature-specific data
             context.kreaturItemOptions = foundry.utils.duplicate(CONFIG.ILARIS.kreatur_item_options || {});
 
-            // Add effect-items for the Kampf-Tab
-            context.actor.effectItems = this.actor.items.filter(i => i.type === 'effect-item');
+            // Add effectItems for the Kampf-Tab
+            context.actor.effectItems = this.actor.items.filter(i => i.type === 'effectItem');
 
             // Normalize unset attribute pw values to 0 for display
             if (context.actor.system?.attribute) {
@@ -126,7 +126,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
                 isCreature: this.actor.type === 'kreatur',
                 isOwner: this.actor.isOwner,
                 editable: this.isEditable,
-                effectItems: this.actor.items.filter(i => i.type === 'effect-item'),
+                effectItems: this.actor.items.filter(i => i.type === 'effectItem'),
                 kreaturItemOptions: foundry.utils.duplicate(CONFIG.ILARIS?.kreatur_item_options || {}),
                 isCaster: this.actor.system.abgeleitete?.zauberer || this.actor.system.abgeleitete?.geweihter,
             };

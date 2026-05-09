@@ -1,6 +1,6 @@
 {
     "name": "Erschöpfung",
-    "type": "effect-item",
+    "type": "effectItem",
     "_id": "gdPHiKGIUq4tT5wE",
     "img": "icons/svg/unconscious.svg",
     "system": {

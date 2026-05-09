@@ -1,6 +1,6 @@
 {
     "name": "RS",
-    "type": "abgeleiteter-wert",
+    "type": "abgeleiteterWert",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
         "name": "",

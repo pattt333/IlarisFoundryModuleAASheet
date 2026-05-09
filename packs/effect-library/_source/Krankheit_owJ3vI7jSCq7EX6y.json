@@ -1,6 +1,6 @@
 {
     "name": "Krankheit",
-    "type": "effect-item",
+    "type": "effectItem",
     "_id": "owJ3vI7jSCq7EX6y",
     "img": "icons/svg/biohazard.svg",
     "system": {

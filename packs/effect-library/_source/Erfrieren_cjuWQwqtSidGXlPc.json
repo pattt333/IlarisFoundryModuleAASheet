@@ -1,6 +1,6 @@
 {
     "name": "Erfrieren",
-    "type": "effect-item",
+    "type": "effectItem",
     "_id": "cjuWQwqtSidGXlPc",
     "img": "icons/svg/ice-shield.svg",
     "system": {

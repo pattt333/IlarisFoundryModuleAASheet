@@ -202,8 +202,8 @@ export class InitiativeDialog extends Application {
     async _loadAvailableActions() {
         this.availableActions = [];
 
-        // Load from actor inventory (effect-items)
-        const actorEffectItems = this.actor.items.filter(i => i.type === 'effect-item');
+        // Load from actor inventory (effectItems)
+        const actorEffectItems = this.actor.items.filter(i => i.type === 'effectItem');
         for (const item of actorEffectItems) {
             this.availableActions.push({
                 id: item._id,
