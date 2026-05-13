@@ -6,37 +6,45 @@
             <div class="items-header">
                 <h3>Geld</h3>
             </div>
-            <div class="flexrow">
-                <label>Dukaten</label>
-                <input
-                    name="system.geld.dukaten"
-                    value="{{actor.system.geld.dukaten}}"
-                    type="text"
-                    data-dtype="Number"
-                />
-                <label>Silbertaler</label>
-                <input
-                    name="system.geld.silbertaler"
-                    value="{{actor.system.geld.silbertaler}}"
-                    type="text"
-                    data-dtype="Number"
-                />
-                <label>Heller</label>
-                <input
-                    name="system.geld.heller"
-                    value="{{actor.system.geld.heller}}"
-                    type="text"
-                    data-dtype="Number"
-                />
-                <label>Kreuzer</label>
-                <input
-                    name="system.geld.kreuzer"
-                    value="{{actor.system.geld.kreuzer}}"
-                    type="text"
-                    data-dtype="Number"
-                />
-                <button class="clickable" data-clicktype="shorten_money">
-                    zusammenrechnen
+            <div class="geld-row">
+                <div class="geld-field">
+                    <label>Dukaten</label>
+                    <input
+                        name="system.geld.dukaten"
+                        value="{{actor.system.geld.dukaten}}"
+                        type="text"
+                        data-dtype="Number"
+                    />
+                </div>
+                <div class="geld-field">
+                    <label>Silbertaler</label>
+                    <input
+                        name="system.geld.silbertaler"
+                        value="{{actor.system.geld.silbertaler}}"
+                        type="text"
+                        data-dtype="Number"
+                    />
+                </div>
+                <div class="geld-field">
+                    <label>Heller</label>
+                    <input
+                        name="system.geld.heller"
+                        value="{{actor.system.geld.heller}}"
+                        type="text"
+                        data-dtype="Number"
+                    />
+                </div>
+                <div class="geld-field">
+                    <label>Kreuzer</label>
+                    <input
+                        name="system.geld.kreuzer"
+                        value="{{actor.system.geld.kreuzer}}"
+                        type="text"
+                        data-dtype="Number"
+                    />
+                </div>
+                <button class="item-control" data-clicktype="shorten_money">
+                    <i class="fas fa-calculator"></i> zusammenrechnen
                 </button>
             </div>
         </div>
