@@ -56,7 +56,7 @@
     align-items: center;
     padding: 10px 15px;
     border-bottom: 1px solid var(--color-border-light);
-    background: white;
+    background: var(--color-surface-panel);
 }
 
 .ilaris.sheet.actor.alternative .items-list .item:last-child {
@@ -113,7 +113,7 @@
     border: 1px solid var(--color-border-light);
     border-top: none;
     border-radius: 0 0 6px 6px;
-    background: white;
+    background: var(--color-surface-panel);
     align-items: flex-end;
 }
 
@@ -149,7 +149,7 @@
 
 .ilaris.sheet.actor.alternative .item-control {
     background: var(--primary-color);
-    color: white;
+    color: var(--color-text-on-accent);
     border: none;
     border-radius: 4px;
     padding: 5px 10px;
@@ -163,11 +163,56 @@
 }
 
 .ilaris.sheet.actor.alternative .item-control.item-create {
-    background: var(--color-success);
+    background: var(--color-accent-primary-soft);
+    color: var(--color-text-on-accent);
+    border: 1px solid var(--color-accent-primary);
+    font-weight: 700;
+}
+
+body.theme-dark .ilaris.sheet.actor.alternative .item-control.item-create {
+    color: var(--color-text-inverse);
+}
+
+body.theme-dark .ilaris.sheet.actor.alternative .item-control.item-create {
+    color: var(--color-text-inverse);
 }
 
 .ilaris.sheet.actor.alternative .item-control.item-create:hover {
-    background: var(--color-success-hover);
+    background: var(--color-accent-primary);
+    color: var(--color-text-on-accent);
+    border-color: var(--color-accent-primary-hover);
+}
+
+.ilaris.sheet.actor.alternative .item-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 26px;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: 1px solid var(--color-accent-primary);
+    background: var(--color-accent-primary-overlay-soft);
+    color: var(--color-accent-primary);
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.ilaris.sheet.actor.alternative .item-toggle:hover {
+    background: var(--color-accent-primary-overlay-medium);
+    color: var(--color-accent-primary-strong);
+}
+
+.ilaris.sheet.actor.alternative .item-toggle.true {
+    background: var(--color-accent-primary);
+    color: var(--color-text-on-accent);
+    border-color: var(--color-accent-primary-hover);
+}
+
+.ilaris.sheet.actor.alternative .item-toggle.true:hover {
+    background: var(--color-accent-primary-hover);
 }
 
 .ilaris.sheet.actor.alternative .item-control.item-delete {
@@ -208,8 +253,8 @@
     z-index: 10;
     pointer-events: none;
     text-shadow:
-        0 0 3px black,
-        0 0 3px black;
+        0 0 3px var(--color-black),
+        0 0 3px var(--color-black);
 }
 
 /* Accordion Functionality */
@@ -309,4 +354,3 @@
     font-size: 14px;
     user-select: none;
 }
-

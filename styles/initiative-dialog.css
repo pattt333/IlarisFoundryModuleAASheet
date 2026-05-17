@@ -148,7 +148,7 @@
 .initiative-dialog-form .form-group select {
     width: 100%;
     padding: 0.4rem;
-    background: white;
+    background: var(--color-surface-panel);
     border: 1px solid var(--color-border-default);
     border-radius: 3px;
     color: var(--text-dark);
@@ -285,7 +285,7 @@
     background: var(--primary-color);
     border: none;
     border-radius: 4px;
-    color: white;
+    color: var(--color-text-on-accent);
     cursor: pointer;
     font-size: 0.9rem;
     transition: all 0.2s ease;
@@ -399,7 +399,7 @@
     background: var(--color-success-strong);
     border: none;
     border-radius: 4px;
-    color: white;
+    color: var(--color-text-on-accent);
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: bold;
@@ -560,7 +560,7 @@
 
 .mass-initiative-dialog-form .accordion-content .form-group input[type='number'],
 .mass-initiative-dialog-form .accordion-content .form-group select {
-    background: white;
+    background: var(--color-surface-panel-strong);
     color: var(--text-dark);
     border-bottom-color: var(--header-bg-color);
 }
@@ -699,4 +699,3 @@
     color: var(--ini-text-dark);
     font-style: italic;
 }
-

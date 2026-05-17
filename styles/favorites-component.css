@@ -51,7 +51,7 @@
 
 .favorites-tab.active {
     background: var(--primary-color, var(--color-accent-primary));
-    color: white;
+    color: var(--color-text-on-accent);
     border-color: var(--primary-color, var(--color-accent-primary));
 }
 
@@ -80,7 +80,7 @@
 
 .favorites-control:hover {
     background: var(--primary-color, var(--color-accent-primary));
-    color: white;
+    color: var(--color-text-on-accent);
     transform: scale(1.1);
 }
 
@@ -392,7 +392,7 @@
 
 .favorite-use {
     background: var(--primary-color, var(--color-accent-primary));
-    color: white;
+    color: var(--color-text-on-accent);
 }
 
 .favorite-use:hover {
@@ -402,7 +402,7 @@
 
 .favorite-remove {
     background: var(--color-danger);
-    color: white;
+    color: var(--color-text-on-accent);
 }
 
 .favorite-remove:hover {
@@ -456,4 +456,3 @@
         font-size: 24px;
     }
 }
-
