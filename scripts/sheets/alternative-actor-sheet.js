@@ -92,7 +92,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
     static TABS = {
         primary: {
             tabs: [
-                { id: 'main', icon: 'fa-solid fa-chart-simple', label: 'Attribute' },
+                { id: 'main', icon: 'fa-solid fa-chart-simple', label: 'Eigenheiten' },
                 { id: 'kampf', icon: 'fa-solid fa-fist-raised', label: 'Kampf' },
                 { id: 'skills', icon: 'fa-solid fa-book', label: 'Fertigkeiten' },
                 { id: 'spells', icon: 'fa-solid fa-magic', label: 'Übernatürlich' },

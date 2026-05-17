@@ -1,19 +1,31 @@
 {{! Main Tab }}
 <div class='tab main {{tab.cssClass}}' data-group='primary' data-tab='main'>
-    {{! Top-level character information. }}
-    <div class='grid grid-2col'>
-        <div class='abilities'>
-            <h3>Attribute</h3>
-            {{#each actor.system.attribute as |attribute key|}}
-                <div class='ability flexrow flex-group-center'>
-                    <label for='system.attribute.{{key}}.wert' class='resource-label'>{{key}}</label>
-                    <input
-                        type='number'
-                        name='system.attribute.{{key}}.wert'
-                        value='{{attribute.wert}}'
-                        data-dtype='Number'
-                    />
-                    <span>{{attribute.pw}}</span>
+    <div class='items-section main-eigenheiten-section'>
+        <div class='items-header'>
+            <h3>Eigenheiten</h3>
+            <div class='item-controls'>
+                <a class='item-control item-create' data-action='itemCreate' title='Eigenheit erstellen' data-itemclass='eigenheit'>
+                    <i class='fas fa-plus'></i>
+                    Neue Eigenheit
+                </a>
+            </div>
+        </div>
+
+        <div class='items-list main-eigenheiten-list'>
+            {{#each actor.eigenheiten as |item|}}
+                <div class='item main-eigenheit-item' data-itemid='{{item.id}}'>
+                    <div class='main-eigenheit-content'>
+                        <h4 class='main-eigenheit-name'>{{item.name}}</h4>
+                        <p class='main-eigenheit-text'>{{#if item.system.text}}{{item.system.text}}{{else}}{{item.name}}{{/if}}</p>
+                    </div>
+                    <div class='item-controls'>
+                        <a class='item-control item-edit' title='Bearbeiten' data-action='itemEdit' data-itemid='{{item.id}}'><i class='fas fa-edit'></i></a>
+                        <a class='item-control item-delete' title='Löschen' data-action='itemDelete' data-itemid='{{item.id}}'><i class='fas fa-trash'></i></a>
+                    </div>
+                </div>
+            {{else}}
+                <div class='main-eigenheiten-empty'>
+                    <p>Keine Eigenheiten vorhanden. Lege eine Eigenheit an oder ziehe sie aus dem Kompendium auf den Charakter.</p>
                 </div>
             {{/each}}
         </div>
