@@ -5,19 +5,19 @@
  * It extends and enhances the base Ilaris system styles.
  */
 
-/* CSS Variable Overrides */
-body {
+/* CSS Variable Overrides (sheet-scoped) */
+.ilaris.sheet.actor.alternative {
     --color-white: #fff;
     --color-black: #000;
-    --color-accent-primary: #007a75;
-    --color-accent-primary-hover: #00908a;
-    --color-accent-primary-strong: #005e5a;
-    --color-accent-primary-soft: #36a8a2;
-    --color-accent-primary-glow: rgba(0, 122, 117, 0.4);
-    --color-accent-primary-overlay-soft: rgba(0, 122, 117, 0.1);
-    --color-accent-primary-overlay-medium: rgba(0, 122, 117, 0.2);
-    --color-accent-primary-overlay-strong: rgba(0, 122, 117, 0.3);
-    --color-accent-primary-overlay-intense: rgba(0, 122, 117, 0.95);
+    --color-accent-primary: #4299e1;
+    --color-accent-primary-hover: #3182ce;
+    --color-accent-primary-strong: #2b6cb0;
+    --color-accent-primary-soft: #63b3ed;
+    --color-accent-primary-glow: rgba(66, 153, 225, 0.4);
+    --color-accent-primary-overlay-soft: rgba(66, 153, 225, 0.1);
+    --color-accent-primary-overlay-medium: rgba(66, 153, 225, 0.2);
+    --color-accent-primary-overlay-strong: rgba(66, 153, 225, 0.3);
+    --color-accent-primary-overlay-intense: rgba(66, 153, 225, 0.95);
     --color-surface-header: #3c4658;
     --color-surface-base: #f8f8f8;
     --color-surface-muted: #f7fafc;
@@ -99,7 +99,7 @@ body {
         brightness(130%) contrast(119%);
 }
 
-body.theme-dark {
+body.theme-dark .ilaris.sheet.actor.alternative {
     --color-white: #fff;
     --color-black: #000;
     --color-accent-primary: #007a75;
@@ -190,24 +190,6 @@ body.theme-dark {
         brightness(92%) contrast(89%);
     --filter-primary-hover: brightness(0) saturate(100%) invert(98%) sepia(35%) saturate(529%) hue-rotate(93deg)
         brightness(107%) contrast(98%);
-}
-
-.ilaris-chat-fumble {
-    border: 2px solid var(--color-danger);
-    padding: 10px;
-    border-radius: 5px;
-    background: var(--color-danger-overlay-soft);
-}
-
-.ilaris-chat-fumble__title {
-    margin: 0 0 8px 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.ilaris-chat-fumble__icon {
-    color: var(--color-danger);
 }
 
 .ilaris.sheet.actor.alternative h3 {
@@ -425,7 +407,7 @@ body.theme-dark {
 
 /* Primary and Secondary Stats */
 
-.flex-row {
+.ilaris.sheet.actor.alternative .flex-row {
     display: flex;
     justify-content: space-between;
 }
@@ -868,6 +850,11 @@ body.theme-dark {
     padding: 4px;
     border: 0;
     justify-content: flex-end;
+    color: var(--color-white) !important;
+}
+
+.ilaris.sheet.actor.alternative .window-header button {
+    color: var(--color-white) !important;
 }
 
 .ilaris.sheet.actor.alternative .window-title {
@@ -884,7 +871,7 @@ body.theme-dark {
 
 .ilaris.sheet.actor.alternative .sheet-header {
     background: var(--header-bg-color);
-    color: white;
+    color: var(--color-white);
     padding: 0 15px 0 15px;
     display: flex;
     align-items: flex-start;
@@ -1183,6 +1170,6 @@ body.theme-dark .ilaris.sheet.actor.alternative .editor * {
     }
 }
 
-.ilaris-button-icon {
+.ilaris.sheet.actor.alternative .ilaris-button-icon {
     padding-right: 0 !important;
 }

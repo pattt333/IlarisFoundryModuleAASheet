@@ -1,6 +1,6 @@
 /* ===== FAVORITES COMPONENT ===== */
 
-.favorites-component {
+.ilaris.sheet.actor.alternative .favorites-component {
     background: transparent;
     border: none;
     border-radius: 5px;
@@ -13,7 +13,7 @@
     margin-right: 12px;
 }
 
-.favorites-header {
+.ilaris.sheet.actor.alternative .favorites-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,12 +23,12 @@
 }
 
 /* Favorites Tabs */
-.favorites-tabs {
+.ilaris.sheet.actor.alternative .favorites-tabs {
     display: flex;
     gap: 2px;
 }
 
-.favorites-tab {
+.ilaris.sheet.actor.alternative .favorites-tab {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,27 +44,27 @@
     border-bottom: none;
 }
 
-.favorites-tab:hover {
+.ilaris.sheet.actor.alternative .favorites-tab:hover {
     background: var(--color-accent-primary-overlay-medium);
     color: var(--primary-color, var(--color-accent-primary));
 }
 
-.favorites-tab.active {
+.ilaris.sheet.actor.alternative .favorites-tab.active {
     background: var(--primary-color, var(--color-accent-primary));
     color: var(--color-text-on-accent);
     border-color: var(--primary-color, var(--color-accent-primary));
 }
 
-.favorites-tab i {
+.ilaris.sheet.actor.alternative .favorites-tab i {
     font-size: 12px;
 }
 
-.favorites-controls {
+.ilaris.sheet.actor.alternative .favorites-controls {
     display: flex;
     gap: 4px;
 }
 
-.favorites-control {
+.ilaris.sheet.actor.alternative .favorites-control {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,43 +78,43 @@
     cursor: pointer;
 }
 
-.favorites-control:hover {
+.ilaris.sheet.actor.alternative .favorites-control:hover {
     background: var(--primary-color, var(--color-accent-primary));
     color: var(--color-text-on-accent);
     transform: scale(1.1);
 }
 
-.favorites-control i {
+.ilaris.sheet.actor.alternative .favorites-control i {
     font-size: 10px;
 }
 
-.favorites-content {
+.ilaris.sheet.actor.alternative .favorites-content {
     min-height: 150px;
 }
 
 /* Tab Content */
-.favorites-tab-content {
+.ilaris.sheet.actor.alternative .favorites-tab-content {
     display: none;
 }
 
-.favorites-tab-content.active {
+.ilaris.sheet.actor.alternative .favorites-tab-content.active {
     display: block;
 }
 
-.favorites-list {
+.ilaris.sheet.actor.alternative .favorites-list {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
 /* Combat Gear List */
-.combat-gear-list {
+.ilaris.sheet.actor.alternative .combat-gear-list {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.combat-item {
+.ilaris.sheet.actor.alternative .combat-item {
     background: var(--overlay-black-02);
     border: 1px solid var(--overlay-black-10);
     border-radius: 4px;
@@ -123,26 +123,26 @@
     cursor: pointer;
 }
 
-.combat-item:hover {
+.ilaris.sheet.actor.alternative .combat-item:hover {
     background: var(--overlay-white-10);
     border-color: var(--primary-color, var(--color-accent-primary));
 }
 
-.combat-item-header {
+.ilaris.sheet.actor.alternative .combat-item-header {
     display: flex;
     align-items: center;
     gap: 6px;
     margin-bottom: 4px;
 }
 
-.combat-item-header i {
+.ilaris.sheet.actor.alternative .combat-item-header i {
     color: var(--primary-color, var(--color-accent-primary));
     font-size: 12px;
     width: 16px;
     text-align: center;
 }
 
-.combat-item-header h4 {
+.ilaris.sheet.actor.alternative .combat-item-header h4 {
     margin: 0;
     font-size: 11px;
     font-weight: bold;
@@ -150,17 +150,17 @@
     flex: 1;
 }
 
-.combat-item-content {
+.ilaris.sheet.actor.alternative .combat-item-content {
     padding-left: 22px;
 }
 
-.combat-item-content .eigenschaften {
+.ilaris.sheet.actor.alternative .combat-item-content .eigenschaften {
     padding-top: 0.5em;
     font-size: 0.9em;
 }
 
 /* Kampfstil Item */
-.kampfstil-item .kampfstil-name {
+.ilaris.sheet.actor.alternative .kampfstil-item .kampfstil-name {
     font-size: 10px;
     font-weight: bold;
     color: var(--text-dark, var(--color-text-primary));
@@ -168,7 +168,7 @@
     margin-bottom: 2px;
 }
 
-.beritten-indicator {
+.ilaris.sheet.actor.alternative .beritten-indicator {
     font-size: 9px;
     color: var(--overlay-slate-70);
     display: flex;
@@ -176,11 +176,11 @@
     gap: 2px;
 }
 
-.beritten-indicator i {
+.ilaris.sheet.actor.alternative .beritten-indicator i {
     color: var(--primary-color, var(--color-accent-primary));
 }
 
-.kampfstil-warning {
+.ilaris.sheet.actor.alternative .kampfstil-warning {
     font-size: 8px;
     color: var(--color-danger);
     display: flex;
@@ -189,16 +189,16 @@
     margin-top: 2px;
 }
 
-.kampfstil-warning i {
+.ilaris.sheet.actor.alternative .kampfstil-warning i {
     color: var(--color-danger);
 }
 
 /* Weapon Items */
-.weapon-item .combat-item-header {
+.ilaris.sheet.actor.alternative .weapon-item .combat-item-header {
     align-items: flex-start;
 }
 
-.weapon-image {
+.ilaris.sheet.actor.alternative .weapon-image {
     width: 20px;
     height: 20px;
     border-radius: 2px;
@@ -207,8 +207,8 @@
 }
 
 /* Unified image styling for all favorites component images */
-.weapon-image img,
-.favorite-image img {
+.ilaris.sheet.actor.alternative .weapon-image img,
+.ilaris.sheet.actor.alternative .favorite-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -216,31 +216,31 @@
     border: 0;
 }
 
-.weapon-info {
+.ilaris.sheet.actor.alternative .weapon-info {
     flex: 1;
     min-width: 0;
 }
 
-.weapon-info h4 {
+.ilaris.sheet.actor.alternative .weapon-info h4 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.weapon-type {
+.ilaris.sheet.actor.alternative .weapon-type {
     font-size: 8px;
     color: var(--overlay-slate-60);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.weapon-stats {
+.ilaris.sheet.actor.alternative .weapon-stats {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
 }
 
-.weapon-stats .stat {
+.ilaris.sheet.actor.alternative .weapon-stats .stat {
     font-size: 9px;
     background: var(--overlay-black-08);
     padding: 1px 4px;
@@ -250,16 +250,16 @@
 }
 
 /* Weapon Type Indicators */
-.hauptwaffe {
+.ilaris.sheet.actor.alternative .hauptwaffe {
     border-left: 3px solid var(--primary-color, var(--color-accent-primary));
 }
 
-.nebenwaffe {
+.ilaris.sheet.actor.alternative .nebenwaffe {
     border-left: 3px solid var(--color-success-hover);
 }
 
 /* Combat Empty State */
-.combat-empty {
+.ilaris.sheet.actor.alternative .combat-empty {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,26 +270,26 @@
     min-height: 120px;
 }
 
-.combat-empty i {
+.ilaris.sheet.actor.alternative .combat-empty i {
     font-size: 32px;
     margin-bottom: 8px;
     opacity: 0.5;
 }
 
-.combat-empty p {
+.ilaris.sheet.actor.alternative .combat-empty p {
     margin: 0 0 4px 0;
     font-weight: bold;
     font-size: 13px;
 }
 
-.combat-empty small {
+.ilaris.sheet.actor.alternative .combat-empty small {
     font-size: 11px;
     line-height: 1.3;
     opacity: 0.8;
 }
 
 /* Empty state */
-.favorites-empty {
+.ilaris.sheet.actor.alternative .favorites-empty {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -300,26 +300,26 @@
     min-height: 120px;
 }
 
-.favorites-empty i {
+.ilaris.sheet.actor.alternative .favorites-empty i {
     font-size: 32px;
     margin-bottom: 8px;
     opacity: 0.5;
 }
 
-.favorites-empty p {
+.ilaris.sheet.actor.alternative .favorites-empty p {
     margin: 0 0 4px 0;
     font-weight: bold;
     font-size: 13px;
 }
 
-.favorites-empty small {
+.ilaris.sheet.actor.alternative .favorites-empty small {
     font-size: 11px;
     line-height: 1.3;
     opacity: 0.8;
 }
 
 /* Future: Favorite items styling */
-.favorite-item {
+.ilaris.sheet.actor.alternative .favorite-item {
     display: flex;
     align-items: center;
     padding: 6px;
@@ -331,12 +331,12 @@
     cursor: pointer;
 }
 
-.favorite-item:hover {
+.ilaris.sheet.actor.alternative .favorite-item:hover {
     background: var(--overlay-white-10);
     border-color: var(--primary-color, var(--color-accent-primary));
 }
 
-.favorite-image {
+.ilaris.sheet.actor.alternative .favorite-image {
     flex-shrink: 0;
     width: 24px;
     height: 24px;
@@ -344,12 +344,12 @@
     overflow: hidden;
 }
 
-.favorite-details {
+.ilaris.sheet.actor.alternative .favorite-details {
     flex: 1;
     min-width: 0;
 }
 
-.favorite-details h4 {
+.ilaris.sheet.actor.alternative .favorite-details h4 {
     margin: 0;
     font-size: 12px;
     font-weight: bold;
@@ -359,26 +359,26 @@
     text-overflow: ellipsis;
 }
 
-.favorite-type {
+.ilaris.sheet.actor.alternative .favorite-type {
     font-size: 10px;
     color: var(--color-text-dark-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.favorite-controls {
+.ilaris.sheet.actor.alternative .favorite-controls {
     display: flex;
     gap: 2px;
     opacity: 0;
     transition: opacity 0.2s ease;
 }
 
-.favorite-item:hover .favorite-controls {
+.ilaris.sheet.actor.alternative .favorite-item:hover .favorite-controls {
     opacity: 1;
 }
 
-.favorite-use,
-.favorite-remove {
+.ilaris.sheet.actor.alternative .favorite-use,
+.ilaris.sheet.actor.alternative .favorite-remove {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -390,69 +390,69 @@
     cursor: pointer;
 }
 
-.favorite-use {
+.ilaris.sheet.actor.alternative .favorite-use {
     background: var(--primary-color, var(--color-accent-primary));
     color: var(--color-text-on-accent);
 }
 
-.favorite-use:hover {
+.ilaris.sheet.actor.alternative .favorite-use:hover {
     background: var(--color-shadow-primary, var(--color-accent-primary-strong));
     transform: scale(1.1);
 }
 
-.favorite-remove {
+.ilaris.sheet.actor.alternative .favorite-remove {
     background: var(--color-danger);
     color: var(--color-text-on-accent);
 }
 
-.favorite-remove:hover {
+.ilaris.sheet.actor.alternative .favorite-remove:hover {
     background: var(--color-danger-hover);
     transform: scale(1.1);
 }
 
-.favorite-use i,
-.favorite-remove i {
+.ilaris.sheet.actor.alternative .favorite-use i,
+.ilaris.sheet.actor.alternative .favorite-remove i {
     font-size: 8px;
 }
 
 /* Drag and drop zones */
-.favorites-component.drag-over {
+.ilaris.sheet.actor.alternative .favorites-component.drag-over {
     border-color: var(--primary-color, var(--color-accent-primary));
     background: var(--color-accent-primary-overlay-soft);
 }
 
-.favorites-component.drag-over .favorites-empty {
+.ilaris.sheet.actor.alternative .favorites-component.drag-over .favorites-empty {
     color: var(--primary-color, var(--color-accent-primary));
 }
 
 /* Responsive adjustments */
 @media (max-width: 800px) {
-    .favorites-component {
+    .ilaris.sheet.actor.alternative .favorites-component {
         width: 180px;
         margin-right: 8px;
     }
 
-    .favorites-empty small {
+    .ilaris.sheet.actor.alternative .favorites-empty small {
         font-size: 10px;
     }
 }
 
 @media (max-width: 600px) {
-    .favorites-component {
+    .ilaris.sheet.actor.alternative .favorites-component {
         width: 160px;
         margin-right: 6px;
     }
 
-    .favorites-header h3 {
+    .ilaris.sheet.actor.alternative .favorites-header h3 {
         font-size: 12px;
     }
 
-    .favorites-empty {
+    .ilaris.sheet.actor.alternative .favorites-empty {
         padding: 15px 8px;
         min-height: 100px;
     }
 
-    .favorites-empty i {
+    .ilaris.sheet.actor.alternative .favorites-empty i {
         font-size: 24px;
     }
 }
