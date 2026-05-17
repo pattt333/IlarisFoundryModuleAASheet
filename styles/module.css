@@ -7,18 +7,110 @@
 
 /* CSS Variable Overrides */
 body {
-    --color-shadow-primary: white;
-    --primary-color: #4299e1;
-    --color-select-option-bg: white;
-    --color-scrollbar: #4299e1;
-    --color-light-1: white;
-    --color-bg-light: white;
-    --header-bg-color: #3c4658;
-    --text-dark: #2d3748;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-accent-primary: #4299e1;
+    --color-accent-primary-hover: #3182ce;
+    --color-accent-primary-strong: #2b6cb0;
+    --color-accent-primary-soft: #63b3ed;
+    --color-accent-primary-glow: rgba(66, 153, 225, 0.4);
+    --color-accent-primary-overlay-soft: rgba(66, 153, 225, 0.1);
+    --color-accent-primary-overlay-medium: rgba(66, 153, 225, 0.2);
+    --color-accent-primary-overlay-strong: rgba(66, 153, 225, 0.3);
+    --color-accent-primary-overlay-intense: rgba(66, 153, 225, 0.95);
+    --color-surface-header: #3c4658;
+    --color-surface-base: #f8f8f8;
+    --color-surface-muted: #f7fafc;
+    --color-surface-subtle: #f5f5f5;
+    --color-surface-danger-soft: #f8d7da;
+    --color-text-primary: #2d3748;
+    --color-text-secondary: #4a5568;
+    --color-text-tertiary: #666;
+    --color-text-muted: #718096;
+    --color-text-soft: #aaa;
+    --color-text-strong: #222;
+    --color-text-inverse: #ddd;
+    --color-text-subtle: #cbd5e0;
+    --color-border-default: #ccc;
+    --color-border-light: #e2e8f0;
+    --color-border-dark: #444;
+    --color-border-muted: #888;
+    --color-border-inverse: #666;
+    --color-danger: #e53e3e;
+    --color-danger-hover: #c53030;
+    --color-danger-soft: #f56565;
+    --color-danger-light: #ff6b6b;
+    --color-danger-lighter: #ff9b9b;
+    --color-danger-bright: #ff4444;
+    --color-danger-bright-hover: #ff6666;
+    --color-danger-strong: #dc2626;
+    --color-danger-dark: #b91c1c;
+    --color-danger-soft-border: #f5c6cb;
+    --color-danger-text: #721c24;
+    --color-danger-overlay-soft: rgba(255, 0, 0, 0.05);
+    --color-success: #48bb78;
+    --color-success-hover: #38a169;
+    --color-success-strong: #4aaf4a;
+    --color-success-dark: #16a34a;
+    --color-success-soft: #22c55e;
+    --color-success-glow: rgba(74, 175, 74, 0.5);
+    --color-warning-dark: #d97706;
+    --color-warning: #f59e0b;
+    --overlay-black-02: rgba(0, 0, 0, 0.02);
+    --overlay-black-05: rgba(0, 0, 0, 0.05);
+    --overlay-black-08: rgba(0, 0, 0, 0.08);
+    --overlay-black-10: rgba(0, 0, 0, 0.1);
+    --overlay-black-15: rgba(0, 0, 0, 0.15);
+    --overlay-black-20: rgba(0, 0, 0, 0.2);
+    --overlay-black-30: rgba(0, 0, 0, 0.3);
+    --overlay-black-40: rgba(0, 0, 0, 0.4);
+    --overlay-black-50: rgba(0, 0, 0, 0.5);
+    --overlay-black-60: rgba(0, 0, 0, 0.6);
+    --overlay-black-70: rgba(0, 0, 0, 0.7);
+    --overlay-black-80: rgba(0, 0, 0, 0.8);
+    --overlay-white-05: rgba(255, 255, 255, 0.05);
+    --overlay-white-10: rgba(255, 255, 255, 0.1);
+    --overlay-white-50: rgba(255, 255, 255, 0.5);
+    --overlay-white-70: rgba(255, 255, 255, 0.7);
+    --overlay-white-80: rgba(255, 255, 255, 0.8);
+    --overlay-white-100: rgba(255, 255, 255, 1);
+    --overlay-slate-60: rgba(45, 55, 72, 0.6);
+    --overlay-slate-70: rgba(45, 55, 72, 0.7);
+    --overlay-slate-90: rgba(45, 55, 72, 0.9);
+    --overlay-blue-steel-10: rgba(46, 98, 141, 0.1);
+    --overlay-slate-muted-80: rgba(160, 174, 192, 0.8);
+    --color-shadow-primary: var(--color-white);
+    --primary-color: var(--color-accent-primary);
+    --color-select-option-bg: var(--color-white);
+    --color-scrollbar: var(--color-accent-primary);
+    --color-light-1: var(--color-white);
+    --color-bg-light: var(--color-white);
+    --header-bg-color: var(--color-surface-header);
+    --text-dark: var(--color-text-primary);
+    --ini-text-medium: var(--color-text-soft);
+    --ini-text-dark: var(--color-text-tertiary);
     --filter-primary: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(187deg)
         brightness(119%) contrast(119%);
     --filter-primary-hover: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1552%) hue-rotate(187deg)
         brightness(130%) contrast(119%);
+}
+
+.ilaris-chat-fumble {
+    border: 2px solid var(--color-danger);
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--color-danger-overlay-soft);
+}
+
+.ilaris-chat-fumble__title {
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ilaris-chat-fumble__icon {
+    color: var(--color-danger);
 }
 
 .ilaris.sheet.actor.alternative h3 {
@@ -54,7 +146,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px var(--overlay-black-20);
     transition: transform 0.2s ease;
 }
 
@@ -88,9 +180,9 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .name-section input:focus {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--overlay-white-10);
     border-radius: 4px;
-    outline: 1px solid var(--color-border-highlight, #0066cc);
+    outline: 1px solid var(--color-border-highlight, var(--color-accent-primary-strong));
 }
 
 /* Hexagon Attributes */
@@ -119,9 +211,9 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .hex-main:hover {
-    background: #3182ce;
+    background: var(--color-accent-primary-hover);
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+    box-shadow: 0 4px 12px var(--color-accent-primary-glow);
 }
 
 .ilaris.sheet.actor.alternative .hex-label {
@@ -129,14 +221,14 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 2px var(--overlay-black-50);
 }
 
 .ilaris.sheet.actor.alternative .hex-pw {
     color: white;
     font-size: 1.2em;
     font-weight: bold;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 2px var(--overlay-black-50);
 }
 
 .ilaris.sheet.actor.alternative .stats-section {
@@ -147,7 +239,7 @@ body {
 .ilaris.sheet.actor.alternative .hex-small {
     width: 26px;
     height: 30px;
-    background: #2d3748;
+    background: var(--color-text-primary);
     position: absolute;
     bottom: -4px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -160,9 +252,9 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .hex-small:hover {
-    background: #4a5568;
+    background: var(--color-text-secondary);
     transform: scale(1.1);
-    box-shadow: 0 2px 8px rgba(45, 55, 72, 0.6);
+    box-shadow: 0 2px 8px var(--overlay-slate-60);
 }
 
 /* WS Shield Component */
@@ -179,14 +271,14 @@ body {
     justify-content: center;
     width: 70px;
     height: 80px;
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color, var(--color-accent-primary));
     cursor: default;
 }
 
 .ilaris.sheet.actor.alternative .ws-shield i.fa-shield-alt {
     font-size: 5em;
     z-index: 1;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 2px 4px var(--overlay-black-20));
 }
 
 .ilaris.sheet.actor.alternative .ws-shield .ws-value {
@@ -198,7 +290,7 @@ body {
     font-size: 1.4em;
     font-weight: bold;
     color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 3px var(--overlay-black-80);
 }
 
 .ilaris.sheet.actor.alternative .ws-shield .be-badge {
@@ -208,16 +300,16 @@ body {
     display: flex;
     align-items: center;
     gap: 2px;
-    background: rgba(45, 55, 72, 0.9);
+    background: var(--overlay-slate-90);
     border-radius: 10px;
     padding: 2px 6px;
     z-index: 3;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px var(--overlay-black-30);
 }
 
 .ilaris.sheet.actor.alternative .ws-shield .be-badge i {
     font-size: 0.7em;
-    color: #cbd5e0;
+    color: var(--color-text-subtle);
 }
 
 .ilaris.sheet.actor.alternative .ws-shield .be-badge .be-value {
@@ -230,7 +322,7 @@ body {
     color: white;
     font-size: 0.8em;
     font-weight: bold;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 2px var(--overlay-black-50);
 }
 
 /* Primary and Secondary Stats */
@@ -241,8 +333,8 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .stat {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--color-border-light, #ccc);
+    background: var(--overlay-white-05);
+    border: 1px solid var(--color-border-light, var(--color-border-default));
     border-radius: 6px;
     padding: 8px;
     text-align: center;
@@ -258,12 +350,12 @@ body {
 .ilaris.sheet.actor.alternative .stat-value {
     font-size: 1.1em;
     font-weight: bold;
-    color: var(--color-text-highlight, #333);
+    color: var(--color-text-highlight, var(--color-text-strong));
 }
 
 .ilaris.sheet.actor.alternative .stat-derived {
     font-size: 0.85em;
-    color: var(--color-text-light, #666);
+    color: var(--color-text-light, var(--color-text-tertiary));
     margin-left: 4px;
 }
 
@@ -290,19 +382,19 @@ body {
     align-items: flex-end;
     gap: 4px;
     padding: 6px 8px;
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--overlay-black-05);
     border-radius: 4px;
     font-size: 11px;
     transition: all 0.2s ease;
 }
 
 .ilaris.sheet.actor.alternative .profile-stat:hover {
-    background: rgba(66, 153, 225, 0.1);
+    background: var(--color-accent-primary-overlay-soft);
     transform: translateX(2px);
 }
 
 .ilaris.sheet.actor.alternative .profile-stat i {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color, var(--color-accent-primary));
     font-size: 14px;
     width: 14px;
     text-align: center;
@@ -317,13 +409,13 @@ body {
 
 .ilaris.sheet.actor.alternative .profile-stat .stat-value {
     font-weight: bold;
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color, var(--color-accent-primary));
     margin-left: auto;
 }
 
 .ilaris.sheet.actor.alternative .profile-stat .stat-derived {
     font-size: 9px;
-    color: rgba(45, 55, 72, 0.6);
+    color: var(--overlay-slate-60);
 }
 
 /* Schips Stat */
@@ -332,7 +424,7 @@ body {
     align-items: center;
     gap: 6px;
     padding: 6px 8px;
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--overlay-black-05);
     border-radius: 4px;
     font-size: 11px;
     margin-top: 8px;
@@ -340,7 +432,7 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .schips-stat i.fa-clover {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color, var(--color-accent-primary));
     font-size: 14px;
     width: 14px;
     text-align: center;
@@ -355,7 +447,7 @@ body {
 
 .ilaris.sheet.actor.alternative .schips-stat .stat-value {
     font-weight: bold;
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color, var(--color-accent-primary));
     margin-left: auto;
     margin-right: 8px;
 }
@@ -367,7 +459,7 @@ body {
     justify-content: center;
     width: 20px;
     height: 20px;
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--overlay-black-20);
     border-radius: 3px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -381,7 +473,7 @@ body {
 
 .ilaris.sheet.actor.alternative .schips-stat .schip-decrease:hover,
 .ilaris.sheet.actor.alternative .schips-stat .schip-increase:hover {
-    background: var(--primary-color, #4299e1);
+    background: var(--primary-color, var(--color-accent-primary));
     transform: scale(1.1);
 }
 
@@ -415,7 +507,7 @@ body {
     justify-content: center;
     background: transparent;
     border: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--overlay-white-70);
     cursor: pointer;
     transition: all 0.2s ease;
     padding: 4px;
@@ -424,7 +516,7 @@ body {
 
 .ilaris.sheet.actor.alternative .energy-bar .energy-settings:hover {
     background: transparent;
-    color: rgba(255, 255, 255, 1);
+    color: var(--overlay-white-100);
 }
 
 .ilaris.sheet.actor.alternative .energy-bar:not(:first-child) .energy-progress {
@@ -441,11 +533,11 @@ body {
 
 .ilaris.sheet.actor.alternative .energy-progress {
     position: relative;
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--overlay-black-20);
     border-radius: 0;
     height: 36px;
     overflow: hidden;
-    border: 2px solid var(--color-border-light, #ccc);
+    border: 2px solid var(--color-border-light, var(--color-border-default));
 }
 
 .ilaris.sheet.actor.alternative .energy-fill {
@@ -455,15 +547,15 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .asp-fill {
-    background: linear-gradient(90deg, var(--primary-color, #4299e1), #63b3ed);
+    background: linear-gradient(90deg, var(--primary-color, var(--color-accent-primary)), var(--color-accent-primary-soft));
 }
 
 .ilaris.sheet.actor.alternative .kap-fill {
-    background: linear-gradient(90deg, var(--primary-color, #4299e1), #63b3ed);
+    background: linear-gradient(90deg, var(--primary-color, var(--color-accent-primary)), var(--color-accent-primary-soft));
 }
 
 .ilaris.sheet.actor.alternative .health-fill {
-    background: linear-gradient(90deg, #e53e3e, #fc8181);
+    background: linear-gradient(90deg, var(--color-danger), var(--color-danger-light));
 }
 
 .ilaris.sheet.actor.alternative .energy-text {
@@ -475,7 +567,7 @@ body {
     font-size: 1em;
     font-weight: bold;
     color: white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 1px 2px var(--overlay-black-70);
     pointer-events: auto;
     display: flex;
     align-items: center;
@@ -506,7 +598,7 @@ body {
     position: sticky;
     top: 120px; /* Adjust based on header height */
     z-index: 9;
-    background: var(--color-bg, #f8f8f8);
+    background: var(--color-surface-base);
     border: 0;
     flex-shrink: 0;
 }
@@ -526,19 +618,19 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: var(--primary-color, #4299e1);
+    background: var(--primary-color, var(--color-accent-primary));
     border: none;
     border-radius: 6px;
     color: white;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px var(--overlay-black-20);
 }
 
 .ilaris.sheet.actor.alternative .rest-button:hover {
-    background: #3182ce;
+    background: var(--color-accent-primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px var(--overlay-black-30);
 }
 
 .ilaris.sheet.actor.alternative .rest-button i {
@@ -577,13 +669,13 @@ body {
 .ilaris.sheet.actor.alternative .health-segment {
     position: relative;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--overlay-black-30);
     overflow: hidden;
     transition: background 0.2s ease;
 }
 
 .ilaris.sheet.actor.alternative .health-segment:hover {
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--overlay-black-40);
 }
 
 .ilaris.sheet.actor.alternative .segment-fill {
@@ -596,17 +688,17 @@ body {
 
 /* Red segments (1-4) - Schwer verletzt */
 .ilaris.sheet.actor.alternative .segment-red .segment-fill {
-    background: linear-gradient(90deg, #b91c1c, #dc2626);
+    background: linear-gradient(90deg, var(--color-danger-dark), var(--color-danger-strong));
 }
 
 /* Yellow segments (5-6) - Verletzt */
 .ilaris.sheet.actor.alternative .segment-yellow .segment-fill {
-    background: linear-gradient(90deg, #d97706, #f59e0b);
+    background: linear-gradient(90deg, var(--color-warning-dark), var(--color-warning));
 }
 
 /* Green segment (7+8) - Wundfrei */
 .ilaris.sheet.actor.alternative .segment-green .segment-fill {
-    background: linear-gradient(90deg, #16a34a, #22c55e);
+    background: linear-gradient(90deg, var(--color-success-dark), var(--color-success-soft));
 }
 
 @keyframes pulse {
@@ -660,7 +752,7 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .window-content {
-    background: #f8f8f8;
+    background: var(--color-surface-base);
     padding: 0;
 }
 
@@ -710,7 +802,7 @@ body {
 }
 
 .ilaris.sheet.actor.alternative .sheet-header .charname input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--overlay-white-70);
 }
 
 /* Enhanced Tab Navigation */
@@ -771,15 +863,15 @@ body {
 
 /* Abilities Section */
 .ilaris.sheet.actor.alternative .abilities h3 {
-    color: #2d3748;
+    color: var(--color-text-primary);
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
 
 .ilaris.sheet.actor.alternative .ability {
-    background: #f7fafc;
-    border: 1px solid #e2e8f0;
+    background: var(--color-surface-muted);
+    border: 1px solid var(--color-border-light);
     border-radius: 6px;
     padding: 10px;
     margin-bottom: 8px;
@@ -788,7 +880,7 @@ body {
 
 .ilaris.sheet.actor.alternative .ability .resource-label {
     font-weight: bold;
-    color: #4a5568;
+    color: var(--color-text-secondary);
     min-width: 100px;
     cursor: pointer;
 }
@@ -800,7 +892,7 @@ body {
 .ilaris.sheet.actor.alternative .ability input {
     width: 60px;
     text-align: center;
-    border: 1px solid #cbd5e0;
+    border: 1px solid var(--color-text-subtle);
     border-radius: 4px;
     padding: 4px;
     margin: 0 10px;
@@ -808,7 +900,7 @@ body {
 
 /* Biography Editor */
 .ilaris.sheet.actor.alternative .editor {
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border-light);
     border-radius: 6px;
     min-height: 300px;
 }
@@ -820,7 +912,7 @@ body {
     gap: 10px;
     padding: 15px;
     background: white;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-border-light);
     border-top: none;
     border-radius: 0 0 6px 6px;
 }
@@ -828,7 +920,7 @@ body {
 .ilaris.sheet.actor.alternative .kampfstil-controls select {
     flex: 1;
     padding: 6px 10px;
-    border: 1px solid #cbd5e0;
+    border: 1px solid var(--color-text-subtle);
     border-radius: 4px;
     background: white;
     font-size: 14px;
@@ -840,7 +932,7 @@ body {
     align-items: center;
     gap: 5px;
     font-weight: bold;
-    color: #4a5568;
+    color: var(--color-text-secondary);
     cursor: pointer;
 }
 
@@ -852,11 +944,11 @@ body {
 .ilaris.sheet.actor.alternative .kampfstil-warning {
     margin: 0;
     padding: 8px 15px;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
+    background-color: var(--color-surface-danger-soft);
+    border: 1px solid var(--color-danger-soft-border);
     border-top: none;
     border-radius: 0 0 6px 6px;
-    color: #721c24;
+    color: var(--color-danger-text);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -871,14 +963,14 @@ body {
     justify-content: center;
     text-align: center;
     padding: 30px 20px;
-    color: rgba(45, 55, 72, 0.7);
+    color: var(--overlay-slate-70);
 }
 
 .ilaris.sheet.actor.alternative .items-empty p {
     margin: 0 0 8px 0;
     font-weight: bold;
     font-size: 14px;
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark, var(--color-text-primary));
 }
 
 .ilaris.sheet.actor.alternative .items-empty small {
@@ -889,7 +981,7 @@ body {
 .ilaris.sheet.actor.alternative .carrying-capacity {
     margin-top: 16px;
     padding: 12px;
-    background: rgba(0, 0, 0, 0.02);
+    background: var(--overlay-black-02);
     border-radius: 4px;
 }
 
@@ -904,35 +996,35 @@ body {
     align-items: center;
     gap: 6px;
     font-weight: bold;
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark, var(--color-text-primary));
     font-size: 13px;
 }
 
 .ilaris.sheet.actor.alternative .capacity-label i {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color, var(--color-accent-primary));
 }
 
 .ilaris.sheet.actor.alternative .capacity-progress {
     position: relative;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--overlay-black-10);
     height: 28px;
     border-radius: 4px;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--overlay-black-15);
 }
 
 .ilaris.sheet.actor.alternative .capacity-progress.overloaded {
-    border-color: #e53e3e;
+    border-color: var(--color-danger);
 }
 
 .ilaris.sheet.actor.alternative .capacity-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color, #4299e1), #63b3ed);
+    background: linear-gradient(90deg, var(--primary-color, var(--color-accent-primary)), var(--color-accent-primary-soft));
     transition: width 0.3s ease;
 }
 
 .ilaris.sheet.actor.alternative .capacity-progress.overloaded .capacity-fill {
-    background: linear-gradient(90deg, #e53e3e, #fc8181);
+    background: linear-gradient(90deg, var(--color-danger), var(--color-danger-light));
 }
 
 .ilaris.sheet.actor.alternative .capacity-text {
@@ -942,8 +1034,8 @@ body {
     transform: translate(-50%, -50%);
     font-size: 11px;
     font-weight: bold;
-    color: var(--text-dark, #2d3748);
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+    color: var(--text-dark, var(--color-text-primary));
+    text-shadow: 0 0 3px var(--overlay-white-80);
 }
 
 /* Responsive Design */
@@ -965,3 +1057,4 @@ body {
 .ilaris-button-icon {
     padding-right: 0 !important;
 }
+

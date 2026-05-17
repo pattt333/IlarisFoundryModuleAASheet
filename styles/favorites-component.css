@@ -35,24 +35,24 @@
     width: 28px;
     height: 24px;
     border-radius: 4px 4px 0 0;
-    background: rgba(0, 0, 0, 0.05);
-    color: var(--text-dark, #2d3748);
+    background: var(--overlay-black-05);
+    color: var(--text-dark, var(--color-text-primary));
     text-decoration: none;
     transition: all 0.2s ease;
     cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--overlay-black-10);
     border-bottom: none;
 }
 
 .favorites-tab:hover {
-    background: rgba(66, 153, 225, 0.2);
-    color: var(--primary-color, #4299e1);
+    background: var(--color-accent-primary-overlay-medium);
+    color: var(--primary-color, var(--color-accent-primary));
 }
 
 .favorites-tab.active {
-    background: var(--primary-color, #4299e1);
+    background: var(--primary-color, var(--color-accent-primary));
     color: white;
-    border-color: var(--primary-color, #4299e1);
+    border-color: var(--primary-color, var(--color-accent-primary));
 }
 
 .favorites-tab i {
@@ -71,15 +71,15 @@
     width: 20px;
     height: 20px;
     border-radius: 3px;
-    background: rgba(0, 0, 0, 0.05);
-    color: var(--text-dark, #2d3748);
+    background: var(--overlay-black-05);
+    color: var(--text-dark, var(--color-text-primary));
     text-decoration: none;
     transition: all 0.2s ease;
     cursor: pointer;
 }
 
 .favorites-control:hover {
-    background: var(--primary-color, #4299e1);
+    background: var(--primary-color, var(--color-accent-primary));
     color: white;
     transform: scale(1.1);
 }
@@ -115,8 +115,8 @@
 }
 
 .combat-item {
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--overlay-black-02);
+    border: 1px solid var(--overlay-black-10);
     border-radius: 4px;
     padding: 6px;
     transition: all 0.2s ease;
@@ -124,8 +124,8 @@
 }
 
 .combat-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary-color, #4299e1);
+    background: var(--overlay-white-10);
+    border-color: var(--primary-color, var(--color-accent-primary));
 }
 
 .combat-item-header {
@@ -136,7 +136,7 @@
 }
 
 .combat-item-header i {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color, var(--color-accent-primary));
     font-size: 12px;
     width: 16px;
     text-align: center;
@@ -146,7 +146,7 @@
     margin: 0;
     font-size: 11px;
     font-weight: bold;
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark, var(--color-text-primary));
     flex: 1;
 }
 
@@ -163,26 +163,26 @@
 .kampfstil-item .kampfstil-name {
     font-size: 10px;
     font-weight: bold;
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark, var(--color-text-primary));
     display: block;
     margin-bottom: 2px;
 }
 
 .beritten-indicator {
     font-size: 9px;
-    color: rgba(45, 55, 72, 0.7);
+    color: var(--overlay-slate-70);
     display: flex;
     align-items: center;
     gap: 2px;
 }
 
 .beritten-indicator i {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color, var(--color-accent-primary));
 }
 
 .kampfstil-warning {
     font-size: 8px;
-    color: #e53e3e;
+    color: var(--color-danger);
     display: flex;
     align-items: center;
     gap: 2px;
@@ -190,7 +190,7 @@
 }
 
 .kampfstil-warning i {
-    color: #e53e3e;
+    color: var(--color-danger);
 }
 
 /* Weapon Items */
@@ -229,7 +229,7 @@
 
 .weapon-type {
     font-size: 8px;
-    color: rgba(45, 55, 72, 0.6);
+    color: var(--overlay-slate-60);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -242,20 +242,20 @@
 
 .weapon-stats .stat {
     font-size: 9px;
-    background: rgba(0, 0, 0, 0.08);
+    background: var(--overlay-black-08);
     padding: 1px 4px;
     border-radius: 2px;
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark, var(--color-text-primary));
     font-weight: bold;
 }
 
 /* Weapon Type Indicators */
 .hauptwaffe {
-    border-left: 3px solid var(--primary-color, #4299e1);
+    border-left: 3px solid var(--primary-color, var(--color-accent-primary));
 }
 
 .nebenwaffe {
-    border-left: 3px solid #38a169;
+    border-left: 3px solid var(--color-success-hover);
 }
 
 /* Combat Empty State */
@@ -266,7 +266,7 @@
     justify-content: center;
     text-align: center;
     padding: 20px 10px;
-    color: rgba(45, 55, 72, 0.7);
+    color: var(--overlay-slate-70);
     min-height: 120px;
 }
 
@@ -296,7 +296,7 @@
     justify-content: center;
     text-align: center;
     padding: 20px 10px;
-    color: rgba(45, 55, 72, 0.7);
+    color: var(--overlay-slate-70);
     min-height: 120px;
 }
 
@@ -323,7 +323,7 @@
     display: flex;
     align-items: center;
     padding: 6px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--overlay-white-05);
     border: 1px solid transparent;
     border-radius: 4px;
     gap: 8px;
@@ -332,8 +332,8 @@
 }
 
 .favorite-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary-color, #4299e1);
+    background: var(--overlay-white-10);
+    border-color: var(--primary-color, var(--color-accent-primary));
 }
 
 .favorite-image {
@@ -353,7 +353,7 @@
     margin: 0;
     font-size: 12px;
     font-weight: bold;
-    color: var(--text-dark, #2d3748);
+    color: var(--text-dark, var(--color-text-primary));
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -391,22 +391,22 @@
 }
 
 .favorite-use {
-    background: var(--primary-color, #4299e1);
+    background: var(--primary-color, var(--color-accent-primary));
     color: white;
 }
 
 .favorite-use:hover {
-    background: var(--color-shadow-primary, #2b6cb0);
+    background: var(--color-shadow-primary, var(--color-accent-primary-strong));
     transform: scale(1.1);
 }
 
 .favorite-remove {
-    background: #e53e3e;
+    background: var(--color-danger);
     color: white;
 }
 
 .favorite-remove:hover {
-    background: #c53030;
+    background: var(--color-danger-hover);
     transform: scale(1.1);
 }
 
@@ -417,12 +417,12 @@
 
 /* Drag and drop zones */
 .favorites-component.drag-over {
-    border-color: var(--primary-color, #4299e1);
-    background: rgba(66, 153, 225, 0.1);
+    border-color: var(--primary-color, var(--color-accent-primary));
+    background: var(--color-accent-primary-overlay-soft);
 }
 
 .favorites-component.drag-over .favorites-empty {
-    color: var(--primary-color, #4299e1);
+    color: var(--primary-color, var(--color-accent-primary));
 }
 
 /* Responsive adjustments */
@@ -456,3 +456,4 @@
         font-size: 24px;
     }
 }
+

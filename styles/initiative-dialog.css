@@ -13,7 +13,7 @@
 .initiative-dialog .window-content,
 .mass-initiative-dialog .window-content {
     background: var(--color-light-1);
-    color: #ddd;
+    color: var(--color-text-inverse);
     padding: 0;
 }
 
@@ -31,7 +31,7 @@
 .mass-initiative-dialog-form .dialog-header {
     padding: 0.75rem;
     background: var(--header-bg-color);
-    border-bottom: 2px solid #444;
+    border-bottom: 2px solid var(--color-border-dark);
     border-radius: 0;
 }
 
@@ -47,14 +47,14 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid #666;
+    border: 2px solid var(--color-text-tertiary);
     object-fit: cover;
 }
 
 .initiative-dialog-form .actor-details h2,
 .mass-initiative-dialog-form .npc-details h3 {
     margin: 0 0 0.25rem 0;
-    color: #fff;
+    color: var(--color-white);
     font-size: 1.2rem;
 }
 
@@ -63,7 +63,7 @@
     display: flex;
     gap: 1rem;
     font-size: 0.9rem;
-    color: #aaa;
+    color: var(--color-text-soft);
 }
 
 .initiative-dialog-form .base-stats strong,
@@ -73,7 +73,7 @@
 
 .initiative-dialog-form .base-stats strong.negative,
 .mass-initiative-dialog-form .npc-stats strong.negative {
-    color: #ff6b6b;
+    color: var(--color-danger-light);
 }
 
 /* Dialog Content */
@@ -95,17 +95,17 @@
 /* Sections */
 .initiative-dialog-form section,
 .mass-initiative-dialog-form section {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--overlay-white-05);
     border-radius: 4px;
     padding: 0.75rem;
     margin-bottom: 0.75rem;
-    border: 1px solid #444;
+    border: 1px solid var(--color-border-dark);
 }
 
 .initiative-dialog-form section h3 {
     margin: 0 0 0.5rem 0;
     padding-bottom: 0.25rem;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid var(--color-border-dark);
     color: var(--text-dark);
     font-size: 0.95rem;
 }
@@ -113,8 +113,8 @@
 .mass-initiative-dialog-form section h4 {
     margin: 0 0 0.5rem 0;
     padding-bottom: 0.25rem;
-    border-bottom: 1px solid #444;
-    color: #ddd;
+    border-bottom: 1px solid var(--color-border-dark);
+    color: var(--color-text-inverse);
     font-size: 0.95rem;
 }
 
@@ -149,7 +149,7 @@
     width: 100%;
     padding: 0.4rem;
     background: white;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border-default);
     border-radius: 3px;
     color: var(--text-dark);
     font-size: 0.9rem;
@@ -161,9 +161,9 @@
     width: 100%;
     padding: 0.4rem;
     background: var(--header-bg-color);
-    border: 1px solid #444;
+    border: 1px solid var(--color-border-dark);
     border-radius: 3px;
-    color: #ddd;
+    color: var(--color-text-inverse);
     font-size: 0.9rem;
     height: auto;
 }
@@ -211,7 +211,7 @@
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-    color: #ddd;
+    color: var(--color-text-inverse);
 }
 
 .initiative-dialog-form .checkbox-label input[type='checkbox'],
@@ -222,13 +222,13 @@
 
 /* Weapon Section */
 .initiative-dialog-form .weapon-section {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--overlay-white-05);
 }
 
 .initiative-dialog-form .weapon-properties {
     margin-top: 0.5rem;
     padding: 0.5rem;
-    background: rgba(46, 98, 141, 0.1);
+    background: var(--overlay-blue-steel-10);
     border-left: 3px solid var(--primary-color);
     border-radius: 0 4px 4px 0;
     font-size: 0.85rem;
@@ -248,7 +248,7 @@
 .initiative-dialog-form .selected-actions-info {
     margin-top: 0.5rem;
     padding: 0.5rem;
-    background: rgba(66, 153, 225, 0.1);
+    background: var(--color-accent-primary-overlay-soft);
     border-left: 3px solid var(--primary-color);
     border-radius: 0 4px 4px 0;
 }
@@ -316,35 +316,35 @@
 }
 
 .dice-section .dice-result.selected .dice-face {
-    border-color: #4aaf4a;
-    box-shadow: 0 0 15px rgba(74, 175, 74, 0.5);
+    border-color: var(--color-success-strong);
+    box-shadow: 0 0 15px var(--color-success-glow);
 }
 
 .dice-section .dice-face {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #fff 0%, #ddd 100%);
-    border: 3px solid #666;
+    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-text-inverse) 100%);
+    border: 3px solid var(--color-text-tertiary);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow:
-        inset 0 2px 4px rgba(255, 255, 255, 0.5),
-        0 4px 8px rgba(0, 0, 0, 0.3);
+        inset 0 2px 4px var(--overlay-white-50),
+        0 4px 8px var(--overlay-black-30);
     transition: all 0.2s ease;
 }
 
 .dice-section .dice-face:hover {
     transform: scale(1.05);
-    border-color: #888;
+    border-color: var(--color-border-muted);
 }
 
 .dice-section .dice-value {
     font-size: 2rem;
     font-weight: bold;
-    color: #222;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    color: var(--color-text-strong);
+    text-shadow: 1px 1px 2px var(--overlay-white-50);
 }
 
 /* ==================== Dialog Footer ==================== */
@@ -352,14 +352,14 @@
 .mass-initiative-dialog-form .dialog-footer {
     padding: 0.75rem;
     background: var(--header-bg-color);
-    border-top: 2px solid #444;
+    border-top: 2px solid var(--color-border-dark);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .initiative-dialog-form .warning-text {
-    color: #ff6b6b;
+    color: var(--color-danger-light);
     font-size: 0.85rem;
 }
 
@@ -379,9 +379,9 @@
 .mass-initiative-dialog-form .cancel-btn {
     padding: 0.5rem 1rem;
     background: var(--header-bg-color);
-    border: 1px solid #444;
+    border: 1px solid var(--color-border-dark);
     border-radius: 4px;
-    color: #ddd;
+    color: var(--color-text-inverse);
     cursor: pointer;
     font-size: 0.9rem;
     transition: all 0.2s ease;
@@ -396,7 +396,7 @@
 .initiative-dialog-form .ini-ansagen-btn,
 .mass-initiative-dialog-form .ini-ansagen-btn {
     padding: 0.5rem 1.5rem;
-    background: #4aaf4a;
+    background: var(--color-success-strong);
     border: none;
     border-radius: 4px;
     color: white;
@@ -432,7 +432,7 @@
 
 .mass-initiative-dialog-form .dialog-header h2 {
     margin: 0;
-    color: #ddd;
+    color: var(--color-text-inverse);
     font-size: 1.1rem;
     flex: 1;
 }
@@ -460,24 +460,24 @@
 }
 
 .mass-initiative-dialog-form .npc-accordion {
-    border: 1px solid #444;
+    border: 1px solid var(--color-border-dark);
     border-radius: 4px;
     background: var(--header-bg-color);
     overflow: hidden;
 }
 
 .mass-initiative-dialog-form .npc-accordion.needs-selection {
-    border-color: #ff6b6b;
+    border-color: var(--color-danger-light);
     animation: pulse-border 1s infinite;
 }
 
 @keyframes pulse-border {
     0%,
     100% {
-        border-color: #ff6b6b;
+        border-color: var(--color-danger-light);
     }
     50% {
-        border-color: #ff9b9b;
+        border-color: var(--color-danger-lighter);
     }
 }
 
@@ -487,15 +487,15 @@
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
     background: var(--header-bg-color);
-    color: #ddd;
+    color: var(--color-text-inverse);
     cursor: pointer;
     transition: all 0.2s ease;
     border-bottom: 1px solid transparent;
 }
 
 .mass-initiative-dialog-form .accordion-header:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    background: var(--overlay-white-05);
+    color: var(--color-white);
 }
 
 .mass-initiative-dialog-form .accordion-header.active {
@@ -508,7 +508,7 @@
     height: 32px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid #444;
+    border: 1px solid var(--color-border-dark);
 }
 
 .mass-initiative-dialog-form .npc-accordion-name {
@@ -518,7 +518,7 @@
 }
 
 .mass-initiative-dialog-form .rolled-indicator {
-    color: #4aaf4a;
+    color: var(--color-success-strong);
     font-size: 1.5rem;
 }
 
@@ -551,7 +551,7 @@
 }
 
 .mass-initiative-dialog-form .accordion-content .form-group label {
-    color: #666;
+    color: var(--color-text-tertiary);
 }
 
 .mass-initiative-dialog-form .accordion-content .checkbox-label {
@@ -566,11 +566,11 @@
 }
 
 .mass-initiative-dialog-form .accordion-content .npc-stats {
-    color: #666;
+    color: var(--color-text-tertiary);
 }
 
 .mass-initiative-dialog-form .accordion-content section {
-    background: rgba(0, 0, 0, 0.02);
+    background: var(--overlay-black-02);
     border-bottom-color: var(--header-bg-color);
 }
 
@@ -624,23 +624,23 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--overlay-white-05);
     border-radius: 4px 4px 0 0;
-    border: 1px solid #444;
+    border: 1px solid var(--color-border-dark);
     border-bottom: none;
 }
 
 .kampf-aktionen-section .items-header h3 {
     margin: 0;
     font-size: 1rem;
-    color: #ddd;
+    color: var(--color-text-inverse);
 }
 
 .kampf-aktionen-section .aktionen-list {
-    border: 1px solid #444;
+    border: 1px solid var(--color-border-dark);
     border-top: none;
     border-radius: 0 0 4px 4px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--overlay-white-05);
 }
 
 .kampf-aktionen-section .aktion-item {
@@ -648,7 +648,7 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.5rem;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid var(--color-border-dark);
     transition: background 0.2s ease;
 }
 
@@ -657,7 +657,7 @@
 }
 
 .kampf-aktionen-section .aktion-item:hover {
-    background: rgba(66, 153, 225, 0.1);
+    background: var(--color-accent-primary-overlay-soft);
 }
 
 .kampf-aktionen-section .aktion-img {
@@ -665,12 +665,12 @@
     height: 32px;
     border-radius: 4px;
     object-fit: cover;
-    border: 1px solid #444;
+    border: 1px solid var(--color-border-dark);
 }
 
 .kampf-aktionen-section .aktion-name {
     flex: 1;
-    color: #ddd;
+    color: var(--color-text-inverse);
     font-size: 0.9rem;
 }
 
@@ -690,7 +690,7 @@
 }
 
 .kampf-aktionen-section .aktion-controls .item-delete:hover {
-    color: #ff6b6b;
+    color: var(--color-danger-light);
 }
 
 .kampf-aktionen-section .empty-aktionen {
@@ -699,3 +699,4 @@
     color: var(--ini-text-dark);
     font-style: italic;
 }
+

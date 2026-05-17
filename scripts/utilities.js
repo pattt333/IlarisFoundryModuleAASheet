@@ -401,12 +401,12 @@ export async function handleFumble(rollResult, actor, weapon, ammunitionType, is
             break;
     }
 
-    // Post fumble chat message with red border and icon
+        // Post fumble chat message with semantic styling classes
     await ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor }),
-        content: `<div style="border: 2px solid #ff0000; padding: 10px; border-radius: 5px; background: rgba(255, 0, 0, 0.05);">
-      <h3 style="margin: 0 0 8px 0; display: flex; align-items: center; gap: 8px;">
-        <i class="fas fa-skull-crossbones" style="color: #ff0000;"></i>
+                content: `<div class="ilaris-chat-fumble">
+            <h3 class="ilaris-chat-fumble__title">
+                <i class="fas fa-skull-crossbones ilaris-chat-fumble__icon"></i>
         Fernkampf-Fumble!
       </h3>
       <p style="margin: 0 0 8px 0;"><strong>2W6 Ergebnis:</strong> ${fumbleResult}</p>

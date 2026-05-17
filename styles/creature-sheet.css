@@ -21,7 +21,7 @@
 }
 
 .ilaris.sheet.actor.alternative.kreaturen .profile-stat.editable-stat:hover {
-    background: rgba(66, 153, 225, 0.3);
+    background: var(--color-accent-primary-overlay-strong);
 }
 
 /* Health modifier color coding */
@@ -166,7 +166,7 @@
     height: 32px;
     font-size: 1.3em;
     color: var(--primary-color);
-    background: rgba(66, 153, 225, 0.1);
+    background: var(--color-accent-primary-overlay-soft);
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -176,7 +176,7 @@
     transform: scale(1.15);
     color: white;
     background: var(--primary-color);
-    box-shadow: 0 2px 8px rgba(66, 153, 225, 0.4);
+    box-shadow: 0 2px 8px var(--color-accent-primary-glow);
 }
 
 /* Small Dice Buttons (for damage, skills) */
@@ -247,7 +247,7 @@
 .ilaris.sheet.actor.alternative.kreaturen .kurzbeschreibung-container textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+    box-shadow: 0 0 0 2px var(--color-accent-primary-overlay-medium);
 }
 
 /* ===================================
@@ -376,3 +376,4 @@
         justify-content: center;
     }
 }
+
