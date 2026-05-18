@@ -10,6 +10,15 @@ const CONTEXT_LABELS = {
     buyItem: 'Gegenstand einkaufen',
 };
 
+const DEFAULT_DIFFICULTY = 16;
+
+const CONTEXT_DIFFICULTY_CONFIG = {
+    none: { active: false },
+    gatherMaterials: { active: true, fixed: true, value: DEFAULT_DIFFICULTY },
+    craftItem: { active: true, fixed: false, value: DEFAULT_DIFFICULTY },
+    buyItem: { active: true, fixed: false, value: DEFAULT_DIFFICULTY },
+};
+
 export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     static DEFAULT_OPTIONS = {
         classes: ['iaas-fertigkeit-dialog'],
@@ -46,6 +55,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
         this.speaker = ChatMessage.getSpeaker({ actor: this.actor });
         this.dialogId = `dialog-${Date.now()}-${Math.random().toString(36).substring(2, 11)}`;
         this.usageContext = 'none';
+        this.difficultyValue = DEFAULT_DIFFICULTY;
     }
 
     static #onPreviewClick(event) {
@@ -68,6 +78,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
     async _prepareContext(options) {
         const context = await super._prepareContext(options);
         const hasSchips = this.actor.system.schips.schips_stern > 0;
+        const difficulty = this._getDifficultyState(this.usageContext, this.difficultyValue);
 
         return {
             ...context,
@@ -93,6 +104,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
                 { value: 'buyItem', label: CONTEXT_LABELS.buyItem },
             ],
             defaultUsageContext: this.usageContext,
+            difficulty,
         };
     }
 
@@ -116,14 +128,93 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             clearTimeout(this._updateTimeout);
         }
         this._updateTimeout = setTimeout(() => {
+            this._syncStateFromForm();
+            this._syncDifficultyField();
             this._updateModifierDisplay();
         }, 150);
     }
 
-    _getUsageContextData() {
+    _syncStateFromForm() {
         const html = this.element;
-        const contextChoice = html?.querySelector(`#usage-context-${this.dialogId}`)?.value || 'none';
-        this.usageContext = contextChoice;
+
+        if (!html) {
+            return;
+        }
+
+        const nextUsageContext = html.querySelector(`#usage-context-${this.dialogId}`)?.value || 'none';
+        const difficultyInputValue = html.querySelector(`#difficulty-${this.dialogId}`)?.value;
+        const difficultyState = this._getDifficultyState(nextUsageContext, difficultyInputValue);
+
+        this.usageContext = nextUsageContext;
+
+        if (difficultyState.active && !difficultyState.fixed) {
+            this.difficultyValue = difficultyState.inputValue;
+        }
+    }
+
+    _getDifficultyState(usageContextKey = 'none', rawDifficultyValue = this.difficultyValue) {
+        const config = CONTEXT_DIFFICULTY_CONFIG[usageContextKey] || CONTEXT_DIFFICULTY_CONFIG.none;
+
+        if (!config.active) {
+            return {
+                active: false,
+                fixed: false,
+                inputValue: DEFAULT_DIFFICULTY,
+                displayValue: '',
+                effectiveValue: null,
+            };
+        }
+
+        if (config.fixed) {
+            return {
+                active: true,
+                fixed: true,
+                inputValue: config.value,
+                displayValue: String(config.value),
+                effectiveValue: config.value,
+            };
+        }
+
+        const parsedDifficulty = Number.parseInt(rawDifficultyValue, 10);
+        const difficultyValue = Number.isFinite(parsedDifficulty) ? parsedDifficulty : DEFAULT_DIFFICULTY;
+
+        return {
+            active: true,
+            fixed: false,
+            inputValue: difficultyValue,
+            displayValue: String(difficultyValue),
+            effectiveValue: difficultyValue,
+        };
+    }
+
+    _syncDifficultyField() {
+        const html = this.element;
+
+        if (!html) {
+            return;
+        }
+
+        const difficultyState = this._getDifficultyState(this.usageContext, this.difficultyValue);
+        const row = html.querySelector('[data-difficulty-row]');
+        const editableInput = html.querySelector(`#difficulty-${this.dialogId}`);
+        const fixedInput = html.querySelector(`#difficulty-fixed-${this.dialogId}`);
+
+        row?.classList.toggle('is-hidden', !difficultyState.active);
+
+        if (editableInput) {
+            editableInput.classList.toggle('is-hidden', !difficultyState.active || difficultyState.fixed);
+            editableInput.disabled = !difficultyState.active || difficultyState.fixed;
+            editableInput.value = String(difficultyState.inputValue);
+        }
+
+        if (fixedInput) {
+            fixedInput.classList.toggle('is-hidden', !difficultyState.active || !difficultyState.fixed);
+            fixedInput.value = difficultyState.displayValue;
+        }
+    }
+
+    _getUsageContextData() {
+        const contextChoice = this.usageContext || 'none';
 
         return {
             key: contextChoice,
@@ -136,7 +227,17 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             return;
         }
 
-        const { diceFormula, totalMod, modLines, finalPW, effectivePW, label, noTalentSelected, usesTalent } =
+        const {
+            diceFormula,
+            totalMod,
+            modLines,
+            finalPW,
+            effectivePW,
+            label,
+            noTalentSelected,
+            usesTalent,
+            difficultyState,
+        } =
             this._calculateModifiers();
         const formattedDice = formatDiceFormula(diceFormula);
         const finalFormula = finalPW >= 0 ? `${formattedDice}+${finalPW}` : `${formattedDice}${finalPW}`;
@@ -166,6 +267,11 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
 
         summary += '<hr>';
 
+        if (difficultyState.active) {
+            const difficultyLabel = difficultyState.fixed ? 'Schwierigkeit (fest)' : 'Schwierigkeit';
+            summary += `<div class="modifier-item difficulty-value"><strong>${difficultyLabel}: ${difficultyState.effectiveValue}</strong></div>`;
+        }
+
         if (totalMod !== 0) {
             const totalColor = totalMod > 0 ? 'positive' : 'negative';
             const totalSign = totalMod > 0 ? '+' : '';
@@ -187,6 +293,8 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
     }
 
     _calculateModifiers() {
+        this._syncStateFromForm();
+
         const html = this.element;
         const globalermod = this.actor.system.abgeleitete.globalermod || 0;
         const modLines = [];
@@ -246,6 +354,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
         }
 
         const usageContext = this._getUsageContextData();
+        const difficultyState = this._getDifficultyState(usageContext.key, this.difficultyValue);
 
         const hoheQualitaetMod = hoheQualitaet * -4;
         const totalMod = globalermod + hoheQualitaetMod + modifikator;
@@ -268,6 +377,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             schipsApplied,
             schipsText,
             usageContext,
+            difficultyState,
         };
     }
 
@@ -303,11 +413,16 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             schipsApplied,
             schipsText,
             usageContext,
+            difficultyState,
         } = this._calculateModifiers();
 
         let text = '';
         if (usageContext.key !== 'none') {
             text = text.concat(`Nutzung: ${usageContext.label}\n`);
+        }
+        if (difficultyState.active) {
+            const difficultySuffix = difficultyState.fixed ? ' (fest)' : '';
+            text = text.concat(`Schwierigkeit: ${difficultyState.effectiveValue}${difficultySuffix}\n`);
         }
         if (schipsText) {
             text = text.concat(`${schipsText}\n`);
@@ -335,9 +450,21 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             fertigkeitKey: this.fertigkeitKey,
             fertigkeitName: this.fertigkeitName,
             usageContext,
+            difficulty: difficultyState.active
+                ? {
+                      active: true,
+                      fixed: difficultyState.fixed,
+                      value: difficultyState.effectiveValue,
+                  }
+                : null,
             formula,
             rollMode: rollmode,
         });
+
+        if (difficultyState.active) {
+            await roll_crit_message(formula, label, text, this.speaker, rollmode, true, 1, difficultyState.effectiveValue);
+            return;
+        }
 
         await roll_crit_message(formula, label, text, this.speaker, rollmode);
     }

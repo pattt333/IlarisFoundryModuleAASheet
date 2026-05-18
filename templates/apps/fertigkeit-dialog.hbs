@@ -58,6 +58,29 @@
             </select>
         </div>
 
+        <div class="flexrow {{#unless difficulty.active}}is-hidden{{/unless}}" data-difficulty-row>
+            <label>Schwierigkeit:</label>
+            <input
+                id="difficulty-{{dialogId}}"
+                class="{{#if difficulty.fixed}}is-hidden{{/if}}"
+                type="number"
+                value="{{difficulty.inputValue}}"
+                data-dtype="Number"
+                min="0"
+                step="1"
+                style="max-width: 80px;"
+            />
+            <input
+                id="difficulty-fixed-{{dialogId}}"
+                class="readonly-difficulty {{#unless difficulty.fixed}}is-hidden{{/unless}}"
+                type="number"
+                value="{{difficulty.displayValue}}"
+                readonly
+                disabled
+                style="max-width: 80px;"
+            />
+        </div>
+
         <div class="flexrow">
             <label>Hohe Qualität:</label>
             <input id="hohequalitaet-{{dialogId}}" type="number" value="0" data-dtype="Number" min="0" style="max-width: 80px;" />

@@ -80,6 +80,19 @@ body.theme-dark .iaas-fertigkeit-dialog {
     color: var(--iaas-color-text);
 }
 
+.iaas-fertigkeit-dialog .is-hidden {
+    display: none;
+}
+
+.iaas-fertigkeit-dialog .readonly-difficulty {
+    opacity: 1;
+    cursor: default;
+}
+
+.iaas-fertigkeit-dialog .modifier-item.difficulty-value {
+    color: var(--iaas-color-text);
+}
+
 .iaas-fertigkeit-dialog input:focus,
 .iaas-fertigkeit-dialog select:focus {
     outline: 1px solid var(--iaas-color-accent);
