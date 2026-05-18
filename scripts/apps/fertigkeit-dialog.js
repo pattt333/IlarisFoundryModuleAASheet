@@ -669,7 +669,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
 
         let text = '';
         if (usageContext.key !== 'none') {
-            text = text.concat(`Nutzung: ${usageContext.label}\n`);
+            text = text.concat(`Aktion: ${usageContext.label}\n`);
         }
         if (difficultyState.active) {
             const difficultySuffix = difficultyState.fixed ? ' (fest)' : '';
