@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "",
+        "voraussetzung": "",
         "input": {
             "label": "",
             "field": "TREFFER_ZONE"

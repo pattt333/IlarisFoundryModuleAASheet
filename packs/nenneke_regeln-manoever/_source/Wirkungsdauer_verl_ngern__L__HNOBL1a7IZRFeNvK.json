@@ -1,9 +1,9 @@
 {
-    "name": "Wirkungsdauer verlängern (L)",
+    "name": "Wirkungsdauer verlÃ¤ngern (L)",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Geweiht I",
+        "voraussetzung": "Vorteil Geweiht I",
         "input": {
             "label": "",
             "field": "NUMBER",

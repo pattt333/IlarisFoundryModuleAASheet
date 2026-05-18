@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Parierwaffenkampf III",
+        "voraussetzung": "Vorteil Parierwaffenkampf III",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 13,
         "probe": "VT -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Du fügst dem Angreifer den Waffenschaden deiner Waffe zu. Die Riposte ist kombinierbar mit Attackemanövern, die in diesem Fall die Verteidigung zusätzlich erschweren. Zum Beispiel wäre eine Kombination aus Riposte und Hammerschlag um -12 erschwert, würde aber doppelten Schaden anrichten.\n<i>Voraussetzung:</i> Kampf im Parrierwaffen-Stil; 1KR Cooldown",
+        "text": "<i>Wirkung:</i> Du fÃ¼gst dem Angreifer den Waffenschaden deiner Waffe zu. Die Riposte ist kombinierbar mit AttackemanÃ¶vern, die in diesem Fall die Verteidigung zusÃ¤tzlich erschweren. Zum Beispiel wÃ¤re eine Kombination aus Riposte und Hammerschlag um -12 erschwert, wÃ¼rde aber doppelten Schaden anrichten.\n<i>Voraussetzung:</i> Kampf im Parrierwaffen-Stil; 1KR Cooldown",
         "isBaseManoever": false
     },
     "effects": [],

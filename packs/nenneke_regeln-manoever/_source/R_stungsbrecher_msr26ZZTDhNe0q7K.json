@@ -1,9 +1,9 @@
 {
-    "name": "Rüstungsbrecher",
+    "name": "RÃ¼stungsbrecher",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Waffeneigenschaft Rüstungsbrechend",
+        "voraussetzung": "Waffeneigenschaft RÃ¼stungsbrechend",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -27,7 +27,7 @@
         "gruppe": "0",
         "probe": "AT -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Der Angriff ignoriert die gegnerische Rüstung und richtet SP statt TP an.\n<i>Voraussetzung:</i> Waffeneigenschaft Rüstungsbrechend\n<b>Anmerkung:</b> Das Manöver lohnt sich, wenn der Gegner schwere Rüstung trägt oder du mehrere Wunden anrichten kannst.",
+        "text": "<i>Wirkung:</i> Der Angriff ignoriert die gegnerische RÃ¼stung und richtet SP statt TP an.\n<i>Voraussetzung:</i> Waffeneigenschaft RÃ¼stungsbrechend\n<b>Anmerkung:</b> Das ManÃ¶ver lohnt sich, wenn der Gegner schwere RÃ¼stung trÃ¤gt oder du mehrere Wunden anrichten kannst.",
         "isBaseManoever": false
     },
     "effects": [],

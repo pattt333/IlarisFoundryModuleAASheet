@@ -1,9 +1,9 @@
 {
-    "name": "Rüstungsbrecher (FK)",
+    "name": "RÃ¼stungsbrecher (FK)",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "",
+        "voraussetzung": "",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -27,7 +27,7 @@
         "gruppe": "1",
         "probe": "FK -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Der Angriff ignoriert die gegnerische Rüstung und richtet SP statt TP an.\n<i>Voraussetzung:</i> Pfeile mit Waffeneigenschaft Rüstungsbrechend.",
+        "text": "<i>Wirkung:</i> Der Angriff ignoriert die gegnerische RÃ¼stung und richtet SP statt TP an.\n<i>Voraussetzung:</i> Pfeile mit Waffeneigenschaft RÃ¼stungsbrechend.",
         "isBaseManoever": false
     },
     "effects": [],

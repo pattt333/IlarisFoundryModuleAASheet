@@ -1,9 +1,9 @@
 {
-    "name": "Präziser Schuss",
+    "name": "PrÃ¤ziser Schuss",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "",
+        "voraussetzung": "",
         "input": {
             "label": "Number",
             "field": "NUMBER",

@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Kraftvoller Kampf IV",
+        "voraussetzung": "Vorteil Kraftvoller Kampf IV",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 0,
         "probe": "",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Du führst einen kraftvollen Angriff aus und lässt dabei deine Verteidigung schleifen. Dein Waffenschaden erhöht sich um 4TP, dafür reduziert sich deine VW um -4. Das Manöver beginnt mit dem eigenen Angriff und gilt bis zur eigenen nächsten Initiativephase.\n\n<i>Voraussetzungen:</i> Kraftvoller Kampf IV und Kampf in diesem Stil, 1KR Cooldown",
+        "text": "<i>Wirkung:</i> Du fÃ¼hrst einen kraftvollen Angriff aus und lÃ¤sst dabei deine Verteidigung schleifen. Dein Waffenschaden erhÃ¶ht sich um 4TP, dafÃ¼r reduziert sich deine VW um -4. Das ManÃ¶ver beginnt mit dem eigenen Angriff und gilt bis zur eigenen nÃ¤chsten Initiativephase.\n\n<i>Voraussetzungen:</i> Kraftvoller Kampf IV und Kampf in diesem Stil, 1KR Cooldown",
         "isBaseManoever": false
     },
     "effects": [],

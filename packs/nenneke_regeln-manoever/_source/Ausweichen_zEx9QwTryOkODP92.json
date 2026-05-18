@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "",
+        "voraussetzung": "",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 13,
         "probe": "VT -2-BE",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Der Verteidiger entgeht dem Angriff und seinen Auswirkungen vollständig. Ausweichen ist die sinnvollste waffenlose Abwehr gegen Bewaffnete.",
+        "text": "<i>Wirkung:</i> Der Verteidiger entgeht dem Angriff und seinen Auswirkungen vollstÃ¤ndig. Ausweichen ist die sinnvollste waffenlose Abwehr gegen Bewaffnete.",
         "isBaseManoever": false
     },
     "effects": [],

@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Niederwerfen",
+        "voraussetzung": "Vorteil Niederwerfen",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 0,
         "probe": "AT -4",
         "gegenprobe": "",
-        "text": "<i>Gegenprobe:</i> KK\n<i>Wirkung:</i> Dein Ziel stürzt und liegt am Boden.",
+        "text": "<i>Gegenprobe:</i> KK\n<i>Wirkung:</i> Dein Ziel stÃ¼rzt und liegt am Boden.",
         "isBaseManoever": false
     },
     "effects": [],

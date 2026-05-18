@@ -1,9 +1,9 @@
 {
-    "name": "Vorbereitung verkürzen (M)",
+    "name": "Vorbereitung verkÃ¼rzen (M)",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Zauberer I",
+        "voraussetzung": "Vorteil Zauberer I",
         "input": {
             "label": "",
             "field": "NUMBER",

@@ -1,9 +1,9 @@
 {
-    "name": "Reichweite erhöhen (L)",
+    "name": "Reichweite erhÃ¶hen (L)",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Geweiht I",
+        "voraussetzung": "Vorteil Geweiht I",
         "input": {
             "label": "",
             "field": "NUMBER",
@@ -22,7 +22,7 @@
         "gruppe": 3,
         "probe": "Liturgie -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Die Reichweite der Liturgie verdoppelt sich. Die Reichweite Berührung wird zu 2 Schritt.",
+        "text": "<i>Wirkung:</i> Die Reichweite der Liturgie verdoppelt sich. Die Reichweite BerÃ¼hrung wird zu 2 Schritt.",
         "isBaseManoever": false
     },
     "effects": [],

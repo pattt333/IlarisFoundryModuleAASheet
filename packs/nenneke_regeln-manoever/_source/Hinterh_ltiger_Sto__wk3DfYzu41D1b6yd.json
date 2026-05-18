@@ -1,9 +1,9 @@
 {
-    "name": "Hinterhältiger Stoß",
+    "name": "HinterhÃ¤ltiger StoÃŸ",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Hinterhältiger Stoß",
+        "voraussetzung": "Vorteil HinterhÃ¤ltiger StoÃŸ",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 0,
         "probe": "Verbergen -2",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Du führst einen Angriff (-2) mit Phexisches Handwerk (Verbergen) gegen die Sinnesschärfe (Warhnehmen) deines Gegners aus. \n\nDer Angriff zählt immer als in Kampfgetümmel. \n\n<i>Voraussetzungen:</i> Waffe mit Reichweite 0,  2KR Cooldown, Vorteil Unehrenhafter Kampf",
+        "text": "<i>Wirkung:</i> Du fÃ¼hrst einen Angriff (-2) mit Phexisches Handwerk (Verbergen) gegen die SinnesschÃ¤rfe (Warhnehmen) deines Gegners aus. \n\nDer Angriff zÃ¤hlt immer als in KampfgetÃ¼mmel. \n\n<i>Voraussetzungen:</i> Waffe mit Reichweite 0,  2KR Cooldown, Vorteil Unehrenhafter Kampf",
         "isBaseManoever": false
     },
     "effects": [],

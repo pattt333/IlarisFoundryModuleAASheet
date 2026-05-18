@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Geweiht I",
+        "voraussetzung": "Vorteil Geweiht I",
         "input": {
             "label": "Number",
             "field": "NUMBER",
@@ -22,7 +22,7 @@
         "gruppe": 3,
         "probe": "Liturgie +X",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Du kannst die Vorbereitungszeit freiwillig um 1 Minute/Stunde/Tag/Woche/Monat/Jahr erhöhen, wodurch die Liturgie um +4/6/8/10/12/14 erleichtert ist. Die Vorbereitungszeit muss dadurch mindestens verdoppelt werden.",
+        "text": "<i>Wirkung:</i> Du kannst die Vorbereitungszeit freiwillig um 1 Minute/Stunde/Tag/Woche/Monat/Jahr erhÃ¶hen, wodurch die Liturgie um +4/6/8/10/12/14 erleichtert ist. Die Vorbereitungszeit muss dadurch mindestens verdoppelt werden.",
         "isBaseManoever": false
     },
     "effects": [],

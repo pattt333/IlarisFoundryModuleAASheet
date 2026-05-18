@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Hammerschlag",
+        "voraussetzung": "Vorteil Hammerschlag",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -27,7 +27,7 @@
         "gruppe": "0",
         "probe": "AT -8",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Der Angriff richtet doppelten Waffenschaden an. Zusätzliche TP aus Kommandos, anderen Manövern usw. werden nicht verdoppelt. 1KR Cooldown",
+        "text": "<i>Wirkung:</i> Der Angriff richtet doppelten Waffenschaden an. ZusÃ¤tzliche TP aus Kommandos, anderen ManÃ¶vern usw. werden nicht verdoppelt. 1KR Cooldown",
         "isBaseManoever": false
     },
     "effects": [],

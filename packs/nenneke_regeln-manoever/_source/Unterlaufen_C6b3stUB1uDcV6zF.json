@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Schneller Kampf III",
+        "voraussetzung": "Vorteil Schneller Kampf III",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 13,
         "probe": "VT -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Wenn die Verteidigung gelingt, darfst du in der nächsten eigenen Initiativephase eine Freie Aktion nutzen, um deinen Gegner (ein weiteres Mal) anzugreifen.\n<i>Voraussetzungen:</i> Schneller Kampf III und Kampf in diesem Stil, 1KR Cooldown",
+        "text": "<i>Wirkung:</i> Wenn die Verteidigung gelingt, darfst du in der nÃ¤chsten eigenen Initiativephase eine Freie Aktion nutzen, um deinen Gegner (ein weiteres Mal) anzugreifen.\n<i>Voraussetzungen:</i> Schneller Kampf III und Kampf in diesem Stil, 1KR Cooldown",
         "isBaseManoever": false
     },
     "effects": [],

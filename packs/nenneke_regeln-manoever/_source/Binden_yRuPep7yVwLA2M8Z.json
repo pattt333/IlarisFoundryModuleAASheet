@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "",
+        "voraussetzung": "",
         "input": {
             "label": "Number",
             "field": "NUMBER",
@@ -22,7 +22,7 @@
         "gruppe": 13,
         "probe": "VT +X",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Bis zum Ende der nächsten eigenen Initiativephase sind alle Verteidigungen des Gegners um -X erschwert.",
+        "text": "<i>Wirkung:</i> Bis zum Ende der nÃ¤chsten eigenen Initiativephase sind alle Verteidigungen des Gegners um -X erschwert.",
         "isBaseManoever": false
     },
     "effects": [],

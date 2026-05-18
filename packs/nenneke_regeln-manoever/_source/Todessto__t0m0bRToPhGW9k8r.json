@@ -1,9 +1,9 @@
 {
-    "name": "Todesstoß",
+    "name": "TodesstoÃŸ",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Todesstoß",
+        "voraussetzung": "Vorteil TodesstoÃŸ",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -27,7 +27,7 @@
         "gruppe": "0",
         "probe": "AT -8",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Der Angriff richtet 2/8 der aktuellen LeP (aufgerundet) deines Ziels an SP an, danach kann das Manöver für die nächsten 5KR nicht wieder eingesetzt werden.\n\n<i>Voraussetzungen:</i> Vorteil Todesstoß, 5 KR Cooldown",
+        "text": "<i>Wirkung:</i> Der Angriff richtet 2/8 der aktuellen LeP (aufgerundet) deines Ziels an SP an, danach kann das ManÃ¶ver fÃ¼r die nÃ¤chsten 5KR nicht wieder eingesetzt werden.\n\n<i>Voraussetzungen:</i> Vorteil TodesstoÃŸ, 5 KR Cooldown",
         "isBaseManoever": false
     },
     "effects": [],

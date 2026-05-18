@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Festnageln",
+        "voraussetzung": "Vorteil Festnageln",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 1,
         "probe": "FK-4",
         "gegenprobe": "",
-        "text": "Du versuchst mit einem Fernkampfangriff die Bewegung eines Gegners zu behindern. Die Grund-GS des Ziels wird um die Hälfte reduziert. Senkt den Schaden des Angriffs um die Hälfte. Dein Ziel kann sich in einer KK(20,I) Probe und einer Aktion Bewegung aus dem Festnageln befreien.",
+        "text": "Du versuchst mit einem Fernkampfangriff die Bewegung eines Gegners zu behindern. Die Grund-GS des Ziels wird um die HÃ¤lfte reduziert. Senkt den Schaden des Angriffs um die HÃ¤lfte. Dein Ziel kann sich in einer KK(20,I) Probe und einer Aktion Bewegung aus dem Festnageln befreien.",
         "isBaseManoever": false
     },
     "effects": [],

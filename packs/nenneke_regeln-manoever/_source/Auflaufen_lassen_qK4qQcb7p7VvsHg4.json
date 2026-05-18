@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Auflaufen lassen",
+        "voraussetzung": "Vorteil Auflaufen lassen",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": "13",
         "probe": "VT -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Der Verteidiger fügt dem Angreifer seinen Waffenschaden plus die GS des Angreifers zu.\n<i>Voraussetzungen:</i> größere Reichweite; Gegner kombiniert die Aktionen Bewegung und Konflikt; die Bewegung muss vor dem Angriff ausgeführt werden.",
+        "text": "<i>Wirkung:</i> Der Verteidiger fÃ¼gt dem Angreifer seinen Waffenschaden plus die GS des Angreifers zu.\n<i>Voraussetzungen:</i> grÃ¶ÃŸere Reichweite; Gegner kombiniert die Aktionen Bewegung und Konflikt; die Bewegung muss vor dem Angriff ausgefÃ¼hrt werden.",
         "isBaseManoever": false
     },
     "effects": [],

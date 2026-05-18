@@ -1,9 +1,9 @@
 {
-    "name": "Schildstoß",
+    "name": "SchildstoÃŸ",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Schildstoß",
+        "voraussetzung": "Vorteil SchildstoÃŸ",
         "input": {
             "label": "Number",
             "field": "NUMBER",
@@ -20,7 +20,7 @@
             },
             "1": {
                 "type": "SPECIAL_TEXT",
-                "value": "Ziel wird X zurükgestoßen",
+                "value": "Ziel wird X zurÃ¼kgestoÃŸen",
                 "operator": "ADD",
                 "target": "",
                 "affectedByInput": true
@@ -29,7 +29,7 @@
         "gruppe": "0",
         "probe": "AT-2X",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Du führst einen Stoß mit deinem Schild gegen deinen Gegner aus. Er wird X Schritt zurückgedrängt. Dein Gegner muss sich in der gleichen oder einer kleineren Größenkategorie befinden (Spieler haben die Größenkategorie Mittel). Dein Ziel kann sich dadruch durch Kontrollzonen bewegen.\n\nDas Manöver senkt den Schaden des Angriffes auf 0. Sollte der Angriff ohnehin keinen Schaden anrichten – etwa durch andere Manöver – ist das Manöver nicht möglich.",
+        "text": "<i>Wirkung:</i> Du fÃ¼hrst einen StoÃŸ mit deinem Schild gegen deinen Gegner aus. Er wird X Schritt zurÃ¼ckgedrÃ¤ngt. Dein Gegner muss sich in der gleichen oder einer kleineren GrÃ¶ÃŸenkategorie befinden (Spieler haben die GrÃ¶ÃŸenkategorie Mittel). Dein Ziel kann sich dadruch durch Kontrollzonen bewegen.\n\nDas ManÃ¶ver senkt den Schaden des Angriffes auf 0. Sollte der Angriff ohnehin keinen Schaden anrichten â€“ etwa durch andere ManÃ¶ver â€“ ist das ManÃ¶ver nicht mÃ¶glich.",
         "isBaseManoever": false
     },
     "effects": [],

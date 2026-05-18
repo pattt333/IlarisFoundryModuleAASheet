@@ -1,9 +1,9 @@
 {
-    "name": "Entfernung verändern",
+    "name": "Entfernung verÃ¤ndern",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "",
+        "voraussetzung": "",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -27,7 +27,7 @@
         "gruppe": 0,
         "probe": "AT -2BE",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Dein Held kann sich aus dem Nahkampf lösen oder die Entfernung zu seinem Gegner verändern ohne Passierschläge zu erleiden. Man kommt mit diesem Manöver nur aus der Waffenreichweite seines Gegner. Danach müsste man noch weiter weglaufen.",
+        "text": "<i>Wirkung:</i> Dein Held kann sich aus dem Nahkampf lÃ¶sen oder die Entfernung zu seinem Gegner verÃ¤ndern ohne PassierschlÃ¤ge zu erleiden. Man kommt mit diesem ManÃ¶ver nur aus der Waffenreichweite seines Gegner. Danach mÃ¼sste man noch weiter weglaufen.",
         "isBaseManoever": false
     },
     "effects": [],

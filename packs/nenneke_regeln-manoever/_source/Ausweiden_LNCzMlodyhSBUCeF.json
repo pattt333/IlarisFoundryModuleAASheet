@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Ausweiden",
+        "voraussetzung": "Vorteil Ausweiden",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 0,
         "probe": "AT -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Nach einem erfoglreichen Angriff -4 darfst du sofort die Aktion Einschüchtern -4 einsetzen.\n<i>Voraussetzungen:</i> Kampfvorteil Ausweiden, 2KR Cooldown",
+        "text": "<i>Wirkung:</i> Nach einem erfoglreichen Angriff -4 darfst du sofort die Aktion EinschÃ¼chtern -4 einsetzen.\n<i>Voraussetzungen:</i> Kampfvorteil Ausweiden, 2KR Cooldown",
         "isBaseManoever": false
     },
     "effects": [],

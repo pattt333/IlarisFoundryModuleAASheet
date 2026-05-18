@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Zauberer I",
+        "voraussetzung": "Vorteil Zauberer I",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 2,
         "probe": "Zauber +2",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> -4 INI. Kann einmal pro Zauber eingesetzt werden und wirkt nicht auf Zauber mit frei wählbarer Vorbereitungszeit.",
+        "text": "<i>Wirkung:</i> -4 INI. Kann einmal pro Zauber eingesetzt werden und wirkt nicht auf Zauber mit frei wÃ¤hlbarer Vorbereitungszeit.",
         "isBaseManoever": false
     },
     "effects": [],

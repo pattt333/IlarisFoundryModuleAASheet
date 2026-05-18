@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Waffeneigenschaft Stumpf",
+        "voraussetzung": "Waffeneigenschaft Stumpf",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -18,7 +18,7 @@
             },
             "1": {
                 "type": "SPECIAL_TEXT",
-                "value": "Verusacht 1 Stack Erschöpfung",
+                "value": "Verusacht 1 Stack ErschÃ¶pfung",
                 "operator": "ADD",
                 "target": "",
                 "affectedByInput": true
@@ -27,7 +27,7 @@
         "gruppe": "0",
         "probe": "AT-2",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Der Angriff verursacht einen Stack Erschöpfung.\n<i>Voraussetzung:</i> Waffeneigenschaft Stumpf.",
+        "text": "<i>Wirkung:</i> Der Angriff verursacht einen Stack ErschÃ¶pfung.\n<i>Voraussetzung:</i> Waffeneigenschaft Stumpf.",
         "isBaseManoever": false
     },
     "effects": [],

@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Frontalangriff",
+        "voraussetzung": "Vorteil Frontalangriff",
         "input": {
             "label": "",
             "field": "CHECKBOX",
@@ -22,7 +22,7 @@
         "gruppe": 0,
         "probe": "2xAT-4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Beide AT sind um -4 erschwert. Dieser Angriff lässt sich nur gegen Gegner mit der Größenkategorie des Reiters oder kleiner einsetzen.\nBeide Angriffe richten sich gegen denselben Feind. Sie werden separat ausgewürfelt und können separat mit Manövern versehen werden.\n\n<i>Voraussetzungen:</i> beritten, Kampf mit der Fertigkeit Stangenwaffen (Lanzenreiten), Vorteil Ritter aus Leidenschaft, 1KR Cooldown",
+        "text": "<i>Wirkung:</i> Beide AT sind um -4 erschwert. Dieser Angriff lÃ¤sst sich nur gegen Gegner mit der GrÃ¶ÃŸenkategorie des Reiters oder kleiner einsetzen.\nBeide Angriffe richten sich gegen denselben Feind. Sie werden separat ausgewÃ¼rfelt und kÃ¶nnen separat mit ManÃ¶vern versehen werden.\n\n<i>Voraussetzungen:</i> beritten, Kampf mit der Fertigkeit Stangenwaffen (Lanzenreiten), Vorteil Ritter aus Leidenschaft, 1KR Cooldown",
         "isBaseManoever": false
     },
     "effects": [],

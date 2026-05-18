@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Schnellziehen",
+        "voraussetzung": "Vorteil Schnellziehen",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 1,
         "probe": "FK -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Dieses Manöver ändert die Aktion Konzentration für diesen Fernkampfangriff zu einer einfachen Aktion, damit kann die Aktion mit anderen kombiniert werden. Man kann trotzdem noch durch Schaden unterbrochen werden!! 2KR Cooldown",
+        "text": "<i>Wirkung:</i> Dieses ManÃ¶ver Ã¤ndert die Aktion Konzentration fÃ¼r diesen Fernkampfangriff zu einer einfachen Aktion, damit kann die Aktion mit anderen kombiniert werden. Man kann trotzdem noch durch Schaden unterbrochen werden!! 2KR Cooldown",
         "isBaseManoever": false
     },
     "effects": [],

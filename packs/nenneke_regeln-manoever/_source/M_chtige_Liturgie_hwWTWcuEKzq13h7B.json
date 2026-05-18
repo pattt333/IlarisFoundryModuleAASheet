@@ -1,9 +1,9 @@
 {
-    "name": "Mächtige Liturgie",
+    "name": "MÃ¤chtige Liturgie",
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Geweiht I",
+        "voraussetzung": "Vorteil Geweiht I",
         "input": {
             "label": "",
             "field": "NUMBER",
@@ -22,7 +22,7 @@
         "gruppe": 3,
         "probe": "Liturgie -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Verstärkt die Wirkung der Liturgie (siehe Liturgie). Zusätzlich steigt die Schwierigkeit von <i>Konterproben</i> (S. 124) gegen die Liturgie um +4 Punkte.",
+        "text": "<i>Wirkung:</i> VerstÃ¤rkt die Wirkung der Liturgie (siehe Liturgie). ZusÃ¤tzlich steigt die Schwierigkeit von <i>Konterproben</i> (S. 124) gegen die Liturgie um +4 Punkte.",
         "isBaseManoever": false
     },
     "effects": [],

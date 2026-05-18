@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Effizientes Zaubern",
+        "voraussetzung": "Vorteil Effizientes Zaubern",
         "input": {
             "label": "",
             "field": "NUMBER",
@@ -29,7 +29,7 @@
         "gruppe": 2,
         "probe": "Zauber -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Die AsP-Kosten des Zaubers sinken um ein Viertel der Basiskosten. Die Kosten können dadurch nicht unter die Hälfte der Basiskosten sinken.",
+        "text": "<i>Wirkung:</i> Die AsP-Kosten des Zaubers sinken um ein Viertel der Basiskosten. Die Kosten kÃ¶nnen dadurch nicht unter die HÃ¤lfte der Basiskosten sinken.",
         "isBaseManoever": false
     },
     "effects": [],

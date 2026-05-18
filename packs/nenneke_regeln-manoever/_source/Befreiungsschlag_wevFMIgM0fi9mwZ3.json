@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Kraftvoller Kampf III",
+        "voraussetzung": "Vorteil Kraftvoller Kampf III",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 0,
         "probe": "AT -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Du führst eine Attacke aus, die sich (samt anderen Manövern) gegen alle Ziele in einem Winkel von 180° vor dir richtet. Jedem Ziel steht eine eigene Verteidigung zu.\n<i>Voraussetzungen:</i> Kampf im Kraftvollen Stil; 1KR Cooldown",
+        "text": "<i>Wirkung:</i> Du fÃ¼hrst eine Attacke aus, die sich (samt anderen ManÃ¶vern) gegen alle Ziele in einem Winkel von 180Â° vor dir richtet. Jedem Ziel steht eine eigene Verteidigung zu.\n<i>Voraussetzungen:</i> Kampf im Kraftvollen Stil; 1KR Cooldown",
         "isBaseManoever": false
     },
     "effects": [],

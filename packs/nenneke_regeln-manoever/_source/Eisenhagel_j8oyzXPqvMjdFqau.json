@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Wurfwaffenkampf III",
+        "voraussetzung": "Vorteil Wurfwaffenkampf III",
         "input": {
             "label": "",
             "field": "CHECKBOX",
@@ -22,7 +22,7 @@
         "gruppe": 1,
         "probe": "2xFK-4",
         "gegenprobe": "",
-        "text": "Wirkung: Du wirfst in einer Aktion zwei Wurfwaffen. Jeder Angriff ist dabei um -4 erschwert. Das Ziel muss dabei nicht das gleiche sein. Beide Angriffe können mit eigenen Manövern versehen werden.\n\nVoraussetzungen:  nicht seit der letzten eigenen Initiativephase eingesetzt",
+        "text": "Wirkung: Du wirfst in einer Aktion zwei Wurfwaffen. Jeder Angriff ist dabei um -4 erschwert. Das Ziel muss dabei nicht das gleiche sein. Beide Angriffe kÃ¶nnen mit eigenen ManÃ¶vern versehen werden.\n\nVoraussetzungen:  nicht seit der letzten eigenen Initiativephase eingesetzt",
         "isBaseManoever": false
     },
     "effects": [],

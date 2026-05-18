@@ -3,7 +3,7 @@
     "type": "manoever",
     "img": "systems/Ilaris/assets/images/skills/profan-skill.svg",
     "system": {
-        "voraussetzungen": "Vorteil Geweiht I",
+        "voraussetzung": "Vorteil Geweiht I",
         "input": {
             "label": "Checkbox",
             "field": "CHECKBOX"
@@ -20,7 +20,7 @@
         "gruppe": 3,
         "probe": "Liturgie -4",
         "gegenprobe": "",
-        "text": "<i>Wirkung:</i> Die Liturgie wirkt auf mehrere Ziele in Reichweite. Die Kosten werden für jedes Ziel einzeln bezahlt, Modifikationen wie Kosten sparen für jedes Ziel einzeln abgerechnet.",
+        "text": "<i>Wirkung:</i> Die Liturgie wirkt auf mehrere Ziele in Reichweite. Die Kosten werden fÃ¼r jedes Ziel einzeln bezahlt, Modifikationen wie Kosten sparen fÃ¼r jedes Ziel einzeln abgerechnet.",
         "isBaseManoever": false
     },
     "effects": [],
