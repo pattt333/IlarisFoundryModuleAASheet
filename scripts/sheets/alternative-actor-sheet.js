@@ -34,6 +34,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         position: { width: 820, height: 900 },
         actions: {
             itemCreate: IlarisAlternativeActorSheet.onItemCreate,
+            itemQuantityChange: IlarisAlternativeActorSheet.onItemQuantityChange,
             hexagonEdit: IlarisAlternativeActorSheet.onHexagonEdit,
             energySettings: IlarisAlternativeActorSheet.onEnergySettings,
             healthSettings: IlarisAlternativeActorSheet.onHealthSettings,
@@ -323,6 +324,39 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
     /* -------------------------------------------- */
     /*  Static Action Handlers                       */
     /* -------------------------------------------- */
+
+    /**
+     * Handle changing item quantity by a delta
+     * @param {PointerEvent} event
+     * @param {HTMLElement} target
+     */
+    static async onItemQuantityChange(event, target) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const itemId = target.dataset.itemid;
+        const delta = Number(target.dataset.delta || 0);
+
+        if (!itemId || !Number.isFinite(delta) || delta === 0) return;
+
+        const item = this.actor.items.get(itemId);
+        if (!item) {
+            ui.notifications.warn('Gegenstand konnte nicht gefunden werden.');
+            return;
+        }
+
+        const currentQuantity = Number(item.system.quantity ?? 0);
+        const newQuantity = currentQuantity + delta;
+
+        if (newQuantity <= 0) {
+            await item.delete();
+            return;
+        }
+
+        await item.update({
+            'system.quantity': newQuantity,
+        });
+    }
 
     /**
      * Handle increasing Schips by 1

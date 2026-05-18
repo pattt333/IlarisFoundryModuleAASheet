@@ -162,6 +162,33 @@
     background: var(--color-accent-primary-hover);
 }
 
+.ilaris.sheet.actor.alternative .item-extra-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 34px;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.ilaris.sheet.actor.alternative .item-extra-button.quantity-plus {
+    background: var(--color-success-soft);
+    color: var(--color-text-on-accent);
+}
+
+.ilaris.sheet.actor.alternative .item-extra-button.quantity-plus:hover {
+    background: var(--color-success);
+}
+
+.ilaris.sheet.actor.alternative .item-extra-button.quantity-minus {
+    background: var(--color-danger-soft);
+    color: var(--color-text-on-accent);
+}
+
+.ilaris.sheet.actor.alternative .item-extra-button.quantity-minus:hover {
+    background: var(--color-danger);
+}
+
 .ilaris.sheet.actor.alternative .item-control.item-create {
     background: var(--color-accent-primary-soft);
     color: var(--color-text-on-accent);

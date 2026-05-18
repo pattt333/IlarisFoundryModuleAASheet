@@ -54,6 +54,22 @@
                 <i class="fas fa-trash ilaris-button-icon"></i>
             </a>
             {{/unless}}
+            {{#if showExtraButtons}}
+            {{#each extraButtons as |btn|}}
+            <a class="item-control item-extra-button {{#if btn.class}}{{btn.class}}{{/if}}"
+                data-action="{{btn.action}}"
+                data-itemid="{{item._id}}"
+                {{#if btn.tooltip}}data-tooltip="{{btn.tooltip}}" title="{{btn.tooltip}}"{{/if}}
+                {{#if btn.data}}
+                {{#each btn.data as |value key|}}
+                data-{{key}}="{{value}}"
+                {{/each}}
+                {{/if}}>
+                <i class="{{btn.icon}} ilaris-button-icon"></i>
+                {{#if btn.label}}<span>{{btn.label}}</span>{{/if}}
+            </a>
+            {{/each}}
+            {{/if}}
         </div>
         <div class="item-details">
             {{#each details}}

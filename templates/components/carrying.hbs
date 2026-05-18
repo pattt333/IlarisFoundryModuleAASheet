@@ -11,6 +11,11 @@
             draggable=true
             nameLabel="Gegenstand"
             stats=(array (concat "Anzahl: " item.system.quantity))
+            showExtraButtons=true
+            extraButtons=(array
+                (hash action="itemQuantityChange" icon="fas fa-plus" tooltip="Menge erhöhen" class="quantity-plus" data=(hash delta=1))
+                (hash action="itemQuantityChange" icon="fas fa-minus" tooltip="Menge verringern" class="quantity-minus" data=(hash delta=-1))
+            )
             itemclass="gegenstand"
             editTitle="Gegenstand bearbeiten"
             deleteTitle="Gegenstand löschen"
