@@ -125,6 +125,37 @@ body.theme-dark .iaas-fertigkeit-dialog {
     font-weight: bold;
 }
 
+.iaas-material-selection-dialog {
+    padding: 0.25rem;
+    color: var(--iaas-color-text);
+}
+
+.iaas-material-selection-dialog .iaas-material-selection-panel {
+    background: var(--iaas-color-panel);
+    border: 1px solid var(--iaas-color-border);
+    border-radius: 6px;
+    padding: 0.75rem;
+    box-shadow: 0 2px 8px var(--iaas-color-shadow);
+}
+
+.iaas-material-selection-dialog label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--iaas-color-text);
+}
+
+.iaas-material-selection-dialog select {
+    width: 100%;
+    min-height: 2.25rem;
+}
+
+.iaas-material-selection-dialog .iaas-material-selection-hint {
+    margin: 0.6rem 0 0;
+    color: var(--iaas-color-text-soft);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
 @media (max-width: 900px) {
     .iaas-fertigkeit-dialog .iaas-fertigkeit-dialog-form {
         flex-direction: column;

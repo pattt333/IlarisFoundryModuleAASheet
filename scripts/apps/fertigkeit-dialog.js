@@ -1,7 +1,7 @@
-import { roll_crit_message } from '../../../../systems/Ilaris/scripts/dice/wuerfel_misc.js';
+import { evaluate_roll_with_crit, postRollToChat } from '../../../../systems/Ilaris/scripts/dice/wuerfel_misc.js';
 import { formatDiceFormula } from '../../../../systems/Ilaris/scripts/core/utilities.js';
 
-const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
+const { ApplicationV2, DialogV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
 const CONTEXT_LABELS = {
     none: 'nichts',
@@ -11,6 +11,7 @@ const CONTEXT_LABELS = {
 };
 
 const DEFAULT_DIFFICULTY = 16;
+const MATERIAL_ITEM_NAME_PATTERN = /(zutat|material)/i;
 
 const CONTEXT_DIFFICULTY_CONFIG = {
     none: { active: false },
@@ -237,8 +238,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             noTalentSelected,
             usesTalent,
             difficultyState,
-        } =
-            this._calculateModifiers();
+        } = this._calculateModifiers();
         const formattedDice = formatDiceFormula(diceFormula);
         const finalFormula = finalPW >= 0 ? `${formattedDice}+${finalPW}` : `${formattedDice}${finalPW}`;
 
@@ -400,6 +400,178 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
         return `${baseDice}d20dl${dropLow}dh${dropHigh}`;
     }
 
+    _isWorldItemPack(pack) {
+        if (!pack) {
+            return false;
+        }
+
+        const packageType = pack.metadata?.packageType;
+        const packageName = pack.metadata?.packageName;
+
+        return packageType === 'world' || packageName === game.world?.id || pack.collection?.startsWith('world.');
+    }
+
+    _isValidMaterialItem(item) {
+        return item?.type === 'gegenstand' && MATERIAL_ITEM_NAME_PATTERN.test(item.name || '');
+    }
+
+    async _getMaterialItemCandidates() {
+        const worldItems = game.items
+            .filter(item => this._isValidMaterialItem(item))
+            .map(item => ({
+                id: `world:${item.id}`,
+                name: item.name,
+                img: item.img,
+                sourceLabel: 'Welt-Item',
+                sourceType: 'world',
+                documentId: item.id,
+            }));
+
+        const worldPackCandidates = [];
+
+        for (const pack of game.packs) {
+            if (!this._isWorldItemPack(pack)) {
+                continue;
+            }
+
+            if (pack.documentName !== 'Item' && pack.metadata?.type !== 'Item') {
+                continue;
+            }
+
+            const index = await pack.getIndex({ fields: ['name', 'type', 'img'] });
+            for (const entry of index) {
+                if (!this._isValidMaterialItem(entry)) {
+                    continue;
+                }
+
+                worldPackCandidates.push({
+                    id: `compendium:${pack.collection}:${entry._id}`,
+                    name: entry.name,
+                    img: entry.img,
+                    sourceLabel: pack.metadata?.label || pack.title || pack.collection,
+                    sourceType: 'compendium',
+                    packId: pack.collection,
+                    documentId: entry._id,
+                });
+            }
+        }
+
+        return [...worldItems, ...worldPackCandidates].sort((left, right) => {
+            const nameCompare = left.name.localeCompare(right.name, 'de', { sensitivity: 'base' });
+            if (nameCompare !== 0) {
+                return nameCompare;
+            }
+
+            return left.sourceLabel.localeCompare(right.sourceLabel, 'de', { sensitivity: 'base' });
+        });
+    }
+
+    async _promptMaterialItemSelection(candidates) {
+        if (!candidates.length) {
+            return null;
+        }
+
+        const options = candidates
+            .map(candidate => {
+                const name = foundry.utils.escapeHTML(candidate.name);
+                const sourceLabel = foundry.utils.escapeHTML(candidate.sourceLabel);
+                return `<option value="${candidate.id}">${name} (${sourceLabel})</option>`;
+            })
+            .join('');
+
+        const result = await DialogV2.wait({
+            window: { title: 'Gegenstand wählen' },
+            content: `
+                <div class="iaas-fertigkeit-dialog iaas-material-selection-dialog">
+                    <div class="iaas-material-selection-panel">
+                        <label for="material-selection-${this.dialogId}">Gefundener Gegenstand:</label>
+                        <select id="material-selection-${this.dialogId}" name="selectedMaterial">
+                            ${options}
+                        </select>
+                        <p class="iaas-material-selection-hint">
+                            Es werden nur Welt-Items und Welt-Kompendium-Items vom Typ Gegenstand mit "Zutat" oder "Material" im Namen angeboten.
+                        </p>
+                    </div>
+                </div>
+            `,
+            buttons: [
+                {
+                    action: 'confirm',
+                    label: 'Hinzufügen',
+                    icon: 'fas fa-check',
+                    default: true,
+                    callback: (event, button) => button.form.elements.selectedMaterial.value || null,
+                },
+                {
+                    action: 'cancel',
+                    label: 'Abbrechen',
+                    icon: 'fas fa-times',
+                },
+            ],
+            rejectClose: false,
+        });
+
+        return candidates.find(candidate => candidate.id === result) || null;
+    }
+
+    async _getMaterialSourceDocument(candidate) {
+        if (!candidate) {
+            return null;
+        }
+
+        if (candidate.sourceType === 'world') {
+            return game.items.get(candidate.documentId) || null;
+        }
+
+        if (candidate.sourceType === 'compendium') {
+            const pack = game.packs.get(candidate.packId);
+            if (!pack) {
+                return null;
+            }
+
+            return pack.getDocument(candidate.documentId);
+        }
+
+        return null;
+    }
+
+    async _addMaterialItemToActor(candidate) {
+        const sourceDocument = await this._getMaterialSourceDocument(candidate);
+        if (!sourceDocument) {
+            globalThis.ui.notifications.warn('Gegenstand konnte nicht gefunden werden.');
+            return null;
+        }
+
+        const createdItems = await this.actor.createEmbeddedDocuments('Item', [sourceDocument.toObject()]);
+        return createdItems[0] || null;
+    }
+
+    async _handleMaterialGatheringSuccess(rollResult, usageContext) {
+        if (usageContext.key !== 'gatherMaterials' || !rollResult?.success || rollResult.fumble) {
+            return;
+        }
+
+        const candidates = await this._getMaterialItemCandidates();
+        if (!candidates.length) {
+            globalThis.ui.notifications.info(
+                'Keine passenden Zutaten oder Materialien in Welt oder Welt-Kompendien gefunden.'
+            );
+            return;
+        }
+
+        const selectedCandidate = await this._promptMaterialItemSelection(candidates);
+        if (!selectedCandidate) {
+            return;
+        }
+
+        const createdItem = await this._addMaterialItemToActor(selectedCandidate);
+        if (!createdItem) {
+            return;
+        }
+
+        createdItem.sheet?.render(true);
+    }
+
     async _executeRoll() {
         const html = this.element;
         const {
@@ -461,11 +633,12 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             rollMode: rollmode,
         });
 
-        if (difficultyState.active) {
-            await roll_crit_message(formula, label, text, this.speaker, rollmode, true, 1, difficultyState.effectiveValue);
-            return;
-        }
+        const rollResult = difficultyState.active
+            ? await evaluate_roll_with_crit(formula, label, text, difficultyState.effectiveValue, 1, true)
+            : await evaluate_roll_with_crit(formula, label, text);
 
-        await roll_crit_message(formula, label, text, this.speaker, rollmode);
+        await postRollToChat(rollResult, this.speaker, rollmode);
+
+        await this._handleMaterialGatheringSuccess(rollResult, usageContext);
     }
 }
