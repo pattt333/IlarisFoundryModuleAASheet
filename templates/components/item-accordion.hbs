@@ -7,7 +7,7 @@
     {{/if}}>
     <div class="item-header-row">
         <div class="item-image {{#if rollable}}rollable{{/if}}" 
-             {{#if rollable}}data-action="rollable" data-rolltype="{{rolltype}}" data-itemid="{{item.id}}" data-fertigkeit="{{fertigkeit}}"{{/if}}>
+               {{#if rollable}}data-action="rollable" data-rolltype="{{rolltype}}" data-itemid="{{item.id}}" data-fertigkeit="{{fertigkeit}}"{{#if probetype}} data-probetype="{{probetype}}"{{/if}}{{#if pw}} data-pw="{{pw}}"{{/if}}{{#if rollscope}} data-rollscope="{{rollscope}}"{{/if}}{{/if}}>
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
             {{#if item.ammunitionType}}
             {{#unless item.hasAmmunition}}

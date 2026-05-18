@@ -13,6 +13,7 @@
                     rollable=true 
                     showDelete=false
                     rolltype="fertigkeit_diag"
+                    rollscope="module-skills-dialog"
                     fertigkeit=id
                     nameLabel="Fertigkeit"
                     stats=(array (concat "PW " item.system.pw) (concat "PWT " item.system.pwt))
@@ -95,8 +96,11 @@
                     item=item 
                     rollable=true 
                     showDelete=false
-                    rolltype="freieFertigkeit"
-                    fertigkeit=id
+                    rolltype="fertigkeit_diag"
+                    rollscope="module-skills-dialog"
+                    probetype="freieFertigkeit"
+                    fertigkeit=item.name
+                    pw=item.system.stufe
                     nameLabel="Fertigkeit"
                     stats=(array)
                     stats2=(array)

@@ -20,7 +20,8 @@
         "styles/item-accordion.css",
         "styles/favorites-component.css",
         "styles/effect-card.css",
-        "styles/creature-sheet.css"
+        "styles/creature-sheet.css",
+        "styles/fertigkeit-dialog.css"
     ],
     "packFolders": [
         {

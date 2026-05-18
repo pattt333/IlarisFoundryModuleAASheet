@@ -15,6 +15,7 @@
 import { HeldenSheet } from '../../../../systems/Ilaris/scripts/actors/sheets/held.js';
 import { AccordionManager } from '../components/accordion-manager.js';
 import { FavoritesManager } from '../components/favorites-manager.js';
+import { IlarisAlternativeFertigkeitDialog } from '../apps/fertigkeit-dialog.js';
 import { advanceEffectTime } from '../utilities.js';
 
 export class IlarisAlternativeActorSheet extends HeldenSheet {
@@ -33,6 +34,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         classes: ['alternative'],
         position: { width: 820, height: 900 },
         actions: {
+            rollable: IlarisAlternativeActorSheet.onRollable,
             itemCreate: IlarisAlternativeActorSheet.onItemCreate,
             itemQuantityChange: IlarisAlternativeActorSheet.onItemQuantityChange,
             hexagonEdit: IlarisAlternativeActorSheet.onHexagonEdit,
@@ -324,6 +326,102 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
     /* -------------------------------------------- */
     /*  Static Action Handlers                       */
     /* -------------------------------------------- */
+
+    /**
+     * Route fertigkeit dialog rolls from the module's skills tab to the module-owned dialog.
+     * Other roll types continue to use the system behavior.
+     * @param {PointerEvent} event
+     * @param {HTMLElement} target
+     */
+    static async onRollable(event, target) {
+        const rolltype = target.dataset.rolltype;
+        const rollscope = target.dataset.rollscope;
+
+        console.log('Rollable clicked with rolltype:', rolltype, 'and rollscope:', rollscope);
+        if (rolltype === 'fertigkeit_diag' && rollscope === 'module-skills-dialog') {
+            event.preventDefault();
+            await IlarisAlternativeActorSheet._openAlternativeFertigkeitDialog.call(this, target);
+            return 0;
+        }
+
+        return super.onRollable.call(this, event, target);
+    }
+
+    /**
+     * Open the module-specific fertigkeit dialog.
+     * @param {HTMLElement} target
+     * @private
+     */
+    static async _openAlternativeFertigkeitDialog(target) {
+        const probeType = target.dataset.probetype || 'fertigkeit';
+
+        console.log('Opening alternative Fertigkeit dialog with probeType:', probeType);
+        if (probeType === 'attribut') {
+            const attributName = target.dataset.attribut;
+            const fertigkeitName = CONFIG.ILARIS.label[attributName];
+            const pw = this.actor.system.attribute[attributName].pw;
+
+            const dialog = new IlarisAlternativeFertigkeitDialog(this.actor, {
+                probeType: 'attribut',
+                fertigkeitKey: attributName,
+                fertigkeitName,
+                pw,
+            });
+            await dialog.render(true);
+            return;
+        }
+
+        if (probeType === 'freieFertigkeit' || probeType === 'freie_fertigkeit') {
+            const fertigkeitName = target.dataset.fertigkeit;
+            const stufe = Number(target.dataset.pw) || 0;
+            const pw = stufe * 8 - 2;
+
+            const dialog = new IlarisAlternativeFertigkeitDialog(this.actor, {
+                probeType: 'freieFertigkeit',
+                fertigkeitKey: null,
+                fertigkeitName,
+                pw,
+            });
+            await dialog.render(true);
+            return;
+        }
+
+        if (probeType === 'simple') {
+            const fertigkeitName = target.dataset.fertigkeit;
+            const pw = Number(target.dataset.pw) || 0;
+
+            const dialog = new IlarisAlternativeFertigkeitDialog(this.actor, {
+                probeType: 'simple',
+                fertigkeitKey: null,
+                fertigkeitName,
+                pw,
+            });
+            await dialog.render(true);
+            return;
+        }
+
+        const fertigkeitKey = target.dataset.fertigkeit;
+        const fertigkeitData = this.actor.profan.fertigkeiten[fertigkeitKey];
+        if (!fertigkeitData) {
+            ui.notifications.warn('Fertigkeit konnte nicht gefunden werden.');
+            return;
+        }
+
+        const talentList = {};
+        const talente = fertigkeitData.system.talente || [];
+        for (const [index, talent] of talente.entries()) {
+            talentList[index] = talent.name;
+        }
+
+        const dialog = new IlarisAlternativeFertigkeitDialog(this.actor, {
+            probeType: 'fertigkeit',
+            fertigkeitKey,
+            fertigkeitName: fertigkeitData.name,
+            pw: fertigkeitData.system.pw,
+            talentList,
+        });
+        await dialog.render(true);
+    }
 
     /**
      * Handle changing item quantity by a delta

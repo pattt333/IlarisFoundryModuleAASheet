@@ -1,0 +1,123 @@
+.iaas-fertigkeit-dialog {
+    --iaas-color-white: #fff;
+    --iaas-color-header: #3c4658;
+    --iaas-color-surface: #f8f8f8;
+    --iaas-color-panel: #f7fafc;
+    --iaas-color-border: #ccd4df;
+    --iaas-color-border-strong: #697384;
+    --iaas-color-text: #2d3748;
+    --iaas-color-text-soft: #718096;
+    --iaas-color-accent: #4299e1;
+    --iaas-color-accent-strong: #2b6cb0;
+    --iaas-color-warning: #b8860b;
+    --iaas-color-error: #cc5252;
+    --iaas-color-shadow: rgba(0, 0, 0, 0.2);
+}
+
+body.theme-dark .iaas-fertigkeit-dialog {
+    --iaas-color-white: #fff;
+    --iaas-color-header: #141d1b;
+    --iaas-color-surface: #191c1b;
+    --iaas-color-panel: #1b1e1d;
+    --iaas-color-border: #3f4946;
+    --iaas-color-border-strong: #6f7976;
+    --iaas-color-text: #eff1ef;
+    --iaas-color-text-soft: #a9acaa;
+    --iaas-color-accent: #007a75;
+    --iaas-color-accent-strong: #36a8a2;
+    --iaas-color-warning: #f0cf75;
+    --iaas-color-error: #cc5252;
+    --iaas-color-shadow: rgba(0, 0, 0, 0.48);
+}
+
+.iaas-fertigkeit-dialog {
+    background: var(--iaas-color-header);
+}
+
+.iaas-fertigkeit-dialog .window-content {
+    background: var(--iaas-color-surface);
+    color: var(--iaas-color-text);
+    padding: 0.75rem;
+}
+
+.iaas-fertigkeit-dialog .iaas-fertigkeit-dialog-form {
+    display: flex;
+    gap: 1rem;
+}
+
+.iaas-fertigkeit-dialog .left-column,
+.iaas-fertigkeit-dialog .right-column {
+    background: var(--iaas-color-panel);
+    border: 1px solid var(--iaas-color-border);
+    border-radius: 6px;
+    padding: 0.75rem;
+    box-shadow: 0 2px 8px var(--iaas-color-shadow);
+}
+
+.iaas-fertigkeit-dialog .left-column {
+    flex: 1;
+}
+
+.iaas-fertigkeit-dialog .right-column {
+    width: 48%;
+}
+
+.iaas-fertigkeit-dialog label,
+.iaas-fertigkeit-dialog .modifier-item,
+.iaas-fertigkeit-dialog .right-column > .flex_center_center {
+    color: var(--iaas-color-text);
+}
+
+.iaas-fertigkeit-dialog .warning,
+.iaas-fertigkeit-dialog .talent-warning {
+    color: var(--iaas-color-warning);
+}
+
+.iaas-fertigkeit-dialog input,
+.iaas-fertigkeit-dialog select {
+    background: var(--iaas-color-surface);
+    border: 1px solid var(--iaas-color-border);
+    color: var(--iaas-color-text);
+}
+
+.iaas-fertigkeit-dialog input:focus,
+.iaas-fertigkeit-dialog select:focus {
+    outline: 1px solid var(--iaas-color-accent);
+    border-color: var(--iaas-color-accent-strong);
+}
+
+.iaas-fertigkeit-dialog input[type=radio] {
+    accent-color: var(--iaas-color-accent);
+}
+
+.iaas-fertigkeit-dialog .modifier-summary.probe-summary {
+    background: transparent;
+    border-color: var(--iaas-color-border-strong);
+}
+
+.iaas-fertigkeit-dialog .modifier-item.positive span,
+.iaas-fertigkeit-dialog .modifier-item.total.positive {
+    color: var(--iaas-color-accent-strong);
+}
+
+.iaas-fertigkeit-dialog .modifier-item.negative span,
+.iaas-fertigkeit-dialog .modifier-item.total.negative {
+    color: var(--iaas-color-error);
+}
+
+.iaas-fertigkeit-dialog .modifier-summary h4 {
+    margin: 0 0 12px 0;
+    padding-bottom: 8px;
+    color: var(--iaas-color-accent-strong);
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .iaas-fertigkeit-dialog .iaas-fertigkeit-dialog-form {
+        flex-direction: column;
+    }
+
+    .iaas-fertigkeit-dialog .right-column {
+        width: 100%;
+    }
+}

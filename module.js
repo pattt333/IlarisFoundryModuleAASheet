@@ -130,6 +130,7 @@ Hooks.once('init', async function () {
         'modules/ilaris-alternative-actor-sheet/templates/components/effect-card.hbs',
         // Apps
         'modules/ilaris-alternative-actor-sheet/templates/apps/initiative-dialog.hbs',
+        'modules/ilaris-alternative-actor-sheet/templates/apps/fertigkeit-dialog.hbs',
         'modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs',
     ]);
 
