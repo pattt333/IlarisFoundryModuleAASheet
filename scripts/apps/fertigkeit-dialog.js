@@ -1,5 +1,6 @@
 import { evaluate_roll_with_crit, postRollToChat } from '../../../../systems/Ilaris/scripts/dice/wuerfel_misc.js';
 import { formatDiceFormula } from '../../../../systems/Ilaris/scripts/core/utilities.js';
+import { consumeInventoryItem } from '../utilities.js';
 
 const { ApplicationV2, DialogV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -204,29 +205,21 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
         }
 
         const actorItem = this.actor.items.get(usedItem.id);
-
         if (!actorItem) {
             globalThis.ui.notifications.warn(`Der gewählte Gegenstand "${usedItem.name}" ist nicht mehr im Inventar.`);
             return { status: 'missing' };
         }
 
-        const currentQuantity = Number(actorItem.system.quantity ?? 0);
+        const result = await consumeInventoryItem(this.actor, usedItem.id, 1);
 
-        if (!Number.isFinite(currentQuantity) || currentQuantity <= 0) {
-            await actorItem.delete();
+        if (result.status === 'removed-empty') {
             globalThis.ui.notifications.warn(
                 `Der gewählte Gegenstand "${actorItem.name}" hatte keine Menge mehr und wurde entfernt.`
             );
-            return { status: 'removed-empty' };
+            return result;
         }
 
-        if (currentQuantity === 1) {
-            await actorItem.delete();
-            return { status: 'deleted' };
-        }
-
-        await actorItem.update({ 'system.quantity': currentQuantity - 1 });
-        return { status: 'updated', quantity: currentQuantity - 1 };
+        return result;
     }
 
     _getDifficultyState(usageContextKey = 'none', rawDifficultyValue = this.difficultyValue) {

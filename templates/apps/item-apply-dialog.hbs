@@ -1,0 +1,53 @@
+<section class='iaas-item-apply-dialog'>
+    {{#if hasItem}}
+        <div class='iaas-item-apply-dialog__item'>
+            <img src='{{item.img}}' alt='{{item.name}}' />
+            <div class='iaas-item-apply-dialog__meta'>
+                <strong>{{item.name}}</strong>
+                <span>Menge: {{quantity}}</span>
+            </div>
+        </div>
+
+        <div class='iaas-item-apply-dialog__targets'>
+            <div class='iaas-item-apply-dialog__meta'>
+                <strong>Ziele</strong>
+                <span>Mehrfachauswahl über die bestehende Ilaris-Zielauswahl.</span>
+            </div>
+            <div class='iaas-item-apply-dialog__target-list'>
+                {{#if hasSelectedTargets}}
+                    {{#each selectedTargets}}
+                        <span class='iaas-item-apply-dialog__target-chip'>{{this.name}}{{#if this.distance}}
+                                ({{this.distance}}
+                                Schritt){{/if}}</span>
+                    {{/each}}
+                {{else}}
+                    <span class='iaas-item-apply-dialog__target-placeholder'>Noch keine Ziele gewählt</span>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class='iaas-item-apply-dialog__placeholder'>
+            Die Zielanwendung ist in dieser Iteration noch ein Platzhalter. Broadcast, Rechtepfad und Verbrauch sind
+            bereits aktiv.
+        </div>
+
+        <div class='iaas-item-apply-dialog__actions'>
+            <button type='button' data-action='closeDialog'>Schließen</button>
+            <button type='button' data-action='chooseTargets'>Ziele wählen</button>
+            {{#if canApply}}
+                <button type='button' data-action='applyItem'>
+                    {{#if isApplying}}Wird angewendet...{{else}}Gegenstand anwenden{{/if}}
+                </button>
+            {{else}}
+                <button type='button' data-action='applyItem' disabled>
+                    {{#if isApplying}}Wird angewendet...{{else}}Gegenstand anwenden{{/if}}
+                </button>
+            {{/if}}
+        </div>
+    {{else}}
+        <div class='iaas-item-apply-dialog__placeholder'>Der Gegenstand ist nicht mehr im Inventar vorhanden.</div>
+        <div class='iaas-item-apply-dialog__actions'>
+            <button type='button' data-action='closeDialog'>Schließen</button>
+        </div>
+    {{/if}}
+</section>

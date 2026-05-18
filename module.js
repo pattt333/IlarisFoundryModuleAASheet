@@ -14,9 +14,12 @@ import { NegativeInitiativeDialog } from './scripts/apps/negative-initiative-dia
 import { registerHandlebarsHelpers } from './scripts/handlebars-helpers.js';
 import {
     addFernkampfoption,
+    applyItemToTarget,
+    createItemApplicationPayload,
     deleteLinkedWeapon,
     increaseEffectStack,
     addEffectWithStacking,
+    consumeInventoryItem,
     consumeAmmunition,
     showNoAmmunitionWarning,
     handleFumble,
@@ -25,6 +28,100 @@ import {
     createThrowableWeaponPile,
     AMMUNITION_TYPES,
 } from './scripts/utilities.js';
+
+const MODULE_ID = 'ilaris-alternative-actor-sheet';
+const ITEM_APPLICATION_HOOK = 'ilarisAlternativeActorSheet.itemApply';
+const ITEM_APPLICATION_SOCKET_TYPE = 'item-apply';
+
+let itemApplicationSocketRegistered = false;
+let itemApplicationHookRegistered = false;
+
+function isItemApplicationPacket(packet) {
+    return packet?.type === ITEM_APPLICATION_SOCKET_TYPE && Array.isArray(packet.targets);
+}
+
+function getResponsibleOwner(actor) {
+    if (!actor) {
+        return null;
+    }
+
+    const owners = game.users.filter(user => user.active && actor.testUserPermission(user, 'OWNER'));
+    if (owners.length === 0) {
+        return null;
+    }
+
+    return owners.find(user => !user.isGM) || owners[0];
+}
+
+function resolveTargetActor(target) {
+    const tokenActor = target?.tokenId ? globalThis.canvas?.tokens?.get(target.tokenId)?.actor : null;
+    if (tokenActor) {
+        return tokenActor;
+    }
+
+    return target?.actorId ? game.actors?.get(target.actorId) || null : null;
+}
+
+async function handleItemApplicationPacket(packet) {
+    if (!isItemApplicationPacket(packet)) {
+        return;
+    }
+
+    const sourceActor = packet.sourceActorId ? game.actors?.get(packet.sourceActorId) || null : null;
+
+    for (const target of packet.targets) {
+        const targetActor = resolveTargetActor(target);
+        if (!targetActor) {
+            console.warn('Ilaris Alternative Actor Sheet | Zielactor konnte nicht aufgeloest werden', target);
+            continue;
+        }
+
+        const responsibleOwner = getResponsibleOwner(targetActor);
+        if (!responsibleOwner || responsibleOwner.id !== game.user.id) {
+            continue;
+        }
+
+        await applyItemToTarget(sourceActor, targetActor, packet, target);
+    }
+}
+
+function registerItemApplicationHandlers() {
+    if (!itemApplicationHookRegistered) {
+        Hooks.on(ITEM_APPLICATION_HOOK, packet => {
+            handleItemApplicationPacket(packet).catch(error => {
+                console.error(
+                    'Ilaris Alternative Actor Sheet | Fehler beim Verarbeiten der Gegenstandsanwendung',
+                    error
+                );
+            });
+        });
+        itemApplicationHookRegistered = true;
+    }
+
+    if (!itemApplicationSocketRegistered) {
+        game.socket.on(`module.${MODULE_ID}`, packet => {
+            if (!isItemApplicationPacket(packet) || packet.userId === game.user.id) {
+                return;
+            }
+
+            Hooks.callAll(ITEM_APPLICATION_HOOK, packet);
+        });
+        itemApplicationSocketRegistered = true;
+    }
+}
+
+async function broadcastItemApplication(payload) {
+    const packet = {
+        ...payload,
+        type: ITEM_APPLICATION_SOCKET_TYPE,
+        userId: game.user.id,
+        timestamp: Date.now(),
+    };
+
+    Hooks.callAll(ITEM_APPLICATION_HOOK, packet);
+    game.socket.emit(`module.${MODULE_ID}`, packet);
+    return packet;
+}
 
 /**
  * Hook: Automatically add Fernkampfwaffe when Nahkampfwaffe with Fernkampfoption is added
@@ -131,6 +228,7 @@ Hooks.once('init', async function () {
         // Apps
         'modules/ilaris-alternative-actor-sheet/templates/apps/initiative-dialog.hbs',
         'modules/ilaris-alternative-actor-sheet/templates/apps/fertigkeit-dialog.hbs',
+        'modules/ilaris-alternative-actor-sheet/templates/apps/item-apply-dialog.hbs',
         'modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs',
     ]);
 
@@ -166,6 +264,10 @@ Hooks.once('init', async function () {
     });
 
     console.log('Ilaris Alternative Actor Sheet | Module initialized successfully');
+});
+
+Hooks.once('ready', () => {
+    registerItemApplicationHandlers();
 });
 
 /**
@@ -382,6 +484,9 @@ Hooks.on('combatTurnChange', async (combat, prior, current) => {
 // Export for use in actor sheets
 window.IlarisAlternativeActorSheet = window.IlarisAlternativeActorSheet || {};
 window.IlarisAlternativeActorSheet.addEffectWithStacking = addEffectWithStacking;
+window.IlarisAlternativeActorSheet.broadcastItemApplication = broadcastItemApplication;
+window.IlarisAlternativeActorSheet.createItemApplicationPayload = createItemApplicationPayload;
+window.IlarisAlternativeActorSheet.consumeInventoryItem = consumeInventoryItem;
 window.IlarisAlternativeActorSheet.increaseEffectStack = increaseEffectStack;
 
 // Hook: Handle ammunition consumption on ranged attack

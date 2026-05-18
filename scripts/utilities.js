@@ -234,6 +234,99 @@ export async function addEffectWithStacking(actor, effectData) {
 }
 
 /**
+ * Consume an inventory item by a fixed amount and delete it at zero.
+ * @param {Actor} actor
+ * @param {string} itemId
+ * @param {number} amount
+ * @returns {Promise<{status: string, quantity?: number, itemName?: string}>}
+ */
+export async function consumeInventoryItem(actor, itemId, amount = 1) {
+    if (!actor || !itemId || !Number.isFinite(amount) || amount <= 0) {
+        return { status: 'invalid' };
+    }
+
+    const item = actor.items.get(itemId);
+    if (!item) {
+        return { status: 'missing' };
+    }
+
+    const currentQuantity = Number(item.system.quantity ?? 0);
+    if (!Number.isFinite(currentQuantity) || currentQuantity <= 0) {
+        await item.delete();
+        return { status: 'removed-empty', itemName: item.name };
+    }
+
+    const nextQuantity = currentQuantity - amount;
+    if (nextQuantity <= 0) {
+        await item.delete();
+        return { status: 'deleted', itemName: item.name };
+    }
+
+    await item.update({ 'system.quantity': nextQuantity });
+    return { status: 'updated', quantity: nextQuantity, itemName: item.name };
+}
+
+/**
+ * Build the socket and hook payload for a shared item application event.
+ * @param {Actor} actor
+ * @param {Item} item
+ * @param {Array<object>} targets
+ * @returns {object}
+ */
+export function createItemApplicationPayload(actor, item, targets = []) {
+    const effectPayloads = (item?.effects?.contents || item?.effects || []).map(effect => {
+        const effectData = effect.toObject();
+        delete effectData._id;
+        effectData.origin = item.uuid;
+        return effectData;
+    });
+
+    return {
+        sourceActorId: actor?.id || null,
+        sourceActorName: actor?.name || 'Unbekannt',
+        itemId: item?.id || null,
+        itemUuid: item?.uuid || null,
+        itemName: item?.name || 'Unbekannter Gegenstand',
+        itemImg: item?.img || 'icons/svg/item-bag.svg',
+        effects: effectPayloads,
+        targets: targets.map(target => ({
+            actorId: target.actorId || null,
+            tokenId: target.tokenId || null,
+            name: target.name || 'Unbekanntes Ziel',
+            distance: Number(target.distance ?? 0),
+        })),
+    };
+}
+
+/**
+ * Apply an item to a target actor. Effect transfer is intentionally a placeholder.
+ * @param {Actor|null} sourceActor
+ * @param {Actor} targetActor
+ * @param {object} payload
+ * @param {object} target
+ * @returns {Promise<{status: string, effectCount: number}>}
+ */
+export async function applyItemToTarget(sourceActor, targetActor, payload, target) {
+    const effectCount = Array.isArray(payload?.effects) ? payload.effects.length : 0;
+    const effectNames = (payload?.effects || []).map(effect => effect.name).filter(Boolean);
+    const effectText = effectNames.length > 0 ? effectNames.join(', ') : 'Noch ohne Effektuebertragung';
+
+    await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: sourceActor || targetActor }),
+        content: `
+            <div class="iaas-item-apply-chat">
+                <div class="iaas-item-apply-chat__title"><strong>${payload.itemName}</strong> auf <strong>${targetActor.name}</strong> angewendet</div>
+                <div class="iaas-item-apply-chat__meta">Quelle: ${sourceActor?.name || payload.sourceActorName || 'Unbekannt'}</div>
+                <div class="iaas-item-apply-chat__meta">Ziel: ${target?.name || targetActor.name}${Number.isFinite(target?.distance) ? ` (${target.distance} Schritt)` : ''}</div>
+                <div class="iaas-item-apply-chat__meta">Effektstatus: ${effectText}</div>
+            </div>`,
+    });
+
+    globalThis.ui.notifications.info(`${payload.itemName} wurde auf ${targetActor.name} angewendet.`);
+    return { status: 'placeholder', effectCount };
+}
+
+/**
  * Apply bleeding effect to actor from effect-library pack
  * Uses the shared stacking logic
  * @param {Actor} actor - The actor to apply bleeding to
@@ -298,14 +391,7 @@ export async function consumeAmmunition(actor, ammunitionType, amount = 1) {
         return false;
     }
 
-    const currentQty = ammoItem.system.quantity;
-    const newQty = Math.max(0, currentQty - amount);
-
-    if (newQty <= 0) {
-        await ammoItem.delete();
-    } else {
-        await ammoItem.update({ 'system.quantity': newQty });
-    }
+    await consumeInventoryItem(actor, ammoItem.id, amount);
 
     return true;
 }
@@ -401,10 +487,10 @@ export async function handleFumble(rollResult, actor, weapon, ammunitionType, is
             break;
     }
 
-        // Post fumble chat message with semantic styling classes
+    // Post fumble chat message with semantic styling classes
     await ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor }),
-                content: `<div class="ilaris-chat-fumble">
+        content: `<div class="ilaris-chat-fumble">
             <h3 class="ilaris-chat-fumble__title">
                 <i class="fas fa-skull-crossbones ilaris-chat-fumble__icon"></i>
         Fernkampf-Fumble!

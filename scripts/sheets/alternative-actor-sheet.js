@@ -16,7 +16,8 @@ import { HeldenSheet } from '../../../../systems/Ilaris/scripts/actors/sheets/he
 import { AccordionManager } from '../components/accordion-manager.js';
 import { FavoritesManager } from '../components/favorites-manager.js';
 import { IlarisAlternativeFertigkeitDialog } from '../apps/fertigkeit-dialog.js';
-import { advanceEffectTime } from '../utilities.js';
+import { IlarisAlternativeItemApplyDialog } from '../apps/item-apply-dialog.js';
+import { advanceEffectTime, consumeInventoryItem } from '../utilities.js';
 
 export class IlarisAlternativeActorSheet extends HeldenSheet {
     constructor(...args) {
@@ -35,6 +36,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         position: { width: 820, height: 900 },
         actions: {
             rollable: IlarisAlternativeActorSheet.onRollable,
+            openItemApplyDialog: IlarisAlternativeActorSheet.onOpenItemApplyDialog,
             itemCreate: IlarisAlternativeActorSheet.onItemCreate,
             itemQuantityChange: IlarisAlternativeActorSheet.onItemQuantityChange,
             hexagonEdit: IlarisAlternativeActorSheet.onHexagonEdit,
@@ -447,13 +449,50 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         const newQuantity = currentQuantity + delta;
 
         if (newQuantity <= 0) {
-            await item.delete();
+            await consumeInventoryItem(this.actor, item.id, Math.abs(delta));
             return;
         }
 
         await item.update({
             'system.quantity': newQuantity,
         });
+    }
+
+    /**
+     * Open the item-apply dialog for inventory items.
+     * @param {PointerEvent} event
+     * @param {HTMLElement} target
+     */
+    static async onOpenItemApplyDialog(event, target) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (!this.actor?.isOwner) {
+            globalThis.ui.notifications.warn('Nur Besitzer koennen Gegenstaende anwenden.');
+            return;
+        }
+
+        const itemId = target.dataset.itemid;
+        if (!itemId) {
+            globalThis.ui.notifications.warn('Gegenstand konnte nicht gefunden werden.');
+            return;
+        }
+
+        const item = this.actor.items.get(itemId);
+        if (!item || item.type !== 'gegenstand') {
+            globalThis.ui.notifications.warn('Nur Gegenstaende aus dem Inventar koennen angewendet werden.');
+            return;
+        }
+
+        const quantity = Number(item.system.quantity ?? 0);
+        if (!Number.isFinite(quantity) || quantity <= 0) {
+            await consumeInventoryItem(this.actor, item.id, 1);
+            globalThis.ui.notifications.warn(`Der Gegenstand "${item.name}" ist nicht mehr verfuegbar.`);
+            return;
+        }
+
+        const dialog = new IlarisAlternativeItemApplyDialog(this.actor, { itemId: item.id });
+        await dialog.render(true);
     }
 
     /**
