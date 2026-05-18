@@ -172,7 +172,6 @@
 }
 
 .ilaris.sheet.actor.alternative .item-extra-button.quantity-plus {
-    background: var(--color-success-soft);
     color: var(--color-text-on-accent);
 }
 

@@ -58,7 +58,7 @@
             {{#each extraButtons as |btn|}}
             <a class="item-control item-extra-button {{#if btn.class}}{{btn.class}}{{/if}}"
                 data-action="{{btn.action}}"
-                data-itemid="{{item._id}}"
+                data-itemid="{{../item._id}}"
                 {{#if btn.tooltip}}data-tooltip="{{btn.tooltip}}" title="{{btn.tooltip}}"{{/if}}
                 {{#if btn.data}}
                 {{#each btn.data as |value key|}}
