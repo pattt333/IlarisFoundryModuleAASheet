@@ -1,0 +1,603 @@
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) {
+    --iaas-combat-color-white: #fff;
+    --iaas-combat-color-header: #3c4658;
+    --iaas-combat-color-surface: #f8f8f8;
+    --iaas-combat-color-panel: #f7fafc;
+    --iaas-combat-color-panel-alt: #edf2f7;
+    --iaas-combat-color-border: #ccd4df;
+    --iaas-combat-color-border-strong: #697384;
+    --iaas-combat-color-text: #2d3748;
+    --iaas-combat-color-text-soft: #718096;
+    --iaas-combat-color-accent: #4299e1;
+    --iaas-combat-color-accent-strong: #2b6cb0;
+    --iaas-combat-color-success: #2f855a;
+    --iaas-combat-color-warning: #b8860b;
+    --iaas-combat-color-error: #cc5252;
+    --iaas-combat-color-shadow: rgba(0, 0, 0, 0.2);
+    --iaas-combat-color-shadow-strong: rgba(0, 0, 0, 0.28);
+    --iaas-combat-color-overlay: rgba(66, 153, 225, 0.1);
+    --iaas-combat-color-overlay-strong: rgba(66, 153, 225, 0.18);
+    --iaas-combat-color-disabled: rgba(113, 128, 150, 0.14);
+}
+
+body.theme-dark :is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) {
+    --iaas-combat-color-white: #fff;
+    --iaas-combat-color-header: #141d1b;
+    --iaas-combat-color-surface: #191c1b;
+    --iaas-combat-color-panel: #1b1e1d;
+    --iaas-combat-color-panel-alt: #232826;
+    --iaas-combat-color-border: #3f4946;
+    --iaas-combat-color-border-strong: #6f7976;
+    --iaas-combat-color-text: #eff1ef;
+    --iaas-combat-color-text-soft: #a9acaa;
+    --iaas-combat-color-accent: #007a75;
+    --iaas-combat-color-accent-strong: #36a8a2;
+    --iaas-combat-color-success: #97d2c5;
+    --iaas-combat-color-warning: #f0cf75;
+    --iaas-combat-color-error: #ffb4ab;
+    --iaas-combat-color-shadow: rgba(0, 0, 0, 0.48);
+    --iaas-combat-color-shadow-strong: rgba(0, 0, 0, 0.64);
+    --iaas-combat-color-overlay: rgba(0, 122, 117, 0.14);
+    --iaas-combat-color-overlay-strong: rgba(0, 122, 117, 0.24);
+    --iaas-combat-color-disabled: rgba(169, 172, 170, 0.12);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) {
+    background: var(--iaas-combat-color-header);
+    max-height: min(85vh, 60rem);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .window-header {
+    background: var(--iaas-combat-color-header);
+    border: 0;
+    color: var(--iaas-combat-color-white);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .window-header button,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .window-title {
+    color: var(--iaas-combat-color-white);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .window-content {
+    align-items: stretch;
+    gap: 1rem;
+    max-height: calc(min(85vh, 60rem) - 3.5rem);
+    overflow: hidden;
+    padding: 0.85rem;
+    background: var(--iaas-combat-color-surface);
+    color: var(--iaas-combat-color-text);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) [data-application-part="settings"],
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) [data-application-part="summaries"] {
+    background: var(--iaas-combat-color-panel);
+    border: 1px solid var(--iaas-combat-color-border);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px var(--iaas-combat-color-shadow);
+    min-height: 0;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) [data-application-part="settings"] {
+    min-width: 0;
+    overflow-y: auto;
+    padding: 0.85rem;
+    scrollbar-gutter: stable;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) [data-application-part="summaries"] {
+    overflow-y: auto;
+    padding: 0.85rem;
+    background: var(--iaas-combat-color-panel-alt);
+    scrollbar-gutter: stable;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .left-column,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .right-column {
+    color: var(--iaas-combat-color-text);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) label,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .description,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .selected-actors-title,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .selected-actors-list,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-item {
+    color: var(--iaas-combat-color-text);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .description,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .selected-actors-list {
+    color: var(--iaas-combat-color-text-soft);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .warning {
+    color: var(--iaas-combat-color-warning);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .flexrow,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .target-selection-container {
+    gap: 0.75rem;
+    align-items: center;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) hr {
+    margin: 0.85rem 0;
+    border: 0;
+    border-top: 1px solid var(--iaas-combat-color-border);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) input,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) select,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) button {
+    border-radius: 4px;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) input,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) select {
+    background: var(--iaas-combat-color-surface);
+    border: 1px solid var(--iaas-combat-color-border);
+    color: var(--iaas-combat-color-text);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) input[type="radio"],
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) input[type="checkbox"] {
+    accent-color: var(--iaas-combat-color-accent);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) input:focus,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) select:focus,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) button:focus-visible {
+    outline: 1px solid var(--iaas-combat-color-accent);
+    border-color: var(--iaas-combat-color-accent-strong);
+    box-shadow: 0 0 0 2px var(--iaas-combat-color-overlay);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .combat-button-narrow {
+    border: 1px solid var(--iaas-combat-color-border);
+    background: linear-gradient(180deg, var(--iaas-combat-color-panel-alt), var(--iaas-combat-color-panel));
+    color: var(--iaas-combat-color-text);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .combat-button-narrow:hover {
+    border-color: var(--iaas-combat-color-accent-strong);
+    background: linear-gradient(180deg, var(--iaas-combat-color-overlay), var(--iaas-combat-color-panel));
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .target-selection-container,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-item,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .modifier-summary {
+    background: var(--iaas-combat-color-panel);
+    border: 1px solid var(--iaas-combat-color-border);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px var(--iaas-combat-color-shadow);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .target-selection-container {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .selected-actors-display {
+    min-height: 2.5rem;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .selected-actors-title {
+    margin-bottom: 0.35rem;
+    color: var(--iaas-combat-color-accent-strong);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0.85rem;
+    background: linear-gradient(180deg, var(--iaas-combat-color-panel-alt), var(--iaas-combat-color-panel));
+    border: 1px solid var(--iaas-combat-color-border);
+    border-radius: 6px;
+    color: var(--iaas-combat-color-text);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-header h3,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .modifier-summary h4 {
+    margin: 0;
+    color: var(--iaas-combat-color-accent-strong);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .toggle-display {
+    color: var(--iaas-combat-color-text-soft);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-grid {
+    display: grid;
+    gap: 0.6rem;
+    margin-top: 0.75rem;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-item {
+    padding: 0.65rem 0.75rem;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-item.has-value {
+    border-color: var(--iaas-combat-color-accent-strong);
+    box-shadow: 0 0 0 1px var(--iaas-combat-color-overlay-strong);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-item.disabled-conflict {
+    background: var(--iaas-combat-color-disabled);
+    border-color: var(--iaas-combat-color-error);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-item.disabled-conflict label {
+    color: var(--iaas-combat-color-error);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) [data-application-part="summaries"] .all-summaries {
+    gap: 0.85rem;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .modifier-summary {
+    padding: 0.85rem;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .modifier-summary h4 {
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--iaas-combat-color-border);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .attack-summary {
+    border-left: 4px solid var(--iaas-combat-color-error) !important;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .defense-summary,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .energy-summary {
+    border-left: 4px solid var(--iaas-combat-color-success) !important;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .damage-summary,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .talent-summary {
+    border-left: 4px solid var(--iaas-combat-color-accent-strong) !important;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .disabled {
+    color: var(--iaas-combat-color-text-soft) !important;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-positive,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) input.maneuver-positive {
+    color: var(--iaas-combat-color-success) !important;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .maneuver-negative,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) input.maneuver-negative {
+    color: var(--iaas-combat-color-error) !important;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .clickable-summary {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .clickable-summary:hover {
+    border-color: var(--iaas-combat-color-accent-strong) !important;
+    box-shadow: 0 4px 14px var(--iaas-combat-color-shadow-strong);
+}
+
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .combat-select-narrow,
+:is(
+    .ilaris.combat-dialog.angriff-dialog,
+    .ilaris.combat-dialog.fernkampf-dialog,
+    .ilaris.combat-dialog.uebernatuerlich-dialog
+) .combat-button-narrow {
+    max-width: 12rem;
+}
+
+@media (max-width: 900px) {
+    :is(
+        .ilaris.combat-dialog.angriff-dialog,
+        .ilaris.combat-dialog.fernkampf-dialog,
+        .ilaris.combat-dialog.uebernatuerlich-dialog
+    ) .window-content {
+        flex-direction: column;
+        max-height: calc(min(85vh, 60rem) - 3.5rem);
+        overflow-y: auto;
+    }
+
+    :is(
+        .ilaris.combat-dialog.angriff-dialog,
+        .ilaris.combat-dialog.fernkampf-dialog,
+        .ilaris.combat-dialog.uebernatuerlich-dialog
+    ) [data-application-part="summaries"] {
+        flex-basis: auto;
+        overflow: visible;
+        scrollbar-gutter: auto;
+    }
+
+    :is(
+        .ilaris.combat-dialog.angriff-dialog,
+        .ilaris.combat-dialog.fernkampf-dialog,
+        .ilaris.combat-dialog.uebernatuerlich-dialog
+    ) .target-selection-container {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    :is(
+        .ilaris.combat-dialog.angriff-dialog,
+        .ilaris.combat-dialog.fernkampf-dialog,
+        .ilaris.combat-dialog.uebernatuerlich-dialog
+    ) .combat-button-narrow,
+    :is(
+        .ilaris.combat-dialog.angriff-dialog,
+        .ilaris.combat-dialog.fernkampf-dialog,
+        .ilaris.combat-dialog.uebernatuerlich-dialog
+    ) .combat-select-narrow {
+        max-width: none;
+        width: 100%;
+    }
+}
