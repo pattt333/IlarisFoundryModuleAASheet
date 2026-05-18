@@ -50,10 +50,22 @@
         {{/if}}
 
         <div class="flexrow">
-            <label>Nutzung:</label>
+            <label>Aktion:</label>
             <select id="usage-context-{{dialogId}}" style="max-width: 200px;">
                 {{#each usageContexts as |context|}}
                 <option value="{{context.value}}" {{#if (ifEq context.value ../defaultUsageContext)}}selected{{/if}}>{{context.label}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div class="flexrow dialog-select-row">
+            <label>Benutzter Gegenstand:</label>
+            <select id="used-item-{{dialogId}}" class="dialog-select" title="Benutzter Gegenstand" style="max-width: 200px;">
+                <option value="none" {{#if (ifEq defaultUsedItemId "none")}}selected{{/if}}>nichts</option>
+                {{#each usedItems as |item|}}
+                <option value="{{item.value}}" title="{{item.label}}" {{#if (ifEq item.value ../defaultUsedItemId)}}selected{{/if}}
+                    >{{item.label}}</option
+                >
                 {{/each}}
             </select>
         </div>

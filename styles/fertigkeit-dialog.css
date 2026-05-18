@@ -80,6 +80,15 @@ body.theme-dark .iaas-fertigkeit-dialog {
     color: var(--iaas-color-text);
 }
 
+.iaas-fertigkeit-dialog .dialog-select-row {
+    align-items: flex-start;
+}
+
+.iaas-fertigkeit-dialog .dialog-select {
+    width: min(100%, 16.25rem);
+    min-width: 0;
+}
+
 .iaas-fertigkeit-dialog .is-hidden {
     display: none;
 }

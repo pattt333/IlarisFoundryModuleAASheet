@@ -11,6 +11,7 @@ const CONTEXT_LABELS = {
 };
 
 const DEFAULT_DIFFICULTY = 16;
+const DEFAULT_USED_ITEM_ID = 'none';
 const MATERIAL_ITEM_NAME_PATTERN = /(zutat|material)/i;
 
 const CONTEXT_DIFFICULTY_CONFIG = {
@@ -57,6 +58,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
         this.dialogId = `dialog-${Date.now()}-${Math.random().toString(36).substring(2, 11)}`;
         this.usageContext = 'none';
         this.difficultyValue = DEFAULT_DIFFICULTY;
+        this.usedItemId = DEFAULT_USED_ITEM_ID;
     }
 
     static #onPreviewClick(event) {
@@ -80,6 +82,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
         const context = await super._prepareContext(options);
         const hasSchips = this.actor.system.schips.schips_stern > 0;
         const difficulty = this._getDifficultyState(this.usageContext, this.difficultyValue);
+        const usedItems = this._getUsedItemOptions();
 
         return {
             ...context,
@@ -105,6 +108,8 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
                 { value: 'buyItem', label: CONTEXT_LABELS.buyItem },
             ],
             defaultUsageContext: this.usageContext,
+            usedItems,
+            defaultUsedItemId: this.usedItemId,
             difficulty,
         };
     }
@@ -143,14 +148,85 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
         }
 
         const nextUsageContext = html.querySelector(`#usage-context-${this.dialogId}`)?.value || 'none';
+        const nextUsedItemId = html.querySelector(`#used-item-${this.dialogId}`)?.value || DEFAULT_USED_ITEM_ID;
         const difficultyInputValue = html.querySelector(`#difficulty-${this.dialogId}`)?.value;
         const difficultyState = this._getDifficultyState(nextUsageContext, difficultyInputValue);
 
         this.usageContext = nextUsageContext;
+        this.usedItemId = nextUsedItemId;
 
         if (difficultyState.active && !difficultyState.fixed) {
             this.difficultyValue = difficultyState.inputValue;
         }
+    }
+
+    _getUsedItemOptions() {
+        return this.actor.items
+            .filter(item => item.type === 'gegenstand')
+            .map(item => {
+                const quantity = Number(item.system.quantity ?? 0);
+
+                return {
+                    value: item.id,
+                    name: item.name,
+                    quantity: Number.isFinite(quantity) ? quantity : 0,
+                    label: `${item.name} (${Number.isFinite(quantity) ? quantity : 0})`,
+                };
+            })
+            .sort((left, right) => left.name.localeCompare(right.name, 'de', { sensitivity: 'base' }));
+    }
+
+    _getSelectedUsedItemData() {
+        const selectedItemId = this.usedItemId || DEFAULT_USED_ITEM_ID;
+
+        if (selectedItemId === DEFAULT_USED_ITEM_ID) {
+            return null;
+        }
+
+        const select = this.element?.querySelector(`#used-item-${this.dialogId}`);
+        const selectedOption = select?.selectedOptions?.[0] || null;
+        const actorItem = this.actor.items.get(selectedItemId) || null;
+        const selectedLabel = selectedOption?.textContent?.trim() || actorItem?.name || 'Unbekannter Gegenstand';
+        const quantity = Number(actorItem?.system.quantity ?? 0);
+
+        return {
+            id: selectedItemId,
+            name: actorItem?.name || selectedLabel,
+            label: selectedLabel,
+            quantity: Number.isFinite(quantity) ? quantity : 0,
+            available: Boolean(actorItem),
+        };
+    }
+
+    async _consumeSelectedUsedItem(usedItem) {
+        if (!usedItem?.id) {
+            return null;
+        }
+
+        const actorItem = this.actor.items.get(usedItem.id);
+
+        if (!actorItem) {
+            globalThis.ui.notifications.warn(`Der gewählte Gegenstand "${usedItem.name}" ist nicht mehr im Inventar.`);
+            return { status: 'missing' };
+        }
+
+        const currentQuantity = Number(actorItem.system.quantity ?? 0);
+
+        if (!Number.isFinite(currentQuantity) || currentQuantity <= 0) {
+            await actorItem.delete();
+            globalThis.ui.notifications.warn(
+                `Der gewählte Gegenstand "${actorItem.name}" hatte keine Menge mehr und wurde entfernt.`
+            );
+            return { status: 'removed-empty' };
+        }
+
+        if (currentQuantity === 1) {
+            await actorItem.delete();
+            return { status: 'deleted' };
+        }
+
+        await actorItem.update({ 'system.quantity': currentQuantity - 1 });
+        return { status: 'updated', quantity: currentQuantity - 1 };
     }
 
     _getDifficultyState(usageContextKey = 'none', rawDifficultyValue = this.difficultyValue) {
@@ -354,6 +430,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
         }
 
         const usageContext = this._getUsageContextData();
+        const usedItem = this._getSelectedUsedItemData();
         const difficultyState = this._getDifficultyState(usageContext.key, this.difficultyValue);
 
         const hoheQualitaetMod = hoheQualitaet * -4;
@@ -377,6 +454,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             schipsApplied,
             schipsText,
             usageContext,
+            usedItem,
             difficultyState,
         };
     }
@@ -585,6 +663,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             schipsApplied,
             schipsText,
             usageContext,
+            usedItem,
             difficultyState,
         } = this._calculateModifiers();
 
@@ -595,6 +674,10 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
         if (difficultyState.active) {
             const difficultySuffix = difficultyState.fixed ? ' (fest)' : '';
             text = text.concat(`Schwierigkeit: ${difficultyState.effectiveValue}${difficultySuffix}\n`);
+        }
+        if (usedItem) {
+            const usedItemText = usedItem.available ? usedItem.name : `${usedItem.name} (nicht mehr verf\u00fcgbar)`;
+            text = text.concat(`Benutzter Gegenstand: ${usedItemText}\n`);
         }
         if (schipsText) {
             text = text.concat(`${schipsText}\n`);
@@ -622,6 +705,7 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             fertigkeitKey: this.fertigkeitKey,
             fertigkeitName: this.fertigkeitName,
             usageContext,
+            usedItem,
             difficulty: difficultyState.active
                 ? {
                       active: true,
@@ -638,6 +722,8 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             : await evaluate_roll_with_crit(formula, label, text);
 
         await postRollToChat(rollResult, this.speaker, rollmode);
+
+        await this._consumeSelectedUsedItem(usedItem);
 
         await this._handleMaterialGatheringSuccess(rollResult, usageContext);
     }
