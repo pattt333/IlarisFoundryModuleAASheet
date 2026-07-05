@@ -270,33 +270,22 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 await this._handleItemPileTrade(dropData);
             } else {
                 const data = TextEditor.getDragEventData(event);
-                const item = await fromUuid(data.uuid);
 
-                // Effect library drop: transfer only effects
-                if (item.type === 'effectItem') {
+                // Effect library drop: standalone ActiveEffect → add directly to actor
+                if (
+                    data.type === 'ActiveEffect'
+                ) {
                     try {
-                        if (!item) {
-                            ui.notifications.warn('Item konnte nicht gefunden werden.');
+                        const effect = await fromUuid(data.uuid);
+                        if (!effect) {
+                            ui.notifications.warn('Effekt konnte nicht gefunden werden.');
                             return;
                         }
-
-                        const effects = item.effects?.contents || [];
-                        if (effects.length === 0) {
-                            ui.notifications.warn(`${item.name} hat keine Effekte zum übertragen.`);
-                            return;
-                        }
-
-                        const effectData = effects.map(e => {
-                            const eData = e.toObject();
-                            eData.origin = this.actor.uuid;
-                            return eData;
-                        });
-
-                        for (const newEffectData of effectData) {
-                            await window.IlarisAlternativeActorSheet.addEffectWithStacking(this.actor, newEffectData);
-                        }
-
-                        ui.notifications.info(`Effekt(e) von ${item.name} wurden verarbeitet.`);
+                        const effectData = effect.toObject();
+                        delete effectData._id;
+                        effectData.origin = this.actor.uuid;
+                        await window.IlarisAlternativeActorSheet.addEffectWithStacking(this.actor, effectData);
+                        ui.notifications.info(`${effect.name} wurde hinzugefügt.`);
                     } catch (error) {
                         console.error('Error transferring effects:', error);
                         ui.notifications.error('Fehler beim Übertragen der Effekte.');

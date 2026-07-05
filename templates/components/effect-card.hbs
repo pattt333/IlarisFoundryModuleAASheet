@@ -49,11 +49,11 @@
     
     {{!-- Duration (bottom right corner) --}}
     <div class="effect-duration">
-        {{#if effect.duration.turns}}
-         <span>{{effect.duration.turns}} Runden</span> 
-        
+        {{#if (eq effect.system.ilarisTiming.durationType "ownerTurns")}}
+            {{effect.system.ilarisTiming.remaining}}
+            <span class="duration-label">KR</span>
         {{else}}
-       <i class="fas fa-infinity" title="Unbegrenzte Dauer"></i>
+            <i class="fas fa-infinity" title="Unbegrenzte Dauer"></i>
         {{/if}}
     </div>
 </div>

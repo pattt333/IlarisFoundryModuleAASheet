@@ -164,36 +164,24 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
     async _onDrop(event) {
         const data = TextEditor.getDragEventData(event);
 
-        // If dropping an Item from the effect library compendium, transfer only its effects
-        if (data.type === 'Item' && data.uuid?.includes('ilaris-alternative-actor-sheet.effect-library')) {
+        // Effect library drop: standalone ActiveEffect → add directly to actor
+        if (data.type === 'ActiveEffect') {
             event.preventDefault();
 
             try {
-                const item = await fromUuid(data.uuid);
+                const effect = await fromUuid(data.uuid);
 
-                if (!item) {
-                    ui.notifications.warn('Item konnte nicht gefunden werden.');
+                if (!effect) {
+                    ui.notifications.warn('Effekt konnte nicht gefunden werden.');
                     return;
                 }
 
-                const effects = item.effects?.contents || [];
+                const effectData = effect.toObject();
+                delete effectData._id;
+                effectData.origin = this.actor.uuid;
 
-                if (effects.length === 0) {
-                    ui.notifications.warn(`${item.name} hat keine Effekte zum übertragen.`);
-                    return;
-                }
-
-                const effectData = effects.map(e => {
-                    const eData = e.toObject();
-                    eData.origin = this.actor.uuid;
-                    return eData;
-                });
-
-                for (const newEffectData of effectData) {
-                    await window.IlarisAlternativeActorSheet.addEffectWithStacking(this.actor, newEffectData);
-                }
-
-                ui.notifications.info(`Effekt(e) von ${item.name} wurden verarbeitet.`);
+                await window.IlarisAlternativeActorSheet.addEffectWithStacking(this.actor, effectData);
+                ui.notifications.info(`${effect.name} wurde hinzugefügt.`);
             } catch (error) {
                 console.error('Error transferring effects:', error);
                 ui.notifications.error('Fehler beim Übertragen der Effekte.');

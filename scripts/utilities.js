@@ -9,6 +9,7 @@
 // Weapon Management
 // ==========================================
 
+import { IlarisActiveEffect } from '../../../../systems/Ilaris/scripts/effects/active-effect.js'
 /**
  * Check if a weapon is a throwable weapon (Wurfwaffen skill)
  * @param {Item} item - The item to check
@@ -189,11 +190,12 @@ export async function createThrowableWeaponPile(actor, weapon, token) {
  */
 export async function increaseEffectStack(effect) {
     const currentStacks = effect.changes.length;
+    const originalValue = effect.system?.ilarisTiming?.originalValue || 3;
 
     // Maximum check (5 stacks max)
     if (currentStacks >= 5) {
         ui.notifications.warn(`${effect.name} hat bereits maximale Stacks (5). Nur Duration aufgefrischt.`);
-        await effect.update({ 'duration.turns': 3 });
+        await effect.update({ 'system.ilarisTiming.remaining': originalValue });
         return;
     }
 
@@ -203,10 +205,12 @@ export async function increaseEffectStack(effect) {
     // Add new change to the array
     const updatedChanges = [...effect.changes, changeTemplate];
 
-    // Update effect with new changes and refreshed duration
+    // Update effect with new changes and refresh ilaris duration
     await effect.update({
         changes: updatedChanges,
-        'duration.turns': 3,
+        'system.ilarisTiming.durationType': 'ownerTurns',
+        'system.ilarisTiming.remaining': originalValue,
+        'system.ilarisTiming.originalValue': originalValue,
     });
 
     ui.notifications.info(`${effect.name} Stack erhöht auf ${updatedChanges.length}`);
@@ -341,28 +345,19 @@ export async function applyBleedingEffect(actor) {
         }
 
         const documents = await pack.getDocuments();
-        const blutungItem = documents.find(d => d.name === 'Blutung');
+        const blutungEffect = documents.find(d => d.name === 'Blutung Stack');
 
-        if (!blutungItem) {
-            console.error('Ilaris Alternative Actor Sheet | Blutung item not found in pack');
+        if (!blutungEffect) {
+            console.error('Ilaris Alternative Actor Sheet | Blutung Stack not found in pack');
             ui.notifications.warn('Blutung-Effekt konnte nicht gefunden werden. Bitte manuell hinzufügen.');
             return;
         }
 
-        // Get effects from the Blutung item
-        const effects = blutungItem.effects?.contents || [];
-        if (effects.length === 0) {
-            console.error('Ilaris Alternative Actor Sheet | Blutung item has no effects');
-            ui.notifications.warn('Blutung-Effekt hat keine Active Effects. Bitte manuell hinzufügen.');
-            return;
-        }
+        const effectData = blutungEffect.toObject();
+        delete effectData._id;
+        effectData.origin = actor.uuid;
 
-        // Transfer effects using shared utility
-        for (const effect of effects) {
-            const effectData = effect.toObject();
-            effectData.origin = actor.uuid;
-            await addEffectWithStacking(actor, effectData);
-        }
+        await addEffectWithStacking(actor, effectData);
     } catch (error) {
         console.error('Ilaris Alternative Actor Sheet | Error applying bleeding effect:', error);
         ui.notifications.warn('Blutung-Effekt konnte nicht angewendet werden. Bitte manuell hinzufügen.');
@@ -513,28 +508,40 @@ export async function handleFumble(rollResult, actor, weapon, ammunitionType, is
  * @returns {Promise<number>} - Number of effects that were updated
  */
 export async function advanceEffectTime(actor) {
-    // Filter effects with valid positive integer duration.turns or duration.rounds
-    const temporaryEffects = actor.effects.filter(effect => {
-        const turns = effect.duration?.turns;
-        const rounds = effect.duration?.rounds;
-        return (Number.isInteger(turns) && turns > 0) || (Number.isInteger(rounds) && rounds > 0);
-    });
+    // Filter Ilaris-timed effects that still have remaining duration
+    const ilarisEffects = actor.effects.filter(
+        e => e.system?.ilarisTiming?.durationType === 'ownerTurns' && e.system.ilarisTiming.remaining > 0,
+    );
 
-    if (temporaryEffects.length === 0) {
+    if (ilarisEffects.length === 0) {
         return 0;
     }
 
-    // Create update array - decrement both turns and rounds
-    const updates = temporaryEffects.map(effect => ({
-        _id: effect.id,
-        'duration.turns': Math.max(0, (effect.duration.turns || 0) - 1),
-        'duration.rounds': Math.max(0, (effect.duration.rounds || 0) - 1),
-    }));
 
-    // Batch update all effects
-    await actor.updateEmbeddedDocuments('ActiveEffect', updates);
+    const updates = [];
+    const deletions = [];
 
-    return updates.length;
+    for (const effect of ilarisEffects) {
+        const newRemaining = effect.system.ilarisTiming.remaining - 1;
+
+        // Apply DOT damage at end of owner's turn (after flagging)
+        if (effect.hasDotChanges) {
+            for (const change of effect.dotChanges) {
+                await IlarisActiveEffect.applyDotDamage(actor, change, effect)
+            }
+        }
+
+        if (newRemaining <= 0) {
+            deletions.push(effect.id);
+        } else {
+            updates.push({ _id: effect.id, 'system.ilarisTiming.remaining': newRemaining });
+        }
+    }
+
+    if (updates.length) await actor.updateEmbeddedDocuments('ActiveEffect', updates);
+    for (const id of deletions) await actor.deleteEmbeddedDocuments('ActiveEffect', [id]);
+
+    return ilarisEffects.length;
 }
 
 /**
