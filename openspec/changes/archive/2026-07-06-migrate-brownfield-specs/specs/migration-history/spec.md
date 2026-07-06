@@ -15,7 +15,7 @@ The 17 dated implementation plans from `docs/_specs/` subdirectories SHALL be co
 
 ### Requirement: AppV2 Migration (2026-05-09)
 
-The module was migrated from Foundry's legacy ActorSheet to AppV2 (`HandlebarsApplicationMixin(ActorSheetV2)`). Migration phases included: model data migration, variable name synchronization, and fernkampf hook migration. The fernkampf hook migration changed the post-attack handling from actor-level to system-level hooks.
+The module SHALL have been migrated from Foundry's legacy ActorSheet to AppV2 (`HandlebarsApplicationMixin(ActorSheetV2)`). Migration phases SHALL have included: model data migration, variable name synchronization, and fernkampf hook migration. The fernkampf hook migration SHALL have changed the post-attack handling from actor-level to system-level hooks.
 
 #### Scenario: Sheet rendering post-AppV2
 
@@ -24,7 +24,7 @@ The module was migrated from Foundry's legacy ActorSheet to AppV2 (`HandlebarsAp
 
 ### Requirement: CSS and Theme Migrations (2026-05-17)
 
-CSS sheet scope isolation was implemented to prevent style leakage. Dark mode sheet theme was added. The main tab was restructured to include Eigenheiten. Module-wide visual coverage and sheet color consistency were established.
+CSS sheet scope isolation SHALL prevent style leakage. Dark mode sheet theme SHALL be present. The main tab SHALL include Eigenheiten. Module-wide visual coverage and sheet color consistency SHALL be established.
 
 #### Scenario: Dark mode active
 
@@ -33,7 +33,7 @@ CSS sheet scope isolation was implemented to prevent style leakage. Dark mode sh
 
 ### Requirement: Dialog and Accordion Migrations (2026-05-18)
 
-Combat dialog theme was applied for visual consistency. Compendium variable names were synchronized. Dynamic accordion buttons were implemented. Fertigkeit dialog received three reworks: used item tracking, full rework, and difficulty selection. Gegenstand anwenden dialog and material sammeln success handling were added.
+Combat dialog theme SHALL be applied for visual consistency. Compendium variable names SHALL be synchronized. Dynamic accordion buttons SHALL be implemented. Fertigkeit dialog SHALL have received three reworks: used item tracking, full rework, and difficulty selection. Gegenstand anwenden dialog and material sammeln success handling SHALL be present.
 
 #### Scenario: Fertigkeit dialog opens
 
@@ -42,7 +42,7 @@ Combat dialog theme was applied for visual consistency. Compendium variable name
 
 ### Requirement: Effect Timing Migration (2026-07-03)
 
-Active effect timing was migrated to align with Ilaris system conventions for effect duration and expiration behavior.
+Active effect timing SHALL align with Ilaris system conventions for effect duration and expiration behavior.
 
 #### Scenario: Effect with duration expires
 
