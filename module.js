@@ -12,6 +12,7 @@ import { InitiativeDialog } from './scripts/apps/initiative-dialog.js';
 import { MassInitiativeDialog } from './scripts/apps/mass-initiative-dialog.js';
 import { NegativeInitiativeDialog } from './scripts/apps/negative-initiative-dialog.js';
 import { IlarisAlternativeAiCreatureDialog } from './scripts/apps/ai-creature-dialog.js';
+import { VorteileCacheRefresh } from './scripts/apps/vorteile-cache-refresh.js';
 import { registerHandlebarsHelpers } from './scripts/handlebars-helpers.js';
 import {
     addFernkampfoption,
@@ -217,6 +218,15 @@ Hooks.once('init', async function () {
         config: false,
         type: String,
         default: '',
+    });
+
+    game.settings.registerMenu('ilaris-alternative-actor-sheet', 'vorteileCacheRefresh', {
+        name: 'Vorteile-Cache aktualisieren',
+        label: 'Vorteile-Cache aktualisieren',
+        hint: 'Liste der kreaturrelevanten Vorteile aus dem Ilaris-Kompendium neu laden.',
+        icon: 'fas fa-sync',
+        type: VorteileCacheRefresh,
+        restricted: true,
     });
 
     // Register Handlebars helpers
@@ -662,29 +672,4 @@ Hooks.on('renderActorDirectory', (app, html) => {
     if (headerActions) {
         headerActions.appendChild(button);
     }
-});
-
-// ==========================================
-// AI Creature Generator: Vorteile Cache Button
-// ==========================================
-
-Hooks.on('renderSettingsConfig', (app, html) => {
-    const moduleTab = html.querySelector('[data-tab="ilaris-alternative-actor-sheet"]');
-    if (!moduleTab) return;
-
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'ai-vorteile-cache-btn';
-    button.innerHTML = '<i class="fas fa-sync"></i> Vorteile-Cache aktualisieren';
-    button.title = 'Liste der kreaturrelevanten Vorteile für den KI-Prompt neu laden';
-    button.addEventListener('click', async () => {
-        const count = await refreshVorteileCache();
-        if (count > 0) {
-            ui.notifications.info(`${count} Vorteile im Cache gespeichert`);
-        } else {
-            ui.notifications.warn('Keine Vorteile gefunden. Ist das Vorteile-Kompendium verfügbar?');
-        }
-    });
-
-    moduleTab.appendChild(button);
 });

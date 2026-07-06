@@ -586,7 +586,7 @@ export async function advanceEffectTimeForAllActors() {
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
 const DEEPSEEK_MODEL = 'deepseek-chat';
 
-const CREATURE_RELEVANT_VORTEIL_CATEGORIES = ['allgemein', 'profan', 'kampf', 'kampfstil'];
+const CREATURE_RELEVANT_VORTEIL_CATEGORIES = [0, '0', 1, '1', 2, '2', 3, '3'];
 
 const STRENGTH_TABLE = {
     schwach: { attrMin: 0, attrMax: 2, hpMin: 60, hpMax: 120, iniMin: 0, iniMax: 2, atMin: 1, atMax: 4 },
@@ -605,26 +605,37 @@ const WEAPON_PROPERTY_KEYS = [
 const ATTRIBUTE_KEYS = ['MU', 'KL', 'IN', 'CH', 'FF', 'GE', 'KO', 'KK'];
 
 /**
- * Refresh the vorteile cache from the Ilaris system compendium
+ * Refresh the vorteile cache from the Ilaris system's configured vorteile compendiums
  * @returns {Promise<number>} Number of vorteile cached
  */
 export async function refreshVorteileCache() {
     try {
-        const pack = game.packs.get('Ilaris.vorteile');
-        if (!pack) {
-            console.warn('Ilaris Alternative Actor Sheet | Vorteile compendium not found');
+        const packIdsJson = game.settings.get('Ilaris', 'vorteilePacks');
+        const packIds = JSON.parse(packIdsJson || '[]');
+
+        if (!Array.isArray(packIds) || packIds.length === 0) {
+            console.warn('Ilaris Alternative Actor Sheet | No vorteile packs configured in Ilaris system settings');
             return 0;
         }
 
-        const index = await pack.getIndex();
         const filtered = {};
 
-        for (const entry of index) {
-            const document = await pack.getDocument(entry._id);
-            const category = document.system?.kategorie;
-            if (category && CREATURE_RELEVANT_VORTEIL_CATEGORIES.includes(category)) {
-                if (!filtered[category]) filtered[category] = [];
-                filtered[category].push(document.name);
+        for (const packId of packIds) {
+            const pack = game.packs.get(packId);
+            if (!pack) {
+                console.warn(`Ilaris Alternative Actor Sheet | Vorteile pack not found: ${packId}`);
+                continue;
+            }
+
+            const index = await pack.getIndex();
+
+            for (const entry of index) {
+                const document = await pack.getDocument(entry._id);
+                const category = document.system?.gruppe;
+                if (category && CREATURE_RELEVANT_VORTEIL_CATEGORIES.includes(category)) {
+                    if (!filtered[category]) filtered[category] = [];
+                    filtered[category].push(document.name);
+                }
             }
         }
 
@@ -632,7 +643,7 @@ export async function refreshVorteileCache() {
         await game.settings.set('ilaris-alternative-actor-sheet', 'vorteileCache', json);
 
         const total = Object.values(filtered).reduce((sum, arr) => sum + arr.length, 0);
-        console.log(`Ilaris Alternative Actor Sheet | Vorteile cache updated: ${total} entries`);
+        console.log(`Ilaris Alternative Actor Sheet | Vorteile cache updated: ${total} entries from ${packIds.length} pack(s)`);
         return total;
     } catch (err) {
         console.error('Ilaris Alternative Actor Sheet | Failed to refresh vorteile cache', err);

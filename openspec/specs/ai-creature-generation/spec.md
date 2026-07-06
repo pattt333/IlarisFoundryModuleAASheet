@@ -93,12 +93,12 @@ After validation, each creature in the response SHALL be created via `Actor.crea
 
 ### Requirement: Vorteile cache refreshable via settings
 
-A button in module settings (renderSettingsConfig hook) SHALL read the Ilaris system's `Ilaris.vorteile` compendium, extract creature-relevant vorteile (categories: allgemein, profan, kampf, kampfstil), and store the filtered names as a JSON cache in the `vorteileCache` setting. The cache SHALL be used by the prompt builder. If the cache is empty, vorteile SHALL be omitted from the prompt.
+A settings menu button registered via `game.settings.registerMenu()` SHALL trigger `refreshVorteileCache()`. The cache SHALL be populated from the Ilaris system's configured vorteile packs (`game.settings.get('Ilaris', 'vorteilePacks')`), filtered to creature-relevant categories (allgemein, profan, kampf, kampfstil), and stored as JSON in the `vorteileCache` setting. The cache SHALL be used by the prompt builder. If the cache is empty, vorteile SHALL be omitted from the prompt.
 
 #### Scenario: GM clicks "Vorteile-Cache aktualisieren"
 
-- **WHEN** the GM clicks the cache refresh button in module settings
-- **THEN** the vorteile compendium is read, filtered to creature-relevant categories, and stored as a JSON cache with a notification showing the count
+- **WHEN** the GM clicks the registered menu button
+- **THEN** the Ilaris system's configured vorteile packs are read, filtered to creature-relevant categories, and stored as a JSON cache with a notification showing the count
 
 #### Scenario: Cache is empty on first use
 
