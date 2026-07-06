@@ -22,7 +22,9 @@
         "styles/effect-card.css",
         "styles/creature-sheet.css",
         "styles/fertigkeit-dialog.css",
-        "styles/combat-dialog.css"
+        "styles/combat-dialog.css",
+        "styles/initiative-dialog.css",
+        "styles/ai-creature-dialog.css"
     ],
     "relationships": {
         "systems": [

@@ -11,6 +11,7 @@ import { IlarisAlternativeCreatureSheet } from './scripts/sheets/alternative-cre
 import { InitiativeDialog } from './scripts/apps/initiative-dialog.js';
 import { MassInitiativeDialog } from './scripts/apps/mass-initiative-dialog.js';
 import { NegativeInitiativeDialog } from './scripts/apps/negative-initiative-dialog.js';
+import { IlarisAlternativeAiCreatureDialog } from './scripts/apps/ai-creature-dialog.js';
 import { registerHandlebarsHelpers } from './scripts/handlebars-helpers.js';
 import {
     addFernkampfoption,
@@ -27,6 +28,11 @@ import {
     isThrowableWeapon,
     createThrowableWeaponPile,
     AMMUNITION_TYPES,
+    refreshVorteileCache,
+    buildCreaturePrompt,
+    callDeepSeekApi,
+    parseAiCreatureResponse,
+    validateAndClampCreature,
 } from './scripts/utilities.js';
 
 const MODULE_ID = 'ilaris-alternative-actor-sheet';
@@ -195,6 +201,24 @@ Hooks.once('init', async function () {
         default: true,
     });
 
+    game.settings.register('ilaris-alternative-actor-sheet', 'deepseekApiKey', {
+        name: 'DeepSeek API Key',
+        hint: 'API-Schlüssel für die KI-Kreaturen-Generierung. Wird für Anfragen an die DeepSeek API verwendet.',
+        scope: 'world',
+        config: true,
+        type: String,
+        default: '',
+    });
+
+    game.settings.register('ilaris-alternative-actor-sheet', 'vorteileCache', {
+        name: 'Vorteile-Cache',
+        hint: 'Gecachte Liste der kreaturrelevanten Vorteile für den KI-Prompt.',
+        scope: 'world',
+        config: false,
+        type: String,
+        default: '',
+    });
+
     // Register Handlebars helpers
     registerHandlebarsHelpers();
 
@@ -230,6 +254,7 @@ Hooks.once('init', async function () {
         'modules/ilaris-alternative-actor-sheet/templates/apps/fertigkeit-dialog.hbs',
         'modules/ilaris-alternative-actor-sheet/templates/apps/item-apply-dialog.hbs',
         'modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs',
+        'modules/ilaris-alternative-actor-sheet/templates/apps/ai-creature-dialog.hbs',
     ]);
 
     // Load component CSS files
@@ -615,4 +640,51 @@ Hooks.on('getSceneControlButtons', controls => {
             }
         },
     };
+});
+
+// ==========================================
+// AI Creature Generator: Actor Directory Button
+// ==========================================
+
+Hooks.on('renderActorDirectory', (app, html) => {
+    if (!game.user.isGM) return;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'ai-creature-generator-btn';
+    button.innerHTML = '<i class="fas fa-robot"></i> KI-Kreaturen-Generator';
+    button.title = 'Kreaturen mit KI generieren';
+    button.addEventListener('click', () => {
+        new IlarisAlternativeAiCreatureDialog().render(true);
+    });
+
+    const headerActions = html.querySelector('.directory-header .header-actions');
+    if (headerActions) {
+        headerActions.appendChild(button);
+    }
+});
+
+// ==========================================
+// AI Creature Generator: Vorteile Cache Button
+// ==========================================
+
+Hooks.on('renderSettingsConfig', (app, html) => {
+    const moduleTab = html.querySelector('[data-tab="ilaris-alternative-actor-sheet"]');
+    if (!moduleTab) return;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'ai-vorteile-cache-btn';
+    button.innerHTML = '<i class="fas fa-sync"></i> Vorteile-Cache aktualisieren';
+    button.title = 'Liste der kreaturrelevanten Vorteile für den KI-Prompt neu laden';
+    button.addEventListener('click', async () => {
+        const count = await refreshVorteileCache();
+        if (count > 0) {
+            ui.notifications.info(`${count} Vorteile im Cache gespeichert`);
+        } else {
+            ui.notifications.warn('Keine Vorteile gefunden. Ist das Vorteile-Kompendium verfügbar?');
+        }
+    });
+
+    moduleTab.appendChild(button);
 });

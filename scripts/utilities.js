@@ -578,3 +578,281 @@ export async function advanceEffectTimeForAllActors() {
         effectsReduced: totalEffectsReduced,
     };
 }
+
+// ==========================================
+// AI Creature Generator Utilities
+// ==========================================
+
+const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
+const DEEPSEEK_MODEL = 'deepseek-chat';
+
+const CREATURE_RELEVANT_VORTEIL_CATEGORIES = ['allgemein', 'profan', 'kampf', 'kampfstil'];
+
+const STRENGTH_TABLE = {
+    schwach: { attrMin: 0, attrMax: 2, hpMin: 60, hpMax: 120, iniMin: 0, iniMax: 2, atMin: 1, atMax: 4 },
+    mittel:  { attrMin: 2, attrMax: 4, hpMin: 80, hpMax: 140, iniMin: 2, iniMax: 5, atMin: 4, atMax: 13 },
+    stark:   { attrMin: 5, attrMax: 7, hpMin: 100, hpMax: 160, iniMin: 6, iniMax: 8, atMin: 10, atMax: 16 },
+    boss:    { attrMin: 7, attrMax: 10, hpMin: 180, hpMax: 300, iniMin: 7, iniMax: 10, atMin: 12, atMax: 22 },
+};
+
+const CREATURE_TYPE_OPTIONS = ['humanoid', 'bestie', 'dämon', 'untoter', 'geist', 'drache', 'elementar'];
+
+const WEAPON_PROPERTY_KEYS = [
+    'Wuchtwaffe', 'Fernkampfoption', 'Parierwaffe', 'Reichweite', 'Präzision',
+    'Schild', 'Zweihand', 'Wurfspeer', 'Armbrust', 'Kugel', 'Pfeil', 'Bolzen',
+];
+
+const ATTRIBUTE_KEYS = ['MU', 'KL', 'IN', 'CH', 'FF', 'GE', 'KO', 'KK'];
+
+/**
+ * Refresh the vorteile cache from the Ilaris system compendium
+ * @returns {Promise<number>} Number of vorteile cached
+ */
+export async function refreshVorteileCache() {
+    try {
+        const pack = game.packs.get('Ilaris.vorteile');
+        if (!pack) {
+            console.warn('Ilaris Alternative Actor Sheet | Vorteile compendium not found');
+            return 0;
+        }
+
+        const index = await pack.getIndex();
+        const filtered = {};
+
+        for (const entry of index) {
+            const document = await pack.getDocument(entry._id);
+            const category = document.system?.kategorie;
+            if (category && CREATURE_RELEVANT_VORTEIL_CATEGORIES.includes(category)) {
+                if (!filtered[category]) filtered[category] = [];
+                filtered[category].push(document.name);
+            }
+        }
+
+        const json = JSON.stringify(filtered);
+        await game.settings.set('ilaris-alternative-actor-sheet', 'vorteileCache', json);
+
+        const total = Object.values(filtered).reduce((sum, arr) => sum + arr.length, 0);
+        console.log(`Ilaris Alternative Actor Sheet | Vorteile cache updated: ${total} entries`);
+        return total;
+    } catch (err) {
+        console.error('Ilaris Alternative Actor Sheet | Failed to refresh vorteile cache', err);
+        return 0;
+    }
+}
+
+/**
+ * Build the system prompt for creature generation
+ * @param {string} userDescription - Natural language description from the user
+ * @param {string} strength - Strength tier (schwach/mittel/stark/boss)
+ * @param {number} count - Number of creatures to generate
+ * @param {string} type - Creature type filter
+ * @returns {string} The complete system prompt
+ */
+export function buildCreaturePrompt(userDescription, strength, count, type) {
+    const strengthConfig = STRENGTH_TABLE[strength] || STRENGTH_TABLE.mittel;
+    const vorteileJson = game.settings.get('ilaris-alternative-actor-sheet', 'vorteileCache') || '{}';
+
+    // Filter type if not "beliebig"
+    const typeConstraint = type && type !== 'beliebig'
+        ? `Creature type MUST be "${type}".`
+        : `Creature type from: ${CREATURE_TYPE_OPTIONS.join(', ')}.`;
+
+    return `You are a creature generator for the Ilaris TTRPG system.
+Output ONLY a JSON array, no markdown, no explanation.
+
+${typeConstraint}
+Strength tier: ${strength}
+Number of creatures: ${count}
+
+JSON SCHEMA (each creature):
+{
+  "name": "Creature Name",
+  "system": {
+    "kreaturentyp": "humanoid",
+    "attribute": {
+      "MU": {"pw": N}, "KL": {"pw": N}, "IN": {"pw": N}, "CH": {"pw": N},
+      "FF": {"pw": N}, "GE": {"pw": N}, "KO": {"pw": N}, "KK": {"pw": N}
+    },
+    "kampfwerte": {"ws": N, "ini": N, "gs": N, "mr": N},
+    "kurzbeschreibung": "Brief description",
+    "vorteile": ["VorteilName"],
+    "angriffe": [{"name": "Weapon", "at": N, "vt": N, "tp": "NWN+N", "eigenschaften": []}]
+  }
+}
+
+STRENGTH RANGES (${strength}):
+| Field        | Min | Max |
+|-------------|-----|-----|
+| Attributes  | ${strengthConfig.attrMin} | ${strengthConfig.attrMax} |
+| HP (ws)     | ${strengthConfig.hpMin} | ${strengthConfig.hpMax} |
+| INI         | ${strengthConfig.iniMin} | ${strengthConfig.iniMax} |
+| AT / VT     | ${strengthConfig.atMin} | ${strengthConfig.atMax} |
+| GS          | 1 | 8 |
+| MR          | 0 | 12 |
+
+DAMAGE FORMULA: "1W6+2", "2W6", "1W6+4" (NW+N format only).
+WEAPON PROPERTIES (eigenschaften): ${WEAPON_PROPERTY_KEYS.join(', ')}.
+VORTEILE (by category, use EXACT names): ${vorteileJson}
+
+EXAMPLE (mittel humanoid):
+[{"name":"Goblin-Krieger","system":{"kreaturentyp":"humanoid","attribute":{"MU":{"pw":12},"KL":{"pw":10},"IN":{"pw":11},"CH":{"pw":9},"FF":{"pw":13},"GE":{"pw":13},"KO":{"pw":12},"KK":{"pw":11}},"kampfwerte":{"ws":30,"ini":11,"gs":6,"mr":3},"kurzbeschreibung":"Ein kleiner, agiler Goblin mit Kurzschwert.","angriffe":[{"name":"Kurzschwert","at":13,"vt":11,"tp":"1W6+2","eigenschaften":[]}]}}]
+
+EXAMPLE (stark bestie):
+[{"name":"Höhlenbär","system":{"kreaturentyp":"bestie","attribute":{"MU":{"pw":16},"KL":{"pw":6},"IN":{"pw":8},"CH":{"pw":6},"FF":{"pw":10},"GE":{"pw":12},"KO":{"pw":18},"KK":{"pw":18}},"kampfwerte":{"ws":55,"ini":14,"gs":6,"mr":6},"kurzbeschreibung":"Ein massiver Bär mit gewaltigen Pranken.","angriffe":[{"name":"Prankenhieb","at":15,"vt":12,"tp":"2W6+2","eigenschaften":["Wuchtwaffe"]}]}}]
+
+User request: ${userDescription}`;
+}
+
+/**
+ * Call the DeepSeek API
+ * @param {string} prompt - The system prompt
+ * @param {string} apiKey - DeepSeek API key
+ * @returns {Promise<{success: boolean, data?: object, error?: string}>}
+ */
+export async function callDeepSeekApi(prompt, apiKey) {
+    try {
+        const response = await fetch(DEEPSEEK_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`,
+            },
+            body: JSON.stringify({
+                model: DEEPSEEK_MODEL,
+                messages: [
+                    { role: 'user', content: prompt },
+                ],
+                temperature: 0.8,
+                max_tokens: 4096,
+            }),
+        });
+
+        if (response.status === 401) {
+            return { success: false, error: 'Ungültiger API-Key. Bitte in den Moduleinstellungen prüfen.' };
+        }
+        if (response.status === 429) {
+            return { success: false, error: 'API-Limit erreicht. Bitte später erneut versuchen.' };
+        }
+        if (!response.ok) {
+            const text = await response.text();
+            return { success: false, error: `API-Fehler (${response.status}): ${text}` };
+        }
+
+        const data = await response.json();
+        const content = data?.choices?.[0]?.message?.content;
+        if (!content) {
+            return { success: false, error: 'Leere API-Antwort erhalten.' };
+        }
+
+        return { success: true, data: { content } };
+    } catch (err) {
+        return { success: false, error: `Netzwerkfehler: ${err.message}` };
+    }
+}
+
+/**
+ * Parse AI response text to creature data array
+ * @param {string} responseText - Raw response from the AI
+ * @returns {object[]|null} Parsed creature array or null on failure
+ */
+export function parseAiCreatureResponse(responseText) {
+    try {
+        // Try direct parse first
+        const parsed = JSON.parse(responseText);
+        if (Array.isArray(parsed)) return parsed;
+        if (parsed && typeof parsed === 'object') return [parsed];
+        return null;
+    } catch {
+        // Try extracting from markdown code blocks
+        const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)```/);
+        if (jsonMatch) {
+            try {
+                const parsed = JSON.parse(jsonMatch[1].trim());
+                if (Array.isArray(parsed)) return parsed;
+                if (parsed && typeof parsed === 'object') return [parsed];
+            } catch { /* continue */ }
+        }
+
+        // Try finding a JSON array anywhere in the text
+        const arrayMatch = responseText.match(/\[\s*\{[\s\S]*\}\s*\]/);
+        if (arrayMatch) {
+            try {
+                return JSON.parse(arrayMatch[0]);
+            } catch { /* continue */ }
+        }
+
+        return null;
+    }
+}
+
+/**
+ * Validate and clamp a single creature's data
+ * @param {object} creature - Raw creature data from AI
+ * @returns {object} Validated and clamped creature data
+ */
+export function validateAndClampCreature(creature) {
+    const vorteileJson = game.settings.get('ilaris-alternative-actor-sheet', 'vorteileCache') || '{}';
+    let cachedVorteile;
+    try {
+        cachedVorteile = JSON.parse(vorteileJson);
+    } catch {
+        cachedVorteile = {};
+    }
+    const allCachedNames = Object.values(cachedVorteile).flat();
+
+    // Clamp helper
+    const clamp = (val, min, max, fallback) => {
+        const n = Number(val);
+        if (isNaN(n)) return fallback;
+        return Math.max(min, Math.min(max, n));
+    };
+
+    const system = creature.system || {};
+
+    // Clamp attributes
+    const attributes = {};
+    for (const key of ATTRIBUTE_KEYS) {
+        const attr = (system.attribute && system.attribute[key]) || {};
+        attributes[key] = { pw: clamp(attr.pw, 0, 10, 4) };
+    }
+
+    // Clamp Kampfwerte
+    const kw = system.kampfwerte || {};
+    const kampfwerte = {
+        ws: clamp(kw.ws, 1, 200, 30),
+        ini: clamp(kw.ini, 1, 30, 12),
+        gs: clamp(kw.gs, 1, 20, 6),
+        mr: clamp(kw.mr, 0, 20, 4),
+    };
+
+    // Validate damage formulas
+    const damageRegex = /^\d+W\d+(\+\d+)?$/;
+    const angriffe = (system.angriffe || []).map(a => ({
+        name: a.name || 'Angriff',
+        at: clamp(a.at, 1, 30, 12),
+        vt: clamp(a.vt, 1, 30, 10),
+        tp: damageRegex.test(a.tp) ? a.tp : '1W6',
+        eigenschaften: (a.eigenschaften || []).filter(e => WEAPON_PROPERTY_KEYS.includes(e)),
+    }));
+
+    // Validate vorteile against cache
+    const vorteile = (system.vorteile || [])
+        .filter(v => allCachedNames.includes(v));
+    const droppedVorteile = (system.vorteile || []).filter(v => !allCachedNames.includes(v));
+    if (droppedVorteile.length > 0) {
+        console.warn('Ilaris Alternative Actor Sheet | Dropped invalid vorteile:', droppedVorteile);
+    }
+
+    return {
+        name: creature.name || 'Unbenannte Kreatur',
+        type: 'kreatur',
+        system: {
+            kreaturentyp: CREATURE_TYPE_OPTIONS.includes(system.kreaturentyp) ? system.kreaturentyp : 'humanoid',
+            attribute: attributes,
+            kampfwerte,
+            kurzbeschreibung: system.kurzbeschreibung || '',
+            vorteile,
+        },
+        angriffe,
+    };
+}

@@ -1,0 +1,112 @@
+/* AI Creature Generator Dialog Styles */
+
+.iaas-ai-creature-dialog .ai-creature-dialog {
+    padding: 0.5em;
+}
+
+.iaas-ai-creature-dialog .form-group {
+    margin-bottom: 1em;
+}
+
+.iaas-ai-creature-dialog .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+.iaas-ai-creature-dialog .form-group select,
+.iaas-ai-creature-dialog .form-group input,
+.iaas-ai-creature-dialog .form-group textarea {
+    width: 100%;
+    padding: 0.4em;
+    border: 1px solid var(--color-border-light-primary, #7a7971);
+    border-radius: 3px;
+    background: var(--color-bg-input, rgba(0, 0, 0, 0.05));
+    color: var(--color-text-primary, #191813);
+}
+
+.iaas-ai-creature-dialog .form-group .hint {
+    margin-top: 0.25em;
+    font-size: 0.8em;
+    color: var(--color-text-light-6, #666);
+}
+
+.iaas-ai-creature-dialog .form-actions {
+    margin-top: 1em;
+    text-align: right;
+}
+
+.iaas-ai-creature-dialog .ai-generate-btn {
+    padding: 0.5em 1.5em;
+    border: 1px solid var(--color-border-light-primary, #7a7971);
+    border-radius: 3px;
+    background: var(--color-bg-button, rgba(0, 0, 0, 0.05));
+    color: var(--color-text-primary, #191813);
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.iaas-ai-creature-dialog .ai-generate-btn:hover:not(:disabled) {
+    box-shadow: 0 0 5px var(--color-shadow-primary, rgba(0, 0, 0, 0.3));
+}
+
+.iaas-ai-creature-dialog .ai-generate-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.iaas-ai-creature-dialog .ai-warning {
+    background: rgba(255, 200, 0, 0.15);
+    border: 1px solid #c90;
+    border-radius: 3px;
+    padding: 0.75em;
+    margin-bottom: 1em;
+}
+
+.iaas-ai-creature-dialog .ai-warning i {
+    color: #c90;
+}
+
+.iaas-ai-creature-dialog .ai-error {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #c00;
+    border-radius: 3px;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    color: #a00;
+}
+
+.iaas-ai-creature-dialog .ai-error i {
+    color: #c00;
+}
+
+/* Actor directory button */
+.ai-creature-generator-btn {
+    margin-left: 0.5em;
+    padding: 0.3em 0.6em;
+    border: 1px solid var(--color-border-light-primary, #7a7971);
+    border-radius: 3px;
+    background: var(--color-bg-button, rgba(0, 0, 0, 0.05));
+    color: var(--color-text-primary, #191813);
+    cursor: pointer;
+    font-size: 0.85em;
+}
+
+.ai-creature-generator-btn:hover {
+    box-shadow: 0 0 5px var(--color-shadow-primary, rgba(0, 0, 0, 0.3));
+}
+
+/* Settings cache button */
+.ai-vorteile-cache-btn {
+    margin-top: 0.5em;
+    padding: 0.3em 0.6em;
+    border: 1px solid var(--color-border-light-primary, #7a7971);
+    border-radius: 3px;
+    background: var(--color-bg-button, rgba(0, 0, 0, 0.05));
+    color: var(--color-text-primary, #191813);
+    cursor: pointer;
+}
+
+.ai-vorteile-cache-btn:hover {
+    box-shadow: 0 0 5px var(--color-shadow-primary, rgba(0, 0, 0, 0.3));
+}
