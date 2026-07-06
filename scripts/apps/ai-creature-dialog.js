@@ -133,6 +133,7 @@ export class IlarisAlternativeAiCreatureDialog extends HandlebarsApplicationMixi
                             at: a.at,
                             vt: a.vt || a.at - 2,
                             tp: a.tp,
+                            rw: a.rw ?? 0,
                             eigenschaften: a.eigenschaften || [],
                         },
                     }));

@@ -676,7 +676,7 @@ JSON SCHEMA (each creature):
     "kampfwerte": {"ws": N, "ini": N, "gs": N, "mr": N},
     "kurzbeschreibung": "Brief description",
     "vorteile": ["VorteilName"],
-    "angriffe": [{"name": "Weapon", "at": N, "vt": N, "tp": "NWN+N", "eigenschaften": []}]
+    "angriffe": [{"name": "Weapon", "at": N, "vt": N, "tp": "NWN+N", "rw": N, "eigenschaften": []}]
   }
 }
 
@@ -691,14 +691,15 @@ STRENGTH RANGES (${strength}):
 | MR          | 0 | 12 |
 
 DAMAGE FORMULA: "1W6+2", "2W6", "1W6+4" (NW+N format only).
+RW (Reichweite): melee weapons 0-2, thrown weapons (Wurfwaffen) 4-16, ranged weapons (bows/guns) 16-64.
 WEAPON PROPERTIES (eigenschaften): ${WEAPON_PROPERTY_KEYS.join(', ')}.
 VORTEILE (by category, use EXACT names): ${vorteileJson}
 
 EXAMPLE (mittel humanoid):
-[{"name":"Goblin-Krieger","system":{"kreaturentyp":"humanoid","attribute":{"MU":{"pw":12},"KL":{"pw":10},"IN":{"pw":11},"CH":{"pw":9},"FF":{"pw":13},"GE":{"pw":13},"KO":{"pw":12},"KK":{"pw":11}},"kampfwerte":{"ws":30,"ini":11,"gs":6,"mr":3},"kurzbeschreibung":"Ein kleiner, agiler Goblin mit Kurzschwert.","angriffe":[{"name":"Kurzschwert","at":13,"vt":11,"tp":"1W6+2","eigenschaften":[]}]}}]
+[{"name":"Goblin-Krieger","system":{"kreaturentyp":"humanoid","attribute":{"MU":{"pw":12},"KL":{"pw":10},"IN":{"pw":11},"CH":{"pw":9},"FF":{"pw":13},"GE":{"pw":13},"KO":{"pw":12},"KK":{"pw":11}},"kampfwerte":{"ws":30,"ini":11,"gs":6,"mr":3},"kurzbeschreibung":"Ein kleiner, agiler Goblin mit Kurzschwert.","angriffe":[{"name":"Kurzschwert","at":13,"vt":11,"tp":"1W6+2","rw":0,"eigenschaften":[]}]}}]
 
 EXAMPLE (stark bestie):
-[{"name":"Höhlenbär","system":{"kreaturentyp":"bestie","attribute":{"MU":{"pw":16},"KL":{"pw":6},"IN":{"pw":8},"CH":{"pw":6},"FF":{"pw":10},"GE":{"pw":12},"KO":{"pw":18},"KK":{"pw":18}},"kampfwerte":{"ws":55,"ini":14,"gs":6,"mr":6},"kurzbeschreibung":"Ein massiver Bär mit gewaltigen Pranken.","angriffe":[{"name":"Prankenhieb","at":15,"vt":12,"tp":"2W6+2","eigenschaften":["Wuchtwaffe"]}]}}]
+[{"name":"Höhlenbär","system":{"kreaturentyp":"bestie","attribute":{"MU":{"pw":16},"KL":{"pw":6},"IN":{"pw":8},"CH":{"pw":6},"FF":{"pw":10},"GE":{"pw":12},"KO":{"pw":18},"KK":{"pw":18}},"kampfwerte":{"ws":55,"ini":14,"gs":6,"mr":6},"kurzbeschreibung":"Ein massiver Bär mit gewaltigen Pranken.","angriffe":[{"name":"Prankenhieb","at":15,"vt":12,"tp":"2W6+2","rw":0,"eigenschaften":["Wuchtwaffe"]}]}}]
 
 User request: ${userDescription}`;
 }
@@ -827,13 +828,20 @@ export function validateAndClampCreature(creature) {
 
     // Validate damage formulas
     const damageRegex = /^\d+W\d+(\+\d+)?$/;
-    const angriffe = (system.angriffe || []).map(a => ({
-        name: a.name || 'Angriff',
-        at: clamp(a.at, 1, 30, 12),
-        vt: clamp(a.vt, 1, 30, 10),
-        tp: damageRegex.test(a.tp) ? a.tp : '1W6',
-        eigenschaften: (a.eigenschaften || []).filter(e => WEAPON_PROPERTY_KEYS.includes(e)),
-    }));
+    const angriffe = (system.angriffe || []).map(a => {
+        const eigenschaften = (a.eigenschaften || []).filter(e => WEAPON_PROPERTY_KEYS.includes(e));
+        const isRanged = eigenschaften.some(e => ['Armbrust', 'Kugel', 'Pfeil', 'Bolzen'].includes(e)) || a.rw > 2;
+        const isThrown = eigenschaften.includes('Wurfspeer') || (a.name && /wurf/i.test(a.name));
+        const rw = clamp(a.rw, isThrown ? 4 : isRanged ? 16 : 0, isThrown ? 16 : isRanged ? 64 : 2, isRanged ? 16 : 0);
+        return {
+            name: a.name || 'Angriff',
+            at: clamp(a.at, 1, 30, 12),
+            vt: clamp(a.vt, 1, 30, 10),
+            tp: damageRegex.test(a.tp) ? a.tp : '1W6',
+            rw,
+            eigenschaften,
+        };
+    });
 
     // Validate vorteile against cache
     const vorteile = (system.vorteile || [])
