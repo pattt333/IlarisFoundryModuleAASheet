@@ -1,20 +1,41 @@
 schema: spec-driven
 
-# Project context (optional)
-# This is shown to AI when creating artifacts.
-# Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  **Project**: Ilaris Alternative Actor Sheet — a Foundry VTT **module** (not a system) extending the Ilaris system.
+  **Runtime**: Foundry V13+ (compatibility version 14).
+  **Tech**: JavaScript ES modules, Handlebars (.hbs) templates, CSS. No TypeScript.
+  **Module ID**: `ilaris-alternative-actor-sheet`
+  **Depends on**: Ilaris system (system ID `Ilaris`)
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+  **Architecture**:
+  ```
+  module.js                       — Entry point: Hooks registration, socket setup, sheet/app imports
+  scripts/sheets/                 — ActorSheetV2 classes (HandlebarsApplicationMixin + ActorSheetV2)
+  scripts/apps/                   — Dialog applications (initiative, etc.)
+  scripts/components/             — Reusable UI components
+  scripts/utilities.js            — Shared helpers (item application, ammo, effects, weapons)
+  scripts/handlebars-helpers.js   — Handlebars helper registration
+  templates/                      — .hbs files: sheets/, components/, apps/, chat/
+  styles/                         — Per-feature CSS files
+  assets/                         — Icons, images
+  ```
+
+  **Feature pattern**: A typical feature spans template (.hbs) + style (.css) + script logic (sheet, app, component, or utility).
+
+  **Naming**: German for domain/rules terms (Fertigkeiten, Zauber, Waffen, LeP, Eigenheiten). English for structural code (hooks, sheets, utilities). System data paths use German keys (e.g. `system.gesundheit.wunden`, `system.eigenschaften`).
+
+  **Key APIs**: `ActorSheetV2`, `HandlebarsApplicationMixin`, `Hooks`, `game.settings`, `ChatMessage`, socket communication, `ActiveEffect`.
+
+rules:
+  proposal:
+    - List affected files with module-relative paths (e.g. `scripts/sheets/alternative-actor-sheet.js`)
+    - Specify which Foundry Hooks will be used or added
+    - Note whether the change is module-level (`module.js`) or sheet/feature-level
+  design:
+    - Address the template/style/script layering for any UI change
+    - Reference specific Foundry API classes and methods
+  tasks:
+    - Each task should target one layer at a time (template, style, or script)
+    - Include exact file paths for every file being created or modified
+  specs:
+    - Use German for Foundry/Ilaris domain terms (Fertigkeiten, Waffen, etc.)
