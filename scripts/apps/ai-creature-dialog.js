@@ -1,4 +1,4 @@
-import { buildCreaturePrompt, callDeepSeekApi, parseAiCreatureResponse, validateAndClampCreature } from '../utilities.js';
+import { buildCreaturePrompt, callDeepSeekApi, parseAiCreatureResponse, validateAndClampCreature, CREATURE_EIGENSCHAFTEN } from '../utilities.js';
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -138,6 +138,19 @@ export class IlarisAlternativeAiCreatureDialog extends HandlebarsApplicationMixi
                         },
                     }));
                     await actor.createEmbeddedDocuments('Item', items);
+                }
+
+                // Create embedded eigenschaft items
+                const eigenschaften = validated.system?.eigenschaften || [];
+                if (eigenschaften.length > 0) {
+                    const eigenschaftItems = eigenschaften.map(name => ({
+                        name,
+                        type: 'eigenschaft',
+                        system: {
+                            description: CREATURE_EIGENSCHAFTEN[name] || '',
+                        },
+                    }));
+                    await actor.createEmbeddedDocuments('Item', eigenschaftItems);
                 }
 
                 created++;

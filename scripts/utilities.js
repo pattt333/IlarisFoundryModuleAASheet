@@ -604,6 +604,49 @@ const WEAPON_PROPERTY_KEYS = [
 
 const ATTRIBUTE_KEYS = ['MU', 'KL', 'IN', 'CH', 'FF', 'GE', 'KO', 'KK'];
 
+export const CREATURE_EIGENSCHAFTEN = {
+    'Astralsinn': 'Magische Wahrnehmung, keine Abzüge durch schlechte Sicht.',
+    'Aura': 'Schädlicher Flächeneffekt um die Kreatur herum.',
+    'Empfindlichkeit I': 'Erleidet 1 LaW pro Phase unter bestimmten Umständen.',
+    'Empfindlichkeit II': 'Erleidet 2 LaW pro Phase unter bestimmten Umständen.',
+    'Explosion': 'Bei Vernichtung: Explosion mit Schaden + Nachbrennen.',
+    'Flieger': 'Bewegt sich fliegend, Werte gelten für Luftkampf.',
+    'Flugfähig': 'Kämpft in der Luft und am Boden gleichermaßen gewandt.',
+    'Immunität': 'Immun gegen bestimmte Fertigkeiten oder Schadensquellen.',
+    'Körperlosigkeit': 'Keine Abzüge durch Wunden, nicht kampfunfähig.',
+    'Lichtscheu': 'Malus von -2/-4/-8 bei Fackel/Feuer/Sonne auf alle Proben.',
+    'Paraphysikalität': 'Keine Naturgesetze — Wände hoch, beschleunigen, immune gegen Umreißen.',
+    'Regeneration I': 'Heilt 1 LaW pro Initiativephase.',
+    'Regeneration II': 'Heilt 2 LaW pro Initiativephase.',
+    'Regeneration III': 'Heilt 3 LaW pro Initiativephase.',
+    'Regeneration IV': 'Heilt 4 LaW pro Initiativephase.',
+    'Resistenz I': 'Erleidet 1 LaW weniger durch bestimmte Schadensquelle.',
+    'Resistenz II': 'Erleidet 2 LaW weniger durch bestimmte Schadensquelle.',
+    'Resistenz III': 'Erleidet 3 LaW weniger durch bestimmte Schadensquelle.',
+    'Resistenz IV': 'Erleidet 4 LaW weniger durch bestimmte Schadensquelle.',
+    'Rudel': 'Vorteil bei Gruppenangriffen, +1 auf Angriffswürfe pro Rudelmitglied im Kampfgetümmel.',
+    'Schmerzimmun I': 'Immun gegen Blutungen, Betäubt und Organtreffer.',
+    'Schmerzimmun II': 'Immun gegen alle Wundschmerzeffekte.',
+    'Schreckgestalt I': 'Verursacht Furcht-Effekt 1 Stack bei Begegnung.',
+    'Schreckgestalt II': 'Verursacht Furcht-Effekt 2 Stacks bei Begegnung.',
+    'Schreckgestalt III': 'Verursacht Furcht-Effekt 3 Stacks bei Begegnung.',
+    'Schreckgestalt IV': 'Verursacht Furcht-Effekt 4 Stacks bei Begegnung.',
+    'Tarnung': 'Passt sich Umgebung an, kein Malus auf Heimlichkeit.',
+    'Unheilige Kreatur': 'Anfällig gegen bestimmte karmale Wirkungen.',
+    'Unsichtbarkeit': 'Kann sich beliebig oft und lange unsichtbar machen.',
+    'Verwundbarkeit I': '+1 LaW durch bestimmte Schadensquelle.',
+    'Verwundbarkeit II': '+2 LaW durch bestimmte Schadensquelle.',
+    'Verwundbarkeit III': '+3 LaW durch bestimmte Schadensquelle.',
+    'Verwundbarkeit IV': '+4 LaW durch bestimmte Schadensquelle.',
+    'Wasserwesen': 'Keine Abzüge unter Wasser, kaum Bewegung an Land.',
+    'Amphibisch': 'Kann an Land und im Wasser ungehindert agieren.',
+    'Zusätzliche Attacke I': '1 zusätzliche Angriffs-Aktion pro Phase.',
+    'Zusätzliche Attacke II': '2 zusätzliche Angriffs-Aktionen pro Phase.',
+    'Zusätzliche Attacke III': '3 zusätzliche Angriffs-Aktionen pro Phase.',
+    'Zusätzliche Attacke IV': '4 zusätzliche Angriffs-Aktionen pro Phase.',
+};
+const CREATURE_EIGENSCHAFTEN_NAMES = Object.keys(CREATURE_EIGENSCHAFTEN);
+
 /**
  * Refresh the vorteile cache from the Ilaris system's configured vorteile compendiums
  * @returns {Promise<number>} Number of vorteile cached
@@ -686,7 +729,8 @@ JSON SCHEMA (each creature):
     },
     "kampfwerte": {"ws": N, "ini": N, "gs": N, "mr": N},
     "kurzbeschreibung": "Brief description",
-    "vorteile": ["VorteilName"],
+    "vorteil": {allgemein: ["VorteilName"]},
+    "eigenschaften": ["EigenschaftName"],
     "angriffe": [{"name": "Weapon", "at": N, "vt": N, "tp": "NWN+N", "rw": N, "eigenschaften": []}]
   }
 }
@@ -705,12 +749,14 @@ DAMAGE FORMULA: "1W6+2", "2W6", "1W6+4" (NW+N format only).
 RW (Reichweite): melee weapons 0-2, thrown weapons (Wurfwaffen) 4-16, ranged weapons (bows/guns) 16-64.
 WEAPON PROPERTIES (eigenschaften): ${WEAPON_PROPERTY_KEYS.join(', ')}.
 VORTEILE (by category, use EXACT names): ${vorteileJson}
+EIGENSCHAFTEN (pick up to 3 fitting ones, use EXACT names):
+${Object.entries(CREATURE_EIGENSCHAFTEN).map(([k, v]) => `  ${k}: ${v}`).join('\n')}
 
 EXAMPLE (mittel humanoid):
-[{"name":"Goblin-Krieger","system":{"kreaturentyp":"humanoid","attribute":{"MU":{"pw":12},"KL":{"pw":10},"IN":{"pw":11},"CH":{"pw":9},"FF":{"pw":13},"GE":{"pw":13},"KO":{"pw":12},"KK":{"pw":11}},"kampfwerte":{"ws":30,"ini":11,"gs":6,"mr":3},"kurzbeschreibung":"Ein kleiner, agiler Goblin mit Kurzschwert.","angriffe":[{"name":"Kurzschwert","at":13,"vt":11,"tp":"1W6+2","rw":0,"eigenschaften":[]}]}}]
+[{"name":"Goblin-Krieger","system":{"kreaturentyp":"humanoid","attribute":{"MU":{"pw":2},"KL":{"pw":1},"IN":{"pw":2},"CH":{"pw":1},"FF":{"pw":3},"GE":{"pw":3},"KO":{"pw":1},"KK":{"pw":2}},"kampfwerte":{"ws":30,"ini":11,"gs":6,"mr":3},"kurzbeschreibung":"Ein kleiner, agiler Goblin mit Kurzschwert.","eigenschaften":["Rudel","Lichtscheu"],"vorteil": {allgemein: ["Flink"]},"angriffe":[{"name":"Kurzschwert","at":2,"vt":1,"tp":"1W6+2","rw":0,"eigenschaften":[]}]}}]
 
 EXAMPLE (stark bestie):
-[{"name":"Höhlenbär","system":{"kreaturentyp":"bestie","attribute":{"MU":{"pw":16},"KL":{"pw":6},"IN":{"pw":8},"CH":{"pw":6},"FF":{"pw":10},"GE":{"pw":12},"KO":{"pw":18},"KK":{"pw":18}},"kampfwerte":{"ws":55,"ini":14,"gs":6,"mr":6},"kurzbeschreibung":"Ein massiver Bär mit gewaltigen Pranken.","angriffe":[{"name":"Prankenhieb","at":15,"vt":12,"tp":"2W6+2","rw":0,"eigenschaften":["Wuchtwaffe"]}]}}]
+[{"name":"Höhlenbär","system":{"kreaturentyp":"bestie","attribute":{"MU":{"pw":8},"KL":{"pw":6},"IN":{"pw":8},"CH":{"pw":6},"FF":{"pw":2},"GE":{"pw":12},"KO":{"pw":22},"KK":{"pw":22}},"kampfwerte":{"ws":55,"ini":14,"gs":6,"mr":6},"kurzbeschreibung":"Ein massiver Bär mit gewaltigen Pranken.","eigenschaften":["Schreckgestalt I","Regeneration I"],"vorteil": {allgemein: ["Unaufhaltsam"]},"angriffe":[{"name":"Prankenhieb","at":15,"vt":12,"tp":"4W6+2","rw":1,"eigenschaften":["Wuchtwaffe"]}]}}]
 
 User request: ${userDescription}`;
 }
@@ -862,6 +908,14 @@ export function validateAndClampCreature(creature) {
         console.warn('Ilaris Alternative Actor Sheet | Dropped invalid vorteile:', droppedVorteile);
     }
 
+    // Validate eigenschaften against known list
+    const eigenschaften = (system.eigenschaften || [])
+        .filter(e => CREATURE_EIGENSCHAFTEN_NAMES.includes(e));
+    const droppedEigenschaften = (system.eigenschaften || []).filter(e => !CREATURE_EIGENSCHAFTEN_NAMES.includes(e));
+    if (droppedEigenschaften.length > 0) {
+        console.warn('Ilaris Alternative Actor Sheet | Dropped invalid eigenschaften:', droppedEigenschaften);
+    }
+
     return {
         name: creature.name || 'Unbenannte Kreatur',
         type: 'kreatur',
@@ -871,6 +925,7 @@ export function validateAndClampCreature(creature) {
             kampfwerte,
             kurzbeschreibung: system.kurzbeschreibung || '',
             vorteile,
+            eigenschaften,
         },
         angriffe,
     };

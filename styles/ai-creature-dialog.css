@@ -80,19 +80,3 @@
     color: #c00;
 }
 
-/* Actor directory button */
-.ai-creature-generator-btn {
-    margin-left: 0.5em;
-    padding: 0.3em 0.6em;
-    border: 1px solid var(--color-border-light-primary, #7a7971);
-    border-radius: 3px;
-    background: var(--color-bg-button, rgba(0, 0, 0, 0.05));
-    color: var(--color-text-primary, #191813);
-    cursor: pointer;
-    font-size: 0.85em;
-}
-
-.ai-creature-generator-btn:hover {
-    box-shadow: 0 0 5px var(--color-shadow-primary, rgba(0, 0, 0, 0.3));
-}
-
