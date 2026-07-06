@@ -36,8 +36,8 @@
         ]
     },
     "url": "https://github.com/pattt333/IlarisFoundryModuleAASheet",
-    "manifest": "https://raw.githubusercontent.com/pattt333/IlarisFoundryModuleAASheet/main/module.json",
-    "download": "https://github.com/pattt333/IlarisFoundryModuleAASheet/archive/refs/heads/main.zip",
+    "manifest": "https://github.com/pattt333/IlarisFoundryModuleAASheet/releases/latest/download/module.json",
+    "download": "https://github.com/pattt333/IlarisFoundryModuleAASheet/releases/latest/download/module.zip",
     "license": "MIT",
     "readme": "README.md",
     "bugs": "https://github.com/pattt333/IlarisFoundryModuleAASheet/issues",

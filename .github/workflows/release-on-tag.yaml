@@ -3,33 +3,35 @@ name: Build and Publish Release
 on:
     push:
         tags:
-            - 'v*' # Wird ausgelöst, wenn ein Tag wie v1.0.0 oder v2.1.5-beta gepusht wird
+            - 'v*'
 
 jobs:
     build-and-release:
         runs-on: ubuntu-latest
-        # Wichtig: Berechtigung für das Erstellen von Releases setzen
         permissions:
             contents: write
 
         steps:
-            # 1. Repository-Code auschecken
             - name: Checkout code
               uses: actions/checkout@v4
 
-            # 2. Node.js Umgebung einrichten (falls nötig)
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: '18'
 
-            # 3. Dependencies installieren
             - name: Install dependencies
               run: npm install
 
-            # 4. (KRITISCH) module.json mit Release-Pfaden aktualisieren
-            #    Das ${{ github.ref_name }} enthält den Tag-Namen (z.B. v1.0.0)
-            - name: Update module.json Manifest URLs
+            - name: Extract version from tag
+              id: version
+              run: |
+                  VERSION="${{ github.ref_name }}"
+                  VERSION="${VERSION#v}"
+                  echo "version=$VERSION" >> $GITHUB_OUTPUT
+                  echo "Version: $VERSION"
+
+            - name: Update module.json for release
               run: |
                   REPO_URL="https://github.com/${{ github.repository }}"
                   RELEASE_TAG="${{ github.ref_name }}"
@@ -37,17 +39,17 @@ jobs:
 
                   jq --arg manifest "$DOWNLOAD_URL/module.json" \
                      --arg download "$DOWNLOAD_URL/module.zip" \
-                     '.manifest = $manifest | .download = $download' \
+                     --arg version "${{ steps.version.outputs.version }}" \
+                     '.manifest = $manifest | .download = $download | .version = $version' \
                      module.json > module.json.tmp && mv module.json.tmp module.json
 
-                  echo "Updated module.json URLs:"
+                  echo "module.json updated for release:"
+                  echo "  version:  ${{ steps.version.outputs.version }}"
                   echo "  manifest: $DOWNLOAD_URL/module.json"
                   echo "  download: $DOWNLOAD_URL/module.zip"
 
-            # 5. Ein ZIP-Archiv für Foundry erstellen
-            - name: Create module.zip
+            - name: Create module.zip (runtime files only)
               run: |
-                  # WICHTIG: Füge ALLE Dateien hinzu, die im Modul enthalten sein sollen.
                   zip -r module.zip \
                     module.json \
                     module.js \
@@ -55,17 +57,74 @@ jobs:
                     scripts/ \
                     styles/ \
                     templates/ \
-                    languages/ \
-                    assets/
+                    assets/ \
+                    -x "scripts/**/_spec/*" "scripts/**/_spec/**"
 
-            # 6. Das GitHub Release erstellen und alle Assets hochladen
-            - name: Create Release and Upload Assets
+            - name: Create GitHub Release
+              id: release
               uses: ncipollo/release-action@v1
               with:
                   tag: ${{ github.ref_name }}
                   name: Release ${{ github.ref_name }}
                   artifacts: 'module.json, module.zip'
-                  bodyFile: 'CHANGELOG.md' # Entferne diese Zeile, wenn du keine CHANGELOG.md hast
+                  body: |
+                      ## Ilaris Alternative Actor Sheet v${{ steps.version.outputs.version }}
+
+                      ### Installation
+
+                      Install via Foundry VTT's package browser or use this manifest URL:
+
+                      ```
+                      https://github.com/${{ github.repository }}/releases/latest/download/module.json
+                      ```
+
+                      ### Changes
+
+                      See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for details.
                   draft: false
                   prerelease: false
-                  # 'token' ist oft optional, da GITHUB_TOKEN automatisch injiziert wird.
+
+            - name: Notify Foundry VTT Package Release API
+              if: ${{ !env.ACT }}
+              run: |
+                  API_RESPONSE=$(curl -s -w "\n%{http_code}" -X POST "https://foundryvtt.com/_api/packages/release_version/" \
+                    -H "Content-Type: application/json" \
+                    -H "Authorization: ${{ secrets.FOUNDRY_RELEASE_TOKEN }}" \
+                    -d '{
+                      "id": "ilaris-alternative-actor-sheet",
+                      "release": {
+                        "version": "${{ steps.version.outputs.version }}",
+                        "manifest": "https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/module.json",
+                        "notes": "https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}",
+                        "compatibility": {
+                          "minimum": "14",
+                          "verified": "14",
+                          "maximum": ""
+                        }
+                      }
+                    }')
+
+                  HTTP_CODE=$(echo "$API_RESPONSE" | tail -n1)
+                  BODY=$(echo "$API_RESPONSE" | sed '$d')
+
+                  echo "Foundry API response (HTTP $HTTP_CODE):"
+                  echo "$BODY"
+
+                  if [ "$HTTP_CODE" != "200" ]; then
+                    echo "::warning::Foundry Package Release API returned HTTP $HTTP_CODE"
+                  fi
+              env:
+                  FOUNDRY_RELEASE_TOKEN: ${{ secrets.FOUNDRY_RELEASE_TOKEN }}
+
+            - name: Bump version on main branch
+              run: |
+                  git checkout main
+                  jq --arg version "${{ steps.version.outputs.version }}" \
+                     '.version = $version' \
+                     module.json > module.json.tmp && mv module.json.tmp module.json
+
+                  git config user.name "github-actions[bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
+                  git add module.json
+                  git commit -m "chore: bump version to ${{ steps.version.outputs.version }} [skip ci]" || echo "No changes to commit"
+                  git push origin main
