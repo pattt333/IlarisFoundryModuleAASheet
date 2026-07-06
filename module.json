@@ -1,45 +1,47 @@
 {
-    "id": "ilaris-alternative-actor-sheet",
-    "title": "Ilaris Alternative Actor Sheet",
-    "description": "An alternative actor sheet module for the Ilaris Foundry VTT system, providing enhanced character sheet layouts and functionality.",
-    "version": "1.0.15",
-    "compatibility": {
-        "minimum": 14,
-        "verified": 14,
-        "maximum": 14
-    },
-    "authors": [
-        {
-            "name": "pattt333",
-            "url": "https://github.com/pattt333"
-        }
-    ],
-    "esmodules": ["module.js"],
-    "styles": [
-        "styles/module.css",
-        "styles/item-accordion.css",
-        "styles/favorites-component.css",
-        "styles/effect-card.css",
-        "styles/creature-sheet.css",
-        "styles/fertigkeit-dialog.css",
-        "styles/combat-dialog.css",
-        "styles/initiative-dialog.css",
-        "styles/ai-creature-dialog.css"
-    ],
-    "relationships": {
-        "systems": [
-            {
-                "id": "Ilaris",
-                "type": "system",
-                "compatibility": {}
-            }
-        ]
-    },
-    "url": "https://github.com/pattt333/IlarisFoundryModuleAASheet",
-    "manifest": "https://github.com/pattt333/IlarisFoundryModuleAASheet/releases/latest/download/module.json",
-    "download": "https://github.com/pattt333/IlarisFoundryModuleAASheet/releases/latest/download/module.zip",
-    "license": "MIT",
-    "readme": "README.md",
-    "bugs": "https://github.com/pattt333/IlarisFoundryModuleAASheet/issues",
-    "changelog": "https://github.com/pattt333/IlarisFoundryModuleAASheet/releases"
+  "id": "ilaris-alternative-actor-sheet",
+  "title": "Ilaris Alternative Actor Sheet",
+  "description": "An alternative actor sheet module for the Ilaris Foundry VTT system, providing enhanced character sheet layouts and functionality.",
+  "version": "1.0.18",
+  "compatibility": {
+    "minimum": 14,
+    "verified": 14,
+    "maximum": 14
+  },
+  "authors": [
+    {
+      "name": "pattt333",
+      "url": "https://github.com/pattt333"
+    }
+  ],
+  "esmodules": [
+    "module.js"
+  ],
+  "styles": [
+    "styles/module.css",
+    "styles/item-accordion.css",
+    "styles/favorites-component.css",
+    "styles/effect-card.css",
+    "styles/creature-sheet.css",
+    "styles/fertigkeit-dialog.css",
+    "styles/combat-dialog.css",
+    "styles/initiative-dialog.css",
+    "styles/ai-creature-dialog.css"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "Ilaris",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "url": "https://github.com/pattt333/IlarisFoundryModuleAASheet",
+  "manifest": "https://github.com/pattt333/IlarisFoundryModuleAASheet/releases/download/v1.0.18/module.json",
+  "download": "https://github.com/pattt333/IlarisFoundryModuleAASheet/releases/download/v1.0.18/module.zip",
+  "license": "MIT",
+  "readme": "README.md",
+  "bugs": "https://github.com/pattt333/IlarisFoundryModuleAASheet/issues",
+  "changelog": "https://github.com/pattt333/IlarisFoundryModuleAASheet/releases"
 }
