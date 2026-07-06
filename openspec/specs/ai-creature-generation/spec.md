@@ -36,7 +36,17 @@ An AppV2 dialog (`IlarisAlternativeAiCreatureDialog`) SHALL provide: a Stärke d
 
 ### Requirement: Token-optimized prompt sent to DeepSeek API
 
-The prompt SHALL include: a compact JSON schema of the Kreatur data model including `eigenschaften`, a strength-to-attribute-range lookup table, cached vorteile names by category, German damage formula syntax, weapon property keys, creature type options, RW range rules, a categorized eigenschaften list with one-line German descriptions (~39 entries), two few-shot examples with eigenschaften, and the user's natural language description. Total prompt SHALL be under 2,000 tokens.
+The prompt SHALL place the user's natural language description FIRST with `IMPORTANT` emphasis markers, followed by the JSON schema, strength table (now including damage/TP ranges per tier), rules, eigenschaften list, and examples. The prompt SHALL instruct the AI to prioritize the user description over strength table defaults where they conflict. Total prompt SHALL be under 2,200 tokens.
+
+#### Scenario: User describes a slow, heavily-armored demon
+
+- **WHEN** the user enters "reagiert nicht schnell, dafür ist sein Körper hart wie Eis und massig"
+- **THEN** the generated creature has low INI but high KO/KK attributes, reflecting the description over the strength table defaults
+
+#### Scenario: Boss-level creature generated
+
+- **WHEN** a "boss" strength creature is generated
+- **THEN** weapon damage is in the range 4W6+4 to 8W6+8 per the strength table
 
 #### Scenario: Prompt constructed for generation
 

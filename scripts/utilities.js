@@ -589,10 +589,10 @@ const DEEPSEEK_MODEL = 'deepseek-chat';
 const CREATURE_RELEVANT_VORTEIL_CATEGORIES = [0, '0', 1, '1', 2, '2', 3, '3'];
 
 const STRENGTH_TABLE = {
-    schwach: { attrMin: 0, attrMax: 2, hpMin: 60, hpMax: 120, iniMin: 0, iniMax: 2, atMin: 1, atMax: 4 },
-    mittel:  { attrMin: 2, attrMax: 4, hpMin: 80, hpMax: 140, iniMin: 2, iniMax: 5, atMin: 4, atMax: 13 },
-    stark:   { attrMin: 5, attrMax: 7, hpMin: 100, hpMax: 160, iniMin: 6, iniMax: 8, atMin: 10, atMax: 16 },
-    boss:    { attrMin: 7, attrMax: 10, hpMin: 180, hpMax: 300, iniMin: 7, iniMax: 10, atMin: 12, atMax: 22 },
+    schwach: { attrMin: 0, attrMax: 2, hpMin: 60, hpMax: 120, iniMin: 0, iniMax: 2, atMin: 1, atMax: 4, tpMin: '1W6', tpMax: '2W6' },
+    mittel:  { attrMin: 2, attrMax: 4, hpMin: 80, hpMax: 140, iniMin: 2, iniMax: 5, atMin: 4, atMax: 13, tpMin: '1W6+2', tpMax: '3W6+2' },
+    stark:   { attrMin: 5, attrMax: 7, hpMin: 100, hpMax: 160, iniMin: 6, iniMax: 8, atMin: 10, atMax: 16, tpMin: '3W6+2', tpMax: '5W6+4' },
+    boss:    { attrMin: 7, attrMax: 10, hpMin: 180, hpMax: 300, iniMin: 7, iniMax: 10, atMin: 12, atMax: 22, tpMin: '4W6+4', tpMax: '8W6+8' },
 };
 
 const CREATURE_TYPE_OPTIONS = ['humanoid', 'bestie', 'dämon', 'untoter', 'geist', 'drache', 'elementar'];
@@ -711,7 +711,13 @@ export function buildCreaturePrompt(userDescription, strength, count, type) {
         ? `Creature type MUST be "${type}".`
         : `Creature type from: ${CREATURE_TYPE_OPTIONS.join(', ')}.`;
 
-    return `You are a creature generator for the Ilaris TTRPG system.
+    return `IMPORTANT: Base the creature primarily on this description. If it specifies traits (e.g., "slow", "fast", "heavy armor", "massig", "weak"), those override the strength table defaults below.
+
+${userDescription}
+
+---
+
+You are a creature generator for the Ilaris TTRPG system.
 Output ONLY a JSON array, no markdown, no explanation.
 
 ${typeConstraint}
@@ -742,14 +748,17 @@ STRENGTH RANGES (${strength}):
 | HP (ws)     | ${strengthConfig.hpMin} | ${strengthConfig.hpMax} |
 | INI         | ${strengthConfig.iniMin} | ${strengthConfig.iniMax} |
 | AT / VT     | ${strengthConfig.atMin} | ${strengthConfig.atMax} |
+| Damage (TP) | ${strengthConfig.tpMin} | ${strengthConfig.tpMax} |
 | GS          | 1 | 8 |
 | MR          | 0 | 12 |
 
-DAMAGE FORMULA: "1W6+2", "2W6", "1W6+4" (NW+N format only).
-RW (Reichweite): melee weapons 0-2, thrown weapons (Wurfwaffen) 4-16, ranged weapons (bows/guns) 16-64.
-WEAPON PROPERTIES (eigenschaften): ${WEAPON_PROPERTY_KEYS.join(', ')}.
-VORTEILE (by category, use EXACT names): ${vorteileJson}
-EIGENSCHAFTEN (pick up to 3 fitting ones, use EXACT names):
+RULES:
+- If the user description specifies traits (e.g., "slow", "heavy armor", "fast", "weak"), those traits take priority over the strength table defaults.
+- DAMAGE FORMULA: "1W6+2", "2W6", "1W6+4" (NW+N format only).
+- RW (Reichweite): melee weapons 0-2, thrown weapons (Wurfwaffen) 4-16, ranged weapons (bows/guns) 16-64.
+- WEAPON PROPERTIES (eigenschaften): ${WEAPON_PROPERTY_KEYS.join(', ')}.
+- VORTEILE (by category, use EXACT names): ${vorteileJson}
+- EIGENSCHAFTEN (pick up to 3 fitting ones, use EXACT names):
 ${Object.entries(CREATURE_EIGENSCHAFTEN).map(([k, v]) => `  ${k}: ${v}`).join('\n')}
 
 EXAMPLE (mittel humanoid):
@@ -758,7 +767,8 @@ EXAMPLE (mittel humanoid):
 EXAMPLE (stark bestie):
 [{"name":"Höhlenbär","system":{"kreaturentyp":"bestie","attribute":{"MU":{"pw":8},"KL":{"pw":6},"IN":{"pw":8},"CH":{"pw":6},"FF":{"pw":2},"GE":{"pw":12},"KO":{"pw":22},"KK":{"pw":22}},"kampfwerte":{"ws":55,"ini":14,"gs":6,"mr":6},"kurzbeschreibung":"Ein massiver Bär mit gewaltigen Pranken.","eigenschaften":["Schreckgestalt I","Regeneration I"],"vorteil": {allgemein: ["Unaufhaltsam"]},"angriffe":[{"name":"Prankenhieb","at":15,"vt":12,"tp":"4W6+2","rw":1,"eigenschaften":["Wuchtwaffe"]}]}}]
 
-User request: ${userDescription}`;
+EXAMPLE (boss dämon):
+[{"name":"Eisdämon","system":{"kreaturentyp":"dämon","attribute":{"MU":{"pw":8},"KL":{"pw":7},"IN":{"pw":9},"CH":{"pw":6},"FF":{"pw":7},"GE":{"pw":5},"KO":{"pw":28},"KK":{"pw":28}},"kampfwerte":{"ws":70,"ini":18,"gs":5,"mr":12},"kurzbeschreibung":"Ein kolossaler Dämon aus Eis mit schweren, langsamen Hieben.","eigenschaften":["Schreckgestalt III","Körperlosigkeit","Resistenz III"],"vorteil":{"allgemein":["Eiserner Wille"]},"angriffe":[{"name":"Eisklaue","at":18,"vt":16,"tp":"5W6+6","rw":1,"eigenschaften":["Wuchtwaffe"]}]}}]`;
 }
 
 /**
