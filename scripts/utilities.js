@@ -820,8 +820,8 @@ export function validateAndClampCreature(creature) {
     // Clamp Kampfwerte
     const kw = system.kampfwerte || {};
     const kampfwerte = {
-        ws: clamp(kw.ws, 1, 200, 30),
-        ini: clamp(kw.ini, 1, 30, 12),
+        ws: clamp(kw.ws, 50, 300, 80),
+        ini: clamp(kw.ini, 0, 10, 4),
         gs: clamp(kw.gs, 1, 20, 6),
         mr: clamp(kw.mr, 0, 20, 4),
     };
@@ -835,8 +835,8 @@ export function validateAndClampCreature(creature) {
         const rw = clamp(a.rw, isThrown ? 4 : isRanged ? 16 : 0, isThrown ? 16 : isRanged ? 64 : 2, isRanged ? 16 : 0);
         return {
             name: a.name || 'Angriff',
-            at: clamp(a.at, 1, 30, 12),
-            vt: clamp(a.vt, 1, 30, 10),
+            at: clamp(a.at, 0, 22, 10),
+            vt: clamp(a.vt, 0, 22, 8),
             tp: damageRegex.test(a.tp) ? a.tp : '1W6',
             rw,
             eigenschaften,
