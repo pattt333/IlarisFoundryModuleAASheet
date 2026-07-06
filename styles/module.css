@@ -1146,8 +1146,16 @@ body.theme-dark .target-selection-dialog {
 
 .ilaris.sheet.actor.alternative .sheet-tabs.tabs a {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: white;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        margin-right: 12px;
+    }
 }
 
 .ilaris.sheet.actor.alternative .sheet-tabs.tabs {

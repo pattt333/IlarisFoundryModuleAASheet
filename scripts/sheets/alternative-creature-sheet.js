@@ -33,7 +33,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
 
     /** @override */
     static DEFAULT_OPTIONS = {
-        classes: ['alternative'],
+        classes: ['alternative', 'kreaturen'],
         position: { width: 820, height: 900 },
         actions: {
             itemCreate: IlarisAlternativeCreatureSheet.onItemCreate,
@@ -69,7 +69,7 @@ export class IlarisAlternativeCreatureSheet extends KreaturSheet {
     static TABS = {
         primary: {
             tabs: [
-                { id: 'allgemein', icon: 'fa-solid fa-chart-simple', label: 'Attribute' },
+                { id: 'allgemein', icon: 'fa-solid fa-chart-simple', label: 'Allgemein' },
                 { id: 'kampf', icon: 'fa-solid fa-fist-raised', label: 'Kampf' },
             ],
             initial: 'kampf', // Set the initial tab

@@ -34,6 +34,45 @@
 }
 
 /* ===================================
+   Tab Navigation
+   =================================== */
+
+.ilaris.sheet.actor.alternative.kreaturen .sheet-tabs {
+    background: var(--color-bg-light);
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid var(--color-border-light-primary, #7a7971);
+}
+
+.ilaris.sheet.actor.alternative.kreaturen .sheet-tabs .item {
+    flex: 1;
+    text-align: center;
+    padding: 8px 4px;
+    color: var(--color-text-secondary, #666);
+    border-bottom: 4px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.ilaris.sheet.actor.alternative.kreaturen .sheet-tabs .item:hover {
+    color: var(--color-text-primary, #191813);
+    border-bottom: 4px solid var(--color-border-light-primary, #7a7971);
+}
+
+.ilaris.sheet.actor.alternative.kreaturen .sheet-tabs .item.active {
+    color: var(--color-text-primary, #191813);
+    border-bottom: 4px solid var(--primary-color);
+    background: transparent;
+}
+
+.ilaris.sheet.actor.alternative.kreaturen .sheet-tabs .item i {
+    margin-right: 4px;
+}
+
+/* ===================================
    Creature Sections
    =================================== */
 
@@ -54,7 +93,7 @@
     margin: 0;
     font-size: 1em;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     display: flex;
     align-items: center;
     gap: 6px;
@@ -77,7 +116,7 @@
     grid-column: 1 / -1;
     text-align: center;
     padding: 20px;
-    color: var(--color-text-light-6);
+    color: var(--color-text-primary);
     font-style: italic;
 }
 
@@ -95,7 +134,7 @@
 }
 
 .ilaris.sheet.actor.alternative.kreaturen .statblockreihe b {
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     font-weight: 600;
 }
 
@@ -126,7 +165,7 @@
 }
 
 .ilaris.sheet.actor.alternative.kreaturen .weapon-name a {
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     text-decoration: none;
 }
 
@@ -137,13 +176,13 @@
 
 .ilaris.sheet.actor.alternative.kreaturen .weapon-stat {
     font-size: 0.9em;
-    color: var(--color-text-dark-5);
+    color: var(--color-text-primary);
     white-space: nowrap;
 }
 
 .ilaris.sheet.actor.alternative.kreaturen .weapon-eigenschaften {
     font-size: 0.85em;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     margin-left: 45px;
     margin-bottom: 8px;
 }
@@ -194,7 +233,7 @@
 
 /* Delete Icon */
 .ilaris.sheet.actor.alternative.kreaturen .item-delete.icon-small {
-    color: var(--color-text-light-5);
+    color: var(--color-danger-soft);
     cursor: pointer;
     transition: all 0.2s ease;
     margin-left: auto;
@@ -217,7 +256,7 @@
 .ilaris.sheet.actor.alternative.kreaturen .spell-entry a.item-edit,
 .ilaris.sheet.actor.alternative.kreaturen .skill-entry a.item-edit,
 .ilaris.sheet.actor.alternative.kreaturen .item-entry a.item-edit {
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     text-decoration: none;
 }
 
@@ -272,7 +311,7 @@
 .ilaris.sheet.actor.alternative.kreaturen .kampfwert-input label {
     font-weight: 600;
     font-size: 0.8em;
-    color: var(--color-text-dark-5);
+    color: var(--color-text-primary);
     margin-bottom: 3px;
     text-transform: uppercase;
 }
