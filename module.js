@@ -366,11 +366,10 @@ Hooks.on('updateCombat', async (combat, updateData, options, userId) => {
 
         // Only GM should update combatants to avoid permission errors
         if (game.user.isGM) {
-            console.log('Ilaris Alternative Actor Sheet | GM is resetting initiative for all combatants');
-            // Reset initiative to null for all combatants, except those with negative initiative
+            // Reset initiative to null for all combatants.
+            // Locked combatants will reopen in LOCKED state via their persisted dialogState.
             const updates = [];
             for (const combatant of combat.combatants) {
-                // Reset initiative to null
                 updates.push({
                     _id: combatant.id,
                     initiative: null,
@@ -473,47 +472,30 @@ Hooks.on('updateCombatant', async (combatant, updateData, options, userId) => {
     }
 });
 
-// Hook: asking for negative initiative dialog on turn change
+// Hook: Skip negative-initiative combatants (locked state, action delayed)
+// Their turn is automatically skipped; they re-roll in the locked dialog next round.
 Hooks.on('combatTurnChange', async (combat, prior, current) => {
-    console.log('Ilaris Alternative Actor Sheet | Combatant turn changed hook triggered', combat, prior, current);
-
     const currentCombatant = combat.combatants.get(current.combatantId);
     if (!currentCombatant) return;
-
-    console.log('Ilaris Alternative Actor Sheet | Combat turn hook triggered for', currentCombatant);
 
     const actor = currentCombatant.actor;
     if (!actor) return;
 
-    // Check if this combatant has negative initiative
+    // Check if this combatant has negative initiative (locked state)
     if (currentCombatant.initiative === null || currentCombatant.initiative >= 0) return;
 
-    // Check if movedAction flag is set (only show dialog if action was moved)
+    // Check if movedAction flag is set
     const dialogState = actor.getFlag('ilaris-alternative-actor-sheet', 'dialogState');
     if (!dialogState?.movedAction) return;
 
-    // Check if this actor has the combat modifier effect
-    const hasEffect = actor.effects.some(e => e.name.startsWith('Kampf-Modifikatoren Runde'));
-
-    if (!hasEffect) return;
-
-    // Only show to the owner of the actor
+    // Only handle on the owner's client
     if (!actor.testUserPermission(game.user, 'OWNER')) return;
     if (actor.type === 'held' && game.user.isGM) return;
 
-    // Show the negative initiative dialog
-    const dialog = new NegativeInitiativeDialog(
-        actor,
-        combat,
-        {},
-        {
-            close: async () => {
-                // After dialog closes (either yes or no), advance to next combatant
-                await combat.nextTurn();
-            },
-        }
-    );
-    dialog.render(true);
+    // Auto-skip: combatant with negative initiative doesn't get a turn this round.
+    // Their action is locked and will be resolved next round via the locked dialog.
+    ui.notifications.info(`${actor.name} hat negative Initiative — Aktion verzögert.`);
+    await combat.nextTurn();
 });
 
 // Export for use in actor sheets

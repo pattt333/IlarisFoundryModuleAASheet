@@ -58,6 +58,9 @@ export class MassInitiativeDialog extends Application {
                 hasRolled: savedState.hasRolled ?? false,
                 movedAction: savedState.movedAction ?? false,
                 movedActionRounds: savedState.movedActionRounds ?? 0,
+                carryOver: savedState.carryOver ?? 0,
+                lockedActionId: savedState.lockedActionId ?? null,
+                lockedWeaponId: savedState.lockedWeaponId ?? null,
                 processed: false,
             });
         } else {
@@ -73,6 +76,9 @@ export class MassInitiativeDialog extends Application {
                 hasRolled: false,
                 movedAction: false,
                 movedActionRounds: 0,
+                carryOver: 0,
+                lockedActionId: null,
+                lockedWeaponId: null,
                 processed: false,
             });
         }
@@ -100,6 +106,9 @@ export class MassInitiativeDialog extends Application {
                 hasRolled: state.hasRolled,
                 movedAction: state.movedAction,
                 movedActionRounds: state.movedActionRounds,
+                carryOver: state.carryOver,
+                lockedActionId: state.lockedActionId,
+                lockedWeaponId: state.lockedWeaponId,
             });
         }
     }
@@ -231,20 +240,6 @@ export class MassInitiativeDialog extends Application {
         if (!combatant?.actor || !state) return 0;
 
         const baseIni = combatant.actor.system.kampfwerte?.baseIni ?? 0;
-        const currentIni = this._getBaseInitiative(combatant.actor);
-
-        // Get the lowest INI mod from selected actions
-        let actionIniMod = 0;
-        if (state.selectedActionIds.length > 0) {
-            const actionMods = state.selectedActionIds.map(id => {
-                const action = this.availableActions.find(a => (a.id || a._id) === id);
-                if (action?.iniMod) {
-                    return parseInt(action.iniMod) || 0;
-                }
-                return 0;
-            });
-            actionIniMod = Math.min(...actionMods, 0);
-        }
 
         // Get dice result
         const diceResult =
@@ -252,13 +247,22 @@ export class MassInitiativeDialog extends Application {
                 ? (state.diceResults[state.selectedDiceIndex] ?? 0)
                 : (state.diceResults[0] ?? 0);
 
-        // Calculate with movedActionRounds multiplier
-        if (state.movedAction && state.movedActionRounds > 0) {
-            // Total = Current-INI + Action-Mod + (Basis-INI × movedActionRounds) + Würfel
-            return currentIni + actionIniMod + baseIni * state.movedActionRounds + diceResult;
+        // LOCKED state: carryOver + baseIni + iniMod + diceResult
+        if (state.movedAction) {
+            return (state.carryOver ?? 0) + baseIni + state.iniMod + diceResult;
         }
 
-        return currentIni + state.iniMod + actionIniMod + diceResult;
+        // FRESH state: baseIni + actionIniMod + iniMod + diceResult
+        let actionIniMod = 0;
+        if (state.selectedActionIds.length > 0) {
+            const actionMods = state.selectedActionIds.map(id => {
+                const action = this.availableActions.find(a => (a.id || a._id) === id);
+                return action?.iniMod ? parseInt(action.iniMod) || 0 : 0;
+            });
+            actionIniMod = Math.min(...actionMods, 0);
+        }
+
+        return baseIni + actionIniMod + state.iniMod + diceResult;
     }
 
     /**

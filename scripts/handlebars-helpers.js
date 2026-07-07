@@ -37,6 +37,18 @@ export function registerHandlebarsHelpers() {
         return (a || 0) >= (b || 0);
     });
 
+    Handlebars.registerHelper('gt', function (a, b) {
+        return (a || 0) > (b || 0);
+    });
+
+    Handlebars.registerHelper('lt', function (a, b) {
+        return (a || 0) < (b || 0);
+    });
+
+    Handlebars.registerHelper('num', function (value) {
+        return Number(value) || 0;
+    });
+
     Handlebars.registerHelper('divide', function (a, b) {
         if (!b || b === 0) return 0;
         return (a || 0) / b;

@@ -16,6 +16,9 @@ export class InitiativeDialog extends Application {
         this.availableActions = [];
         this.movedAction = false;
         this.movedActionRounds = 0;
+        this.carryOver = 0;
+        this.lockedActionId = null;
+        this.lockedWeaponId = null;
 
         // Load persisted state
         this._loadPersistedState();
@@ -27,7 +30,7 @@ export class InitiativeDialog extends Application {
             id: 'initiative-dialog',
             classes: ['ilaris', 'initiative-dialog'],
             template: 'modules/ilaris-alternative-actor-sheet/templates/apps/initiative-dialog.hbs',
-            width: 450,
+            width: 520,
             height: 'auto',
             title: 'Initiative ansagen',
             resizable: true,
@@ -46,6 +49,20 @@ export class InitiativeDialog extends Application {
     _loadPersistedState() {
         const savedState = this.actor.getFlag('ilaris-alternative-actor-sheet', 'dialogState');
         if (savedState) {
+            // Migration: detect old-format state (missing carryOver field)
+            if (savedState.carryOver === undefined && savedState.movedAction) {
+                // Old format: map movedActionRounds * baseIni approximation to carryOver
+                const baseIni = this._getBaseInitiative();
+                this.carryOver = (savedState.movedActionRounds || 1) * baseIni;
+                // Preserve locked action/weapon from existing fields
+                this.lockedActionId = savedState.selectedActionIds?.[0] ?? null;
+                this.lockedWeaponId = savedState.selectedWeaponId ?? null;
+            } else {
+                this.carryOver = savedState.carryOver ?? 0;
+                this.lockedActionId = savedState.lockedActionId ?? null;
+                this.lockedWeaponId = savedState.lockedWeaponId ?? null;
+            }
+
             this.iniMod = savedState.iniMod ?? 0;
             this.atMod = savedState.atMod ?? 0;
             this.vtMod = savedState.vtMod ?? 0;
@@ -66,6 +83,11 @@ export class InitiativeDialog extends Application {
             this.kombinierteAktion = false;
             this.diceCount = 1;
             this.selectedWeaponId = '';
+            this.movedAction = false;
+            this.movedActionRounds = 0;
+            this.carryOver = 0;
+            this.lockedActionId = null;
+            this.lockedWeaponId = null;
         }
     }
 
@@ -87,6 +109,9 @@ export class InitiativeDialog extends Application {
             selectedWeaponId: this.selectedWeaponId,
             movedAction: this.movedAction,
             movedActionRounds: this.movedActionRounds,
+            carryOver: this.carryOver,
+            lockedActionId: this.lockedActionId,
+            lockedWeaponId: this.lockedWeaponId,
         });
     }
 
@@ -147,7 +172,18 @@ export class InitiativeDialog extends Application {
         context.movedAction = this.movedAction;
         context.round = this.combat?.round ?? 1;
 
-        // Weapon data
+        // Locked state context
+        context.isLocked = this.movedAction;
+        context.carryOver = this.carryOver;
+        context.movedActionRounds = this.movedActionRounds;
+        context.lockedAction = this.lockedActionId
+            ? this.availableActions.find(a => (a.id || a._id) === this.lockedActionId)
+            : null;
+        context.lockedWeapon = this.lockedWeaponId
+            ? this.availableWeapons.find(w => w.id === this.lockedWeaponId)
+            : null;
+
+        // Weapon data (only relevant in FRESH state)
         context.availableWeapons = this.availableWeapons;
         context.selectedWeaponId = this.selectedWeaponId;
         context.selectedWeaponData = this.selectedWeaponId
@@ -159,7 +195,52 @@ export class InitiativeDialog extends Application {
         context.calculatedIni = this._calculateTotalInitiative();
         context.negativeIni = context.calculatedIni < 0;
 
+        // Build formula parts for the live breakdown
+        context.formulaParts = this._getFormulaParts();
+        context.dicePlaceholder = this.hasRolled
+            ? (this.selectedDiceIndex !== null ? this.diceResults[this.selectedDiceIndex] : this.diceResults[0])
+            : '▢';
+
         return context;
+    }
+
+    /**
+     * Get formula parts for the breakdown display
+     * @private
+     * @returns {{label: string, value: string}[]}
+     */
+    _getFormulaParts() {
+        if (this.movedAction) {
+            return [
+                { label: 'Übertrag', value: String(this.carryOver) },
+                { label: 'Basis', value: String(this._getBaseInitiative()) },
+                { label: 'Mod', value: String(this.iniMod) },
+                { label: 'Würfel', value: this.hasRolled ? String(this.diceResults[this.selectedDiceIndex ?? 0] ?? '?') : '▢' },
+            ];
+        }
+        const actionMod = this._getActionIniMod();
+        const weaponMod = this.selectedWeaponId ? this._getWeaponIniModifier() : 0;
+        return [
+            { label: 'Basis', value: String(this._getBaseInitiative()) },
+            { label: 'Aktion', value: String(actionMod) },
+            { label: 'Waffe', value: String(weaponMod) },
+            { label: 'Mod', value: String(this.iniMod) },
+            { label: 'Würfel', value: this.hasRolled ? String(this.diceResults[this.selectedDiceIndex ?? 0] ?? '?') : '▢' },
+        ];
+    }
+
+    /**
+     * Get the action INI modifier (lowest among selected)
+     * @private
+     * @returns {number}
+     */
+    _getActionIniMod() {
+        if (this.selectedActionIds.length === 0) return 0;
+        const mods = this.selectedActionIds.map(id => {
+            const action = this.availableActions.find(a => (a.id || a._id) === id);
+            return action?.iniMod ?? 0;
+        });
+        return Math.min(...mods);
     }
 
     /**
@@ -265,8 +346,18 @@ export class InitiativeDialog extends Application {
      */
     _calculateTotalInitiative() {
         const baseIni = this._getBaseInitiative();
-        const currentIni = this.actor.system.abgeleitete?.ini ?? 0;
 
+        // LOCKED state: carryOver + baseIni + iniMod + diceResult
+        // Action and weapon INI penalties are NOT re-applied (they were paid in the original round)
+        if (this.movedAction) {
+            const diceResult =
+                this.selectedDiceIndex !== null
+                    ? (this.diceResults[this.selectedDiceIndex] ?? 0)
+                    : (this.diceResults[0] ?? 0);
+            return this.carryOver + baseIni + this.iniMod + diceResult;
+        }
+
+        // FRESH state: baseIni + actionIniMod + weaponIniMod + iniMod + diceResult
         // Get weapon INI modifier
         let weaponIniMod = 0;
         if (this.selectedWeaponId && this.availableWeapons.length > 0) {
@@ -275,14 +366,10 @@ export class InitiativeDialog extends Application {
 
         // Get the lowest INI mod from selected actions
         let actionIniMod = 0;
-        this.selectedActions = [];
         if (this.selectedActionIds.length > 0) {
             const actionMods = this.selectedActionIds.map(id => {
                 const action = this.availableActions.find(a => (a.id || a._id) === id);
-                if (action?.iniMod) {
-                    return action.iniMod;
-                }
-                return 0;
+                return action?.iniMod ?? 0;
             });
             actionIniMod = Math.min(...actionMods);
         }
@@ -293,14 +380,7 @@ export class InitiativeDialog extends Application {
                 ? (this.diceResults[this.selectedDiceIndex] ?? 0)
                 : (this.diceResults[0] ?? 0);
 
-        // Wenn movedAction aktiv ist, holen wir den Effect-Change statt Basis-INI zu verwenden
-        if (this.movedAction && this.movedActionRounds > 0) {
-            // Total = Basis-INI + Action-Mod + (Basis-INI × movedActionRounds) + Würfel
-            return currentIni + weaponIniMod + actionIniMod + baseIni * this.movedActionRounds + diceResult;
-        }
-
-        // Normale Berechnung für erste Ansage
-        return currentIni + weaponIniMod + this.iniMod + actionIniMod + diceResult;
+        return baseIni + actionIniMod + weaponIniMod + this.iniMod + diceResult;
     }
 
     /**
@@ -381,8 +461,8 @@ export class InitiativeDialog extends Application {
         // Weapon dropdown
         html.find('select[name="selectedWeapon"]').change(this._onWeaponChange.bind(this));
 
-        // Actions dropdown
-        html.find('multi-select[name="actions"]').change(this._onActionsChange.bind(this));
+        // Action cards (clickable tiles)
+        html.find('.action-card:not(.locked-card):not(.disabled-card)').click(this._onActionCardClick.bind(this));
 
         // Dice rolling
         html.find('.roll-dice-btn').click(this._onRollDice.bind(this));
@@ -391,6 +471,45 @@ export class InitiativeDialog extends Application {
         // Main buttons
         html.find('.ini-ansagen-btn').click(this._onIniAnsagen.bind(this));
         html.find('.cancel-btn').click(this._onCancel.bind(this));
+    }
+
+    /**
+     * Check if dialog is in locked state
+     * @returns {boolean}
+     */
+    get isLocked() {
+        return this.movedAction === true;
+    }
+
+    /**
+     * Handle action card click (toggle selection, max 2)
+     * @param {Event} event
+     * @private
+     */
+    async _onActionCardClick(event) {
+        event.preventDefault();
+        const card = event.currentTarget;
+        const actionId = card.dataset.actionId;
+
+        if (!actionId) return;
+
+        const isSelected = this.selectedActionIds.includes(actionId);
+
+        if (isSelected) {
+            // Deselect
+            this.selectedActionIds = this.selectedActionIds.filter(id => id !== actionId);
+        } else {
+            // Select (max 2)
+            if (this.selectedActionIds.length >= 2) {
+                ui.notifications.warn('Maximal 2 Aktionen auswählbar.');
+                return;
+            }
+            this.selectedActionIds.push(actionId);
+        }
+
+        await this._savePersistedState();
+        this._updateFormulaBreakdown();
+        this.render();
     }
 
     /**
@@ -409,14 +528,7 @@ export class InitiativeDialog extends Application {
 
         // Save to actor flags
         await this._savePersistedState();
-
-        // Update calculated INI display directly in DOM
-        const totalIni = this._calculateTotalInitiative();
-        const iniDisplay = this.element.find('.current-ini strong');
-        if (iniDisplay.length) {
-            iniDisplay.text(totalIni);
-            iniDisplay.toggleClass('negative', totalIni < 0);
-        }
+        this._updateFormulaBreakdown();
     }
 
     /**
@@ -427,14 +539,7 @@ export class InitiativeDialog extends Application {
     async _onIniModChange(event) {
         this.iniMod = parseInt(event.target.value) || 0;
         await this._savePersistedState();
-
-        // Update calculated INI display
-        const totalIni = this._calculateTotalInitiative();
-        const iniDisplay = this.element.find('.current-ini strong');
-        if (iniDisplay.length) {
-            iniDisplay.text(totalIni);
-            iniDisplay.toggleClass('negative', totalIni < 0);
-        }
+        this._updateFormulaBreakdown();
     }
 
     /**
@@ -456,6 +561,39 @@ export class InitiativeDialog extends Application {
         }
 
         await this._savePersistedState();
+        this._updateFormulaBreakdown();
+    }
+
+    /**
+     * Update the formula breakdown display in the DOM.
+     * Updates both the formula parts and the total result.
+     * @private
+     */
+    _updateFormulaBreakdown() {
+        const html = this.element;
+        if (!html.length) return;
+
+        const totalIni = this._calculateTotalInitiative();
+
+        // Update formula result total
+        const resultEl = html.find('.formula-result');
+        if (resultEl.length) {
+            resultEl.text(totalIni);
+            resultEl.toggleClass('negative', totalIni < 0);
+            resultEl.toggleClass('positive', totalIni >= 0);
+        }
+
+        // Update individual formula part values
+        const parts = this._getFormulaParts();
+        const partEls = html.find('.formula-part .formula-value');
+        partEls.each((i, el) => {
+            if (i < parts.length) {
+                const $el = $(el);
+                $el.text(parts[i].value);
+                const numVal = parseInt(parts[i].value);
+                $el.toggleClass('negative', !isNaN(numVal) && numVal < 0);
+            }
+        });
     }
 
     /**
@@ -466,7 +604,7 @@ export class InitiativeDialog extends Application {
     async _onWeaponChange(event) {
         this.selectedWeaponId = event.target.value;
         await this._savePersistedState();
-
+        this._updateFormulaBreakdown();
         // Re-render to show weapon properties
         this.render();
     }
@@ -501,6 +639,13 @@ export class InitiativeDialog extends Application {
 
         this.diceResults = [];
 
+        // Animate dice faces before showing results
+        const diceFaces = this.element.find('.dice-face');
+        diceFaces.addClass('rolling');
+
+        // Small delay for animation
+        await new Promise(resolve => setTimeout(resolve, 400));
+
         for (let i = 0; i < this.diceCount; i++) {
             const roll = await new Roll('1d6').evaluate();
             this.diceResults.push(roll.total);
@@ -516,45 +661,35 @@ export class InitiativeDialog extends Application {
         this.hasRolled = true;
         await this._savePersistedState();
 
-        // Update dice display in DOM
-        const diceSection = this.element.find('.dice-section');
+        // Remove rolling animation
+        diceFaces.removeClass('rolling');
 
-        // Build dice results HTML
-        let diceHTML = '<div class="dice-results">';
-        this.diceResults.forEach((result, index) => {
-            const selected = this.selectedDiceIndex === index ? 'selected' : '';
-            const title = this.diceCount === 2 ? 'Klicken zum Auswählen' : '';
-            diceHTML += `
-                <div class="dice-result ${selected}" 
-                     data-index="${index}"
-                     title="${title}">
-                    <div class="dice-face d6">
-                        <span class="dice-value">${result}</span>
-                    </div>
-                </div>
-            `;
+        // Update dice faces with results
+        const resultEls = this.element.find('.dice-result');
+        resultEls.each((i, el) => {
+            const $el = $(el);
+            const result = this.diceResults[i];
+            if (result !== undefined) {
+                $el.removeClass('dice-placeholder');
+                $el.toggleClass('selected', this.selectedDiceIndex === i);
+                const $face = $el.find('.dice-face');
+                $face.removeClass('show-unknown');
+                // Add class for the pip count
+                for (let p = 1; p <= 6; p++) {
+                    $face.removeClass(`show-${p}`);
+                }
+                $face.addClass(`show-${result}`);
+                $face.find('.dice-value').text(result);
+            }
         });
-        diceHTML += '</div>';
 
-        // Replace or insert dice results
-        const existingResults = diceSection.find('.dice-results');
-        if (existingResults.length) {
-            existingResults.replaceWith(diceHTML);
-        } else {
-            diceSection.append(diceHTML);
-        }
+        // Re-bind click handlers for dice selection
+        this.element.find('.dice-result').off('click').click(this._onSelectDice.bind(this));
 
-        // Re-bind click handlers for new dice
-        diceSection.find('.dice-result').click(this._onSelectDice.bind(this));
+        // Enable INI ansagen button
+        this.element.find('.ini-ansagen-btn').removeClass('disabled');
 
-        // Update INI display
-        const totalIni = this._calculateTotalInitiative();
-        const iniDisplay = this.element.find('.current-ini strong');
-        if (iniDisplay.length) {
-            iniDisplay.text(totalIni);
-            iniDisplay.toggleClass('negative', totalIni < 0);
-        }
-        this.render();
+        this._updateFormulaBreakdown();
     }
 
     /**
@@ -575,13 +710,7 @@ export class InitiativeDialog extends Application {
         this.element.find('.dice-result').removeClass('selected');
         $(event.currentTarget).addClass('selected');
 
-        // Update INI display
-        const totalIni = this._calculateTotalInitiative();
-        const iniDisplay = this.element.find('.current-ini strong');
-        if (iniDisplay.length) {
-            iniDisplay.text(totalIni);
-            iniDisplay.toggleClass('negative', totalIni < 0);
-        }
+        this._updateFormulaBreakdown();
     }
 
     /**
@@ -606,124 +735,63 @@ export class InitiativeDialog extends Application {
 
         // Calculate final values
         const totalIni = this._calculateTotalInitiative();
-        const actionMods = this._calculateActionModifiers();
-
-        // Calculate final AT/VT modifiers
-        let finalAtMod = this.atMod + actionMods.at;
-        let finalVtMod = this.vtMod + actionMods.vt;
-
-        // Apply kombinierte Aktion penalty
-        if (this.kombinierteAktion) {
-            finalAtMod -= 4;
-            finalVtMod -= 4;
-        }
-
-        // Determine effect duration (2 turns if negative initiative)
-        const effectDuration = totalIni < 0 ? 2 : 1;
-
-        // Get dice result
         const diceResult =
             this.selectedDiceIndex !== null ? this.diceResults[this.selectedDiceIndex] : this.diceResults[0];
 
-        // Find existing combat modifier effect
-        const existingEffect = this.actor.effects.find(e => e.name.startsWith('Kampf-Modifikatoren Runde'));
+        const effectName = `Kampf-Modifikatoren Runde ${this.combat?.round ?? 1}`;
 
-        // Handle negative initiative with movedAction
+        // Determine AT/VT modifiers based on state
+        let finalAtMod = 0;
+        let finalVtMod = 0;
+
+        if (this.movedAction) {
+            // LOCKED state: use only locked action's AT/VT modifiers
+            const actionMods = this._getLockedActionModifiers();
+            finalAtMod = this.atMod + actionMods.at;
+            finalVtMod = this.vtMod + actionMods.vt;
+            // kombinierte Aktion penalty was already applied when action was first locked
+        } else {
+            // FRESH state: calculate from selected actions
+            const actionMods = this._calculateActionModifiers();
+            finalAtMod = this.atMod + actionMods.at;
+            finalVtMod = this.vtMod + actionMods.vt;
+            if (this.kombinierteAktion) {
+                finalAtMod -= 4;
+                finalVtMod -= 4;
+            }
+        }
+
+        // Delete existing effect with same name to avoid duplicates
+        const existingEffect = this.actor.effects.find(e => e.name === effectName);
+        if (existingEffect) {
+            await this.actor.deleteEmbeddedDocuments('ActiveEffect', [existingEffect.id]);
+        }
+
         if (totalIni < 0) {
-            // Update movedActionRounds
+            // --- NEGATIVE: Enter or stay in LOCKED state ---
+
+            // Lock action and weapon if entering locked state for the first time
             if (!this.movedAction) {
+                this.lockedActionId = this.selectedActionIds[0] ?? null;
+                this.lockedWeaponId = this.selectedWeaponId || null;
                 this.movedActionRounds = 1;
             } else {
                 this.movedActionRounds += 1;
             }
             this.movedAction = true;
+            this.carryOver = totalIni; // Store the negative total for next round
 
-            // Update existing effect if present
-            if (existingEffect) {
-                const iniChange = existingEffect.changes.find(
-                    c => c.key === 'system.abgeleitete.ini' || c.key.includes('ini')
-                );
-
-                if (iniChange) {
-                    // Update: Alter Change + neuer Würfel
-                    const oldChangeValue = parseInt(iniChange.value) || 0;
-                    const newChangeValue = oldChangeValue + diceResult;
-
-                    // Update effect with new change value
-                    const updatedChanges = existingEffect.changes.map(c => {
-                        if (c.key === 'system.abgeleitete.ini' || c.key.includes('ini')) {
-                            return {
-                                ...c,
-                                value: newChangeValue.toString(),
-                            };
-                        }
-                        return c;
-                    });
-
-                    await existingEffect.update({
-                        changes: updatedChanges,
-                        'duration.turns': 2,
-                    });
-
-                    console.log(
-                        `InitiativeDialog | Updated effect: ${existingEffect.name}, new INI change: ${newChangeValue}`
-                    );
-                }
-            } else {
-                // Create new effect for first negative INI
-                const changes = [];
-
-                // Effect speichert nur INI-Mod + Würfel
-                if (this.iniMod !== 0 || diceResult !== 0) {
-                    changes.push({
-                        key: 'system.abgeleitete.ini',
-                        mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                        value: (this.iniMod + diceResult).toString(),
-                    });
-                }
-
-                if (finalAtMod !== 0) {
-                    changes.push({
-                        key: 'system.modifikatoren.nahkampfmod',
-                        mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                        value: finalAtMod.toString(),
-                    });
-                }
-
-                if (finalVtMod !== 0) {
-                    changes.push({
-                        key: 'system.modifikatoren.verteidigungmod',
-                        mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                        value: finalVtMod.toString(),
-                    });
-                }
-
-                if (changes.length > 0) {
-                    const effectData = {
-                        name: `Kampf-Modifikatoren Runde ${this.combat?.round ?? 1}`,
-                        icon: 'icons/svg/dice-target.svg',
-                        changes: changes,
-                        duration: {
-                            turns: 2,
-                        },
-                        origin: this.actor.uuid,
-                    };
-
-                    await this.actor.createEmbeddedDocuments('ActiveEffect', [effectData]);
-                }
-            }
-        } else {
-            // Positive INI: Create normal effect, clear moved action state
+            // Create effect with AT/VT from locked action and the INI delta
             const changes = [];
-
-            if (this.iniMod !== 0 || diceResult !== 0) {
+            // INI delta = what changed from base (for the effect system)
+            const iniDelta = totalIni - this._getBaseInitiative();
+            if (iniDelta !== 0) {
                 changes.push({
                     key: 'system.abgeleitete.ini',
                     mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: (this.iniMod + diceResult).toString(),
+                    value: iniDelta.toString(),
                 });
             }
-
             if (finalAtMod !== 0) {
                 changes.push({
                     key: 'system.modifikatoren.nahkampfmod',
@@ -731,7 +799,6 @@ export class InitiativeDialog extends Application {
                     value: finalAtMod.toString(),
                 });
             }
-
             if (finalVtMod !== 0) {
                 changes.push({
                     key: 'system.modifikatoren.verteidigungmod',
@@ -740,25 +807,63 @@ export class InitiativeDialog extends Application {
                 });
             }
 
-            // Remove old combat modifier effects
-            if (existingEffect) {
-                await this.actor.deleteEmbeddedDocuments('ActiveEffect', [existingEffect.id]);
-            }
-
-            // Create new effect with duration 1
             if (changes.length > 0) {
-                const effectData = {
-                    name: `Kampf-Modifikatoren Runde ${this.combat?.round ?? 1}`,
+                await this.actor.createEmbeddedDocuments('ActiveEffect', [{
+                    name: effectName,
                     icon: 'icons/svg/dice-target.svg',
                     changes: changes,
-                    duration: {
-                        turns: 1,
-                    },
+                    duration: { turns: 2 },
                     origin: this.actor.uuid,
-                };
-
-                await this.actor.createEmbeddedDocuments('ActiveEffect', [effectData]);
+                }]);
             }
+
+            // Persist locked state, reset dice for next round
+            this.iniMod = 0;
+            this.diceResults = [];
+            this.selectedDiceIndex = null;
+            this.hasRolled = false;
+            await this._savePersistedState();
+
+        } else {
+            // --- POSITIVE: Normal resolution (even if was previously locked) ---
+
+            // Create effect with modifiers
+            const changes = [];
+            const iniDelta = totalIni - this._getBaseInitiative();
+            if (iniDelta !== 0) {
+                changes.push({
+                    key: 'system.abgeleitete.ini',
+                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                    value: iniDelta.toString(),
+                });
+            }
+            if (finalAtMod !== 0) {
+                changes.push({
+                    key: 'system.modifikatoren.nahkampfmod',
+                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                    value: finalAtMod.toString(),
+                });
+            }
+            if (finalVtMod !== 0) {
+                changes.push({
+                    key: 'system.modifikatoren.verteidigungmod',
+                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                    value: finalVtMod.toString(),
+                });
+            }
+
+            if (changes.length > 0) {
+                await this.actor.createEmbeddedDocuments('ActiveEffect', [{
+                    name: effectName,
+                    icon: 'icons/svg/dice-target.svg',
+                    changes: changes,
+                    duration: { turns: 1 },
+                    origin: this.actor.uuid,
+                }]);
+            }
+
+            // Clear ALL persisted state (including locked state)
+            await this._clearPersistedState();
         }
 
         // Set initiative in combat tracker
@@ -767,21 +872,40 @@ export class InitiativeDialog extends Application {
         // Post chat message
         await this._postChatMessage(totalIni, diceResult, finalAtMod, finalVtMod);
 
-        // Clear persisted state
-        if (totalIni >= 0) {
-            await this._clearPersistedState();
-        } else {
-            // For negative initiative, keep state but reset dice
-            this.iniMod = 0;
-            this.diceResults = [];
-            this.selectedDiceIndex = null;
-            this.hasRolled = false;
-            // movedAction and movedActionRounds already updated above
-            await this._savePersistedState();
-        }
-
         // Close dialog
         this.close();
+    }
+
+    /**
+     * Get AT/VT modifiers from the locked action (not from currently selected actions).
+     * Used when resolving a LOCKED state combatant's turn.
+     * @private
+     * @returns {{at: number, vt: number}}
+     */
+    _getLockedActionModifiers() {
+        let atMod = 0;
+        let vtMod = 0;
+
+        if (!this.lockedActionId) return { at: atMod, vt: vtMod };
+
+        const action = this.availableActions.find(a => (a.id || a._id) === this.lockedActionId);
+        if (action?.effects) {
+            for (const effect of action.effects) {
+                for (const change of effect.changes || []) {
+                    if (change.key === 'system.modifikatoren.nahkampfmod' || change.key.includes('nahkampfmod')) {
+                        atMod += parseInt(change.value) || 0;
+                    }
+                    if (
+                        change.key === 'system.modifikatoren.verteidigungmod' ||
+                        change.key.includes('verteidigungmod')
+                    ) {
+                        vtMod += parseInt(change.value) || 0;
+                    }
+                }
+            }
+        }
+
+        return { at: atMod, vt: vtMod };
     }
 
     /**
