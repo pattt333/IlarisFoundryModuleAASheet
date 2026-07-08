@@ -1,15 +1,16 @@
-﻿/**
+/**
  * Initiative Dialog Dashboard Styles
  * Dashboard layout with action cards, visual dice, and formula breakdown.
+ * Color variables are defined in module.css combined selector.
  */
 
 /* ==================== Dialog Container ==================== */
 .initiative-dialog {
-    background: var(--header-bg-color);
+    background: var(--color-surface-header);
 }
 
 .initiative-dialog .window-content {
-    background: var(--color-light-1);
+    background: var(--color-surface-base);
     color: var(--color-text-primary);
     padding: 0;
 }
@@ -18,19 +19,19 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background: var(--color-light-1);
+    background: var(--color-surface-base);
     min-width: 520px;
 }
 
 /* ==================== Header ==================== */
 .initiative-dialog-form .dialog-header {
     padding: 0.75rem 1rem;
-    background: var(--header-bg-color);
+    background: var(--color-surface-header);
     border-bottom: 2px solid var(--color-border-dark);
 }
 
 .initiative-dialog-form.locked-state .dialog-header {
-    background: linear-gradient(135deg, var(--header-bg-color) 0%, #4a2020 100%);
+    background: linear-gradient(135deg, var(--color-surface-header) 0%, #4a2020 100%);
     border-bottom-color: var(--color-danger-light);
 }
 
@@ -59,7 +60,7 @@
 
 .initiative-dialog-form .round-badge {
     font-size: 0.75rem;
-    background: var(--primary-color);
+    background: var(--color-accent-primary);
     color: var(--color-text-primary);
     padding: 0.15rem 0.5rem;
     border-radius: 10px;
@@ -79,7 +80,7 @@
 }
 
 .initiative-dialog-form .base-stats strong {
-    color: var(--primary-color);
+    color: var(--color-accent-primary);
 }
 
 .initiative-dialog-form .locked-badge {
@@ -95,7 +96,7 @@
     flex: 1;
     overflow-y: auto;
     padding: 0.75rem;
-    background: var(--color-light-1);
+    background: var(--color-surface-base);
     color: var(--text-dark);
     display: flex;
     flex-direction: column;
@@ -140,7 +141,7 @@
 }
 
 .initiative-dialog-form section h3 i {
-    color: var(--primary-color);
+    color: var(--color-accent-primary);
 }
 
 .initiative-dialog-form section h3 .hint {
@@ -177,12 +178,12 @@
 }
 
 .initiative-dialog-form .action-card:hover {
-    border-color: var(--primary-color);
+    border-color: var(--color-accent-primary);
     background: var(--overlay-white-10);
 }
 
 .initiative-dialog-form .action-card.selected {
-    border-color: var(--primary-color);
+    border-color: var(--color-accent-primary);
     background: rgba(76, 175, 80, 0.1);
     box-shadow: 0 0 4px rgba(76, 175, 80, 0.3);
 }
@@ -222,7 +223,7 @@
 }
 
 .initiative-dialog-form .action-card-check {
-    color: var(--primary-color);
+    color: var(--color-accent-primary);
     font-size: 1rem;
     flex-shrink: 0;
 }
@@ -334,8 +335,8 @@
 }
 
 .initiative-dialog-form .modifier-section input[type='number']:focus {
-    outline: 1px solid var(--primary-color);
-    border-color: var(--primary-color);
+    outline: 1px solid var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
 }
 
 .initiative-dialog-form .modifier-section input[type='number']:disabled {
@@ -365,7 +366,7 @@
 .initiative-dialog-form .roll-dice-btn {
     width: 100%;
     padding: 0.6rem;
-    background: var(--primary-color);
+    background: var(--color-accent-primary);
     color: var(--color-white);
     border: none;
     border-radius: 4px;
@@ -397,7 +398,7 @@
 }
 
 .initiative-dialog-form .dice-result.selected .dice-face {
-    border-color: var(--primary-color);
+    border-color: var(--color-accent-primary);
     box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
 }
 
@@ -524,7 +525,7 @@
 }
 
 .initiative-dialog-form .formula-result.positive {
-    color: var(--primary-color);
+    color: var(--color-accent-primary);
     background: rgba(76, 175, 80, 0.1);
 }
 
@@ -579,7 +580,7 @@
 }
 
 .initiative-dialog-form .ini-ansagen-btn {
-    background: var(--primary-color);
+    background: var(--color-accent-primary);
     color: var(--color-white);
 }
 
@@ -611,11 +612,11 @@
 /* ==================== Mass Initiative Dialog ==================== */
 /* Preserved from original - mass NPC dialog styles */
 .mass-initiative-dialog {
-    background: var(--header-bg-color);
+    background: var(--color-surface-header);
 }
 
 .mass-initiative-dialog .window-content {
-    background: var(--color-light-1);
+    background: var(--color-surface-base);
     color: var(--color-text-primary);
     padding: 0;
 }
@@ -625,12 +626,12 @@
     flex-direction: column;
     height: 100%;
     gap: 0.5rem;
-    background: var(--color-light-1);
+    background: var(--color-surface-base);
 }
 
 .mass-initiative-dialog-form .dialog-header {
     padding: 0.75rem;
-    background: var(--header-bg-color);
+    background: var(--color-surface-header);
     border-bottom: 2px solid var(--color-border-dark);
     border-radius: 0;
     display: flex;
@@ -648,7 +649,7 @@
 
 .mass-initiative-dialog-form .dialog-header h2 i {
     margin-right: 0.5rem;
-    color: var(--primary-color);
+    color: var(--color-accent-primary);
 }
 
 .mass-initiative-dialog-form .progress-info {
@@ -689,7 +690,7 @@
 }
 
 .mass-initiative-dialog-form .npc-stats strong {
-    color: var(--primary-color);
+    color: var(--color-accent-primary);
 }
 
 .mass-initiative-dialog-form .npc-stats strong.negative {
@@ -700,7 +701,7 @@
     flex: 1;
     overflow-y: auto;
     padding: 0.75rem;
-    background: var(--color-light-1);
+    background: var(--color-surface-base);
 }
 
 .mass-initiative-dialog-form section {
@@ -721,7 +722,7 @@
 
 .mass-initiative-dialog-form section h4 i {
     margin-right: 0.5rem;
-    color: var(--primary-color);
+    color: var(--color-accent-primary);
 }
 
 .mass-initiative-dialog-form .form-group {
@@ -739,7 +740,7 @@
 .mass-initiative-dialog-form .form-group select {
     width: 100%;
     padding: 0.4rem;
-    background: var(--header-bg-color);
+    background: var(--color-surface-header);
     border: 1px solid var(--color-border-dark);
     border-radius: 3px;
     color: var(--color-text-primary);
@@ -749,8 +750,8 @@
 
 .mass-initiative-dialog-form .form-group input[type='number']:focus,
 .mass-initiative-dialog-form .form-group select:focus {
-    outline: 1px solid var(--primary-color);
-    border-color: var(--primary-color);
+    outline: 1px solid var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
 }
 
 .mass-initiative-dialog-form .form-group input[type='number']:disabled,
@@ -778,7 +779,7 @@
 
 .mass-initiative-dialog-form .roll-all-dice-btn {
     padding: 0.5rem 1rem;
-    background: var(--primary-color);
+    background: var(--color-accent-primary);
     border: none;
     border-radius: 4px;
     color: var(--color-text-on-accent);
@@ -801,7 +802,7 @@
 .mass-initiative-dialog-form .npc-accordion {
     border: 1px solid var(--color-border-dark);
     border-radius: 4px;
-    background: var(--header-bg-color);
+    background: var(--color-surface-header);
     overflow: hidden;
 }
 
@@ -820,7 +821,7 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
-    background: var(--header-bg-color);
+    background: var(--color-surface-header);
     color: var(--color-text-primary);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -834,7 +835,7 @@
 
 .mass-initiative-dialog-form .dialog-footer {
     padding: 0.75rem;
-    background: var(--header-bg-color);
+    background: var(--color-surface-header);
     border-top: 2px solid var(--color-border-dark);
     display: flex;
     justify-content: space-between;
@@ -850,7 +851,7 @@
 
 .mass-initiative-dialog-form .cancel-btn {
     padding: 0.5rem 1rem;
-    background: var(--header-bg-color);
+    background: var(--color-surface-header);
     border: 1px solid var(--color-border-dark);
     border-radius: 4px;
     color: var(--color-text-primary);
@@ -861,7 +862,7 @@
 
 .mass-initiative-dialog-form .cancel-btn:hover {
     background: var(--text-dark);
-    border-color: var(--primary-color);
+    border-color: var(--color-accent-primary);
 }
 
 .mass-initiative-dialog-form .ini-ansagen-btn {

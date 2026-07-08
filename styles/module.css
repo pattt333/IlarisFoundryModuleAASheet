@@ -6,7 +6,11 @@
  */
 
 /* CSS Variable Overrides (sheet-scoped) */
-.ilaris.sheet.actor.alternative {
+.ilaris.sheet.actor.alternative,
+.iaas-item-apply-window,
+.target-selection-dialog,
+.initiative-dialog,
+.mass-initiative-dialog {
     --color-white: #fff;
     --color-black: #000;
     --color-accent-primary: #4299e1;
@@ -99,7 +103,11 @@
         brightness(130%) contrast(119%);
 }
 
-body.theme-dark .ilaris.sheet.actor.alternative {
+body.theme-dark .ilaris.sheet.actor.alternative,
+body.theme-dark .iaas-item-apply-window,
+body.theme-dark .target-selection-dialog,
+body.theme-dark .initiative-dialog,
+body.theme-dark .mass-initiative-dialog {
     --color-white: #fff;
     --color-black: #000;
     --color-accent-primary: #007a75;
@@ -190,86 +198,6 @@ body.theme-dark .ilaris.sheet.actor.alternative {
         brightness(92%) contrast(89%);
     --filter-primary-hover: brightness(0) saturate(100%) invert(98%) sepia(35%) saturate(529%) hue-rotate(93deg)
         brightness(107%) contrast(98%);
-}
-
-.iaas-item-apply-window,
-.target-selection-dialog {
-    --color-white: #fff;
-    --color-black: #000;
-    --color-accent-primary: #4299e1;
-    --color-accent-primary-hover: #3182ce;
-    --color-accent-primary-strong: #2b6cb0;
-    --color-accent-primary-soft: #63b3ed;
-    --color-accent-primary-glow: rgba(66, 153, 225, 0.4);
-    --color-accent-primary-overlay-soft: rgba(66, 153, 225, 0.1);
-    --color-accent-primary-overlay-medium: rgba(66, 153, 225, 0.2);
-    --color-accent-primary-overlay-strong: rgba(66, 153, 225, 0.3);
-    --color-accent-primary-overlay-intense: rgba(66, 153, 225, 0.95);
-    --color-surface-header: #3c4658;
-    --color-surface-base: #f8f8f8;
-    --color-surface-muted: #f7fafc;
-    --color-surface-subtle: #f5f5f5;
-    --color-surface-danger-soft: #f8d7da;
-    --color-text-primary: #2d3748;
-    --color-text-secondary: #4a5568;
-    --color-text-tertiary: #666;
-    --color-text-muted: #718096;
-    --color-text-strong: #222;
-    --color-border-default: #ccc;
-    --color-border-light: #e2e8f0;
-    --color-border-dark: #444;
-    --color-border-muted: #888;
-    --color-danger: #e53e3e;
-    --color-danger-hover: #c53030;
-    --color-success: #48bb78;
-    --color-success-soft: #22c55e;
-    --color-warning: #f59e0b;
-    --overlay-black-10: rgba(0, 0, 0, 0.1);
-    --overlay-black-15: rgba(0, 0, 0, 0.15);
-    --overlay-black-20: rgba(0, 0, 0, 0.2);
-    --overlay-black-50: rgba(0, 0, 0, 0.5);
-    --overlay-white-10: rgba(255, 255, 255, 0.1);
-    --header-bg-color: var(--color-surface-header);
-}
-
-body.theme-dark .iaas-item-apply-window,
-body.theme-dark .target-selection-dialog {
-    --color-white: #fff;
-    --color-black: #000;
-    --color-accent-primary: #007a75;
-    --color-accent-primary-hover: #00908a;
-    --color-accent-primary-strong: #005e5a;
-    --color-accent-primary-soft: #36a8a2;
-    --color-accent-primary-glow: rgba(0, 122, 117, 0.35);
-    --color-accent-primary-overlay-soft: rgba(0, 122, 117, 0.12);
-    --color-accent-primary-overlay-medium: rgba(0, 122, 117, 0.2);
-    --color-accent-primary-overlay-strong: rgba(0, 122, 117, 0.32);
-    --color-accent-primary-overlay-intense: rgba(0, 122, 117, 0.9);
-    --color-surface-header: #141d1b;
-    --color-surface-base: #070a09;
-    --color-surface-muted: #191c1b;
-    --color-surface-subtle: #1b1e1d;
-    --color-surface-danger-soft: #410002;
-    --color-text-primary: #eff1ef;
-    --color-text-secondary: #c4c7c5;
-    --color-text-tertiary: #a9acaa;
-    --color-text-muted: #8e918f;
-    --color-text-strong: #fafdfa;
-    --color-border-default: #3f4946;
-    --color-border-light: #29322f;
-    --color-border-dark: #57605d;
-    --color-border-muted: #6f7976;
-    --color-danger: #ffb4ab;
-    --color-danger-hover: #ffdad6;
-    --color-success: #97d2c5;
-    --color-success-soft: #c1fdef;
-    --color-warning: #fcbe8e;
-    --overlay-black-10: rgba(0, 0, 0, 0.24);
-    --overlay-black-15: rgba(0, 0, 0, 0.3);
-    --overlay-black-20: rgba(0, 0, 0, 0.36);
-    --overlay-black-50: rgba(0, 0, 0, 0.68);
-    --overlay-white-10: rgba(255, 255, 255, 0.08);
-    --header-bg-color: var(--color-surface-header);
 }
 
 .iaas-item-apply-window .window-content,
