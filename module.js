@@ -11,6 +11,7 @@ import { IlarisAlternativeCreatureSheet } from './scripts/sheets/alternative-cre
 import { InitiativeDialog } from './scripts/apps/initiative-dialog.js';
 import { MassInitiativeDialog } from './scripts/apps/mass-initiative-dialog.js';
 import { NegativeInitiativeDialog } from './scripts/apps/negative-initiative-dialog.js';
+import { CombatDockApp } from './scripts/apps/combat-dock.js';
 import { IlarisAlternativeAiCreatureDialog } from './scripts/apps/ai-creature-dialog.js';
 import { VorteileCacheRefresh } from './scripts/apps/vorteile-cache-refresh.js';
 import { registerHandlebarsHelpers } from './scripts/handlebars-helpers.js';
@@ -239,6 +240,35 @@ Hooks.once('init', async function () {
         requiresReload: false,
     });
 
+    game.settings.register('ilaris-alternative-actor-sheet', 'combatDockPosition', {
+        name: 'Kampf-Dock: Position',
+        hint: 'Wo das Kampf-Dock angezeigt wird. Jeder Nutzer kann seine eigene Einstellung wählen.',
+        scope: 'client',
+        config: true,
+        type: String,
+        choices: {
+            'bottom': 'Unten',
+            'top': 'Oben',
+            'none': 'Ausgeblendet',
+        },
+        default: 'bottom',
+        requiresReload: false,
+    });
+
+    game.settings.register('ilaris-alternative-actor-sheet', 'combatDockSize', {
+        name: 'Kampf-Dock: Größe',
+        hint: 'Kartengröße im Kampf-Dock. Klein spart Bildschirmplatz.',
+        scope: 'client',
+        config: true,
+        type: String,
+        choices: {
+            'normal': 'Normal',
+            'small': 'Klein',
+        },
+        default: 'normal',
+        requiresReload: false,
+    });
+
     // Register Handlebars helpers
     registerHandlebarsHelpers();
 
@@ -275,6 +305,9 @@ Hooks.once('init', async function () {
         'modules/ilaris-alternative-actor-sheet/templates/apps/item-apply-dialog.hbs',
         'modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs',
         'modules/ilaris-alternative-actor-sheet/templates/apps/ai-creature-dialog.hbs',
+        // Combat Dock
+        'modules/ilaris-alternative-actor-sheet/templates/apps/combat-dock.hbs',
+        'modules/ilaris-alternative-actor-sheet/templates/components/combat-dock-card.hbs',
     ]);
 
     // Load component CSS files
@@ -359,6 +392,72 @@ const InitiativeDialogManager = {
     },
 };
 
+/**
+ * Combat Dock Manager
+ * Singleton managing the CombatDockApp lifecycle.
+ */
+const CombatDockManager = {
+    _instance: null,
+
+    /**
+     * Get or create the dock instance.
+     * @returns {CombatDockApp|null}
+     */
+    _getInstance() {
+        const position = game.settings.get('ilaris-alternative-actor-sheet', 'combatDockPosition');
+        if (position === 'none') return null;
+
+        if (!this._instance) {
+            this._instance = new CombatDockApp();
+        }
+        return this._instance;
+    },
+
+    /**
+     * Render the dock if combat is active and position is not "none".
+     */
+    async render() {
+        if (!game.combat) return;
+
+        const dock = this._getInstance();
+        if (!dock) return;
+
+        if (dock.rendered) {
+            dock.render(false);
+        } else {
+            dock.render(true);
+        }
+    },
+
+    /**
+     * Close the dock and clear the instance.
+     */
+    async close() {
+        if (this._instance) {
+            await this._instance.close();
+            this._instance = null;
+        }
+    },
+
+    /**
+     * Re-render the dock in-place.
+     */
+    async refresh() {
+        const dock = this._getInstance();
+        if (!dock) return;
+        return dock.render(false);
+    },
+
+    /**
+     * Scroll to current combatant.
+     */
+    scrollToCurrent() {
+        if (this._instance) {
+            this._instance._snapWindowToCurrent();
+        }
+    },
+};
+
 // Hook: Combat updates - Handle round changes and negative initiative checks
 // Note: Using updateCombat instead of combatRound because:
 // - combatRound only fires on the client that triggered the action
@@ -414,6 +513,12 @@ Hooks.on('updateCombat', async (combat, updateData, options, userId) => {
             }
         }
     }
+
+    // Refresh combat dock on any turn or round change
+    await CombatDockManager.refresh();
+    if ('turn' in updateData) {
+        CombatDockManager.scrollToCurrent();
+    }
 });
 
 // Hook: Combat Start - Open dialogs for initial round
@@ -433,6 +538,9 @@ Hooks.on('combatStart', (combat, updateData) => {
             }
         }
     }
+
+    // Show combat dock
+    CombatDockManager.render();
 });
 
 // Hook: Intercept initiative roll buttons via capture-phase event delegation.
@@ -517,6 +625,25 @@ Hooks.on('updateCombatant', async (combatant, updateData, options, userId) => {
     if (combat.turns.length > 0 && combat.turn !== 0) {
         await combat.update({ turn: 0 });
     }
+
+    // Refresh combat dock when initiative values change
+    await CombatDockManager.refresh();
+});
+
+// Hook: Combat dock turn change — scroll to current combatant
+Hooks.on('combatTurn', (combat, prior, current) => {
+    CombatDockManager.scrollToCurrent();
+});
+
+// Hook: Combat dock cleanup when combat ends
+Hooks.on('deleteCombat', (combat, options, userId) => {
+    CombatDockManager.close();
+});
+
+// Hook: Render combat dock when combat tracker renders
+Hooks.on('renderCombatTracker', (app, htmlDOM) => {
+    // Show dock alongside the tracker
+    CombatDockManager.render();
 });
 
 // Hook: Skip negative-initiative combatants (locked state, action delayed)

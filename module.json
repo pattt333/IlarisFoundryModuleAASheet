@@ -27,7 +27,8 @@
     "styles/combat-dialog.css",
     "styles/initiative-dialog.css",
     "styles/mass-initiative-dialog.css",
-    "styles/ai-creature-dialog.css"
+    "styles/ai-creature-dialog.css",
+    "styles/combat-dock.css"
   ],
   "relationships": {
     "systems": [

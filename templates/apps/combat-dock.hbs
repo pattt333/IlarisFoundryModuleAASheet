@@ -1,0 +1,47 @@
+{{!-- Combat Dock — Horizontal Carousel Combat Tracker --}}
+<div class="ilaris-combat-dock {{stateClass}} {{positionClass}} {{sizeClass}}" data-combat-id="{{combatId}}">
+
+    {{!-- Carousel Container --}}
+    <div class="dock-carousel-container">
+        {{#if hasOverflow}}
+        <button type="button" class="dock-scroll-btn dock-scroll-left" data-action="shiftLeft" aria-label="Nach links verschieben">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        {{/if}}
+
+        <div class="dock-carousel" data-carousel="combatants">
+            {{#each combatants as |combatant|}}
+                {{> "modules/ilaris-alternative-actor-sheet/templates/components/combat-dock-card.hbs"
+                    name=combatant.name
+                    img=combatant.img
+                    combatantId=combatant.combatantId
+                    initiative=combatant.initiative
+                    isPreRoll=../isPreRoll
+                    canRollInitiative=combatant.canRollInitiative
+                    isOwner=combatant.isOwner
+                    isGM=../isGM
+                    isCurrent=combatant.isCurrent
+                    isDefeated=combatant.isDefeated
+                    actions=combatant.actions
+                    lepCurrent=combatant.lepCurrent
+                    lepMax=combatant.lepMax
+                    lepPercent=combatant.lepPercent
+                    showLepBar=combatant.showLepBar
+                }}
+            {{/each}}
+        </div>
+
+        {{#if hasOverflow}}
+        <button type="button" class="dock-scroll-btn dock-scroll-right" data-action="shiftRight" aria-label="Nach rechts verschieben">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        {{/if}}
+    </div>
+
+    {{!-- Round Badge --}}
+    <div class="dock-round-badge">
+        <span class="dock-round-label">Runde</span>
+        <span class="dock-round-number">{{round}}</span>
+    </div>
+
+</div>

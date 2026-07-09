@@ -6,3 +6,4 @@ export { InitiativeDialog } from './initiative-dialog.js';
 export { MassInitiativeDialog } from './mass-initiative-dialog.js';
 export { NegativeInitiativeDialog } from './negative-initiative-dialog.js';
 export { InitiativeStateManager } from './initiative-state-manager.js';
+export { CombatDockApp } from './combat-dock.js';

@@ -10,7 +10,8 @@
 .iaas-item-apply-window,
 .target-selection-dialog,
 .initiative-dialog,
-.mass-initiative-dialog {
+.mass-initiative-dialog,
+.ilaris-combat-dock {
     --color-white: #fff;
     --color-black: #000;
     --color-accent-primary: #4299e1;
@@ -107,7 +108,8 @@ body.theme-dark .ilaris.sheet.actor.alternative,
 body.theme-dark .iaas-item-apply-window,
 body.theme-dark .target-selection-dialog,
 body.theme-dark .initiative-dialog,
-body.theme-dark .mass-initiative-dialog {
+body.theme-dark .mass-initiative-dialog,
+body.theme-dark .ilaris-combat-dock {
     --color-white: #fff;
     --color-black: #000;
     --color-accent-primary: #007a75;

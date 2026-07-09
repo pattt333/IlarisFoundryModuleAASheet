@@ -1,0 +1,51 @@
+{{!-- Combat Dock Card Partial --}}
+{{!-- Displays a single combatant card in the dock carousel --}}
+<div class="combat-dock-card {{#if isCurrent}}is-current{{/if}} {{#if isDefeated}}is-defeated{{/if}}" data-combatant-id="{{combatantId}}">
+    
+    {{!-- Portrait --}}
+    <div class="dock-card-portrait">
+        <img src="{{img}}" alt="{{name}}" />
+    </div>
+
+    {{!-- Card Body --}}
+    <div class="dock-card-body">
+        {{!-- Name --}}
+        <div class="dock-card-name" title="{{name}}">{{name}}</div>
+
+        {{!-- Initiative: button (pre-roll) or value (in-combat) --}}
+        {{#if isPreRoll}}
+            {{#if canRollInitiative}}
+            <button type="button" class="dock-ini-btn" data-action="rollInitiative" data-combatant-id="{{combatantId}}">
+                <i class="fas fa-dice"></i> INI
+            </button>
+            {{else}}
+            <div class="dock-card-ini muted">—</div>
+            {{/if}}
+        {{else}}
+            <div class="dock-card-ini">INI {{initiative}}</div>
+        {{/if}}
+
+        {{!-- Announced Actions --}}
+        {{#if actions.length}}
+        <div class="dock-card-actions">
+            {{#each actions as |action|}}
+            <span class="dock-action-chip">
+                {{#if action.img}}<img src="{{action.img}}" alt="" width="14" height="14" />{{/if}}
+                {{action.name}}
+            </span>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{!-- LeP Bar (owner/GM only) --}}
+        {{#if showLepBar}}
+        <div class="dock-card-lep">
+            <div class="dock-lep-bar">
+                <div class="dock-lep-fill" style="width: {{lepPercent}}%;"></div>
+            </div>
+            <span class="dock-lep-text">{{lepCurrent}}/{{lepMax}} LeP</span>
+        </div>
+        {{/if}}
+    </div>
+
+</div>

@@ -62,7 +62,33 @@ Always run `npm install` before building or testing. Always run `npm run pack-al
 - **Naming**: German domain terms in data/UI (Fertigkeiten, Zauber, Waffen), English in structural code (hooks, sheets, utils)
 - **No TypeScript** — pure JavaScript with JSDoc where present
 
-## Foundry VTT API
+## 🚨 Foundry VTT API — MANDATORY VERIFICATION RULE
+
+**This is the most important rule in this file. Violating it causes bugs that waste hours of debugging.**
+
+### Before writing ANY code that touches a Foundry API:
+
+1. **Fetch the relevant API doc page** from `https://foundryvtt.com/api/v14/`:
+   - `Combat` → `classes/foundry.documents.Combat.html`
+   - `Combatant` → `classes/foundry.documents.Combatant.html`
+   - `Actor` → `classes/foundry.documents.Actor.html`
+   - etc.
+
+2. **Verify EVERY property name, method signature, and hook argument** against the docs. Do NOT:
+   - ❌ Guess property names based on JSON field names (e.g., `_id` in JSON may be `.id` on the class)
+   - ❌ Assume how other modules or systems access properties
+   - ❌ Infer property names from common patterns (e.g., assuming `combatantId` exists because `actorId` does)
+   - ❌ Use raw JSON inspection as a substitute for reading the class API docs
+
+3. **Key reference — `combat.turns`**: This is `Combatant[]` — an array of full Combatant document instances. It is NOT an array of `{combatantId: string}` or any other intermediate format. Do not `.map()` through it unless transforming the Combatant objects themselves.
+
+4. **If the docs are unclear or unavailable**, STOP and ask the user before writing code. Never proceed with assumptions.
+
+### Enforcement
+
+Before submitting any code change that uses a Foundry API, mentally confirm: "I verified this property/method exists in the API docs and I know its exact type signature." If you cannot say this, you have not finished the task.
+
+---
 
 **Always consult**: <https://foundryvtt.com/api/>
 

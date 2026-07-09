@@ -1,0 +1,356 @@
+/**
+ * Combat Dock Styles
+ *
+ * Horizontal carousel combat tracker docked at top or bottom of the viewport.
+ * Uses CSS variables scoped to .ilaris-combat-dock defined in module.css.
+ * No --color-* definitions here — inherited from the combined selector.
+ */
+
+/* ==================== Dock Container ==================== */
+.ilaris-combat-dock {
+    position: fixed;
+    left: 36%;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 16px;
+    height: auto;
+    min-height: 72px;
+    transition: transform 0.2s ease;
+    justify-content: center;
+    flex-direction: column;
+    width: 482px;
+}
+
+/* Position variants */
+.ilaris-combat-dock.position-top {
+    top: 0;
+}
+
+.ilaris-combat-dock.position-bottom {
+    bottom: 72px;
+}
+
+/* ==================== Round Badge ==================== */
+.ilaris-combat-dock .dock-round-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    padding: 0.2rem 0.4rem;
+    background: var(--color-accent-primary-overlay-soft);
+    border: 1px solid var(--color-accent-primary);
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.ilaris-combat-dock .dock-round-label {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    line-height: 1;
+}
+
+.ilaris-combat-dock .dock-round-number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-accent-primary);
+    line-height: 1.1;
+}
+
+/* ==================== Carousel Container ==================== */
+.ilaris-combat-dock .dock-carousel-container {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.ilaris-combat-dock .dock-carousel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.15rem 0;
+}
+
+/* ==================== Scroll Buttons ==================== */
+.ilaris-combat-dock .dock-scroll-btn {
+    flex-shrink: 0;
+    width: 24px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--overlay-black-10);
+    border: 1px solid var(--color-border-muted);
+    border-radius: 4px;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.15s ease;
+}
+
+.ilaris-combat-dock .dock-scroll-btn:hover {
+    background: var(--overlay-black-20);
+}
+
+.ilaris-combat-dock .dock-scroll-btn:active {
+    background: var(--overlay-black-30);
+}
+
+/* ==================== Card Base ==================== */
+.combat-dock-card {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-surface-base);
+    border: 2px solid var(--color-border-light);
+    border-radius: 8px;
+    padding: 0.4rem;
+    gap: 0.25rem;
+    transition:
+        width 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+    overflow: hidden;
+}
+
+/* Standard card sizes */
+.ilaris-combat-dock.size-normal .combat-dock-card {
+    width: 120px;
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card {
+    width: 80px;
+}
+
+/* ==================== Card Portrait ==================== */
+.combat-dock-card .dock-card-portrait {
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-border-default);
+}
+
+.ilaris-combat-dock.size-normal .combat-dock-card .dock-card-portrait {
+    width: 48px;
+    height: 48px;
+}
+
+.ilaris-combat-dock.size-normal .combat-dock-card .dock-card-portrait img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card .dock-card-portrait {
+    width: 32px;
+    height: 32px;
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card .dock-card-portrait img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+/* ==================== Card Body ==================== */
+.combat-dock-card .dock-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.65rem;
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card .dock-card-body {
+    font-size: 0.55rem;
+}
+
+/* ==================== Card Name ==================== */
+.combat-dock-card .dock-card-name {
+    font-weight: bold;
+    color: var(--color-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-size: 0.7rem;
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card .dock-card-name {
+    font-size: 0.6rem;
+}
+
+/* ==================== Initiative Display ==================== */
+.combat-dock-card .dock-card-ini {
+    font-weight: bold;
+    color: var(--color-accent-primary);
+    font-size: 0.75rem;
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card .dock-card-ini {
+    font-size: 0.65rem;
+}
+
+.combat-dock-card .dock-card-ini.muted {
+    color: var(--color-text-muted);
+}
+
+/* ==================== INI Roll Button (Pre-Roll) ==================== */
+.combat-dock-card .dock-ini-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.15rem 0.5rem;
+    background: var(--color-accent-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.65rem;
+    font-weight: bold;
+    transition: background 0.15s ease;
+}
+
+.combat-dock-card .dock-ini-btn:hover {
+    background: var(--color-accent-primary-hover);
+}
+
+.combat-dock-card .dock-ini-btn:active {
+    background: var(--color-accent-primary-strong);
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card .dock-ini-btn {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.35rem;
+}
+
+/* ==================== Action Chips ==================== */
+.combat-dock-card .dock-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.15rem;
+    max-width: 100%;
+}
+
+.combat-dock-card .dock-action-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.1rem 0.3rem;
+    background: var(--color-accent-primary-overlay-soft);
+    border: 1px solid var(--color-accent-primary);
+    border-radius: 3px;
+    font-size: 0.55rem;
+    color: var(--color-accent-primary-strong);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card .dock-action-chip {
+    font-size: 0.5rem;
+    padding: 0.05rem 0.2rem;
+}
+
+/* ==================== LeP Bar ==================== */
+.combat-dock-card .dock-card-lep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    width: 100%;
+}
+
+.combat-dock-card .dock-lep-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--overlay-black-10);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.combat-dock-card .dock-lep-fill {
+    height: 100%;
+    background: var(--color-danger);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.combat-dock-card .dock-lep-text {
+    font-size: 0.5rem;
+    color: var(--color-text-muted);
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card .dock-lep-bar {
+    height: 3px;
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card .dock-lep-text {
+    font-size: 0.45rem;
+}
+
+/* ==================== Current Card (Active Turn) ==================== */
+.ilaris-combat-dock.size-normal .combat-dock-card.is-current {
+    width: 170px;
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 8px var(--color-accent-primary-glow);
+    animation: ilaris-combat-pulse 2s ease-in-out infinite;
+    transform: scale(1.08);
+    z-index: 2;
+}
+
+.ilaris-combat-dock.size-small .combat-dock-card.is-current {
+    width: 110px;
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 6px var(--color-accent-primary-glow);
+    animation: ilaris-combat-pulse 2s ease-in-out infinite;
+    transform: scale(1.08);
+    z-index: 2;
+}
+
+.combat-dock-card.is-current .dock-card-portrait {
+    border-color: var(--color-accent-primary);
+}
+
+@keyframes ilaris-combat-pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 6px var(--color-accent-primary-glow);
+    }
+    50% {
+        box-shadow:
+            0 0 16px var(--color-accent-primary-glow),
+            0 0 32px var(--color-accent-primary-glow);
+    }
+}
+
+/* ==================== Defeated Card ==================== */
+.combat-dock-card.is-defeated {
+    opacity: 0.5;
+}
+
+.combat-dock-card.is-defeated .dock-card-name {
+    text-decoration: line-through;
+    color: var(--color-text-muted);
+}
+
+/* ==================== Pre-Roll State ==================== */
+.ilaris-combat-dock.pre-roll .combat-dock-card.is-current {
+    /* No current highlight in pre-roll state */
+    animation: none;
+    box-shadow: none;
+    border-color: var(--color-border-light);
+    transform: none;
+    z-index: 1;
+}
