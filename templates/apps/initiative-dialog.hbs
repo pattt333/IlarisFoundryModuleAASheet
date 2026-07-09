@@ -121,18 +121,23 @@
                 <section class="dice-section">
                     <h3><i class="fas fa-dice"></i> Würfeln</h3>
 
-                    {{#unless manualRolling}}
+                    {{#if manualRolling}}
+                    <div class="form-group manual-dice-group">
+                        <label for="manualDice">Würfelergebnis</label>
+                        <input type="number" name="manualDice" id="manualDice" min="1" max="6" value="{{#if hasRolled}}{{diceResults.[0]}}{{/if}}" placeholder="1-6"/>
+                    </div>
+                    {{else}}
                     <div class="form-group dice-count-group">
                         <select name="diceCount" id="diceCount" title="Man kann irgendein Ergebnis von den beiden wählen">
                             <option value="1" {{#if (eq diceCount 1)}}selected{{/if}}>1 Würfel</option>
                             <option value="2" {{#if (eq diceCount 2)}}selected{{/if}}>2 Würfel (Auswahl)</option>
                         </select>
                     </div>
-                    {{/unless}}
 
                     <button type="button" class="roll-dice-btn">
                         <i class="fas fa-dice-d6"></i> {{#if hasRolled}}Neu würfeln{{else}}Würfeln{{/if}}
                     </button>
+                    {{/if}}
 
                     {{#if hasRolled}}
                     <div class="dice-results">

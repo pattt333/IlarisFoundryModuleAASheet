@@ -402,6 +402,9 @@ export class InitiativeDialog extends Application {
         html.find('.roll-dice-btn').click(this._onRollDice.bind(this));
         html.find('.dice-result').click(this._onSelectDice.bind(this));
 
+        // Manual dice input (manual rolling mode)
+        html.find('input[name="manualDice"]').change(this._onManualDiceChange.bind(this));
+
         // Main buttons
         html.find('.ini-ansagen-btn').click(this._onIniAnsagen.bind(this));
         html.find('.cancel-btn').click(this._onCancel.bind(this));
@@ -486,16 +489,24 @@ export class InitiativeDialog extends Application {
 
         if (target.name === 'atMod') {
             this.atMod = parseInt(target.value) || 0;
+            await this._savePersistedState();
+            this._updateFormulaBreakdown();
         } else if (target.name === 'vtMod') {
             this.vtMod = parseInt(target.value) || 0;
+            await this._savePersistedState();
+            this._updateFormulaBreakdown();
         } else if (target.name === 'kombinierteAktion') {
             this.kombinierteAktion = target.checked;
+            await this._savePersistedState();
+            this._updateFormulaBreakdown();
         } else if (target.name === 'diceCount') {
             this.diceCount = parseInt(target.value) || 1;
+            this.diceResults = [];
+            this.selectedDiceIndex = null;
+            this.hasRolled = false;
+            await this._savePersistedState();
+            this.render(); // re-render to show correct number of placeholder dice
         }
-
-        await this._savePersistedState();
-        this._updateFormulaBreakdown();
     }
 
     /**
@@ -637,6 +648,26 @@ export class InitiativeDialog extends Application {
         this.element.find('.dice-result').removeClass('selected');
         $(event.currentTarget).addClass('selected');
 
+        this._updateFormulaBreakdown();
+    }
+
+    /**
+     * Handle manual dice input change (manual rolling mode).
+     * @param {Event} event
+     * @private
+     */
+    async _onManualDiceChange(event) {
+        const value = parseInt(event.target.value);
+        if (isNaN(value) || value < 1 || value > 6) {
+            this.diceResults = [];
+            this.selectedDiceIndex = null;
+            this.hasRolled = false;
+        } else {
+            this.diceResults = [value];
+            this.selectedDiceIndex = 0;
+            this.hasRolled = true;
+        }
+        await this._savePersistedState();
         this._updateFormulaBreakdown();
     }
 

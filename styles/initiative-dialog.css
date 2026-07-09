@@ -266,7 +266,8 @@
     display: flex;
     gap: 0.75rem;
     margin-top: 0.5rem;
-    align-items: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .initiative-dialog-form .weapon-select-group {
