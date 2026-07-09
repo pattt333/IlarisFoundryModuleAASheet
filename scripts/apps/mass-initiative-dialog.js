@@ -1,9 +1,12 @@
 /**
- * Mass Initiative Dialog for NPCs
+ * Mass Initiative Dialog — Card-Grid Dashboard for NPCs
  *
  * Massen-Dialog für den GM zur Bearbeitung aller NPCs im Encounter.
- * Accordion-basiertes Interface mit einem Accordion pro NPC.
+ * Card-grid Interface mit Action Chips, visuellen Stati und Batch-Operationen.
+ * Delegiert gemeinsame Logik an InitiativeStateManager.
  */
+import { InitiativeStateManager } from './initiative-state-manager.js';
+
 export class MassInitiativeDialog extends Application {
     constructor(combat, npcCombatants, options = {}) {
         super(options);
@@ -11,10 +14,15 @@ export class MassInitiativeDialog extends Application {
         this.npcCombatants = npcCombatants;
         this.npcStates = new Map();
         this.availableActions = [];
+        this.filterDefault = game.settings.get(
+            'ilaris-alternative-actor-sheet',
+            'massInitiativeFilterDefault'
+        ) ?? false;
 
-        // Initialize state for each NPC
+        // Initialize state for each NPC via StateManager
         for (const combatant of npcCombatants) {
-            this._initializeNpcState(combatant);
+            const state = InitiativeStateManager.loadState(combatant.actor);
+            this.npcStates.set(combatant.id, state);
         }
     }
 
@@ -23,8 +31,9 @@ export class MassInitiativeDialog extends Application {
         return foundry.utils.mergeObject(super.defaultOptions, {
             id: 'mass-initiative-dialog',
             classes: ['ilaris', 'mass-initiative-dialog'],
-            template: 'modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs',
-            width: 800,
+            template:
+                'modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs',
+            width: 900,
             height: 600,
             title: 'NPC Initiative',
             resizable: true,
@@ -36,129 +45,56 @@ export class MassInitiativeDialog extends Application {
         return `NPC Initiative - Runde ${this.combat?.round ?? 1}`;
     }
 
-    /**
-     * Initialize state for an NPC combatant
-     * @param {Combatant} combatant
-     * @private
-     */
-    _initializeNpcState(combatant) {
-        const actor = combatant.actor;
-        const savedState = actor?.getFlag('ilaris-alternative-actor-sheet', 'dialogState');
-
-        if (savedState) {
-            this.npcStates.set(combatant.id, {
-                iniMod: savedState.iniMod ?? 0,
-                atMod: savedState.atMod ?? 0,
-                vtMod: savedState.vtMod ?? 0,
-                selectedActionIds: savedState.selectedActionIds ?? [],
-                kombinierteAktion: savedState.kombinierteAktion ?? false,
-                diceCount: savedState.diceCount ?? 1,
-                diceResults: savedState.diceResults ?? [],
-                selectedDiceIndex: savedState.selectedDiceIndex ?? null,
-                hasRolled: savedState.hasRolled ?? false,
-                movedAction: savedState.movedAction ?? false,
-                movedActionRounds: savedState.movedActionRounds ?? 0,
-                carryOver: savedState.carryOver ?? 0,
-                lockedActionId: savedState.lockedActionId ?? null,
-                lockedWeaponId: savedState.lockedWeaponId ?? null,
-                processed: false,
-            });
-        } else {
-            this.npcStates.set(combatant.id, {
-                iniMod: 0,
-                atMod: 0,
-                vtMod: 0,
-                selectedActionIds: [],
-                kombinierteAktion: false,
-                diceCount: 1,
-                diceResults: [],
-                selectedDiceIndex: null,
-                hasRolled: false,
-                movedAction: false,
-                movedActionRounds: 0,
-                carryOver: 0,
-                lockedActionId: null,
-                lockedWeaponId: null,
-                processed: false,
-            });
-        }
-    }
-
-    /**
-     * Save state for an NPC
-     * @param {string} combatantId
-     * @private
-     */
-    async _saveNpcState(combatantId) {
-        const combatant = this.npcCombatants.find(c => c.id === combatantId);
-        const state = this.npcStates.get(combatantId);
-
-        if (combatant?.actor && state) {
-            await combatant.actor.setFlag('ilaris-alternative-actor-sheet', 'dialogState', {
-                iniMod: state.iniMod,
-                atMod: state.atMod,
-                vtMod: state.vtMod,
-                selectedActionIds: state.selectedActionIds,
-                kombinierteAktion: state.kombinierteAktion,
-                diceCount: state.diceCount,
-                diceResults: state.diceResults,
-                selectedDiceIndex: state.selectedDiceIndex,
-                hasRolled: state.hasRolled,
-                movedAction: state.movedAction,
-                movedActionRounds: state.movedActionRounds,
-                carryOver: state.carryOver,
-                lockedActionId: state.lockedActionId,
-                lockedWeaponId: state.lockedWeaponId,
-            });
-        }
-    }
-
-    /**
-     * Clear state for an NPC
-     * @param {string} combatantId
-     * @private
-     */
-    async _clearNpcState(combatantId) {
-        const combatant = this.npcCombatants.find(c => c.id === combatantId);
-        if (combatant?.actor) {
-            await combatant.actor.unsetFlag('ilaris-alternative-actor-sheet', 'dialogState');
-        }
-    }
-
-    /**
-     * Get base initiative for actor (PC or NPC)
-     * @param {Actor} actor
-     * @returns {number}
-     * @private
-     */
-    _getBaseInitiative(actor) {
-        // PC (held) uses system.abgeleitete.ini
-        // NPC (kreatur) uses system.kampfwerte.ini
-        if (actor.type === 'held') {
-            return actor.system.abgeleitete?.ini ?? 0;
-        } else if (actor.type === 'kreatur') {
-            return actor.system.kampfwerte?.ini ?? 0;
-        }
-        return 0;
-    }
-
     /** @override */
     async getData() {
         const context = await super.getData();
 
-        // Load available actions from compendium only (for NPCs) - only once
-        await this._loadAvailableActions();
+        // Load available actions once
+        if (this.availableActions.length === 0) {
+            this.availableActions = await InitiativeStateManager.loadAvailableActions();
+        }
 
-        // Build NPC data for template
+        // Build NPC data for template, sorted alphabetically by name
         const npcs = [];
-        for (const combatant of this.npcCombatants) {
+        const sortedCombatants = [...this.npcCombatants].sort((a, b) =>
+            (a.actor?.name ?? a.name).localeCompare(b.actor?.name ?? b.name)
+        );
+
+        let processedCount = 0;
+
+        for (const combatant of sortedCombatants) {
             const state = this.npcStates.get(combatant.id);
             const actor = combatant.actor;
-            const baseIni = this._getBaseInitiative(actor);
+            if (!state || !actor) continue;
 
-            // Calculate total initiative
-            const totalIni = this._calculateTotalInitiative(combatant.id);
-            const isNegativeIni = totalIni < 0;
+            const baseIni = InitiativeStateManager.getBaseInitiative(actor);
+            const totalIni = InitiativeStateManager.calculateTotalInitiative(
+                state,
+                this.availableActions,
+                actor
+            );
+            const needsDiceSelection =
+                state.diceCount === 2 && state.hasRolled && state.selectedDiceIndex === null;
+
+            // Build action chips for display
+            const actionChips = state.selectedActionIds.map(id => {
+                const action = this.availableActions.find(a => a.id === id);
+                return {
+                    id: id,
+                    name: action?.name ?? 'Unbekannt',
+                    img: action?.img ?? '',
+                    iniMod: action?.iniMod ?? 0,
+                    isLocked: state.movedAction && id === state.lockedActionId,
+                };
+            });
+
+            // Determine if NPC is processed
+            const isProcessed = state.hasRolled && !needsDiceSelection;
+            if (isProcessed) processedCount++;
+
+            // Filter state
+            const isFiltered =
+                this.filterDefault && isProcessed && !state.movedAction;
 
             npcs.push({
                 combatantId: combatant.id,
@@ -168,147 +104,29 @@ export class MassInitiativeDialog extends Application {
                 baseIni: baseIni,
                 state: state,
                 totalIni: totalIni,
-                isNegativeIni: isNegativeIni,
-                needsDiceSelection: state.diceCount === 2 && state.hasRolled && state.selectedDiceIndex === null,
+                actionChips: actionChips,
+                needsDiceSelection: needsDiceSelection,
+                isFiltered: isFiltered,
             });
         }
 
         context.npcs = npcs;
         context.availableActions = this.availableActions;
         context.round = this.combat?.round ?? 1;
-        context.processedCount = Array.from(this.npcStates.values()).filter(s => s.processed).length;
+        context.processedCount = processedCount;
         context.totalCount = this.npcCombatants.length;
+        context.progressPercent =
+            this.npcCombatants.length > 0
+                ? Math.round((processedCount / this.npcCombatants.length) * 100)
+                : 0;
+        context.filterDefault = this.filterDefault;
 
         return context;
-    }
-
-    /**
-     * Load available actions from compendium only
-     * @private
-     */
-    async _loadAvailableActions() {
-        this.availableActions = [];
-
-        try {
-            const pack = game.packs.get('ilaris-alternative-actor-sheet.nenneke-aktionen');
-            if (pack) {
-                const documents = await pack.getDocuments();
-                for (const item of documents) {
-                    this.availableActions.push({
-                        id: item.uuid,
-                        _id: item.id,
-                        name: item.name,
-                        description: item.system?.description ?? '',
-                        img: item.img,
-                        source: 'compendium',
-                        uuid: item.uuid,
-                        effects: item.effects?.contents ?? [],
-                    });
-                }
-                console.log(
-                    'MassInitiativeDialog | Loaded actions:',
-                    this.availableActions.map(a => ({ name: a.name, id: a.id }))
-                );
-            }
-            this.availableActions.forEach(action => {
-                if (action?.effects) {
-                    for (const effect of action.effects) {
-                        const iniChange = effect.changes?.find(
-                            c => c.key === 'system.abgeleitete.ini' || c.key.includes('ini')
-                        );
-                        if (iniChange) {
-                            action.iniMod = parseInt(iniChange.value) || 0;
-                        }
-                    }
-                }
-            });
-        } catch (error) {
-            console.warn('MassInitiativeDialog | Could not load actions compendium:', error);
-        }
-    }
-
-    /**
-     * Calculate total initiative for an NPC
-     * @param {string} combatantId
-     * @private
-     * @returns {number}
-     */
-    _calculateTotalInitiative(combatantId) {
-        const combatant = this.npcCombatants.find(c => c.id === combatantId);
-        const state = this.npcStates.get(combatantId);
-
-        if (!combatant?.actor || !state) return 0;
-
-        const baseIni = combatant.actor.system.kampfwerte?.baseIni ?? 0;
-
-        // Get dice result
-        const diceResult =
-            state.selectedDiceIndex !== null
-                ? (state.diceResults[state.selectedDiceIndex] ?? 0)
-                : (state.diceResults[0] ?? 0);
-
-        // LOCKED state: carryOver + baseIni + iniMod + diceResult
-        if (state.movedAction) {
-            return (state.carryOver ?? 0) + baseIni + state.iniMod + diceResult;
-        }
-
-        // FRESH state: baseIni + actionIniMod + iniMod + diceResult
-        let actionIniMod = 0;
-        if (state.selectedActionIds.length > 0) {
-            const actionMods = state.selectedActionIds.map(id => {
-                const action = this.availableActions.find(a => (a.id || a._id) === id);
-                return action?.iniMod ? parseInt(action.iniMod) || 0 : 0;
-            });
-            actionIniMod = Math.min(...actionMods, 0);
-        }
-
-        return baseIni + actionIniMod + state.iniMod + diceResult;
-    }
-
-    /**
-     * Calculate AT/VT modifiers from actions for an NPC
-     * @param {string} combatantId
-     * @private
-     * @returns {{at: number, vt: number}}
-     */
-    _calculateActionModifiers(combatantId) {
-        const state = this.npcStates.get(combatantId);
-        if (!state) return { at: 0, vt: 0 };
-
-        let atMod = 0;
-        let vtMod = 0;
-
-        for (const actionId of state.selectedActionIds) {
-            const action = this.availableActions.find(a => (a.id || a._id) === actionId);
-            if (action?.effects) {
-                for (const effect of action.effects) {
-                    for (const change of effect.changes || []) {
-                        if (change.key === 'system.modifikatoren.nahkampfmod' || change.key.includes('nahkampfmod')) {
-                            atMod += parseInt(change.value) || 0;
-                        }
-                        if (
-                            change.key === 'system.modifikatoren.verteidigungmod' ||
-                            change.key.includes('verteidigungmod')
-                        ) {
-                            vtMod += parseInt(change.value) || 0;
-                        }
-                    }
-                }
-            }
-        }
-
-        return { at: atMod, vt: vtMod };
     }
 
     /** @override */
     activateListeners(html) {
         super.activateListeners(html);
-
-        // Accordion toggle
-        html.find('.accordion-header').click(this._onAccordionToggle.bind(this));
-
-        // Actions dropdown
-        html.find('select[name^="actions-"]').change(this._onActionsChange.bind(this));
 
         // Dice rolling
         html.find('.roll-dice-btn').click(this._onRollDice.bind(this));
@@ -317,226 +135,192 @@ export class MassInitiativeDialog extends Application {
         // Mass dice rolling
         html.find('.roll-all-dice-btn').click(this._onRollAllDice.bind(this));
 
+        // Multi-select action changes
+        html.find('multi-select').on('change', this._onActionsChange.bind(this));
+
+        // Chip remove buttons
+        html.find('.chip-remove').click(this._onChipRemove.bind(this));
+
         // Main buttons
         html.find('.ini-ansagen-btn').click(this._onIniAnsagen.bind(this));
         html.find('.cancel-btn').click(this._onCancel.bind(this));
 
-        // Form change handling for inputs
-        html.find('input, select').on('change', this._onFormChange.bind(this));
+        // Batch apply
+        html.find('.apply-batch-btn').click(this._onBatchApply.bind(this));
+
+        // Filter toggle
+        html.find('.filter-toggle input').change(this._onFilterToggle.bind(this));
+
+        // Form change handling for modifier inputs
+        html.find('input[type="number"], input[type="checkbox"], select.dice-count-select').on(
+            'change',
+            this._onFormChange.bind(this)
+        );
+
+        // Tooltip hover for formula breakdown
+        html.find('.result-info').on('mouseenter', this._onTooltipShow.bind(this));
+        html.find('.result-info').on('mouseleave', this._onTooltipHide.bind(this));
     }
 
-    /**
-     * Handle accordion toggle
-     * @param {Event} event
-     * @private
-     */
-    _onAccordionToggle(event) {
-        event.preventDefault();
-        const header = $(event.currentTarget);
-        const content = header.next('.accordion-content');
-        const icon = header.find('.accordion-icon');
-
-        // Toggle active class
-        header.toggleClass('active');
-        content.toggleClass('active');
-
-        // Rotate icon
-        if (content.hasClass('active')) {
-            icon.css('transform', 'rotate(180deg)');
-        } else {
-            icon.css('transform', 'rotate(0deg)');
-        }
-    }
+    /* -------------------------------------------- */
+    /*  Event Handlers                               */
+    /* -------------------------------------------- */
 
     /**
-     * Handle general form changes (inputs and selects except actions)
+     * Handle form changes for modifiers and dice count.
      * @param {Event} event
      * @private
      */
     async _onFormChange(event) {
         const element = event.currentTarget;
         const name = element.name;
+        if (!name || name.startsWith('actions-')) return;
 
-        // Skip if it's an actions select (handled separately)
-        if (name.startsWith('actions-')) return;
-
-        // Extract combatant ID from input name
         const parts = name.split('-');
         if (parts.length < 2) return;
 
         const combatantId = parts[parts.length - 1];
-        const fieldName = parts.slice(0, -1).join('-');
+        const fieldBase = parts.slice(0, -1).join('-');
         const state = this.npcStates.get(combatantId);
-
         if (!state) return;
 
-        // Update state based on field type
-        if (fieldName === 'iniMod') {
-            state.iniMod = parseInt(element.value) || 0;
-        } else if (fieldName === 'atMod') {
-            state.atMod = parseInt(element.value) || 0;
-        } else if (fieldName === 'vtMod') {
-            state.vtMod = parseInt(element.value) || 0;
-        } else if (fieldName === 'kombinierteAktion') {
-            state.kombinierteAktion = element.checked;
-        } else if (fieldName === 'diceCount') {
-            state.diceCount = parseInt(element.value) || 1;
-            state.diceResults = [];
-            state.selectedDiceIndex = null;
-            state.hasRolled = false;
+        const combatant = this.npcCombatants.find(c => c.id === combatantId);
+
+        switch (fieldBase) {
+            case 'iniMod':
+                state.iniMod = parseInt(element.value) || 0;
+                break;
+            case 'atMod':
+                state.atMod = parseInt(element.value) || 0;
+                break;
+            case 'vtMod':
+                state.vtMod = parseInt(element.value) || 0;
+                break;
+            case 'kombinierteAktion':
+                state.kombinierteAktion = element.checked;
+                break;
+            case 'diceCount':
+                state.diceCount = parseInt(element.value) || 1;
+                state.diceResults = [];
+                state.selectedDiceIndex = null;
+                state.hasRolled = false;
+                break;
         }
 
-        // Save state
-        await this._saveNpcState(combatantId);
-
-        // Update calculated INI display directly in DOM (avoid full re-render)
-        if (fieldName === 'iniMod' || fieldName === 'kombinierteAktion') {
-            const totalIni = this._calculateTotalInitiative(combatantId);
-            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
-            const iniDisplay = accordion.find('.current-ini strong');
-            if (iniDisplay.length) {
-                iniDisplay.text(totalIni);
-                iniDisplay.toggleClass('negative', totalIni < 0);
-            }
+        if (combatant?.actor) {
+            await InitiativeStateManager.persistState(combatant.actor, state);
         }
+
+        this._updateCardDisplay(combatantId);
     }
 
     /**
-     * Handle actions selection change
+     * Handle action selection via Foundry multi-select.
      * @param {Event} event
      * @private
      */
     async _onActionsChange(event) {
-        const parts = event.target.name.split('-');
+        const name = event.target.getAttribute('name');
+        if (!name) return;
+
+        const parts = name.split('-');
         const combatantId = parts[parts.length - 1];
         const state = this.npcStates.get(combatantId);
+        if (!state) return;
 
-        if (state) {
-            const selectedOptions = Array.from(event.target.value);
-            state.selectedActionIds = selectedOptions.slice(0, 2);
-            await this._saveNpcState(combatantId);
+        // Get selected values from the multi-select
+        const selectedOptions = Array.from(event.target.selectedOptions || []);
+        const selectedIds = selectedOptions.map(opt => opt.value).slice(0, 2);
 
-            // Update calculated INI display directly in DOM
-            const totalIni = this._calculateTotalInitiative(combatantId);
-            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
-            const iniDisplay = accordion.find('.current-ini strong');
-            if (iniDisplay.length) {
-                iniDisplay.text(totalIni);
-                iniDisplay.toggleClass('negative', totalIni < 0);
-            }
+        state.selectedActionIds = selectedIds;
+        const combatant = this.npcCombatants.find(c => c.id === combatantId);
+
+        if (combatant?.actor) {
+            await InitiativeStateManager.persistState(combatant.actor, state);
         }
+
+        // Re-render to update chips and multi-select state
+        this.render();
     }
 
     /**
-     * Handle dice rolling for single NPC
+     * Handle chip remove button click.
+     * @param {Event} event
+     * @private
+     */
+    async _onChipRemove(event) {
+        event.stopPropagation();
+        const chip = event.currentTarget.closest('.action-chip');
+        const actionId = chip?.dataset.actionId;
+        const card = chip?.closest('.npc-card');
+        const combatantId = card?.dataset.combatantId;
+
+        if (!actionId || !combatantId) return;
+
+        const state = this.npcStates.get(combatantId);
+        if (!state) return;
+
+        state.selectedActionIds = state.selectedActionIds.filter(id => id !== actionId);
+        const combatant = this.npcCombatants.find(c => c.id === combatantId);
+
+        if (combatant?.actor) {
+            await InitiativeStateManager.persistState(combatant.actor, state);
+        }
+
+        this.render();
+    }
+
+    /**
+     * Handle dice rolling for single NPC.
      * @param {Event} event
      * @private
      */
     async _onRollDice(event) {
         event.preventDefault();
-
         const combatantId = event.currentTarget.dataset.combatantId;
         const state = this.npcStates.get(combatantId);
+        if (!state) return;
 
-        if (state) {
-            state.diceResults = [];
+        state.diceResults = await InitiativeStateManager.rollDice(state.diceCount);
 
-            for (let i = 0; i < state.diceCount; i++) {
-                const roll = await new Roll('1d6').evaluate();
-                state.diceResults.push(roll.total);
-            }
-
-            if (state.diceCount === 1) {
-                state.selectedDiceIndex = 0;
-            } else {
-                state.selectedDiceIndex = null;
-            }
-
-            state.hasRolled = true;
-            await this._saveNpcState(combatantId);
-
-            // Update dice display in DOM
-            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
-            const diceSection = accordion.find('.dice-section');
-
-            // Show rolled indicator in header
-            const header = accordion.find('.accordion-header');
-            if (!header.find('.rolled-indicator').length) {
-                header.find('.accordion-icon').before('<i class="fas fa-check rolled-indicator"></i>');
-            }
-
-            // Build dice results HTML
-            let diceHTML = '<div class="dice-results">';
-            state.diceResults.forEach((result, index) => {
-                const selected = state.selectedDiceIndex === index ? 'selected' : '';
-                const title = state.diceCount === 2 ? 'Klicken zum Auswählen' : '';
-                diceHTML += `
-                    <div class="dice-result ${selected}" 
-                         data-combatant-id="${combatantId}"
-                         data-index="${index}"
-                         title="${title}">
-                        <div class="dice-face d6">
-                            <span class="dice-value">${result}</span>
-                        </div>
-                    </div>
-                `;
-            });
-            diceHTML += '</div>';
-
-            // Replace or insert dice results
-            const existingResults = diceSection.find('.dice-results');
-            if (existingResults.length) {
-                existingResults.replaceWith(diceHTML);
-            } else {
-                diceSection.append(diceHTML);
-            }
-
-            // Re-bind click handlers for new dice
-            diceSection.find('.dice-result').click(this._onSelectDice.bind(this));
-
-            // Update INI display
-            const totalIni = this._calculateTotalInitiative(combatantId);
-            const iniDisplay = accordion.find('.current-ini strong');
-            if (iniDisplay.length) {
-                iniDisplay.text(totalIni);
-                iniDisplay.toggleClass('negative', totalIni < 0);
-            }
+        if (state.diceCount === 1) {
+            state.selectedDiceIndex = 0;
+        } else {
+            state.selectedDiceIndex = null;
         }
+        state.hasRolled = true;
+
+        const combatant = this.npcCombatants.find(c => c.id === combatantId);
+        if (combatant?.actor) {
+            await InitiativeStateManager.persistState(combatant.actor, state);
+        }
+
+        this.render();
     }
 
     /**
-     * Handle dice selection (for 2-dice option)
+     * Handle selecting a die result (for 2-dice mode).
      * @param {Event} event
      * @private
      */
     async _onSelectDice(event) {
         event.preventDefault();
-
         const combatantId = event.currentTarget.dataset.combatantId;
         const index = parseInt(event.currentTarget.dataset.index);
         const state = this.npcStates.get(combatantId);
 
         if (state && state.diceCount === 2) {
             state.selectedDiceIndex = index;
-            await this._saveNpcState(combatantId);
-
-            // Update selected class in DOM
-            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
-            accordion.find('.dice-result').removeClass('selected');
-            $(event.currentTarget).addClass('selected');
-
-            // Update INI display
-            const totalIni = this._calculateTotalInitiative(combatantId);
-            const iniDisplay = accordion.find('.current-ini strong');
-            if (iniDisplay.length) {
-                iniDisplay.text(totalIni);
-                iniDisplay.toggleClass('negative', totalIni < 0);
+            const combatant = this.npcCombatants.find(c => c.id === combatantId);
+            if (combatant?.actor) {
+                await InitiativeStateManager.persistState(combatant.actor, state);
             }
+            this.render();
         }
     }
 
     /**
-     * Handle rolling dice for all NPCs
+     * Handle rolling dice for all NPCs (skip already-rolled).
      * @param {Event} event
      * @private
      */
@@ -544,280 +328,233 @@ export class MassInitiativeDialog extends Application {
         event.preventDefault();
 
         for (const [combatantId, state] of this.npcStates) {
-            state.diceResults = [];
+            if (state.hasRolled) continue;
 
-            for (let i = 0; i < state.diceCount; i++) {
-                const roll = await new Roll('1d6').evaluate();
-                state.diceResults.push(roll.total);
-            }
-
+            state.diceResults = await InitiativeStateManager.rollDice(state.diceCount);
             if (state.diceCount === 1) {
                 state.selectedDiceIndex = 0;
             } else {
                 state.selectedDiceIndex = null;
             }
-
             state.hasRolled = true;
-            await this._saveNpcState(combatantId);
 
-            // Update dice display in DOM
-            const accordion = this.element.find(`[data-combatant-id="${combatantId}"]`);
-            const diceSection = accordion.find('.dice-section');
-
-            // Show rolled indicator in header
-            const header = accordion.find('.accordion-header');
-            if (!header.find('.rolled-indicator').length) {
-                header.find('.accordion-icon').before('<i class="fas fa-check rolled-indicator"></i>');
-            }
-
-            // Build dice results HTML
-            let diceHTML = '<div class="dice-results">';
-            state.diceResults.forEach((result, index) => {
-                const selected = state.selectedDiceIndex === index ? 'selected' : '';
-                const title = state.diceCount === 2 ? 'Klicken zum Auswählen' : '';
-                diceHTML += `
-                    <div class="dice-result ${selected}" 
-                         data-combatant-id="${combatantId}"
-                         data-index="${index}"
-                         title="${title}">
-                        <div class="dice-face d6">
-                            <span class="dice-value">${result}</span>
-                        </div>
-                    </div>
-                `;
-            });
-            diceHTML += '</div>';
-
-            // Replace or insert dice results
-            const existingResults = diceSection.find('.dice-results');
-            if (existingResults.length) {
-                existingResults.replaceWith(diceHTML);
-            } else {
-                diceSection.append(diceHTML);
-            }
-
-            // Update INI display
-            const totalIni = this._calculateTotalInitiative(combatantId);
-            const iniDisplay = accordion.find('.current-ini strong');
-            if (iniDisplay.length) {
-                iniDisplay.text(totalIni);
-                iniDisplay.toggleClass('negative', totalIni < 0);
+            const combatant = this.npcCombatants.find(c => c.id === combatantId);
+            if (combatant?.actor) {
+                await InitiativeStateManager.persistState(combatant.actor, state);
             }
         }
 
-        // Re-bind click handlers for all new dice
-        this.element.find('.dice-result').click(this._onSelectDice.bind(this));
+        this.render();
     }
 
     /**
-     * Handle INI ansagen button click - process all NPCs
+     * Handle batch apply: add selected action to all eligible NPCs.
+     * @param {Event} event
+     * @private
+     */
+    async _onBatchApply(event) {
+        event.preventDefault();
+        const batchSelect = this.element.find('.batch-action-select');
+        const actionId = batchSelect.val();
+        if (!actionId) return;
+
+        let appliedCount = 0;
+
+        for (const [combatantId, state] of this.npcStates) {
+            if (state.selectedActionIds.length >= 2) continue;
+            if (state.selectedActionIds.includes(actionId)) continue;
+
+            state.selectedActionIds = [...state.selectedActionIds, actionId];
+            const combatant = this.npcCombatants.find(c => c.id === combatantId);
+            if (combatant?.actor) {
+                await InitiativeStateManager.persistState(combatant.actor, state);
+            }
+            appliedCount++;
+        }
+
+        if (appliedCount > 0) {
+            const actionName =
+                this.availableActions.find(a => a.id === actionId)?.name ?? 'Aktion';
+            ui.notifications.info(
+                `"${actionName}" auf ${appliedCount} NPC${appliedCount !== 1 ? 's' : ''} angewendet.`
+            );
+        }
+
+        this.render();
+    }
+
+    /**
+     * Handle filter toggle.
+     * @param {Event} event
+     * @private
+     */
+    _onFilterToggle(event) {
+        this.filterDefault = event.target.checked;
+        this.render();
+    }
+
+    /**
+     * Handle INI ansagen — validate, warn, commit all NPCs.
      * @param {Event} event
      * @private
      */
     async _onIniAnsagen(event) {
         event.preventDefault();
 
-        const effectsToCreate = [];
+        // Find unprocessed NPCs
+        const unprocessed = [];
+        for (const [combatantId, state] of this.npcStates) {
+            const needsSelection =
+                state.diceCount === 2 && state.hasRolled && state.selectedDiceIndex === null;
+            if (!state.hasRolled || needsSelection) {
+                const combatant = this.npcCombatants.find(c => c.id === combatantId);
+                unprocessed.push(combatant?.actor?.name ?? combatantId);
+            }
+        }
+
+        if (unprocessed.length > 0) {
+            // Show warning dialog
+            const action = await this._showUnprocessedDialog(unprocessed);
+            if (action === 'roll-missing') {
+                // Roll dice for missing NPCs
+                for (const [combatantId, state] of this.npcStates) {
+                    const needsSelection =
+                        state.diceCount === 2 &&
+                        state.hasRolled &&
+                        state.selectedDiceIndex === null;
+                    if (!state.hasRolled || needsSelection) {
+                        state.diceResults = await InitiativeStateManager.rollDice(state.diceCount);
+                        if (state.diceCount === 1) {
+                            state.selectedDiceIndex = 0;
+                        } else {
+                            state.selectedDiceIndex = null;
+                        }
+                        state.hasRolled = true;
+
+                        const combatant = this.npcCombatants.find(c => c.id === combatantId);
+                        if (combatant?.actor) {
+                            await InitiativeStateManager.persistState(combatant.actor, state);
+                        }
+                    }
+                }
+            } else if (action === 'cancel') {
+                return;
+            }
+            // 'proceed' falls through without rolling
+        }
+
+        await this._commitAllInitiatives();
+    }
+
+    /**
+     * Show dialog warning about unprocessed NPCs.
+     * @param {string[]} names
+     * @returns {Promise<string>} 'roll-missing', 'proceed', or 'cancel'
+     * @private
+     */
+    async _showUnprocessedDialog(names) {
+        const nameList = names.join(', ');
+        const content = `
+            <p>${names.length} NPC${names.length !== 1 ? 's' : ''} ${names.length !== 1 ? 'haben' : 'hat'} noch nicht gewürfelt:</p>
+            <p><em>${nameList}</em></p>
+        `;
+
+        return new Promise(resolve => {
+            new Dialog({
+                title: 'NPCs nicht fertig',
+                content: content,
+                buttons: {
+                    rollMissing: {
+                        icon: '<i class="fas fa-dice"></i>',
+                        label: 'Fehlende würfeln',
+                        callback: () => resolve('roll-missing'),
+                    },
+                    proceed: {
+                        icon: '<i class="fas fa-arrow-right"></i>',
+                        label: 'Trotzdem fortsetzen',
+                        callback: () => resolve('proceed'),
+                    },
+                    cancel: {
+                        icon: '<i class="fas fa-times"></i>',
+                        label: 'Abbrechen',
+                        callback: () => resolve('cancel'),
+                    },
+                },
+                default: 'rollMissing',
+            }).render(true);
+        });
+    }
+
+    /**
+     * Commit all NPC initiatives: create effects, set initiative, post summary.
+     * @private
+     */
+    async _commitAllInitiatives() {
+        const combatData = [];
         const initiativeUpdates = [];
-        const chatMessages = [];
 
         for (const combatant of this.npcCombatants) {
             const state = this.npcStates.get(combatant.id);
             const actor = combatant.actor;
-
             if (!state || !actor) continue;
 
-            // If NPC wasn't processed (no dice rolled), just set base initiative without effect
-            if (!state.hasRolled) {
-                const baseIni = this._getBaseInitiative(actor);
-                initiativeUpdates.push({
-                    combatantId: combatant.id,
-                    value: baseIni,
-                });
-                continue;
-            }
-
-            // Check if dice selected (for 2-dice option)
-            if (state.diceCount === 2 && state.selectedDiceIndex === null) {
-                ui.notifications.warn(`${actor.name}: Bitte einen Würfel auswählen!`);
-                continue;
-            }
-
-            // Calculate final values
-            const totalIni = this._calculateTotalInitiative(combatant.id);
-            const actionMods = this._calculateActionModifiers(combatant.id);
-
-            // Calculate final AT/VT modifiers
-            let finalAtMod = state.atMod + actionMods.at;
-            let finalVtMod = state.vtMod + actionMods.vt;
-
-            if (state.kombinierteAktion) {
-                finalAtMod -= 4;
-                finalVtMod -= 4;
-            }
-
-            // Get dice result
+            const totalIni = InitiativeStateManager.calculateTotalInitiative(
+                state,
+                this.availableActions,
+                actor
+            );
             const diceResult =
-                state.selectedDiceIndex !== null ? state.diceResults[state.selectedDiceIndex] : state.diceResults[0];
+                state.selectedDiceIndex !== null
+                    ? (state.diceResults[state.selectedDiceIndex] ?? 0)
+                    : (state.diceResults[0] ?? 0);
 
-            // Find existing combat modifier effect
-            const existingEffect = actor.effects.find(e => e.name.startsWith('Kampf-Modifikatoren Runde'));
-
-            // Handle negative initiative with movedAction
+            // Handle negative/locked state
             if (totalIni < 0) {
-                // Update movedActionRounds
                 if (!state.movedAction) {
                     state.movedActionRounds = 1;
+                    state.lockedActionId = state.selectedActionIds[0] ?? null;
                 } else {
                     state.movedActionRounds += 1;
                 }
                 state.movedAction = true;
+                state.carryOver = totalIni;
 
-                // Update existing effect if present
-                if (existingEffect) {
-                    const iniChange = existingEffect.changes.find(
-                        c => c.key === 'system.kampfwerte.ini' || c.key.includes('ini')
-                    );
+                await InitiativeStateManager.createCombatEffects(
+                    actor,
+                    state,
+                    this.combat?.round ?? 1,
+                    this.availableActions
+                );
 
-                    if (iniChange) {
-                        // Update: Alter Change + neuer Würfel
-                        const oldChangeValue = parseInt(iniChange.value) || 0;
-                        const newChangeValue = oldChangeValue + diceResult;
-
-                        // Update effect with new change value
-                        const updatedChanges = existingEffect.changes.map(c => {
-                            if (c.key === 'system.kampfwerte.ini' || c.key.includes('ini')) {
-                                return {
-                                    ...c,
-                                    value: newChangeValue.toString(),
-                                };
-                            }
-                            return c;
-                        });
-
-                        await existingEffect.update({
-                            changes: updatedChanges,
-                            'duration.turns': 2,
-                        });
-                    }
-                } else {
-                    // Create new effect for first negative INI
-                    const changes = [];
-
-                    // Effect speichert nur INI-Mod + Würfel
-                    if (state.iniMod !== 0 || diceResult !== 0) {
-                        changes.push({
-                            key: 'system.kampfwerte.ini',
-                            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                            value: (state.iniMod + diceResult).toString(),
-                        });
-                    }
-
-                    if (finalAtMod !== 0) {
-                        changes.push({
-                            key: 'system.modifikatoren.nahkampfmod',
-                            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                            value: finalAtMod.toString(),
-                        });
-                    }
-
-                    if (finalVtMod !== 0) {
-                        changes.push({
-                            key: 'system.modifikatoren.verteidigungmod',
-                            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                            value: finalVtMod.toString(),
-                        });
-                    }
-
-                    if (changes.length > 0) {
-                        await actor.createEmbeddedDocuments('ActiveEffect', [
-                            {
-                                name: `Kampf-Modifikatoren Runde ${this.combat?.round ?? 1}`,
-                                icon: 'icons/svg/dice-target.svg',
-                                changes: changes,
-                                duration: {
-                                    turns: 2,
-                                },
-                                origin: actor.uuid,
-                            },
-                        ]);
-                    }
-                }
-
-                // Save state with movedActionRounds
-                await this._saveNpcState(combatant.id);
+                // Reset dice for next round, persist locked state
+                state.diceResults = [];
+                state.selectedDiceIndex = null;
+                state.hasRolled = false;
+                await InitiativeStateManager.persistState(actor, state);
             } else {
-                // Positive INI: Create normal effect, clear moved action state
-                const changes = [];
-
-                if (state.iniMod !== 0 || diceResult !== 0) {
-                    changes.push({
-                        key: 'system.kampfwerte.ini',
-                        mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                        value: (state.iniMod + diceResult).toString(),
-                    });
-                }
-
-                if (finalAtMod !== 0) {
-                    changes.push({
-                        key: 'system.modifikatoren.nahkampfmod',
-                        mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                        value: finalAtMod.toString(),
-                    });
-                }
-
-                if (finalVtMod !== 0) {
-                    changes.push({
-                        key: 'system.modifikatoren.verteidigungmod',
-                        mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                        value: finalVtMod.toString(),
-                    });
-                }
-
-                // Remove old combat modifier effects
-                if (existingEffect) {
-                    await actor.deleteEmbeddedDocuments('ActiveEffect', [existingEffect.id]);
-                }
-
-                // Create new effect with duration 1
-                if (changes.length > 0) {
-                    await actor.createEmbeddedDocuments('ActiveEffect', [
-                        {
-                            name: `Kampf-Modifikatoren Runde ${this.combat?.round ?? 1}`,
-                            icon: 'icons/svg/dice-target.svg',
-                            changes: changes,
-                            duration: {
-                                turns: 1,
-                            },
-                            origin: actor.uuid,
-                        },
-                    ]);
-                }
-
-                // Clear state
-                await this._clearNpcState(combatant.id);
+                // Positive INI: create effect, then clear state
+                await InitiativeStateManager.createCombatEffects(
+                    actor,
+                    state,
+                    this.combat?.round ?? 1,
+                    this.availableActions
+                );
+                await InitiativeStateManager.clearState(actor);
             }
 
-            // Prepare initiative update
-            initiativeUpdates.push({
-                combatantId: combatant.id,
-                value: totalIni,
-            });
+            initiativeUpdates.push({ combatantId: combatant.id, value: totalIni });
 
-            // Prepare chat message
-            chatMessages.push({
+            combatData.push({
                 actor: actor,
                 totalIni: totalIni,
-                baseIni: this._getBaseInitiative(actor),
+                baseIni: InitiativeStateManager.getBaseInitiative(actor),
                 iniMod: state.iniMod,
                 diceResult: diceResult,
                 actionIds: state.selectedActionIds,
-                atMod: finalAtMod,
-                vtMod: finalVtMod,
+                atMod: state.atMod,
+                vtMod: state.vtMod,
+                isLocked: totalIni < 0,
             });
-
-            // Mark as processed
-            state.processed = true;
         }
 
         // Batch set initiatives
@@ -825,56 +562,149 @@ export class MassInitiativeDialog extends Application {
             await this.combat.setInitiative(combatantId, value);
         }
 
-        // Post chat messages
-        for (const msg of chatMessages) {
-            await this._postChatMessage(msg);
-        }
+        // Post summary chat message
+        await InitiativeStateManager.postSummaryChatMessage(
+            combatData,
+            this.combat?.round ?? 1,
+            this.availableActions
+        );
 
-        // Close dialog
         this.close();
     }
 
     /**
-     * Post chat message for an NPC
-     * @param {Object} messageData
-     * @private
-     */
-    async _postChatMessage(messageData) {
-        const { actor, totalIni, baseIni, iniMod, diceResult, actionIds, atMod, vtMod } = messageData;
-
-        // Build action names
-        const actionNames = actionIds
-            .map(id => this.availableActions.find(a => (a.id || a._id) === id)?.name)
-            .filter(Boolean);
-
-        // Build content with actor icon
-        let content = `<img src="${actor.img}" alt="${actor.name}" width="36" height="36" style="border: none; vertical-align: middle; margin-right: 8px;"/>`;
-        content += `<strong>${actor.name}</strong> Initiative: ${totalIni} (Basis: ${baseIni}, Mod: ${iniMod >= 0 ? '+' : ''}${iniMod}, Würfel: ${diceResult})`;
-
-        if (actionNames.length > 0) {
-            content += `<br>Aktionen: ${actionNames.join(', ')}`;
-        }
-
-        if (atMod !== 0 || vtMod !== 0) {
-            const modifiers = [];
-            if (atMod !== 0) modifiers.push(`AT ${atMod >= 0 ? '+' : ''}${atMod}`);
-            if (vtMod !== 0) modifiers.push(`VT ${vtMod >= 0 ? '+' : ''}${vtMod}`);
-            content += `<br>Modifikatoren: ${modifiers.join(', ')}`;
-        }
-
-        await ChatMessage.create({
-            content: content,
-            speaker: ChatMessage.getSpeaker({ actor: actor }),
-        });
-    }
-
-    /**
-     * Handle cancel button click
+     * Handle cancel — discard changes without persisting.
      * @param {Event} event
      * @private
      */
     _onCancel(event) {
         event.preventDefault();
+        // State is not persisted on cancel — previously saved state from last
+        // "INI ansagen" commit remains untouched in actor flags. The current
+        // session's changes live only in this.npcStates (memory) and are discarded.
         this.close();
+    }
+
+    /* -------------------------------------------- */
+    /*  Display Updates                              */
+    /* -------------------------------------------- */
+
+    /**
+     * Update a single card's display in-place without full re-render.
+     * @param {string} combatantId
+     * @private
+     */
+    _updateCardDisplay(combatantId) {
+        const state = this.npcStates.get(combatantId);
+        const combatant = this.npcCombatants.find(c => c.id === combatantId);
+        if (!state || !combatant?.actor) return;
+
+        const totalIni = InitiativeStateManager.calculateTotalInitiative(
+            state,
+            this.availableActions,
+            combatant.actor
+        );
+
+        const card = this.element.find(`[data-combatant-id="${combatantId}"]`);
+        const resultEl = card.find('.result-value');
+        if (resultEl.length) {
+            resultEl.text(state.hasRolled ? totalIni : '?');
+            resultEl
+                .removeClass('positive negative unknown')
+                .addClass(
+                    state.hasRolled
+                        ? totalIni < 0
+                            ? 'negative'
+                            : 'positive'
+                        : 'unknown'
+                );
+        }
+    }
+
+    /**
+     * Show formula tooltip on hover.
+     * @param {Event} event
+     * @private
+     */
+    _onTooltipShow(event) {
+        const combatantId = event.currentTarget.dataset.combatantId;
+        const state = this.npcStates.get(combatantId);
+        const combatant = this.npcCombatants.find(c => c.id === combatantId);
+        if (!state || !combatant?.actor) return;
+
+        const parts = InitiativeStateManager.getFormulaParts(
+            state,
+            this.availableActions,
+            combatant.actor
+        );
+
+        const totalIni = InitiativeStateManager.calculateTotalInitiative(
+            state,
+            this.availableActions,
+            combatant.actor
+        );
+
+        const actionMods = InitiativeStateManager.calculateActionModifiers(
+            state.selectedActionIds,
+            this.availableActions
+        );
+
+        let tooltipHTML = '<div class="formula-tooltip">';
+
+        for (const part of parts) {
+            const numVal = parseInt(part.value);
+            const cssClass = !isNaN(numVal) && numVal < 0 ? 'negative' : '';
+            tooltipHTML += `
+                <div class="tooltip-row">
+                    <span class="tooltip-label">${part.label}</span>
+                    <span class="tooltip-value ${cssClass}">${part.value}</span>
+                </div>`;
+        }
+
+        tooltipHTML += '<div class="tooltip-divider"></div>';
+        tooltipHTML += `
+            <div class="tooltip-row">
+                <span class="tooltip-label">AT</span>
+                <span class="tooltip-value">${state.atMod + actionMods.at + (state.kombinierteAktion && !state.movedAction ? -4 : 0)}</span>
+            </div>`;
+        tooltipHTML += `
+            <div class="tooltip-row">
+                <span class="tooltip-label">VT</span>
+                <span class="tooltip-value">${state.vtMod + actionMods.vt + (state.kombinierteAktion && !state.movedAction ? -4 : 0)}</span>
+            </div>`;
+        tooltipHTML += '<div class="tooltip-divider"></div>';
+        tooltipHTML += `
+            <div class="tooltip-row">
+                <span class="tooltip-label">Ergebnis</span>
+                <span class="tooltip-total">${state.hasRolled ? totalIni : '?'}</span>
+            </div>`;
+        tooltipHTML += '</div>';
+
+        // Use Foundry's tooltip or simple absolute positioning
+        const tip = $(tooltipHTML);
+        const offset = $(event.currentTarget).offset();
+        tip.css({
+            position: 'absolute',
+            top: offset.top - tip.outerHeight() - 8,
+            left: offset.left,
+            'z-index': 9999,
+        });
+        tip.addClass('formula-tooltip-active');
+        $('body').append(tip);
+
+        // Store reference for removal
+        event.currentTarget._tooltip = tip;
+    }
+
+    /**
+     * Hide formula tooltip.
+     * @param {Event} event
+     * @private
+     */
+    _onTooltipHide(event) {
+        if (event.currentTarget._tooltip) {
+            event.currentTarget._tooltip.remove();
+            event.currentTarget._tooltip = null;
+        }
     }
 }

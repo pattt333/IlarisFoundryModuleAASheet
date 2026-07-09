@@ -229,6 +229,16 @@ Hooks.once('init', async function () {
         restricted: true,
     });
 
+    game.settings.register('ilaris-alternative-actor-sheet', 'massInitiativeFilterDefault', {
+        name: 'NPC-Initiative: Filter standardmäßig aktiv',
+        hint: 'Wenn aktiviert, zeigt der Massen-Initiative-Dialog standardmäßig nur unbearbeitete NPCs.',
+        scope: 'world',
+        config: true,
+        type: Boolean,
+        default: false,
+        requiresReload: false,
+    });
+
     // Register Handlebars helpers
     registerHandlebarsHelpers();
 
@@ -324,10 +334,9 @@ const InitiativeDialogManager = {
         const pcs = combatantArray.filter(c => c.actor?.hasPlayerOwner);
         const npcs = combatantArray.filter(c => !c.actor?.hasPlayerOwner);
 
-        // Open PC dialogs (one per PC, only for the owner)
+        // Open PC dialogs (one per PC, for the owner — including GM)
         for (const pc of pcs) {
-            // Only show to the owner of the actor
-            if (pc.actor?.isOwner && !game.user.isGM) {
+            if (pc.actor?.isOwner) {
                 const dialog = new InitiativeDialog(pc);
                 dialog.render(true);
             }
@@ -390,10 +399,19 @@ Hooks.on('updateCombat', async (combat, updateData, options, userId) => {
             console.log('Ilaris Alternative Actor Sheet | Non-GM client, skipping initiative reset');
         }
 
-        // Open dialogs for ALL combatants (including those with negative INI)
-        const allCombatants = combat.combatants.contents;
-        if (allCombatants.length > 0) {
-            InitiativeDialogManager.openDialog(combat, allCombatants);
+        // Auto-open dialogs on round change:
+        // GM: only NPC mass dialog. Players: only their owned PC dialog.
+        if (game.user.isGM) {
+            const npcs = combat.combatants.contents.filter(c => !c.actor?.hasPlayerOwner);
+            if (npcs.length > 0) {
+                InitiativeDialogManager.openDialog(combat, npcs);
+            }
+        } else {
+            for (const c of combat.combatants.contents) {
+                if (c.actor?.hasPlayerOwner && c.actor?.isOwner) {
+                    new InitiativeDialog(c).render(true);
+                }
+            }
         }
     }
 });
@@ -402,19 +420,39 @@ Hooks.on('updateCombat', async (combat, updateData, options, userId) => {
 Hooks.on('combatStart', (combat, updateData) => {
     console.log('Ilaris Alternative Actor Sheet | Combat start hook triggered');
 
-    const allCombatants = combat.combatants.contents;
-    if (allCombatants.length > 0) {
-        InitiativeDialogManager.openDialog(combat, allCombatants);
+    // Same auto-open pattern as round change
+    if (game.user.isGM) {
+        const npcs = combat.combatants.contents.filter(c => !c.actor?.hasPlayerOwner);
+        if (npcs.length > 0) {
+            new MassInitiativeDialog(combat, npcs).render(true);
+        }
+    } else {
+        for (const c of combat.combatants.contents) {
+            if (c.actor?.hasPlayerOwner && c.actor?.isOwner) {
+                new InitiativeDialog(c).render(true);
+            }
+        }
     }
 });
 
-// Hook: Override the default initiative roll button
-Hooks.on('renderCombatTracker', (app, htmlDOM, data) => {
-    // Find initiative roll buttons (htmlDOM is a plain DOM element in Foundry v13+)
-    htmlDOM.querySelectorAll('.combatant-control[data-control="rollInitiative"]').forEach(btn => {
+// Hook: Intercept initiative roll buttons via capture-phase event delegation.
+// Using capture phase ensures our handler runs before Foundry's bubble-phase handlers.
+Hooks.on('renderCombatTracker', (app, htmlDOM) => {
+    // htmlDOM may be a jQuery object in some Foundry versions — get raw DOM element
+    const rootEl = htmlDOM instanceof $ ? htmlDOM[0] : htmlDOM;
+    if (!rootEl) return;
+
+    // Remove previous listener if re-rendering
+    if (rootEl._ilarisIniListener) {
+        rootEl.removeEventListener('click', rootEl._ilarisIniListener, true);
+    }
+
+    const listener = (event) => {
+        const btn = event.target.closest('[data-action="rollInitiative"]');
+        if (!btn) return;
+
         const li = btn.closest('.combatant');
         const combatantId = li?.dataset?.combatantId;
-
         if (!combatantId) return;
 
         const combat = game.combat;
@@ -423,30 +461,39 @@ Hooks.on('renderCombatTracker', (app, htmlDOM, data) => {
         const combatant = combat.combatants.get(combatantId);
         if (!combatant) return;
 
-        // Replace click handler by cloning the button to remove existing listeners
-        const newBtn = btn.cloneNode(true);
-        btn.parentNode.replaceChild(newBtn, btn);
+        // Stop Foundry's handlers from firing
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
 
-        newBtn.addEventListener('click', async event => {
-            event.preventDefault();
-            event.stopPropagation();
+        // Check if initiative already set
+        if (combatant.initiative !== null) {
+            ui.notifications.info('Initiative wurde bereits angesagt. Lösche den INI-Wert um erneut zu würfeln.');
+            return;
+        }
 
-            // Check if initiative already set
-            if (combatant.initiative !== null) {
-                ui.notifications.info('Initiative wurde bereits angesagt. Lösche den INI-Wert um erneut zu würfeln.');
-                return;
+        const actor = combatant.actor;
+        if (!actor) return;
+
+        // Open appropriate dialog based on combatant type
+        if (!actor.hasPlayerOwner) {
+            // NPC: open mass dialog for all NPCs (GM only)
+            if (game.user.isGM) {
+                const npcs = combat.combatants.contents.filter(c => !c.actor?.hasPlayerOwner);
+                if (npcs.length > 0) {
+                    new MassInitiativeDialog(combat, npcs).render(true);
+                }
             }
-
-            if (!game.user.isGM) {
-                // Open the appropriate dialog
-                InitiativeDialogManager.openDialog(combat, combatant);
-            } else {
-                const allCombatants = combat.combatants.contents;
-                // For GM, open mass dialog for NPCs or single dialog for PCs
-                InitiativeDialogManager.openDialog(combat, allCombatants);
+        } else {
+            // PC: open dialog only for this specific PC (owner or GM)
+            if (actor.isOwner) {
+                new InitiativeDialog(combatant).render(true);
             }
-        });
-    });
+        }
+    };
+
+    rootEl.addEventListener('click', listener, true);
+    rootEl._ilarisIniListener = listener;
 });
 
 // Hook: Turn-Index correction after combatant initiative update

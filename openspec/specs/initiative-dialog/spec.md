@@ -8,31 +8,36 @@ Provide a custom initiative dialog for the Ilaris encounter system supporting mo
 
 ### Requirement: Initiative dialog opens on encounter dice roll
 
-When a user clicks the initiative roll button in the Foundry encounter screen, the module SHALL intercept and open a custom dialog. For PC tokens (`type === "held"`), a single-actor dialog opens. For NPC tokens selected by a GM, a mass dialog opens for all NPCs.
+When a user clicks the initiative roll button in the Foundry encounter screen, the module SHALL intercept via capture-phase DOM event delegation and open custom dialogs. For PC tokens (`type === "held"`), a single-actor dialog opens for the actor owner (including the GM). For NPC tokens, a mass card-grid dashboard dialog opens for all NPCs (GM only). Both dialogs SHALL use `InitiativeStateManager` for state persistence, calculation, dice rolling, and effect creation. On round change and combat start, NPC mass dialogs SHALL auto-open for the GM; PC dialogs SHALL auto-open for their owning players only (GM must click explicitly for PCs).
 
 #### Scenario: Player clicks initiative for their PC
 
 - **WHEN** a player clicks the initiative button for their held-type actor
-- **THEN** the single-actor initiative dialog opens for that character
+- **THEN** the capture-phase listener intercepts the click, prevents Foundry's auto-roll, and the single-actor `InitiativeDialog` opens for that character
 
 #### Scenario: GM clicks initiative for NPCs
 
-- **WHEN** a GM clicks the initiative button
-- **THEN** the mass initiative dialog opens for all NPC combatants
+- **WHEN** a GM clicks the initiative button for NPCs
+- **THEN** the `MassInitiativeDialog` card-grid dashboard opens for all NPC combatants
+
+#### Scenario: GM clicks initiative for a specific PC
+
+- **WHEN** a GM clicks the initiative button for a specific held-type combatant
+- **THEN** only that PC's `InitiativeDialog` opens; no other PC or NPC dialogs open
 
 ### Requirement: Dialog persists input state until confirmed
 
-Dialog input values SHALL be persisted in `actor.flags.ilaris-alternative-actor-sheet.dialogState` until the "INI ansagen" button is clicked. Closing the dialog without confirming SHALL preserve the state. Only clicking "INI ansagen" SHALL clear the persisted state and apply the effect.
+Dialog input values SHALL be persisted in `actor.flags.ilaris-alternative-actor-sheet.dialogState` until the "INI ansagen" button is clicked. The `InitiativeStateManager` class SHALL provide `persistState(actor, state)` and `loadState(actor)` methods used by both `InitiativeDialog` and `MassInitiativeDialog`. Clicking "Abbrechen" or closing the dialog (X button) SHALL discard unsaved changes. Only clicking "INI ansagen" SHALL persist the state and apply the effect. For negative initiative results, state SHALL persist (locked state) even after "INI ansagen" commits.
 
 #### Scenario: User fills dialog and closes without confirming
 
 - **WHEN** a user enters values in the dialog and closes it without clicking "INI ansagen"
-- **THEN** the values are persisted and restored when the dialog reopens
+- **THEN** the values are discarded; reopening the dialog shows the last committed state
 
 #### Scenario: User clicks INI ansagen
 
 - **WHEN** the user clicks "INI ansagen"
-- **THEN** the dialog closes, the active effect is applied, the initiative is set in the combat tracker, a ChatMessage is posted, and the persisted dialog state is cleared
+- **THEN** the dialog closes, the active effect is applied via InitiativeStateManager, the initiative is set in the combat tracker, a ChatMessage is posted, and the state is persisted (or cleared for positive results)
 
 ### Requirement: Initiative dialog collects modifiers and actions
 
@@ -88,17 +93,22 @@ The dialog SHALL include a dice section where the user selects "1 Würfel" or "2
 
 ### Requirement: Negative initiative locks action and weapon
 
-When a combatant confirms initiative and the total is negative, the dialog SHALL enter a LOCKED state. In this state: the selected action and weapon are frozen; the action card shows a lock icon and the text "verzögert um X Runden"; all other action cards are grayed out and not clickable; the weapon is displayed as locked text, not a dropdown. The manual INI modifier (iniMod) SHALL remain editable. The formula SHALL change to `Übertrag + Basis + Mod + Würfel = Ergebnis` without re-applying action or weapon INI penalties.
+When a combatant confirms initiative and the total is negative, the dialog SHALL enter a LOCKED state. In the PC dialog: the selected action and weapon are frozen; the action card shows a lock icon and "verzögert um X Runden"; other action cards are grayed out and not clickable; the weapon is displayed as locked text. In the mass dialog: the NPC card collapses to show only the locked action chip, INI-Mod, and dice section. The manual INI modifier (iniMod) SHALL remain editable. The `InitiativeStateManager` SHALL handle the carry-over calculation (`carryOver + baseIni + iniMod + diceResult`) for both dialogs.
 
 #### Scenario: Initiative is negative on confirm
 
 - **WHEN** the user clicks "INI ansagen" and the calculated initiative is -2
-- **THEN** the dialog closes, the effect is created with the locked action's AT/VT modifiers, the `dialogState` flag stores `movedAction: true`, `carryOver: -2`, `lockedActionId`, and `lockedWeaponId`, and the dialog state persists
+- **THEN** the dialog closes, the effect is created via InitiativeStateManager, the `dialogState` flag stores `movedAction: true`, `carryOver: -2`, `lockedActionId`, and `lockedWeaponId`, and the dialog state persists
 
 #### Scenario: Locked dialog reopens next round
 
 - **WHEN** the round changes and the dialog reopens for a locked combatant
 - **THEN** the dialog renders in LOCKED state: the locked action card shows a lock icon with "verzögert um 1 Runde", other actions are grayed out, the weapon is displayed as text, and the formula shows `Übertrag + Basis + Mod + Würfel`
+
+#### Scenario: Locked mass dialog card reopens next round
+
+- **WHEN** the round changes and the mass dialog reopens with a locked NPC
+- **THEN** that NPC card renders collapsed: red-tinted border, lock icon, "⏱️ Verzögert — X. Runde" subtitle, locked action chip (non-interactive), editable INI-Mod, and active dice section
 
 #### Scenario: Manual INI modifier editable in locked state
 
@@ -117,17 +127,22 @@ When a combatant confirms initiative and the total is negative, the dialog SHALL
 
 ### Requirement: Round change reopens dialogs with locked-state awareness
 
-The `updateCombat` Hook SHALL detect round changes via `"round" in updateData`. The GM SHALL reset initiative to `null` for all combatants. Dialogs SHALL reopen for all combatants: combatants with `dialogState.movedAction === true` SHALL see the LOCKED state dialog; all others SHALL see the FRESH state dialog.
+The `updateCombat` Hook SHALL detect round changes via `"round" in updateData`. The GM SHALL reset initiative to `null` for all combatants. On the GM client: only the mass NPC dialog SHALL reopen automatically (PC dialogs require explicit button click). On player clients: their owned PC dialog SHALL reopen automatically. Combatants with `dialogState.movedAction === true` SHALL see the LOCKED state in their respective dialogs.
 
-#### Scenario: New round with locked combatant
+#### Scenario: New round with locked NPC
 
-- **WHEN** `updateCombat` fires with a round change and one combatant has `dialogState.movedAction = true`
-- **THEN** that combatant's dialog renders in LOCKED state; all other combatants render in FRESH state
+- **WHEN** `updateCombat` fires with a round change and one NPC has `dialogState.movedAction = true`
+- **THEN** the mass NPC dialog reopens for the GM with that NPC's card in locked state; no PC dialogs open automatically for the GM
+
+#### Scenario: New round — player sees their PC dialog
+
+- **WHEN** `updateCombat` fires with a round change on a player's client
+- **THEN** their owned PC dialog auto-opens; locked PCs render in LOCKED state
 
 #### Scenario: New round with no locked combatants
 
 - **WHEN** `updateCombat` fires with a round change and no combatants have `dialogState.movedAction = true`
-- **THEN** all dialogs render in FRESH state
+- **THEN** all auto-opened dialogs render in FRESH state
 
 ### Requirement: Initiative formula uses correct carry-over logic
 

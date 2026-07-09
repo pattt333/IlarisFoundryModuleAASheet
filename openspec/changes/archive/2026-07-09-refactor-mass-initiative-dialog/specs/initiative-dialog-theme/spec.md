@@ -1,10 +1,6 @@
-# Initiative Dialog Theme Variables
+# Initiative Dialog Theme Variables (Delta)
 
-## Purpose
-
-Define CSS variable scopes on initiative and mass-initiative dialogs to ensure correct light/dark mode rendering without depending on Ilaris system CSS variables. (Superseded by consolidated-color-schema — variables are now defined in module.css's combined selector.)
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Initiative dialog defines its own CSS variable scope
 
@@ -48,6 +44,8 @@ The `.mass-initiative-dialog` class SHALL define CSS custom properties matching 
 
 - **WHEN** an NPC card is in locked state (red-tinted) or needs-selection state (amber warning)
 - **THEN** the state indicators are clearly visible in both light and dark mode using theme-aware variables
+
+## ADDED Requirements
 
 ### Requirement: Mass dialog stylesheet is a new component CSS file
 

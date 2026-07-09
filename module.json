@@ -26,6 +26,7 @@
     "styles/fertigkeit-dialog.css",
     "styles/combat-dialog.css",
     "styles/initiative-dialog.css",
+    "styles/mass-initiative-dialog.css",
     "styles/ai-creature-dialog.css"
   ],
   "relationships": {

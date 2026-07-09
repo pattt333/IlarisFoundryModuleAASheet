@@ -3,7 +3,10 @@
  *
  * Einzeldialog für Spielercharaktere zur Erfassung von Initiativmodifikatoren,
  * Aktionen und Kampfmodifikatoren vor dem Initiativewurf.
+ * Delegiert gemeinsame Logik an InitiativeStateManager.
  */
+import { InitiativeStateManager } from './initiative-state-manager.js';
+
 export class InitiativeDialog extends Application {
     constructor(combatant, options = {}) {
         super(options);
@@ -43,60 +46,35 @@ export class InitiativeDialog extends Application {
     }
 
     /**
-     * Load persisted dialog state from actor flags
+     * Load persisted dialog state from actor flags via StateManager.
      * @private
      */
     _loadPersistedState() {
-        const savedState = this.actor.getFlag('ilaris-alternative-actor-sheet', 'dialogState');
-        if (savedState) {
-            // Migration: detect old-format state (missing carryOver field)
-            if (savedState.carryOver === undefined && savedState.movedAction) {
-                // Old format: map movedActionRounds * baseIni approximation to carryOver
-                const baseIni = this._getBaseInitiative();
-                this.carryOver = (savedState.movedActionRounds || 1) * baseIni;
-                // Preserve locked action/weapon from existing fields
-                this.lockedActionId = savedState.selectedActionIds?.[0] ?? null;
-                this.lockedWeaponId = savedState.selectedWeaponId ?? null;
-            } else {
-                this.carryOver = savedState.carryOver ?? 0;
-                this.lockedActionId = savedState.lockedActionId ?? null;
-                this.lockedWeaponId = savedState.lockedWeaponId ?? null;
-            }
+        const savedState = InitiativeStateManager.loadState(this.actor);
 
-            this.iniMod = savedState.iniMod ?? 0;
-            this.atMod = savedState.atMod ?? 0;
-            this.vtMod = savedState.vtMod ?? 0;
-            this.selectedActionIds = savedState.selectedActionIds ?? [];
-            this.kombinierteAktion = savedState.kombinierteAktion ?? false;
-            this.diceCount = savedState.diceCount ?? 1;
-            this.diceResults = savedState.diceResults ?? [];
-            this.selectedDiceIndex = savedState.selectedDiceIndex ?? null;
-            this.hasRolled = savedState.hasRolled ?? false;
-            this.selectedWeaponId = savedState.selectedWeaponId ?? '';
-            this.movedAction = savedState.movedAction ?? false;
-            this.movedActionRounds = savedState.movedActionRounds ?? 0;
-        } else {
-            this.iniMod = 0;
-            this.atMod = 0;
-            this.vtMod = 0;
-            this.selectedActionIds = [];
-            this.kombinierteAktion = false;
-            this.diceCount = 1;
-            this.selectedWeaponId = '';
-            this.movedAction = false;
-            this.movedActionRounds = 0;
-            this.carryOver = 0;
-            this.lockedActionId = null;
-            this.lockedWeaponId = null;
-        }
+        this.iniMod = savedState.iniMod;
+        this.atMod = savedState.atMod;
+        this.vtMod = savedState.vtMod;
+        this.selectedActionIds = savedState.selectedActionIds;
+        this.kombinierteAktion = savedState.kombinierteAktion;
+        this.diceCount = savedState.diceCount;
+        this.diceResults = savedState.diceResults;
+        this.selectedDiceIndex = savedState.selectedDiceIndex;
+        this.hasRolled = savedState.hasRolled;
+        this.movedAction = savedState.movedAction;
+        this.movedActionRounds = savedState.movedActionRounds;
+        this.carryOver = savedState.carryOver;
+        this.lockedActionId = savedState.lockedActionId;
+        this.lockedWeaponId = savedState.lockedWeaponId;
+        this.selectedWeaponId = savedState.selectedWeaponId ?? '';
     }
 
     /**
-     * Save current dialog state to actor flags
+     * Save current dialog state to actor flags via StateManager.
      * @private
      */
     async _savePersistedState() {
-        await this.actor.setFlag('ilaris-alternative-actor-sheet', 'dialogState', {
+        await InitiativeStateManager.persistState(this.actor, {
             iniMod: this.iniMod,
             atMod: this.atMod,
             vtMod: this.vtMod,
@@ -116,27 +94,20 @@ export class InitiativeDialog extends Application {
     }
 
     /**
-     * Clear persisted state from actor flags
+     * Clear persisted state from actor flags via StateManager.
      * @private
      */
     async _clearPersistedState() {
-        await this.actor.unsetFlag('ilaris-alternative-actor-sheet', 'dialogState');
+        await InitiativeStateManager.clearState(this.actor);
     }
 
     /**
-     * Get base initiative for actor (PC or NPC)
+     * Get base initiative for actor via StateManager.
      * @returns {number}
      * @private
      */
     _getBaseInitiative() {
-        // PC (held) uses system.abgeleitete.ini
-        // NPC (kreatur) uses system.kampfwerte.ini
-        if (this.actor.type === 'held') {
-            return this.actor.system.abgeleitete?.baseIni ?? 0;
-        } else if (this.actor.type === 'kreatur') {
-            return this.actor.system.kampfwerte?.baseIni ?? 0;
-        }
-        return 0;
+        return InitiativeStateManager.getBaseInitiative(this.actor);
     }
 
     /** @override */
@@ -340,47 +311,29 @@ export class InitiativeDialog extends Application {
     }
 
     /**
-     * Calculate total initiative value
+     * Calculate total initiative value via StateManager.
      * @private
      * @returns {number} The calculated initiative
      */
     _calculateTotalInitiative() {
-        const baseIni = this._getBaseInitiative();
-
-        // LOCKED state: carryOver + baseIni + iniMod + diceResult
-        // Action and weapon INI penalties are NOT re-applied (they were paid in the original round)
-        if (this.movedAction) {
-            const diceResult =
-                this.selectedDiceIndex !== null
-                    ? (this.diceResults[this.selectedDiceIndex] ?? 0)
-                    : (this.diceResults[0] ?? 0);
-            return this.carryOver + baseIni + this.iniMod + diceResult;
-        }
-
-        // FRESH state: baseIni + actionIniMod + weaponIniMod + iniMod + diceResult
-        // Get weapon INI modifier
         let weaponIniMod = 0;
         if (this.selectedWeaponId && this.availableWeapons.length > 0) {
             weaponIniMod = this._getWeaponIniModifier();
         }
 
-        // Get the lowest INI mod from selected actions
-        let actionIniMod = 0;
-        if (this.selectedActionIds.length > 0) {
-            const actionMods = this.selectedActionIds.map(id => {
-                const action = this.availableActions.find(a => (a.id || a._id) === id);
-                return action?.iniMod ?? 0;
-            });
-            actionIniMod = Math.min(...actionMods);
-        }
-
-        // Get dice result
-        const diceResult =
-            this.selectedDiceIndex !== null
-                ? (this.diceResults[this.selectedDiceIndex] ?? 0)
-                : (this.diceResults[0] ?? 0);
-
-        return baseIni + actionIniMod + weaponIniMod + this.iniMod + diceResult;
+        return InitiativeStateManager.calculateTotalInitiative(
+            {
+                iniMod: this.iniMod,
+                selectedActionIds: this.selectedActionIds,
+                movedAction: this.movedAction,
+                carryOver: this.carryOver,
+                diceResults: this.diceResults,
+                selectedDiceIndex: this.selectedDiceIndex,
+            },
+            this.availableActions,
+            this.actor,
+            weaponIniMod
+        );
     }
 
     /**
@@ -417,34 +370,15 @@ export class InitiativeDialog extends Application {
     }
 
     /**
-     * Calculate AT/VT modifiers from actions
+     * Calculate AT/VT modifiers from actions via StateManager.
      * @private
      * @returns {{at: number, vt: number}}
      */
     _calculateActionModifiers() {
-        let atMod = 0;
-        let vtMod = 0;
-
-        for (const actionId of this.selectedActionIds) {
-            const action = this.availableActions.find(a => (a.id || a._id) === actionId);
-            if (action?.effects) {
-                for (const effect of action.effects) {
-                    for (const change of effect.changes || []) {
-                        if (change.key === 'system.modifikatoren.nahkampfmod' || change.key.includes('nahkampfmod')) {
-                            atMod += parseInt(change.value) || 0;
-                        }
-                        if (
-                            change.key === 'system.modifikatoren.verteidigungmod' ||
-                            change.key.includes('verteidigungmod')
-                        ) {
-                            vtMod += parseInt(change.value) || 0;
-                        }
-                    }
-                }
-            }
-        }
-
-        return { at: atMod, vt: vtMod };
+        return InitiativeStateManager.calculateActionModifiers(
+            this.selectedActionIds,
+            this.availableActions
+        );
     }
 
     /** @override */
@@ -637,19 +571,12 @@ export class InitiativeDialog extends Application {
     async _onRollDice(event) {
         event.preventDefault();
 
-        this.diceResults = [];
-
         // Animate dice faces before showing results
         const diceFaces = this.element.find('.dice-face');
         diceFaces.addClass('rolling');
-
-        // Small delay for animation
         await new Promise(resolve => setTimeout(resolve, 400));
 
-        for (let i = 0; i < this.diceCount; i++) {
-            const roll = await new Roll('1d6').evaluate();
-            this.diceResults.push(roll.total);
-        }
+        this.diceResults = await InitiativeStateManager.rollDice(this.diceCount);
 
         // Auto-select if only one die
         if (this.diceCount === 1) {
@@ -735,42 +662,29 @@ export class InitiativeDialog extends Application {
 
         // Calculate final values
         const totalIni = this._calculateTotalInitiative();
-        const diceResult =
-            this.selectedDiceIndex !== null ? this.diceResults[this.selectedDiceIndex] : this.diceResults[0];
 
-        const effectName = `Kampf-Modifikatoren Runde ${this.combat?.round ?? 1}`;
-
-        // Determine AT/VT modifiers based on state
-        let finalAtMod = 0;
-        let finalVtMod = 0;
-
-        if (this.movedAction) {
-            // LOCKED state: use only locked action's AT/VT modifiers
-            const actionMods = this._getLockedActionModifiers();
-            finalAtMod = this.atMod + actionMods.at;
-            finalVtMod = this.vtMod + actionMods.vt;
-            // kombinierte Aktion penalty was already applied when action was first locked
-        } else {
-            // FRESH state: calculate from selected actions
-            const actionMods = this._calculateActionModifiers();
-            finalAtMod = this.atMod + actionMods.at;
-            finalVtMod = this.vtMod + actionMods.vt;
-            if (this.kombinierteAktion) {
-                finalAtMod -= 4;
-                finalVtMod -= 4;
-            }
-        }
-
-        // Delete existing effect with same name to avoid duplicates
-        const existingEffect = this.actor.effects.find(e => e.name === effectName);
-        if (existingEffect) {
-            await this.actor.deleteEmbeddedDocuments('ActiveEffect', [existingEffect.id]);
-        }
+        // Use StateManager to build and create the combat effect
+        await InitiativeStateManager.createCombatEffects(
+            this.actor,
+            {
+                iniMod: this.iniMod,
+                atMod: this.atMod,
+                vtMod: this.vtMod,
+                selectedActionIds: this.selectedActionIds,
+                kombinierteAktion: this.kombinierteAktion,
+                diceResults: this.diceResults,
+                selectedDiceIndex: this.selectedDiceIndex,
+                hasRolled: this.hasRolled,
+                movedAction: this.movedAction,
+                carryOver: this.carryOver,
+                lockedActionId: this.lockedActionId,
+            },
+            this.combat?.round ?? 1,
+            this.availableActions
+        );
 
         if (totalIni < 0) {
             // --- NEGATIVE: Enter or stay in LOCKED state ---
-
-            // Lock action and weapon if entering locked state for the first time
             if (!this.movedAction) {
                 this.lockedActionId = this.selectedActionIds[0] ?? null;
                 this.lockedWeaponId = this.selectedWeaponId || null;
@@ -779,175 +693,55 @@ export class InitiativeDialog extends Application {
                 this.movedActionRounds += 1;
             }
             this.movedAction = true;
-            this.carryOver = totalIni; // Store the negative total for next round
+            this.carryOver = totalIni;
 
-            // Create effect with AT/VT from locked action and the INI delta
-            const changes = [];
-            // INI delta = what changed from base (for the effect system)
-            const iniDelta = totalIni - this._getBaseInitiative();
-            if (iniDelta !== 0) {
-                changes.push({
-                    key: 'system.abgeleitete.ini',
-                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: iniDelta.toString(),
-                });
-            }
-            if (finalAtMod !== 0) {
-                changes.push({
-                    key: 'system.modifikatoren.nahkampfmod',
-                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: finalAtMod.toString(),
-                });
-            }
-            if (finalVtMod !== 0) {
-                changes.push({
-                    key: 'system.modifikatoren.verteidigungmod',
-                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: finalVtMod.toString(),
-                });
-            }
-
-            if (changes.length > 0) {
-                await this.actor.createEmbeddedDocuments('ActiveEffect', [{
-                    name: effectName,
-                    icon: 'icons/svg/dice-target.svg',
-                    changes: changes,
-                    duration: { turns: 2 },
-                    origin: this.actor.uuid,
-                }]);
-            }
-
-            // Persist locked state, reset dice for next round
+            // Reset dice for next round
             this.iniMod = 0;
             this.diceResults = [];
             this.selectedDiceIndex = null;
             this.hasRolled = false;
             await this._savePersistedState();
-
         } else {
-            // --- POSITIVE: Normal resolution (even if was previously locked) ---
-
-            // Create effect with modifiers
-            const changes = [];
-            const iniDelta = totalIni - this._getBaseInitiative();
-            if (iniDelta !== 0) {
-                changes.push({
-                    key: 'system.abgeleitete.ini',
-                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: iniDelta.toString(),
-                });
-            }
-            if (finalAtMod !== 0) {
-                changes.push({
-                    key: 'system.modifikatoren.nahkampfmod',
-                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: finalAtMod.toString(),
-                });
-            }
-            if (finalVtMod !== 0) {
-                changes.push({
-                    key: 'system.modifikatoren.verteidigungmod',
-                    mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-                    value: finalVtMod.toString(),
-                });
-            }
-
-            if (changes.length > 0) {
-                await this.actor.createEmbeddedDocuments('ActiveEffect', [{
-                    name: effectName,
-                    icon: 'icons/svg/dice-target.svg',
-                    changes: changes,
-                    duration: { turns: 1 },
-                    origin: this.actor.uuid,
-                }]);
-            }
-
-            // Clear ALL persisted state (including locked state)
+            // --- POSITIVE: Normal resolution ---
             await this._clearPersistedState();
         }
 
         // Set initiative in combat tracker
-        await this.combat.setInitiative(this.combatant.id, totalIni + 0.1); // PCs before NPCs with same ini
+        await this.combat.setInitiative(this.combatant.id, totalIni + 0.1);
 
-        // Post chat message
-        await this._postChatMessage(totalIni, diceResult, finalAtMod, finalVtMod);
+        // Post individual chat message via StateManager
+        await InitiativeStateManager.postIndividualChatMessage(
+            this.actor,
+            {
+                iniMod: this.iniMod,
+                atMod: this.atMod,
+                vtMod: this.vtMod,
+                selectedActionIds: this.selectedActionIds,
+                kombinierteAktion: this.kombinierteAktion,
+                diceResults: this.diceResults,
+                selectedDiceIndex: this.selectedDiceIndex,
+                hasRolled: this.hasRolled,
+                movedAction: this.movedAction,
+                carryOver: this.carryOver,
+            },
+            this.availableActions,
+            this.combat?.round ?? 1
+        );
 
-        // Close dialog
         this.close();
     }
 
     /**
-     * Get AT/VT modifiers from the locked action (not from currently selected actions).
-     * Used when resolving a LOCKED state combatant's turn.
-     * @private
-     * @returns {{at: number, vt: number}}
-     */
-    _getLockedActionModifiers() {
-        let atMod = 0;
-        let vtMod = 0;
-
-        if (!this.lockedActionId) return { at: atMod, vt: vtMod };
-
-        const action = this.availableActions.find(a => (a.id || a._id) === this.lockedActionId);
-        if (action?.effects) {
-            for (const effect of action.effects) {
-                for (const change of effect.changes || []) {
-                    if (change.key === 'system.modifikatoren.nahkampfmod' || change.key.includes('nahkampfmod')) {
-                        atMod += parseInt(change.value) || 0;
-                    }
-                    if (
-                        change.key === 'system.modifikatoren.verteidigungmod' ||
-                        change.key.includes('verteidigungmod')
-                    ) {
-                        vtMod += parseInt(change.value) || 0;
-                    }
-                }
-            }
-        }
-
-        return { at: atMod, vt: vtMod };
-    }
-
-    /**
-     * Post chat message with initiative announcement
-     * @param {number} totalIni - Total initiative value
-     * @param {number} diceResult - Dice roll result
-     * @param {number} atMod - AT modifier
-     * @param {number} vtMod - VT modifier
-     * @private
-     */
-    async _postChatMessage(totalIni, diceResult, atMod, vtMod) {
-        const baseIni = this.actor.system.abgeleitete?.ini ?? 0;
-
-        // Build action names
-        const actionNames = this.selectedActionIds
-            .map(id => this.availableActions.find(a => (a.id || a._id) === id)?.name)
-            .filter(Boolean);
-
-        // Build content with actor icon
-        let content = `<img src="${this.actor.img}" alt="${this.actor.name}" width="36" height="36" style="border: none; vertical-align: middle; margin-right: 8px;"/>`;
-        content += `<strong>${this.actor.name}</strong> Initiative: ${totalIni} (Basis: ${baseIni}, Mod: ${this.iniMod >= 0 ? '+' : ''}${this.iniMod}, Würfel: ${diceResult})`;
-
-        if (actionNames.length > 0) {
-            content += `<br>Aktionen: ${actionNames.join(', ')}`;
-        }
-
-        if (atMod !== 0 || vtMod !== 0) {
-            const modifiers = [];
-            if (atMod !== 0) modifiers.push(`AT ${atMod >= 0 ? '+' : ''}${atMod}`);
-            if (vtMod !== 0) modifiers.push(`VT ${vtMod >= 0 ? '+' : ''}${vtMod}`);
-            content += `<br>Modifikatoren: ${modifiers.join(', ')}`;
-        }
-
-        await ChatMessage.create({
-            content: content,
-            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        });
-    }
-
-    /**
-     * Handle cancel button click
+     * Handle cancel button click — discard changes.
+     * State is NOT persisted; only "INI ansagen" commits.
      * @param {Event} event
+     * @private
+     */
+    _onCancel(event) {
+        event.preventDefault();
+        this.close();
+    }
+    /**
      * @private
      */
     _onCancel(event) {
