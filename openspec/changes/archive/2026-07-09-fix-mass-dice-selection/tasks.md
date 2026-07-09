@@ -1,0 +1,1 @@
+- [x] 1.1 In `templates/apps/mass-initiative-dialog.hbs`, change `{{../../npc.combatantId}}` to `{{../npc.combatantId}}` in the dice results `#each` loop

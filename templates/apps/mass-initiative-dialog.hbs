@@ -114,11 +114,10 @@
                     
                     {{#if npc.state.hasRolled}}
                     <div class="dice-results">
-                        {{#each npc.state.diceResults as |result index|}}
-                        <div class="dice-result {{#if (eq ../npc.state.selectedDiceIndex index)}}selected{{/if}}" 
-                             data-combatant-id="{{../../npc.combatantId}}"
-                             data-index="{{index}}">
-                            <span class="dice-value">{{result}}</span>
+                        {{#each npc.diceData as |die|}}
+                        <div class="dice-result {{#if die.selected}}selected{{/if}}" 
+                             data-index="{{die.index}}">
+                            <span class="dice-value">{{die.value}}</span>
                         </div>
                         {{/each}}
                     </div>

@@ -96,6 +96,15 @@ export class MassInitiativeDialog extends Application {
             const isFiltered =
                 this.filterDefault && isProcessed && !state.movedAction;
 
+            // Build dice data with selection state baked in (avoids Handlebars path issues)
+            const diceData = state.hasRolled
+                ? state.diceResults.map((value, i) => ({
+                      value: value,
+                      selected: state.selectedDiceIndex === i,
+                      index: i,
+                  }))
+                : [];
+
             npcs.push({
                 combatantId: combatant.id,
                 actorId: actor?.id,
@@ -105,6 +114,7 @@ export class MassInitiativeDialog extends Application {
                 state: state,
                 totalIni: totalIni,
                 actionChips: actionChips,
+                diceData: diceData,
                 needsDiceSelection: needsDiceSelection,
                 isFiltered: isFiltered,
             });
@@ -130,7 +140,7 @@ export class MassInitiativeDialog extends Application {
 
         // Dice rolling
         html.find('.roll-dice-btn').click(this._onRollDice.bind(this));
-        html.find('.dice-result').click(this._onSelectDice.bind(this));
+        html.find('.dice-results:not(.dice-placeholder) .dice-result').click(this._onSelectDice.bind(this));
 
         // Mass dice rolling
         html.find('.roll-all-dice-btn').click(this._onRollAllDice.bind(this));
@@ -305,7 +315,10 @@ export class MassInitiativeDialog extends Application {
      */
     async _onSelectDice(event) {
         event.preventDefault();
-        const combatantId = event.currentTarget.dataset.combatantId;
+        // Read combatantId from the parent npc-card div — more reliable than
+        // Handlebars path traversal inside nested #each loops.
+        const card = event.currentTarget.closest('.npc-card');
+        const combatantId = card?.dataset.combatantId;
         const index = parseInt(event.currentTarget.dataset.index);
         const state = this.npcStates.get(combatantId);
 

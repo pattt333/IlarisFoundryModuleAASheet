@@ -1,0 +1,2 @@
+- [x] 1.1 In `scripts/apps/mass-initiative-dialog.js` `getData()`, add `diceData` computed array per NPC: `{value, selected: state.selectedDiceIndex === i, index: i}` for each dice result. Only when `hasRolled` and `diceResults` has items.
+- [x] 1.2 In `templates/apps/mass-initiative-dialog.hbs` dice results section, change `{{#each npc.state.diceResults as |result index|}}` to `{{#each npc.diceData as |die|}}`, replace `{{result}}` with `{{die.value}}`, replace `{{#if (eq ../npc.state.selectedDiceIndex index)}}selected{{/if}}` with `{{#if die.selected}}selected{{/if}}`
