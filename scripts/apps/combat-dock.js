@@ -33,6 +33,7 @@ export class CombatDockApp extends HandlebarsApplicationMixin(ApplicationV2) {
             rollInitiative: CombatDockApp.#onRollInitiative,
             shiftLeft: CombatDockApp.#onShiftLeft,
             shiftRight: CombatDockApp.#onShiftRight,
+            endTurn: CombatDockApp.#onEndTurn,
         },
     };
 
@@ -92,6 +93,16 @@ export class CombatDockApp extends HandlebarsApplicationMixin(ApplicationV2) {
         if (!combatant.actor.hasPlayerOwner && game.user.isGM) return true;
         if (combatant.actor.isOwner) return true;
         return false;
+    }
+
+    /** @private */
+    _canEndTurn() {
+        if (!this._combat) return false;
+        if (this._isPreRoll()) return false;
+        if (game.user.isGM) return true;
+        const currentCombatant = this._combat.combatant;
+        if (!currentCombatant?.actor) return false;
+        return currentCombatant.actor.isOwner;
     }
 
     /** @private */
@@ -177,6 +188,7 @@ export class CombatDockApp extends HandlebarsApplicationMixin(ApplicationV2) {
         context.isPreRoll = isPreRoll;
         context.hasOverflow = hasOverflow;
         context.isGM = game.user.isGM;
+        context.canEndTurn = this._canEndTurn();
         context.stateClass = isPreRoll ? 'pre-roll' : 'in-combat';
         context.positionClass = this._getPositionClass();
         context.sizeClass = this._getSizeClass();
@@ -237,6 +249,20 @@ export class CombatDockApp extends HandlebarsApplicationMixin(ApplicationV2) {
     /** @private */
     static #onShiftRight(_event, _target) {
         this._shiftWindowRight();
+    }
+
+    /** @private */
+    static async #onEndTurn(event, target) {
+        event.preventDefault();
+        const btn = target.closest('button');
+        if (!btn || !this._combat) return;
+        btn.disabled = true;
+        try {
+            await this._combat.nextTurn();
+        } catch (err) {
+            btn.disabled = false;
+            throw err;
+        }
     }
 
     /** @private */

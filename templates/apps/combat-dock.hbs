@@ -43,10 +43,11 @@
         {{/if}}
     </div>
 
-    {{!-- Round Badge --}}
-    <div class="dock-round-badge">
-        <span class="dock-round-label">Runde</span>
-        <span class="dock-round-number">{{round}}</span>
-    </div>
+    {{!-- End Turn Button (owner/GM only, in-combat only) --}}
+    {{#if canEndTurn}}
+    <button type="button" class="dock-end-turn-btn" data-action="endTurn" aria-label="Zug beenden">
+        <i class="fas fa-forward-step"></i> Zug beenden
+    </button>
+    {{/if}}
 
 </div>
