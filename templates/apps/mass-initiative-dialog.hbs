@@ -18,10 +18,10 @@
                 <option value="{{action.id}}">{{action.name}} (INI {{#if (gte action.iniMod 0)}}+{{/if}}{{action.iniMod}})</option>
                 {{/each}}
             </select>
-            <button type="button" class="batch-btn apply-batch-btn">
+            <button type="button" class="batch-btn apply-batch-btn" data-action="applyBatch">
                 <i class="fas fa-check-double"></i> Auf alle anwenden
             </button>
-            <button type="button" class="batch-btn roll-all-dice-btn">
+            <button type="button" class="batch-btn roll-all-dice-btn" data-action="rollAllDice">
                 <i class="fas fa-dice"></i> Würfel alle
             </button>
         </div>
@@ -150,10 +150,10 @@
     {{!-- Footer --}}
     <footer class="dialog-footer">
         <div class="dialog-buttons">
-            <button type="button" class="cancel-btn">
+            <button type="button" class="cancel-btn" data-action="cancelIni">
                 <i class="fas fa-times"></i> Abbrechen
             </button>
-            <button type="button" class="ini-ansagen-btn">
+            <button type="button" class="ini-ansagen-btn" data-action="iniAnsagen">
                 <i class="fas fa-bullhorn"></i> INI ansagen (alle)
             </button>
         </div>

@@ -10,7 +10,9 @@ import { InitiativeStateManager } from './initiative-state-manager.js';
 import { InitiativeDialog } from './initiative-dialog.js';
 import { MassInitiativeDialog } from './mass-initiative-dialog.js';
 
-export class CombatDockApp extends Application {
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
+
+export class CombatDockApp extends HandlebarsApplicationMixin(ApplicationV2) {
     constructor(options = {}) {
         super(options);
         this._combat = null;
@@ -18,14 +20,28 @@ export class CombatDockApp extends Application {
     }
 
     /** @override */
-    static get defaultOptions() {
-        return foundry.utils.mergeObject(super.defaultOptions, {
-            id: 'ilaris-combat-dock',
-            classes: ['ilaris-combat-dock'],
+    static DEFAULT_OPTIONS = {
+        tag: 'div',
+        id: 'ilaris-combat-dock',
+        classes: ['ilaris-combat-dock'],
+        position: {},
+        window: {
+            frame: false,
+            positioned: false,
+        },
+        actions: {
+            rollInitiative: CombatDockApp.#onRollInitiative,
+            shiftLeft: CombatDockApp.#onShiftLeft,
+            shiftRight: CombatDockApp.#onShiftRight,
+        },
+    };
+
+    /** @override */
+    static PARTS = {
+        main: {
             template: 'modules/ilaris-alternative-actor-sheet/templates/apps/combat-dock.hbs',
-            popOut: false,
-        });
-    }
+        },
+    };
 
     /** @override */
     get title() {
@@ -105,8 +121,8 @@ export class CombatDockApp extends Application {
     }
 
     /** @override */
-    async getData() {
-        const context = await super.getData();
+    async _prepareContext(options) {
+        const context = await super._prepareContext(options);
         this._combat = game.combat;
 
         if (!this._combat) {
@@ -189,29 +205,38 @@ export class CombatDockApp extends Application {
     }
 
     /** @override */
-    activateListeners(html) {
-        super.activateListeners(html);
-        html.find('[data-action="rollInitiative"]').on('click', this._onRollInitiative.bind(this));
-        html.find('[data-action="shiftLeft"]').on('click', () => this._shiftWindowLeft());
-        html.find('[data-action="shiftRight"]').on('click', () => this._shiftWindowRight());
+    async _onRender(context, options) {
+        await super._onRender(context, options);
+        // Event listeners are handled by DEFAULT_OPTIONS.actions + data-action attributes
     }
 
     /** @private */
-    _onRollInitiative(event) {
+    static #onRollInitiative(event, target) {
         event.preventDefault();
-        const combatantId = event.currentTarget.dataset.combatantId;
-        if (!combatantId || !this._combat) return;
-        const combatant = this._combat.combatants.get(combatantId);
+        const combatantId = target.dataset.combatantId;
+        const combat = game.combat;
+        if (!combatantId || !combat) return;
+        const combatant = combat.combatants.get(combatantId);
         if (!combatant) return;
         const actor = combatant.actor;
         if (!actor) return;
 
         if (!actor.hasPlayerOwner && game.user.isGM) {
-            const npcs = this._combat.combatants.contents.filter(c => !c.actor?.hasPlayerOwner);
-            if (npcs.length > 0) new MassInitiativeDialog(this._combat, npcs).render(true);
+            const npcs = combat.combatants.contents.filter(c => !c.actor?.hasPlayerOwner);
+            if (npcs.length > 0) new MassInitiativeDialog(combat, npcs).render(true);
         } else if (actor.isOwner) {
             new InitiativeDialog(combatant).render(true);
         }
+    }
+
+    /** @private */
+    static #onShiftLeft(_event, _target) {
+        this._shiftWindowLeft();
+    }
+
+    /** @private */
+    static #onShiftRight(_event, _target) {
+        this._shiftWindowRight();
     }
 
     /** @private */
@@ -226,7 +251,7 @@ export class CombatDockApp extends Application {
 
     /** @private */
     _updatePosition() {
-        const rootEl = this.element?.[0];
+        const rootEl = this.element;
         if (!rootEl) return;
         rootEl.classList.remove('position-top', 'position-bottom', 'position-none');
         rootEl.classList.add(this._getPositionClass());
@@ -234,7 +259,7 @@ export class CombatDockApp extends Application {
 
     /** @private */
     _updateSize() {
-        const rootEl = this.element?.[0];
+        const rootEl = this.element;
         if (!rootEl) return;
         rootEl.classList.remove('size-small', 'size-normal');
         rootEl.classList.add(this._getSizeClass());

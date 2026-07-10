@@ -7,7 +7,9 @@
  */
 import { InitiativeStateManager } from './initiative-state-manager.js';
 
-export class InitiativeDialog extends Application {
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
+
+export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     constructor(combatant, options = {}) {
         super(options);
         this.combatant = combatant;
@@ -28,17 +30,29 @@ export class InitiativeDialog extends Application {
     }
 
     /** @override */
-    static get defaultOptions() {
-        return foundry.utils.mergeObject(super.defaultOptions, {
-            id: 'initiative-dialog',
-            classes: ['ilaris', 'initiative-dialog'],
-            template: 'modules/ilaris-alternative-actor-sheet/templates/apps/initiative-dialog.hbs',
-            width: 520,
-            height: 'auto',
+    static DEFAULT_OPTIONS = {
+        tag: 'div',
+        id: 'initiative-dialog',
+        classes: ['ilaris', 'initiative-dialog'],
+        position: { width: 520, height: 'auto' },
+        window: {
             title: 'Initiative ansagen',
             resizable: true,
-        });
-    }
+        },
+        actions: {
+            toggleAction: InitiativeDialog.#onActionCardClick,
+            rollDice: InitiativeDialog.#onRollDice,
+            iniAnsagen: InitiativeDialog.#onIniAnsagen,
+            cancelIni: InitiativeDialog.#onCancel,
+        },
+    };
+
+    /** @override */
+    static PARTS = {
+        form: {
+            template: 'modules/ilaris-alternative-actor-sheet/templates/apps/initiative-dialog.hbs',
+        },
+    };
 
     /** @override */
     get title() {
@@ -111,8 +125,8 @@ export class InitiativeDialog extends Application {
     }
 
     /** @override */
-    async getData() {
-        const context = await super.getData();
+    async _prepareContext(options) {
+        const context = await super._prepareContext(options);
 
         // Load available actions from actor inventory and compendium
         await this._loadAvailableActions();
@@ -382,32 +396,28 @@ export class InitiativeDialog extends Application {
     }
 
     /** @override */
-    activateListeners(html) {
-        super.activateListeners(html);
+    async _onRender(context, options) {
+        await super._onRender(context, options);
+
+        const el = this.element;
 
         // Input fields for modifiers
-        html.find('input[name="iniMod"]').change(this._onIniModChange.bind(this));
-        html.find('input[name="atMod"]').change(this._onModifierChange.bind(this));
-        html.find('input[name="vtMod"]').change(this._onModifierChange.bind(this));
-        html.find('input[name="kombinierteAktion"]').change(this._onModifierChange.bind(this));
-        html.find('select[name="diceCount"]').change(this._onModifierChange.bind(this));
+        el.querySelector('input[name="iniMod"]')?.addEventListener('change', event => this._onIniModChange(event));
+        el.querySelector('input[name="atMod"]')?.addEventListener('change', event => this._onModifierChange(event));
+        el.querySelector('input[name="vtMod"]')?.addEventListener('change', event => this._onModifierChange(event));
+        el.querySelector('input[name="kombinierteAktion"]')?.addEventListener('change', event => this._onModifierChange(event));
+        el.querySelector('select[name="diceCount"]')?.addEventListener('change', event => this._onModifierChange(event));
 
         // Weapon dropdown
-        html.find('select[name="selectedWeapon"]').change(this._onWeaponChange.bind(this));
+        el.querySelector('select[name="selectedWeapon"]')?.addEventListener('change', event => this._onWeaponChange(event));
 
-        // Action cards (clickable tiles)
-        html.find('.action-card:not(.locked-card):not(.disabled-card)').click(this._onActionCardClick.bind(this));
+        // Dice result clicks (dynamic — bind after each render)
+        el.querySelectorAll('.dice-result').forEach(resultEl => {
+            resultEl.addEventListener('click', event => this._onSelectDice(event));
+        });
 
-        // Dice rolling
-        html.find('.roll-dice-btn').click(this._onRollDice.bind(this));
-        html.find('.dice-result').click(this._onSelectDice.bind(this));
-
-        // Manual dice input (manual rolling mode)
-        html.find('input[name="manualDice"]').change(this._onManualDiceChange.bind(this));
-
-        // Main buttons
-        html.find('.ini-ansagen-btn').click(this._onIniAnsagen.bind(this));
-        html.find('.cancel-btn').click(this._onCancel.bind(this));
+        // Manual dice input
+        el.querySelector('input[name="manualDice"]')?.addEventListener('change', event => this._onManualDiceChange(event));
     }
 
     /**
@@ -421,22 +431,20 @@ export class InitiativeDialog extends Application {
     /**
      * Handle action card click (toggle selection, max 2)
      * @param {Event} event
+     * @param {HTMLElement} target
      * @private
      */
-    async _onActionCardClick(event) {
+    static async #onActionCardClick(event, target) {
         event.preventDefault();
-        const card = event.currentTarget;
-        const actionId = card.dataset.actionId;
+        const actionId = target.dataset.actionId;
 
         if (!actionId) return;
 
         const isSelected = this.selectedActionIds.includes(actionId);
 
         if (isSelected) {
-            // Deselect
             this.selectedActionIds = this.selectedActionIds.filter(id => id !== actionId);
         } else {
-            // Select (max 2)
             if (this.selectedActionIds.length >= 2) {
                 ui.notifications.warn('Maximal 2 Aktionen auswählbar.');
                 return;
@@ -447,25 +455,6 @@ export class InitiativeDialog extends Application {
         await this._savePersistedState();
         this._updateFormulaBreakdown();
         this.render();
-    }
-
-    /**
-     * Handle form submission
-     * @param {Event} event
-     * @param {Object} formData
-     * @private
-     */
-    async _updateObject(event, formData) {
-        // Update local state from form data
-        this.iniMod = parseInt(formData.iniMod) || 0;
-        this.atMod = parseInt(formData.atMod) || 0;
-        this.vtMod = parseInt(formData.vtMod) || 0;
-        this.kombinierteAktion = formData.kombinierteAktion || false;
-        this.diceCount = parseInt(formData.diceCount) || 1;
-
-        // Save to actor flags
-        await this._savePersistedState();
-        this._updateFormulaBreakdown();
     }
 
     /**
@@ -515,28 +504,27 @@ export class InitiativeDialog extends Application {
      * @private
      */
     _updateFormulaBreakdown() {
-        const html = this.element;
-        if (!html.length) return;
+        const el = this.element;
+        if (!el) return;
 
         const totalIni = this._calculateTotalInitiative();
 
         // Update formula result total
-        const resultEl = html.find('.formula-result');
-        if (resultEl.length) {
-            resultEl.text(totalIni);
-            resultEl.toggleClass('negative', totalIni < 0);
-            resultEl.toggleClass('positive', totalIni >= 0);
+        const resultEl = el.querySelector('.formula-result');
+        if (resultEl) {
+            resultEl.textContent = totalIni;
+            resultEl.classList.toggle('negative', totalIni < 0);
+            resultEl.classList.toggle('positive', totalIni >= 0);
         }
 
         // Update individual formula part values
         const parts = this._getFormulaParts();
-        const partEls = html.find('.formula-part .formula-value');
-        partEls.each((i, el) => {
+        const partEls = el.querySelectorAll('.formula-part .formula-value');
+        partEls.forEach((el, i) => {
             if (i < parts.length) {
-                const $el = $(el);
-                $el.text(parts[i].value);
+                el.textContent = parts[i].value;
                 const numVal = parseInt(parts[i].value);
-                $el.toggleClass('negative', !isNaN(numVal) && numVal < 0);
+                el.classList.toggle('negative', !isNaN(numVal) && numVal < 0);
             }
         });
     }
@@ -566,10 +554,10 @@ export class InitiativeDialog extends Application {
 
         // Update calculated INI display directly in DOM
         const totalIni = this._calculateTotalInitiative();
-        const iniDisplay = this.element.find('.current-ini strong');
-        if (iniDisplay.length) {
-            iniDisplay.text(totalIni);
-            iniDisplay.toggleClass('negative', totalIni < 0);
+        const iniDisplay = this.element?.querySelector('.current-ini strong');
+        if (iniDisplay) {
+            iniDisplay.textContent = totalIni;
+            iniDisplay.classList.toggle('negative', totalIni < 0);
         }
         this.render();
     }
@@ -579,12 +567,12 @@ export class InitiativeDialog extends Application {
      * @param {Event} event
      * @private
      */
-    async _onRollDice(event) {
+    static async #onRollDice(event, _target) {
         event.preventDefault();
 
         // Animate dice faces before showing results
-        const diceFaces = this.element.find('.dice-face');
-        diceFaces.addClass('rolling');
+        const diceFaces = this.element.querySelectorAll('.dice-face');
+        diceFaces.forEach(el => el.classList.add('rolling'));
         await new Promise(resolve => setTimeout(resolve, 400));
 
         this.diceResults = await InitiativeStateManager.rollDice(this.diceCount);
@@ -600,32 +588,36 @@ export class InitiativeDialog extends Application {
         await this._savePersistedState();
 
         // Remove rolling animation
-        diceFaces.removeClass('rolling');
+        diceFaces.forEach(el => el.classList.remove('rolling'));
 
         // Update dice faces with results
-        const resultEls = this.element.find('.dice-result');
-        resultEls.each((i, el) => {
-            const $el = $(el);
+        const resultEls = this.element.querySelectorAll('.dice-result');
+        resultEls.forEach((el, i) => {
             const result = this.diceResults[i];
             if (result !== undefined) {
-                $el.removeClass('dice-placeholder');
-                $el.toggleClass('selected', this.selectedDiceIndex === i);
-                const $face = $el.find('.dice-face');
-                $face.removeClass('show-unknown');
-                // Add class for the pip count
-                for (let p = 1; p <= 6; p++) {
-                    $face.removeClass(`show-${p}`);
+                el.classList.remove('dice-placeholder');
+                el.classList.toggle('selected', this.selectedDiceIndex === i);
+                const face = el.querySelector('.dice-face');
+                if (face) {
+                    face.classList.remove('show-unknown');
+                    for (let p = 1; p <= 6; p++) {
+                        face.classList.remove(`show-${p}`);
+                    }
+                    face.classList.add(`show-${result}`);
+                    const valueSpan = face.querySelector('.dice-value');
+                    if (valueSpan) valueSpan.textContent = result;
                 }
-                $face.addClass(`show-${result}`);
-                $face.find('.dice-value').text(result);
             }
         });
 
-        // Re-bind click handlers for dice selection
-        this.element.find('.dice-result').off('click').click(this._onSelectDice.bind(this));
+        // Re-bind click handlers for dice selection (on re-render this is handled by _onRender)
+        resultEls.forEach(el => {
+            el.addEventListener('click', e => this._onSelectDice(e));
+        });
 
         // Enable INI ansagen button
-        this.element.find('.ini-ansagen-btn').removeClass('disabled');
+        const ansagenBtn = this.element.querySelector('.ini-ansagen-btn');
+        if (ansagenBtn) ansagenBtn.classList.remove('disabled');
 
         this._updateFormulaBreakdown();
     }
@@ -645,8 +637,8 @@ export class InitiativeDialog extends Application {
         await this._savePersistedState();
 
         // Update selected class in DOM
-        this.element.find('.dice-result').removeClass('selected');
-        $(event.currentTarget).addClass('selected');
+        this.element.querySelectorAll('.dice-result').forEach(el => el.classList.remove('selected'));
+        event.currentTarget.classList.add('selected');
 
         this._updateFormulaBreakdown();
     }
@@ -676,7 +668,7 @@ export class InitiativeDialog extends Application {
      * @param {Event} event
      * @private
      */
-    async _onIniAnsagen(event) {
+    static async #onIniAnsagen(event, _target) {
         event.preventDefault();
 
         // Check if dice have been rolled
@@ -768,16 +760,8 @@ export class InitiativeDialog extends Application {
      * @param {Event} event
      * @private
      */
-    _onCancel(event) {
+    static #onCancel(event, _target) {
         event.preventDefault();
-        this.close();
-    }
-    /**
-     * @private
-     */
-    _onCancel(event) {
-        event.preventDefault();
-        // Don't clear state, just close
         this.close();
     }
 }

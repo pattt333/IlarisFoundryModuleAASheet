@@ -7,7 +7,9 @@
  */
 import { InitiativeStateManager } from './initiative-state-manager.js';
 
-export class MassInitiativeDialog extends Application {
+const { ApplicationV2, DialogV2, HandlebarsApplicationMixin } = foundry.applications.api;
+
+export class MassInitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     constructor(combat, npcCombatants, options = {}) {
         super(options);
         this.combat = combat;
@@ -27,18 +29,29 @@ export class MassInitiativeDialog extends Application {
     }
 
     /** @override */
-    static get defaultOptions() {
-        return foundry.utils.mergeObject(super.defaultOptions, {
-            id: 'mass-initiative-dialog',
-            classes: ['ilaris', 'mass-initiative-dialog'],
-            template:
-                'modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs',
-            width: 900,
-            height: 600,
+    static DEFAULT_OPTIONS = {
+        tag: 'div',
+        id: 'mass-initiative-dialog',
+        classes: ['ilaris', 'mass-initiative-dialog'],
+        position: { width: 900, height: 600 },
+        window: {
             title: 'NPC Initiative',
             resizable: true,
-        });
-    }
+        },
+        actions: {
+            iniAnsagen: MassInitiativeDialog.#onIniAnsagen,
+            cancelIni: MassInitiativeDialog.#onCancel,
+            rollAllDice: MassInitiativeDialog.#onRollAllDice,
+            applyBatch: MassInitiativeDialog.#onBatchApply,
+        },
+    };
+
+    /** @override */
+    static PARTS = {
+        form: {
+            template: 'modules/ilaris-alternative-actor-sheet/templates/apps/mass-initiative-dialog.hbs',
+        },
+    };
 
     /** @override */
     get title() {
@@ -46,8 +59,8 @@ export class MassInitiativeDialog extends Application {
     }
 
     /** @override */
-    async getData() {
-        const context = await super.getData();
+    async _prepareContext(options) {
+        const context = await super._prepareContext(options);
 
         // Load available actions once
         if (this.availableActions.length === 0) {
@@ -135,41 +148,44 @@ export class MassInitiativeDialog extends Application {
     }
 
     /** @override */
-    activateListeners(html) {
-        super.activateListeners(html);
+    async _onRender(context, options) {
+        await super._onRender(context, options);
 
-        // Dice rolling
-        html.find('.roll-dice-btn').click(this._onRollDice.bind(this));
-        html.find('.dice-results:not(.dice-placeholder) .dice-result').click(this._onSelectDice.bind(this));
+        const el = this.element;
 
-        // Mass dice rolling
-        html.find('.roll-all-dice-btn').click(this._onRollAllDice.bind(this));
+        // Dice rolling per NPC
+        el.querySelectorAll('.roll-dice-btn').forEach(btn => {
+            btn.addEventListener('click', event => this._onRollDice(event));
+        });
+
+        // Dice result selection
+        el.querySelectorAll('.dice-results:not(.dice-placeholder) .dice-result').forEach(dr => {
+            dr.addEventListener('click', event => this._onSelectDice(event));
+        });
 
         // Multi-select action changes
-        html.find('multi-select').on('change', this._onActionsChange.bind(this));
+        el.querySelectorAll('multi-select').forEach(ms => {
+            ms.addEventListener('change', event => this._onActionsChange(event));
+        });
 
         // Chip remove buttons
-        html.find('.chip-remove').click(this._onChipRemove.bind(this));
-
-        // Main buttons
-        html.find('.ini-ansagen-btn').click(this._onIniAnsagen.bind(this));
-        html.find('.cancel-btn').click(this._onCancel.bind(this));
-
-        // Batch apply
-        html.find('.apply-batch-btn').click(this._onBatchApply.bind(this));
+        el.querySelectorAll('.chip-remove').forEach(chip => {
+            chip.addEventListener('click', event => this._onChipRemove(event));
+        });
 
         // Filter toggle
-        html.find('.filter-toggle input').change(this._onFilterToggle.bind(this));
+        el.querySelector('.filter-toggle input')?.addEventListener('change', event => this._onFilterToggle(event));
 
         // Form change handling for modifier inputs
-        html.find('input[type="number"], input[type="checkbox"], select.dice-count-select').on(
-            'change',
-            this._onFormChange.bind(this)
-        );
+        el.querySelectorAll('input[type="number"], input[type="checkbox"], select.dice-count-select').forEach(input => {
+            input.addEventListener('change', event => this._onFormChange(event));
+        });
 
         // Tooltip hover for formula breakdown
-        html.find('.result-info').on('mouseenter', this._onTooltipShow.bind(this));
-        html.find('.result-info').on('mouseleave', this._onTooltipHide.bind(this));
+        el.querySelectorAll('.result-info').forEach(info => {
+            info.addEventListener('mouseenter', event => this._onTooltipShow(event));
+            info.addEventListener('mouseleave', event => this._onTooltipHide(event));
+        });
     }
 
     /* -------------------------------------------- */
@@ -337,7 +353,7 @@ export class MassInitiativeDialog extends Application {
      * @param {Event} event
      * @private
      */
-    async _onRollAllDice(event) {
+    static async #onRollAllDice(event, _target) {
         event.preventDefault();
 
         for (const [combatantId, state] of this.npcStates) {
@@ -365,10 +381,10 @@ export class MassInitiativeDialog extends Application {
      * @param {Event} event
      * @private
      */
-    async _onBatchApply(event) {
+    static async #onBatchApply(event, _target) {
         event.preventDefault();
-        const batchSelect = this.element.find('.batch-action-select');
-        const actionId = batchSelect.val();
+        const batchSelect = this.element.querySelector('.batch-action-select');
+        const actionId = batchSelect?.value;
         if (!actionId) return;
 
         let appliedCount = 0;
@@ -411,7 +427,7 @@ export class MassInitiativeDialog extends Application {
      * @param {Event} event
      * @private
      */
-    async _onIniAnsagen(event) {
+    static async #onIniAnsagen(event, _target) {
         event.preventDefault();
 
         // Find unprocessed NPCs
@@ -426,10 +442,8 @@ export class MassInitiativeDialog extends Application {
         }
 
         if (unprocessed.length > 0) {
-            // Show warning dialog
             const action = await this._showUnprocessedDialog(unprocessed);
             if (action === 'roll-missing') {
-                // Roll dice for missing NPCs
                 for (const [combatantId, state] of this.npcStates) {
                     const needsSelection =
                         state.diceCount === 2 &&
@@ -453,7 +467,6 @@ export class MassInitiativeDialog extends Application {
             } else if (action === 'cancel') {
                 return;
             }
-            // 'proceed' falls through without rolling
         }
 
         await this._commitAllInitiatives();
@@ -472,30 +485,17 @@ export class MassInitiativeDialog extends Application {
             <p><em>${nameList}</em></p>
         `;
 
-        return new Promise(resolve => {
-            new Dialog({
-                title: 'NPCs nicht fertig',
-                content: content,
-                buttons: {
-                    rollMissing: {
-                        icon: '<i class="fas fa-dice"></i>',
-                        label: 'Fehlende würfeln',
-                        callback: () => resolve('roll-missing'),
-                    },
-                    proceed: {
-                        icon: '<i class="fas fa-arrow-right"></i>',
-                        label: 'Trotzdem fortsetzen',
-                        callback: () => resolve('proceed'),
-                    },
-                    cancel: {
-                        icon: '<i class="fas fa-times"></i>',
-                        label: 'Abbrechen',
-                        callback: () => resolve('cancel'),
-                    },
-                },
-                default: 'rollMissing',
-            }).render(true);
+        const result = await DialogV2.prompt({
+            window: { title: 'NPCs nicht fertig' },
+            content: content,
+            buttons: [
+                { action: 'roll-missing', label: 'Fehlende würfeln', icon: 'fas fa-dice', default: true },
+                { action: 'proceed', label: 'Trotzdem fortsetzen', icon: 'fas fa-arrow-right' },
+                { action: 'cancel', label: 'Abbrechen', icon: 'fas fa-times' },
+            ],
         });
+
+        return result ?? 'cancel';
     }
 
     /**
@@ -590,7 +590,7 @@ export class MassInitiativeDialog extends Application {
      * @param {Event} event
      * @private
      */
-    _onCancel(event) {
+    static #onCancel(event, _target) {
         event.preventDefault();
         // State is not persisted on cancel — previously saved state from last
         // "INI ansagen" commit remains untouched in actor flags. The current
@@ -618,19 +618,19 @@ export class MassInitiativeDialog extends Application {
             combatant.actor
         );
 
-        const card = this.element.find(`[data-combatant-id="${combatantId}"]`);
-        const resultEl = card.find('.result-value');
-        if (resultEl.length) {
-            resultEl.text(state.hasRolled ? totalIni : '?');
-            resultEl
-                .removeClass('positive negative unknown')
-                .addClass(
-                    state.hasRolled
-                        ? totalIni < 0
-                            ? 'negative'
-                            : 'positive'
-                        : 'unknown'
-                );
+        const card = this.element.querySelector(`[data-combatant-id="${combatantId}"]`);
+        if (!card) return;
+        const resultEl = card.querySelector('.result-value');
+        if (resultEl) {
+            resultEl.textContent = state.hasRolled ? totalIni : '?';
+            resultEl.classList.remove('positive', 'negative', 'unknown');
+            resultEl.classList.add(
+                state.hasRolled
+                    ? totalIni < 0
+                        ? 'negative'
+                        : 'positive'
+                    : 'unknown'
+            );
         }
     }
 
@@ -693,17 +693,17 @@ export class MassInitiativeDialog extends Application {
             </div>`;
         tooltipHTML += '</div>';
 
-        // Use Foundry's tooltip or simple absolute positioning
-        const tip = $(tooltipHTML);
-        const offset = $(event.currentTarget).offset();
-        tip.css({
-            position: 'absolute',
-            top: offset.top - tip.outerHeight() - 8,
-            left: offset.left,
-            'z-index': 9999,
-        });
-        tip.addClass('formula-tooltip-active');
-        $('body').append(tip);
+        // Create tooltip element
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = tooltipHTML;
+        const tip = wrapper.firstElementChild;
+        const targetRect = event.currentTarget.getBoundingClientRect();
+        tip.style.position = 'absolute';
+        tip.style.top = `${targetRect.top - 8}px`;
+        tip.style.left = `${targetRect.left}px`;
+        tip.style.zIndex = '9999';
+        tip.classList.add('formula-tooltip-active');
+        document.body.appendChild(tip);
 
         // Store reference for removal
         event.currentTarget._tooltip = tip;

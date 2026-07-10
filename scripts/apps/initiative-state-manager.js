@@ -365,7 +365,7 @@ export class InitiativeStateManager {
             const iniKey = actor.type === 'kreatur' ? 'system.kampfwerte.ini' : 'system.abgeleitete.ini';
             changes.push({
                 key: iniKey,
-                mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                mode: "add",
                 value: iniDelta.toString(),
             });
         }
@@ -373,7 +373,7 @@ export class InitiativeStateManager {
         if (finalAtMod !== 0) {
             changes.push({
                 key: 'system.modifikatoren.nahkampfmod',
-                mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                mode: "add",
                 value: finalAtMod.toString(),
             });
         }
@@ -381,7 +381,7 @@ export class InitiativeStateManager {
         if (finalVtMod !== 0) {
             changes.push({
                 key: 'system.modifikatoren.verteidigungmod',
-                mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+                mode: "add",
                 value: finalVtMod.toString(),
             });
         }

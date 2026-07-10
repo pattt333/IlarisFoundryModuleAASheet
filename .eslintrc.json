@@ -27,7 +27,8 @@
         "mergeObject": "readonly",
         "renderTemplate": "readonly",
         "onManageActiveEffect": "readonly",
-        "DEFAULT_TOKEN": "readonly"
+        "DEFAULT_TOKEN": "readonly",
+        "ui": "readonly"
     },
     "rules": {
         "prettier/prettier": "error",

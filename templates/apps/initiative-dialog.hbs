@@ -59,6 +59,7 @@
                     <div class="action-cards">
                         {{#each availableActions as |action|}}
                         <div class="action-card {{#if (includes ../selectedActionIds action.id)}}selected{{/if}}"
+                             data-action="toggleAction"
                              data-action-id="{{action.id}}"
                              title="{{action.description}}">
                             <img src="{{action.img}}" alt="{{action.name}}" class="action-card-img"/>
@@ -134,7 +135,7 @@
                         </select>
                     </div>
 
-                    <button type="button" class="roll-dice-btn">
+                    <button type="button" class="roll-dice-btn" data-action="rollDice">
                         <i class="fas fa-dice-d6"></i> {{#if hasRolled}}Neu würfeln{{else}}Würfeln{{/if}}
                     </button>
                     {{/if}}
@@ -195,10 +196,10 @@
 
     <footer class="dialog-footer">
         <div class="dialog-buttons">
-            <button type="button" class="cancel-btn">
+            <button type="button" class="cancel-btn" data-action="cancelIni">
                 <i class="fas fa-times"></i> Abbrechen
             </button>
-            <button type="button" class="ini-ansagen-btn {{#unless hasRolled}}disabled{{/unless}}">
+            <button type="button" class="ini-ansagen-btn {{#unless hasRolled}}disabled{{/unless}}" data-action="iniAnsagen">
                 <i class="fas fa-bullhorn"></i> INI ansagen
             </button>
         </div>
