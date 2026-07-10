@@ -140,17 +140,18 @@ export class CombatDockApp extends Application {
         if (isPreRoll || !hasOverflow) {
             context.combatants = allCombatants;
         } else {
-            // Window mode: show 3 cards, current centered
+            // Window mode: show 3 cards, current centered, no wrapping at boundaries
             const currentIndex = allCombatants.findIndex(c => c.isCurrent);
             if (currentIndex < 0) {
                 this._windowOffset = 0;
-                context.combatants = allCombatants.slice(0, 3);
+                const slice = allCombatants.slice(0, 3);
+                context.combatants = slice.map((c, i) => ({ ...c, dockPos: ['left', 'center', 'right'][i] || 'center' }));
             } else {
-                const start = (((currentIndex + this._windowOffset - 1) % total) + total) % total;
+                const centerIdx = currentIndex + this._windowOffset;
                 context.combatants = [
-                    allCombatants[start],
-                    allCombatants[(start + 1) % total],
-                    allCombatants[(start + 2) % total],
+                    centerIdx > 0          ? { ...allCombatants[centerIdx - 1], dockPos: 'left' }   : null,
+                    { ...allCombatants[centerIdx], dockPos: 'center' },
+                    centerIdx < total - 1  ? { ...allCombatants[centerIdx + 1], dockPos: 'right' }  : null,
                 ];
             }
         }

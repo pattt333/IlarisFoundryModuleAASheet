@@ -11,6 +11,7 @@
 
         <div class="dock-carousel" data-carousel="combatants">
             {{#each combatants as |combatant|}}
+                {{#if combatant}}
                 {{> "modules/ilaris-alternative-actor-sheet/templates/components/combat-dock-card.hbs"
                     name=combatant.name
                     img=combatant.img
@@ -27,7 +28,11 @@
                     lepMax=combatant.lepMax
                     lepPercent=combatant.lepPercent
                     showLepBar=combatant.showLepBar
+                    dockPos=combatant.dockPos
                 }}
+                {{else}}
+                <div class="combat-dock-card dock-placeholder" aria-hidden="true"></div>
+                {{/if}}
             {{/each}}
         </div>
 
