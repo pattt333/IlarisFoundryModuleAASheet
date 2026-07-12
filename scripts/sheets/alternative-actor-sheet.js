@@ -130,8 +130,8 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 CONFIG.ILARIS = {};
             }
 
-            // Add effectItems for the Kampf-Tab
-            context.actor.effectItems = this.actor.items.filter(i => i.type === 'effectItem');
+            // Add aktion items for the Kampf-Tab
+            context.actor.aktionen = this.actor.items.filter(i => i.type === 'aktion');
 
             // Add canAdvanceTime flag for effect time-advance button
             context.canAdvanceTime = this.actor.isOwner || game.user.isGM;
@@ -174,7 +174,7 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
                 isCharacter: this.actor.type === 'held',
                 isOwner: this.actor.isOwner,
                 // editable: this.isEditable,
-                effectItems: this.actor.items.filter(i => i.type === 'effectItem'),
+                aktionen: this.actor.items.filter(i => i.type === 'aktion'),
             };
         }
     }

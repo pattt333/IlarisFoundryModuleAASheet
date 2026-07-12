@@ -96,10 +96,6 @@
                         <label>VT-Mod</label>
                         <input type="number" name="vtMod-{{npc.combatantId}}" value="{{npc.state.vtMod}}" {{#if npc.state.movedAction}}disabled{{/if}}/>
                     </div>
-                    <label class="kombi-check">
-                        <input type="checkbox" name="kombinierteAktion-{{npc.combatantId}}" {{#if npc.state.kombinierteAktion}}checked{{/if}} {{#if npc.state.movedAction}}disabled{{/if}}/>
-                        Kombinierte Aktion (-4 AT/VT)
-                    </label>
                 </div>
 
                 {{!-- Dice Section --}}

@@ -222,9 +222,6 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
             case 'vtMod':
                 state.vtMod = parseInt(element.value) || 0;
                 break;
-            case 'kombinierteAktion':
-                state.kombinierteAktion = element.checked;
-                break;
             case 'diceCount':
                 state.diceCount = parseInt(element.value) || 1;
                 state.diceResults = [];
@@ -661,6 +658,10 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
             state.selectedActionIds,
             this.availableActions
         );
+        const { malus: combinationMalus } = InitiativeStateManager.deriveCombination(
+            state.selectedActionIds,
+            this.availableActions
+        );
 
         let tooltipHTML = '<div class="formula-tooltip">';
 
@@ -678,12 +679,12 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
         tooltipHTML += `
             <div class="tooltip-row">
                 <span class="tooltip-label">AT</span>
-                <span class="tooltip-value">${state.atMod + actionMods.at + (state.kombinierteAktion && !state.movedAction ? -4 : 0)}</span>
+                <span class="tooltip-value">${state.atMod + actionMods.at + (state.movedAction ? 0 : combinationMalus)}</span>
             </div>`;
         tooltipHTML += `
             <div class="tooltip-row">
                 <span class="tooltip-label">VT</span>
-                <span class="tooltip-value">${state.vtMod + actionMods.vt + (state.kombinierteAktion && !state.movedAction ? -4 : 0)}</span>
+                <span class="tooltip-value">${state.vtMod + actionMods.vt + (state.movedAction ? 0 : combinationMalus)}</span>
             </div>`;
         tooltipHTML += '<div class="tooltip-divider"></div>';
         tooltipHTML += `

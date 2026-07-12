@@ -56,15 +56,19 @@
                 {{!-- FRESH State: Clickable action cards --}}
                 <section class="actions-section">
                     <h3><i class="fas fa-running"></i> Aktionen <span class="hint">(max. 2, niedrigster INI-Mod zählt)</span></h3>
+                    {{#if isCombined}}
+                    <div class="combination-badge"><i class="fas fa-link"></i> Kombiniert (-4 AT/VT)</div>
+                    {{/if}}
                     <div class="action-cards">
                         {{#each availableActions as |action|}}
-                        <div class="action-card {{#if (includes ../selectedActionIds action.id)}}selected{{/if}}"
+                        <div class="action-card {{#if (includes ../selectedActionIds action.id)}}selected{{/if}} {{#if action.grayedOut}}grayed-out{{/if}}"
                              data-action="toggleAction"
                              data-action-id="{{action.id}}"
-                             title="{{action.description}}">
+                             title="{{#if action.grayedOut}}{{action.grayedOutReason}}{{else}}{{action.text}}{{/if}}">
                             <img src="{{action.img}}" alt="{{action.name}}" class="action-card-img"/>
                             <div class="action-card-info">
                                 <strong>{{action.name}}</strong>
+                                <span class="aktionstyp-badge {{action.aktionstyp}}">{{#if (eq action.aktionstyp "komplex")}}Komplex{{else}}Einfach{{/if}}</span>
                                 <span class="action-ini-cost {{#if (lt action.iniMod 0)}}negative{{/if}}">INI {{#if (gte action.iniMod 0)}}+{{/if}}{{action.iniMod}}</span>
                             </div>
                             <div class="action-card-check">{{#if (includes ../selectedActionIds action.id)}}<i class="fas fa-check-circle"></i>{{/if}}</div>
@@ -72,7 +76,7 @@
                         {{/each}}
                     </div>
 
-                    {{!-- Weapon & Combined Action (FRESH only) --}}
+                    {{!-- Weapon (FRESH only) --}}
                     <div class="weapon-row">
                         <div class="form-group weapon-select-group">
                             <label for="selectedWeapon"><i class="fas fa-sword"></i> Waffe</label>
@@ -80,12 +84,6 @@
                                 <option value="">keine Waffe</option>
                                 {{{selectOptions availableWeapons selected=selectedWeaponId valueAttr="id" labelAttr="name"}}}
                             </select>
-                        </div>
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label" title="Bei kombinierten Aktionen sind AT und VT um 4 erschwert">
-                                <input type="checkbox" name="kombinierteAktion" {{#if kombinierteAktion}}checked{{/if}}/>
-                                <span>Kombiniert (-4 AT/VT)</span>
-                            </label>
                         </div>
                     </div>
 

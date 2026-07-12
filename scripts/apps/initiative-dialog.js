@@ -70,7 +70,6 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
         this.atMod = savedState.atMod;
         this.vtMod = savedState.vtMod;
         this.selectedActionIds = savedState.selectedActionIds;
-        this.kombinierteAktion = savedState.kombinierteAktion;
         this.diceCount = savedState.diceCount;
         this.diceResults = savedState.diceResults;
         this.selectedDiceIndex = savedState.selectedDiceIndex;
@@ -93,7 +92,6 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
             atMod: this.atMod,
             vtMod: this.vtMod,
             selectedActionIds: this.selectedActionIds,
-            kombinierteAktion: this.kombinierteAktion,
             diceCount: this.diceCount,
             diceResults: this.diceResults,
             selectedDiceIndex: this.selectedDiceIndex,
@@ -146,7 +144,6 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
         context.iniMod = this.iniMod;
         context.atMod = this.atMod;
         context.vtMod = this.vtMod;
-        context.kombinierteAktion = this.kombinierteAktion;
         context.diceCount = this.diceCount;
         context.availableActions = this.availableActions;
         context.selectedActionIds = this.selectedActionIds;
@@ -174,6 +171,13 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
         context.selectedWeaponData = this.selectedWeaponId
             ? this.availableWeapons.find(w => w.id === this.selectedWeaponId)
             : null;
+
+        // Apply weapon gating
+        this._applyWeaponGating(context.selectedWeaponData);
+
+        // Auto-derived combination
+        const { isCombined } = this._deriveCombination();
+        context.isCombined = isCombined;
 
         // Get selected actions details for description display
         context.selectedActions = this.availableActions.filter(a => this.selectedActionIds.includes(a.id || a._id));
@@ -229,6 +233,75 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
     }
 
     /**
+     * Derive combination state from selected actions' aktionstyp.
+     * @returns {{isCombined: boolean, malus: number}}
+     * @private
+     */
+    _deriveCombination() {
+        return InitiativeStateManager.deriveCombination(this.selectedActionIds, this.availableActions);
+    }
+
+    /**
+     * Apply weapon gating to available actions.
+     * Marks non-matching actions with grayedOut and grayedOutReason.
+     * @param {Object|null} weapon - The selected weapon object (or null)
+     * @private
+     */
+    _applyWeaponGating(weapon) {
+        for (const action of this.availableActions) {
+            action.grayedOut = false;
+            action.grayedOutReason = '';
+
+            if (!weapon) {
+                // No weapon selected: only actions with no weapon restriction are available
+                if (action.bedingungen?.waffentyp && action.bedingungen.waffentyp !== '') {
+                    action.grayedOut = true;
+                    action.grayedOutReason = action.bedingungen.waffentyp === 'nahkampfwaffe'
+                        ? 'Erfordert Nahkampfwaffe'
+                        : 'Erfordert Fernkampfwaffe';
+                }
+                continue;
+            }
+
+            const weaponType = weapon.system ? (weapon._type || weapon.type) : null;
+            const hasFernkampfoption = weapon.system?.eigenschaften?.some(
+                e => (typeof e === 'string' ? e : e.key) === 'Fernkampfoption'
+            );
+
+            // Check waffentyp
+            if (action.bedingungen?.waffentyp && action.bedingungen.waffentyp !== '') {
+                let typeMatch = false;
+                if (action.bedingungen.waffentyp === 'nahkampfwaffe') {
+                    typeMatch = weaponType === 'nahkampfwaffe' || (weaponType === 'fernkampfwaffe' && hasFernkampfoption);
+                } else if (action.bedingungen.waffentyp === 'fernkampfwaffe') {
+                    typeMatch = weaponType === 'fernkampfwaffe' || (weaponType === 'nahkampfwaffe' && hasFernkampfoption);
+                }
+                if (!typeMatch) {
+                    action.grayedOut = true;
+                    action.grayedOutReason = action.bedingungen.waffentyp === 'nahkampfwaffe'
+                        ? 'Erfordert Nahkampfwaffe'
+                        : 'Erfordert Fernkampfwaffe';
+                    continue;
+                }
+            }
+
+            // Check eigenschaften
+            if (action.bedingungen?.eigenschaften?.length > 0) {
+                const weaponEigenschaften = (weapon.system?.eigenschaften || []).map(
+                    e => (typeof e === 'string' ? e : e.key)
+                );
+                for (const required of action.bedingungen.eigenschaften) {
+                    if (!weaponEigenschaften.includes(required)) {
+                        action.grayedOut = true;
+                        action.grayedOutReason = `Erfordert Eigenschaft: ${required}`;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    /**
      * Load available weapons from actor inventory (PC only)
      * @private
      */
@@ -262,66 +335,11 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
     }
 
     /**
-     * Load available actions from actor inventory and compendium
+     * Load available actions via InitiativeStateManager (universal discovery).
      * @private
      */
     async _loadAvailableActions() {
-        this.availableActions = [];
-
-        // Load from actor inventory (effectItems)
-        const actorEffectItems = this.actor.items.filter(i => i.type === 'effectItem');
-        for (const item of actorEffectItems) {
-            this.availableActions.push({
-                id: item._id,
-                name: item.name,
-                description: item.system?.description ?? '',
-                img: item.img,
-                source: 'actor',
-                uuid: item.uuid,
-                effects: item.effects?.contents ?? [],
-                iniMod: 0, // Placeholder, will be calculated later
-            });
-        }
-
-        // Load from compendium
-        try {
-            const pack = game.packs.get('ilaris-alternative-actor-sheet.nenneke-aktionen');
-            if (pack) {
-                const documents = await pack.getDocuments();
-                for (const item of documents) {
-                    this.availableActions.push({
-                        id: item._id,
-                        name: item.name,
-                        description: item.system?.description ?? '',
-                        img: item.img,
-                        source: 'compendium',
-                        uuid: item.uuid,
-                        effects: item.effects?.contents ?? [],
-                        iniMod: 0, // Placeholder, will be calculated later
-                    });
-                }
-            }
-        } catch (error) {
-            console.warn('InitiativeDialog | Could not load actions compendium:', error);
-        }
-
-        this.availableActions.forEach(action => {
-            if (action?.effects) {
-                for (const effect of action.effects) {
-                    const iniChange = effect.changes?.find(
-                        c => c.key === 'system.abgeleitete.ini' || c.key.includes('ini')
-                    );
-                    if (iniChange) {
-                        action.iniMod = parseInt(iniChange.value) || 0;
-                    }
-                }
-            }
-        });
-
-        console.log(
-            'InitiativeDialog | Loaded actions:',
-            this.availableActions.map(a => ({ name: a.name, id: a.id }))
-        );
+        this.availableActions = await InitiativeStateManager.loadAvailableActions(this.actor);
     }
 
     /**
@@ -405,7 +423,6 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
         el.querySelector('input[name="iniMod"]')?.addEventListener('change', event => this._onIniModChange(event));
         el.querySelector('input[name="atMod"]')?.addEventListener('change', event => this._onModifierChange(event));
         el.querySelector('input[name="vtMod"]')?.addEventListener('change', event => this._onModifierChange(event));
-        el.querySelector('input[name="kombinierteAktion"]')?.addEventListener('change', event => this._onModifierChange(event));
         el.querySelector('select[name="diceCount"]')?.addEventListener('change', event => this._onModifierChange(event));
 
         // Weapon dropdown
@@ -440,15 +457,31 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
 
         if (!actionId) return;
 
+        const action = this.availableActions.find(a => (a.id || a._id) === actionId);
         const isSelected = this.selectedActionIds.includes(actionId);
 
         if (isSelected) {
             this.selectedActionIds = this.selectedActionIds.filter(id => id !== actionId);
         } else {
+            // Don't allow clicking grayed-out actions
+            if (action?.grayedOut) return;
+
             if (this.selectedActionIds.length >= 2) {
                 ui.notifications.warn('Maximal 2 Aktionen auswählbar.');
                 return;
             }
+
+            // Block combining with komplex action
+            if (this.selectedActionIds.length === 1) {
+                const existingAction = this.availableActions.find(
+                    a => (a.id || a._id) === this.selectedActionIds[0]
+                );
+                if (existingAction?.aktionstyp === 'komplex' || action?.aktionstyp === 'komplex') {
+                    ui.notifications.warn('Komplexe Aktionen können nicht kombiniert werden.');
+                    return;
+                }
+            }
+
             this.selectedActionIds.push(actionId);
         }
 
@@ -469,7 +502,7 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
     }
 
     /**
-     * Handle other modifier changes (AT, VT, kombinierte Aktion, diceCount)
+     * Handle other modifier changes (AT, VT, diceCount)
      * @param {Event} event
      * @private
      */
@@ -482,10 +515,6 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
             this._updateFormulaBreakdown();
         } else if (target.name === 'vtMod') {
             this.vtMod = parseInt(target.value) || 0;
-            await this._savePersistedState();
-            this._updateFormulaBreakdown();
-        } else if (target.name === 'kombinierteAktion') {
-            this.kombinierteAktion = target.checked;
             await this._savePersistedState();
             this._updateFormulaBreakdown();
         } else if (target.name === 'diceCount') {
@@ -536,9 +565,14 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
      */
     async _onWeaponChange(event) {
         this.selectedWeaponId = event.target.value;
+        const weapon = this.selectedWeaponId
+            ? this.availableWeapons.find(w => w.id === this.selectedWeaponId)
+            : null;
+        // Re-apply weapon gating with the new weapon
+        this._applyWeaponGating(weapon);
         await this._savePersistedState();
         this._updateFormulaBreakdown();
-        // Re-render to show weapon properties
+        // Re-render to show gated actions and weapon properties
         this.render();
     }
 
@@ -694,7 +728,6 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
                 atMod: this.atMod,
                 vtMod: this.vtMod,
                 selectedActionIds: this.selectedActionIds,
-                kombinierteAktion: this.kombinierteAktion,
                 diceResults: this.diceResults,
                 selectedDiceIndex: this.selectedDiceIndex,
                 hasRolled: this.hasRolled,
@@ -740,7 +773,6 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
                 atMod: this.atMod,
                 vtMod: this.vtMod,
                 selectedActionIds: this.selectedActionIds,
-                kombinierteAktion: this.kombinierteAktion,
                 diceResults: this.diceResults,
                 selectedDiceIndex: this.selectedDiceIndex,
                 hasRolled: this.hasRolled,

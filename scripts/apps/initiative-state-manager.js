@@ -34,7 +34,6 @@ export class InitiativeStateManager {
                 atMod: savedState.atMod ?? 0,
                 vtMod: savedState.vtMod ?? 0,
                 selectedActionIds: savedState.selectedActionIds ?? [],
-                kombinierteAktion: savedState.kombinierteAktion ?? false,
                 diceCount: savedState.diceCount ?? 1,
                 diceResults: savedState.diceResults ?? [],
                 selectedDiceIndex: savedState.selectedDiceIndex ?? null,
@@ -51,7 +50,6 @@ export class InitiativeStateManager {
             atMod: savedState.atMod ?? 0,
             vtMod: savedState.vtMod ?? 0,
             selectedActionIds: savedState.selectedActionIds ?? [],
-            kombinierteAktion: savedState.kombinierteAktion ?? false,
             diceCount: savedState.diceCount ?? 1,
             diceResults: savedState.diceResults ?? [],
             selectedDiceIndex: savedState.selectedDiceIndex ?? null,
@@ -75,7 +73,6 @@ export class InitiativeStateManager {
             atMod: state.atMod,
             vtMod: state.vtMod,
             selectedActionIds: state.selectedActionIds,
-            kombinierteAktion: state.kombinierteAktion,
             diceCount: state.diceCount,
             diceResults: state.diceResults,
             selectedDiceIndex: state.selectedDiceIndex,
@@ -107,7 +104,6 @@ export class InitiativeStateManager {
             atMod: 0,
             vtMod: 0,
             selectedActionIds: [],
-            kombinierteAktion: false,
             diceCount: 1,
             diceResults: [],
             selectedDiceIndex: null,
@@ -145,47 +141,91 @@ export class InitiativeStateManager {
     /* -------------------------------------------- */
 
     /**
-     * Load available actions from compendium.
-     * Computes iniMod from each action's effects.
-     * @returns {Promise<Object[]>} Array of action objects with id, name, img, iniMod, effects
+     * Load available aktion items from actor items, world items, and all world compendiums.
+     * Deduplicates by name with priority: actor > world > compendium.
+     * Uses typed access: item.system.iniMod, .atMod, .vtMod, .aktionstyp, .bedingungen
+     * @param {Actor} [actor] - Optional actor to include actor-specific aktion items
+     * @returns {Promise<Object[]>} Array of action objects with typed fields
      */
-    static async loadAvailableActions() {
-        const actions = [];
+    static async loadAvailableActions(actor) {
+        const actionMap = new Map();
 
-        try {
-            const pack = game.packs.get('ilaris-alternative-actor-sheet.nenneke-aktionen');
-            if (pack) {
+        // Priority 3: All world compendiums of type Item
+        for (const pack of game.packs) {
+            if (pack.metadata.type !== 'Item') continue;
+            try {
+                const index = await pack.getIndex();
+                const aktionEntries = index.filter(e => e.type === 'aktion');
+                if (aktionEntries.length === 0) continue;
+
                 const documents = await pack.getDocuments();
                 for (const item of documents) {
-                    actions.push({
-                        id: item._id,
-                        name: item.name,
-                        description: item.system?.description ?? '',
-                        img: item.img,
-                        source: 'compendium',
-                        uuid: item.uuid,
-                        effects: item.effects?.contents ?? [],
-                        iniMod: 0,
-                    });
-                }
-            }
-        } catch (error) {
-            console.warn('InitiativeStateManager | Could not load actions compendium:', error);
-        }
-
-        // Compute INI modifier from each action's effects
-        for (const action of actions) {
-            if (action?.effects) {
-                for (const effect of action.effects) {
-                    const iniChange = effect.changes?.find(
-                        c => c.key === 'system.abgeleitete.ini' || c.key === 'system.kampfwerte.ini' || c.key.includes('ini')
-                    );
-                    if (iniChange) {
-                        action.iniMod = parseInt(iniChange.value) || 0;
+                    if (item.type !== 'aktion') continue;
+                    if (!actionMap.has(item.name)) {
+                        actionMap.set(item.name, {
+                            id: item._id,
+                            name: item.name,
+                            text: item.system?.text ?? '',
+                            img: item.img,
+                            source: 'compendium',
+                            uuid: item.uuid,
+                            iniMod: item.system?.iniMod ?? 0,
+                            atMod: item.system?.atMod ?? 0,
+                            vtMod: item.system?.vtMod ?? 0,
+                            aktionstyp: item.system?.aktionstyp ?? 'einfach',
+                            bedingungen: item.system?.bedingungen ?? { waffentyp: '', eigenschaften: [] },
+                        });
                     }
                 }
+            } catch (error) {
+                console.warn(`InitiativeStateManager | Could not load from pack ${pack.metadata.id}:`, error);
             }
         }
+
+        // Priority 2: World items (game.items)
+        for (const item of game.items) {
+            if (item.type !== 'aktion') continue;
+            actionMap.set(item.name, {
+                id: item._id,
+                name: item.name,
+                text: item.system?.text ?? '',
+                img: item.img,
+                source: 'world',
+                uuid: item.uuid,
+                iniMod: item.system?.iniMod ?? 0,
+                atMod: item.system?.atMod ?? 0,
+                vtMod: item.system?.vtMod ?? 0,
+                aktionstyp: item.system?.aktionstyp ?? 'einfach',
+                bedingungen: item.system?.bedingungen ?? { waffentyp: '', eigenschaften: [] },
+            });
+        }
+
+        // Priority 1 (highest): Actor items
+        if (actor) {
+            const actorActions = actor.items.filter(i => i.type === 'aktion');
+            for (const item of actorActions) {
+                actionMap.set(item.name, {
+                    id: item._id,
+                    name: item.name,
+                    text: item.system?.text ?? '',
+                    img: item.img,
+                    source: 'actor',
+                    uuid: item.uuid,
+                    iniMod: item.system?.iniMod ?? 0,
+                    atMod: item.system?.atMod ?? 0,
+                    vtMod: item.system?.vtMod ?? 0,
+                    aktionstyp: item.system?.aktionstyp ?? 'einfach',
+                    bedingungen: item.system?.bedingungen ?? { waffentyp: '', eigenschaften: [] },
+                });
+            }
+        }
+
+        const actions = Array.from(actionMap.values());
+
+        console.log(
+            'InitiativeStateManager | Loaded actions:',
+            actions.map(a => ({ name: a.name, aktionstyp: a.aktionstyp, iniMod: a.iniMod }))
+        );
 
         return actions;
     }
@@ -231,7 +271,7 @@ export class InitiativeStateManager {
     }
 
     /**
-     * Calculate AT/VT modifiers from selected actions' effects.
+     * Calculate AT/VT modifiers from selected actions' typed data.
      * @param {string[]} actionIds - Selected action IDs
      * @param {Object[]} availableActions - Loaded actions array
      * @returns {{at: number, vt: number}}
@@ -242,24 +282,31 @@ export class InitiativeStateManager {
 
         for (const actionId of actionIds) {
             const action = availableActions.find(a => a.id === actionId);
-            if (action?.effects) {
-                for (const effect of action.effects) {
-                    for (const change of effect.changes || []) {
-                        if (change.key === 'system.modifikatoren.nahkampfmod' || change.key.includes('nahkampfmod')) {
-                            atMod += parseInt(change.value) || 0;
-                        }
-                        if (
-                            change.key === 'system.modifikatoren.verteidigungmod' ||
-                            change.key.includes('verteidigungmod')
-                        ) {
-                            vtMod += parseInt(change.value) || 0;
-                        }
-                    }
-                }
+            if (action) {
+                atMod += action.atMod ?? 0;
+                vtMod += action.vtMod ?? 0;
             }
         }
 
         return { at: atMod, vt: vtMod };
+    }
+
+    /**
+     * Derive combination state from selected actions' aktionstyp.
+     * @param {string[]} actionIds - Selected action IDs
+     * @param {Object[]} availableActions - Loaded actions array
+     * @returns {{isCombined: boolean, malus: number}}
+     */
+    static deriveCombination(actionIds, availableActions) {
+        if (actionIds.length < 2) return { isCombined: false, malus: 0 };
+
+        const selected = actionIds.map(id => availableActions.find(a => a.id === id)).filter(Boolean);
+        const allEinfach = selected.every(a => a.aktionstyp === 'einfach');
+
+        return {
+            isCombined: allEinfach,
+            malus: allEinfach ? -4 : 0,
+        };
     }
 
     /**
@@ -322,7 +369,7 @@ export class InitiativeStateManager {
     /* -------------------------------------------- */
 
     /**
-     * Build changes array for an ActiveEffect based on state.
+     * Build changes array for an ActiveEffect based on state with typed aktion data.
      * @param {Object} state
      * @param {Actor} actor
      * @param {Object[]} availableActions
@@ -333,12 +380,12 @@ export class InitiativeStateManager {
         const baseIni = InitiativeStateManager.getBaseInitiative(actor);
         const totalIni = InitiativeStateManager.calculateTotalInitiative(state, availableActions, actor);
 
-        // Determine AT/VT modifiers
+        // Determine AT/VT modifiers from typed aktion data
         let finalAtMod = state.atMod;
         let finalVtMod = state.vtMod;
 
         if (state.movedAction) {
-            // LOCKED: use locked action's modifiers
+            // LOCKED: use locked action's typed modifiers
             const lockedMods = InitiativeStateManager._getLockedActionModifiers(
                 state.lockedActionId,
                 availableActions
@@ -346,17 +393,21 @@ export class InitiativeStateManager {
             finalAtMod += lockedMods.at;
             finalVtMod += lockedMods.vt;
         } else {
-            // FRESH: calculate from selected actions
+            // FRESH: calculate from selected actions' typed data
             const actionMods = InitiativeStateManager.calculateActionModifiers(
                 state.selectedActionIds,
                 availableActions
             );
             finalAtMod += actionMods.at;
             finalVtMod += actionMods.vt;
-            if (state.kombinierteAktion) {
-                finalAtMod -= 4;
-                finalVtMod -= 4;
-            }
+
+            // Auto-derived combination malus
+            const { malus } = InitiativeStateManager.deriveCombination(
+                state.selectedActionIds,
+                availableActions
+            );
+            finalAtMod += malus;
+            finalVtMod += malus;
         }
 
         // INI delta
@@ -417,7 +468,14 @@ export class InitiativeStateManager {
             name: effectName,
             icon: 'icons/svg/dice-target.svg',
             changes: changes,
-            duration: duration,
+            system: {
+                ilarisTiming: {
+                    durationType: 'ownerTurns',
+                    remaining: 1,
+                    originalValue: 1,
+                    expiresOn: 'turnEnd',
+                }
+            },
             origin: actor.uuid,
         };
 
@@ -426,7 +484,7 @@ export class InitiativeStateManager {
     }
 
     /**
-     * Get AT/VT modifiers from a locked action.
+     * Get AT/VT modifiers from a locked action using typed data.
      * @param {string|null} lockedActionId
      * @param {Object[]} availableActions
      * @returns {{at: number, vt: number}}
@@ -436,26 +494,12 @@ export class InitiativeStateManager {
         if (!lockedActionId) return { at: 0, vt: 0 };
 
         const action = availableActions.find(a => a.id === lockedActionId);
-        if (!action?.effects) return { at: 0, vt: 0 };
+        if (!action) return { at: 0, vt: 0 };
 
-        let atMod = 0;
-        let vtMod = 0;
-
-        for (const effect of action.effects) {
-            for (const change of effect.changes || []) {
-                if (change.key === 'system.modifikatoren.nahkampfmod' || change.key.includes('nahkampfmod')) {
-                    atMod += parseInt(change.value) || 0;
-                }
-                if (
-                    change.key === 'system.modifikatoren.verteidigungmod' ||
-                    change.key.includes('verteidigungmod')
-                ) {
-                    vtMod += parseInt(change.value) || 0;
-                }
-            }
-        }
-
-        return { at: atMod, vt: vtMod };
+        return {
+            at: action.atMod ?? 0,
+            vt: action.vtMod ?? 0,
+        };
     }
 
     /* -------------------------------------------- */
@@ -546,8 +590,12 @@ export class InitiativeStateManager {
             state.selectedActionIds,
             availableActions
         );
-        const atMod = state.atMod + actionMods.at + (state.kombinierteAktion ? -4 : 0);
-        const vtMod = state.vtMod + actionMods.vt + (state.kombinierteAktion ? -4 : 0);
+        const { malus: combinationMalus } = InitiativeStateManager.deriveCombination(
+            state.selectedActionIds,
+            availableActions
+        );
+        const atMod = state.atMod + actionMods.at + combinationMalus;
+        const vtMod = state.vtMod + actionMods.vt + combinationMalus;
 
         if (atMod !== 0 || vtMod !== 0) {
             const modifiers = [];
