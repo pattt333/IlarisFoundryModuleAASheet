@@ -82,6 +82,17 @@
                     {{/unless}}
                 </div>
 
+                {{!-- Weapon/Angriff Row --}}
+                {{#unless npc.state.movedAction}}
+                <div class="weapon-select-row">
+                    <label class="weapon-select-label" title="Waffe/Angriff"><i class="fas fa-sword"></i></label>
+                    <select class="weapon-select" name="weapon-{{npc.combatantId}}" {{#unless npc.availableWeapons.length}}disabled{{/unless}}>
+                        <option value="">keine Waffe</option>
+                        {{{selectOptions npc.availableWeapons selected=npc.selectedWeaponId valueAttr="id" labelAttr="name"}}}
+                    </select>
+                </div>
+                {{/unless}}
+
                 {{!-- Modifier Row --}}
                 <div class="card-modifiers">
                     <div class="form-group">

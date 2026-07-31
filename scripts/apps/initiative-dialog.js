@@ -242,92 +242,20 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
     }
 
     /**
-     * Apply weapon gating to available actions.
-     * Marks non-matching actions with grayedOut and grayedOutReason.
+     * Apply weapon gating to available actions (delegates to StateManager).
      * @param {Object|null} weapon - The selected weapon object (or null)
      * @private
      */
     _applyWeaponGating(weapon) {
-        for (const action of this.availableActions) {
-            action.grayedOut = false;
-            action.grayedOutReason = '';
-
-            if (!weapon) {
-                // No weapon selected: only actions with no weapon restriction are available
-                if (action.bedingungen?.waffentyp && action.bedingungen.waffentyp !== '') {
-                    action.grayedOut = true;
-                    action.grayedOutReason = action.bedingungen.waffentyp === 'nahkampfwaffe'
-                        ? 'Erfordert Nahkampfwaffe'
-                        : 'Erfordert Fernkampfwaffe';
-                }
-                continue;
-            }
-
-            const weaponType = weapon.system ? (weapon._type || weapon.type) : null;
-            const hasFernkampfoption = weapon.system?.eigenschaften?.some(
-                e => (typeof e === 'string' ? e : e.key) === 'Fernkampfoption'
-            );
-
-            // Check waffentyp
-            if (action.bedingungen?.waffentyp && action.bedingungen.waffentyp !== '') {
-                let typeMatch = false;
-                if (action.bedingungen.waffentyp === 'nahkampfwaffe') {
-                    typeMatch = weaponType === 'nahkampfwaffe' || (weaponType === 'fernkampfwaffe' && hasFernkampfoption);
-                } else if (action.bedingungen.waffentyp === 'fernkampfwaffe') {
-                    typeMatch = weaponType === 'fernkampfwaffe' || (weaponType === 'nahkampfwaffe' && hasFernkampfoption);
-                }
-                if (!typeMatch) {
-                    action.grayedOut = true;
-                    action.grayedOutReason = action.bedingungen.waffentyp === 'nahkampfwaffe'
-                        ? 'Erfordert Nahkampfwaffe'
-                        : 'Erfordert Fernkampfwaffe';
-                    continue;
-                }
-            }
-
-            // Check eigenschaften
-            if (action.bedingungen?.eigenschaften?.length > 0) {
-                const weaponEigenschaften = (weapon.system?.eigenschaften || []).map(
-                    e => (typeof e === 'string' ? e : e.key)
-                );
-                for (const required of action.bedingungen.eigenschaften) {
-                    if (!weaponEigenschaften.includes(required)) {
-                        action.grayedOut = true;
-                        action.grayedOutReason = `Erfordert Eigenschaft: ${required}`;
-                        break;
-                    }
-                }
-            }
-        }
+        InitiativeStateManager.applyWeaponGating(weapon, this.availableActions);
     }
 
     /**
-     * Load available weapons from actor inventory (PC only)
+     * Load available weapons from actor inventory (delegates to StateManager).
      * @private
      */
     _loadAvailableWeapons() {
-        this.availableWeapons = [];
-
-        // Only for PC actors (type "held")
-        if (this.actor.type !== 'held') {
-            return;
-        }
-
-        // Load weapons with hauptwaffe or nebenwaffe = true
-        const weapons = this.actor.items.filter(i => {
-            if (i.type !== 'nahkampfwaffe' && i.type !== 'fernkampfwaffe') return false;
-            return i.system?.hauptwaffe === true || i.system?.nebenwaffe === true;
-        });
-
-        for (const weapon of weapons) {
-            this.availableWeapons.push({
-                id: weapon._id,
-                name: weapon.name,
-                img: weapon.img,
-                system: weapon.system,
-            });
-        }
-
+        this.availableWeapons = InitiativeStateManager.loadAvailableWeapons(this.actor);
         console.log(
             'InitiativeDialog | Loaded weapons:',
             this.availableWeapons.map(w => ({ name: w.name, id: w.id }))
@@ -369,36 +297,14 @@ export class InitiativeDialog extends HandlebarsApplicationMixin(ApplicationV2) 
     }
 
     /**
-     * Get INI modifier from selected weapon
+     * Get INI modifier from selected weapon (delegates to StateManager).
      * @private
      * @returns {number}
      */
     _getWeaponIniModifier() {
         if (!this.selectedWeaponId) return 0;
         const weapon = this.availableWeapons.find(w => w.id === this.selectedWeaponId);
-        if (!weapon) return 0;
-
-        // Check if weapon has actor modifiers
-        const hasModifiers = weapon.system?.computed?.hasActorModifiers === true;
-        const actorModifiers = weapon.system?.computed?.actorModifiers;
-
-        if (!hasModifiers || !actorModifiers) return 0;
-
-        // Convert to array
-        const modifiersArray = Object.values(actorModifiers);
-
-        // Find INI modifiers with actionNegAugment or actionAugment mode
-        for (const modifier of modifiersArray) {
-            if (modifier.property === 'ini') {
-                if (modifier.mode === 'actionNegAugment') {
-                    return -(modifier.value ?? 0);
-                } else if (modifier.mode === 'actionAugment') {
-                    return modifier.value ?? 0;
-                }
-            }
-        }
-
-        return 0;
+        return InitiativeStateManager.getWeaponIniModifier(weapon);
     }
 
     /**

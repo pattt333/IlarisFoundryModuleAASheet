@@ -16,6 +16,7 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
         this.npcCombatants = npcCombatants;
         this.npcStates = new Map();
         this.availableActions = [];
+        this.availableWeaponsMap = new Map();  // combatantId → weapon/Angriff array
         this.filterDefault = game.settings.get(
             'ilaris-alternative-actor-sheet',
             'massInitiativeFilterDefault'
@@ -80,18 +81,46 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
             const actor = combatant.actor;
             if (!state || !actor) continue;
 
+            // Load weapons/Angriffe for this combatant (cached)
+            if (!this.availableWeaponsMap.has(combatant.id)) {
+                this.availableWeaponsMap.set(
+                    combatant.id,
+                    InitiativeStateManager.loadAvailableWeapons(actor)
+                );
+            }
+            const availableWeapons = this.availableWeaponsMap.get(combatant.id);
+
+            // Find selected weapon
+            const selectedWeapon = state.selectedWeaponId
+                ? availableWeapons.find(w => w.id === state.selectedWeaponId)
+                : null;
+
+            // Apply weapon gating to a per-NPC copy of available actions
+            const gatedActions = this.availableActions.map(a => ({ ...a }));
+            InitiativeStateManager.applyWeaponGating(selectedWeapon, gatedActions);
+
+            // Calculate weapon INI modifier (only when action requires it)
+            const hasWeaponRequirement = InitiativeStateManager.hasWeaponRequiredAction(
+                state.selectedActionIds,
+                this.availableActions
+            );
+            const weaponIniMod = (selectedWeapon && hasWeaponRequirement)
+                ? InitiativeStateManager.getWeaponIniModifier(selectedWeapon)
+                : 0;
+
             const baseIni = InitiativeStateManager.getBaseInitiative(actor);
             const totalIni = InitiativeStateManager.calculateTotalInitiative(
                 state,
                 this.availableActions,
-                actor
+                actor,
+                weaponIniMod
             );
             const needsDiceSelection =
                 state.diceCount === 2 && state.hasRolled && state.selectedDiceIndex === null;
 
-            // Build action chips for display
+            // Build action chips — use gatedActions for display metadata
             const actionChips = state.selectedActionIds.map(id => {
-                const action = this.availableActions.find(a => a.id === id);
+                const action = gatedActions.find(a => a.id === id);
                 return {
                     id: id,
                     name: action?.name ?? 'Unbekannt',
@@ -130,6 +159,10 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
                 diceData: diceData,
                 needsDiceSelection: needsDiceSelection,
                 isFiltered: isFiltered,
+                availableWeapons: availableWeapons,
+                selectedWeaponId: state.selectedWeaponId ?? '',
+                selectedWeaponData: selectedWeapon,
+                gatedActions: gatedActions,
             });
         }
 
@@ -166,6 +199,11 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
         // Multi-select action changes
         el.querySelectorAll('multi-select').forEach(ms => {
             ms.addEventListener('change', event => this._onActionsChange(event));
+        });
+
+        // Weapon/Angriff dropdown changes
+        el.querySelectorAll('.weapon-select').forEach(select => {
+            select.addEventListener('change', event => this._onWeaponChange(event));
         });
 
         // Chip remove buttons
@@ -239,11 +277,19 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
 
     /**
      * Handle action selection via Foundry multi-select.
+     *
+     * Foundry's <multi-select> wraps an internal <select> element.
+     * event.currentTarget = the <multi-select> (has the name attribute)
+     * event.target = the internal <select> (has selectedOptions)
      * @param {Event} event
      * @private
      */
     async _onActionsChange(event) {
-        const name = event.target.getAttribute('name');
+        // Ignore programmatic change events (e.g. during re-render) —
+        // only respond to direct user interaction
+        if (!event.isTrusted) return;
+
+        const name = event.currentTarget.getAttribute('name');
         if (!name) return;
 
         const parts = name.split('-');
@@ -286,6 +332,30 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
         state.selectedActionIds = state.selectedActionIds.filter(id => id !== actionId);
         const combatant = this.npcCombatants.find(c => c.id === combatantId);
 
+        if (combatant?.actor) {
+            await InitiativeStateManager.persistState(combatant.actor, state);
+        }
+
+        this.render();
+    }
+
+    /**
+     * Handle weapon/Angriff selection change.
+     * @param {Event} event
+     * @private
+     */
+    async _onWeaponChange(event) {
+        const select = event.currentTarget;
+        const name = select.getAttribute('name');
+        if (!name) return;
+
+        const parts = name.split('-');
+        const combatantId = parts[parts.length - 1];
+        const state = this.npcStates.get(combatantId);
+        if (!state) return;
+
+        state.selectedWeaponId = select.value;
+        const combatant = this.npcCombatants.find(c => c.id === combatantId);
         if (combatant?.actor) {
             await InitiativeStateManager.persistState(combatant.actor, state);
         }
@@ -375,6 +445,8 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
 
     /**
      * Handle batch apply: add selected action to all eligible NPCs.
+     * When the action has a waffentyp requirement, auto-selects each NPC's
+     * first compatible Angriff; incompatible NPCs are skipped.
      * @param {Event} event
      * @private
      */
@@ -384,11 +456,50 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
         const actionId = batchSelect?.value;
         if (!actionId) return;
 
+        const selectedAction = this.availableActions.find(a => a.id === actionId);
+        if (!selectedAction) return;
+
+        const hasWaffentyp = selectedAction.bedingungen?.waffentyp && selectedAction.bedingungen.waffentyp !== '';
         let appliedCount = 0;
+        let skippedCount = 0;
 
         for (const [combatantId, state] of this.npcStates) {
             if (state.selectedActionIds.length >= 2) continue;
             if (state.selectedActionIds.includes(actionId)) continue;
+
+            if (hasWaffentyp) {
+                // Auto-select first compatible Angriff
+                const availableWeapons = this.availableWeaponsMap.get(combatantId) || [];
+
+                // If no weapon selected yet, try the first angriff
+                if (!state.selectedWeaponId && availableWeapons.length > 0) {
+                    const firstAngriff = availableWeapons[0];
+                    // Check if first angriff matches the action's waffentyp
+                    const gatedCopy = [{ ...selectedAction }];
+                    InitiativeStateManager.applyWeaponGating(firstAngriff, gatedCopy);
+                    if (!gatedCopy[0].grayedOut) {
+                        state.selectedWeaponId = firstAngriff.id;
+                    } else {
+                        skippedCount++;
+                        continue;
+                    }
+                } else if (state.selectedWeaponId) {
+                    // Check if already-selected weapon is compatible
+                    const weapon = availableWeapons.find(w => w.id === state.selectedWeaponId);
+                    if (weapon) {
+                        const gatedCopy = [{ ...selectedAction }];
+                        InitiativeStateManager.applyWeaponGating(weapon, gatedCopy);
+                        if (gatedCopy[0].grayedOut) {
+                            skippedCount++;
+                            continue;
+                        }
+                    }
+                } else {
+                    // No weapons available at all, skip
+                    skippedCount++;
+                    continue;
+                }
+            }
 
             state.selectedActionIds = [...state.selectedActionIds, actionId];
             const combatant = this.npcCombatants.find(c => c.id === combatantId);
@@ -398,13 +509,12 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
             appliedCount++;
         }
 
-        if (appliedCount > 0) {
-            const actionName =
-                this.availableActions.find(a => a.id === actionId)?.name ?? 'Aktion';
-            ui.notifications.info(
-                `"${actionName}" auf ${appliedCount} NPC${appliedCount !== 1 ? 's' : ''} angewendet.`
-            );
+        const actionName = selectedAction.name ?? 'Aktion';
+        let msg = `"${actionName}" auf ${appliedCount} NPC${appliedCount !== 1 ? 's' : ''} angewendet.`;
+        if (skippedCount > 0) {
+            msg += ` ${skippedCount} aufgrund inkompatibler Waffe/Angriff übersprungen.`;
         }
+        ui.notifications.info(msg);
 
         this.render();
     }
@@ -508,10 +618,24 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
             const actor = combatant.actor;
             if (!state || !actor) continue;
 
+            // Calculate weapon INI modifier
+            const availableWeapons = this.availableWeaponsMap.get(combatant.id) || [];
+            const selectedWeapon = state.selectedWeaponId
+                ? availableWeapons.find(w => w.id === state.selectedWeaponId)
+                : null;
+            const hasWeaponReq = InitiativeStateManager.hasWeaponRequiredAction(
+                state.selectedActionIds,
+                this.availableActions
+            );
+            const weaponIniMod = (selectedWeapon && hasWeaponReq)
+                ? InitiativeStateManager.getWeaponIniModifier(selectedWeapon)
+                : 0;
+
             const totalIni = InitiativeStateManager.calculateTotalInitiative(
                 state,
                 this.availableActions,
-                actor
+                actor,
+                weaponIniMod
             );
             const diceResult =
                 state.selectedDiceIndex !== null
@@ -564,6 +688,7 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
                 atMod: state.atMod,
                 vtMod: state.vtMod,
                 isLocked: totalIni < 0,
+                weaponName: selectedWeapon?.name ?? null,
             });
         }
 
@@ -609,10 +734,24 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
         const combatant = this.npcCombatants.find(c => c.id === combatantId);
         if (!state || !combatant?.actor) return;
 
+        // Calculate weapon INI modifier
+        const availableWeapons = this.availableWeaponsMap.get(combatantId) || [];
+        const selectedWeapon = state.selectedWeaponId
+            ? availableWeapons.find(w => w.id === state.selectedWeaponId)
+            : null;
+        const hasWeaponReq = InitiativeStateManager.hasWeaponRequiredAction(
+            state.selectedActionIds,
+            this.availableActions
+        );
+        const weaponIniMod = (selectedWeapon && hasWeaponReq)
+            ? InitiativeStateManager.getWeaponIniModifier(selectedWeapon)
+            : 0;
+
         const totalIni = InitiativeStateManager.calculateTotalInitiative(
             state,
             this.availableActions,
-            combatant.actor
+            combatant.actor,
+            weaponIniMod
         );
 
         const card = this.element.querySelector(`[data-combatant-id="${combatantId}"]`);
@@ -642,16 +781,31 @@ export class MassInitiativeDialog extends HandlebarsApplicationMixin(Application
         const combatant = this.npcCombatants.find(c => c.id === combatantId);
         if (!state || !combatant?.actor) return;
 
+        // Calculate weapon INI modifier for tooltip consistency
+        const availableWeapons = this.availableWeaponsMap.get(combatantId) || [];
+        const selectedWeapon = state.selectedWeaponId
+            ? availableWeapons.find(w => w.id === state.selectedWeaponId)
+            : null;
+        const hasWeaponReq = InitiativeStateManager.hasWeaponRequiredAction(
+            state.selectedActionIds,
+            this.availableActions
+        );
+        const weaponIniMod = (selectedWeapon && hasWeaponReq)
+            ? InitiativeStateManager.getWeaponIniModifier(selectedWeapon)
+            : 0;
+
         const parts = InitiativeStateManager.getFormulaParts(
             state,
             this.availableActions,
-            combatant.actor
+            combatant.actor,
+            weaponIniMod
         );
 
         const totalIni = InitiativeStateManager.calculateTotalInitiative(
             state,
             this.availableActions,
-            combatant.actor
+            combatant.actor,
+            weaponIniMod
         );
 
         const actionMods = InitiativeStateManager.calculateActionModifiers(

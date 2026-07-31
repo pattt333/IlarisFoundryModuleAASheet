@@ -17,6 +17,10 @@
     padding: 0;
 }
 
+.mass-initiative-dialog select {
+    color: var(--color-text-primary);
+}
+
 .mass-initiative-form {
     display: flex;
     flex-direction: column;
@@ -301,6 +305,40 @@
 .mass-initiative-form .card-actions .multi-select-container.is-disabled {
     opacity: 0.35;
     pointer-events: none;
+}
+
+/* ==================== Weapon/Angriff Row ==================== */
+.mass-initiative-form .weapon-select-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.3rem;
+}
+
+.mass-initiative-form .weapon-select-label {
+    font-size: 0.85rem;
+    color: var(--color-text-soft);
+    flex-shrink: 0;
+}
+
+.mass-initiative-form .weapon-select {
+    flex: 1;
+    padding: 0.2rem 0.35rem;
+    background: var(--color-surface-panel);
+    border: 1px solid var(--color-border-default);
+    border-radius: 3px;
+    color: var(--color-text-primary);
+    font-size: 0.75rem;
+}
+
+.mass-initiative-form .weapon-select:focus {
+    outline: 1px solid var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+}
+
+.mass-initiative-form .weapon-select:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
 /* ==================== Card Modifiers ==================== */

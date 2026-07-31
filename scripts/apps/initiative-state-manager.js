@@ -50,6 +50,7 @@ export class InitiativeStateManager {
             atMod: savedState.atMod ?? 0,
             vtMod: savedState.vtMod ?? 0,
             selectedActionIds: savedState.selectedActionIds ?? [],
+            selectedWeaponId: savedState.selectedWeaponId ?? '',
             diceCount: savedState.diceCount ?? 1,
             diceResults: savedState.diceResults ?? [],
             selectedDiceIndex: savedState.selectedDiceIndex ?? null,
@@ -73,6 +74,7 @@ export class InitiativeStateManager {
             atMod: state.atMod,
             vtMod: state.vtMod,
             selectedActionIds: state.selectedActionIds,
+            selectedWeaponId: state.selectedWeaponId ?? '',
             diceCount: state.diceCount,
             diceResults: state.diceResults,
             selectedDiceIndex: state.selectedDiceIndex,
@@ -104,6 +106,7 @@ export class InitiativeStateManager {
             atMod: 0,
             vtMod: 0,
             selectedActionIds: [],
+            selectedWeaponId: '',
             diceCount: 1,
             diceResults: [],
             selectedDiceIndex: null,
@@ -338,12 +341,24 @@ export class InitiativeStateManager {
             actionIniMod = Math.min(...mods);
         }
 
-        return [
+        const hasWeaponReq = InitiativeStateManager.hasWeaponRequiredAction(
+            state.selectedActionIds,
+            availableActions
+        );
+
+        const parts = [
             { label: 'Basis', value: String(baseIni) },
             { label: 'Aktion', value: String(actionIniMod) },
-            { label: 'Mod', value: String(state.iniMod) },
-            { label: 'Würfel', value: state.hasRolled ? String(state.diceResults[state.selectedDiceIndex ?? 0] ?? '?') : '?' },
         ];
+
+        if (hasWeaponReq && weaponIniMod !== 0) {
+            parts.push({ label: 'Waffe', value: String(weaponIniMod) });
+        }
+
+        parts.push({ label: 'Mod', value: String(state.iniMod) });
+        parts.push({ label: 'Würfel', value: state.hasRolled ? String(state.diceResults[state.selectedDiceIndex ?? 0] ?? '?') : '?' });
+
+        return parts;
     }
 
     /* -------------------------------------------- */
@@ -524,7 +539,7 @@ export class InitiativeStateManager {
         content += '</tr></thead><tbody>';
 
         for (const data of combatData) {
-            const { actor, totalIni, baseIni, iniMod, diceResult, actionIds, atMod, vtMod, isLocked } = data;
+            const { actor, totalIni, baseIni, iniMod, diceResult, actionIds, atMod, vtMod, isLocked, weaponName } = data;
 
             // Build action names
             const actionNames = actionIds
@@ -536,7 +551,8 @@ export class InitiativeStateManager {
             const actionIniMod = actionIds.length > 0
                 ? Math.min(...actionIds.map(id => availableActions.find(a => a.id === id)?.iniMod ?? 0))
                 : 0;
-            const formula = `${baseIni} + (${actionIniMod}) + ${iniMod} + ${diceResult}`;
+            const formulaParts = [`${baseIni}`, `(${actionIniMod})`, `${iniMod}`, `${diceResult}`];
+            const formula = formulaParts.join(' + ');
 
             const lockIcon = isLocked ? ' 🔒' : '';
 
@@ -608,5 +624,182 @@ export class InitiativeStateManager {
             content: content,
             speaker: ChatMessage.getSpeaker({ actor: actor }),
         });
+    }
+
+    /* -------------------------------------------- */
+    /*  Weapon / Angriff                             */
+    /* -------------------------------------------- */
+
+    /**
+     * Load available weapons/Angriffe for an actor.
+     * For held (PC): loads nahkampfwaffe/fernkampfwaffe items with hauptwaffe/nebenwaffe.
+     * For kreatur (NPC): normalizes system.angriffe to virtual weapon shape.
+     * @param {Actor} actor
+     * @returns {Object[]} Array of weapon/Angriff objects with {id, name, type, system}
+     */
+    static loadAvailableWeapons(actor) {
+        if (actor.type === 'held') {
+            return InitiativeStateManager._loadPcWeapons(actor);
+        } else if (actor.type === 'kreatur') {
+            return InitiativeStateManager._loadNpcAngriffe(actor);
+        }
+        return [];
+    }
+
+    /**
+     * Load PC weapons from actor items.
+     * @param {Actor} actor
+     * @returns {Object[]}
+     * @private
+     */
+    static _loadPcWeapons(actor) {
+        const weapons = [];
+        const weaponItems = actor.items.filter(i => {
+            if (i.type !== 'nahkampfwaffe' && i.type !== 'fernkampfwaffe') return false;
+            return i.system?.hauptwaffe === true || i.system?.nebenwaffe === true;
+        });
+
+        for (const weapon of weaponItems) {
+            weapons.push({
+                id: weapon._id,
+                name: weapon.name,
+                img: weapon.img,
+                type: weapon.type,    // 'nahkampfwaffe' or 'fernkampfwaffe'
+                system: weapon.system,
+            });
+        }
+
+        return weapons;
+    }
+
+    /**
+     * Normalize NPC angriffe from system.angriffe to virtual weapon objects.
+     * Infers nah/fern type from rw and eigenschaften.
+     * @param {Actor} actor
+     * @returns {Object[]}
+     * @private
+     */
+    static _loadNpcAngriffe(actor) {
+        const angriffe = actor.angriffe || [];
+        console.log('InitiativeStateManager | Loading NPC Angriffe:', angriffe);
+        return angriffe.map((a, index) => {
+            console.log('InitiativeStateManager | Normalizing NPC Angriff:', a);
+            const eigenschaften = a.eigenschaften || [];
+            const melee = a.typ == 'Nah';
+            return {
+                id: `angriff-${index}`,
+                name: a.name || 'Angriff',
+                type: melee ? 'nahkampfwaffe' : 'fernkampfwaffe',
+                system: { eigenschaften },
+            };
+        });
+    }
+
+    /**
+     * Get the INI modifier from a weapon or Angriff.
+     * For PC weapons: extracts from system.computed.actorModifiers (actionNegAugment/actionAugment on 'ini').
+     * For NPC angriffe: returns 0 (no INI modifiers on angriffe).
+     * @param {Object} weapon - Normalized weapon/Angriff object
+     * @returns {number}
+     */
+    static getWeaponIniModifier(weapon) {
+        if (!weapon) return 0;
+
+        const hasModifiers = weapon.system?.computed?.hasActorModifiers === true;
+        const actorModifiers = weapon.system?.computed?.actorModifiers;
+
+        if (!hasModifiers || !actorModifiers) return 0;
+
+        const modifiersArray = Object.values(actorModifiers);
+
+        for (const modifier of modifiersArray) {
+            if (modifier.property === 'ini') {
+                if (modifier.mode === 'actionNegAugment') {
+                    return -(modifier.value ?? 0);
+                } else if (modifier.mode === 'actionAugment') {
+                    return modifier.value ?? 0;
+                }
+            }
+        }
+
+        return 0;
+    }
+
+    /**
+     * Check whether any selected action requires a weapon type.
+     * @param {string[]} selectedActionIds
+     * @param {Object[]} availableActions
+     * @returns {boolean}
+     */
+    static hasWeaponRequiredAction(selectedActionIds, availableActions) {
+        return selectedActionIds.some(id => {
+            const action = availableActions.find(a => a.id === id);
+            return action?.bedingungen?.waffentyp && action.bedingungen.waffentyp !== '';
+        });
+    }
+
+    /* -------------------------------------------- */
+    /*  Weapon Gating                                */
+    /* -------------------------------------------- */
+
+    /**
+     * Apply weapon gating to available actions.
+     * Marks non-matching actions with grayedOut and grayedOutReason.
+     * Mutates the availableActions array in place.
+     * @param {Object|null} weapon - Selected weapon/Angriff object (or null)
+     * @param {Object[]} availableActions - Actions array to gate (mutated in place)
+     */
+    static applyWeaponGating(weapon, availableActions) {
+        for (const action of availableActions) {
+            action.grayedOut = false;
+            action.grayedOutReason = '';
+
+            if (!weapon) {
+                // No weapon selected: gate out actions that require a weapon type
+                if (action.bedingungen?.waffentyp && action.bedingungen.waffentyp !== '') {
+                    action.grayedOut = true;
+                    action.grayedOutReason = action.bedingungen.waffentyp === 'nahkampfwaffe'
+                        ? 'Erfordert Nahkampfwaffe'
+                        : 'Erfordert Fernkampfwaffe';
+                }
+                continue;
+            }
+
+            const weaponType = weapon.type;  // 'nahkampfwaffe' or 'fernkampfwaffe'
+            const hasFernkampfoption = weapon.system?.eigenschaften?.some(
+                e => (typeof e === 'string' ? e : e.key) === 'Fernkampfoption'
+            );
+
+            // Check waffentyp
+            if (action.bedingungen?.waffentyp && action.bedingungen.waffentyp !== '') {
+                let typeMatch = false;
+                if (action.bedingungen.waffentyp === 'nahkampfwaffe') {
+                    typeMatch = weaponType === 'nahkampfwaffe' || (weaponType === 'fernkampfwaffe' && hasFernkampfoption);
+                } else if (action.bedingungen.waffentyp === 'fernkampfwaffe') {
+                    typeMatch = weaponType === 'fernkampfwaffe' || (weaponType === 'nahkampfwaffe' && hasFernkampfoption);
+                }
+                if (!typeMatch) {
+                    action.grayedOut = true;
+                    action.grayedOutReason = action.bedingungen.waffentyp === 'nahkampfwaffe'
+                        ? 'Erfordert Nahkampfwaffe'
+                        : 'Erfordert Fernkampfwaffe';
+                    continue;
+                }
+            }
+
+            // Check eigenschaften
+            if (action.bedingungen?.eigenschaften?.length > 0) {
+                const weaponEigenschaften = (weapon.system?.eigenschaften || []).map(
+                    e => (typeof e === 'string' ? e : e.key)
+                );
+                for (const required of action.bedingungen.eigenschaften) {
+                    if (!weaponEigenschaften.includes(required)) {
+                        action.grayedOut = true;
+                        action.grayedOutReason = `Erfordert Eigenschaft: ${required}`;
+                        break;
+                    }
+                }
+            }
+        }
     }
 }
