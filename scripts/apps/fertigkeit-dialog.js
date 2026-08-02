@@ -1,6 +1,7 @@
 import { evaluate_roll_with_crit, postRollToChat } from '../../../../systems/Ilaris/scripts/dice/wuerfel_misc.js';
 import { formatDiceFormula } from '../../../../systems/Ilaris/scripts/core/utilities.js';
 import { consumeInventoryItem } from '../utilities.js';
+import { normalizeMessageMode } from './fertigkeit-dialog-logic.js';
 
 const { ApplicationV2, DialogV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -99,8 +100,8 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             choices_schips: CONFIG.ILARIS.schips_choice,
             checked_schips: '0',
             hasSchips,
-            rollModes: CONFIG.Dice.rollModes,
-            defaultRollMode: game.settings.get('core', 'rollMode'),
+            rollModes: Object.entries(CONFIG.ChatMessage.modes).map(([id, { label }]) => ({ id, label })),
+            defaultRollMode: normalizeMessageMode(game.settings.get('core', 'rollMode'), CONFIG.ChatMessage.modes),
             dialogId: this.dialogId,
             usageContexts: [
                 { value: 'none', label: CONTEXT_LABELS.none },
@@ -682,8 +683,11 @@ export class IlarisAlternativeFertigkeitDialog extends HandlebarsApplicationMixi
             text = text.concat(`Modifikator: ${modifikator}\n`);
         }
 
-        const rollmode =
-            html.querySelector(`#rollMode-${this.dialogId}`)?.value || game.settings.get('core', 'rollMode');
+        const selectedRollMode = html.querySelector(`#rollMode-${this.dialogId}`)?.value;
+        const rollmode = normalizeMessageMode(
+            selectedRollMode || game.settings.get('core', 'rollMode'),
+            CONFIG.ChatMessage.modes
+        );
         const formula = `${diceFormula} + ${effectivePW} + ${globalermod} + ${hoheQualitaetMod} + ${modifikator}`;
 
         if (schipsApplied && this.actor.system.schips.schips_stern > 0) {

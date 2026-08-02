@@ -38,9 +38,9 @@
         "@foundryvtt/foundryvtt-cli": "^3.0.0"
     },
     "foundry": {
-        "version": "13.0.0",
-        "minimumCoreVersion": "13",
-        "compatibleCoreVersion": "13"
+        "version": "14.0.0",
+        "minimumCoreVersion": "14",
+        "compatibleCoreVersion": "14"
     },
     "files": [
         "module.js",

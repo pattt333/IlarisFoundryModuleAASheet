@@ -1,0 +1,79 @@
+<form class="iaas-weapon-builder" autocomplete="off">
+    <section class="iaas-weapon-builder__section">
+        <h3>Grundwerte</h3>
+        <div class="iaas-weapon-builder__grid">
+            <label>Name <input name="name" type="text" value="{{fields.name}}" required /></label>
+            <label>W3 <input name="w3" type="number" min="0" step="1" value="{{fields.w3}}" /></label>
+            <label>W6 <input name="w6" type="number" min="0" step="1" value="{{fields.w6}}" /></label>
+            <label>TP-Modifikator <input name="tpModifier" type="number" step="1" value="{{fields.tpModifier}}" /></label>
+            <label>Fertigkeit <input name="fertigkeit" type="text" list="weapon-builder-skills" value="{{fields.fertigkeit}}" /></label>
+            <label>Talent <input name="talent" type="text" list="weapon-builder-talents" value="{{fields.talent}}" /></label>
+            <label>Reichweite <input name="rw" type="number" value="{{fields.rw}}" /></label>
+            {{#if isRanged}}
+                <label>FK-WM <input name="wm_fk" type="number" value="{{fields.wm_fk}}" /></label>
+                <label>Ladezeit <input name="lz" type="number" min="0" value="{{fields.lz}}" /></label>
+            {{else}}
+                <label>AT-WM <input name="wm_at" type="number" value="{{fields.wm_at}}" /></label>
+                <label>VT-WM <input name="wm_vt" type="number" value="{{fields.wm_vt}}" /></label>
+            {{/if}}
+        </div>
+    </section>
+
+    <datalist id="weapon-builder-skills">
+        {{#each availableSkills as |skill|}}<option value="{{skill}}"></option>{{/each}}
+    </datalist>
+    <datalist id="weapon-builder-talents">
+        {{#each availableTalents as |talent|}}<option value="{{talent}}"></option>{{/each}}
+    </datalist>
+
+    <section class="iaas-weapon-builder__section">
+        <h3>Waffeneigenschaften</h3>
+        {{#if loadError}}<p class="iaas-weapon-builder__error">{{loadError}}</p>{{/if}}
+        <div class="iaas-weapon-builder__property-add">
+            <select name="weapon-property" {{#if noPropertiesAvailable}}disabled{{/if}}>
+                {{#each availableProperties as |property|}}
+                    <option value="{{property.key}}" {{#if (eq property.key ../selectedPropertyKey)}}selected{{/if}}>{{property.key}}</option>
+                {{/each}}
+            </select>
+            <button type="button" data-action="addProperty" {{#if noPropertiesAvailable}}disabled{{/if}}>Eigenschaft hinzufügen</button>
+        </div>
+
+        <div class="iaas-weapon-builder__property-list">
+            {{#each selectedProperties as |property|}}
+                <article class="iaas-weapon-builder__property">
+                    <header>
+                        <strong>{{property.key}}</strong>
+                        <button type="button" data-action="removeProperty" data-property-id="{{property.id}}" title="Eigenschaft entfernen"><i class="fas fa-times"></i></button>
+                    </header>
+                    {{#if property.isCustomCost}}
+                        <label>K-Wert <input name="custom-cost-{{property.id}}" type="number" step="0.5" value="{{property.customCost}}" /></label>
+                    {{else}}
+                        <span>K{{property.cost}}</span>
+                    {{/if}}
+                    {{#if property.isCustomCost}}<span>K{{property.cost}}</span>{{/if}}
+                    {{#if property.value}}<span>Wert: {{property.value}}</span>{{/if}}
+                    {{#each property.parameterSlots as |slot index|}}
+                        <label>{{slot.label}}
+                            <input name="property-{{../id}}-parameter-{{index}}" type="{{#if (eq slot.type 'number')}}number{{else}}text{{/if}}" value="{{lookup ../parameters index}}" {{#if slot.required}}required{{/if}} />
+                        </label>
+                    {{/each}}
+                </article>
+            {{else}}
+                <p class="iaas-weapon-builder__hint">Wähle Eigenschaften aus den in den Ilaris-Einstellungen konfigurierten Kompendien.</p>
+            {{/each}}
+        </div>
+    </section>
+
+    <footer class="iaas-weapon-builder__footer">
+        <div class="iaas-weapon-builder__budget {{#if canCreate}}is-valid{{else}}is-invalid{{/if}}">K-Summe: {{totalCost}} / 10 <small>(Grundwerte: K{{baseCost}})</small></div>
+        <div class="iaas-weapon-builder__actions">
+            <button type="button" data-action="closeDialog">Abbrechen</button>
+            <button type="button" data-action="createWeapon" {{#unless canCreate}}disabled{{/unless}}>Waffe erstellen</button>
+        </div>
+    </footer>
+    {{#if validationErrors}}
+        <ul class="iaas-weapon-builder__errors">
+            {{#each validationErrors as |error|}}<li>{{error}}</li>{{/each}}
+        </ul>
+    {{/if}}
+</form>

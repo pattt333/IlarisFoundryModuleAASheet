@@ -135,8 +135,13 @@ async function broadcastItemApplication(payload) {
  * Hook: Automatically add Fernkampfwaffe when Nahkampfwaffe with Fernkampfoption is added
  */
 Hooks.on('createItem', (item, options, userId) => {
+    // The weapon builder creates and links its own Fernkampfoption copy.
+    if (options?.weaponBuilderCreated) {
+        return;
+    }
+
     // Skip if this item was automatically added (prevent circular dependencies)
-    if (options.fernkampfOptionAutoAdded) {
+    if (options?.fernkampfOptionAutoAdded) {
         return;
     }
 

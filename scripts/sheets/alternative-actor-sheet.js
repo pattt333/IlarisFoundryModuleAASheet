@@ -17,6 +17,7 @@ import { AccordionManager } from '../components/accordion-manager.js';
 import { FavoritesManager } from '../components/favorites-manager.js';
 import { IlarisAlternativeFertigkeitDialog } from '../apps/fertigkeit-dialog.js';
 import { IlarisAlternativeItemApplyDialog } from '../apps/item-apply-dialog.js';
+import { IlarisWeaponBuilderDialog } from '../apps/weapon-builder-dialog.js';
 import { advanceEffectTime, consumeInventoryItem } from '../utilities.js';
 
 export class IlarisAlternativeActorSheet extends HeldenSheet {
@@ -445,6 +446,28 @@ export class IlarisAlternativeActorSheet extends HeldenSheet {
         await item.update({
             'system.quantity': newQuantity,
         });
+    }
+
+    /**
+     * Open the module-owned builder for hero weapons and retain the Ilaris
+     * creation behavior for every other item class.
+     * @param {PointerEvent} event - The click event
+     * @param {HTMLElement} target - The target element with data-action
+     */
+    static async onItemCreate(event, target) {
+        const itemClass = target.dataset.itemclass;
+        if (itemClass !== 'nahkampfwaffe' && itemClass !== 'fernkampfwaffe') {
+            return super.onItemCreate.call(this, event, target);
+        }
+
+        event.preventDefault();
+        if (!this.actor?.isOwner) {
+            ui.notifications.warn('Nur Besitzer können Waffen erstellen.');
+            return;
+        }
+
+        const dialog = new IlarisWeaponBuilderDialog(this.actor, itemClass);
+        await dialog.render(true);
     }
 
     /**

@@ -8,6 +8,7 @@
 /* CSS Variable Overrides (sheet-scoped) */
 .ilaris.sheet.actor.alternative,
 .iaas-item-apply-window,
+.iaas-weapon-builder-window,
 .target-selection-dialog,
 .initiative-dialog,
 .mass-initiative-dialog,
@@ -106,6 +107,7 @@
 
 body.theme-dark .ilaris.sheet.actor.alternative,
 body.theme-dark .iaas-item-apply-window,
+body.theme-dark .iaas-weapon-builder-window,
 body.theme-dark .target-selection-dialog,
 body.theme-dark .initiative-dialog,
 body.theme-dark .mass-initiative-dialog,
